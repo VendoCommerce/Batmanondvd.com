@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSWeb", "CSWeb\CSWeb.csproj", "{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSWebBase", "CSWebBase\CSWebBase.csproj", "{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://cs-srcctrl1:8080/tfs/csapps
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CSBusiness\\CSBusiness.csproj
+		SccProjectName1 = CSBusiness
+		SccLocalPath1 = CSBusiness
+		SccProjectUniqueName2 = CSCore\\CSCore.csproj
+		SccProjectName2 = CSCore
+		SccLocalPath2 = CSCore
+		SccProjectUniqueName3 = CSData\\CSData.csproj
+		SccProjectName3 = CSData
+		SccLocalPath3 = CSData
+		SccProjectUniqueName4 = CSWeb\\CSWeb.csproj
+		SccProjectName4 = CSWeb
+		SccLocalPath4 = CSWeb
+		SccProjectUniqueName5 = CSProvider\\CSPaymentProvider.csproj
+		SccProjectName5 = CSProvider
+		SccLocalPath5 = CSProvider
+		SccProjectUniqueName6 = CSWebBase\\CSWebBase.csproj
+		SccProjectName6 = CSWebBase
+		SccLocalPath6 = CSWebBase
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EEFFE2AD-487A-48BF-95FA-086225F5C5E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{FC9BD37F-A2CF-4EF0-880E-851BEB6F0B83}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

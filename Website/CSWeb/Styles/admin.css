@@ -1,0 +1,144 @@
+/* CSS Document */
+
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+body, html, p, div, a, img, span, table, tr, td, thead, tbody, form, ul, ol, li, h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border: none;
+	outline: none;
+}
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 8pt;
+	color: #000;	
+}
+
+.admin_top_line {
+	position:relative;
+	display:block;
+	width: 100%;
+	height: 22px;
+	vertical-align:middle;
+	line-height: 22px;
+	font-weight: bold;
+	color: #fff;
+	background: #7b7b7b;
+	padding: 0 10px;
+	}
+
+.admin_top_border {
+	position:relative;
+	display:block;
+	height: 22px;
+	width: 100%;
+	border-bottom: 3px solid #A2D68E;
+	background: #4B8B2B;
+	}
+
+.admin_site_header {
+	position:relative;
+	display:block;
+	padding: 4px;
+	border-bottom: 1px solid #A2D68E;
+	}
+
+.admin_logo {
+	position:relative;
+	float:left;
+	width: 150px;
+	}
+
+.admin_title_info {
+	position:relative;
+	float:left;
+	margin-left: 10px;
+	}
+
+.admin_title_info h2  {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: normal;
+	padding-bottom: 3px;
+	}
+
+.admin_title_info p {
+	color: #6B6B85;
+	}
+
+.admin_login_form {
+	position:relative;
+	display: block;
+	width: 550px;
+	padding: 12px;
+	}
+	
+.admin_login_form .formline {
+	position:relative;
+	display: block;
+	width: 465px;
+	margin-bottom: 4px;
+}
+
+.admin_login_form label {
+	position:relative;
+	float:left;
+	text-align:left;
+	width: 150px;
+	}
+
+.admin_login_form input[type=text], .admin_login_form input[type=password]  {
+	position:relative;
+	float:left;
+	width: 300px;
+	font-size: 8pt;
+	}
+
+.admin_login_form input[type=submit] {
+	position:relative;
+	float:right;
+	}
+
+.admin_login_form label.remember  {
+	position:relative;
+	float:left;
+	padding-top: 2px;
+	width: 200px;
+	}
+
+.admin_login_form input[type=checkbox] {
+	position:relative;
+	float:left;
+	margin-right: 4px;
+	}
+	
+.admin_login_form .admin_error {
+	color: red;
+	display: inline-block;
+	padding-top: 4px;
+}
+
+
+#clear, .clear {
+	clear:both;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .clearfix {
+	zoom: 1;
+} /* IE6 */
+*:first-child+html .clearfix {
+	zoom: 1;
+} /* IE7 */

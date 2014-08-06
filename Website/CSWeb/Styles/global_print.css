@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document...Conversion Systems */
+/* REF FONT STUFF */
+
+/* add fontface fonts here */
+
+body {
+	background:none #fff;	
+}
+
+
+*, h2, h4, .receipt_email {
+	color: #000 !important;
+}
+
+.printfriendly, .horzline1, .horzline2 {
+	display: none;	
+}
+
+#receipt_table2 {
+	background: #fff;	
+}

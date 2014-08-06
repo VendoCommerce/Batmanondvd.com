@@ -1,0 +1,443 @@
+@charset "utf-8";
+/* CSS Document for MID Report created 10/14/2010 */
+
+body {
+margin: 0;
+padding: 0;
+background: #e2e2e2;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000;
+}
+
+.clear {
+clear:both;
+}
+
+p, td, tr, li, ol, ul, span, div, table, th, tbody, img, h1, h2, h3 {
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+#outerwrap {
+width: 830px;
+background: #ccc;
+position:relative;
+margin: 0 auto;
+padding-bottom: 15px;
+}
+
+#header {
+width: 800px;
+background:url(/Content/images/admin/header_bg.jpg) repeat-x;
+height: 88px;
+position:relative;
+margin: 0 auto;
+}
+
+a {
+color: #000;
+}
+
+#logo {
+margin: 0 auto;
+width: 238px;
+height: 62px;
+}
+
+#log_link {
+	position:absolute;
+	top: 8px;
+	right: 8px;
+	width: 174px;
+	height: 30px;
+	text-align: right;
+}
+
+#main {
+	position:relative;
+	margin: 0 auto;
+	width: 800px;
+	background: #e7e7e7;
+}
+
+#date {
+	position:relative;
+	height: 37px;
+	width: 800px;
+	text-align: center;
+}
+
+p.day {
+	color: #6b6b85;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+p.time {
+	color: #6b6b85;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#left {
+	width: 152px;
+	position:relative;
+	float:left;
+	margin-left: 9px;
+}
+
+#right {
+	width: 630px;
+	margin-left: 9px;
+	position:relative;
+	float:left;
+	background: url(/Content/images/admin/right_top.jpg) no-repeat #f7f7f7;
+	background-position: 0% 0%;
+	xheight: 503px;
+}
+
+#right h2 {
+	background: url(/Content/images/admin/summary_head.jpg) no-repeat;
+	width: 605px;
+	height: 22px;
+	margin: 10px 0 0 14px;
+}
+
+.summary_table, .total_table {
+	border-collapse:collapse;
+	background-color: #fff;
+}
+
+.summary_table th, .total_table th {
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+	background-color: #f6f6f6;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	margin-top: 2px;
+}
+
+.summary_table td {
+	text-align: center;
+	padding: 7px 0;
+}
+
+.summary_table .cola, .total_table .cola {
+	width: 70px;
+}
+
+.summary_table .colb, .total_table .colb {
+	width: 99px;
+}
+
+.summary_table .colc, .total_table .colc {
+	width: 83px;
+	
+}
+
+.summary_table .cold, .total_table .cold {
+	width: 97px;
+
+}
+
+.summary_table .cole, .total_table .cole {
+	width: 134px;
+}
+
+.summary_table .colf, .total_table .colf {
+width: 114px;
+}
+
+.border_right {
+border-right: 1px solid #e5e5e5;
+}
+
+.table_pad {
+background: #fff;
+padding: 2px 2px 0 2px;
+width: 599px;
+margin-left: 14px;
+border: 1px solid #e5e5e5;
+}
+
+.table_total_pad {
+background: #fff;
+padding: 2px;
+width: 599px;
+margin-left: 14px;
+border-right: 1px solid #e5e5e5;
+border-left: 1px solid #e5e5e5;
+border-bottom: 1px solid #e5e5e5;
+}
+
+#client {
+margin-top: 6px;
+position:relative;
+width: 152px;
+}
+
+#retrieve_activity {
+margin-top: 12px;
+width: 152px;
+}
+
+#retrieve_activity h2 {
+background: url(/Content/images/admin/retrieve_head.jpg) no-repeat;
+width: 152px;
+height: 22px;
+}
+
+#client h2 {
+background: url(/Content/images/admin/client_head.jpg) no-repeat;
+width: 152px;
+height: 22px;
+position:relative;
+}
+
+#client_logo {
+border: 1px solid #e5e5e5;
+width: 150px;
+position:relative;
+background: #fff;
+}
+
+#activity_select {
+border: 1px solid #e5e5e5;
+width: 136px;
+position:relative;
+background: #fff;
+color: #6b6b85;
+padding: 10px 7px 0 7px
+}
+
+.day_range {
+width: 112px;
+font-size: 11px;
+color: #6b6b85;
+}
+
+.or {
+text-align: center;
+padding: 9px 0 3px 0;
+}
+
+.dates {
+width: 81px;
+float:left;
+font-size: 11px;
+color: #6b6b85;
+}
+
+.calendar_picker {
+float:left;
+margin-left: 5px;
+}
+
+.versions {
+width: 57px;
+font-size: 11px;
+color: #6b6b85;
+}
+
+#activity_select p {
+margin-bottom: 4px;
+}
+
+/* VERSION REPORT */
+
+#outerwrap2 {
+width: 951px;
+background: #ccc;
+position:relative;
+margin: 0 auto;
+padding-bottom: 15px;
+}
+
+#header2 {
+width: 921px;
+background:url(/Content/images/admin/header_bg.jpg) repeat-x;
+height: 125px;
+position:relative;
+margin: 0 auto;
+}
+
+#report_nav {
+	width: 921px;
+	height: 19px;
+	position:absolute;
+	margin: 0;
+	padding: 0;
+	top: 84px;
+	font-weight: bold;
+	font-family:'ITC Avant Garde Std','Avant Garde','Century Gothic','Lucida Grande',Geneva,Arial;
+	text-align:center;
+	color: #000;
+	font-size: 11px;
+}
+
+#report_nav a {
+	color: #000;
+	text-decoration:none;
+	margin: 0 6px;
+}
+
+#report_nav span.current {
+	color: #657a33;
+	text-decoration:none;
+	margin: 0 6px;
+}
+
+
+#main2 {
+	position:relative;
+	margin: 0 auto;
+	width: 921px;
+	background: #e7e7e7;
+}
+
+#date2 {
+	position:relative;
+	height: 37px;
+	width: 921px;
+	text-align: center;
+}
+
+#right2 {
+	width: 751px;
+	margin-left: 9px;
+	position:relative;
+	float:left;
+	background: url(/Content/images/admin/right_top.jpg) no-repeat #f7f7f7;
+	background-position: 0% 0%;
+	xheight: 503px;
+}
+
+#right2 h2 {
+	background: url(/Content/images/admin/summary_head2.jpg) no-repeat;
+	width: 726px;
+	height: 22px;
+	margin: 10px 0 0 14px;
+}
+
+.summary_table2, .total_table2 {
+	border-collapse:collapse;
+	background-color: #fff;
+}
+
+.summary_table2 th, .total_table2 th {
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+	background-color: #f6f6f6;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	margin-top: 2px;
+}
+
+.summary_table2 td {
+	text-align: center;
+	padding: 7px 0;
+}
+
+.summary_table2 td.CategoryHeader {
+	text-align: left;
+	padding: 0 9px 0 14px;
+}
+
+.summary_table2 .cola, .total_table2 .cola {
+	width: 85px;
+	text-align:left;
+	padding-left: 12px;
+}
+
+.summary_table2 .colb, .total_table2 .colb {
+	width: 96px;
+}
+
+.summary_table2 .colc, .total_table2 .colc {
+	width: 85px;
+	
+}
+
+.summary_table2 .cold, .total_table2 .cold {
+	width: 94px;
+
+}
+
+.summary_table2 .cole, .total_table2 .cole {
+	width: 112px;
+}
+
+.summary_table2 .colf, .total_table2 .colf {
+width: 103px;
+}
+
+.summary_table2 .colg, .total_table2 .colg {
+width: 127px;
+}
+
+.table_pad2 {
+background: #fff;
+padding: 2px 2px 0 2px;
+width: 720px;
+margin-left: 14px;
+border: 1px solid #e5e5e5;
+}
+
+.table_total_pad2 {
+background: #fff;
+padding: 2px;
+width: 720px;
+margin-left: 14px;
+border-right: 1px solid #e5e5e5;
+border-left: 1px solid #e5e5e5;
+border-bottom: 1px solid #e5e5e5;
+}
+
+.table_pad3 {
+background: #fff;
+padding: 2px 2px 0 2px;
+width: 720px;
+margin-left: 14px;
+border-right: 1px solid #e5e5e5;
+border-left: 1px solid #e5e5e5;
+border-bottom: 1px solid #e5e5e5;
+}
+
+.spacer {
+position:relative;
+height: 8px;
+}
+
+.subtotal_version 
+{
+    background-color: #F6F6F6;
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 2px;
+}
+
+.category_header_table 
+{
+    background-color: #F6F6F6; 
+}
+
+.summary_table2 .category_header_table td 
+{
+    text-align:left;
+    padding: 5px 12px;
+        border-top: 1px solid #E5E5E5;
+        border-left: 1px solid #E5E5E5;
+        border-right: 1px solid #E5E5E5;
+}
+
+.final_total 
+{
+    background-color: #F6F6F6;
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 2px;
+}

@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminSite.Master.cs"
+    Inherits="CSWeb.Admin.AdminSite" %>
+
+<!doctype html>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="css/plugins.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/themes.css">
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+	        
+</head>
+<body>
+    <form id="form1" runat="server">
+	 <asp:ContentPlaceHolder ID="BodyLayoutPlaceHolder" runat="server">
+<div id="page-container">
+<header class="navbar navbar-inverse">
+<div class="navbar-inner remove-radius remove-box-shadow">
+<div class="container-fluid">
+<ul class="nav pull-right">
+<li>
+    <asp:HyperLink id="hyperlink1" NavigateUrl="Logout.aspx" runat="server"
+                    CssClass="btn btn-small" style="padding: 4px 10px"><i class="icon-lock"></i> Logout</asp:Hyperlink>
+    <%--<asp:HyperLink id="hyperlink1" NavigateUrl="Logout.aspx" runat="server" Style="padding: 0"><button class="btn btn-small"><i class="icon-signout"></i> Logout</button></asp:Hyperlink>--%>
+</li>
+</ul>
+<a href="main.aspx" class="brand"><span style="width: 190px; display: inline-block; text-align:center"><img src="img/Logo.png" alt="logo"></span> <span><%=siteName %> Administration</span></a>
+</div>
+</div>
+</header>
+<div id="inner-container"><aside id="page-sidebar" class="nav-collapse collapse">
+
+<asp:PlaceHolder ID="plLeftNav" runat="server" Visible="false">
+<nav id="primary-nav">
+<ul>
+<li>
+<a href="main.aspx" class="maindash"><i class="icon-home"></i>Dashboard</a>
+
+</li>
+<li>
+<a href="#"><i class="icon-star"></i>Catalog<span><i class="icon-arrow-down"></i></span></a>
+<ul>
+<li><a href="SitePrefItem.aspx" class="sitepref"><i class="icon-cog"></i>Site Preferences</a></li>
+<li><a href="VersionList.aspx" class="versions"><i class="icon-list"></i>Versions</a></li>
+<li><a href="categoryList.aspx" class="prodcat"><i class="icon-th"></i>Product Categories</a></li>
+<li><a href="SKUList.aspx" class="sku"><i class="icon-barcode"></i>SKUs</a></li>
+<li><a href="Shipping.aspx" class="shipping"><i class="icon-truck"></i>Shipping</a></li>
+<li><a href="CountryList.aspx" class="country"><i class="icon-globe"></i>Country</a></li>
+<li><a href="TaxList.aspx" class="tax"><i class="icon-money"></i>Tax</a></li>
+<li><a href="PathList.aspx" class="upsell"><i class="icon-gift"></i>Upsells</a></li>
+<li><a href="CouponList.aspx" class="coupon"><i class="icon-tag"></i>Coupons</a></li>
+<li><a href="EmailList.aspx" class="emailmanager"><i class="icon-envelope-alt"></i>Email Manager</a></li>
+<li><a href="PaymentProviderList.aspx" class="paymentprovider"><i class="icon-credit-card"></i>Payment Provider</a></li>
+<li><a href="FulfillmentHouseProviderList.aspx" class="fulfillment"><i class="icon-road"></i>Fulfillment House</a></li>
+<li><a href="cacheutility.aspx" class="cache"><i class="icon-repeat"></i>Cache Utility</a></li>
+<li><a href="ErrorLog.aspx" class="errorlog"><i class="icon-warning-sign"></i>Error Log</a></li>
+<li><a href="ResourceList.aspx" class="validation"><i class="icon-check"></i>Resources & Validation</a></li>
+<li><a href="Attributes.aspx" class="attributes"><i class="icon-sort-by-attributes"></i>Attributes Manager</a></li>
+</ul>
+</li>
+<li>
+<a href="#"><i class="icon-group"></i>Users<span><i class="icon-arrow-down"></i></span></a>
+<ul>
+<li><a href="customerList.aspx" class="customers"><i class="icon-user"></i>Customers</a></li>
+<li><a href="users.aspx" class="admins"><i class="icon-key"></i>Administrators</a></li>
+</ul>
+</li>
+<li>
+<a href="#"><i class="icon-shopping-cart"></i>Order Manager<span><i class="icon-arrow-down"></i></span></a>
+<ul>
+<li><a href="OrderList.aspx" class="orders"><i class="icon-shopping-cart"></i>Orders</a></li>
+<li><a href="CustomFieldList.aspx" class="customfields"><i class="icon-edit"></i>Custom Fields</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#"><i class="glyphicon-life_preserver"></i>Support<span><i class="icon-arrow-down"></i></span></a>
+<ul>
+<li><a href="docs_formpage.aspx"><i class="icon-edit"></i>Adding Form Page</a></li>
+<li><a href="docs_tablepage.aspx"><i class="icon-table"></i>Adding Table Page</a></li>
+<li><a href="docs_reportpage.aspx"><i class="icon-bar-chart"></i>Adding Report Page</a></li>
+<li><a href="docs_icons.aspx"><i class="icon-tint"></i>Icon Reference</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#"><i class="icon-table"></i>Reports<span><i class="icon-arrow-down"></i></span></a>
+<ul>
+<li><a href="reports.aspx"><i class="icon-star-empty"></i>Standard Report</a></li>
+<li><a href="versionreport.aspx"><i class="icon-list"></i>Version Report</a></li>
+<li><a href="sidreport.aspx"><i class="icon-bullhorn"></i>SID Report</a></li>
+</ul>
+</li>
+
+
+
+
+</ul>
+</nav>
+</asp:PlaceHolder>
+<div class="cs_logo_grad">
+<asp:Image ID="imgLogo" runat="server" />
+
+</div>
+</aside>	
+
+
+ <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+<footer>
+<span id="year-copy"></span> &copy; <a href="http://conversionsystems.com" target="_blank"><strong>Conversion Systems</strong></a>
+</footer>
+</div>
+</div>
+<a href="#" id="to-top"><i class="icon-chevron-up"></i></a>
+
+		        </asp:ContentPlaceHolder>
+    </form>
+
+ <!-- Jquery library from Google ... -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- ... but if something goes wrong get Jquery from local file -->
+        <script>!window.jQuery && document.write(unescape('%3Cscript src="js/vendor/jquery-1.9.1.min.js"%3E%3C/script%3E'));</script>
+
+        <!-- Bootstrap.js -->
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+<!-- Jquery plugins and custom javascript code -->
+   <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        
+
+        
+     
+   
+
+</body>
+</html>

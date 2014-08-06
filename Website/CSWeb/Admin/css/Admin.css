@@ -1,0 +1,25 @@
+﻿.numericText
+{
+    text-align: right;
+    width: 30px;
+}
+.modalBackground
+{
+    background-color: transparent;
+    background-position: center;
+    padding: 0;
+}
+.modalPopup
+{
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    padding: 1px;
+    width: 300px;
+    height: 200px;
+}
+.attributesBorderBtm
+{
+    border-bottom: 1px solid #D4D4D4;
+}
