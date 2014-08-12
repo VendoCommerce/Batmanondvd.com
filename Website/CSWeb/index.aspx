@@ -17,6 +17,8 @@
 	Welcome to Batman On DVD !!!<br />
         <p>
             &nbsp;</p>
+        <p style="font-weight: 700">
+            To order Classic Batman Col(DR Only)(3pk/GFT/DVD) please fill out the form below.</p>
         <uc1:ShippingForm ID="ShippingForm1" runat="server" RedirectUrl="addproduct.aspx" />
     </form>
 
