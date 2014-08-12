@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TokenEx.Services.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TokenEx.Services.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd2" />
+  <xs:complexType name="ResultOfProcessTransaction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AVS_Result" nillable="true" type="tns:AVSResult" />
+          <xs:element minOccurs="0" name="Authorization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CVV_Result" nillable="true" type="tns:CVVResult" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+          <xs:element minOccurs="0" name="Test" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TransactionResult" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultOfProcessTransaction" nillable="true" type="tns:ResultOfProcessTransaction" />
+  <xs:complexType name="AVSResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalMatch" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetMatch" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AVSResult" nillable="true" type="tns:AVSResult" />
+  <xs:complexType name="CVVResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CVVResult" nillable="true" type="tns:CVVResult" />
+  <xs:complexType name="ResultOfProcessTransactionWithPAN">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AVS_Result" nillable="true" type="tns:AVSResult" />
+          <xs:element minOccurs="0" name="Authorization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CVV_Result" nillable="true" type="tns:CVVResult" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q2:ArrayOfKeyValueOfstringstring" />
+          <xs:element minOccurs="0" name="Test" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionResult" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultOfProcessTransactionWithPAN" nillable="true" type="tns:ResultOfProcessTransactionWithPAN" />
+</xs:schema>

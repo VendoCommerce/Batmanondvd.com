@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="TokenAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseAction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Data" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TokenScheme" type="TokenTypeEnum" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TokenAction" nillable="true" type="TokenAction" />
+  <xs:complexType name="BaseAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APIKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TokenExID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseAction" nillable="true" type="BaseAction" />
+  <xs:simpleType name="TokenTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="sixTOKENfour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fourTOKENfour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TOKENfour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GUID">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SSN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="nGUID">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="nTOKENfour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="nTOKEN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sixANTOKENfour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fourANTOKENfour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANTOKENfour">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANTOKEN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANTOKENAUTO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TokenTypeEnum" nillable="true" type="TokenTypeEnum" />
+  <xs:complexType name="ResultOfAddToken">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultOfAddToken" nillable="true" type="ResultOfAddToken" />
+  <xs:complexType name="BaseResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResult" nillable="true" type="BaseResult" />
+  <xs:complexType name="TokenizeFromEncryptedValueAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseAction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EcryptedData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TokenScheme" type="TokenTypeEnum" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TokenizeFromEncryptedValueAction" nillable="true" type="TokenizeFromEncryptedValueAction" />
+  <xs:complexType name="ResultOfTokenizeFromEncryptedValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultOfTokenizeFromEncryptedValue" nillable="true" type="ResultOfTokenizeFromEncryptedValue" />
+  <xs:complexType name="ValidateTokenAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseAction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidateTokenAction" nillable="true" type="ValidateTokenAction" />
+  <xs:complexType name="ResultOfValidateToken">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultOfValidateToken" nillable="true" type="ResultOfValidateToken" />
+  <xs:complexType name="DetokenizeAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseAction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DetokenizeAction" nillable="true" type="DetokenizeAction" />
+  <xs:complexType name="ResultOfDetokenize">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultOfDetokenize" nillable="true" type="ResultOfDetokenize" />
+  <xs:complexType name="DeleteTokenAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseAction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteTokenAction" nillable="true" type="DeleteTokenAction" />
+  <xs:complexType name="ResultOfDeleteToken">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseResult">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultOfDeleteToken" nillable="true" type="ResultOfDeleteToken" />
+  <xs:complexType name="GetSingleUseAuthTokenAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseAction">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSingleUseAuthTokenAction" nillable="true" type="GetSingleUseAuthTokenAction" />
+  <xs:complexType name="ResultOfGetSingleUseAuthToken">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SingleUseAuthCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResultOfGetSingleUseAuthToken" nillable="true" type="ResultOfGetSingleUseAuthToken" />
+  <xs:complexType name="ProcessTransationAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseAction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TransactionType" type="TransactionTypeEnum" />
+          <xs:element minOccurs="0" name="TransactionRequestFormat" type="TransactionRequestFormatEnum" />
+          <xs:element minOccurs="0" name="TransactionRequest" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProcessTransationAction" nillable="true" type="ProcessTransationAction" />
+  <xs:simpleType name="TransactionTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Authorize">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Capture">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Purchase">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Refund">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Void">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Reverse">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TransactionTypeEnum" nillable="true" type="TransactionTypeEnum" />
+  <xs:simpleType name="TransactionRequestFormatEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="XML">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="JSON">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TransactionRequestFormatEnum" nillable="true" type="TransactionRequestFormatEnum" />
+  <xs:complexType name="ProcessTransactionWithPANAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="BaseAction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TokenScheme" type="TokenTypeEnum" />
+          <xs:element minOccurs="0" name="TransactionType" type="TransactionTypeEnum" />
+          <xs:element minOccurs="0" name="TransactionRequestFormat" type="TransactionRequestFormatEnum" />
+          <xs:element minOccurs="0" name="TransactionRequest" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProcessTransactionWithPANAction" nillable="true" type="ProcessTransactionWithPANAction" />
+</xs:schema>

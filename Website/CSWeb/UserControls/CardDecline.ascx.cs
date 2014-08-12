@@ -290,7 +290,7 @@ namespace CSWeb.Root.UserControls
 
 
             DateTime expire = new DateTime();
-            if (ddlExpYear.SelectedIndex > 0 && ddlExpMonth.SelectedIndex > 0)
+            if (ddlExpYear.SelectedIndex > -1 && ddlExpMonth.SelectedIndex > -1)
             {
                 expire = new DateTime(int.Parse(ddlExpYear.SelectedValue), int.Parse(ddlExpMonth.SelectedValue), 1);
             }
@@ -313,21 +313,16 @@ namespace CSWeb.Root.UserControls
             }
             else
             {
-                if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
+                if (ucTokenex.EncryptedCCNum.Length == 0)
                 {
-                    if (!CommonHelper.ValidateCardNumber(c))
-                    {
-                        lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
-                        lblCCNumberError.Visible = true;
-                        _bError = true;
-                    }
-                    else
-                        lblCCNumberError.Visible = false;
+                    //    if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
+                    //    {
+                    lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
+                    lblCCNumberError.Visible = true;
+                    _bError = true;
                 }
                 else
                     lblCCNumberError.Visible = false;
-
-
             }
 
             if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
@@ -396,17 +391,16 @@ namespace CSWeb.Root.UserControls
             if (!validateInput())
             {
                 SaveData();
+
+                //TODO: fix sku id
                 Response.Redirect(RedirectUrl + "?PId=30&CId=" + (int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
             }
-
-
         }
         public void SaveData()
         {
             if (Page.IsValid)
             {
                 ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
-
 
                 Address billingAddress = new Address();
                 billingAddress.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
@@ -438,7 +432,7 @@ namespace CSWeb.Root.UserControls
 
 
                 PaymentInformation paymentDataInfo = new PaymentInformation();
-                string CardNumber = txtCCNumber1.Text + txtCCNumber2.Text + txtCCNumber3.Text + txtCCNumber4.Text;
+                string CardNumber = ucTokenex.GetCCNumToken();
                 paymentDataInfo.CreditCardNumber = CommonHelper.Encrypt(CardNumber);
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;

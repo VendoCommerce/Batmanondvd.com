@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CardDecline.aspx.cs" Inherits=" CSWeb.Root.Store.CardDecline" EnableSessionState="True" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CardDecline.aspx.cs" Inherits="CSWeb.Root.Store.CardDecline" EnableSessionState="True" %>
 <%@ Register Src="UserControls/CardDecline.ascx" TagName="Form" TagPrefix="uc1" %>
  
 <%@ Register Src="UserControls/TrackingPixels.ascx" TagName="TrackingPixels" TagPrefix="uc" %>

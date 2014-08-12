@@ -1,7 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CardDecline.ascx.cs" Inherits="CSWeb.Root.UserControls.CardDecline" %>
 
+<%@ Register src="Tokenex.ascx" tagname="Tokenex" tagprefix="uc1" %>
+
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>
+<uc1:Tokenex ID="ucTokenex" runat="server"  />
 <asp:UpdatePanel ID="upShippingForm" runat="server">
     <ContentTemplate>
  
@@ -31,8 +34,7 @@
                             </td>
                         
                              <td width="12%" valign="top">
-                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%>
-                            </td>
+                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%></td>
                            
                         </tr>
                     </ItemTemplate>
@@ -302,18 +304,47 @@
                     ControlToValidate="ddlExpYear"></asp:RequiredFieldValidator>
                     <asp:Label ID="lblExpDate" runat="server" Visible="false"></asp:Label></div>
                 <asp:DropDownList ID="ddlExpMonth" runat="server" CssClass="text-3">
-                  
+                                <asp:ListItem Text="01" Value="1" />
+                                <asp:ListItem Text="02" Value="2"  />
+                                <asp:ListItem Text="03"  Value="3" />
+                                <asp:ListItem Text="04"  Value="4" />
+                                <asp:ListItem Text="05"  Value="5" />
+                                <asp:ListItem Text="06"  Value="6" />
+                                <asp:ListItem Text="07"  Value="7" />
+                                <asp:ListItem Text="08"  Value="8" />
+                                <asp:ListItem Text="09"  Value="9" />
+                                <asp:ListItem Text="10"  Value="10" />
+                                <asp:ListItem Text="11"  Value="11" />
+                                <asp:ListItem Text="12"  Value="12" />
                 </asp:DropDownList>
                 <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="text-3">
-                    
+                                <asp:ListItem Text="2014"/>
+                                <asp:ListItem Text="2015"/>
+                                <asp:ListItem Text="2016"/>
+                                <asp:ListItem Text="2017"/>
+                                <asp:ListItem Text="2018"/>
+                                <asp:ListItem Text="2019"/>
+                                <asp:ListItem Text="2020"/>
+                                <asp:ListItem Text="2021"/>
+                                <asp:ListItem Text="2022"/>
+                                <asp:ListItem Text="2023"/>
+                                <asp:ListItem Text="2024"/>
+                                <asp:ListItem Text="2025"/>
                 </asp:DropDownList>
             </div>
             <div class="form_line clearfix">
                 <label class="label-3">
                     Card Number*</label>
                 <div class="error-2">
-                    <asp:Label ID="lblCCNumberError" runat="server" Visible="false"></asp:Label></div>
-               <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-4" MaxLength="4"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" /><asp:TextBox ID="txtCCNumber2" runat="server" CssClass="text-4" MaxLength="4"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtCCNumber2" runat="server" Display="Dynamic" ErrorMessage="*" /><asp:TextBox ID="txtCCNumber3" runat="server" CssClass="text-4" MaxLength="4"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtCCNumber3" runat="server" Display="Dynamic" ErrorMessage="*" /><asp:TextBox ID="txtCCNumber4" runat="server" CssClass="text-4" MaxLength="4"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtCCNumber4" runat="server" Display="Dynamic" ErrorMessage="*" />
+                    <asp:Label ID="lblCCNumberError" runat="server" Visible="false" ClientIDMode="Static"></asp:Label></div>
+               <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-4" MaxLength="4" ClientIDMode="Static">
+               </asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
+                <asp:TextBox ID="txtCCNumber2" runat="server" CssClass="text-4" MaxLength="4" ClientIDMode="Static">
+                </asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtCCNumber2" runat="server" Display="Dynamic" ErrorMessage="*" />
+                <asp:TextBox ID="txtCCNumber3" runat="server" CssClass="text-4" MaxLength="4" ClientIDMode="Static">
+                </asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtCCNumber3" runat="server" Display="Dynamic" ErrorMessage="*" />
+                <asp:TextBox ID="txtCCNumber4" runat="server" CssClass="text-4" MaxLength="4" ClientIDMode="Static">
+                </asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtCCNumber4" runat="server" Display="Dynamic" ErrorMessage="*" />
             </div>
             <div class="form_line clearfix">
                 <label class="label-3">
@@ -326,7 +357,7 @@
             </div>
           
             <div class="form_line_btn">
-                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/try_it_now_btn.png" OnClick="imgBtn_OnClick" />
+                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/try_it_now_btn.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
   
         </div>

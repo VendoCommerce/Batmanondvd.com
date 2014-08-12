@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BillingCreditForm.ascx.cs"
     Inherits="CSWeb.Root.UserControls.BillingCreditForm" %>
+    <%@ Register src="Tokenex.ascx" tagname="Tokenex" tagprefix="uc1" %>
     <script type="text/javascript" src="/Scripts/autoTab.js"></script>
 <script type="text/javascript">
 
@@ -34,6 +35,7 @@
                 Billing Address</h2>
             <div class="form_line clearfix">
                 <div class="error-2">
+                    <uc1:Tokenex ID="ucTokenex" runat="server" />
                     </div>
                 <asp:CheckBox ID="cbBillingDifferent" runat="server" CssClass="checkbox-right" OnCheckedChanged="cbBillingDifferent_CheckedChanged"
                     AutoPostBack="true" Checked="true" />
@@ -133,11 +135,11 @@
             <div class="form_line clearfix">
                 <div class="error-2">
                     <asp:RequiredFieldValidator ID="RfvCCNumberError" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" />
-                    <asp:Label ID="lblCCNumberError" runat="server" Visible="false"></asp:Label>
+                    <asp:Label ID="lblCCNumberError" runat="server" Visible="false" ClientIDMode="Static"></asp:Label>
                 </div>
                 <label class="label-2">
                     Card Number*</label>
-                <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-1" MaxLength="16"></asp:TextBox>
+                <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-1" MaxLength="16" ClientIDMode="Static"></asp:TextBox>
                         
             </div>
             <div class="form_line clearfix">
@@ -177,7 +179,7 @@
             </div>
             <div class="form_line_btn">
                 <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/yes_btn.png"
-                    CssClass="form_line_center" OnClientClick="MM_showHideLayers('mask', '', 'show');" OnClick="imgBtn_OnClick" />
+                    CssClass="form_line_center" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
             <div class="form_line_guarantee">
                 <a href="#guarantee" class="guarantee">90-Day Money-Back Guarantee</a></div>

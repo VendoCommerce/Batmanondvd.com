@@ -505,21 +505,16 @@ namespace CSWeb.Root.UserControls
             }
             else
             {
-                if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
+                if (ucTokenex.EncryptedCCNum.Length == 0)
                 {
-                    if (!CommonHelper.ValidateCardNumber(c))
-                    {
-                        lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
-                        lblCCNumberError.Visible = true;
-                        _bError = true;
-                    }
-                    else
-                        lblCCNumberError.Visible = false;
+                    //    if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
+                    //    {
+                    lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
+                    lblCCNumberError.Visible = true;
+                    _bError = true;
                 }
                 else
                     lblCCNumberError.Visible = false;
-
-
             }
 
             SitePreference sitePrefCache = CSFactory.GetCacheSitePref();
@@ -637,7 +632,7 @@ namespace CSWeb.Root.UserControls
 
 
             PaymentInformation paymentDataInfo = new PaymentInformation();
-            string CardNumber = txtCCNumber1.Text;
+            string CardNumber = ucTokenex.GetCCNumToken();
             paymentDataInfo.CreditCardNumber = CommonHelper.Encrypt(CardNumber);
             paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
             paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;

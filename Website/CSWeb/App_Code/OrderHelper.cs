@@ -19,7 +19,7 @@ using CSBusiness.FulfillmentHouse;
 using System.Collections;
 using CSBusiness.Attributes;
 using CSWebBase;
-
+using CSWeb.Tokenization;
 
 /// <summary>
 /// Summary description for OrderHelper
@@ -51,14 +51,19 @@ namespace CSWeb
             _request.TransactionDescription = orderData.CustomerInfo.BillingAddress.FirstName + " " + orderData.CustomerInfo.BillingAddress.LastName;
             _request.CustomerID = orderData.CustomerId.ToString();
             _request.InvoiceNumber = orderData.OrderId.ToString();
+            _request.IPAddress = orderData.IpAddress;
+            _request.Email = orderData.Email;
 
-            //Read information from web.config
-            //Response _response =   GatewayProvider.Instance("PaymentProvider").PerformRequest(_request);
+            //Make transaction request
+            Response _response = TokenexProcessor.GetInstance().PerformAuthRequest(_request);
 
-            //Read information from client DB setting
-            Response _response = PaymentProviderRepository.Instance.Get().PerformRequest(_request);
+            //Save gateway transaction
+            Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
+            orderAttributes.Add("AuthRequest", new CSBusiness.Attributes.AttributeValue(_response.GatewayRequestRaw));
+            orderAttributes.Add("AuthResponse", new CSBusiness.Attributes.AttributeValue(_response.GatewayResponseRaw));
+            CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderData.OrderId, orderAttributes, null);
 
-
+            //Save results
             if (_response != null && _response.ResponseType != TransactionResponseType.Approved)
             {
                 CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, _response.TransactionID, _response.AuthCode, 7);
@@ -457,287 +462,7 @@ namespace CSWeb
         {
             return CSBusiness.Web.CSBasePage.GetVersionName();
         }
-        public static bool AuthorizeOrderWithPayPalAdaptive(int orderID, Hashtable RequestData, out Hashtable ResponseData)
-        {
-            // Consider setting up below params
-            //Hashtable htAdditinalInfo = new Hashtable();
-            //htAdditinalInfo.Add("ReturnUrl", "https://cart.conversionsystems.com/about.aspx?orderid=1000");
-            //htAdditinalInfo.Add("CancelUrl", "https://www.canurrl.com");
-            //htAdditinalInfo.Add("Memo", "Test");
-            //htAdditinalInfo.Add("IpnNotificationUrl", "https://cart.conversionsystems.com/about.aspx?orderid=1000");
-            //htAdditinalInfo.Add("ActionType", "SetPaymentOptions");
-            //htAdditinalInfo.Add("PayKey", "");
-            //htAdditinalInfo.Add("ActionType", "PaymentDetails");
 
-            Request _request = new Request();
-            Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderID, true);
-
-            _request.AdditionalInfo = RequestData;
-            _request.Amount = (double)orderData.Total;
-            _request.InvoiceNumber = orderID.ToString();
-
-            Response _response = PaymentProviderRepository.Instance.Get(PaymentProviderType.PayPalAdaptivePayment).PerformRequest(_request);
-            ResponseData = _response.AdditionalInfo;
-            if (_response.MerchantDefined1 != null)
-            {
-                ResponseData.Add("RedirectUrl", _response.MerchantDefined1);
-            }
-
-            if (_response != null && _response.ResponseType != TransactionResponseType.Approved)
-            {
-                //CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, _response.TransactionID, _response.AuthCode, 7);
-                return false;
-            }
-            else if (_response != null && _response.ResponseType == TransactionResponseType.Approved)
-            {
-                //CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, _response.TransactionID, _response.AuthCode, 4);
-                return true;
-            }
-            return true;
-        }
-
-        public static bool AuthorizeOrderWithPayPalExpressCheckout(ClientCartContext context, Hashtable RequestData, out Hashtable ResponseData)
-        {
-            string strMethod = "";
-            string strInvoiceNumber = "";
-            string strToken = "";
-            Request _request = new Request();
-            if (RequestData != null)
-            {
-                if (RequestData.ContainsKey("Method"))
-                {
-                    strMethod = RequestData["Method"].ToString();
-                }
-                if (RequestData.ContainsKey("InvoiceNumber"))
-                {
-                    strInvoiceNumber = RequestData["InvoiceNumber"].ToString();
-                }
-                if (RequestData.ContainsKey("Token"))
-                {
-                    strToken = RequestData["Token"].ToString().Trim();
-                }
-            }
-            switch (strMethod)
-            {
-                case "SetExpressCheckout":
-                    {
-                        _request.Amount = (double)(context.CartInfo.Total);
-                        _request.CurrencyCode = "USD";
-                        int ct = 0;
-                        string strLname = string.Empty;
-                        string strLamt = string.Empty;
-                        string strLqty = string.Empty;
-                        foreach (Sku skuItem in context.CartInfo.CartItems)
-                        {
-                            strLname = "L_PAYMENTREQUEST_0_NAME";
-                            strLamt = "L_PAYMENTREQUEST_0_AMT";
-                            strLqty = "L_PAYMENTREQUEST_0_QTY";
-                            strLname = "L_PAYMENTREQUEST_0_NAME" + ct;
-                            strLamt = "L_PAYMENTREQUEST_0_AMT" + ct;
-                            strLqty = "L_PAYMENTREQUEST_0_QTY" + ct;
-                            RequestData[strLname] = skuItem.Title;
-                            RequestData[strLamt] = skuItem.InitialPrice.ToString("N2");
-                            RequestData[strLqty] = skuItem.Quantity;
-                            ct++;
-                        }
-                        if (context.CartInfo.DiscountAmount > 0)
-                        {
-                            strLname = "L_PAYMENTREQUEST_0_NAME";
-                            strLamt = "L_PAYMENTREQUEST_0_AMT";
-                            strLqty = "L_PAYMENTREQUEST_0_QTY";
-                            strLname = "L_PAYMENTREQUEST_0_NAME" + ct;
-                            strLamt = "L_PAYMENTREQUEST_0_AMT" + ct;
-                            strLqty = "L_PAYMENTREQUEST_0_QTY" + ct;
-                            RequestData[strLname] = "Discount Code - " + context.CartInfo.DiscountCode;
-                            RequestData[strLamt] = "-" + context.CartInfo.DiscountAmount.ToString("N2");
-                            RequestData[strLqty] = "1";
-                        }
-                        RequestData["PAYMENTREQUEST_0_ITEMAMT"] = (context.CartInfo.SubTotal - context.CartInfo.DiscountAmount).ToString("N2");
-                        RequestData["PAYMENTREQUEST_0_SHIPPINGAMT"] = context.CartInfo.ShippingCost.ToString("N2");
-                        RequestData["PAYMENTREQUEST_0_TAXAMT"] = context.CartInfo.TaxCost.ToString("N2");
-                        break;
-                    }
-                case "GetExpressCheckoutDetails":
-                    {
-                        break;
-                    }
-                case "DoExpressCheckoutPayment":
-                    {
-                        _request.Amount = (double)(context.CartInfo.Total);
-                        _request.CurrencyCode = "USD";
-                        int ct = 0;
-                        string strLname = string.Empty;
-                        string strLamt = string.Empty;
-                        string strLqty = string.Empty;
-                        foreach (Sku skuItem in context.CartInfo.CartItems)
-                        {
-                            strLname = "L_PAYMENTREQUEST_0_NAME";
-                            strLamt = "L_PAYMENTREQUEST_0_AMT";
-                            strLqty = "L_PAYMENTREQUEST_0_QTY";
-                            strLname = "L_PAYMENTREQUEST_0_NAME" + ct;
-                            strLamt = "L_PAYMENTREQUEST_0_AMT" + ct;
-                            strLqty = "L_PAYMENTREQUEST_0_QTY" + ct;
-                            RequestData[strLname] = skuItem.Title;
-                            RequestData[strLamt] = skuItem.InitialPrice.ToString("N2");
-                            RequestData[strLqty] = skuItem.Quantity;
-                            ct++;
-                        }
-                        if (context.CartInfo.DiscountAmount > 0)
-                        {
-                            strLname = "L_PAYMENTREQUEST_0_NAME";
-                            strLamt = "L_PAYMENTREQUEST_0_AMT";
-                            strLqty = "L_PAYMENTREQUEST_0_QTY";
-                            strLname = "L_PAYMENTREQUEST_0_NAME" + ct;
-                            strLamt = "L_PAYMENTREQUEST_0_AMT" + ct;
-                            strLqty = "L_PAYMENTREQUEST_0_QTY" + ct;
-                            RequestData[strLname] = "Discount Code - " + context.CartInfo.DiscountCode;
-                            RequestData[strLamt] = "-" + context.CartInfo.DiscountAmount.ToString("N2");
-                            RequestData[strLqty] = "1";
-                        }
-                        RequestData["PAYMENTREQUEST_0_ITEMAMT"] = (context.CartInfo.SubTotal - context.CartInfo.DiscountAmount).ToString("N2");
-                        RequestData["PAYMENTREQUEST_0_SHIPPINGAMT"] = context.CartInfo.ShippingCost.ToString("N2");
-                        RequestData["PAYMENTREQUEST_0_TAXAMT"] = context.CartInfo.TaxCost.ToString("N2");
-                        _request.InvoiceNumber = strInvoiceNumber;
-                        //Save the AUTHCODE, TRANSACTION CODE.
-                        break;
-                    }
-
-            }
-
-
-
-
-
-            _request.AdditionalInfo = RequestData;
-
-
-            Response _response = PaymentProviderRepository.Instance.Get(PaymentProviderType.PayPalExpressCheckout).PerformRequest(_request);
-
-            //#region Log Request/Response
-            //try
-            //{
-            //    Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
-            //    string logRequest = _response.GatewayRequestRaw; // TODO: we are not capturing this in base. Once updated there, we will begin saving request as well as response.
-            //    string logResponse = _response.GatewayResponseRaw;
-
-            //    // the attributes we save to depends on the type of call
-            //    if (RequestData.ContainsKey("ActionType") && RequestData["ActionType"].ToString() == "SetPaymentOptions")
-            //    {
-            //        orderAttributes.Add("PayPalSetPaymentRequest", new CSBusiness.Attributes.AttributeValue(logRequest));
-            //        orderAttributes.Add("PayPalSetPaymentResponse", new CSBusiness.Attributes.AttributeValue(logResponse));
-            //    }
-            //    else if (RequestData.ContainsKey("ActionType") && RequestData["ActionType"].ToString() == "GetShippingAddresses")
-            //    {
-            //        orderAttributes.Add("PayPalGetAddrRequest", new CSBusiness.Attributes.AttributeValue(logRequest));
-            //        orderAttributes.Add("PayPalGetAddrResponse", new CSBusiness.Attributes.AttributeValue(logResponse));
-            //    }
-            //    else
-            //    {
-            //        orderAttributes.Add("PayPalRequest", new CSBusiness.Attributes.AttributeValue(logRequest));
-            //        orderAttributes.Add("PayPalResponse", new CSBusiness.Attributes.AttributeValue(logResponse));
-            //    }
-
-            //    CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderData.OrderId, orderAttributes, null);
-            //}
-            //catch (Exception ex)
-            //{
-            //    CSCore.CSLogger.Instance.LogException(ex.Message, ex.InnerException);
-            //}
-
-            //#endregion
-
-            ResponseData = _response.AdditionalInfo;
-
-            if (_response.MerchantDefined1 != null)
-            {
-                ResponseData.Add("RedirectUrl", _response.MerchantDefined1);
-            }
-
-            return true;
-        }
-
-        public static bool RefundOrderWithLitle(int orderID, string transactionid)
-        {
-            Request _request = new Request();
-
-            Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderID, true);
-
-
-            _request.TransactionID = transactionid;
-            _request.CustomerID = orderData.CustomerId.ToString();
-            _request.InvoiceNumber = orderData.OrderId.ToString();
-
-            
-            Response _response = PaymentProviderRepository.Instance.Get(PaymentProviderType.LitleCorpAccount).PerformVoidRequest(_request);
-
-            if (_response != null && _response.ResponseType != TransactionResponseType.Approved)
-            {
-                if (_response.ReasonText.Equals("362"))
-                {
-                    Response _response1 = PaymentProviderRepository.Instance.Get(PaymentProviderType.LitleCorpAccount).PerformVoidSettledRequest(_request);
-
-                    if (_response1 != null && _response1.ResponseType == TransactionResponseType.Approved)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                //CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, _response.TransactionID, _response.AuthCode, 7);
-
-                return false;
-            }
-            else if (_response != null && _response.ResponseType == TransactionResponseType.Approved)
-            {
-                //CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, _response.TransactionID, _response.AuthCode, 4);
-                return true;
-            }
-
-            return true;
-
-
-        }
-
-        public static bool RefundOrderWithPayPalExpressCheckout(int orderID,Hashtable RequestData, out Hashtable ResponseData)
-        {
-            string strMethod = "";
-            string strInvoiceNumber = "";
-            string strToken = "";
-            Request _request = new Request();
-            if (RequestData != null)
-            {
-                if (RequestData.ContainsKey("Method"))
-                {
-                    strMethod = RequestData["Method"].ToString();
-                }
-                if (RequestData.ContainsKey("InvoiceNumber"))
-                {
-                    strInvoiceNumber = RequestData["InvoiceNumber"].ToString();
-                }
-                if (RequestData.ContainsKey("Token"))
-                {
-                    strToken = RequestData["Token"].ToString().Trim();
-                }
-            }
-            
-            
-            
-            _request.AdditionalInfo = RequestData;
-
-
-            Response _response = PaymentProviderRepository.Instance.Get(PaymentProviderType.PayPalExpressCheckout).PerformRequest(_request);
-
-            ResponseData = _response.AdditionalInfo;
-
-            if (_response.MerchantDefined1 != null)
-            {
-                ResponseData.Add("RedirectUrl", _response.MerchantDefined1);
-            }
-
-            return true;
-        }
 
         public static bool IsCustomerOrderFlowCompleted(int OrderId)
         {

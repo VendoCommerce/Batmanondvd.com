@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://api.tokenex.com" elementFormDefault="qualified" targetNamespace="https://api.tokenex.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd2" />
+  <xs:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TokenEx.Services.Models" />
+  <xs:element name="Tokenize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="TokenAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TokenizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TokenizeResult" nillable="true" type="ResultOfAddToken" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TokenizeFromEncryptedValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="TokenizeFromEncryptedValueAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TokenizeFromEncryptedValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TokenizeFromEncryptedValueResult" nillable="true" type="ResultOfTokenizeFromEncryptedValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="ValidateTokenAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateTokenResult" nillable="true" type="ResultOfValidateToken" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Detokenize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="DetokenizeAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetokenizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DetokenizeResult" nillable="true" type="ResultOfDetokenize" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="DeleteTokenAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteTokenResult" nillable="true" type="ResultOfDeleteToken" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSingleUseAuthToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="GetSingleUseAuthTokenAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSingleUseAuthTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSingleUseAuthTokenResult" nillable="true" type="ResultOfGetSingleUseAuthToken" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="ProcessTransationAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TokenEx.Services.Models" minOccurs="0" name="ProcessTransactionResult" nillable="true" type="q1:ResultOfProcessTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTransactionWithPAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="ProcessTransactionWithPANAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTransactionWithPANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TokenEx.Services.Models" minOccurs="0" name="ProcessTransactionWithPANResult" nillable="true" type="q2:ResultOfProcessTransactionWithPAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTransactionWithEncryptedPAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="ProcessTransactionWithPANAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTransactionWithEncryptedPANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TokenEx.Services.Models" minOccurs="0" name="ProcessTransactionWithEncryptedPANResult" nillable="true" type="q3:ResultOfProcessTransactionWithPAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

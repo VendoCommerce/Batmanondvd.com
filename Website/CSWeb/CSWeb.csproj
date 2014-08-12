@@ -18,7 +18,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
@@ -469,6 +469,36 @@
     <Content Include="Scripts\jwplayer\vapor.xml" />
     <Content Include="Scripts\NoBack.js" />
     <Content Include="Scripts\transition.js" />
+    <None Include="Service References\TokenEx_Test\configuration91.svcinfo" />
+    <None Include="Service References\TokenEx_Test\configuration.svcinfo" />
+    <Content Include="Service References\TokenEx_Test\CSWeb.TokenEx_Test.ResultOfAddToken.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TokenEx_Test\CSWeb.TokenEx_Test.ResultOfDeleteToken.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TokenEx_Test\CSWeb.TokenEx_Test.ResultOfDetokenize.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TokenEx_Test\CSWeb.TokenEx_Test.ResultOfGetSingleUseAuthToken.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TokenEx_Test\CSWeb.TokenEx_Test.ResultOfProcessTransaction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TokenEx_Test\CSWeb.TokenEx_Test.ResultOfProcessTransactionWithPAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TokenEx_Test\CSWeb.TokenEx_Test.ResultOfTokenizeFromEncryptedValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TokenEx_Test\CSWeb.TokenEx_Test.ResultOfValidateToken.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\TokenEx_Test\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Styles\admin.css" />
     <Content Include="Styles\cart_styles.css" />
     <Content Include="Styles\fontawesome\css\font-awesome-ie7.css" />
@@ -524,6 +554,7 @@
     <Content Include="Styles\global_print.css" />
     <Content Include="Styles\midstyles.css" />
     <Content Include="Styles\Site.css" />
+    <Content Include="tokenex2.aspx" />
     <Content Include="UserControls\BillingCreditForm.ascx" />
     <Content Include="UserControls\BillingForm.ascx" />
     <Content Include="UserControls\BillingShippingCreditForm.ascx" />
@@ -542,6 +573,7 @@
     <Content Include="UserControls\ShippingCreditForm.ascx" />
     <Content Include="UserControls\ShippingForm.ascx" />
     <Content Include="UserControls\ShoppingCartControl.ascx" />
+    <Content Include="UserControls\Tokenex.ascx" />
     <Content Include="UserControls\TrackingPixels.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -552,6 +584,23 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="Service References\TokenEx_Test\TokenExServices.wsdl" />
+    <None Include="Service References\TokenEx_Test\TokenServices.wsdl" />
+    <None Include="Service References\TokenEx_Test\TokenServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TokenEx_Test\TokenServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TokenEx_Test\TokenServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TokenEx_Test\TokenServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TokenEx_Test\TokenServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Styles\fontawesome\.gitignore" />
     <None Include="Styles\fontawesome\docs\assets\font\FontAwesome.otf" />
     <None Include="Styles\fontawesome\docs\assets\less\font-awesome-ie7.less" />
@@ -625,6 +674,7 @@
   <ItemGroup>
     <Compile Include="AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
@@ -1044,8 +1094,8 @@
     <Compile Include="Admin\VersionReport1.aspx.designer.cs">
       <DependentUpon>VersionReport1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\FulfillmentHouse\Acmg.cs" />
-    <Compile Include="App_Code\FulfillmentHouse\Chargify.cs" />
+    <Compile Include="App_Code\Tokenization\RequestGenerator.cs" />
+    <Compile Include="App_Code\Tokenization\TokenexProcessor.cs" />
     <Compile Include="AuthorizeOrder.aspx.cs">
       <DependentUpon>AuthorizeOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1062,6 +1112,7 @@
     </Compile>
     <Compile Include="Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CheckoutExpired.aspx.cs">
       <DependentUpon>CheckoutExpired.aspx</DependentUpon>
@@ -1095,6 +1146,18 @@
     <Compile Include="ReviewOrder.aspx.designer.cs">
       <DependentUpon>ReviewOrder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\TokenEx_Test\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="tokenex2.aspx.cs">
+      <DependentUpon>tokenex2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tokenex2.aspx.designer.cs">
+      <DependentUpon>tokenex2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ShippingBillingCreditForm.ascx.cs">
       <DependentUpon>ShippingBillingCreditForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1123,6 +1186,13 @@
     <Compile Include="UserControls\ShoppingCartControl.ascx.designer.cs">
       <DependentUpon>ShoppingCartControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Tokenex.ascx.cs">
+      <DependentUpon>Tokenex.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Tokenex.ascx.designer.cs">
+      <DependentUpon>Tokenex.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TrackingPixels.ascx.cs">
       <DependentUpon>TrackingPixels.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1131,11 +1201,6 @@
       <DependentUpon>TrackingPixels.ascx</DependentUpon>
     </Compile>
     <Content Include="App_Code\FulfillmentHouse\DataPak.cs" />
-    <Compile Include="App_Code\FulfillmentHouse\Webgistix.cs" />
-    <Compile Include="App_Code\FulfillmentHouse\PyxConnect.cs" />
-    <Compile Include="App_Code\FulfillmentHouse\ShipWire.cs" />
-    <Compile Include="App_Code\FulfillmentHouse\Moulton.cs" />
-    <Compile Include="App_Code\FulfillmentHouse\OrderMotion.cs" />
     <Compile Include="Admin\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -1156,6 +1221,7 @@
     </Compile>
     <Compile Include="Mobile\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Mobile\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
@@ -1446,6 +1512,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\HitLinks\" />
+    <WCFMetadataStorage Include="Service References\TokenEx_Test\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\HitLinks\reportws.wsdl" />
@@ -1469,12 +1536,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54584</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:5252/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

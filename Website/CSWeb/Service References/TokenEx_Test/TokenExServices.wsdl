@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="https://api.tokenex.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TokenExServices" targetNamespace="https://api.tokenex.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_ITokenServices_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://tempuri.org/" location="https://test-api.tokenex.com/TokenServices.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://api.tokenex.com/Imports">
+      <xsd:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd0" namespace="https://api.tokenex.com" />
+      <xsd:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/TokenEx.Services.Models" />
+      <xsd:import schemaLocation="https://test-api.tokenex.com/TokenServices.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITokenServices_Tokenize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tokenize" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_Tokenize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TokenizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_TokenizeFromEncryptedValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:TokenizeFromEncryptedValue" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_TokenizeFromEncryptedValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TokenizeFromEncryptedValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_ValidateToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateToken" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_ValidateToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_Detokenize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detokenize" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_Detokenize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetokenizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_DeleteToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteToken" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_DeleteToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_GetSingleUseAuthToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleUseAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_GetSingleUseAuthToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleUseAuthTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_ProcessTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_ProcessTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_ProcessTransactionWithPAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessTransactionWithPAN" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_ProcessTransactionWithPAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessTransactionWithPANResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_ProcessTransactionWithEncryptedPAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessTransactionWithEncryptedPAN" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServices_ProcessTransactionWithEncryptedPAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessTransactionWithEncryptedPANResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITokenServices">
+    <wsdl:operation name="Tokenize">
+      <wsdl:input wsaw:Action="https://api.tokenex.com/ITokenServices/Tokenize" message="tns:ITokenServices_Tokenize_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.tokenex.com/ITokenServices/TokenizeResponse" message="tns:ITokenServices_Tokenize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TokenizeFromEncryptedValue">
+      <wsdl:input wsaw:Action="https://api.tokenex.com/ITokenServices/TokenizeFromEncryptedValue" message="tns:ITokenServices_TokenizeFromEncryptedValue_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.tokenex.com/ITokenServices/TokenizeFromEncryptedValueResponse" message="tns:ITokenServices_TokenizeFromEncryptedValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateToken">
+      <wsdl:input wsaw:Action="https://api.tokenex.com/ITokenServices/ValidateToken" message="tns:ITokenServices_ValidateToken_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.tokenex.com/ITokenServices/ValidateTokenResponse" message="tns:ITokenServices_ValidateToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detokenize">
+      <wsdl:input wsaw:Action="https://api.tokenex.com/ITokenServices/Detokenize" message="tns:ITokenServices_Detokenize_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.tokenex.com/ITokenServices/DetokenizeResponse" message="tns:ITokenServices_Detokenize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToken">
+      <wsdl:input wsaw:Action="https://api.tokenex.com/ITokenServices/DeleteToken" message="tns:ITokenServices_DeleteToken_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.tokenex.com/ITokenServices/DeleteTokenResponse" message="tns:ITokenServices_DeleteToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleUseAuthToken">
+      <wsdl:input wsaw:Action="https://api.tokenex.com/ITokenServices/GetSingleUseAuthToken" message="tns:ITokenServices_GetSingleUseAuthToken_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.tokenex.com/ITokenServices/GetSingleUseAuthTokenResponse" message="tns:ITokenServices_GetSingleUseAuthToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTransaction">
+      <wsdl:input wsaw:Action="https://api.tokenex.com/ITokenServices/ProcessTransaction" message="tns:ITokenServices_ProcessTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.tokenex.com/ITokenServices/ProcessTransactionResponse" message="tns:ITokenServices_ProcessTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTransactionWithPAN">
+      <wsdl:input wsaw:Action="https://api.tokenex.com/ITokenServices/ProcessTransactionWithPAN" message="tns:ITokenServices_ProcessTransactionWithPAN_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.tokenex.com/ITokenServices/ProcessTransactionWithPANResponse" message="tns:ITokenServices_ProcessTransactionWithPAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTransactionWithEncryptedPAN">
+      <wsdl:input wsaw:Action="https://api.tokenex.com/ITokenServices/ProcessTransactionWithEncryptedPAN" message="tns:ITokenServices_ProcessTransactionWithEncryptedPAN_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.tokenex.com/ITokenServices/ProcessTransactionWithEncryptedPANResponse" message="tns:ITokenServices_ProcessTransactionWithEncryptedPAN_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITokenServices" type="tns:ITokenServices">
+    <wsp:PolicyReference URI="#BasicHttpBinding_ITokenServices_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Tokenize">
+      <soap:operation soapAction="https://api.tokenex.com/ITokenServices/Tokenize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TokenizeFromEncryptedValue">
+      <soap:operation soapAction="https://api.tokenex.com/ITokenServices/TokenizeFromEncryptedValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateToken">
+      <soap:operation soapAction="https://api.tokenex.com/ITokenServices/ValidateToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detokenize">
+      <soap:operation soapAction="https://api.tokenex.com/ITokenServices/Detokenize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToken">
+      <soap:operation soapAction="https://api.tokenex.com/ITokenServices/DeleteToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleUseAuthToken">
+      <soap:operation soapAction="https://api.tokenex.com/ITokenServices/GetSingleUseAuthToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTransaction">
+      <soap:operation soapAction="https://api.tokenex.com/ITokenServices/ProcessTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTransactionWithPAN">
+      <soap:operation soapAction="https://api.tokenex.com/ITokenServices/ProcessTransactionWithPAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTransactionWithEncryptedPAN">
+      <soap:operation soapAction="https://api.tokenex.com/ITokenServices/ProcessTransactionWithEncryptedPAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TokenExServices">
+    <wsdl:port name="BasicHttpBinding_ITokenServices" binding="tns:BasicHttpBinding_ITokenServices">
+      <soap:address location="https://test-api.tokenex.com/TokenServices.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

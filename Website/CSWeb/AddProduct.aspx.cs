@@ -111,7 +111,7 @@ namespace CSWeb.Root.Store
                         clientData.CartInfo.ShowQuantity = false;
                 
                         Session["ClientOrderData"] = clientData;
-                        Response.Redirect("ShoppingCartV4.aspx");
+                        Response.Redirect("Cart.aspx");
                     }
                     
                 }
