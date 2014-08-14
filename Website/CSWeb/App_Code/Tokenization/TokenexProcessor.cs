@@ -23,6 +23,7 @@ namespace CSWeb.Tokenization
         string GatewayPassword = string.Empty;
 
         //Setting up required values for each call
+        //TODO: Get these values from DB
         public TokenexProcessor()
         {
             APIKey = "mUyKbhAEKF6jG6EAWXvx";

@@ -554,7 +554,6 @@
     <Content Include="Styles\global_print.css" />
     <Content Include="Styles\midstyles.css" />
     <Content Include="Styles\Site.css" />
-    <Content Include="tokenex2.aspx" />
     <Content Include="UserControls\BillingCreditForm.ascx" />
     <Content Include="UserControls\BillingForm.ascx" />
     <Content Include="UserControls\BillingShippingCreditForm.ascx" />
@@ -1150,13 +1149,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="tokenex2.aspx.cs">
-      <DependentUpon>tokenex2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tokenex2.aspx.designer.cs">
-      <DependentUpon>tokenex2.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ShippingBillingCreditForm.ascx.cs">
       <DependentUpon>ShippingBillingCreditForm.ascx</DependentUpon>
