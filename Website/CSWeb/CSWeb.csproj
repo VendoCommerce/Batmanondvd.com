@@ -582,12 +582,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <None Include="Service References\TokenEx_Test\TokenExServices.wsdl" />
     <None Include="Service References\TokenEx_Test\TokenServices.wsdl" />
     <None Include="Service References\TokenEx_Test\TokenServices.xsd">
@@ -682,9 +676,6 @@
     </None>
     <None Include="Web.config.Release.token">
       <DependentUpon>Web.config.token</DependentUpon>
-    </None>
-    <None Include="Web.Deploy-Dev.config">
-      <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -1545,7 +1536,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54584</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
