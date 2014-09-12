@@ -682,6 +682,9 @@
     <None Include="Web.config.Release.token">
       <DependentUpon>Web.config.token</DependentUpon>
     </None>
+    <None Include="Web.Deploy-Dev.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddProduct.aspx.cs">
