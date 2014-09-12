@@ -379,7 +379,6 @@
     <None Include="appsettings.config.token">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\PublishProfiles\sd.pubxml" />
     <None Include="Service References\HitLinks\CSWeb.HitLinks.Data.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -581,6 +580,12 @@
     <Content Include="UserControls\TrackingPixels.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
     </Content>
     <None Include="Service References\TokenEx_Test\TokenExServices.wsdl" />
     <None Include="Service References\TokenEx_Test\TokenServices.wsdl" />
@@ -1536,7 +1541,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54584</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
