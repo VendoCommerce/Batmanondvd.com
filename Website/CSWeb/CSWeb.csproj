@@ -379,6 +379,7 @@
     <None Include="appsettings.config.token">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\sd.pubxml" />
     <None Include="Service References\HitLinks\CSWeb.HitLinks.Data.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
