@@ -4,5 +4,5 @@ MAKE SURE ALL INSERTS DO CHECK IF EXISTS FIRST TO PREVENT DUPLICATES
 */
 USE CSMaster
 GO
-INSERT INTO ReleaseLog (Description) VALUES 'BettaBasket.com release')
+INSERT INTO ReleaseLog (Description) VALUES 'BatmanonDvd.com release')
 GO
