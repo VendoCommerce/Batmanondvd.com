@@ -376,6 +376,7 @@
     <None Include="Admin\css\fonts\fontawesome\FontAwesome.otf" />
     <None Include="Admin\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.otf" />
     <None Include="Admin\css\fonts\glyphicons.pro\glyphicons-regular.otf" />
+    <Content Include="appsettings.config.token" />
     <None Include="Service References\HitLinks\CSWeb.HitLinks.Data.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -499,6 +500,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="SQL\DB_Updates.SQL" />
     <Content Include="Styles\admin.css" />
     <Content Include="Styles\cart_styles.css" />
     <Content Include="Styles\fontawesome\css\font-awesome-ie7.css" />
@@ -669,6 +671,7 @@
     <None Include="Styles\fontawesome\scss\_mixins.scss" />
     <None Include="Styles\fontawesome\scss\_path.scss" />
     <None Include="Styles\fontawesome\scss\_variables.scss" />
+    <Content Include="Web.config.token" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddProduct.aspx.cs">
