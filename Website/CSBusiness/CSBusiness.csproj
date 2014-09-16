@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1292FF3A-205E-4496-8DAF-0B3574CA538C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSBusiness</RootNamespace>
+    <AssemblyName>CSBusiness</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Deploy-Dev|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Deploy-Dev\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\CSDLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\CSDLL\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analytics.cs" />
+    <Compile Include="Attributes\Attribute.cs" />
+    <Compile Include="Attributes\AttributePageControlInfo.cs" />
+    <Compile Include="Attributes\AttributesPresentation.cs" />
+    <Compile Include="Attributes\AttributeValue.cs" />
+    <Compile Include="Attributes\Extensions.cs" />
+    <Compile Include="Attributes\IAttributesPage.cs" />
+    <Compile Include="Attributes\IObjectAttribute.cs" />
+    <Compile Include="Attributes\ObjectAttribute.cs" />
+    <Compile Include="Cache\ResourceCache.cs" />
+    <Compile Include="Cache\TaxregionCache.cs" />
+    <Compile Include="Cache\BaseCache.cs" />
+    <Compile Include="Discount\DiscountCalculator.cs" />
+    <Compile Include="Discount\IDiscountCalculator.cs" />
+    <Compile Include="Enum\DeviceType.cs" />
+    <Compile Include="FulfillmentHouse\FulfillmentHouseProviderManger.cs" />
+    <Compile Include="CouponInfo.cs" />
+    <Compile Include="Customer\Address.cs" />
+    <Compile Include="Customer\Customer.cs" />
+    <Compile Include="Customer\CustomerManager.cs" />
+    <Compile Include="Customer\ICustomerService.cs" />
+    <Compile Include="Email\EmailManager.cs" />
+    <Compile Include="Email\EmailSetting.cs" />
+    <Compile Include="Enum\CouponTypeEnum.cs" />
+    <Compile Include="Enum\OrderProcessTypeEnum.cs" />
+    <Compile Include="Enum\TemplateItemTypeEnum.cs" />
+    <Compile Include="FulfillmentHouse\FulfillmentHouseProviderSetting.cs" />
+    <Compile Include="Order\Cart.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Order\ClientCartContext.cs" />
+    <Compile Include="Enum\CreditCartTypeEnum.cs" />
+    <Compile Include="Enum\ShoppingCartType.cs" />
+    <Compile Include="Enum\UserTypeEnum.cs" />
+    <Compile Include="Enum\ShippingTypeEnum.cs" />
+    <Compile Include="Order\CustomField.cs" />
+    <Compile Include="Order\IorderService.cs" />
+    <Compile Include="Payment\PaymentProviderManger.cs" />
+    <Compile Include="Payment\PaymentProviderRepository.cs" />
+    <Compile Include="PostSale\Path.cs" />
+    <Compile Include="PostSale\PathManager.cs" />
+    <Compile Include="PostSale\Template.cs" />
+    <Compile Include="PostSale\TemplateControl.cs" />
+    <Compile Include="PostSale\TemplateSku.cs" />
+    <Compile Include="Security\Encryption.cs" />
+    <Compile Include="Total\ITotalCalculator.cs" />
+    <Compile Include="Total\TotalCalculator.cs" />
+    <Compile Include="Web\Admin\AdminBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\CSBaseGlobal.cs" />
+    <Compile Include="Web\Scripts\ScriptsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScriptsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceHelper.cs" />
+    <Compile Include="Shipping\FlatShippingCalculator.cs" />
+    <Compile Include="Shipping\IShippingCalculator.cs" />
+    <Compile Include="Shipping\OrderValueShippingCalculator.cs" />
+    <Compile Include="Shipping\OrderWeightShippingCalculator.cs" />
+    <Compile Include="Shipping\ShippingManager.cs" />
+    <Compile Include="Shipping\SkuBasedShippingCalculator.cs" />
+    <Compile Include="Shipping\UserShippingMethodType.cs" />
+    <Compile Include="Sku\ISkuService.cs" />
+    <Compile Include="Locator\UnityPerExecutionContextLifetimeManager.cs" />
+    <Compile Include="Locator\UnityDependencyResolver.cs" />
+    <Compile Include="Locator\DependencyResolverFactory.cs" />
+    <Compile Include="CountryManager.cs" />
+    <Compile Include="Cache\StateCache.cs" />
+    <Compile Include="Locator\CSResolve.cs" />
+    <Compile Include="Cache\SitePreferenceCache.cs" />
+    <Compile Include="Order\Order.cs" />
+    <Compile Include="Order\OrderManager.cs" />
+    <Compile Include="Order\PaymentInfo.cs" />
+    <Compile Include="SitePreference.cs" />
+    <Compile Include="StateManager.cs" />
+    <Compile Include="StateProvincecs.cs" />
+    <Compile Include="Enum\TaxDisplayTypeEnum.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="Cache\CountryCache.cs" />
+    <Compile Include="CSFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sku\Sku.cs" />
+    <Compile Include="Sku\SkuManager.cs" />
+    <Compile Include="TaxRegion.cs" />
+    <Compile Include="Tax\ITaxCalculator.cs" />
+    <Compile Include="Tax\TaxManager.cs" />
+    <Compile Include="Version.cs" />
+    <Compile Include="VersionCategory.cs" />
+    <Compile Include="VersionFieldsReport.cs" />
+    <Compile Include="Web\AjaxTotalsHelper.cs" />
+    <Compile Include="Web\AjaxTotalsResponse.cs" />
+    <Compile Include="Web\AjaxTotalsToken.cs" />
+    <Compile Include="Web\CSBaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\CSBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\TnTPostBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSCore\CSCore.csproj">
+      <Project>{3BDF14DD-763F-4CB7-8C13-0AAD3C4932F1}</Project>
+      <Name>CSCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSData\CSData.csproj">
+      <Project>{3FAE442C-8F7C-4381-8469-1427877FC43A}</Project>
+      <Name>CSData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSProvider\CSPaymentProvider.csproj">
+      <Project>{EB784882-6300-413C-B933-A6222C37FFD3}</Project>
+      <Name>CSPaymentProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Web\Scripts\ScriptsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ScriptsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web\Scripts\ConversionSystemsBase.js" />
+    <Content Include="Web\Scripts\CSTrackingPixel.js" />
+    <Content Include="Web\Scripts\Prop_ProcessTnTVars.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

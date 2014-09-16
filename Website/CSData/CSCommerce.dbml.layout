@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.25, 8.5" name="CSCommerce">
+  <DataContextMoniker Name="/CSCommerceDataContext" />
+  <nestedChildShapes>
+    <classShape Id="aa17463b-3dc0-4a3a-af9b-37d67922ea12" absoluteBounds="3.625, 3.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CSCommerceDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d36fde1-a3ca-4980-93e6-f08c2c0512a3" absoluteBounds="3.64, 3.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6539c67b-2ac0-446d-96a0-08d833d45a93" absoluteBounds="5.875, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/CSCommerceDataContext/Address" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5793d9ce-f072-4efe-bdbb-a25b5f5828b1" absoluteBounds="5.8900000000000006, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e580f78a-9e8b-4d3a-9f2a-89a445c65e03" absoluteBounds="5.875, 4.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CSCommerceDataContext/CustomField" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b6da0de-0bc1-4eaf-9a2d-ab8e26906289" absoluteBounds="5.89, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c4629be0-e902-4bdb-adf9-93455bf05091" absoluteBounds="4, 5.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CSCommerceDataContext/VersionCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f836e8b7-ae99-4ed9-bc62-b19b7baa084c" absoluteBounds="4.015, 6.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb0fc9d2-82af-4903-b23f-a72f766c8f9a" absoluteBounds="1, 5.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CSCommerceDataContext/Version" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2ab8a02-1270-4e79-976c-b30aacc90ab3" absoluteBounds="1.0150000000000001, 6.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b7cd2f66-601e-44eb-a87d-f116480798dc" absoluteBounds="0.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CSCommerceDataContext/ShippingOrderValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99711d7a-4ec3-4152-9189-aa47a410f24c" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7d355b1-52dd-45dc-a26c-1f494734bc5a" absoluteBounds="8.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/CSCommerceDataContext/SkuShipping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ee4561a-4514-402e-9765-f0458ab7865b" absoluteBounds="8.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f724678e-6188-473c-87e7-69db5bc86c15" absoluteBounds="6.5, 5.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CSCommerceDataContext/ShippingPref" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3ef5de1-c5f0-40ff-9054-805e7297005b" absoluteBounds="6.5150000000000006, 6.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ba2f158-f60b-4b8e-a5f7-d53a0eeb3ab3" absoluteBounds="0.875, 3.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CSCommerceDataContext/ShippingRegion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61f2b9ed-6127-40fd-ab4e-44126d724986" absoluteBounds="0.89000000000000012, 3.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7263e57-508e-439e-a506-226c433da718" absoluteBounds="9, 2.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CSCommerceDataContext/Coupon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2caf9c8e-8b19-4b6b-b487-98bc6a63e549" absoluteBounds="9.015, 3.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="684d5bd6-793a-4ea0-8921-d87348180692" absoluteBounds="3.25, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/CSCommerceDataContext/SitePref" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ae9216b-5bdc-461a-85d8-bb0f95fc23ab" absoluteBounds="3.2649999999999997, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="005a092d-e319-433e-87a1-a50b8f15df68" absoluteBounds="10, 5.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CSCommerceDataContext/ShippingCharge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb0f907c-2f1b-4912-8751-441a92d678ca" absoluteBounds="10.015, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 6.60659912109375); (10 : 6.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CSCommerceDataContext/ShippingPref/ShippingPref_ShippingCharge" />
+      <nodes>
+        <classShapeMoniker Id="f724678e-6188-473c-87e7-69db5bc86c15" />
+        <classShapeMoniker Id="005a092d-e319-433e-87a1-a50b8f15df68" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
