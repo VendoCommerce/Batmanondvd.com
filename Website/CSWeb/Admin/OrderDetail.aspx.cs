@@ -32,8 +32,8 @@ namespace CSWeb.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request["oId"] != null)
-                orderId = Convert.ToInt32(Request["oId"].ToString());
+            if (Session["oId"] != null)
+                orderId = Convert.ToInt32(Session["oId"].ToString());
 
             if (Request["sId"] != null)
                 sourceId = Convert.ToInt32(Request["sId"].ToString());

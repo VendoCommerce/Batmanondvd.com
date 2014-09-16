@@ -495,11 +495,9 @@ namespace CSWeb.Mobile.UserControls
             if (!validateInput())
             {
                 SaveData();
-                //SaveAdditionaInfo();
-                //int qId = 1;
-                Response.Redirect(string.Format("AddProduct.aspx?PId={0}&CId={1}",
-    Convert.ToInt32(ddlSize.SelectedValue), Convert.ToString((int)CSBusiness.ShoppingManagement.ShoppingCartType.SingleCheckout)));
-                //Response.Redirect("store/addproduct.aspx" + "?PId=30&CId=" + (int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
+                Session["PId"] = Convert.ToInt32(ddlSize.SelectedValue);
+                Response.Redirect(string.Format("AddProduct.aspx?CId={1}",
+                     Convert.ToString((int)CSBusiness.ShoppingManagement.ShoppingCartType.SingleCheckout)));
             }
 
 

@@ -475,11 +475,11 @@ namespace CSWeb.Mobile.UserControls
 
             clientData.CartInfo.CartItems.Clear();
             clientData.CartInfo.ShippingAddress = clientData.CustomerInfo.ShippingAddress;
-            int pid = 104;
+            int pid = 30;
             int pid2 = 0;
             if (clientData.CustomerInfo.ShippingAddress.CountryId == 46) // Canada
             {
-                pid2 = 108;
+                pid2 = 30;
             }
             else if (clientData.CustomerInfo.ShippingAddress.CountryId == 231) //US
             {
@@ -501,8 +501,6 @@ namespace CSWeb.Mobile.UserControls
                 
             }
             clientData.CartInfo.Compute();
-//            Response.Redirect(string.Format("AddProduct.aspx?PId={0}&CId={1}&QId={2}&DId={3}",
-//pid, Convert.ToString((int)CSBusiness.ShoppingManagement.ShoppingCartType.SingleCheckout), ddlQuantityList.SelectedValue, 50));
 
             PaymentInformation paymentDataInfo = new PaymentInformation();
             string CardNumber = txtCCNumber.Text;

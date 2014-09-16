@@ -1,27 +1,65 @@
-<%@ Page Language="C#" AutoEventWireup="true" Inherits="CSWeb.Root.Store.index" EnableSessionState="True" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CSWeb.index" EnableSessionState="True" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
 
 
-<%@ Register src="UserControls/ShippingForm.ascx" tagname="ShippingForm" tagprefix="uc1" %>
+* {
+	margin: 0;
+	padding: 0;	
+	font-family: arial, sans-serif;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+a {
+	color: #ff7100;	
+	text-decoration: none;
+	transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+}
 
-
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <link href="/styles/global.css" rel="stylesheet" type="text/css" media="all" />
+        .auto-style1 {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+        }
+    </style>
 </head>
 <body>
-
-	<form id="form1" runat="server">
-
+    <form id="form1" runat="server">
+    <div>
+    
 	Welcome to Batman On DVD !!!<br />
         <p>
+            <asp:DropDownList ID="ddlSimple" runat="server">
+                <asp:ListItem Value="110">Classic Batman Collection on DVD</asp:ListItem>
+            </asp:DropDownList>
+        </p>
+        <p>
             &nbsp;</p>
-        <p style="font-weight: 700">
-            To order Classic Batman Col(DR Only)(3pk/GFT/DVD) please fill out the form below.</p>
-        <uc1:ShippingForm ID="ShippingForm1" runat="server" RedirectUrl="addproduct.aspx" />
+        <p>
+            <asp:LinkButton ID="lbSimple" runat="server" OnClick="lbSimple_Click"><img class="prod_continue" src="http://dz97amgy09dju.cloudfront.net/images/B3/continue_btn.png" /></asp:LinkButton>
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:DropDownList ID="ddlComplete" runat="server">
+                <asp:ListItem Value="111">Complete Classic Batman Collection on DVD</asp:ListItem>
+            </asp:DropDownList>
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:LinkButton ID="lbComplete" runat="server" OnClick="lbComplete_Click"><img class="prod_continue" src="http://dz97amgy09dju.cloudfront.net/images/B3/continue_btn.png" /></asp:LinkButton>
+        </p>
+    
+    </div>
     </form>
-
-
 </body>
 </html>

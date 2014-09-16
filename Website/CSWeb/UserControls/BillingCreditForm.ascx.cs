@@ -232,51 +232,41 @@ namespace CSWeb.Root.UserControls
         protected void cbBillingDifferent_CheckedChanged(object sender, EventArgs e)
         {
             pnlBillingAddress.Visible = !cbBillingDifferent.Checked;
-           
-                SetBillingAddress();
-                BindCartSummary();
-           
-           
-            
+            SetBillingAddress();
+            BindCartSummary();
         }
 
         //Sri Comments: User action may vary depends on the scenario
         public void SetBillingAddress()
         {
-           
-                if (!cbBillingDifferent.Checked)
-                {
-                    Address billingAddress = new Address();
-                    billingAddress.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
-                    billingAddress.LastName = CommonHelper.fixquotesAccents(txtLastName.Text);
-                    billingAddress.Address1 = CommonHelper.fixquotesAccents(txtAddress1.Text);
-                    billingAddress.Address2 = CommonHelper.fixquotesAccents(txtAddress2.Text);
-                    billingAddress.City = CommonHelper.fixquotesAccents(txtCity.Text);
-                    if (ddlState.SelectedValue != "")
-                        billingAddress.StateProvinceId = Convert.ToInt32(ddlState.SelectedValue);
-                    
-                    billingAddress.CountryId = Convert.ToInt32(ddlCountry.SelectedValue);
-                    billingAddress.ZipPostalCode = txtZipCode.Text;
-                    CartContext.CustomerInfo.BillingAddress = billingAddress;
-                }
-                else
-                {
-                    CartContext.CartInfo.ShippingAddress = CartContext.CustomerInfo.ShippingAddress;
-                    ddlCountry.SelectedValue = CartContext.CartInfo.ShippingAddress.CountryId.ToString();
 
-                    if (CartContext.CartInfo.ShippingAddress.StateProvinceId != 0 &&
-                        ddlState.Items.FindByValue(CartContext.CartInfo.ShippingAddress.StateProvinceId.ToString()) != null)
-                    {
-                        ddlState.SelectedValue = CartContext.CartInfo.ShippingAddress.StateProvinceId.ToString();
-                    }
+            if (!cbBillingDifferent.Checked)
+            {
+                Address billingAddress = new Address();
+                billingAddress.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
+                billingAddress.LastName = CommonHelper.fixquotesAccents(txtLastName.Text);
+                billingAddress.Address1 = CommonHelper.fixquotesAccents(txtAddress1.Text);
+                billingAddress.Address2 = CommonHelper.fixquotesAccents(txtAddress2.Text);
+                billingAddress.City = CommonHelper.fixquotesAccents(txtCity.Text);
+                if (ddlState.SelectedValue != "")
+                    billingAddress.StateProvinceId = Convert.ToInt32(ddlState.SelectedValue);
+
+                billingAddress.CountryId = Convert.ToInt32(ddlCountry.SelectedValue);
+                billingAddress.ZipPostalCode = txtZipCode.Text;
+                CartContext.CustomerInfo.BillingAddress = billingAddress;
+            }
+            else
+            {
+                CartContext.CartInfo.ShippingAddress = CartContext.CustomerInfo.ShippingAddress;
+                ddlCountry.SelectedValue = CartContext.CartInfo.ShippingAddress.CountryId.ToString();
+
+                if (CartContext.CartInfo.ShippingAddress.StateProvinceId != 0 &&
+                    ddlState.Items.FindByValue(CartContext.CartInfo.ShippingAddress.StateProvinceId.ToString()) != null)
+                {
+                    ddlState.SelectedValue = CartContext.CartInfo.ShippingAddress.StateProvinceId.ToString();
                 }
-           
-            
-           
-            
+            }
         }
-
-
 
         //protected void rblBillingReview_CheckedChanged(object sender, EventArgs e)
         //{
@@ -535,63 +525,63 @@ namespace CSWeb.Root.UserControls
                     lblEmailError.Visible = false;
             }
 
-            if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
-            {
-                lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                lblCvvError.Visible = true;
-                _bError = true;
-            }
-            else
-            {
+            //if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
+            //{
+            //    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //    lblCvvError.Visible = true;
+            //    _bError = true;
+            //}
+            //else
+            //{
 
-                if (CommonHelper.onlynums(txtCvv.Text) == false)
-                {
-                    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                    lblCvvError.Visible = true;
-                    _bError = true;
-                }
-                if ((CommonHelper.CountNums(txtCvv.Text) != 3) && (CommonHelper.CountNums(txtCvv.Text) != 4))
-                {
-                    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                    lblCvvError.Visible = true;
-                    _bError = true;
-                }
-                else
-                    lblCvvError.Visible = false;
+            //    if (CommonHelper.onlynums(txtCvv.Text) == false)
+            //    {
+            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //        lblCvvError.Visible = true;
+            //        _bError = true;
+            //    }
+            //    if ((CommonHelper.CountNums(txtCvv.Text) != 3) && (CommonHelper.CountNums(txtCvv.Text) != 4))
+            //    {
+            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //        lblCvvError.Visible = true;
+            //        _bError = true;
+            //    }
+            //    else
+            //        lblCvvError.Visible = false;
 
-                if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
-                }
-                else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
+            //    if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
+            //    {
+            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+            //        lblCCType.Visible = true;
+            //        _bError = true;
+            //    }
+            //    else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
+            //    {
+            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+            //        lblCCType.Visible = true;
+            //        _bError = true;
 
-                }
-                else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
+            //    }
+            //    else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
+            //    {
+            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+            //        lblCCType.Visible = true;
+            //        _bError = true;
 
-                }
-                else if ((c[0].ToString() == "3") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.AmericanExpress.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
+            //    }
+            //    else if ((c[0].ToString() == "3") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.AmericanExpress.ToString()))
+            //    {
+            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+            //        lblCCType.Visible = true;
+            //        _bError = true;
 
-                }
-                else
-                {
-                    lblCCType.Visible = false;
-                }
+            //    }
+            //    else
+            //    {
+            //        lblCCType.Visible = false;
+            //    }
 
-            }
+            //}
             return _bError;
         }
 
@@ -662,8 +652,6 @@ namespace CSWeb.Root.UserControls
                 {
                     clientData.OrderId = orderId;
                     Session["ClientOrderData"] = clientData;
-
-                    
 
                     if (rId == 1)
                         Response.Redirect("PostSale.aspx");

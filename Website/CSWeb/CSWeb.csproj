@@ -75,19 +75,19 @@
     </Reference>
     <Reference Include="CSBusiness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CSDLL\CSBusiness.dll</HintPath>
+      <HintPath>..\CSBusiness\bin\Debug\CSBusiness.dll</HintPath>
     </Reference>
     <Reference Include="CSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CSDLL\CSCore.dll</HintPath>
+      <HintPath>..\CSCore\bin\Debug\CSCore.dll</HintPath>
     </Reference>
     <Reference Include="CSData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CSDLL\CSData.dll</HintPath>
+      <HintPath>..\CSData\bin\Debug\CSData.dll</HintPath>
     </Reference>
     <Reference Include="CSPaymentProvider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CSDLL\CSPaymentProvider.dll</HintPath>
+      <HintPath>..\CSProvider\bin\Debug\CSPaymentProvider.dll</HintPath>
     </Reference>
     <Reference Include="FusionCharts">
       <HintPath>..\CSDLL\FusionCharts.dll</HintPath>
@@ -119,6 +119,8 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="400.aspx" />
+    <Content Include="500.aspx" />
     <Content Include="AddProduct.aspx" />
     <Content Include="Admin\Attributes.aspx" />
     <Content Include="Admin\docs_icons.aspx" />
@@ -369,6 +371,7 @@
     <Content Include="Content\Images\yes_btn.png" />
     <Content Include="GetTotals.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="index1.aspx" />
     <Content Include="appsettings.config">
       <SubType>Designer</SubType>
     </Content>
@@ -671,6 +674,20 @@
     <None Include="Styles\fontawesome\scss\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="400.aspx.cs">
+      <DependentUpon>400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="400.aspx.designer.cs">
+      <DependentUpon>400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="500.aspx.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="500.aspx.designer.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1127,6 +1144,13 @@
     <Compile Include="CheckoutSessionExpired.aspx.designer.cs">
       <DependentUpon>CheckoutSessionExpired.aspx</DependentUpon>
     </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PostSale.aspx.cs">
       <DependentUpon>PostSale.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1207,8 +1231,8 @@
     <Compile Include="GetTotals.aspx.designer.cs">
       <DependentUpon>GetTotals.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="index1.aspx.cs">
+      <DependentUpon>index1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Mobile\AddProduct.aspx.cs">

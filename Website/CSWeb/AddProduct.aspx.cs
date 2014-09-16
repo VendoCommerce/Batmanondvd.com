@@ -25,8 +25,8 @@ namespace CSWeb.Root.Store
             base.Page_Load(sender, e);
             if(!Page.IsPostBack)
             {
-                if (Request.Params["PId"] != null)
-                    skuId = Convert.ToInt32(Request.Params["PId"]);
+                if (Session["PId"] != null)
+                    skuId = Convert.ToInt32(Session["PId"]);
 
                 if(Request.Params["CId"] != null)
                     cId = Convert.ToInt32(Request.Params["CId"]);

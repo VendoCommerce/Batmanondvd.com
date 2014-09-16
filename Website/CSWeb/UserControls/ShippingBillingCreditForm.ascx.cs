@@ -15,6 +15,7 @@ using System.Web.UI.WebControls;
 using CSBusiness.Payment;
 using CSBusiness.Shipping;
 using CSWebBase;
+using CSBusiness.OrderManagement;
 
 namespace CSWeb.Root.UserControls
 {
@@ -532,77 +533,76 @@ namespace CSWeb.Root.UserControls
             }
             else
             {
-                if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
+                if (ucTokenex.EncryptedCCNum.Length == 0)
                 {
-                    if (!CommonHelper.ValidateCardNumber(c))
-                    {
-                        lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
-                        lblCCNumberError.Visible = true;
-                        _bError = true;
-                    }
-                    else
-                        lblCCNumberError.Visible = false;
-                }
-            }
-
-            if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
-            {
-                lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                lblCvvError.Visible = true;
-                _bError = true;
-            }
-            else
-            {
-
-                if (CommonHelper.onlynums(txtCvv.Text) == false)
-                {
-                    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                    lblCvvError.Visible = true;
-                    _bError = true;
-                }
-
-                if ((CommonHelper.CountNums(txtCvv.Text) != 3) && (CommonHelper.CountNums(txtCvv.Text) != 4))
-                {
-                    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                    lblCvvError.Visible = true;
+                    //    if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
+                    //    {
+                    lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
+                    lblCCNumberError.Visible = true;
                     _bError = true;
                 }
                 else
-                    lblCvvError.Visible = false;
-
-                if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
-                }
-                else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
-
-                }
-                else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
-
-                }
-                else if ((c[0].ToString() == "3") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.AmericanExpress.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
-
-                }
-                else
-                {
-                    lblCCType.Visible = false;
-                }
-
+                    lblCCNumberError.Visible = false;
             }
+
+            //if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
+            //{
+            //    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //    lblCvvError.Visible = true;
+            //    _bError = true;
+            //}
+            //else
+            //{
+
+            //    if (CommonHelper.onlynums(txtCvv.Text) == false)
+            //    {
+            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //        lblCvvError.Visible = true;
+            //        _bError = true;
+            //    }
+
+            //    if ((CommonHelper.CountNums(txtCvv.Text) != 3) && (CommonHelper.CountNums(txtCvv.Text) != 4))
+            //    {
+            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //        lblCvvError.Visible = true;
+            //        _bError = true;
+            //    }
+            //    else
+            //        lblCvvError.Visible = false;
+
+            //    if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
+            //    {
+            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+            //        lblCCType.Visible = true;
+            //        _bError = true;
+            //    }
+            //    else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
+            //    {
+            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+            //        lblCCType.Visible = true;
+            //        _bError = true;
+
+            //    }
+            //    else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
+            //    {
+            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+            //        lblCCType.Visible = true;
+            //        _bError = true;
+
+            //    }
+            //    else if ((c[0].ToString() == "3") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.AmericanExpress.ToString()))
+            //    {
+            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+            //        lblCCType.Visible = true;
+            //        _bError = true;
+
+            //    }
+            //    else
+            //    {
+            //        lblCCType.Visible = false;
+            //    }
+
+            //}
 
             #endregion
 
@@ -662,9 +662,11 @@ namespace CSWeb.Root.UserControls
                 SaveData();
                 SaveAdditionaInfo();
                 //int qId = 1;
-                Response.Redirect(string.Format("AddProduct.aspx?PId={0}&CId={1}",
-                    44, Convert.ToString((int)CSBusiness.ShoppingManagement.ShoppingCartType.SingleCheckout)));
-                //Response.Redirect("store/addproduct.aspx" + "?PId=30&CId=" + (int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
+                //Session["PId"] = 30;
+                //Response.Redirect(string.Format("AddProduct.aspx?CId={1}",
+                //    Convert.ToString((int)CSBusiness.ShoppingManagement.ShoppingCartType.SingleCheckout)));
+                Response.Redirect(string.Format("Postsale.aspx"));
+
             }
 
 
@@ -731,7 +733,7 @@ namespace CSWeb.Root.UserControls
                 
 
                 PaymentInformation paymentDataInfo = new PaymentInformation();
-                string CardNumber = txtCCNumber1.Text;
+                string CardNumber = ucTokenex.GetCCNumToken();
                 paymentDataInfo.CreditCardNumber = CommonHelper.Encrypt(CardNumber);
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;
@@ -751,8 +753,32 @@ namespace CSWeb.Root.UserControls
                 //Set the Client Order objects
                 ClientCartContext contextData = (ClientCartContext)Session["ClientOrderData"];
                 contextData.CustomerInfo = CustData;
-                contextData.CartAbandonmentId = CSResolve.Resolve<ICustomerService>().InsertCartAbandonment(CustData, contextData);
+                ////////contextData.CartAbandonmentId = CSResolve.Resolve<ICustomerService>().InsertCartAbandonment(CustData, contextData);
                 Session["ClientOrderData"] = contextData;
+                //Save Order information before upsale process
+                int orderId = 0;
+
+                //if (rId == 1)
+                contextData.CartAbandonmentId = CSResolve.Resolve<ICustomerService>().InsertCartAbandonment(CustData, contextData);
+                orderId = CSResolve.Resolve<IOrderService>().SaveOrder(clientData);
+                //else
+                //{
+                //    //update order with modified customer shipping and billing and credit card information
+                //    orderId = clientData.OrderId;
+                //    CSResolve.Resolve<IOrderService>().UpdateOrder(orderId, clientData);
+                //}
+
+                if (orderId > 1)
+                {
+                    clientData.OrderId = orderId;
+                    Session["ClientOrderData"] = clientData;
+
+                    //if (rId == 1)
+                    //    Response.Redirect("PostSale.aspx");
+                    //else
+                        //Response.Redirect("Postsale.aspx");
+                }
+
             }
         }
         

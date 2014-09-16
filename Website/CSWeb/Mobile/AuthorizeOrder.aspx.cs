@@ -31,9 +31,9 @@ namespace CSWeb.Mobile.Store
         protected void Page_Load(object sender, EventArgs e)
         {
             string[] parts = Request.Url.AbsolutePath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
-            if (Request["oid"] != null)
+            if (Session["oid"] != null)
             {
-                orderId = Convert.ToInt32(Request["oid"].ToString());
+                orderId = Convert.ToInt32(Session["oid"].ToString());
             }
             else
             {
@@ -48,7 +48,7 @@ namespace CSWeb.Mobile.Store
                 Response.Redirect("receipt.aspx");
             }
 
-            if (Request["oid"] == null)
+            if (Session["oid"] == null)
             {
                 if (OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
                 {

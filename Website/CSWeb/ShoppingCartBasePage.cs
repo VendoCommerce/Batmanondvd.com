@@ -13,7 +13,7 @@ namespace CSWeb
         {
             if (Session["ClientOrderData"] == null)
             {
-                if (Request["oid"] == null)
+                if (Session["oid"] == null)
                 {
                     Response.Redirect("CheckoutSessionExpired.aspx");
                 }

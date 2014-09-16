@@ -35,22 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSBusiness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CSDLL\CSBusiness.dll</HintPath>
-    </Reference>
-    <Reference Include="CSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CSDLL\CSCore.dll</HintPath>
-    </Reference>
-    <Reference Include="CSData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CSDLL\CSData.dll</HintPath>
-    </Reference>
-    <Reference Include="CSPaymentProvider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CSDLL\CSPaymentProvider.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -70,6 +54,24 @@
     <Compile Include="SiteBasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSBusiness\CSBusiness.csproj">
+      <Project>{1292ff3a-205e-4496-8daf-0b3574ca538c}</Project>
+      <Name>CSBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSCore\CSCore.csproj">
+      <Project>{3bdf14dd-763f-4cb7-8c13-0aad3c4932f1}</Project>
+      <Name>CSCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSData\CSData.csproj">
+      <Project>{3fae442c-8f7c-4381-8469-1427877fc43a}</Project>
+      <Name>CSData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSProvider\CSPaymentProvider.csproj">
+      <Project>{eb784882-6300-413c-b933-a6222c37ffd3}</Project>
+      <Name>CSPaymentProvider</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

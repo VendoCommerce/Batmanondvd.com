@@ -304,7 +304,7 @@ namespace CSWeb.Root.UserControls
             else
                 lblExpDate.Visible = false;
 
-            string c = txtCCNumber1.Text + txtCCNumber2.Text + txtCCNumber3.Text + txtCCNumber4.Text;
+            string c = txtCCNumber1.Text;// +txtCCNumber2.Text + txtCCNumber3.Text + txtCCNumber4.Text;
             if (c.Equals(""))
             {
                 lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
@@ -393,7 +393,8 @@ namespace CSWeb.Root.UserControls
                 SaveData();
 
                 //TODO: fix sku id
-                Response.Redirect(RedirectUrl + "?PId=30&CId=" + (int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
+                Session["PId"] = 30;
+                Response.Redirect(RedirectUrl + "?CId=" + (int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
             }
         }
         public void SaveData()
@@ -491,10 +492,10 @@ namespace CSWeb.Root.UserControls
 
             //Payment information
             string ccNumber = CommonHelper.Decrypt(clientData.PaymentInfo.CreditCardNumber);
-            txtCCNumber1.Text = ccNumber.Substring(0, 4);
-            txtCCNumber2.Text = ccNumber.Substring(4, 4);
-            txtCCNumber3.Text = ccNumber.Substring(8, 4);
-            txtCCNumber4.Text = ccNumber.Substring(12, ccNumber.Length -12);
+            txtCCNumber1.Text = ccNumber;//.Substring(0, 4);
+            //txtCCNumber2.Text = ccNumber.Substring(4, 4);
+            //txtCCNumber3.Text = ccNumber.Substring(8, 4);
+            //txtCCNumber4.Text = ccNumber.Substring(12, ccNumber.Length -12);
 
             txtCvv.Text = clientData.PaymentInfo.CreditCardCSC;
             DateTime expireDate = DateTime.MinValue;

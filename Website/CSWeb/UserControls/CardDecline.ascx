@@ -337,14 +337,7 @@
                     Card Number*</label>
                 <div class="error-2">
                     <asp:Label ID="lblCCNumberError" runat="server" Visible="false" ClientIDMode="Static"></asp:Label></div>
-               <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-4" MaxLength="4" ClientIDMode="Static">
-               </asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
-                <asp:TextBox ID="txtCCNumber2" runat="server" CssClass="text-4" MaxLength="4" ClientIDMode="Static">
-                </asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtCCNumber2" runat="server" Display="Dynamic" ErrorMessage="*" />
-                <asp:TextBox ID="txtCCNumber3" runat="server" CssClass="text-4" MaxLength="4" ClientIDMode="Static">
-                </asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtCCNumber3" runat="server" Display="Dynamic" ErrorMessage="*" />
-                <asp:TextBox ID="txtCCNumber4" runat="server" CssClass="text-4" MaxLength="4" ClientIDMode="Static">
-                </asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtCCNumber4" runat="server" Display="Dynamic" ErrorMessage="*" />
+               <asp:TextBox ID="txtCCNumber1" runat="server" MaxLength="16" ClientIDMode="Static"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
             </div>
             <div class="form_line clearfix">
                 <label class="label-3">

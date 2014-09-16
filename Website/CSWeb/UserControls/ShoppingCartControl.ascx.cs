@@ -114,7 +114,7 @@ namespace CSWeb.Root.UserControls
                 lblSkuDescription.Text = cartItem.ShortDescription;
 				lblQuantity.Text = txtQuantity.Text = cartItem.Quantity.ToString();
                 lblSkuInitialPrice.Text = String.Format("${0:0.##}", cartItem.InitialPrice);
-                if (cartItem.ImagePath.Length > 0)
+                if (cartItem.ImagePath != null && cartItem.ImagePath.Length > 0)
                 {
                     imgProduct.ImageUrl = cartItem.ImagePath;
                     lblSkuCode.Visible = false;

@@ -9,6 +9,9 @@ using System.Xml;
 using CSBusiness.OrderManagement;
 using CSWeb.TokenEx_Test;
 using CSWeb.App_Code.Tokenization;
+using CSData;
+using CSBusiness.Preference;
+using System.Configuration;
 
 namespace CSWeb.Tokenization
 {
@@ -23,14 +26,20 @@ namespace CSWeb.Tokenization
         string GatewayPassword = string.Empty;
 
         //Setting up required values for each call
-        //TODO: Get these values from DB
         public TokenexProcessor()
         {
-            APIKey = "mUyKbhAEKF6jG6EAWXvx";
-            TokenExID = "7655146737828306";
-            GatewayName = "FirstdataE4Gateway";
-            GatewayLogin = "AF8871-05";
-            GatewayPassword = "7nb86t1z";
+            //Load gateway settings from database
+            SitePreference sitePreference = CSFactory.GetCacheSitePref();
+            sitePreference.LoadAttributeValues();
+            if (sitePreference.AttributeValues["gatewayname"] != null)
+                GatewayName = sitePreference.AttributeValues["gatewayname"].Value;
+            if (sitePreference.AttributeValues["gatewaylogin"] != null)
+                GatewayLogin = sitePreference.AttributeValues["gatewaylogin"].Value;
+            if (sitePreference.AttributeValues["gatewaypassword"] != null)
+                GatewayPassword = sitePreference.AttributeValues["gatewaypassword"].Value;
+            //Load Tokenex credentials from web.config
+            APIKey = ConfigurationManager.AppSettings["APIKey"];
+            TokenExID = ConfigurationManager.AppSettings["TokenExID"];
         }
 
         /// <summary>
@@ -70,7 +79,7 @@ namespace CSWeb.Tokenization
             if (result.Success)
                 return result.Token;
             else
-                return "ERROR";
+                return "";
         }
 
         /// <summary>

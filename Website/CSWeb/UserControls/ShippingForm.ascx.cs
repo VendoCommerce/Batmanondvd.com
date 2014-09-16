@@ -298,10 +298,9 @@ namespace CSWeb.Root.UserControls
             if (!validateInput())
             {
                 SaveData();
-                Response.Redirect(RedirectUrl + "?PId=30&CId=" + (int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
+                Session["PId"] = 30;
+                Response.Redirect(RedirectUrl + "?CId=" + (int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
             }
-
-
         }
         public void SaveData()
         {

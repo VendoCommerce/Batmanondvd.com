@@ -26,7 +26,7 @@ namespace CSWeb
                 && DateTime.Now.CompareTo(DateTime.Parse(totalsToken.expireDateTime)) <= 0)
             {
                 JavaScriptSerializer serializer = new JavaScriptSerializer();
-                string skuId = Request.QueryString["PId"];
+                string skuId = (string)Session["PId"];
                 string address1 = Request.Form["a1"];
                 string address2 = Request.Form["a2"];
                 string city = Request.Form["city"];

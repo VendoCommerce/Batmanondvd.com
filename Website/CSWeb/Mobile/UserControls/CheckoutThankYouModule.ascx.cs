@@ -39,8 +39,8 @@ protected Label lblPurchaseName, lblPromotionPrice;
 
          protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Params["oId"] != null)
-                orderId = Convert.ToInt32(Request.Params["oId"]);
+            if (Session["oId"] != null)
+                orderId = Convert.ToInt32(Session["oId"]);
             else
                 orderId = CartContext.OrderId;
             if (!this.IsPostBack)
@@ -137,8 +137,8 @@ protected Label lblPurchaseName, lblPromotionPrice;
             }
             else
             {
-                if (Request.Params["oId"] != null)
-                    return "VA" + Request.Params["oId"];
+                if (Session["oId"] != null)
+                    return "VA" + Session["oId"];
             }
             return "";
         }

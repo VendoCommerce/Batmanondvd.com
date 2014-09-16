@@ -28,6 +28,7 @@
         <uc:ShoppingCartControl ID="ShoppingCartControl1" runat="server" OnUpdateShipping="Shipping_OnUpdateShipping"></uc:ShoppingCartControl>     
 
 </div>
+                    <uc1:Tokenex ID="ucTokenex" runat="server" />
 <div class="right">
     <div><img src="/Content/Images/form_cart_top.png" width="300" height="164" style="display: block;" /></div>
         <div class="cartB">
@@ -35,7 +36,6 @@
                 Billing Address</h2>
             <div class="form_line clearfix">
                 <div class="error-2">
-                    <uc1:Tokenex ID="ucTokenex" runat="server" />
                     </div>
                 <asp:CheckBox ID="cbBillingDifferent" runat="server" CssClass="checkbox-right" OnCheckedChanged="cbBillingDifferent_CheckedChanged"
                     AutoPostBack="true" Checked="true" />
@@ -142,7 +142,7 @@
                 <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-1" MaxLength="16" ClientIDMode="Static"></asp:TextBox>
                         
             </div>
-            <div class="form_line clearfix">
+            <div class="form_line clearfix" style="display: none;">
                 <div class="error-2">
                     <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server" Display="Dynamic" />
                     <asp:Label ID="lblEmailError" runat="server" Visible="false"></asp:Label>

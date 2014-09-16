@@ -23,7 +23,8 @@ namespace CSWeb.Mobile.Store
 
         protected void lb_Clicked(object sender, EventArgs e)
         {
-            Response.Redirect("AddProduct.aspx?PId="+GetDynamicVersionData("mainkit")+"&CId="+(int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
+            Session["PId"]=GetDynamicVersionData("mainkit");
+            Response.Redirect("AddProduct.aspx?CId="+(int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
         }
 
         protected override void Page_Load(object sender, EventArgs e)

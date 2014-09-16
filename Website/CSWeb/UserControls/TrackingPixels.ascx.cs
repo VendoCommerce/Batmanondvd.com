@@ -133,9 +133,9 @@ namespace CSWeb.Root.UserControls
         private void SetCurrentOrder()
         {
             int orderId = 0;
-            if (Request["oid"] != null)
+            if (Session["oid"] != null)
             {
-                orderId = Convert.ToInt32(Request["oid"].ToString());
+                orderId = Convert.ToInt32(Session["oid"].ToString());
             }
             else if (CartContext != null)
             {

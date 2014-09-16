@@ -1,4 +1,6 @@
 ﻿<%@Control Language="C#" AutoEventWireup="true" Inherits="CSWeb.Root.UserControls.ShippingBillingCreditForm" CodeBehind="ShippingBillingCreditForm.ascx.cs" %>
+<%@ Register src="ShoppingCartControl.ascx" tagname="ShoppingCartControl" tagprefix="uc1" %>
+<%@ Register src="Tokenex.ascx" tagname="Tokenex" tagprefix="uc2" %>
 <script type="text/javascript" src="/Scripts/autoTab.js"></script>
 <script type="text/javascript">
 
@@ -15,11 +17,13 @@
 </script>
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>
-<asp:UpdatePanel ID="upBillingForm" runat="server">
-    <ContentTemplate>
+<uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />
+<%--<asp:UpdatePanel ID="upBillingForm" runat="server">
+    <ContentTemplate>--%>
 
  <div class="Rootontent_B clearfix">
   <div class="cart_left">
+      <uc2:Tokenex ID="ucTokenex" runat="server" />
     </div>
   
   
@@ -263,13 +267,13 @@
            
             <div class="form_line clearfix">
               <div class="error-1">
-                    <asp:RequiredFieldValidator ID="rfvCreditCard" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="Please enter valid card number" />
+                    <asp:RequiredFieldValidator ID="rfvCreditCard" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="Please enter valid card number" Enabled="False" />
                     <asp:Label ID="lblCCNumberError" runat="server" Visible="false"></asp:Label>
                 </div>
                 <label class="label-1">
                     Card Number*</label>
               
-                <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-1" MaxLength="16"></asp:TextBox>
+                <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-1" MaxLength="16" ClientIDMode="Static"></asp:TextBox>
                         
                 
             </div>
@@ -290,7 +294,7 @@
                     
                 </asp:DropDownList>
             </div>
-            <div class="form_line clearfix">
+            <div class="form_line clearfix" hidden="hidden">
              <div class="error-1">
                     <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server" Display="Dynamic" />
                     <asp:Label ID="lblCvvError" runat="server" Visible="false"></asp:Label></div>
@@ -302,7 +306,7 @@
                 <a class="cvv" href="/content/images/cvv.png">What's This?</a>
             </div>
             <div class="form_line_btn">
-                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/a3/ordernow_btn.png" OnClientClick="MM_showHideLayers('mask', '', 'show');" OnClick="imgBtn_OnClick" />
+                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/a3/ordernow_btn.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
             <div class="form_line_guarantee"><a href="#guarantee" class="guarantee">90-Day Money-Back Guarantee!</a></div>
              <div class="form_line_guarantee clearfix">
@@ -315,5 +319,5 @@
   
 </div>
 <!-- end Rootontent -->
-</ContentTemplate>
-</asp:UpdatePanel>
+<%--</ContentTemplate>--%>
+<%--</asp:UpdatePanel>--%>
