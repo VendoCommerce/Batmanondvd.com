@@ -8,9 +8,9 @@
                  </div>
                   <div class="cart_text">&nbsp;
                   </div>
-                     <div class="cart_select">Quantity
+                     <div class="cart_select">Qty
                      </div>
-                        <div class="product_price text-center">Payment
+                        <div class="product_price text-center">Price
                         </div>
                         </div>   <div class="horizontal_dots">
         </div>
@@ -50,10 +50,10 @@
         <div class="cart_totals clearfix">
             <div class="cart_totals_left">
                 Subtotal<br />
-                Process & Handling<br />
+                Shipping<br />
                 Tax
                 <br />
-                Total</div>
+                Today's Payment</div>
             <div class="cart_totals_right">
                 <asp:Literal runat="server" ID='lblSubtotal'></asp:Literal><br />
                 <asp:Literal runat="server" ID="lblShipping"></asp:Literal><br />

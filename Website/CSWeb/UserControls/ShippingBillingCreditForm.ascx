@@ -26,7 +26,10 @@
       <uc2:Tokenex ID="ucTokenex" runat="server" />
     </div>
   
-  
+     <table style="width: 100%;">
+         <tr>
+             <td>
+
   <div class="cart_right">
     <div class="cartB"><img src="/Content/Images/a3/cartform_top.jpg" class="cart_top" />
                 
@@ -114,7 +117,16 @@
                         ZIP/Postal Code*</label>
                     <asp:TextBox ID="txtShippingZipCode" runat="server" MaxLength="7" CssClass="text-1"></asp:TextBox>
                 </div>
-
+<div class="form_line clearfix">
+                <div class="error-1">
+                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server" Display="Dynamic" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail"
+                        Display="Dynamic" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" />
+                    <asp:Label ID="lblEmailError" runat="server" Visible="false"></asp:Label></div>
+                <label class="label-1">
+                    Email*</label>
+                <asp:TextBox ID="txtEmail" runat="server" MaxLength="100" CssClass="text-1"></asp:TextBox>
+            </div>
                 <div class="form_line clearfix">
                 <div class="error-1">
                     <asp:RequiredFieldValidator ID="rfvPhoneNumber" runat="server" Display="Dynamic"
@@ -126,16 +138,7 @@
                 <asp:TextBox ID="txtPhoneNumber2" runat="server" MaxLength="3" CssClass="text-4"></asp:TextBox>
                 <asp:TextBox ID="txtPhoneNumber3" runat="server" MaxLength="4" CssClass="text-4"></asp:TextBox>                
             </div>
-            <div class="form_line clearfix">
-                <div class="error-1">
-                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server" Display="Dynamic" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail"
-                        Display="Dynamic" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" />
-                    <asp:Label ID="lblEmailError" runat="server" Visible="false"></asp:Label></div>
-                <label class="label-1">
-                    Email*</label>
-                <asp:TextBox ID="txtEmail" runat="server" MaxLength="100" CssClass="text-1"></asp:TextBox>
-            </div>
+            
             <asp:Panel ID="pnlQuantity" runat="server" Visible="false">
                 <div class="form_line clearfix">
                     <div class="error-1">
@@ -252,7 +255,8 @@
                     </asp:DropDownList>
                 </div>
                 </div>
-
+                     </td>
+             <td>
             <div class="form_line clearfix">
              <div class="error-1">
                     <asp:RequiredFieldValidator ID="rfvCCType" runat="server" Display="Dynamic"
@@ -277,7 +281,19 @@
                         
                 
             </div>
-             <div class="form_line clearfix">
+             
+            <div class="form_line clearfix" hidden="hidden">
+             <div class="error-1">
+                    <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server" Display="Dynamic" />
+                    <asp:Label ID="lblCvvError" runat="server" Visible="false"></asp:Label></div>
+                <label class="label-1">
+                    Card Verification* 
+                </label>
+               
+                <asp:TextBox ID="txtCvv" runat="server" CssClass="text-2" MaxLength="4"></asp:TextBox>
+                <a class="cvv" href="/content/images/cvv.png">What's This?</a>
+            </div>
+ <div class="form_line clearfix">
                <div class="error-1">
                 <asp:RequiredFieldValidator ID="rfvExpMonth" runat="server" Display="Dynamic"
                             ControlToValidate="ddlExpMonth"></asp:RequiredFieldValidator>
@@ -294,24 +310,17 @@
                     
                 </asp:DropDownList>
             </div>
-            <div class="form_line clearfix" hidden="hidden">
-             <div class="error-1">
-                    <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server" Display="Dynamic" />
-                    <asp:Label ID="lblCvvError" runat="server" Visible="false"></asp:Label></div>
-                <label class="label-1">
-                    Card Verification* 
-                </label>
-               
-                <asp:TextBox ID="txtCvv" runat="server" CssClass="text-2" MaxLength="4"></asp:TextBox>
-                <a class="cvv" href="/content/images/cvv.png">What's This?</a>
-            </div>
-            <div class="form_line_btn">
+                   <div class="form_line_btn">
                 <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/a3/ordernow_btn.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
             <div class="form_line_guarantee"><a href="#guarantee" class="guarantee">90-Day Money-Back Guarantee!</a></div>
              <div class="form_line_guarantee clearfix">
              <img src="/Content/Images/a3/formcerts.png" />
               </div>                 
+                 </td>
+         </tr>
+     </table>
+
  </div>
     <!-- end cartB --> 
   </div>
