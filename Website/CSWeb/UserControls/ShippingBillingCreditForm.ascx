@@ -22,15 +22,13 @@
     <ContentTemplate>--%>
 
  <div class="Rootontent_B clearfix">
-  <div class="cart_left">
       <uc2:Tokenex ID="ucTokenex" runat="server" />
-    </div>
   
      <table style="width: 100%;">
          <tr>
              <td>
+  <div class="cart_left">
 
-  <div class="cart_right">
     <div class="cartB"><img src="/Content/Images/a3/cartform_top.jpg" class="cart_top" />
                 
                 
@@ -255,8 +253,11 @@
                     </asp:DropDownList>
                 </div>
                 </div>
+        </div></div>
                      </td>
              <td>
+                   <div class="cart_right">
+
             <div class="form_line clearfix">
              <div class="error-1">
                     <asp:RequiredFieldValidator ID="rfvCCType" runat="server" Display="Dynamic"
@@ -317,6 +318,7 @@
              <div class="form_line_guarantee clearfix">
              <img src="/Content/Images/a3/formcerts.png" />
               </div>                 
+                       </div>
                  </td>
          </tr>
      </table>
@@ -326,7 +328,7 @@
   </div>
   <!-- end cart_right --> 
   
-</div>
+
 <!-- end Rootontent -->
 <%--</ContentTemplate>--%>
 <%--</asp:UpdatePanel>--%>
