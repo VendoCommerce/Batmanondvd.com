@@ -86,10 +86,10 @@ namespace CSWeb.Root.UserControls
             if (!IsPostBack)
             {
                 BindCountries(true);
-                BindShippingCountries(true);
                 BindRegions();
                 BindShippingRegions();
                 BindShippingCharges();
+
                 BindCreditCard();
                 FillShippingInfo();
                 PopulateExpiryYear();
@@ -153,13 +153,18 @@ namespace CSWeb.Root.UserControls
 
         }
 
-        public void BindShippingCountries(bool setValue)
+        /// <summary>
+        /// Binds the CreditCards.
+        /// </summary>
+        private void BindCreditCard()
         {
+            ddlCCType.Items.Clear();
+            ddlCCType.DataSource = CommonHelper.BindToEnum(typeof(CreditCardTypeEnum));
+            ddlCCType.DataTextField = "Key";
+            ddlCCType.DataValueField = "Value";
+            ddlCCType.DataBind();
+            ddlCCType.Items.Insert(0, new ListItem("- Select -", string.Empty));
 
-            ddlShippingCountry.DataSource = CountryManager.GetActiveCountry();
-            ddlShippingCountry.DataBind();
-            if (setValue)
-                ddlShippingCountry.Items.FindByValue(ConfigHelper.DefaultCountry).Selected = true;
         }
 
         /// <summary>
@@ -178,20 +183,11 @@ namespace CSWeb.Root.UserControls
             ddlState.Items.Insert(0, new ListItem("- Select -", string.Empty));
         }
 
-        private void BindCreditCard()
-        {
-            ddlCCType.Items.Clear();
-            ddlCCType.DataSource = CommonHelper.BindToEnum(typeof(CreditCardTypeEnum));
-            ddlCCType.DataTextField = "Key";
-            ddlCCType.DataValueField = "Value";
-            ddlCCType.DataBind();
-            ddlCCType.Items.Insert(0, new ListItem("- Select -", string.Empty));
 
-        }
         private void BindShippingRegions()
         {
             ddlShippingState.Items.Clear();
-            int countryId = Convert.ToInt32(ddlShippingCountry.SelectedItem.Value);
+            int countryId = CountryManager.CountryId("United States");//Default country
             List<StateProvince> list = StateManager.GetCacheStates(countryId);
             ddlShippingState.DataSource = list;
             ddlShippingState.DataValueField = "StateProvinceId";
@@ -279,8 +275,6 @@ namespace CSWeb.Root.UserControls
             }
             else
             {
-                if (ddlShippingCountry.SelectedValue.Contains("231"))
-                {
                     if (!CommonHelper.IsValidZipCode(txtShippingZipCode.Text))
                     {
                         lblShippingZiPError.Text = ResourceHelper.GetResoureValue("ShippingZipCodeValidationErrorMsg");
@@ -291,19 +285,6 @@ namespace CSWeb.Root.UserControls
                     else
                         lblShippingZiPError.Visible = false;
 
-                }
-                else
-                {
-                    if (!CommonHelper.IsValidZipCodeCanadian(txtShippingZipCode.Text))
-                    {
-                        lblShippingZiPError.Text = ResourceHelper.GetResoureValue("ShippingZipCodeValidationErrorMsg");
-                        lblShippingZiPError.Visible = true;
-                        _bError = true;
-
-                    }
-                    else
-                        lblShippingZiPError.Visible = false;
-                }
 
             }
 
@@ -500,6 +481,27 @@ namespace CSWeb.Root.UserControls
 
             #region Credit Card
 
+            string c = txtCCNumber1.Text;
+
+            //if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
+            //{
+            //    ddlCCType.SelectedValue = ((int)CreditCardTypeEnum.MasterCard).ToString();
+            //}
+            //else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
+            //{
+
+            //    ddlCCType.SelectedValue = ((int)CreditCardTypeEnum.VISA).ToString();
+            //}
+            //else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
+            //{
+
+            //    ddlCCType.SelectedValue = ((int)CreditCardTypeEnum.Discover).ToString();
+            //}
+            //else
+            //{
+
+            //}
+
             if (ddlCCType.SelectedIndex < 0)
             {
                 lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeErrorMsg");
@@ -524,7 +526,6 @@ namespace CSWeb.Root.UserControls
             else
                 lblExpDate.Visible = false;
 
-            string c = txtCCNumber1.Text;
             if (c.Equals(""))
             {
                 lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
@@ -634,7 +635,6 @@ namespace CSWeb.Root.UserControls
                         txtShippingAddress2.Text = contextData.CustomerInfo.ShippingAddress.Address2;
                         txtShippingCity.Text = contextData.CustomerInfo.ShippingAddress.City;
                         txtShippingZipCode.Text = contextData.CustomerInfo.ShippingAddress.ZipPostalCode;
-                        ddlShippingCountry.SelectedValue = contextData.CustomerInfo.ShippingAddress.CountryId.ToString();
                         BindShippingRegions();
                         ddlShippingState.SelectedValue = contextData.CustomerInfo.ShippingAddress.StateProvinceId.ToString();
                         txtEmail.Text = contextData.CustomerInfo.Email;
@@ -695,7 +695,7 @@ namespace CSWeb.Root.UserControls
                 shippingAddress.Address2 = CommonHelper.fixquotesAccents(txtShippingAddress2.Text);
                 shippingAddress.City = CommonHelper.fixquotesAccents(txtShippingCity.Text);
                 shippingAddress.StateProvinceId = Convert.ToInt32(ddlShippingState.SelectedValue);
-                shippingAddress.CountryId = Convert.ToInt32(ddlShippingCountry.SelectedValue);
+                shippingAddress.CountryId = CountryManager.CountryId("United States");
                 shippingAddress.ZipPostalCode = CommonHelper.fixquotesAccents(txtShippingZipCode.Text);
 
                 CustData.ShippingAddress = shippingAddress;

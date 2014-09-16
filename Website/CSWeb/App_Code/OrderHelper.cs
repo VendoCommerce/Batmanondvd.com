@@ -79,6 +79,13 @@ namespace CSWeb
             return true;
         }
 
+        //public enum CustomCreditCardTypeEnum
+        //{
+        //    Discover = 2,
+        //    MasterCard = 4,
+        //    VISA = 8
+        //}
+
         public static bool ValidationCheck(int orderID)
         {
             Request _request = new Request();

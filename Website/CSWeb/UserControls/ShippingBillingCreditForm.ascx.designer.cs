@@ -40,33 +40,6 @@ namespace CSWeb.Root.UserControls {
         protected global::CSWeb.UserControls.Tokenex ucTokenex;
         
         /// <summary>
-        /// Div1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
-        
-        /// <summary>
-        /// lblShippingCountryError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShippingCountryError;
-        
-        /// <summary>
-        /// ddlShippingCountry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList ddlShippingCountry;
-        
-        /// <summary>
         /// rfvShippingFirstName control.
         /// </summary>
         /// <remarks>

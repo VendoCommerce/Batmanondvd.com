@@ -30,17 +30,6 @@
   <div class="cart_left">
 
     <div class="cartB"><img src="/Content/Images/a3/cartform_top.jpg" class="cart_top" />
-                
-                
-                <div id="Div1" class="form_line clearfix" runat="server">
-                    <div class="error-1">
-                        <asp:Label ID="lblShippingCountryError" runat="server" Visible="false"></asp:Label></div>
-                 
-                     <asp:RadioButtonList ID="ddlShippingCountry" runat="server" DataTextField="NAME" RepeatLayout="Table" RepeatDirection="Horizontal" DataValueField="COUNTRYID" AutoPostBack="true" OnSelectedIndexChanged="ShippingCountry_SelectedIndexChanged" CssClass="countryselect">
-        </asp:RadioButtonList>
-               
-                <div class="canada_shipping">*$20 S&H FEE APPLIES</div>
-            </div>
                
             
               <div class="form_line clearfix">
@@ -258,7 +247,7 @@
              <td>
                    <div class="cart_right">
 
-            <div class="form_line clearfix">
+            <div class="form_line clearfix"  runat="server" Visible="true">
              <div class="error-1">
                     <asp:RequiredFieldValidator ID="rfvCCType" runat="server" Display="Dynamic"
                             ControlToValidate="ddlCCType"></asp:RequiredFieldValidator>
@@ -325,7 +314,7 @@
 
  </div>
     <!-- end cartB --> 
-  </div>
+
   <!-- end cart_right --> 
   
 
