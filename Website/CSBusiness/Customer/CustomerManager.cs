@@ -57,6 +57,7 @@ namespace CSBusiness
         {
 
             Customer item = new Customer();
+            item.IsEncrpyed = true;
             using (SqlDataReader reader = CustomerDAL.GetCustomerDetails(customerId))
             {
                 while (reader.Read())
@@ -78,6 +79,7 @@ namespace CSBusiness
                 while (reader.Read())
                 {
                     CSBusiness.CustomerManagement.Address billingAddress = new CSBusiness.CustomerManagement.Address();
+                    billingAddress.IsEncrpyed = true;
                     billingAddress.AddressId = Convert.ToInt32(reader["BillingAddressId"]);
                     billingAddress.FirstName = reader["FirstName"].ToString();
                     billingAddress.LastName = reader["LastName"].ToString();
@@ -97,6 +99,7 @@ namespace CSBusiness
                 while (reader.Read())
                 {
                     CSBusiness.CustomerManagement.Address shippingAddress = new CSBusiness.CustomerManagement.Address();
+                    shippingAddress.IsEncrpyed = true;
                     shippingAddress.AddressId = Convert.ToInt32(reader["ShippingAddressId"]);
                     shippingAddress.FirstName = reader["FirstName"].ToString();
                     shippingAddress.LastName = reader["LastName"].ToString();
