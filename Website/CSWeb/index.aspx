@@ -38,7 +38,7 @@ a {
 	Welcome to Batman On DVD !!!<br />
         <p>
             <asp:DropDownList ID="ddlSimple" runat="server">
-                <asp:ListItem Value="110">Classic Batman Collection on DVD</asp:ListItem>
+                <asp:ListItem Value="0">None</asp:ListItem>
             </asp:DropDownList>
         </p>
         <p>
@@ -49,8 +49,11 @@ a {
         <p>
             &nbsp;</p>
         <p>
+            &nbsp;</p>
+        <p>
             <asp:DropDownList ID="ddlComplete" runat="server">
-                <asp:ListItem Value="111">Complete Classic Batman Collection on DVD</asp:ListItem>
+                <asp:ListItem Value="110">Classic Batman Collection on DVD (Single Pay)</asp:ListItem>
+                <asp:ListItem Value="112">Classic Batman Collection on DVD (MultiPay)</asp:ListItem>
             </asp:DropDownList>
         </p>
         <p>
