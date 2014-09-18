@@ -98,6 +98,62 @@ body#cart {
 	background-image: none;
 }
 
+.header {
+    width: 973px;
+    height: 129px;
+    margin: 0 auto;
+    background: url(/content/images/header.png) repeat center 0;
+}
+.headernav {
+    position:absolute;
+    top: 99px;
+    left: 28px;
+    width: 600px;
+}
+
+.headernav ul {
+    list-style: none;
+}
+.headernav ul li {
+    float: left;
+}
+.headernav ul li::after {
+    content: '\007C';
+}
+
+.headernav ul li:last-of-type::after {
+    content: '';
+}
+
+.headernav ul li a {
+    color: #020306;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: 0 11px;
+}
+
+.headernav ul li a:hover {
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.nav-ordernow {
+    position: absolute;
+    top: 68px;
+    left: 774px;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 34px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.2); 
+    font-weight: 700;
+}
+
+.nav-ordernow:hover {
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.7); 
+}
+
 .header_cart {
     margin: 0 auto;
     width: 1083px;
@@ -108,6 +164,19 @@ body#cart {
     position: absolute;
     top: 3px;
     left: 83px;
+}
+
+.header .asotv {
+    position: absolute;
+    top: 10px;
+    left: 714px;
+}
+.header .phone {
+    position: absolute;
+    top: 18px;
+    left: 757px;
+    color: #fff;
+    font-size: 12px;
 }
 
 .header_cart .asotv {
@@ -124,8 +193,10 @@ body#cart {
 }
 
 .container {
-	width: 950px;
+	width: 959px;
 	margin: 0 auto;	
+    background: #fff;
+    box-shadow: 0 0 5px 2px rgba(68,68,68,0.6)
 }
 
 .container_cart {

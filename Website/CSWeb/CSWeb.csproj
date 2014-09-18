@@ -373,6 +373,7 @@
     <Content Include="footer.html" />
     <Content Include="header_cart.html" />
     <Content Include="header.html" />
+    <Content Include="choose.aspx" />
     <Content Include="index.aspx" />
     <Content Include="index1.aspx" />
     <Content Include="appsettings.config">
@@ -1146,6 +1147,13 @@
     </Compile>
     <Compile Include="CheckoutSessionExpired.aspx.designer.cs">
       <DependentUpon>CheckoutSessionExpired.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="choose.aspx.cs">
+      <DependentUpon>choose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="choose.aspx.designer.cs">
+      <DependentUpon>choose.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
