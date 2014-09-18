@@ -96,11 +96,44 @@ namespace CSWeb.FulfillmentHouse
                     xml.WriteEndElement();
                     xml.WriteWhitespace("\n");
 
-                    string ShippingMethod = "01";
+                    //Giftwrap
+                    Sku giftSku = null; Sku shippingSku = null;
+                    string giftWrap = "N"; decimal giftCharge = 0;
+                    string shippingMethod = "01"; decimal shippingCharge = 0;
+                    foreach (Sku Item in orderItem.SkuItems)
+                    {
+                        if (Item.SkuCode == "GIFT")
+                            giftSku = Item;
+                        //Shipping method
+
+                        if (Item.SkuCode == "Shipping")
+                            shippingSku = Item;
+                    }
+
+                    if (giftSku !=null)
+                    {
+                    giftWrap = "Y";
+                            giftCharge = giftSku.FullPrice;
+                            orderItem.SkuItems.Remove(giftSku);
+                    }
+                    if (shippingSku != null)
+                    {
+
+                        shippingSku.LoadAttributeValues();
+                        if (shippingSku.AttributeValues.ContainsKey("isupsell") && shippingSku.AttributeValues["isupsell"].Value != "")
+                        {
+                            shippingMethod = shippingSku.AttributeValues["isupsell"].Value;
+                            shippingCharge = shippingSku.FullPrice;
+                            orderItem.SkuItems.Remove(shippingSku);
+                        }
+                    }
+
+
+                    decimal orderTotal = (orderItem.SubTotal - shippingCharge - giftCharge);
 
                     if (orderItem.CustomerInfo.ShippingAddress.CountryId == 46) // Canada
                     {
-                        ShippingMethod = "09";
+                        shippingMethod = "09";
                     }
                     else if (orderItem.CustomerInfo.ShippingAddress.CountryId == 231) //US
                     {
@@ -110,7 +143,7 @@ namespace CSWeb.FulfillmentHouse
                              orderItem.CustomerInfo.ShippingAddress.StateProvinceId == 11 ||
                              orderItem.CustomerInfo.ShippingAddress.StateProvinceId == 390)
                         {
-                            ShippingMethod = "09";
+                            shippingMethod = "09";
                         }
                     }
 
@@ -120,7 +153,7 @@ namespace CSWeb.FulfillmentHouse
                     //}
 
                     xml.WriteStartElement("ShippingMethod");
-                    xml.WriteValue(ShippingMethod);
+                    xml.WriteValue(shippingMethod);
                     xml.WriteEndElement();
                     xml.WriteWhitespace("\n");
 
@@ -243,7 +276,7 @@ namespace CSWeb.FulfillmentHouse
                         xml.WriteWhitespace("\n");
                         xml.WriteStartElement("Payment");
                         xml.WriteAttributeString("number", "1");
-                        xml.WriteValue(orderItem.Total);
+                        xml.WriteValue(orderTotal);
                         xml.WriteEndElement();
                         xml.WriteWhitespace("\n");
                         //xml.WriteElementString("NumberOfPayments", "3");
@@ -271,14 +304,14 @@ namespace CSWeb.FulfillmentHouse
                         xml.WriteWhitespace("\n");
                         xml.WriteStartElement("Payment");
                         xml.WriteAttributeString("number", "1");
-                        xml.WriteValue(orderItem.Total);
+                        xml.WriteValue(orderTotal);
                         xml.WriteEndElement();
                         xml.WriteWhitespace("\n");
                     }
 
-                    xml.WriteElementString("MerchandiseTotal", orderItem.SubTotal.ToString("n2"));
+                    xml.WriteElementString("MerchandiseTotal", orderTotal.ToString("n2"));
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("ShippingCharge", orderItem.ShippingCost.ToString("n2"));
+                    xml.WriteElementString("ShippingCharge", shippingCharge.ToString("n2"));// orderItem.ShippingCost.ToString("n2"));
                     xml.WriteWhitespace("\n");
                     xml.WriteElementString("RushCharge", orderItem.RushShippingCost.ToString("n2"));
                     xml.WriteWhitespace("\n");
@@ -297,15 +330,13 @@ namespace CSWeb.FulfillmentHouse
                     //PaymentInfo section End
 
                     //SkuItems
-
-
                     foreach (Sku Item in orderItem.SkuItems)
                     {
                         xml.WriteStartElement("Item");
                         xml.WriteWhitespace("\n");
 
                         Item.LoadAttributeValues();
-                        xml.WriteElementString("ItemCode", Item.SkuCode);
+                        xml.WriteElementString("ItemCode", Item.SkuCode.ToUpper());
                         xml.WriteWhitespace("\n");
                         xml.WriteElementString("Sequence", Item.OfferCode);
                         xml.WriteWhitespace("\n");
@@ -321,9 +352,9 @@ namespace CSWeb.FulfillmentHouse
                                 xml.WriteWhitespace("\n");
                             }
                         }
-                        xml.WriteElementString("GiftWrap", "N");
+                        xml.WriteElementString("GiftWrap", giftWrap);
                         xml.WriteWhitespace("\n");
-                        xml.WriteElementString("GiftWrapCharge", "N");
+                        xml.WriteElementString("GiftWrapCharge", giftCharge.ToString("n2"));
                         xml.WriteWhitespace("\n");
                         xml.WriteEndElement();
                         xml.WriteWhitespace("\n");

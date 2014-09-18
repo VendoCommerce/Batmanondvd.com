@@ -85,7 +85,6 @@ namespace CSWeb.Root.UserControls
 
             if (!IsPostBack)
             {
-                BindCountries(true);
                 BindRegions();
                 BindShippingRegions();
                 BindShippingCharges();
@@ -141,19 +140,6 @@ namespace CSWeb.Root.UserControls
         }
 
         /// <summary>
-        /// List of Country from Cache Data
-        /// </summary>
-        public void BindCountries(bool setValue)
-        {
-
-            ddlCountry.DataSource = CountryManager.GetActiveCountry();
-            ddlCountry.DataBind();
-            if (setValue)
-                ddlCountry.Items.FindByValue(ConfigHelper.DefaultCountry).Selected = true;
-
-        }
-
-        /// <summary>
         /// Binds the CreditCards.
         /// </summary>
         private void BindCreditCard()
@@ -174,7 +160,7 @@ namespace CSWeb.Root.UserControls
         {
 
             ddlState.Items.Clear();
-            int countryId = Convert.ToInt32(ddlCountry.SelectedItem.Value);
+            int countryId = CountryManager.CountryId("United States");
             List<StateProvince> list = StateManager.GetCacheStates(countryId);
             ddlState.DataSource = list;
             ddlState.DataValueField = "StateProvinceId";
@@ -427,32 +413,15 @@ namespace CSWeb.Root.UserControls
                 }
                 else
                 {
-                    if (ddlCountry.SelectedItem.Text.Contains("United States"))
+                    if (!CommonHelper.IsValidZipCode(txtZipCode.Text))
                     {
-                        if (!CommonHelper.IsValidZipCode(txtZipCode.Text))
-                        {
-                            lblZiPError.Text = ResourceHelper.GetResoureValue("ShippingZipCodeValidationErrorMsg");
-                            lblZiPError.Visible = true;
-                            _bError = true;
-
-                        }
-                        else
-                            lblZiPError.Visible = false;
+                        lblZiPError.Text = ResourceHelper.GetResoureValue("ShippingZipCodeValidationErrorMsg");
+                        lblZiPError.Visible = true;
+                        _bError = true;
 
                     }
                     else
-                    {
-                        if (!CommonHelper.IsValidZipCodeCanadian(txtZipCode.Text))
-                        {
-                            lblZiPError.Text = ResourceHelper.GetResoureValue("ShippingZipCodeValidationErrorMsg");
-                            lblZiPError.Visible = true;
-                            _bError = true;
-
-                        }
-                        else
-                            lblZiPError.Visible = false;
-                    }
-
+                        lblZiPError.Visible = false;
                 }
                 //if (CommonHelper.EnsureNotNull(txtZipCode.Text) == String.Empty)
                 //{
@@ -725,7 +694,7 @@ namespace CSWeb.Root.UserControls
                     billingAddress.Address2 = CommonHelper.fixquotesAccents(txtAddress2.Text);
                     billingAddress.City = CommonHelper.fixquotesAccents(txtCity.Text);
                     billingAddress.StateProvinceId = Convert.ToInt32(ddlState.SelectedValue);
-                    billingAddress.CountryId = Convert.ToInt32(ddlCountry.SelectedValue);
+                    //billingAddress.CountryId = Convert.ToInt32(ddlCountry.SelectedValue);
                     billingAddress.ZipPostalCode = CommonHelper.fixquotesAccents(txtZipCode.Text);
                     CustData.BillingAddress = billingAddress;
                 }

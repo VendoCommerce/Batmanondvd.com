@@ -8,8 +8,6 @@
                  </div>
                   <div class="cart_text"><h4>Item</h4>
                   </div>
-                     <div class="cart_select"><h4>Qty</h4>
-                     </div>
                         <div class="product_price"><h4>Price</h4>
                         </div>
                         </div>   <div class="horizontal_dots">
@@ -26,18 +24,11 @@
                 <p class="basket_description">
                     <asp:Label runat="server" ID='lblSkuDescription'></asp:Label></p>
             </div>
-            <div class="cart_select">
-           
-                <asp:TextBox runat="server" ID="txtQuantity" Font-Size="8pt" Text='1' MaxLength="3"
-                    Columns="2" OnTextChanged="OnTextChanged_Changed"></asp:TextBox>
-                <asp:Label runat="server" ID="lblQuantity" CssClass="cart_select">
-                </asp:Label>
-              </div>
             <div class="product_price">
                 <asp:Label runat="server" ID="lblSkuInitialPrice"></asp:Label>
                 <td runat="server" width="1%" id='holderRemove' visible="false">
                     <asp:ImageButton ID="btnRemoveItem" runat="server" CommandName="delete" CausesValidation="false"
-                        Visible="" CssClass="ucRemoveButtonOverlay" ImageUrl="../Content/images/delete.gif" />
+                        CssClass="ucRemoveButtonOverlay" ImageUrl="../Content/images/delete.gif" />
                 </td>
             </div>
         </div>

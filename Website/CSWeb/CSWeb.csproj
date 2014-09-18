@@ -1219,7 +1219,7 @@
     <Compile Include="UserControls\TrackingPixels.ascx.designer.cs">
       <DependentUpon>TrackingPixels.ascx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\FulfillmentHouse\DataPak.cs" />
+    <Compile Include="App_Code\FulfillmentHouse\DataPak.cs" />
     <Compile Include="Admin\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

@@ -97,7 +97,7 @@ namespace CSWeb.Root.Store
                     {
                         try
                         {
-                            //Add fullfillment Order Post method
+                            new CSWeb.FulfillmentHouse.DataPak().PostOrderToDataPak(orderId);
                         }
                         catch (Exception ex)
                         {

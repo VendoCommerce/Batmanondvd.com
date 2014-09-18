@@ -102,7 +102,7 @@ namespace CSWeb.Root.UserControls
 				Label lblSkuCode = e.Item.FindControl("lblSkuCode") as Label;
                 Label lblSkuDescription = e.Item.FindControl("lblSkuDescription") as Label;
 				TextBox txtQuantity = e.Item.FindControl("txtQuantity") as TextBox;
-                Label lblQuantity = e.Item.FindControl("lblQuantity") as Label;
+                //Label lblQuantity = e.Item.FindControl("lblQuantity") as Label;
                 Label lblSkuInitialPrice = e.Item.FindControl("lblSkuInitialPrice") as Label;
 				ImageButton btnRemoveItem = e.Item.FindControl("btnRemoveItem") as ImageButton;
 				HtmlContainerControl holderQuantity = e.Item.FindControl("holderQuantity") as HtmlContainerControl;
@@ -112,7 +112,7 @@ namespace CSWeb.Root.UserControls
                 Sku cartItem = e.Item.DataItem as Sku;
 				
                 lblSkuDescription.Text = cartItem.ShortDescription;
-				lblQuantity.Text = txtQuantity.Text = cartItem.Quantity.ToString();
+				//lblQuantity.Text = txtQuantity.Text = cartItem.Quantity.ToString();
                 lblSkuInitialPrice.Text = String.Format("${0:0.##}", cartItem.InitialPrice);
                 if (cartItem.ImagePath != null && cartItem.ImagePath.Length > 0)
                 {
@@ -128,19 +128,19 @@ namespace CSWeb.Root.UserControls
 
                     btnRemoveItem.CommandArgument = cartItem.SkuId.ToString();
 
-				txtQuantity.Attributes["onchange"] = Page.ClientScript.GetPostBackEventReference(refresh, "");
+				//txtQuantity.Attributes["onchange"] = Page.ClientScript.GetPostBackEventReference(refresh, "");
 
 				switch (QuantityMode)
 				{
 					case ShoppingCartQuanityMode.Hidden:
 						holderQuantity.Visible = false;
 						break;
-					case ShoppingCartQuanityMode.Editable:
-						lblQuantity.Visible = false;
-						break;
-					case ShoppingCartQuanityMode.Readonly:
-						txtQuantity.Visible = false;
-						break;
+                    //case ShoppingCartQuanityMode.Editable:
+                    //    lblQuantity.Visible = false;
+                    //    break;
+                    //case ShoppingCartQuanityMode.Readonly:
+                    //    txtQuantity.Visible = false;
+                    //    break;
 					default:
 						break;
 				}

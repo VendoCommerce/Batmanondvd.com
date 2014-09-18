@@ -25,6 +25,8 @@
 <uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />
 <%--<asp:UpdatePanel ID="upBillingForm" runat="server">
     <ContentTemplate>--%>
+<asp:UpdatePanel runat="server">
+    <ContentTemplate>
 
  <div class="Rootontent_B clearfix">
       <uc2:Tokenex ID="ucTokenex" runat="server" />
@@ -203,16 +205,6 @@
                     City*</label>
                 <asp:TextBox ID="txtCity" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
             </div>
-            <div class="form_line clearfix" runat="server">
-                <div class="error-1">
-                    <asp:Label ID="lblCountryError" runat="server" Visible="false"></asp:Label></div>
-                <label class="label-1">
-                    Country*</label>
-                <asp:DropDownList ID="ddlCountry" runat="server" DataTextField="NAME" DataValueField="COUNTRYID"
-                    AutoPostBack="true" OnSelectedIndexChanged="Country_SelectedIndexChanged"
-                    CssClass="text-1">
-                </asp:DropDownList>
-            </div>
             <div class="form_line clearfix">
                 <div class="error-1">
                     <asp:Label ID="lblStateError" runat="server" Visible="false"></asp:Label>
@@ -318,6 +310,9 @@
      </table>
 
  </div>
+            </ContentTemplate>
+</asp:UpdatePanel>
+
     <!-- end cartB --> 
 
   <!-- end cart_right --> 
