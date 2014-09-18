@@ -19,11 +19,18 @@
 <script src="/Scripts/NoBack.js"></script>
 <link href="../styles/global.css" rel="stylesheet" type="text/css" />
 </head>
-    <body>
+<body id="cart">
+
+  <!--#include file="header_cart.html"-->
+
+  <div class="container_cart">
      <uc1:Form ID="Form1" runat="server" />
-     
-      <uc:TrackingPixels ID="TrackingPixels" runat="server" />
-    </body>
+  </div>
+
+  <!--#include file="footer.html"-->
+
+  <uc:TrackingPixels ID="TrackingPixels" runat="server" />
+</body>
 </html>
   
 

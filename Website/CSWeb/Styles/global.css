@@ -106,7 +106,7 @@ body#cart {
 }
 .headernav {
     position:absolute;
-    top: 99px;
+    top: 98px;
     left: 28px;
     width: 600px;
 }
@@ -181,12 +181,12 @@ body#cart {
 
 .header_cart .asotv {
     position: absolute;
-    top: 3px;
+    top: 5px;
     left: 763px;
 }
 .header_cart .phone {
     position: absolute;
-    top: 12px;
+    top: 14px;
     left: 805px;
     color: #fff;
     font-size: 12px;
