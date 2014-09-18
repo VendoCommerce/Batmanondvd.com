@@ -16,9 +16,6 @@
                 <td valign="top" class="pad0 black">
                    <strong>Product</strong>
                 </td>
-                <td valign="top" class="pad0 text-center black">
-                    <strong>Quantity</strong>
-                </td>
                 <td valign="top" class="pad0 black">
                     <strong>Total</strong>
                 </td>
@@ -29,10 +26,6 @@
                              <td width="76%" valign="top" style="padding-bottom: 20px">
                                 <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                             </td>
-                            <td width="12%" valign="top" align="center">
-                                <%# DataBinder.Eval(Container.DataItem, "Quantity")%>
-                            </td>
-                        
                              <td width="12%" valign="top">
                                 $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%></td>
                            

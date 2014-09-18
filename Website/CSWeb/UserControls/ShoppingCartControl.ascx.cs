@@ -99,20 +99,20 @@ namespace CSWeb.Root.UserControls
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
-				Label lblSkuCode = e.Item.FindControl("lblSkuCode") as Label;
+                Label lblSkuCode = e.Item.FindControl("lblSkuCode") as Label;
                 Label lblSkuDescription = e.Item.FindControl("lblSkuDescription") as Label;
-				TextBox txtQuantity = e.Item.FindControl("txtQuantity") as TextBox;
+                TextBox txtQuantity = e.Item.FindControl("txtQuantity") as TextBox;
                 //Label lblQuantity = e.Item.FindControl("lblQuantity") as Label;
                 Label lblSkuInitialPrice = e.Item.FindControl("lblSkuInitialPrice") as Label;
-				ImageButton btnRemoveItem = e.Item.FindControl("btnRemoveItem") as ImageButton;
-				HtmlContainerControl holderQuantity = e.Item.FindControl("holderQuantity") as HtmlContainerControl;
+                ImageButton btnRemoveItem = e.Item.FindControl("btnRemoveItem") as ImageButton;
+                HtmlContainerControl holderQuantity = e.Item.FindControl("holderQuantity") as HtmlContainerControl;
                 HtmlContainerControl holderRemove = e.Item.FindControl("holderRemove") as HtmlContainerControl;
                 Image imgProduct = e.Item.FindControl("imgProduct") as Image;
 
                 Sku cartItem = e.Item.DataItem as Sku;
-				
+
                 lblSkuDescription.Text = cartItem.ShortDescription;
-				//lblQuantity.Text = txtQuantity.Text = cartItem.Quantity.ToString();
+                //lblQuantity.Text = txtQuantity.Text = cartItem.Quantity.ToString();
                 lblSkuInitialPrice.Text = String.Format("${0:0.##}", cartItem.InitialPrice);
                 if (cartItem.ImagePath != null && cartItem.ImagePath.Length > 0)
                 {
@@ -121,43 +121,43 @@ namespace CSWeb.Root.UserControls
                 }
                 else
                 {
-                     imgProduct.Visible = false;
-                     lblSkuCode.Text = cartItem.SkuCode.ToString();
+                    imgProduct.Visible = false;
+                    lblSkuCode.Text = cartItem.SkuCode.ToString();
                 }
 
 
-                    btnRemoveItem.CommandArgument = cartItem.SkuId.ToString();
+                btnRemoveItem.CommandArgument = cartItem.SkuId.ToString();
 
-				//txtQuantity.Attributes["onchange"] = Page.ClientScript.GetPostBackEventReference(refresh, "");
+                //txtQuantity.Attributes["onchange"] = Page.ClientScript.GetPostBackEventReference(refresh, "");
 
-				switch (QuantityMode)
-				{
-					case ShoppingCartQuanityMode.Hidden:
-						holderQuantity.Visible = false;
-						break;
+                switch (QuantityMode)
+                {
+                    case ShoppingCartQuanityMode.Hidden:
+                        holderQuantity.Visible = false;
+                        break;
                     //case ShoppingCartQuanityMode.Editable:
                     //    lblQuantity.Visible = false;
                     //    break;
                     //case ShoppingCartQuanityMode.Readonly:
                     //    txtQuantity.Visible = false;
                     //    break;
-					default:
-						break;
-				}
+                    default:
+                        break;
+                }
 
-				if (HideRemoveButton)
-				{
+                if (HideRemoveButton)
+                {
                     holderRemove.Visible = false;
-				}
-			}
-			else if (e.Item.ItemType == ListItemType.Header)
-			{
-				HtmlContainerControl holderHeaderQuantity = e.Item.FindControl("holderHeaderQuantity") as HtmlContainerControl;
+                }
+            }
+            else if (e.Item.ItemType == ListItemType.Header)
+            {
+                HtmlContainerControl holderHeaderQuantity = e.Item.FindControl("holderHeaderQuantity") as HtmlContainerControl;
                 HtmlContainerControl holderHeaderRemove = e.Item.FindControl("holderHeaderRemove") as HtmlContainerControl;
-				if (QuantityMode == ShoppingCartQuanityMode.Hidden)
-				{
-					holderHeaderQuantity.Visible = false;
-				}
+                if (QuantityMode == ShoppingCartQuanityMode.Hidden)
+                {
+                    holderHeaderQuantity.Visible = false;
+                }
 
                 if (HideRemoveButton)
                 {

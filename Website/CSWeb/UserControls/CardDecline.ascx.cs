@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using System.Web.UI;
@@ -13,6 +14,7 @@ using CSBusiness.CreditCard;
 using System.Web.UI.WebControls;
 using CSBusiness.OrderManagement;
 using CSBusiness.Payment;
+using CSWebBase;
 
 namespace CSWeb.Root.UserControls
 {
@@ -519,10 +521,10 @@ namespace CSWeb.Root.UserControls
 
             Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(clientData.OrderId);
 
-            dlordersList.DataSource = orderData.SkuItems;
+            dlordersList.DataSource = orderData.SkuItems.Where<Sku>(x => { return x.SkuCode != "Shipping"; }); 
             dlordersList.DataBind();
-            LiteralSubTotal.Text = Math.Round(orderData.SubTotal, 2).ToString();
-            LiteralShipping.Text = Math.Round(orderData.ShippingCost, 2).ToString();
+            LiteralSubTotal.Text = Math.Round(OrderValues.GetSubTotal(orderData), 2).ToString();
+            LiteralShipping.Text = Math.Round(OrderValues.GetShippingCharge(orderData), 2).ToString();
             LiteralTax.Text = Math.Round(orderData.Tax, 2).ToString();
             LiteralTotal.Text = Math.Round(orderData.Total, 2).ToString();
             if (orderData.RushShippingCost > 0)

@@ -109,7 +109,6 @@ namespace CSBusiness.CustomerManagement
         /// <summary>
         /// Gets or sets the State Name
         /// </summary>
-        [SensitiveDataAttribute]
         public string StateProvinceName { get; set; }
 
         /// <summary>

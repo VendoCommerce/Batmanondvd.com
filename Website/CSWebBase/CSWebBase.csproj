@@ -50,6 +50,7 @@
     <Compile Include="AbTestingVersionUpdate.cs" />
     <Compile Include="DuplicateOrderDAL.cs" />
     <Compile Include="DynamicVersionDAL.cs" />
+    <Compile Include="OrderValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteBasePage.cs">
       <SubType>ASPXCodeBehind</SubType>

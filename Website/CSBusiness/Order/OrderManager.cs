@@ -371,8 +371,11 @@ namespace CSBusiness.OrderManagement
                     item.FullPriceTax = Convert.ToDecimal(reader["FullPriceTax"]);
 
                     item.CustomerInfo = new Customer();
+                    item.CustomerInfo.IsEncrpyed = true;
                     item.CustomerInfo.BillingAddress = new CSBusiness.CustomerManagement.Address();
+                    item.CustomerInfo.BillingAddress.IsEncrpyed = true;
                     item.CustomerInfo.ShippingAddress = new CSBusiness.CustomerManagement.Address();
+                    item.CustomerInfo.ShippingAddress.IsEncrpyed = true;
                     item.CustomerInfo.BillingAddress.Company = reader["BillingCompany"].ToString();
                     item.CustomerInfo.BillingAddress.FirstName = reader["BillingFirstName"].ToString();
                     item.CustomerInfo.BillingAddress.LastName = reader["BillingLastName"].ToString();
@@ -445,6 +448,8 @@ namespace CSBusiness.OrderManagement
                     paymentDataInfo.TransactionCode = reader["TransactionCode"].ToString();
                     item.CreditInfo = paymentDataInfo;
 
+                    Security.Encryption.DecryptValues(item.CustomerInfo);
+                        
                     items.Add(item);
                 }
 
@@ -471,6 +476,7 @@ namespace CSBusiness.OrderManagement
                 htItems.Add("allOrderSkus", orderSku);
             }
 
+            
             return htItems;
 
         }
@@ -845,8 +851,11 @@ namespace CSBusiness.OrderManagement
                     item.VersionName = reader["Version"].ToString();
                     item.FullPriceTax = Convert.ToDecimal(reader["FullPriceTax"]);
                     item.CustomerInfo = new Customer();
+                    item.CustomerInfo.IsEncrpyed = true;
                     item.CustomerInfo.BillingAddress = new CSBusiness.CustomerManagement.Address();
+                    item.CustomerInfo.BillingAddress.IsEncrpyed = true;
                     item.CustomerInfo.ShippingAddress = new CSBusiness.CustomerManagement.Address();
+                    item.CustomerInfo.ShippingAddress.IsEncrpyed = true;
                     item.CustomerInfo.BillingAddress.Company = reader["BillingCompany"].ToString();
                     item.CustomerInfo.BillingAddress.FirstName = reader["BillingFirstName"].ToString();
                     item.CustomerInfo.BillingAddress.LastName = reader["BillingLastName"].ToString();
@@ -909,7 +918,9 @@ namespace CSBusiness.OrderManagement
                         item.CustomerInfo.ShippingAddress.CountryCode = string.Empty;
                     }
 
-                    PaymentInformation paymentDataInfo = new PaymentInformation();
+                     Security.Encryption.DecryptValues(item.CustomerInfo);
+
+                   PaymentInformation paymentDataInfo = new PaymentInformation();
                     paymentDataInfo.CreditCardNumber = CommonHelper.Decrypt(reader["CreditCardNumber"].ToString());
                     paymentDataInfo.CreditCardType = Convert.ToInt32(reader["CreditCardType"]);
                     paymentDataInfo.CreditCardName = reader["CreditCardName"].ToString(); ;
@@ -918,6 +929,7 @@ namespace CSBusiness.OrderManagement
                     paymentDataInfo.AuthorizationCode = reader["AuthorizationCode"].ToString();
                     paymentDataInfo.TransactionCode = reader["TransactionCode"].ToString();
                     item.CreditInfo = paymentDataInfo;
+
 
 
                 }

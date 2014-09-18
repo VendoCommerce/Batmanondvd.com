@@ -50,6 +50,8 @@ namespace CSBusiness
         public List<Sku> GetAllSkus(int startRec, int endRec, out int totalCount)
         {
             List<Sku> SkuList = new List<Sku>();
+            List<string> assocications = new List<string>();
+
             using (DataTable DtTable =  SKUDAL.GetAllSkus(startRec, endRec, out totalCount))
             {
                  foreach(DataRow row in DtTable.Rows)

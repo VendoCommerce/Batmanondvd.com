@@ -1,5 +1,11 @@
 <%@ Control Language="C#" Inherits="CSWeb.Root.UserControls.CheckoutThankYouModule" %>
 
+<style type="text/css">
+    .auto-style1 {
+        height: 28px;
+    }
+</style>
+
 <script language="javascript">
 function Clickheretoprint()
 { 
@@ -37,9 +43,6 @@ function Clickheretoprint()
                 <td valign="top" class="pad0 black">
                    
                 </td>
-                <td valign="top" class="pad0 text-center black">
-                    <strong>Quantity</strong>
-                </td>
                 <td valign="top" class="pad0 black">
                     <strong>Total</strong>
                 </td>
@@ -54,13 +57,8 @@ function Clickheretoprint()
 
                                 <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                             </td>
-                            <td valign="top" class="black bold text-center">
-                                <%# DataBinder.Eval(Container.DataItem, "Quantity")%>
-                            </td>
-                        
                              <td valign="top" class="black bold">
-                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%>
-                            </td>
+                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%></td>
                            
                         </tr>
                     </ItemTemplate>
@@ -117,26 +115,20 @@ function Clickheretoprint()
                     <br />
                     Address:
                     <br />
-                    Address 2:
-                    <br />
                     City:
                     <br />
                     State:
                     <br />
                     Zip Code:
                     <br />
-                    Country:
-                    <br />
                     Email Address:
                 </td>
                 <td width="206" valign="top">
                     <strong><asp:Literal ID="LiteralName" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralAddress" runat="server"></asp:Literal><br />
-                    <asp:Literal ID="LiteralAddress2" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralCity" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralState" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralZip" runat="server"></asp:Literal><br />
-                    <asp:Literal ID="LiteralCountry" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralEmail" runat="server"></asp:Literal></strong>
                 </td>
                 <td width="189" valign="top">
@@ -144,24 +136,18 @@ function Clickheretoprint()
                     <br />
                     Address:
                     <br />
-                    Address 2:
-                    <br />
                     City:
                     <br />
                     State:
                     <br />
-                    Zip Code:<br />
-                    Country:
-                </td>
+                    Zip Code:</td>
                 <td width="266" valign="top">
                     <strong><asp:Literal ID="LiteralName_b" runat="server">
                     </asp:Literal><br />
                     <asp:Literal ID="LiteralAddress_b" runat="server"></asp:Literal><br />
-                    <asp:Literal ID="LiteralAddress2_b" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralCity_b" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralState_b" runat="server"></asp:Literal><br />
-                    <asp:Literal ID="LiteralZip_b" runat="server"></asp:Literal><br />
-                    <asp:Literal ID="LiteralCountry_b" runat="server"></asp:Literal></strong>
+                    <asp:Literal ID="LiteralZip_b" runat="server"></asp:Literal></strong>
                 </td>
             </tr>
         </table>

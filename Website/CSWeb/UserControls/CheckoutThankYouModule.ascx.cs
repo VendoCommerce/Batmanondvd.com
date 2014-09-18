@@ -10,6 +10,8 @@ using System.Web.UI.WebControls;
 using CSWeb.Root.Store;
 using System.Text;
 using CSBusiness.Attributes;
+using System.Linq;
+using CSWebBase;
 
 namespace CSWeb.Root.UserControls
 {
@@ -21,7 +23,7 @@ namespace CSWeb.Root.UserControls
         protected Literal LiteralSubTotal, LiteralShipping, LiteralTax, LiteralTotal,
             LiteralName, LiteralAddress, LiteralCity, LiteralEmail, LiteralZip, LiteralState, LiteralCountry,
             LiteralName_b, LiteralAddress_b, LiteralCity_b, LiteralZip_b, LiteralState_b, LiteralCountry_b, LiteralRushShipping, LiteralGoogleAnalytics, LiteralID, LiteralSid, LiteralOfferId,
-            LiteralAddress2, LiteralAddress2_b;
+            LiteralAddress2_b;
 
         protected DataList dlordersList;
 protected Label lblPurchaseName, lblPromotionPrice;
@@ -74,11 +76,10 @@ protected Label lblPurchaseName, lblPromotionPrice;
             if (orderId > 0)
             {
                 Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderId);
-
-                dlordersList.DataSource = orderData.SkuItems;
+                dlordersList.DataSource = orderData.SkuItems.Where<Sku>(x => { return x.SkuCode != "Shipping"; });
                 dlordersList.DataBind();
-                LiteralSubTotal.Text = Math.Round(orderData.SubTotal, 2).ToString();
-                LiteralShipping.Text = Math.Round(orderData.ShippingCost, 2).ToString();
+                LiteralSubTotal.Text = Math.Round(OrderValues.GetSubTotal(orderData),2).ToString();
+                LiteralShipping.Text = Math.Round(OrderValues.GetShippingCharge(orderData),2).ToString();
                 LiteralTax.Text = Math.Round(orderData.Tax, 2).ToString();
                 LiteralTotal.Text = Math.Round(orderData.Total, 2).ToString();
                 if (orderData.RushShippingCost > 0)
@@ -102,19 +103,15 @@ protected Label lblPurchaseName, lblPromotionPrice;
                  LiteralName.Text = String.Format("{0} {1}", orderData.CustomerInfo.ShippingAddress.FirstName, orderData.CustomerInfo.ShippingAddress.LastName);
                 LiteralEmail.Text = orderData.CustomerInfo.Email;
                 LiteralAddress.Text = orderData.CustomerInfo.ShippingAddress.Address1;
-                LiteralAddress2.Text = orderData.CustomerInfo.ShippingAddress.Address2;
                 LiteralCity.Text = orderData.CustomerInfo.ShippingAddress.City;
                 LiteralZip.Text = orderData.CustomerInfo.ShippingAddress.ZipPostalCode;
                 LiteralState.Text = StateManager.GetStateName(orderData.CustomerInfo.ShippingAddress.StateProvinceId);
-                LiteralCountry.Text = CountryManager.CountryName(orderData.CustomerInfo.ShippingAddress.CountryId);
 
                 LiteralName_b.Text = String.Format("{0} {1}", orderData.CustomerInfo.BillingAddress.FirstName, orderData.CustomerInfo.BillingAddress.LastName);
                 LiteralAddress_b.Text = orderData.CustomerInfo.BillingAddress.Address1;
-                LiteralAddress2_b.Text = orderData.CustomerInfo.BillingAddress.Address2;
                 LiteralCity_b.Text = orderData.CustomerInfo.BillingAddress.City;
                 LiteralZip_b.Text = orderData.CustomerInfo.BillingAddress.ZipPostalCode;
                 LiteralState_b.Text = StateManager.GetStateName(orderData.CustomerInfo.BillingAddress.StateProvinceId);
-                LiteralCountry_b.Text =CountryManager.CountryName(orderData.CustomerInfo.BillingAddress.CountryId); 
                    
                 //Google Analutics E-Commerce Pixel
                 //LoadGoogleAnalytics(orderData);
