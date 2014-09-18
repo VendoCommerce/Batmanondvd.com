@@ -38,22 +38,7 @@ namespace CSWeb
 
         }
 
-        protected void lbSimple_Click(object sender, EventArgs e)
-        {
-            AddSku(ddlSimple.SelectedValue);
-        }
-
-        protected void lbComplete_Click(object sender, EventArgs e)
-        {
-            AddSku(ddlComplete.SelectedValue);
-        }
-
-        private void AddSku(string skuId)
-        {
-            Session["PId"] = skuId;
-            Response.Redirect("AddProduct.aspx?PId=" + skuId + "&CId=3");
-
-        }
+        
 
     }
 }
