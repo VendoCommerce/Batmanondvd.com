@@ -29,7 +29,9 @@ namespace CSWebBase
 
         public static Sku GetGiftSku(Cart cart)
         {
-            return cart.CartItems.First<Sku>(x => { return x.SkuCode == "Shipping"; });
+            if (cart.CartItems.Count<Sku>(x => { return x.SkuCode == "Gift"; })>0)
+            return cart.CartItems.First<Sku>(x => { return x.SkuCode == "Gift"; });
+            return null;
         }
 
         public static decimal GetSubTotal(Order order)
@@ -42,12 +44,17 @@ namespace CSWebBase
             return cart.CartItems.Count<Sku>(x => {return x.SkuCode !="Shipping" && x.SkuCode !="Gift";});
         }
 
-        public static void SetGiftWrap(Cart cart)
+        public static void SetGiftWrap(ClientCartContext cartContext)
         {
-            Sku giftSku = GetGiftSku(cart);
-            int totalSkus = TotalSkus(cart);
+            Sku giftSku = GetGiftSku(cartContext.CartInfo);
+            int totalSkus = TotalSkus(cartContext.CartInfo);
             if (giftSku != null)
-            cart.AddOrUpdate(giftSku.SkuId,totalSkus,true,true,false);
+            {
+                cartContext.CartInfo.AddOrUpdate(giftSku.SkuId, totalSkus, true, true, false);
+                cartContext.CartInfo.Compute();
+                new OrderManager().UpdateOrderAfterUpSell(cartContext.OrderId,cartContext.CartInfo);
+
+            }
         }
 
     }

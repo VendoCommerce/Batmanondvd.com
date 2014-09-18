@@ -132,6 +132,8 @@ namespace CSWeb.Root.Store
             }
             else
             {
+                //Set gift wrap items
+                CSWebBase.OrderValues.SetGiftWrap(CartContext);
                 //SriComments: Admin may setup path with empty templates: kevin business case
                 //If Authorization is needed, use Server.Transfer("AuthorizeOrder.aspx"); instead of Response.Redirect("CheckoutThankYou.aspx");
                 if (CSFactory.OrderProcessCheck() == (int)OrderProcessTypeEnum.InstantOrderProcess)
