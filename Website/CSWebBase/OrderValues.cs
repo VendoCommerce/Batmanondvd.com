@@ -24,7 +24,9 @@ namespace CSWebBase
 
         public static Sku GetShippingSku(Order order)
         {
-            return  order.SkuItems.First<Sku>(x => { return x.SkuCode == "Shipping"; });
+            if (order.SkuItems.Count<Sku>(x => { return x.SkuCode == "Shipping"; }) > 0)
+                return order.SkuItems.First<Sku>(x => { return x.SkuCode == "Shipping"; });
+            return null;
         }
 
         public static Sku GetGiftSku(Cart cart)
