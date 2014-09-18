@@ -107,7 +107,7 @@
                                             ControlToValidate="ddlShippingState"></asp:RequiredFieldValidator>
                                     </div>
                                     <label class="label-1">
-                                        State/Province*</label>
+                                        State*</label>
                                     <asp:DropDownList ID="ddlShippingState" runat="server" DataTextField="NAME" CssClass="text-1" size="1" AutoPostBack="true">
                                     </asp:DropDownList>
                                 </div>
@@ -227,7 +227,7 @@
                                                 ControlToValidate="ddlState"></asp:RequiredFieldValidator>
                                         </div>
                                         <label class="label-1">
-                                            State/Province*</label>
+                                            State*</label>
                                         <asp:DropDownList ID="ddlState" runat="server" DataTextField="NAME" CssClass="text-1"
                                             size="1">
                                         </asp:DropDownList>

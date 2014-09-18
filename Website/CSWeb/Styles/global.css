@@ -408,28 +408,32 @@ body#cart {
 /* RECEIPT 1 */
 
 
-#receipt_table1 td, #receipt_table2 td {
+#receipt_table1 td {
 	padding: 20px;	
 	line-height: 20px;
 }
 
 #receipt_table1 .horzline1 td {
-	border-bottom: 1px solid #000;	
+	border-bottom: 2px dotted #e1e1e1;
 }
 
 #receipt_table1 .horzline2 td {
-	border-top: 1px solid #000;	
+	border-top: 2px dotted #e1e1e1;	
 }
 
 #receipt_table1 {
 	margin-bottom: 50px;	
 }
 #receipt_table2 {
-	background: #deebf0;	
-	width: 719px;
-	margin: 0 auto;
-	border-radius: 20px;
-	-webkit-border-radius:20px;
+	background: #ebebeb;	
+	width: 650px;
+	margin-left: 118px;
+	border-radius: 4px;
+}
+
+#receipt_table2 td {
+	padding: 25px 20px 30px 20px;	
+	line-height: 21px;
 }
 
 /* RECEIPT 2 */
@@ -438,7 +442,7 @@ body#cart {
 	float: right;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
-	margin-right: 123px;
+	margin-right: 90px;
 	position: relative;
 	text-align: right;
 	text-transform: uppercase;
@@ -793,9 +797,12 @@ div.rowheader .receipt_row1 {
 
 .basket_description {padding: 5px 0 15px 0;}
 
-.basket_description h3 {
+#cart .basket_description h3, 
+#cart #receipt_table1 h3 {
 	font-size: 18px;
 	font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    line-height: 22px;
 }
 
 .basket_description p {
@@ -806,7 +813,7 @@ div.rowheader .receipt_row1 {
 .cart_table {
 	display:block;
 	width: 100%;
-	color: #464646;
+	color: #000;
 	margin-bottom: 20px;
 	position:relative;	
 }
