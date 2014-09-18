@@ -19,10 +19,10 @@
                 <asp:Image runat="server" ID="imgProduct" />
             </div>
             <div class="cart_text">
-                <p class="basket_title">
-                    <asp:Label runat="server" ID="lblSkuCode"></asp:Label></p>
-                <p class="basket_description">
-                    <asp:Label runat="server" ID='lblSkuDescription'></asp:Label></p>
+                <div class="basket_title">
+                    <asp:Label runat="server" ID="lblSkuCode"></asp:Label></div>
+                <div class="basket_description">
+                    <asp:Label runat="server" ID='lblSkuDescription'></asp:Label></div>
             </div>
             <div class="product_price">
                 <asp:Label runat="server" ID="lblSkuInitialPrice"></asp:Label>
@@ -38,19 +38,20 @@
     <asp:PlaceHolder runat="server" ID="holderTaxAndShipping">
         <div class="horizontal_dots">
         </div>
+
+        <div class="multipay_txt">*You will be charged today for your first of 5 monthly payments of $19.99. Shipping is FREE!</div>
+
         <div class="cart_totals clearfix">
             <div class="cart_totals_left">
-                Subtotal<br />
-                Shipping<br />
-                Tax
-                <br />
-                Today's Payment</div>
+                <strong>Subtotal:</strong><br />
+                Shipping:<br />
+                Tax:<br />
+                </div>
             <div class="cart_totals_right">
                 <asp:Literal runat="server" ID='lblSubtotal'></asp:Literal><br />
                 <asp:Literal runat="server" ID="lblShipping"></asp:Literal><br />
-                <asp:Literal runat="server" ID="lblTax"></asp:Literal>
-                <br />
-                <asp:Literal runat="server" ID="lblOrderTotal"></asp:Literal>
+                <asp:Literal runat="server" ID="lblTax"></asp:Literal><br />
+                
                 <asp:Literal runat="server" ID="lblRushShipping" Visible="false"></asp:Literal>
                 <table>
                     <tr id='holderRushShippingTotal' runat="server">
@@ -68,8 +69,12 @@
                     </tr>
                 </table>
             </div>
+            <div class="clear"></div>
+            <div class="horizontal_dots" style="width: 240px; left: -8px;"></div>
+            <div class="cart_totals_left f16"><strong>Today's Payment:</strong></div>
+            <div class="cart_totals_right f16"><asp:Literal runat="server" ID="lblOrderTotal"></asp:Literal></div>
         </div>
     </asp:PlaceHolder>
 </asp:Panel>
-   <div class="cart_offer">
-            <strong>*Offer Details:</strong> offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer details offer</div>
+   <div class="cart_offer" style="display: none;">
+            <strong>*Offer Details:</strong> offer details </div>

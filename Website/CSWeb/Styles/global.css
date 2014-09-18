@@ -4,31 +4,9 @@
 
 /* add fontface fonts here */
 /* add fontface fonts here */
-@font-face {
-    font-family: 'helv_light';
-	src: url('fonts/helvlight.eot'); 
-    src: url('fonts/helvlight.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helvlight.woff') format('woff'),
-         url('fonts/helvlight.ttf') format('truetype'),
-         url('fonts/helvlight.svg#HelveticaNeueLTStd-Lt') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'helv_med';
-    src: url('fonts/HelveticaNeueLTStd-Md.eot');
-    src: url('fonts/HelveticaNeueLTStd-Md.eot?#iefix') format('embedded-opentype'),
-         url('fonts/HelveticaNeueLTStd-Md.woff') format('woff'),
-         url('fonts/HelveticaNeueLTStd-Md.ttf') format('truetype'),
-         url('fonts/HelveticaNeueLTStd-Md.svg#helv_md') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 a {
-	color: #ff7100;	
-	text-decoration: none;
+	color: #ff7100;
 	transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
@@ -39,7 +17,8 @@ img {
 	border: none;	
 }
 
-.webfont1 {font-family: 'allerbold', sans-serif;}
+.webfont1 {font-family: 'Open Sans Condensed', sans-serif !important;}
+.webfont1bold {font-family: 'Open Sans Condensed', sans-serif !important; font-weight: 700 !important;}
 /* floats */
 
 .fleft {float:left;}
@@ -158,13 +137,20 @@ body#cart {
 #cart h2 {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
-    font-size: 44px
+    font-size: 44px;
 }
 
 #cart h3 {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 300;
-    font-size: 22px
+    font-size: 22px;
+}
+
+#cart h4 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 20px;
 }
 
 .cart_table h4 {
@@ -210,7 +196,7 @@ body#cart {
 
 .footerlogos {
     display: inline;
-    vertical-align: top;
+    vertical-align: baseline;
     margin-right: 9px;
 }
 
@@ -706,10 +692,6 @@ div.rowheader .receipt_row1 {
   top: -10px;
 }
 .Rootontent_B {
-	position:relative;
-	display:block;
-	width: 900px;
-	margin: 0 auto;	
 	padding-top: 20px;
 }
 
@@ -731,14 +713,28 @@ div.rowheader .receipt_row1 {
 	color: #464646;	
 }
 
-.basket_description {
-	font-size: 11px;
-	
+.multipay_txt {
+    position: absolute; 
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+}
+
+.basket_description {padding: 5px 0 15px 0;}
+
+.basket_description h3 {
+	font-size: 18px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.basket_description p {
+	font-size: 12px;
+	line-height: 16px;
 }
 
 .cart_table {
 	display:block;
-	width: 580px;
+	width: 100%;
 	color: #464646;
 	margin-bottom: 20px;
 	position:relative;	
@@ -747,17 +743,19 @@ div.rowheader .receipt_row1 {
 .cart_image {
 	float:left;
 	position:relative;
-	width: 120px;	
+	width: 184px;	
 	font-weight: bold;
 }
 .cart_image img {
-	max-width: 120px;	
+	max-width: 164px;
+    margin-left: 3px;
 }
 .cart_text {
   float: left;
   padding: 0 20px;
   position: relative;
-  width: 250px;
+  width: 490px;
+  margin-right: 100px;
 }
 .cart_select {
   float: left;
@@ -770,37 +768,32 @@ div.rowheader .receipt_row1 {
 .product_price {
 	float:left;
 	position:relative;
-  font-weight: bold;
 	width: 64px;	
 }
 
 .cart_totals {
-  display: block;
-  position: relative;
-	width: 580px;
-	font-weight: bold;
+  margin-left: 600px;
 }
 
 .cart_totals_left {
   float: left;
-  margin-left: 426px;
   position: relative;
-  width: 80px;
+  width: 150px;
 }
 
 .cart_totals_right {
 	position:relative;
 	float:left;
-	width: 64px;	
+	width: 64px;
+    text-align: right;
+}
+
+.arrow_down_hdr {
+    padding-left: 26px;
+    background: url(/content/images/arrow_down.png) no-repeat 7px 13px;
 }
 
 .cart_left {
-	position:relative;
-	width: 580px;
-	color: #464646;
-	font-size: 13px;
-	float:left;
-	margin-right: 20px;
 }
 
 .cart_right {
@@ -830,11 +823,9 @@ div.rowheader .receipt_row1 {
 }
 
 .cartB {
-	width: 294px;
-	border: 1px solid #d7d7d7;
+	width: 476px;
 	margin-bottom: 30px;
-	position:relative;
-	background: #fff;
+    padding-left: 7px;
 }
 
 .fixWidth {
@@ -845,11 +836,8 @@ div.rowheader .receipt_row1 {
 	text-align:center;
 }
 .cartB .form_line {
-	position:relative;
-	width: 260px;
-	display:block;
-	margin: 0 auto;
-	padding-bottom: 12px;
+	width: 395px;
+	padding-bottom: 7px;
 }
 .cartB .form_line_btn {
   display: block;
@@ -876,9 +864,10 @@ div.rowheader .receipt_row1 {
 .cartB .label-1 {
 	float:left;
 	position:relative;
-	width:100px;
+	width:122px;
 	color: #2c2c2c;
-	padding-top: 2px;
+	padding-top: 4px;
+    font-size: 13px;
 }
 .cartB .label-2 {
   float: left;
@@ -886,11 +875,14 @@ div.rowheader .receipt_row1 {
 	color: #2c2c2c;
   position: relative;
   width: 233px;
+    font-size: 13px;
 }
 .cartB .label-3 {
 	position:relative;
-	width: 260px;
+	width: 225px;
 	color: #2c2c2c;
+    font-size: 12px;
+    font-weight: bold;
 }
 .cartB .checkbox-right {
 	float:left;
@@ -903,10 +895,10 @@ div.rowheader .receipt_row1 {
 }
 .cartB .text-1 {
   float: left;
-  height: 25px;
+  font-size: 14px;
   padding: 4px;
   position: relative;
-  width: 159px;
+  width: 262px;
 }
 .cartB .text-2 {
 	width: 90px;
@@ -949,6 +941,56 @@ div.rowheader .receipt_row1 {
 	font-size: 12px;
 	text-decoration: underline;
 }
+
+
+.cart_right .label-1 {
+	float:left;
+	position:relative;
+	width:114px;
+	color: #2c2c2c;
+	padding-top: 4px;
+    font-size: 13px;
+}
+.cart_right .label-3 {
+	position:relative;
+    float: left;
+	width: 235px;
+	color: #2c2c2c;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+}
+
+.cart_right .text-1 {
+  float: left;
+  font-size: 14px;
+  padding: 4px;
+  position: relative;
+  width: 156px;
+}
+
+.cart_right .text-2 {
+  float: left;
+  font-size: 14px;
+  padding: 4px;
+  position: relative;
+  width: 52px;
+}
+
+.cart_right .text-3 {
+  float: left;
+  font-size: 14px;
+  padding: 4px;
+  position: relative;
+  width: 80px;
+  margin-right: 6px;
+}
+
+.cart_right .form_line {
+	width: 386px;
+	padding-bottom: 7px;
+}
+
 
 /* CART C */
 #Rootontent_C {

@@ -76,15 +76,6 @@ namespace CSWeb.Root.UserControls {
         protected global::System.Web.UI.WebControls.Literal lblTax;
         
         /// <summary>
-        /// lblOrderTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lblOrderTotal;
-        
-        /// <summary>
         /// lblRushShipping control.
         /// </summary>
         /// <remarks>
@@ -119,5 +110,14 @@ namespace CSWeb.Root.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkIncludeRushShipping;
+        
+        /// <summary>
+        /// lblOrderTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lblOrderTotal;
     }
 }
