@@ -370,6 +370,9 @@
     <Content Include="Content\Images\nothanks_btn.png" />
     <Content Include="Content\Images\yes_btn.png" />
     <Content Include="GetTotals.aspx" />
+    <Content Include="footer.html" />
+    <Content Include="header_cart.html" />
+    <Content Include="header.html" />
     <Content Include="index.aspx" />
     <Content Include="index1.aspx" />
     <Content Include="appsettings.config">

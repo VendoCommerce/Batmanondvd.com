@@ -17,6 +17,11 @@
 </script>
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>
+
+
+<h2>Holy Today’s Special Offer, Batman!</h2>
+<h3 style="padding-bottom: 27px;">The Classic Batman TV Series is Finally Available For You To Own!</h3>
+
 <uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />
 <%--<asp:UpdatePanel ID="upBillingForm" runat="server">
     <ContentTemplate>--%>
@@ -301,7 +306,7 @@
                 </asp:DropDownList>
             </div>
                    <div class="form_line_btn">
-                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/a3/ordernow_btn.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
+                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/btn_completeorder.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
             <div class="form_line_guarantee"><a href="#guarantee" class="guarantee">90-Day Money-Back Guarantee!</a></div>
              <div class="form_line_guarantee clearfix">

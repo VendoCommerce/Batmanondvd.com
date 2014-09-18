@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
 <meta charset="utf-8">    
-<title></title>
+<title>BATMAN</title>
 <meta name="description" content=""/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/Scripts/fancybox/jquery.fancybox.css">
@@ -18,7 +18,7 @@
     </head>
 
  
-<body>
+<body id="cart">
  <form runat="server" id="fm1">
   <!-- loader overlay front end -->
         <div id="mask" style="position:fixed; width: 100%; height: 100%; background: url(/content/Images/mask_bg.png) repeat; top: 0; left: 0; z-index: 9000; visibility:hidden;">
@@ -33,9 +33,14 @@
             </div>
 
         </div>
-        <!-- end loader front end --> 
- <uc:ShippingBillingCreditForm ID="bscfShippingBillingCreditForm" runat="server" RedirectUrl="Store/AddProduct.aspx" />
- 
+        <!-- end loader front end -->
+
+<!--#include file="header_cart.html"-->
+<div class="container_cart">
+    <uc:ShippingBillingCreditForm ID="bscfShippingBillingCreditForm" runat="server" RedirectUrl="Store/AddProduct.aspx" />
+</div>
+
+<!--#include file="footer.html"-->
   <uc:TrackingPixels ID="TrackingPixels" runat="server" />
  </form>
 </body>
