@@ -21,11 +21,11 @@
 <body id="cart">
  <form runat="server" id="fm1">
   <!-- loader overlay front end -->
-        <div id="mask" style="position:fixed; width: 100%; height: 100%; background: url(/content/Images/mask_bg.png) repeat; top: 0; left: 0; z-index: 9000; visibility:hidden;">
+        <div id="mask" style="position:fixed; width: 100%; height: 100%; background: url(//d1kg9stb0ddjcv.cloudfront.net/images/mask_bg.png) repeat; top: 0; left: 0; z-index: 9000; visibility:hidden;">
             <div style="margin: 250px auto; position:relative; width: 312px; height: 170px; background: white; text-align:center;">
 
                 <p style="margin: 0; padding: 20px 0 10px 0;">
-         <img src="/content/video/loader.gif">
+         <img src="//d1kg9stb0ddjcv.cloudfront.net/images//loader.gif">
                 </p>
                 <p style="color: black; text-align:center; font-size: 12px; margin: 0 23px; line-height: 19px;">Your order is currently being processed. <br />
                     Please do not exit or refresh this page to ensure that your order is processed accurately.</p>

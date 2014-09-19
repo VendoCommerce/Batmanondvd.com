@@ -28,7 +28,7 @@
                 <asp:Label runat="server" ID="lblSkuInitialPrice"></asp:Label>
                 <td runat="server" width="1%" id='holderRemove' visible="false">
                     <asp:ImageButton ID="btnRemoveItem" runat="server" CommandName="delete" CausesValidation="false"
-                        CssClass="ucRemoveButtonOverlay" ImageUrl="../Content/images/delete.gif" />
+                        CssClass="ucRemoveButtonOverlay" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/delete.gif" />
                 </td>
             </div>
         </div>

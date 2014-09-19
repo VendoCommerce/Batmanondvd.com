@@ -60,6 +60,7 @@ img {
 .darkgray {color: #303030 !important;}
 .red {color: #ef4527 !important;}
 .orange {color: #ff7100 !important;}
+.green {color: #75ad54 !important;}
 .margr20 {margin-right: 20px !important;}
 .lh19 {line-height: 19px !important;}
 .lh20 {line-height: 20px !important;}
@@ -70,6 +71,18 @@ img {
 .lh {line-height: normal !important;}
 .vertmid {vertical-align:middle !important;}
 
+.bg_greengradient {
+    background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #d7ecb4 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d7ecb4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#d7ecb4 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#d7ecb4 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#d7ecb4 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#d7ecb4 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d7ecb4',GradientType=0 ); /* IE6-9 */
+
+}
+
 /* FONT SIZES - from 5px - 100px - add class f[x] to an element where x is font size to force a different font size */
 
 .f5 {font-size: 5px !important;}.f6 {font-size: 6px !important;}.f7 {font-size: 7px !important;}.f8 {font-size: 8px !important;}
@@ -79,6 +92,8 @@ img {
 html, body {height: 100%;width: 100%;}
 h1,h2,h3,h4,h5 {font-weight: normal;}
 div {position:relative;}
+sup {line-height: 0; font-size: 62%;}
+ul, ol, dl {list-style: none;}
 
 * {
 	margin: 0;
@@ -87,12 +102,14 @@ div {position:relative;}
 	-moz-box-sizing: border-box;
 }
 body {
-	background: #fff url(/content/images/bg.png) repeat center 44px;
+	background: #fff url(//d1kg9stb0ddjcv.cloudfront.net/images/bg.png) repeat center 44px;
 	font-family: arial, sans-serif;
 	color: #000;
 	font-size: 14px;
     line-height: 1.3;
 }
+
+p {padding-bottom: 20px;}
 
 body#cart {
 	background-image: none;
@@ -102,7 +119,7 @@ body#cart {
     width: 973px;
     height: 129px;
     margin: 0 auto;
-    background: url(/content/images/header.png) repeat center 0;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/header.png) repeat center 0;
 }
 .headernav {
     position:absolute;
@@ -158,7 +175,7 @@ body#cart {
     margin: 0 auto;
     width: 1083px;
     height: 137px;
-    background: #fff url(/content/images/bg.png) repeat center 0;
+    background: #fff url(//d1kg9stb0ddjcv.cloudfront.net/images/bg.png) repeat center 0;
 }
 .logo_cart {
     position: absolute;
@@ -277,6 +294,49 @@ body#cart {
 .bottomcta img {
 	display: block;
 	margin: 0 auto;	
+}
+
+
+/* Choose Product */
+.chooseprod {
+    float: left; 
+    margin: 0 25px 0 11px;
+    border: #cdcdcd solid 1px;
+    border-radius: 10px;
+    width: 443px;
+}
+
+.chooseprod p {font-size: 16px; line-height: 21px;}
+
+.chooseprod ul {
+    margin-bottom: 20px; 
+}
+.chooseprod ul li {
+    margin-left: 10px; 
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+.chooseprod ul li:before {
+    content: '\2022';
+    float: left; 
+    margin-left: -10px;
+}
+
+
+#cart .chooseprod h2 {
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    padding: 24px 5px 5px 24px;
+}
+
+.prodselect {
+    border: #cdcdcd solid 1px;
+    padding: 4px;
+    width: 300px;
+}
+.choose_content {
+    padding: 0 30px 20px 40px;
 }
 
 
@@ -458,7 +518,7 @@ body#cart {
 	margin-right: 5px;
 }
 .shoppingmain {
-	background: url("../Content/Images/receipt_top1.jpg") no-repeat scroll center top transparent;
+	background: url("..//d1kg9stb0ddjcv.cloudfront.net/images/receipt_top1.jpg") no-repeat scroll center top transparent;
 	color: #595959;
 	padding: 35px 33px 27px 38px;
 	position: relative;
@@ -509,7 +569,7 @@ span.receipt_email {
 	color:#ee9801;
 }
 .receipt_divider {
-	background: url(../Content/Images/receipt_line.jpg) no-repeat top center;
+	background: url(..//d1kg9stb0ddjcv.cloudfront.net/images/receipt_line.jpg) no-repeat top center;
 	width: 834px;
 	height: 30px;
 	position:relative;
@@ -868,7 +928,7 @@ div.rowheader .receipt_row1 {
 
 .arrow_down_hdr {
     padding-left: 26px;
-    background: url(/content/images/arrow_down.png) no-repeat 7px 13px;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/arrow_down.png) no-repeat 7px 13px;
 }
 
 .cart_left {
@@ -1473,7 +1533,7 @@ div.rowheader .receipt_row1 {
   padding:  3px;
 }
 .ask_arrow {
-  background: url("/content/images/upsell_arrow.png") no-repeat;
+  background: url("//d1kg9stb0ddjcv.cloudfront.net/images/upsell_arrow.png") no-repeat;
   height: 78px;
   position: absolute;
   right: -40px;

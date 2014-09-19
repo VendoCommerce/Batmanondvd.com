@@ -268,8 +268,8 @@
                             <h4>Payment Information</h4>
 
                             <div class="form_line clearfix" style="padding-bottom: 20px;">
-                                <img src="/content/images/ssl.png" alt="SSL Secured Online Ordering" style="margin-right: 20px;" />
-                                <img src="/content/images/creditcards.jpg" alt="We accept Visa, MasterCard, Discover and American Express" />
+                                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/ssl.png" alt="SSL Secured Online Ordering" style="margin-right: 20px;" />
+                                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/creditcards.jpg" alt="We accept Visa, MasterCard, Discover and American Express" />
                             </div>
 
                             <div class="form_line clearfix" runat="server" visible="true">
@@ -308,7 +308,7 @@
                                 </label>
 
                                 <asp:TextBox ID="txtCvv" runat="server" CssClass="text-2" MaxLength="4"></asp:TextBox>
-                                <a class="cvv f12" href="/content/images/cvv.png" style="color: #00a9d1; display: inline-block; margin: 6px 0 0 10px;">What's this?</a>
+                                <a class="cvv f12" href="//d1kg9stb0ddjcv.cloudfront.net/images/cvv.png" style="color: #00a9d1; display: inline-block; margin: 6px 0 0 10px;">What's this?</a>
                             </div>
                             <div class="form_line clearfix">
                                 <div class="error-1">
@@ -335,11 +335,11 @@
                             </div>
 
                             <div class="form_line_btn">
-                                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/btn_completeorder.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
+                                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/btn_completeorder.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
                             </div>
                             <div class="form_line_guarantee" style="display: none;"><a href="#guarantee" class="guarantee">90-Day Money-Back Guarantee!</a></div>
                             <div class="form_line_guarantee clearfix" style="display: none;">
-                                <img src="/Content/Images/a3/formcerts.png" />
+                                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/a3/formcerts.png" />
                             </div>
                         </div>
                     </td>
