@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
 <meta charset="utf-8">    
-<title></title>
+<title>BATMAN</title>
 <meta name="description" content=""/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/Scripts/fancybox/jquery.fancybox.css">
@@ -17,7 +17,7 @@
 <script src="/Scripts/NoBack.js"></script>
 <link href="../styles/global.css" rel="stylesheet" type="text/css" />
     </head>
-<body>
+<body id="upsells">
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
@@ -29,6 +29,7 @@
     </asp:Panel>
 
     <div runat="server" id="mainContainer">
+        <!--#include file="header_upsell.html"-->
     </div>
     <asp:Button ID="btnYes" runat="server" Text="Button" OnClick="btnYes_OnClick" Visible="false" />
     <asp:Button ID="btnNo" runat="server" Text="Button" OnClick="btnNo_OnClick" Visible="false" />

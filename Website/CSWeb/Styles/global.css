@@ -108,12 +108,17 @@ body {
 	font-size: 14px;
     line-height: 1.3;
 }
-
-p {padding-bottom: 20px;}
-
 body#cart {
 	background-image: none;
 }
+body#upsells {
+	background-image: none;
+    background-color: #333;
+    padding-top: 22px;
+}
+
+p {padding-bottom: 20px;}
+
 
 .header {
     width: 973px;
@@ -1464,17 +1469,45 @@ div.rowheader .receipt_row1 {
 
 
 /* upsells */
+.header_upsell {
+    margin: 0 auto;
+    width: 880px;
+    height: 105px;
+    background: #fff url(//d1kg9stb0ddjcv.cloudfront.net/images/bg.png) repeat center 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.logo_upsell {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 20;
+}
+#upsells #mainContainer {
+    width: 880px;
+    margin: 0 auto 30px auto;
+}
 .page_upsell {
   background: none repeat scroll 0 0 #FFFFFF;
-  padding: 20px 0 30px 70px;
-  border-radius: 14px; 
-  -webkit-border-radius: 14px;
+  padding: 48px 0 30px 30px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
-.page_upsell h2 {
-	color: #4e4e4e;
-	padding-bottom: 20px;
-	font-size: 40px;
-	font-family: 'helv_light', sans-serif;	
+#upsells .page_upsell h2 {
+	color: #000;
+	padding-bottom: 6px;
+	font-size: 36px;
+	font-family: 'Open Sans Condensed', sans-serif;	
+    font-weight: 700;
+    line-height: 36px;
+}
+
+#upsells .page_upsell h3 {
+	color: #000;
+	padding-bottom: 14px;
+	font-size: 18px;
+	font-family: 'Open Sans Condensed', sans-serif;	
+    line-height: 21px;
 }
 
 .page_upsell p {
@@ -1483,22 +1516,48 @@ div.rowheader .receipt_row1 {
 	font-size: 14px;	
 }
 
-.ask {
-  color: #454746;
-  display: inline-block;
-  font-size: 22px;
+.page_upsell ul {
+    margin-bottom: 20px; 
+}
+.page_upsell ul li {
+    margin-left: 10px; 
+    padding-bottom: 6px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.page_upsell ul li:before {
+    content: '\2022';
+    float: left; 
+    margin-left: -10px;
+}
+
+
+.page_upsell ul li ul {
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+}
+.page_upsell ul li ul li {
+    margin-left: 18px; 
+    padding-bottom: 5px;
+    font-size: 12px;
+    line-height: 14px;
+}
+.page_upsell ul li ul li:before {
+    content: '\002D';
+    float: left; 
+    margin-left: -10px;
+}
+
+
+.page_upsell p.ask {
+  color: #000;
+  font-size: 16px;
   font-weight: bold;
-  line-height: normal;
-  margin-right: 50px;
-  padding-top: 40px;
-  text-align:right;
+  line-height: 20px;
+  padding-bottom: 18px;
 }
 .btns {
   display: block;
-  padding-right: 30px;
-  padding-top: 20px;
-  position: relative;
-  text-align: right;
 }
 .btns a {
 	display: inline-block;
@@ -1533,10 +1592,7 @@ div.rowheader .receipt_row1 {
   padding:  3px;
 }
 .ask_arrow {
-  background: url("//d1kg9stb0ddjcv.cloudfront.net/images/upsell_arrow.png") no-repeat;
-  height: 78px;
-  position: absolute;
-  right: -40px;
-  width: 69px;
+  position: relative;
   top:  -4px;
+  left: 8px;
 }
