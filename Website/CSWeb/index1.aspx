@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" Inherits="CSWeb.Root.Store.index" EnableSessionState="True" CodeBehind="~/index1.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="true" Inherits="CSWeb.Root.Store.index1" EnableSessionState="True" CodeBehind="~/index1.aspx.cs" %>
 
 
 <%@ Register src="UserControls/ShippingForm.ascx" tagname="ShippingForm" tagprefix="uc1" %>

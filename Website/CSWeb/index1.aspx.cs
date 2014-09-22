@@ -9,7 +9,7 @@ using CSBusiness.Web;
 
 namespace CSWeb.Root.Store
 {
-    public partial class index : CSBasePage
+    public partial class index1 : CSBasePage
     {
         protected override void Page_Load(object sender, EventArgs e)
         {

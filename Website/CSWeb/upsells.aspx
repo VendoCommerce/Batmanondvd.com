@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="upsells.aspx.cs" Inherits="CSWeb.index" EnableSessionState="True" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="upsells.aspx.cs" Inherits="CSWeb.upsells" EnableSessionState="True" %>
 
 <!doctype html>
 <html>
