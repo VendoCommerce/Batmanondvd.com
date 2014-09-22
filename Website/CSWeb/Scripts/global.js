@@ -18,6 +18,13 @@ $(document).ready(function () {
 $(window).scrollTop(0);
 	
 	
+$('.episodebox').hide();
+$('#season1').show();
+$('#selectField').change(function () {
+    $('.episodebox').hide();
+    $('#' + $(this).val()).show();
+});
+
 
 	
 //faq toggle stuff 

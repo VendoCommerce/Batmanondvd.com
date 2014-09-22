@@ -293,13 +293,7 @@ p {padding-bottom: 20px;}
     margin-right: 9px;
 }
 
-.bottomcta {
-	width: 950px;
-}
-.bottomcta img {
-	display: block;
-	margin: 0 auto;	
-}
+
 
 
 /* Choose Product */
@@ -327,6 +321,14 @@ p {padding-bottom: 20px;}
     margin-left: -10px;
 }
 
+.container h2 {
+    font-size: 46px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    padding: 0 0 14px 0;
+    line-height: 1em;
+
+}
 
 #cart .chooseprod h2 {
     font-size: 18px;
@@ -343,6 +345,91 @@ p {padding-bottom: 20px;}
 .choose_content {
     padding: 0 30px 20px 40px;
 }
+
+/* Episode Guide */
+.episode_top {
+    width: 100%;
+    min-height: 516px;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/episode_cta.jpg) no-repeat 0 0;
+    padding: 17px 10px 0 590px;
+}
+.episode_top ul {
+    padding-bottom: 6px;
+}
+.episode_top ul li {
+    font-size: 24px;
+    font-family: 'Open Sans Condensed', arial, sans-serif;
+    margin-left: 13px;
+    line-height: 1em;
+    padding-bottom: 6px;
+}
+
+.episode_top ul li:before {
+    content: '\2022';
+    float: left; 
+    margin-left: -13px;
+    color: #74af54;
+}
+
+.bg_twack {background: url(//d1kg9stb0ddjcv.cloudfront.net/images/bg_thwack.jpg) no-repeat 115px 275px;}
+.bg_powie {background: url(//d1kg9stb0ddjcv.cloudfront.net/images/bg_powie.jpg) no-repeat 115px 270px;}
+
+.select-1 {
+    padding: 4px;
+    border: #cecece solid 1px;
+    border-radius: 7px;
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+
+.season_a {
+    float: left;
+    width: 480px;
+    padding-bottom: 10px;
+}
+.season_b {
+    float: left;
+    width: 479px;
+    padding-bottom: 10px;
+}
+.season_txt {
+    padding: 34px 14px 18px 18px;
+}
+
+.episode_details {
+    
+}
+.episode_details li {
+    margin-left: 24px;
+    padding-bottom: 22px;
+    counter-increment: item; /*increments list items*/
+}
+
+.episode_details li::before {
+    float: left; 
+    margin-left: -24px;
+    content: counter(item) ' \2013'; /* this outputs the number plus the dash */
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+
+.episode_title {
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+.episode_date {
+    font-size: 12px;
+}
+
+.episode_extra {
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/bg_lastdisc.png) repeat 0 0;
+}
+
+
+
 
 
 /* testimonial video stuff */

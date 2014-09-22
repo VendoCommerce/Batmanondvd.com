@@ -388,6 +388,7 @@
     <Content Include="header_cart.html" />
     <Content Include="header.html" />
     <Content Include="choose.aspx" />
+    <Content Include="episodes.aspx" />
     <Content Include="upsells.aspx" />
     <Content Include="index.aspx" />
     <Content Include="index1.aspx" />
@@ -398,6 +399,7 @@
     <None Include="Admin\css\fonts\fontawesome\FontAwesome.otf" />
     <None Include="Admin\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.otf" />
     <None Include="Admin\css\fonts\glyphicons.pro\glyphicons-regular.otf" />
+    <None Include="Properties\PublishProfiles\jhnjn.pubxml" />
     <None Include="Service References\HitLinks\CSWeb.HitLinks.Data.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1169,6 +1171,13 @@
     </Compile>
     <Compile Include="choose.aspx.designer.cs">
       <DependentUpon>choose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="episodes.aspx.cs">
+      <DependentUpon>episodes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="episodes.aspx.designer.cs">
+      <DependentUpon>episodes.aspx</DependentUpon>
     </Compile>
     <Compile Include="upsells.aspx.cs">
       <DependentUpon>upsells.aspx</DependentUpon>
