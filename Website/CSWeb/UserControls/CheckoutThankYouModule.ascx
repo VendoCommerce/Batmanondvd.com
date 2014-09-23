@@ -52,9 +52,7 @@ function Clickheretoprint()
             </tr>
               <asp:DataList runat="server" ID="dlordersList" RepeatLayout="Flow" RepeatDirection="Horizontal">
                     <ItemTemplate>
-                        <tr> <td valign="top" style="text-align: right; padding-right: 5px;">
-                                <img src="<%# DataBinder.Eval(Container.DataItem, "ImagePath")%>" />
-                            </td>
+                        <tr>
                              <td valign="top" style="font-size: 12px; line-height: 16px;">
                             
 
