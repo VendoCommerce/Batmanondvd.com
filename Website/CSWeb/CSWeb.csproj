@@ -388,7 +388,6 @@
     <Content Include="header_cart.html" />
     <Content Include="header.html" />
     <Content Include="choose.aspx" />
-    <Content Include="episodes.aspx" />
     <Content Include="upsells.aspx" />
     <Content Include="index.aspx" />
     <Content Include="index1.aspx" />
@@ -1171,13 +1170,6 @@
     </Compile>
     <Compile Include="choose.aspx.designer.cs">
       <DependentUpon>choose.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="episodes.aspx.cs">
-      <DependentUpon>episodes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="episodes.aspx.designer.cs">
-      <DependentUpon>episodes.aspx</DependentUpon>
     </Compile>
     <Compile Include="upsells.aspx.cs">
       <DependentUpon>upsells.aspx</DependentUpon>
