@@ -10,7 +10,7 @@
 namespace CSWeb {
     
     
-    public partial class index {
+    public partial class episodes {
         
         /// <summary>
         /// form1 control.

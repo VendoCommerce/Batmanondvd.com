@@ -16,14 +16,15 @@
 <link href="../styles/global.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <form id="form1" runat="server">
-    <!--#include file="header.html"-->
-        <div class="container">
+<form id="form1" runat="server">
+<!--#include file="popups.html"-->
+<!--#include file="header.html"-->
+<div class="container">
     <a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/index.jpg" alt="" class="block" /></a>
-    </div>
+</div>
 
 
-        <!--#include file="footer.html"-->
-    </form>
+<!--#include file="footer.html"-->
+</form>
 </body>
 </html>

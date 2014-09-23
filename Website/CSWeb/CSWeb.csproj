@@ -298,6 +298,7 @@
     <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="CardDecline.aspx" />
     <Content Include="Cart.aspx" />
+    <Content Include="cast.aspx" />
     <Content Include="CheckoutExpired.aspx" />
     <Content Include="CheckoutSessionExpired.aspx" />
     <Content Include="Contact.aspx" />
@@ -381,9 +382,12 @@
     <Content Include="Content\Images\nothanks_btn.png" />
     <Content Include="Content\Images\ssl.png" />
     <Content Include="Content\Images\yes_btn.png" />
+    <Content Include="episodes.aspx" />
     <Content Include="footer_upsell.html" />
     <Content Include="GetTotals.aspx" />
     <Content Include="footer.html" />
+    <Content Include="bottomcta.html" />
+    <Content Include="popups.html" />
     <Content Include="header_upsell.html" />
     <Content Include="header_cart.html" />
     <Content Include="header.html" />
@@ -1170,6 +1174,13 @@
     </Compile>
     <Compile Include="choose.aspx.designer.cs">
       <DependentUpon>choose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="episodes.aspx.cs">
+      <DependentUpon>episodes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="episodes.aspx.designer.cs">
+      <DependentUpon>episodes.aspx</DependentUpon>
     </Compile>
     <Compile Include="upsells.aspx.cs">
       <DependentUpon>upsells.aspx</DependentUpon>

@@ -17,6 +17,7 @@
 </head>
 <body id="cart">
     <form id="form1" runat="server">
+    <!--#include file="popups.html"-->
     <!--#include file="header_cart.html"-->
         <div class="container_cart">
             <h2>Lorem Ipsum Dolor Sit Amet!</h2>
