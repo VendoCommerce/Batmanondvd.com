@@ -29,7 +29,7 @@ namespace CSWeb.Root.UserControls
 protected Label lblPurchaseName, lblPromotionPrice;
         protected System.Web.UI.WebControls.Panel pnlRushLabel, pnlRush, pnlPromotionalAmount, pnlPromotionLabel;
         protected HyperLink hlPrintLink;
-        int orderId = 0;
+       public   int orderId = 0;
         
         private ClientCartContext CartContext
         {

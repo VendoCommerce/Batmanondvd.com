@@ -42,7 +42,7 @@ namespace CSWeb.Root.UserControls
             SetHomeAndSubPagesPnl();
             SetCartPagePnl();
             SetAllPagesPnl();
-            SetReceiptPagePnl();
+            //////SetReceiptPagePnl();
         }
         private void WriteGAPixel()
         {
@@ -147,37 +147,37 @@ namespace CSWeb.Root.UserControls
 
         }
 
-        private void SetReceiptPagePnl()
-        {
-            if (Request.RawUrl.ToLower().Contains("checkoutthankyou") || Request.RawUrl.ToLower().Contains("receipt"))
-            {
-                SetCurrentOrder();
-                WriteGAPixel();
-                MDGConfirmPixel();
-                string[] testCreditCards;
+        ////////private void SetReceiptPagePnl()
+        ////////{
+        ////////    if (Request.RawUrl.ToLower().Contains("checkoutthankyou") || Request.RawUrl.ToLower().Contains("receipt"))
+        ////////    {
+        ////////        SetCurrentOrder();
+        ////////        WriteGAPixel();
+        ////////        MDGConfirmPixel();
+        ////////        string[] testCreditCards;
 
-                testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries); ;
+        ////////        testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries); ;
 
-                foreach (string word in testCreditCards)
-                {
-                    if (CurrentOrder.CreditInfo.CreditCardNumber.Equals(word))
-                    {
-                        pnlReceiptPage.Visible = false;
-                    }
-                    else
-                    {
-                        pnlReceiptPage.Visible = true;
-                    }
-                }
-                SetConversionListrakPixel();
-                SetTotalsForAdwardsAndBing();
-                //reset entire Context object
-                //this.CartContext.EmptyData();
-                //CartContext = null;
+        ////////        foreach (string word in testCreditCards)
+        ////////        {
+        ////////            if (CurrentOrder.CreditInfo.CreditCardNumber.Equals(word))
+        ////////            {
+        ////////                pnlReceiptPage.Visible = false;
+        ////////            }
+        ////////            else
+        ////////            {
+        ////////                pnlReceiptPage.Visible = true;
+        ////////            }
+        ////////        }
+        ////////        SetConversionListrakPixel();
+        ////////        SetTotalsForAdwardsAndBing();
+        ////////        //reset entire Context object
+        ////////        //this.CartContext.EmptyData();
+        ////////        //CartContext = null;
 
-            }
+        ////////    }
 
-        }
+        ////////}
 
         private void SetConversionListrakPixel()
         {

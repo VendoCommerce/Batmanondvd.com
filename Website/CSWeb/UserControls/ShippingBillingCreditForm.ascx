@@ -76,10 +76,6 @@
 
                                 </div>
 
-                                <div class="form_line clearfix" style="padding-left: 122px;">
-                                    <asp:TextBox ID="txtShippingAddress2" runat="server" MaxLength="30" CssClass="text-1" Visible="true"></asp:TextBox>
-                                </div>
-
                                 <div class="form_line clearfix">
                                     <div class="error-1">
                                         <asp:RequiredFieldValidator ID="rfvShippingCity" runat="server" Display="Dynamic"
