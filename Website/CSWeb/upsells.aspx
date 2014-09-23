@@ -117,6 +117,41 @@
             <div class="clear"></div>
         </div>
 
+
+        
+
+
+
+
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <!-- UPSELL - superman -->
+        <div class="page_upsell" style="background: #fff url(//d1kg9stb0ddjcv.cloudfront.net/images/upsell_superman.jpg) no-repeat 456px 115px; padding-bottom: 16px;">
+
+            <h2 class="pad20">It's a bird! It's a plane! No, it's the <br />
+                first six seasons of the legendary <br />
+                Adventures of Superman!
+            </h2>
+
+            <p class="f16 lh22">Faster than a speeding bullet! More powerful than <br />
+                a locomotive! Able to leap tall buildings at a single <br />
+                bound! Don't miss out on this Classic Adventures of <br />
+                Superman Special! Your Superman DVD set will <br />
+                include 104 episodes on 20 DVDs for only #49.95!
+            </p>
+
+            <p class="ask">Would you like to take advantage of this special offer?</p>
+
+
+            <div class="btns">
+                <a href="javascript:void(0);" bind="no">
+                    <img width="86" height="60" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_no.png" /></a><a href="javascript:void(0);" bind="yes"><img width="262" height="60" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_yes.png" /></a><img width="72" height="63" src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_upsell.png" class="ask_arrow" />
+            </div>
+            <p class="f12 pad0" style="padding: 30px 50px 0 0; line-height: 14px;">ADVENTURES OF SUPERMAN &copy; DC Comics. All Rights Reserved. SUPERMAN and all related characters and elements are trademarks of and &copy; DC Comics.</p>
+
+
+            <div class="clear"></div>
+        </div>
+
         
         
 

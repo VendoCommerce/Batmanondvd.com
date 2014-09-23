@@ -520,6 +520,30 @@ p {padding-bottom: 20px;}
 }
 
 
+
+.faq {
+    padding: 16px 35px 30px 68px;
+}
+.faq_qs {
+    margin-bottom: 30px;
+}
+.faq_qs li {
+    line-height: 19px;
+    padding-bottom: 2px;
+}
+.faq_qs li a {
+    color: #000;
+}
+
+.faq dt {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+.faq dd {
+    padding-bottom: 20px;
+}
+
 /* FAQ COLLAPSE/EXPAND STYLES */
 
 .nowrapper .fancybox-skin {
@@ -607,6 +631,77 @@ p {padding-bottom: 20px;}
   padding-right: 0;
   text-indent: -32px;
 }
+
+/* Clips page */
+.clips {
+    padding-top: 28px;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/bg_thwack_pow.png) no-repeat 12px 0;
+    top: -20px;
+}
+.videowrap {
+    margin-left: 218px;
+    padding: 39px 0 0 44px;
+    min-height: 403px;
+}
+.tvpiece_1 {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 520px;
+    height: 48px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_1.png) no-repeat 0 0;
+}
+.tvpiece_2 {
+    display: block;
+    position: absolute;
+    top: 48px;
+    left: 0px;
+    width: 54px;
+    height: 230px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_2.png) no-repeat 0 0;
+}
+.tvpiece_3 {
+    display: block;
+    position: absolute;
+    top: 48px;
+    left: 364px;
+    width: 156px;
+    height: 230px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_3.png) no-repeat 0 0;
+}
+.tvpiece_4 {
+    display: block;
+    position: absolute;
+    top: 278px;
+    left: 0px;
+    width: 520px;
+    height: 125px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_4.png) no-repeat 0 0;
+}
+
+.slideshow div {
+    margin-right: 14px;
+}
+
+#clipprev {
+    position: absolute;
+    top: 14px;
+    left: -45px;;
+}
+#clipnext {
+    position: absolute;
+    top: 14px;
+    left: 832px;
+}
+
+#clipprev.disabled {opacity: 0.5;}
+#clipnext.disabled {opacity: 0.5;}
+
 
 /* popups */
 .close_popup {

@@ -1,0 +1,116 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CSWeb.index" EnableSessionState="True" %>
+
+<!doctype html>
+<html>
+<head runat="server">
+<meta charset="utf-8">    
+<title>BATMAN</title>
+<meta name="description" content=""/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/Scripts/fancybox/jquery.fancybox.css">
+<script src="/Scripts/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="/scripts/jwplayer/jwplayer.js"></script>
+<script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
+<script src="/Scripts/jquery.cycle2.min.js"></script>
+<script src="/Scripts/jquery.cycle2.carousel.min.js"></script>
+<script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
+<script src="/Scripts/global.js"></script>
+<link href="../styles/global.css" rel="stylesheet" type="text/css" />
+    <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+</head>
+<body>
+<form id="form1" runat="server">
+<!--#include file="popups.html"-->
+<!--#include file="header.html"-->
+
+<div class="container">
+    <div class="clearfix">
+        <div class="content_logo"><a href="#"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
+        <div class="content_hdr">
+            <h2 class="f44">Your Favorite Caped Crusaders are Back and Better than Ever!</h2>
+            <h3 style="padding-right: 100px;">Watch Batman and his Boy Wonder engage in hilarious hijinks as they protect the streets of Gotham from abominable archenemies wearing over-the-top costumes that leave us laughing. It’s simply feel good fun!</h3>
+        </div>
+    </div>
+    
+    <div class="clips clearfix">
+        <div class="videowrap">
+            <div class="tvpiece_1"></div>
+            <div class="tvpiece_2"></div>
+            <div class="tvpiece_3"></div>
+            <div class="tvpiece_4"></div>
+            
+            <div id="test1">
+                <div id="videotest1"></div>
+                <script type='text/javascript'>
+                    jwplayer('videotest1').setup({
+                        file: 'https://d2vu5pq0idcus6.cloudfront.net/video/cta.mp4',
+                        autostart: false,
+                        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_1.jpg',
+                        controls: true,
+                        width: 332, height: 250,
+                        stretching: 'exactfit',
+                        skin: '/scripts/jwplayer/bekle.xml'
+
+                    });
+                </script>
+            </div>
+
+            <div id="test2" style="display: none">
+                <div id="videotest2"></div>
+            </div>
+            <div id="test3" style="display: none">
+                <div id="videotest"></div>
+            </div>
+            <div id="test" style="display: none">
+                <div id="videotest3"></div>
+            </div>
+            <div id="test4" style="display: none">
+                <div id="videotest4"></div>
+            </div>
+            <div id="test5" style="display: none">
+                <div id="videotest5"></div>
+            </div>
+            <div id="test6" style="display: none">
+                <div id="videotest6"></div>
+            </div>
+            <div id="test7" style="display: none">
+                <div id="videotest7"></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 816px; margin-left: 71px; top: -20px;">
+        <div class="slideshow"
+            data-cycle-fx="carousel"
+            data-cycle-timeout="0"
+            data-cycle-slides="> div"
+            data-cycle-carousel-visible="6"
+            data-allow-wrap=false
+            data-cycle-next="#clipnext"
+            data-cycle-prev="#clipprev">
+            
+            <div><a href="#" class="test1"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_1.jpg" /></a></div>
+            <div><a href="#" class="test2"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_2.jpg" /></a></div>
+            <div><a href="#" class="test3"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_3.jpg" /></a></div>
+            <div><a href="#" class="test4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_4.jpg" /></a></div>
+            <div><a href="#" class="test5"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_5.jpg" /></a></div>
+            <div><a href="#" class="test6"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_6.jpg" /></a></div>
+            <div><a href="#" class="test7"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_1.jpg" /></a></div>
+
+        </div>
+
+
+        <a href="#" id="clipprev">
+            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_slider_prev.png" alt="Previous" class="block" /></a>
+        <a href="#" id="clipnext">
+            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_slider_next.png" alt="Next" class="block" /></a>
+    </div>
+
+    <!--#include file="bottomcta.html"-->
+</div>
+
+
+<!--#include file="footer.html"-->
+</form>
+</body>
+</html>

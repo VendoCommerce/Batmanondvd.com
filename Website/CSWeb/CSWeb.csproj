@@ -298,6 +298,9 @@
     <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="CardDecline.aspx" />
     <Content Include="Cart.aspx" />
+    <Content Include="returns.aspx" />
+    <Content Include="clips.aspx" />
+    <Content Include="faq.aspx" />
     <Content Include="cast.aspx" />
     <Content Include="CheckoutExpired.aspx" />
     <Content Include="CheckoutSessionExpired.aspx" />
@@ -387,11 +390,14 @@
     <Content Include="GetTotals.aspx" />
     <Content Include="footer.html" />
     <Content Include="bottomcta.html" />
+    <Content Include="Scripts\jquery.cycle2.carousel.min.js" />
+    <Content Include="Scripts\jquery.cycle2.min.js" />
     <Content Include="popups.html" />
     <Content Include="header_upsell.html" />
     <Content Include="header_cart.html" />
     <Content Include="header.html" />
     <Content Include="choose.aspx" />
+    <Content Include="Scripts\jquery.cycle2.swipe.min.js" />
     <Content Include="upsells.aspx" />
     <Content Include="index.aspx" />
     <Content Include="index1.aspx" />
