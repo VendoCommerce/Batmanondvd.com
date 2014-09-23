@@ -78,6 +78,7 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="GroupRadioButton.cs" />
     <Compile Include="HttpPost.cs" />
+    <Compile Include="KeyManager.cs" />
     <Compile Include="Tracking\VisitorsData.cs" />
     <Compile Include="UrlHelper.cs" />
     <Compile Include="Logging\CSError.cs" />

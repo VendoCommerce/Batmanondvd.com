@@ -1466,13 +1466,13 @@ namespace CSCore.Utils
 
         public static string Encrypt(string strPlainText)
         {
-            string encryptionPrivateKey = ConfigHelper.ReadAppSetting("EncryptionPrivateKey", ""); 
+            string encryptionPrivateKey = KeyManager.GetEncryptionKey();
             TripleDESCryptoServiceProvider provider = new TripleDESCryptoServiceProvider();
             UnicodeEncoding encoding = new UnicodeEncoding();
             ASCIIEncoding encoding2 = new ASCIIEncoding();
             byte[] bytes = encoding.GetBytes(strPlainText);
             MemoryStream stream = new MemoryStream();
-            provider.Key = encoding2.GetBytes(encryptionPrivateKey.Substring(0, 0x10));
+            provider.Key = encoding2.GetBytes(encryptionPrivateKey.Substring(0, 16));
             provider.IV = encoding2.GetBytes(encryptionPrivateKey.Substring(8, 8));
             CryptoStream stream2 = new CryptoStream(stream, provider.CreateEncryptor(), CryptoStreamMode.Write);
             stream2.Write(bytes, 0, bytes.Length);
@@ -1482,14 +1482,14 @@ namespace CSCore.Utils
 
         public static string Decrypt(string strCipherText)
         {
-            string encryptionPrivateKey =  ConfigHelper.ReadAppSetting("EncryptionPrivateKey", "");
+            string encryptionPrivateKey = KeyManager.GetEncryptionKey();
             TripleDESCryptoServiceProvider provider = new TripleDESCryptoServiceProvider();
             UnicodeEncoding encoding = new UnicodeEncoding();
             ASCIIEncoding encoding2 = new ASCIIEncoding();
             byte[] buffer = Convert.FromBase64String(strCipherText);
             MemoryStream stream = new MemoryStream();
             MemoryStream stream2 = new MemoryStream(buffer);
-            provider.Key = encoding2.GetBytes(encryptionPrivateKey.Substring(0, 0x10));
+            provider.Key = encoding2.GetBytes(encryptionPrivateKey.Substring(0, 16));
             provider.IV = encoding2.GetBytes(encryptionPrivateKey.Substring(8, 8));
             CryptoStream stream3 = new CryptoStream(stream2, provider.CreateDecryptor(), CryptoStreamMode.Read);
             StreamWriter writer = new StreamWriter(stream);

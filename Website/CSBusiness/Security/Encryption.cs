@@ -25,14 +25,6 @@ namespace CSBusiness.Security
         /// <returns>New instantiation of decrypted object.</returns>
         public static object DecryptValues(object obj)
         {
-            //object retObj = null;
-            ////Encrypt data
-            //if ((bool)GetSpecificAttributePropertyValue(obj, typeof(IsEncryptedAttribute)))
-            //{
-            //    retObj = IterateMembers(obj, CSCore.Utils.CommonHelper.Decrypt);
-            //    SetSpecificAttributePropertyValue(obj, typeof(IsEncryptedAttribute), false);
-            //}
-            //return retObj;
             return IterateMembers(obj, CSCore.Utils.CommonHelper.Decrypt,false);
         }
 
@@ -49,9 +41,16 @@ namespace CSBusiness.Security
             return null;
         }
 
+        /// <summary>
+        /// This method will set the default encryption status property of an object to True or False to keep track of
+        /// the encryption status of an object. This will prevent an object from being encrypted/decrypted multiple times.
+        /// </summary>
+        /// <param name="obj">Object that was encrypted/decrypted.</param>
+        /// <param name="attr">The attribute that is set on encryptor status</param>
+        /// <param name="value">True/False</param>
         private static void SetSpecificAttributePropertyValue(object obj, Type attr, object value)
         {
-            //Set the default encrption status property
+            //Set the default encryption status property
             IEnumerable<PropertyInfo> props = obj.GetType().GetProperties().Where(
                   prop => Attribute.IsDefined(prop, typeof(IsEncryptedAttribute)));
             if (props.Count() > 0)

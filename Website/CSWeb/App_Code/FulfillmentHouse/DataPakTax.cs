@@ -140,9 +140,6 @@ namespace CSWeb.FulfillmentHouse
                     decimal taxAmount = 0;
                     if (decimal.TryParse(xnTaxAmount.InnerText, out taxAmount))
                     {
-                        //orderItem.Tax= taxAmount;
-                        //orderItem.FullPriceTax = taxAmount;
-                        //orderItem.Total +=taxAmount;
                         CSResolve.Resolve<IOrderService>().UpdateOrderTax(orderId, taxAmount);
 
                     }
