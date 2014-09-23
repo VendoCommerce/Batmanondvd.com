@@ -92,11 +92,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="bin\Debug\CSData.dll.config" />
     <None Include="CSCommerce.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>CSCommerce.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="obj\Debug\CSData.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +113,17 @@
       <DependentUpon>CSCommerce.dbml</DependentUpon>
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CSCore.dll" />
+    <Content Include="bin\Debug\CSCore.pdb" />
+    <Content Include="bin\Debug\CSData.dll" />
+    <Content Include="bin\Debug\CSData.pdb" />
+    <Content Include="bin\Debug\NLog.dll" />
+    <Content Include="obj\Debug\CSData.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\CSData.dll" />
+    <Content Include="obj\Debug\CSData.pdb" />
+    <Content Include="obj\Debug\TempPE\CSCommerce.designer.cs.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -115,6 +115,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="bin\Debug\CSPaymentProvider.dll.config" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\CSPaymentProvider.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -185,6 +189,26 @@
       <Project>{3BDF14DD-763F-4CB7-8C13-0AAD3C4932F1}</Project>
       <Name>CSCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CSCore.dll" />
+    <Content Include="bin\Debug\CSCore.pdb" />
+    <Content Include="bin\Debug\CSPaymentProvider.dll" />
+    <Content Include="bin\Debug\CSPaymentProvider.pdb" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\NLog.dll" />
+    <Content Include="bin\Debug\PayPalCoreSDK.dll" />
+    <Content Include="bin\Debug\PayPalMerchantSDK.dll" />
+    <Content Include="bin\Debug\PayPalMerchantSDK.xml" />
+    <Content Include="bin\Debug\USAePayAPI.dll" />
+    <Content Include="obj\Debug\CSPaymentProvider.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\CSPaymentProvider.dll" />
+    <Content Include="obj\Debug\CSPaymentProvider.pdb" />
+    <Content Include="obj\Debug\TempPE\Web References.net.paymentech.wsvar.Reference.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Deploy-Dev\" />
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -99,10 +99,28 @@
     <Compile Include="Triplet.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="obj\Debug\CSCore.Resource.resources" />
     <EmbeddedResource Include="Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CSCore.dll" />
+    <Content Include="bin\Debug\CSCore.pdb" />
+    <Content Include="bin\Debug\NLog.dll" />
+    <Content Include="bin\Debug\NLog.Extended.dll" />
+    <Content Include="obj\Debug\CSCore.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\CSCore.dll" />
+    <Content Include="obj\Debug\CSCore.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\CSCore.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
