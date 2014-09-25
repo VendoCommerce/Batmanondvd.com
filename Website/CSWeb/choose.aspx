@@ -20,12 +20,12 @@
     <!--#include file="popups.html"-->
     <!--#include file="header_cart.html"-->
         <div class="container_cart">
-            <h2>Lorem Ipsum Dolor Sit Amet!</h2>
-            <h3 class="pad20">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod</h3>
+            <h2>Holy Gadget Choices Batman!</h2>
+            <h3 class="pad20">Which Collection Is For You?</h3>
 
 
             <div class="chooseprod">
-                <h2>Classic Batman Collection on DVD</h2>
+                <h2>Classic Batman Collection</h2>
                 <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_1.jpg" alt="" class="block" style="margin-bottom: 12px;" />
                 <div class="choose_content">
                     <p class="text-center f16 pad6">Payment Type</p>
@@ -52,7 +52,7 @@
             
 
             <div class="chooseprod" style="margin: 0;">
-                <h2><span class="green">Complete</span> Classic Batman Collection on DVD</h2>
+                <h2><span class="green">Complete</span> Classic Batman Collection</h2>
                 <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_2.jpg" alt="" class="block" style="margin-bottom: 12px;" />
                 <div class="choose_content bg_greengradient">
                     <img src="//d1kg9stb0ddjcv.cloudfront.net/images/flag_bestvalue.png" alt="Best Value" style="position:absolute;

@@ -23,7 +23,7 @@
 <div class="container">
     <div class="episode_top">
         <h2>Finally! Batman and Robin on DVD!</h2>
-        <ul>
+        <ul class="top_promo_list" style="line-height: 1em;">
             <li>The Entire Collection Digitally Remastered</li>
             <li>Exclusive Episode Guide with <br />
                 Pop-Culture Insights

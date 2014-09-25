@@ -16,16 +16,16 @@
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
 <link href="../styles/global.css" rel="stylesheet" type="text/css" />
-    <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+<script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 </head>
-<body>
+<body id="clips">
 <form id="form1" runat="server">
 <!--#include file="popups.html"-->
 <!--#include file="header.html"-->
 
 <div class="container">
     <div class="clearfix">
-        <div class="content_logo"><a href="#"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
+        <div class="content_logo"><a href="index.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr">
             <h2 class="f44">Your Favorite Caped Crusaders are Back and Better than Ever!</h2>
             <h3 style="padding-right: 100px;">Watch Batman and his Boy Wonder engage in hilarious hijinks as they protect the streets of Gotham from abominable archenemies wearing over-the-top costumes that leave us laughing. It’s simply feel good fun!</h3>
@@ -38,12 +38,13 @@
             <div class="tvpiece_2"></div>
             <div class="tvpiece_3"></div>
             <div class="tvpiece_4"></div>
+            <div class="tvpiece_center"></div>
             
             <div id="test1">
                 <div id="videotest1"></div>
                 <script type='text/javascript'>
                     jwplayer('videotest1').setup({
-                        file: 'https://d2vu5pq0idcus6.cloudfront.net/video/cta.mp4',
+                        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/cta_tmp.mp4',
                         autostart: false,
                         image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_1.jpg',
                         controls: true,

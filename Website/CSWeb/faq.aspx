@@ -22,7 +22,7 @@
 
 <div class="container">
     <div class="clearfix">
-        <div class="content_logo"><a href="#"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
+        <div class="content_logo"><a href="index.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr">
             <h2>Frequently Asked Lorem Ipsum</h2>
             <h3 class="f28">Lorem ipsum dolor sit amet, in vero utinam sed, offendit adipiscing per id</h3>
