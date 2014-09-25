@@ -11,7 +11,7 @@ namespace CSCore.Utils
     {
         public static string GetEncryptionKey()
         {
-            string encryptionKeyPath =  ConfigHelper.ReadAppSetting("EncryptionKeyPath", "");
+            string encryptionKeyPath =@"C:\EncryptionKeys\KeyContainer.txt";//  ConfigHelper.ReadAppSetting("EncryptionKeyPath", "");
             return File.ReadAllLines(encryptionKeyPath)[1];
         }
     }
