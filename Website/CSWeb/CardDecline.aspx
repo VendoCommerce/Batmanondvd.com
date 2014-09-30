@@ -17,10 +17,14 @@
 <script src="/Scripts/global.js"></script>
 <link href="../styles/global.css" rel="stylesheet" type="text/css" />
     </head>
-<body>
+<body id="cart">
     <form id="form1" runat="server">
-
+<!--#include file="header_cart.html"-->
+<div class="container_cart">
         <uc1:Form id="ucCardDecline" runat="server" />
+</div>
+
+<!--#include file="footer.html"-->
  <uc:TrackingPixels ID="TrackingPixels" runat="server" />
     </form>
 </body>
