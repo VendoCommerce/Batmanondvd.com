@@ -295,7 +295,6 @@
     <Content Include="Admin\VersionReport.aspx" />
     <Content Include="Admin\VersionReport1.aspx" />
     <Content Include="AuthorizeOrder.aspx" />
-    <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="CardDecline.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="returns.aspx" />
@@ -1560,6 +1559,7 @@
     <Compile Include="App_Code\OrderHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\" />
     <Folder Include="Content\Video\" />
     <Folder Include="obj\" />
   </ItemGroup>

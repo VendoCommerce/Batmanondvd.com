@@ -109,8 +109,6 @@
   <ItemGroup>
     <Content Include="bin\Debug\CSCore.dll" />
     <Content Include="bin\Debug\CSCore.pdb" />
-    <Content Include="bin\Debug\NLog.dll" />
-    <Content Include="bin\Debug\NLog.Extended.dll" />
     <Content Include="obj\Debug\CSCore.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\CSCore.dll" />
     <Content Include="obj\Debug\CSCore.pdb" />
