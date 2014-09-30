@@ -190,18 +190,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\log4net.dll" />
-    <Content Include="bin\Debug\NLog.dll" />
-    <Content Include="bin\Debug\PayPalCoreSDK.dll" />
-    <Content Include="bin\Debug\PayPalMerchantSDK.dll" />
-    <Content Include="bin\Debug\PayPalMerchantSDK.xml" />
-    <Content Include="bin\Debug\USAePayAPI.dll" />
     <Content Include="obj\Debug\CSPaymentProvider.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\CSPaymentProvider.dll" />
     <Content Include="obj\Debug\CSPaymentProvider.pdb" />
     <Content Include="obj\Debug\TempPE\Web References.net.paymentech.wsvar.Reference.cs.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Debug\" />
     <Folder Include="bin\Deploy-Dev\" />
     <Folder Include="bin\Release\" />
   </ItemGroup>
