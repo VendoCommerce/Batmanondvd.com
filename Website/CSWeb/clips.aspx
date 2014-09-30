@@ -27,10 +27,39 @@
     <div class="clearfix">
         <div class="content_logo"><a href="index.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr">
-            <h2 class="f44">Your Favorite Caped Crusaders are Back and Better than Ever!</h2>
+            <h2 class="f44">Check Out Your Favorite Caped Crusaders <br />- Back and Better than Ever!</h2>
             <h3 style="padding-right: 100px;">Watch Batman and his Boy Wonder engage in hilarious hijinks as they protect the streets of Gotham from abominable archenemies wearing over-the-top costumes that leave us laughing. It’s simply feel good fun!</h3>
         </div>
     </div>
+
+
+    <div style="width: 816px; margin: 8px 0 30px 71px;">
+        <div class="slideshow"
+            data-cycle-fx="carousel"
+            data-cycle-timeout="0"
+            data-cycle-slides="> div"
+            data-cycle-carousel-visible="6"
+            data-allow-wrap=false
+            data-cycle-next="#clipnext"
+            data-cycle-prev="#clipprev">
+            
+            <div><a href="#" class="test1"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_1.jpg" /></a></div>
+            <div><a href="#" class="test2"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_2.jpg" /></a></div>
+            <div><a href="#" class="test3"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_3.jpg" /></a></div>
+            <div><a href="#" class="test4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_4.jpg" /></a></div>
+            <div><a href="#" class="test5"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_5.jpg" /></a></div>
+            <div><a href="#" class="test6"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_6.jpg" /></a></div>
+            <div><a href="#" class="test7"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_1.jpg" /></a></div>
+
+        </div>
+
+
+        <a href="#" id="clipprev">
+            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_slider_prev.png" alt="Previous" class="block" /></a>
+        <a href="#" id="clipnext">
+            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_slider_next.png" alt="Next" class="block" /></a>
+    </div>
+
     
     <div class="clips clearfix">
         <div class="videowrap">
@@ -80,32 +109,7 @@
         </div>
     </div>
 
-    <div style="width: 816px; margin-left: 71px; top: -20px;">
-        <div class="slideshow"
-            data-cycle-fx="carousel"
-            data-cycle-timeout="0"
-            data-cycle-slides="> div"
-            data-cycle-carousel-visible="6"
-            data-allow-wrap=false
-            data-cycle-next="#clipnext"
-            data-cycle-prev="#clipprev">
-            
-            <div><a href="#" class="test1"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_1.jpg" /></a></div>
-            <div><a href="#" class="test2"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_2.jpg" /></a></div>
-            <div><a href="#" class="test3"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_3.jpg" /></a></div>
-            <div><a href="#" class="test4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_4.jpg" /></a></div>
-            <div><a href="#" class="test5"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_5.jpg" /></a></div>
-            <div><a href="#" class="test6"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_6.jpg" /></a></div>
-            <div><a href="#" class="test7"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_1.jpg" /></a></div>
-
-        </div>
-
-
-        <a href="#" id="clipprev">
-            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_slider_prev.png" alt="Previous" class="block" /></a>
-        <a href="#" id="clipnext">
-            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_slider_next.png" alt="Next" class="block" /></a>
-    </div>
+    
 
     <!--#include file="bottomcta.html"-->
 </div>

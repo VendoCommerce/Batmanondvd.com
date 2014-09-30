@@ -22,23 +22,20 @@
 <!--#include file="header_upsell.html"-->
 
         <!-- UPSELL - complete collection - single pay -->
-        <div class="page_upsell" style="background: #fff url(//d1kg9stb0ddjcv.cloudfront.net/images/upsell_full_collection.jpg) no-repeat 469px 127px;">
-            <h2>Upgrade to the Full 120 Episode Collection!</h2>
-            <h3>Just one season of Batman will leave you needing more! Upgrade to the HD full collection today and receive <br />120 Episodes from all three seasons!</h3>
-            <ul>
-                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
-                <li>Bonus DVD containing 3 Hours Of ALL NEW Extras like:                    <ul>
-                        <li>Hanging with Batman – A true slice of life in the words of Adam West</li>
-                        <li>Holy Memorabilia Batman! – A journey into the most sought <br />        after collectibles</li>
-                        <li>Batmania Born! – Explore the art and design behind the fiction.</li>
+        <div class="page_upsell" style="background: #fff url(//d1kg9stb0ddjcv.cloudfront.net/images/upsell_full_collection.jpg) no-repeat 469px 148px;">
+            <h2 class="f28">Upgrade to the Full 120 Episode Collection in a Beautiful Collector’s Box!</h2>
+            <h3 class="f20">Just half of the episodes of Batman will leave you needing more! Upgrade to the full collection today and receive all <br />120 Episodes from all Three Seasons!  Get it on DVD or stunning high definition Blu-ray.</h3>
+            <ul>                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
+                <li>OVER 3 Hours Of ALL NEW Extras like:                    <ul>
+                        <li><strong>Hanging with Batman</strong> – A true slice of life in the words of Adam West</li>
+                        <li><strong>Holy Memorabilia Batman!</strong> – A journey into the most sought <br />        after collectibles through the eyes of 3 extraordinary collectors</li>
+                        <li><strong>Batmania Born!</strong> – Building the World of Batman - Explore the art and <br />design behind the fiction.</li>
+                        <li><strong>Bats of the Round Table</strong>  – A candid conversation with Adam West and <br />        his celebrity friends, chatting all things Bat ’66.</li>
+                        <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare <br />        treat for the fans as Adam discusses his script notes on bringing Batman to life  <br />        in the first and second episodes </li>
+                        <li><strong>Na Na Na Batman!</strong> Hollywood favorites stars and producers recount their <br />
+                            favorite Batman memories</li>
                     </ul></li>
-                <li>Na Na Na Batman! — Hollywood favorites stars recount their <br />favorite Batman memories</li>
-                <li>Highly Collectible Premiums: Hot Wheels® Replica Batmobile & <br />
-                    The Adam West Scrapbook 44 Vintage Trading Cards</li>
-                <li>Episode Guide</li>
-                <li>Adam West Naked DVD</li>
-                <li>The 1966 Batman Movie on DVD</li>
-                <li>Episode Script (first Joker episode) with personalized letter from Adam West!</li>
+                <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie   <br />  DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter <br />  from Adam West <strong>PLUS</strong> your own Classic Batman Collector’s Box</li>
             </ul>
 
             <p class="ask f14">Would you like to take advantage of this special offer?</p>
@@ -102,9 +99,18 @@
                 <h2 class="pad20">Don’t be a Joker, Share the<br />
                     Bat-Love and Save!</h2>
 
-                <p class="f16 lh20">Who wouldn’t want to enjoy the complete Batman & Robin collection now digitally remastered and perfectly pixelated! So do yourself a favor, Get Two!</p>
-                <p class="f16 lh20">Save 30%, get free shipping and become a Holiday Hero when you buy a second set today!</p>
-                <p class="f16 lh20">Now you and your loved ones can reminisce together over the hilarious hijinks, formidable foes and campy costumes that make Batman and Robin a venerable classic. Save 30% today!</p>
+                <p class="f16 lh20">Who wouldn’t want to enjoy the Classic Batman & Robin collection now digitally remastered and perfectly pixelated! So do yourself and a friend or a foe a favor, Get Two!</p>
+                <p class="f16 lh20">Save 30%, get FREE shipping and become a Holiday Hero when you buy a second set today!</p>
+                <p class="f16 lh20">Now you can share and reminisce together over the hilarious hijinks, formidable foes and campy costumes that make the 1960’s Batman series a venerable classic. Save 30% today!</p>
+
+                <p style="padding-bottom: 30px;">
+                    <span class="webfont1bold f18">Qty</span> &nbsp;
+                    <select id="secondset_qty" class="select_qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </p>
 
                 <p class="ask">Would you like to take advantage of this special offer?</p>
 
@@ -114,6 +120,45 @@
             </div>
 
             <div class="fleft" style="width: 369px; top: -35px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/upsell_additional.jpg" width="369" height="450" alt="" /></div>
+            <div class="clear"></div>
+        </div>
+
+
+
+
+
+
+
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <!-- UPSELL - additional complete -->
+        <div class="page_upsell">
+            
+            <div class="fleft" style="width: 450px; margin-right: 10px;">
+                <h2 class="pad20">Don’t be a Joker, Share the<br />
+                    Bat-Love and Save!</h2>
+
+                <p class="f16 lh20">Who wouldn’t want to enjoy the Complete Classic Batman & Robin collection now digitally remastered and perfectly pixelated! So do yourself and a friend or a foe a favor, Get Two!</p>
+                <p class="f16 lh20">Save 30%, get FREE shipping and become a Holiday Hero when you buy a second set today!</p>
+                <p class="f16 lh20">Now you can share and reminisce together over the hilarious hijinks, formidable foes and campy costumes that make the 1960’s Batman series a venerable classic. Save 30% today!</p>
+
+
+                <p style="padding-bottom: 30px;">
+                    <span class="webfont1bold f18">Qty</span> &nbsp;
+                    <select id="secondset_qty" class="select_qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </p>
+
+                <p class="ask">Would you like to take advantage of this special offer?</p>
+
+
+                <div class="btns"><a href="javascript:void(0);" bind="no">
+                    <img width="86" height="60" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_no.png" /></a><a href="javascript:void(0);" bind="yes"><img width="262" height="60" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_yes.png" /></a><img width="72" height="63" src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_upsell.png" class="ask_arrow" /></div>
+            </div>
+
+            <div class="fleft" style="width: 369px; padding: 45px 0 0 10px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/upsell_additional_complete.jpg" width="335" height="245" alt="" /></div>
             <div class="clear"></div>
         </div>
 

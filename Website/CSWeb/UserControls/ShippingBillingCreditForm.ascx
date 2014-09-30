@@ -19,7 +19,7 @@
 </asp:ScriptManager>
 
 
-<h2>Holy Today’s Special Offer, Batman!</h2>
+<h2>Today’s Special Offer, Batman!</h2>
 <h3 style="padding-bottom: 27px;">The Classic Batman TV Series is Finally Available For You To Own!</h3>
 
 <uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />

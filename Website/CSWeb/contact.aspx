@@ -29,8 +29,8 @@
     <div class="clearfix">
         <div class="content_logo"><a href="#"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr">
-            <h2 class="f50">Contact Us</h2>
-            <h3 class="f28">Lorem Ipsum</h3>
+            <h2 class="f50">To the Bat-Phone!</h2>
+            <h3 class="f28">Or send an email from your Bat-Computer.</h3>
         </div>
     </div>
 

@@ -26,7 +26,7 @@
         <div class="content_logo"><a href="index.aspx" style="position: absolute;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr" style="padding-top: 28px;">
             <h2 class="f50">Holy Classic Collection Batman!</h2>
-            <h3 class="f26">For the First Time Ever &mdash; Digitally Remastered Plus 3 Bonus DVDs!</h3>
+            <h3 class="f26">For the First Time Ever &mdash; Digitally Remastered <span class="webfont1bold">Plus 3 FREE Bonus DVDs!</span></h3>
         </div>
     </div>
     <div class="home1 ">
@@ -55,24 +55,24 @@
                 </div>
             </div>
             <a href="choose.aspx" style="position: absolute; top: -16px; left: 402px; z-index: 30;">
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/callout_fullseries.png" width="150" height="149" alt="Complete Series Available - Learn More" /></a>
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/callout_completeseries.png" width="153" height="152" alt="Complete Series Available - Learn More" /></a>
         </div>
         <div class="home1b">
             <h3 class="webfont1bold f24" style="line-height: 1.1em; padding-bottom: 9px;">Your 12 DVD Classic Collection Features Over 30 HOURS OF ENTERTAINMENT!</h3>
-            <ul class="top_promo_list">
-                <li>64 of your Favorite Original Broadcast Episodes Fully Remastered In HD Over 3 Hours of ALL NEW bonus footage and interviews</li>
-                <li>Adam West Naked: Watch as Adam Takes You Behind the Scenes of Your Favorite Episodes!</li>
-                <li>The Original 1966 Batman Movie Starring Adam West & Burt Ward</li>
+            <ul class="top_promo_list f20" style="padding-right: 30px;">
+                <li>64 of your Favorite Original Broadcast <br />Episodes Fully Remastered</li>
+                <li>Over 3 Hours of ALL NEW bonus content</li>
+                <li>Adam West Naked DVD: Watch as Adam Takes You Behind the Scenes of Your Favorite Episodes!</li>
+                <li>The Original 1966 Batman Movie on DVD <br />Starring Adam West & Burt Ward</li>
                 <li>Detailed Episode Guide</li>
-                <li>Your Own Show Script from the Episode 'The Joker is Wild'</li>
+                <li>Your Own Show Script from the Episode <span style="white-space: nowrap;">'The Joker is Wild'</span></li>
                 <li>Personal Letter from Adam West to You!</li>
             </ul>
         </div>
         <div class="clear"></div>
         <div class="home1c clearfix">
             <div class="fleft" style="width: 608px;">
-                <h3 class="f36 green webfont1bold caps pad0" style="line-height: 1em;">"Great Scott!" Don't Wait, Act Now!</h3>
-                <h3 class="f32  webfont1bold pad0" style="line-height: 1em; letter-spacing: -1px;">Only 5 Easy Payments of $19<sup>99</sup> <span style="display: inline-block; margin: 0 5px;">+</span> <span class="blue">FREE SHIPPING!</span></h3>
+                <h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/hdr_greatscott.png" alt="'Great Scott!' Don't Wait, Act Now! Only 5 Easy Payments of $19.99 + FREE S&H!" /></h3>
             </div>
             <div class="fleft" style="width: 320px; padding-top: 3px;">
                 <a href="choose.aspx">
@@ -81,14 +81,14 @@
         </div>
     </div>
     <div class="home2top">
-        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/burst_pow.png" alt="POW! 64 Episodes, 3 Bonus Hours + More!" style="position: absolute; top: 27px; left: 558px; z-index: 10;" />
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/burst_pow2.png" alt="POW! 64 Episodes, 3 Bonus Hours + More!" style="position: absolute; top: 9px; left: 542px; z-index: 10;" />
         <h2 class="f36 webfont1bold green pad0">The Caped Crusader and the Boy Wonder!</h2>
         <h3>Your Favorite Dynamic Duo is Back and Better Than Ever!</h3>
         <p class="f16 lh20" style="width: 565px;">TV's iconic partners, along with a legion of abominable archenemies can now be seen in a whole new POW-erful way. For the first time ever, the 1960’s mega-hit is available on DVD so you can relive all your favorite moments or share with a whole new generation!</p>
         <ul class="top_promo_list webfont1bold f20">
                 <li>Take Yourself Back to Simpler Times </li>
                 <li>Includes all your Favorite Villains and Celebrity Guest Stars</li>
-                <li>Exclusive Episode Guide Gives Pop-Culture Insights</li>
+                <li>Detailed Episode Guide Gives Noteworthy Insights</li>
                 <li>Perfect for the Holiday Gift Giving Season!</li>
             </ul>
     </div>

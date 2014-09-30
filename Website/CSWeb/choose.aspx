@@ -25,40 +25,53 @@
 
 
             <div class="chooseprod">
-                <h2>Classic Batman Collection</h2>
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_1.jpg" alt="" class="block" style="margin-bottom: 12px;" />
-                <div class="choose_content">
+                <div class="text-center">
+                    <h2 class="pad20">Classic Batman Collection</h2>
                     <p class="text-center f16 pad6">Payment Type</p>
-                    <p class="text-center pad6">
+                    <p class="text-center pad12">
                         <asp:DropDownList ID="ddlComplete" runat="server" class="prodselect">
                             <asp:ListItem Value="110">Classic Batman Collection on DVD (SP)</asp:ListItem>
                             <asp:ListItem Value="112">Classic Batman Collection on DVD (MP)</asp:ListItem>
                         </asp:DropDownList>
                     </p>
-                    <p class="text-center pad20 f10">plus $12<sup>99</sup> S&amp;H</p>
-                    <p>Awesomeness described</p>
-                    <ul>
-                        <li>Awesome things listed</li>
-                        <li>Awesome things listed</li>
-                    </ul>
+                    <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold blue">FREE SHIPPING & HANDLING!</span></p>
                     <p class="text-center pad12">
-                        <asp:LinkButton ID="lbComplete" runat="server" OnClick="lbComplete_Click"><img class="prod_continue" src="http://dz97amgy09dju.cloudfront.net/images/B3/continue_btn.png" /></asp:LinkButton>
+                        <asp:LinkButton ID="lbComplete" runat="server" OnClick="lbComplete_Click"><img class="prod_continue" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_continue.png" /></asp:LinkButton>
                     </p>
-                    <p class="text-center"><strong><a href="#guarantee" class="guarantee">Guarantee!</a></strong></p>
-                    <p class="text-center">
+                </div>
+                
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_1.png" alt="" class="block" style="margin-bottom: 10px;" />
+                <div class="choose_content">
+                    
+                    <p class="f16 lh22 pad0" style="height: 78px;">Your 12 DVD Classic Collection Features <br />
+                        Over 30 HOURS OF ENTERTAINMENT!</p>
+                    <p>INCLUDES:</p>
+                    <ul>
+                        <li>64 of your favorite original broadcast episodes fully remastered in HD </li>
+                        <li>Over 3 Hours of ALL NEW bonus materials</li>
+                        <li>Adam West Naked on DVD: Watch as Adam takes you   behind the scenes of your favorite epidodes!</li>
+                        <li>The Original 1966 Batman Movie DVD starring <br />  Adam West and Burt Ward</li>
+                        <li>Detailed Episode Guide</li>
+                        <li>Your Own Show Script from the Episode  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
+                        <li>Personal Letter from Adam West to you!</li>
+                    </ul>
+                    <%--<p class="text-center"><strong><a href="#guarantee" class="guarantee">Guarantee!</a></strong></p>--%>
+                    <p class="text-center" style="padding-top: 20px;">
                         <img src="//d1kg9stb0ddjcv.cloudfront.net/images/ssl.png" alt="SSL Secured Online Ordering" /></p>
                 </div>
             </div>
             
 
             <div class="chooseprod" style="margin: 0;">
-                <h2><span class="green">Complete</span> Classic Batman Collection</h2>
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_2.jpg" alt="" class="block" style="margin-bottom: 12px;" />
-                <div class="choose_content bg_greengradient">
-                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/flag_bestvalue.png" alt="Best Value" style="position:absolute;
-top: 24px; left: -17px;" />
+                <div class="text-center">
+                    <h2 class="pad20"><span class="green">Complete</span> Classic Batman Collection</h2>
+                    
                     <p class="text-center f16 pad6">Payment Type</p>
-                    <p class="text-center pad6">
+                    
+                    <div>
+                        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/flag_bestvalue.png" alt="Best Value" style="position:absolute;
+top: 0; left: -25px;" />
+                        <p class="text-center pad12">
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
                             <asp:ListItem Value="111">Complete Classic Batman Collection on DVD</asp:ListItem>
                             <asp:ListItem Value="113">Complete Classic Batman Collection on DVD (MP)</asp:ListItem>
@@ -66,18 +79,32 @@ top: 24px; left: -17px;" />
                             <asp:ListItem Value="115">Complete Classic Batman Collection on BD (MP)</asp:ListItem>
                         </asp:DropDownList>
                     </p>
-                    <p class="text-center pad20 f10">plus $12<sup>99</sup> S&amp;H</p>
-                    <p>Awesomeness described more</p>
-                    <ul>
-                        <li>Awesome things listed more</li>
-                        <li>Awesome things listed more</li>
-                    </ul>
+                    </div>
+                    <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold blue">FREE SHIPPING & HANDLING!</span></p>
                     <p class="text-center pad12">
-                        <asp:LinkButton ID="lbSimple" runat="server" OnClick="lbSimple_Click"><img class="prod_continue" src="http://dz97amgy09dju.cloudfront.net/images/B3/continue_btn.png" /></asp:LinkButton>
+                        <asp:LinkButton ID="lbSimple" runat="server" OnClick="lbSimple_Click"><img class="prod_continue" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_continue.png" /></asp:LinkButton>
                     </p>
-                    <p class="text-center"><strong><a href="#guarantee" class="guarantee">Guarantee!</a></strong></p>
-                    <p class="text-center">
-                        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/ssl.png" alt="SSL Secured Online Ordering" /></p>
+                </div>
+                
+                <div class="bg_greengradient">
+                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_2.png" alt="" class="block" style="margin-bottom: 10px;" />
+                    <div class="choose_content">
+                        <p class="f16 pad0" style="height: 78px;">Your Complete Collection Features Over 50 HOURS OF ENTERTAINMENT And comes in a Classic Collector’s Box for displaying your Collection!</p>
+                        <p>INCLUDES:</p>    
+                        <ul>
+                            <li>120 of your favorite original broadcast episodes fully remastered</li>
+                            <li>Over 3 Hours of ALL NEW bonus materials</li>
+                            <li>Adam West Naked on DVD: Watch as Adam takes you   behind the scenes of your favorite epidodes!</li>
+                            <li>The Original 1966 Batman Movie DVD starring <br />  Adam West and Burt Ward</li>
+                            <li>Detailed Episode Guide</li>
+                            <li>Your Own Show Script from the Episode  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
+                            <li>Personal Letter from Adam West to you!</li>
+                        </ul>
+                        <%--<p class="text-center"><strong><a href="#guarantee" class="guarantee">Guarantee!</a></strong></p>--%>
+                        <p class="text-center" style="padding-top: 20px;">
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/ssl.png" alt="SSL Secured Online Ordering" />
+                        </p>
+                    </div>
                 </div>
                 
             </div>

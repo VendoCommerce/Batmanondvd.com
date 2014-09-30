@@ -3,15 +3,17 @@
 <asp:LinkButton ID="refresh" runat="server" CausesValidation="false"></asp:LinkButton>
 <asp:Repeater runat="server" ID="rptShoppingCart" OnItemDataBound="rptShoppingCart_OnItemDataBound"
     OnItemCommand="rptShoppingCart_OnItemCommand">
-    <HeaderTemplate><div class="cart_table clearfix" style="margin-bottom: 0;">
-                 <div class="cart_image">&nbsp;
-                 </div>
-                  <div class="cart_text"><h4>Item</h4>
-                  </div>
-                        <div class="product_price"><h4>Price</h4>
-                        </div>
-                        </div>   <div class="horizontal_dots">
+    <HeaderTemplate>
+        <div class="cart_table clearfix" style="margin-bottom: 0;">
+            <div class="cart_image">&nbsp;</div>
+            <div class="cart_text">
+                <h4 class="pad0">Item</h4>
+            </div>
+            <div class="product_price" class="pad0" style="padding-left: 8px;">
+                <h4>Price</h4>
+            </div>
         </div>
+        <div class="horizontal_dots"></div>
     </HeaderTemplate>
     <ItemTemplate>
         <div class="cart_table clearfix">
@@ -39,7 +41,7 @@
         <div class="horizontal_dots">
         </div>
 
-        <div class="multipay_txt">*You will be charged today for your first of 5 monthly payments of $19.99. Shipping is FREE!</div>
+        <div class="multipay_txt">*You will be charged today for your first of 5 monthly payments of $19.99. Applicable taxes will be included in your first payment (this should not display if the consumer selects a 1-pay option). Shipping is FREE. If you are not satisfied with your purchase for any reason, simply return it within 60 days to receive a full refund. Restrictions may apply. Please refer to our Return Policy (link to Return Policy page)</div>
 
         <div class="cart_totals clearfix">
             <div class="cart_totals_left">
@@ -49,7 +51,7 @@
                 </div>
             <div class="cart_totals_right">
                 <asp:Literal runat="server" ID='lblSubtotal'></asp:Literal><br />
-                <asp:Literal runat="server" ID="lblShipping"></asp:Literal><br />
+                <div><asp:Literal runat="server" ID="lblShipping" Visible="false"></asp:Literal>$9.95<span class="crossout"></span></div>
                 <asp:Literal runat="server" ID="lblTax"></asp:Literal><br />
                 
                 <asp:Literal runat="server" ID="lblRushShipping" Visible="false"></asp:Literal>

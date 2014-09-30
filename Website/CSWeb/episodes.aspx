@@ -22,33 +22,17 @@
 
 <div class="container">
     <div class="episode_top">
-        <h2>Finally! Batman and Robin on DVD!</h2>
-        <ul class="top_promo_list" style="line-height: 1em;">
-            <li>The Entire Collection Digitally Remastered</li>
-            <li>Exclusive Episode Guide with <br />
-                Pop-Culture Insights
-            </li>
-            <li>Perfect for the Holiday Gift Giving Season</li>
-            <li>Bonus Footage.... Plus More!</li>
-        </ul>
-        <h3 class="webfont1bold f30 green caps" style="line-height: 1em;">Holy Heart Failure!</h3>
-        <p class="webfont1bold f28 pad6">Only 5 Payments of $19<sup>99</sup> <span class="webfont1 f14 normal">+ $12<sup>99</sup> S&amp;H!</span></p>
-        <p style="padding-bottom: 2px;"><a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_ordernow.png" alt="Order Now" /></a></p>
-        <p><a href="#included" class="included black f12">See What's Included</a></p>
+        <h2 class="f49 pad20" style="margin-left: 14px;">Same Bat-Time...<br />
+            <span class="block" style="padding-left: 15px;">...Same Bat-Channel!</span>
+        </h2>
+        <h3 class="f34 green caps webfont1bold">Batman: The Classic Collection</h3>
+        <select id="selectField" class="select-1" style="margin-left: 112px;">
+            <option value="season1">Season 1 - Episodes 1-34</option>
+            <option value="season2">Season 2 - Episodes 1-60</option>
+            <option value="season3">Season 3 - Episodes 1-26</option>
+        </select>
     </div>
-
-
-
-
-
-    <center>
-        <h2 class="green f34">BATMAN: The Complete Television Series</h2>
-    <select id="selectField" class="select-1">
-        <option value="season1">Season 1 - Episodes 1-34</option>
-        <option value="season2">Season 2 - Episodes 1-60</option>
-        <option value="season3">Season 3 - Episodes 1-26</option>
-    </select>
-    </center>
+    
     
     <div class="clear" style="height: 20px;"></div>
 
@@ -185,12 +169,11 @@
             </div>
             
         </div>
-        <div class="episode_extra">
-            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/disc5set1.png" alt="" class="block" style="position: absolute; top: -76px; left: 21px; z-index: 20;" />
-            <div class="clearfix">
-                <div class="season_a">&nbsp;</div>
-                <div class="season_b">
-                    <div class="season_txt" style="padding-top: 24px; padding-bottom: 0;">
+
+        <div class="clearfix">
+            <div class="season_a">
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc5.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
+                <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 32;">
                         <li><strong class="episode_title">Fine Finny Fiends</strong> <span class="episode_date">(Original Airdate: May 4, 1966)</span><br />
                             Alfred becomes an unwilling victim of Penguin's bird brainwash, revealing secrets about Bruce Wayne's Multimillionaires' Annual Award Dinner. An umbrella trap set, our Dynamic Duo is caught gasping for air. 
@@ -200,10 +183,25 @@
                              The Dynamic Duo is left for dead, but not so fast. Penguin thinks he'll just fly off with the loot meant for charity at the Annual Dinner, but this bad bird is about to find himself all tied up in a net!
                         </li>
                     </ol>
-                    </div>
-                </div> 
+                </div>
             </div>
+            <div class="season_b">
+                
+            </div>
+            
         </div>
+        
+        
+        <%--<div class="episode_extra">
+            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/disc5set1.png" alt="" class="block" style="position: absolute; top: -76px; left: 21px; z-index: 20;" />
+            <div class="clearfix">
+                <div class="season_a">&nbsp;</div>
+                <div class="season_b">
+                    <div class="season_txt" style="padding-top: 24px; padding-bottom: 0;">
+                    </div>
+                </div>
+            </div>
+        </div>--%>
     </div><!-- END season1 -->
 
 

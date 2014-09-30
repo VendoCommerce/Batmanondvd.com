@@ -433,6 +433,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
     font-weight: 700;
     text-transform: uppercase;
     padding-top: 19px;
+    padding-bottom: 0;
 }
 
 .container .cast_member h4 {
@@ -452,13 +453,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 /* Choose Product */
 .chooseprod {
     float: left; 
-    margin: 0 25px 0 11px;
+    margin: 0 30px 0 5px;
     border: #cdcdcd solid 1px;
     border-radius: 10px;
     width: 443px;
 }
 
-.chooseprod p {font-size: 16px; line-height: 21px;}
+.chooseprod p {font-size: 16px; line-height: 20px;}
 
 .chooseprod ul {
     margin-bottom: 20px; 
@@ -499,19 +500,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 
 .prodselect {
     border: #cdcdcd solid 1px;
-    padding: 4px;
-    width: 300px;
+    padding: 6px;
+    width: 310px;
+    border-radius: 5px;
+    background: #fafaf8; /* Old browsers */
+background: -moz-linear-gradient(top,  #fafaf8 0%, #e6e6e2 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafaf8), color-stop(100%,#e6e6e2)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fafaf8 0%,#e6e6e2 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', endColorstr='#e6e6e2',GradientType=0 ); /* IE6-9 */
 }
 .choose_content {
-    padding: 0 30px 20px 40px;
+    padding: 0 14px 20px 28px;
 }
 
 /* Episode Guide */
-.episode_top {
+/*.episode_top {
     width: 100%;
     min-height: 516px;
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/episode_cta.jpg) no-repeat 0 0;
     padding: 17px 10px 0 590px;
+}*/
+.episode_top {
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tv_episodes.jpg) no-repeat 23px 25px;
+    padding: 43px 10px 0 432px;
+    min-height: 318px;
 }
 
 
@@ -519,12 +534,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 .bg_powie {background: url(//d1kg9stb0ddjcv.cloudfront.net/images/bg_powie.jpg) no-repeat 115px 270px;}
 
 .select-1 {
-    padding: 4px;
-    border: #cecece solid 1px;
+    padding: 4px 16px;
+    border: #ddd solid 1px;
     border-radius: 7px;
     font-size: 18px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
+    background: #fafaf8; /* Old browsers */
+background: -moz-linear-gradient(top,  #fafaf8 0%, #e6e6e2 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafaf8), color-stop(100%,#e6e6e2)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fafaf8 0%,#e6e6e2 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', endColorstr='#e6e6e2',GradientType=0 ); /* IE6-9 */
+
 }
 
 .season_a {
@@ -812,24 +836,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 }
 #included {
     display: none;
-    wdith: 812px;
-    height: 424px;
-    padding: 10px 10px 10px 402px;
-    background: #fff url(//d1kg9stb0ddjcv.cloudfront.net/images/included.jpg) no-repeat 10px 62px;
+    width: 820px;
+    height: 738px;
+    padding: 53px 10px 10px 22px;
+    background: #fff;
     border: #fff solid 1px;
     border-radius: 8px;
+    color: #000;
 }
 
 #included ul {
-    margin: 18px 0 0 63px;
+    margin: 18px 0 0 0;
+    font-size: 21px;
+    font-family: 'Open Sans Condensed', arial, sans-serif;
+    line-height: 23px;
 }
 #included ul li {
-    font-size: 19px;
-    font-family: 'Open Sans Condensed', arial, sans-serif;
-    font-weight: 700;
     margin-left: 13px;
-    line-height: 22px;
-    padding-bottom: 7px;
+    padding-bottom: 12px;
 }
 
 #included ul li:before {
@@ -838,6 +862,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
     margin-left: -13px;
     color: #74af54;
 }
+
+.included_yellowbox {
+    width: 368px;
+    margin: 10px 0 0 4px;
+    padding: 9px 20px 10px 9px;
+    border-radius: 10px;
+    background: #fff7b8;
+}
+
+#included .included_yellowbox ul {
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    margin-top: 0;
+}
+#included .included_yellowbox ul li {
+    margin-left: 25px; 
+    padding-bottom: 6px;
+}
+#included .included_yellowbox ul li:before {
+    content: '\002D';
+    float: left; 
+    margin-left: -10px;
+    color: #000;
+}
+
 /* RECEIPT 1 */
 
 
@@ -1193,6 +1243,20 @@ div.rowheader .receipt_row1 {
 /* -----CART B----- */
 
 /* -----CART B----- */
+.crossout {
+    display: inline-block;
+    width: 42px;
+    height: 1px;
+    background: #ff0b0b;
+    position: absolute;
+    top: 9px;
+    left: 26px;
+    -ms-transform: rotate(-14deg);
+    -webkit-transform: rotate(-14deg);
+    transform: rotate(-14deg);
+}
+
+
 .freeshipcall {
   left: -52px;
   position: absolute;
@@ -1227,9 +1291,10 @@ div.rowheader .receipt_row1 {
 
 .multipay_txt {
     position: absolute; 
-    top: 10px;
-    left: 10px;
+    top: 12px;
+    left: 8px;
     font-size: 10px;
+    width: 567px;
 }
 
 .basket_description {padding: 5px 0 15px 0;}
@@ -1270,7 +1335,7 @@ div.rowheader .receipt_row1 {
   padding: 0 20px;
   position: relative;
   width: 490px;
-  margin-right: 100px;
+  margin-right: 130px;
 }
 .cart_select {
   float: left;
@@ -1287,7 +1352,7 @@ div.rowheader .receipt_row1 {
 }
 
 .cart_totals {
-  margin-left: 600px;
+  margin-left: 640px;
 }
 
 .cart_totals_left {
@@ -1879,7 +1944,7 @@ div.rowheader .receipt_row1 {
 	padding-bottom: 14px;
 	font-size: 18px;
 	font-family: 'Open Sans Condensed', sans-serif;	
-    line-height: 21px;
+    line-height: 1.2em;
 }
 
 .page_upsell p {
@@ -1910,7 +1975,7 @@ div.rowheader .receipt_row1 {
 }
 .page_upsell ul li ul li {
     margin-left: 18px; 
-    padding-bottom: 5px;
+    padding-bottom: 6px;
     font-size: 12px;
     line-height: 14px;
 }
@@ -1953,10 +2018,14 @@ div.rowheader .receipt_row1 {
   font-size: 18px;
 }
 
-.upsell_qty .select_qty {
+#upsells .select_qty {
   font-size: 18px;
   color: #000;
-  font-family: "helv_light", sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  border: #ddd solid 1px;
+  border-radius: 6px;
+  padding: 3px 6px;
 }
 
 .upsell_qty select {
