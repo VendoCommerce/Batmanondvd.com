@@ -407,6 +407,7 @@
     <None Include="Admin\css\fonts\fontawesome\FontAwesome.otf" />
     <None Include="Admin\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.otf" />
     <None Include="Admin\css\fonts\glyphicons.pro\glyphicons-regular.otf" />
+    <None Include="Properties\PublishProfiles\batman.pubxml" />
     <None Include="Properties\PublishProfiles\jhnjn.pubxml" />
     <None Include="Service References\HitLinks\CSWeb.HitLinks.Data.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

@@ -494,12 +494,12 @@ namespace CSWeb.Root.UserControls
 
             //Payment information
             string ccNumber = CommonHelper.Decrypt(clientData.PaymentInfo.CreditCardNumber);
-            txtCCNumber1.Text = ccNumber;//.Substring(0, 4);
+            //txtCCNumber1.Text = ccNumber;//.Substring(0, 4);
             //txtCCNumber2.Text = ccNumber.Substring(4, 4);
             //txtCCNumber3.Text = ccNumber.Substring(8, 4);
             //txtCCNumber4.Text = ccNumber.Substring(12, ccNumber.Length -12);
 
-            txtCvv.Text = clientData.PaymentInfo.CreditCardCSC;
+            //txtCvv.Text = clientData.PaymentInfo.CreditCardCSC;
             DateTime expireDate = DateTime.MinValue;
             DateTime.TryParse(clientData.PaymentInfo.CreditCardExpired.ToString(), out expireDate);
             ddlExpMonth.Items.FindByValue(expireDate.Month.ToString()).Selected = true;
