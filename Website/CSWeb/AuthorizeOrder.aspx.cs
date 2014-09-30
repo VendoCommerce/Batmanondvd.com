@@ -54,6 +54,9 @@ namespace CSWeb.Root.Store
 
             if (!IsPostBack)
             {
+                //Calculate and save tax
+                new CSWeb.FulfillmentHouse.DataPakTax().PostOrderToDataPak(orderId);
+
                 string[] testCreditCards;
 
                 testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries); ;
@@ -67,8 +70,9 @@ namespace CSWeb.Root.Store
                         Response.Redirect("receipt.aspx");
                     }
                 }
-                bool authSuccess = false;
 
+
+                bool authSuccess = false;
                 // Check if payment gateway service is enabled or not.
                 if (CSFactory.GetCacheSitePref().PaymentGatewayService)
                 {
@@ -77,6 +81,8 @@ namespace CSWeb.Root.Store
                         authSuccess = orderData.OrderStatusId == 4
                             || orderData.OrderStatusId == 5 // fulfillment failure (fulfillment was attempted after payment success), so don't charge again.
                             || OrderHelper.AuthorizeOrder(orderId);
+                        if (!authSuccess)
+                            OrderHelper.SendOrderDeclinedEmail(orderId);
                     }
                     catch (Exception ex)
                     {
@@ -97,7 +103,6 @@ namespace CSWeb.Root.Store
                     {
                         try
                         {
-                            new CSWeb.FulfillmentHouse.DataPakTax().PostOrderToDataPak(orderId);
                             new CSWeb.FulfillmentHouse.DataPak().PostOrderToDataPak(orderId);
                         }
                         catch (Exception ex)

@@ -115,7 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="bin\Debug\CSPaymentProvider.dll.config" />
     <None Include="obj\Debug\build.force" />
     <None Include="obj\Debug\CSPaymentProvider.csprojResolveAssemblyReference.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -191,10 +190,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\CSCore.dll" />
-    <Content Include="bin\Debug\CSCore.pdb" />
-    <Content Include="bin\Debug\CSPaymentProvider.dll" />
-    <Content Include="bin\Debug\CSPaymentProvider.pdb" />
     <Content Include="bin\Debug\log4net.dll" />
     <Content Include="bin\Debug\NLog.dll" />
     <Content Include="bin\Debug\PayPalCoreSDK.dll" />

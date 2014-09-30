@@ -92,7 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="bin\Debug\CSData.dll.config" />
     <None Include="CSCommerce.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>CSCommerce.designer.cs</LastGenOutput>
@@ -115,10 +114,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\CSCore.dll" />
-    <Content Include="bin\Debug\CSCore.pdb" />
-    <Content Include="bin\Debug\CSData.dll" />
-    <Content Include="bin\Debug\CSData.pdb" />
     <Content Include="bin\Debug\NLog.dll" />
     <Content Include="obj\Debug\CSData.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\CSData.dll" />
