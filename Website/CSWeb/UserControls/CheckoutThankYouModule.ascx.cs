@@ -64,7 +64,7 @@ protected Label lblPurchaseName, lblPromotionPrice;
 
                 BindData();
                 //Fire OrderConfirmation Test
-                OrderHelper.SendOrderCompletedEmail(orderId);
+                ///OrderHelper.SendOrderCompletedEmail(orderId);
 
                 //reset entire Context object
                 //this.CartContext.EmptyData();

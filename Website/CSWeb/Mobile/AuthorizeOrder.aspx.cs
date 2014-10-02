@@ -83,6 +83,8 @@ namespace CSWeb.Mobile.Store
                         authSuccess = orderData.OrderStatusId == 4
                             || orderData.OrderStatusId == 5 // fulfillment failure (fulfillment was attempted after payment success), so don't charge again.
                             || OrderHelper.AuthorizeOrder(orderId);
+                        if (!authSuccess)
+                            OrderHelper.SendOrderDeclinedEmail(orderId);
                     }
                     catch (Exception ex)
                     {
@@ -103,8 +105,7 @@ namespace CSWeb.Mobile.Store
                     {
                         try
                         {
-                            //Add fullfillment Order Post method
-                            
+                            new CSWeb.FulfillmentHouse.DataPak().PostOrderToDataPak(orderId);
                         }
                         catch (Exception ex)
                         {

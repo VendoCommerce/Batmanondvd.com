@@ -369,10 +369,10 @@ namespace CSWeb.FulfillmentHouse
             //MasterCard
             //VISA
             string returnValue = "";
-            if (cardtype.ToLower().Equals("visa")) { returnValue = "VI"; }
-            if (cardtype.ToLower().Equals("americanexpress")) { returnValue = "AM"; }
-            if (cardtype.ToLower().Equals("discover")) { returnValue = "DI"; }
-            if (cardtype.ToLower().Equals("mastercard")) { returnValue = "MA"; }
+            if (cardtype.ToLower().Equals("visa")) { returnValue = "XV"; }
+            if (cardtype.ToLower().Equals("americanexpress")) { returnValue = "XA"; }
+            if (cardtype.ToLower().Equals("discover")) { returnValue = "XD"; }
+            if (cardtype.ToLower().Equals("mastercard")) { returnValue = "XM"; }
 
             return returnValue;
         }
