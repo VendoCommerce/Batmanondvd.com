@@ -33,7 +33,7 @@ function Clickheretoprint()
   </div>
 
 <p class="lh f48 black webfont1bold">Your order has been placed!</p>
-<p class="webfont1 f22 pad20">Your order number is xxxx.  You will receive a shipping confirmation once your order has shipped.</p>
+<p class="webfont1 f22 pad20">Your order number is <asp:Literal ID="ltOrderId" runat="server"></asp:Literal>.  You will receive a shipping confirmation once your order has shipped.</p>
 
   
                 <div class="clear"></div>

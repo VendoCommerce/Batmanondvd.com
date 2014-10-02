@@ -21,10 +21,8 @@
              <td><asp:Literal ID="LiteralCity_b" runat="server"></asp:Literal></td></tr>
               <tr><td>State:</td>
              <td><asp:Literal ID="LiteralState_b" runat="server"></asp:Literal></td></tr>
-             <tr><td>Zip/Postal Code:</td>
+    <tr><td>Zip Code:</td>
              <td><asp:Literal ID="LiteralZip_b" runat="server"></asp:Literal></td></tr>
-             <tr><td>Country:</td>
-             <td><asp:Literal ID="LiteralCountry_b" runat="server"></asp:Literal></td></tr>
              <tr><td>Phone:</td>
              <td><asp:Literal ID="LiteralPhone" runat="server"></asp:Literal></td></tr>
              <tr><td>Email:</td>
@@ -45,15 +43,13 @@
              <td><asp:Literal ID="LiteralCity" runat="server"></asp:Literal></td></tr>
              <tr><td>State:</td>
              <td><asp:Literal ID="LiteralState" runat="server"></asp:Literal></td></tr>
-             <tr><td>Zip/Postal Code:</td>
+     <tr><td>Zip Code:</td>
              <td><asp:Literal ID="LiteralZip" runat="server"></asp:Literal></td></tr>
-             <tr><td>Country:</td>
-             <td><asp:Literal ID="LiteralCountry" runat="server"></asp:Literal></td></tr>
-      </table>
+             </table>
           
               <table class="receipt_table">
                     <tr>
-                    <th>Description</th>
+                    <th>Description <th>Description</th>
                     <th class="text-center">Qty</th>
                   <th class="text-center">1st Payment</th>
                   <th class="text-center">S&amp;H</th>

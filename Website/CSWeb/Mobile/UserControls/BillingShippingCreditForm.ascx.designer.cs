@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSWeb.Mobile.UserControls{
+namespace CSWeb.Mobile.UserControls {
     
     
     public partial class BillingShippingCreditForm {
@@ -20,6 +20,15 @@ namespace CSWeb.Mobile.UserControls{
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager sm1;
+        
+        /// <summary>
+        /// ShoppingCartControl1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CSWeb.Mobile.UserControls.ShoppingCartControl ShoppingCartControl1;
         
         /// <summary>
         /// upBillingForm control.
@@ -112,15 +121,6 @@ namespace CSWeb.Mobile.UserControls{
         protected global::System.Web.UI.WebControls.TextBox txtAddress1;
         
         /// <summary>
-        /// txtAddress2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAddress2;
-        
-        /// <summary>
         /// rfvCity control.
         /// </summary>
         /// <remarks>
@@ -164,24 +164,6 @@ namespace CSWeb.Mobile.UserControls{
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlState;
-        
-        /// <summary>
-        /// lblCountryError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCountryError;
-        
-        /// <summary>
-        /// ddlCountry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCountry;
         
         /// <summary>
         /// rfvZipCode control.
@@ -292,42 +274,6 @@ namespace CSWeb.Mobile.UserControls{
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// pnlQuantity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlQuantity;
-        
-        /// <summary>
-        /// lblQuantityList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQuantityList;
-        
-        /// <summary>
-        /// ddlQuantityList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlQuantityList;
-        
-        /// <summary>
-        /// ddlSize control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSize;
-        
-        /// <summary>
         /// cbShippingSame control.
         /// </summary>
         /// <remarks>
@@ -427,15 +373,6 @@ namespace CSWeb.Mobile.UserControls{
         protected global::System.Web.UI.WebControls.TextBox txtShippingAddress1;
         
         /// <summary>
-        /// txtShippingAddress2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtShippingAddress2;
-        
-        /// <summary>
         /// rfvShippingCity control.
         /// </summary>
         /// <remarks>
@@ -461,24 +398,6 @@ namespace CSWeb.Mobile.UserControls{
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtShippingCity;
-        
-        /// <summary>
-        /// lblShippingCountryError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShippingCountryError;
-        
-        /// <summary>
-        /// ddlShippingCountry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlShippingCountry;
         
         /// <summary>
         /// lblShippingStateError control.
@@ -526,31 +445,31 @@ namespace CSWeb.Mobile.UserControls{
         protected global::System.Web.UI.WebControls.TextBox txtShippingZipCode;
         
         /// <summary>
-        /// rfvCCType control.
+        /// lblCCNumberError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCCType;
+        protected global::System.Web.UI.WebControls.Label lblCCNumberError;
         
         /// <summary>
-        /// lblCCType control.
+        /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCCType;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
-        /// ddlCCType control.
+        /// txtCCNumber1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCCType;
+        protected global::System.Web.UI.WebControls.TextBox txtCCNumber1;
         
         /// <summary>
         /// rfvExpMonth control.
@@ -598,33 +517,6 @@ namespace CSWeb.Mobile.UserControls{
         protected global::System.Web.UI.WebControls.DropDownList ddlExpYear;
         
         /// <summary>
-        /// lblCCNumberError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCCNumberError;
-        
-        /// <summary>
-        /// RequiredFieldValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
-        /// <summary>
-        /// txtCCNumber1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCCNumber1;
-        
-        /// <summary>
         /// rfvCVV control.
         /// </summary>
         /// <remarks>
@@ -650,6 +542,33 @@ namespace CSWeb.Mobile.UserControls{
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCvv;
+        
+        /// <summary>
+        /// rfvCCType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCCType;
+        
+        /// <summary>
+        /// lblCCType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCCType;
+        
+        /// <summary>
+        /// ddlCCType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCCType;
         
         /// <summary>
         /// xyz control.

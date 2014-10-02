@@ -21,8 +21,8 @@ namespace CSWeb.Mobile.UserControls
     public partial class CheckoutThankYouModule2 : System.Web.UI.UserControl
     {
         protected Literal LiteralSubTotal, LiteralShipping, LiteralTax, LiteralTotal,
-            LiteralName, LiteralAddress, LiteralCity, LiteralEmail, LiteralZip, LiteralState, LiteralCountry,
-            LiteralName_b, LiteralAddress_b, LiteralCity_b, LiteralZip_b, LiteralState_b, LiteralCountry_b, LiteralRushShipping, LiteralGoogleAnalytics, LiteralID, LiteralSid, LiteralOfferId,
+            LiteralName, LiteralAddress, LiteralCity, LiteralEmail, LiteralZip, LiteralState,
+            LiteralName_b, LiteralAddress_b, LiteralCity_b, LiteralZip_b, LiteralState_b, LiteralRushShipping, LiteralGoogleAnalytics, LiteralID, LiteralSid, LiteralOfferId,
             LiteralAddress2, LiteralAddress2_b, LiteralPhone;
 
         protected DataList dlordersList;
@@ -83,7 +83,7 @@ namespace CSWeb.Mobile.UserControls
                 }
                 BindData();
                 //Fire OrderConfirmation Test
-                OrderHelper.SendOrderCompletedEmail(orderId);
+                //////OrderHelper.SendOrderCompletedEmail(orderId);
 
                 //reset entire Context object
                 //this.CartContext.EmptyData();
@@ -135,7 +135,6 @@ namespace CSWeb.Mobile.UserControls
                 LiteralCity.Text = orderData.CustomerInfo.ShippingAddress.City;
                 LiteralZip.Text = orderData.CustomerInfo.ShippingAddress.ZipPostalCode;
                 LiteralState.Text = StateManager.GetStateName(orderData.CustomerInfo.ShippingAddress.StateProvinceId);
-                LiteralCountry.Text = CountryManager.CountryName(orderData.CustomerInfo.ShippingAddress.CountryId);
 
                 LiteralName_b.Text = String.Format("{0} {1}", orderData.CustomerInfo.BillingAddress.FirstName, orderData.CustomerInfo.BillingAddress.LastName);
                 LiteralAddress_b.Text = orderData.CustomerInfo.BillingAddress.Address1;
@@ -151,7 +150,6 @@ namespace CSWeb.Mobile.UserControls
                 LiteralCity_b.Text = orderData.CustomerInfo.BillingAddress.City;
                 LiteralZip_b.Text = orderData.CustomerInfo.BillingAddress.ZipPostalCode;
                 LiteralState_b.Text = StateManager.GetStateName(orderData.CustomerInfo.BillingAddress.StateProvinceId);
-                LiteralCountry_b.Text = CountryManager.CountryName(orderData.CustomerInfo.BillingAddress.CountryId);
                 LiteralPhone.Text = orderData.CustomerInfo.BillingAddress.PhoneNumber;
                 //Google Analutics E-Commerce Pixel
                 //LoadGoogleAnalytics(orderData);

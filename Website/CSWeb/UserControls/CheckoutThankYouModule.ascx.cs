@@ -23,7 +23,7 @@ namespace CSWeb.Root.UserControls
         protected Literal LiteralSubTotal, LiteralShipping, LiteralTax, LiteralTotal,
             LiteralName, LiteralAddress, LiteralCity, LiteralEmail, LiteralZip, LiteralState, LiteralCountry,
             LiteralName_b, LiteralAddress_b, LiteralCity_b, LiteralZip_b, LiteralState_b, LiteralCountry_b, LiteralRushShipping, LiteralGoogleAnalytics, LiteralID, LiteralSid, LiteralOfferId,
-            LiteralAddress2_b;
+            LiteralAddress2_b, ltOrderId;
 
         protected DataList dlordersList;
 protected Label lblPurchaseName, lblPromotionPrice;
@@ -97,9 +97,9 @@ protected Label lblPurchaseName, lblPromotionPrice;
               
                     lblPromotionPrice.Text = String.Format("(${0:0.00})", orderData.DiscountAmount);
                 }
-              
 
-              
+
+                ltOrderId.Text = orderData.OrderId.ToString();
                  LiteralName.Text = String.Format("{0} {1}", orderData.CustomerInfo.ShippingAddress.FirstName, orderData.CustomerInfo.ShippingAddress.LastName);
                 LiteralEmail.Text = orderData.CustomerInfo.Email;
                 LiteralAddress.Text = orderData.CustomerInfo.ShippingAddress.Address1;

@@ -32,7 +32,7 @@
 <div class="hometop"><img src="<%= GetDynamicVersionData("homepageimage")%>" width="640" height="1421" usemap="#Maphome" class="block" />
   <map name="Maphome">
     <area shape="rect" coords="337,133,625,313" href="/content/video/ctavideo.mp4">
-    <area shape="rect" coords="273,478,628,567" href="cart.aspx">
+    <area shape="rect" coords="0,0,1000,1000" href="choose.aspx">
     <area shape="rect" coords="5,795,635,883" href="tel:1<%= GetCleanPhoneNumber(GetDynamicVersionData("phone"))%>">
     <area shape="rect" coords="3,887,628,971" href="howitworks.aspx">
     <area shape="rect" coords="5,979,634,1059" href="testimonials.aspx">

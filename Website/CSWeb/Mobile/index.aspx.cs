@@ -57,7 +57,7 @@ namespace CSWeb.Mobile.Store
                     }
                 }
                 OrderHelper.SetDynamicLandingPageVersion(Version, clientData);
-
+                
             }
 
         }

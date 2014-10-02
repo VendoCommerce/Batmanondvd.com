@@ -27,7 +27,7 @@
 
 <div class="content">
 
-        <uc1:Form id="ucCardDecline" runat="server" />
+        <uc1:Form id="ucCardDecline" runat="server" RedirectUrl="AuthorizeOrder.aspx" />
 
 </div>
 

@@ -1,6 +1,8 @@
 <%@Control Language="C#" AutoEventWireup="true" Inherits="CSWeb.Mobile.UserControls.BillingShippingCreditForm" CodeBehind="BillingShippingCreditForm.ascx.cs" %>
+<%@ Register src="ShoppingCartControl.ascx" tagname="ShoppingCartControl" tagprefix="uc1" %>
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>
+<uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />
 <asp:UpdatePanel ID="upBillingForm" runat="server">
     <ContentTemplate>    
     <a name="tryitnow" id="tryitnow"></a>
@@ -37,12 +39,6 @@
                 <asp:TextBox ID="txtAddress1" runat="server" MaxLength="30" CssClass="text-1 billingad1"></asp:TextBox>
                  
             </div>
-              <div class="form_line clearfix">
-              
-                  <label class="label-1">
-                </label>
-                <asp:TextBox ID="txtAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
-            </div>
          
             <div class="form_line clearfix">
                 <div class="error-1">
@@ -61,16 +57,6 @@
                     State*</label>
                 <asp:DropDownList ID="ddlState" runat="server" DataTextField="Abbreviation" CssClass="text-1"
                     size="1">
-                </asp:DropDownList>
-            </div>
-                  <div class="form_line clearfix">
-                <div class="error-1">
-                    <asp:Label ID="lblCountryError" runat="server" Visible="false"></asp:Label></div>
-                <label class="label-1">
-                    Country*</label>
-                <asp:DropDownList ID="ddlCountry" runat="server" DataTextField="Name" DataValueField="COUNTRYID"
-                    AutoPostBack="true" OnSelectedIndexChanged="Country_SelectedIndexChanged"
-                    CssClass="text-1">
                 </asp:DropDownList>
             </div>
             <div class="form_line clearfix">
@@ -105,52 +91,8 @@
             </div>
               <div class="form_line clearfix" style="padding-bottom: 0">
             <label class="label-1"></label>
-            <p class="text-1" style="text-align:center"><em></em></p>
-            </div>
-            <asp:Panel ID="pnlQuantity" runat="server" Visible="false">
-                <div class="form_line clearfix">
-                    <div class="error-1">
-                        <asp:Label ID="lblQuantityList" runat="server" Visible="false"></asp:Label></div>
-                    <label class="label-1">
-                        Quantity*</label>
-                    <asp:DropDownList ID="ddlQuantityList" runat="server" CssClass="text-1">
-                        <asp:ListItem Value="select" Text="Select"></asp:ListItem>
-                        <asp:ListItem Value="1" Text="1"></asp:ListItem>
-                        <asp:ListItem Value="2" Text="2"></asp:ListItem>
-                        <asp:ListItem Value="3" Text="3"></asp:ListItem>
-                        <asp:ListItem Value="4" Text="4"></asp:ListItem>
-                        <asp:ListItem Value="5" Text="5"></asp:ListItem>
-                        <asp:ListItem Value="6" Text="6"></asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-            </asp:Panel>
-            <div class="form_line clearfix">
-                <div class="error-1">
-                    </div>
-                <label class="label-1">
-                    Select Size*</label>
-                    <%--try Dropdown --%>
-               <asp:DropDownList ID="ddlSize" runat="server" CssClass="text-1">                       
-                       
-                        <asp:ListItem Value="47" Selected="True" Text="Small/Medium"></asp:ListItem>
-                        <asp:ListItem Value="49" Text="Medium/Large"></asp:ListItem>
-                                               
-                    </asp:DropDownList>
-<p style="margin-left: 170px;"><a href="#sizechart" class="sizechart">View Sizing Chart</a></p>
-                    <%-- Buy DropDown --%>
-
-                     <%--<asp:DropDownList ID="ddlSize" runat="server" CssClass="text-1">                        
-                        
-                        <asp:ListItem Value="61" Selected="True" Text="Small/Medium"></asp:ListItem>
-                        <asp:ListItem Value="63" Text="Medium/Large"></asp:ListItem>
-                                               
-                    </asp:DropDownList>--%>
-
-
             </div>
             <div class="form_line clearfix" style="padding: 10px 0 16px 0">
-                <div class="error-2">
-                    </div>
                       
                    <%-- <asp:RadioButtonList ID="rblShippingDifferent" runat="server" OnSelectedIndexChanged="rblShippingDifferent_CheckedChanged"
         CssClass="text-5" AutoPostBack="true" RepeatDirection="Horizontal" TabIndex="124">
@@ -158,8 +100,8 @@
         <asp:ListItem Value="false" Selected="True">No</asp:ListItem>
     </asp:RadioButtonList>--%>
      <asp:CheckBox ID="cbShippingSame" runat="server" CssClass="checkbox-left" OnCheckedChanged="cbShippingSame_CheckedChanged"
-            AutoPostBack="true" Checked="true" /><label class="label-3">
-                   Billing information is the same as the shipping information
+            AutoPostBack="true" Checked="true" />Shipping<label class="label-3">
+                   information is the same as billing information
 </label>          
             </div>
                <asp:Panel ID="pnlShippingAddress" runat="server" Visible="false">
@@ -194,29 +136,12 @@
                 </div>
                 <div class="form_line clearfix">
                     <div class="error-1">
-                    </div>
-                    <label class="label-1">
-                    </label>
-                    <asp:TextBox ID="txtShippingAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
-                </div>
-                <div class="form_line clearfix">
-                    <div class="error-1">
                         <asp:RequiredFieldValidator ID="rfvShippingCity" runat="server" Display="Dynamic"
                             ControlToValidate="txtShippingCity"></asp:RequiredFieldValidator>
                         <asp:Label ID="lblShippingCityError" runat="server" Visible="false"></asp:Label></div>
                     <label class="label-1">
                         City*</label>
                     <asp:TextBox ID="txtShippingCity" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
-                </div>
-                <div class="form_line clearfix">
-                    <div class="error-1">
-                        <asp:Label ID="lblShippingCountryError" runat="server" Visible="false"></asp:Label></div>
-                    <label class="label-1">
-                        Country*</label>
-                    <asp:DropDownList ID="ddlShippingCountry" runat="server" DataTextField="NAME" DataValueField="COUNTRYID"
-                        AutoPostBack="true" OnSelectedIndexChanged="ShippingCountry_SelectedIndexChanged"
-                        CssClass="text-1">
-                    </asp:DropDownList>
                 </div>
                 <div class="form_line clearfix">
                     <div class="error-1">
@@ -236,20 +161,17 @@
                     <asp:TextBox ID="txtShippingZipCode" runat="server" MaxLength="7" CssClass="text-1"></asp:TextBox>
                 </div>
             </asp:Panel>
-            <div class="form_line clearfix">
-                  <div class="error-1">
-                    <asp:RequiredFieldValidator ID="rfvCCType" runat="server" Display="Dynamic"
-                            ControlToValidate="ddlCCType"></asp:RequiredFieldValidator>
-                    <asp:Label ID="lblCCType" runat="server" Visible="false"></asp:Label></div>
-                <label class="label-1">
-                    Credit Card*</label>
-          
-                <asp:DropDownList ID="ddlCCType" runat="server" CssClass="text-2">
-                </asp:DropDownList>
-            </div>
-           
-           
              <div class="form_line clearfix">
+             <div class="error-1">
+                    <asp:Label ID="lblCCNumberError" runat="server" Visible="false"></asp:Label>
+               <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="Please enter card number" />
+                    </div>
+                <label class="label-1">
+                    Card Number*</label>
+                     <asp:TextBox ID="txtCCNumber1" runat="server"  CssClass="text-1" MaxLength="16"></asp:TextBox>
+               
+            </div>
+<div class="form_line clearfix">
                <div class="error-1">
                 <asp:RequiredFieldValidator ID="rfvExpMonth" runat="server" Display="Dynamic"
                             ControlToValidate="ddlExpMonth"></asp:RequiredFieldValidator>
@@ -276,8 +198,6 @@
                 </asp:DropDownList>
                 <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="text-3">
                     <asp:ListItem Value="" Text=""></asp:ListItem>
-                    <asp:ListItem Value="2012">2012</asp:ListItem>
-                    <asp:ListItem Value="2013">2013</asp:ListItem>
                     <asp:ListItem Value="2014">2014</asp:ListItem>
                     <asp:ListItem Value="2015">2015</asp:ListItem>
                     <asp:ListItem Value="2016">2016</asp:ListItem>
@@ -286,18 +206,8 @@
                     <asp:ListItem Value="2019">2019</asp:ListItem>
                     <asp:ListItem Value="2020">2020</asp:ListItem>
                 </asp:DropDownList>
-            </div>
-             <div class="form_line clearfix">
-             <div class="error-1">
-                    <asp:Label ID="lblCCNumberError" runat="server" Visible="false"></asp:Label>
-               <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="Please enter card number" />
-                    </div>
-                <label class="label-1">
-                    Card Number*</label>
-                     <asp:TextBox ID="txtCCNumber1" runat="server"  CssClass="text-1" MaxLength="16"></asp:TextBox>
-               
-            </div>
-            <div class="form_line clearfix">
+            </div>    
+                    <div class="form_line clearfix">
              <div class="error-1">
                     <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server" Display="Dynamic" />
                     <asp:Label ID="lblCvvError" runat="server" Visible="false"></asp:Label></div>
@@ -307,7 +217,17 @@
                
                 <asp:TextBox ID="txtCvv" runat="server" CssClass="text-2" MaxLength="4"></asp:TextBox>
             </div>
-            
+                        <div class="form_line clearfix">
+                  <div class="error-1">
+                    <asp:RequiredFieldValidator ID="rfvCCType" runat="server" Display="Dynamic"
+                            ControlToValidate="ddlCCType"></asp:RequiredFieldValidator>
+                    <asp:Label ID="lblCCType" runat="server" Visible="false"></asp:Label></div>
+                <label class="label-1">
+                    Credit Card*</label>
+          
+                <asp:DropDownList ID="ddlCCType" runat="server" CssClass="text-2">
+                </asp:DropDownList>
+            </div>
              <div class="form_line clearfix" style="padding: 10px 0 0 0">
                 <div class="error-2">
                     </div>

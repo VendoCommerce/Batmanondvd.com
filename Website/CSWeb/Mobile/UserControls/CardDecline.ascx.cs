@@ -396,7 +396,7 @@ namespace CSWeb.Mobile.UserControls
             if (!validateInput())
             {
                 SaveData();
-                Session["PId"] = 30;
+                //Session["PId"] = 30;
                 Response.Redirect(RedirectUrl + "?CId=" + (int)CSBusiness.ShoppingManagement.ShoppingCartType.ShippingCreditCheckout);
             }
 
@@ -454,7 +454,7 @@ namespace CSWeb.Mobile.UserControls
                 {
                     clientData.OrderId = orderId;
                     Session["ClientOrderData"] = clientData;
-                    Response.Redirect("ValidateKount.aspx?" + Request.QueryString);
+                    Response.Redirect("AuthorizeOrder.aspx?" + Request.QueryString);
 
                 }
             }

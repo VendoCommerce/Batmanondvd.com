@@ -1,6 +1,6 @@
 ﻿<%@Page Language="C#" AutoEventWireup="true" Inherits="CSWeb.Mobile.Store.index" EnableSessionState="True" MaintainScrollPositionOnPostback="true" %>
 <%@ Register Src="UserControls/TrackingPixels.ascx" TagName="TrackingPixels" TagPrefix="uc" %>
-<%@ Register Src="UserControls/ShippingForm.ascx" TagName="BillingFormControl" TagPrefix="uc" %>
+<%@ Register Src="UserControls/BillingShippingCreditForm.ascx" TagName="BillingShippingCreditForm" TagPrefix="uc" %>
 <!doctype html>
 <html>
 <head>
@@ -27,7 +27,7 @@
 
 <div class="content">
 
- <uc:BillingFormControl ID="sfcShippingInfo" runat="server" RedirectUrl="AddProduct.aspx" />
+ <uc:BillingShippingCreditForm ID="bsfcBillingShippingCreditForm" runat="server" RedirectUrl="AddProduct.aspx" />
  </div>
  <!--#include file="footer.html"-->
 </div>

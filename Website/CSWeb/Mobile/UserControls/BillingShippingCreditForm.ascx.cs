@@ -12,6 +12,7 @@ using CSBusiness.Resolver;
 using CSBusiness.CreditCard;
 using System.Web.UI.WebControls;
 using CSBusiness.Payment;
+using CSBusiness.OrderManagement;
 
 namespace CSWeb.Mobile.UserControls
 {
@@ -36,6 +37,8 @@ namespace CSWeb.Mobile.UserControls
         {
             get
             {
+                if (Session["ClientOrderData"] == null)
+                    return new ClientCartContext();
                 return (ClientCartContext)Session["ClientOrderData"];
             }
             set
@@ -77,8 +80,8 @@ namespace CSWeb.Mobile.UserControls
 
             if (!IsPostBack)
             {
-                BindCountries(true);
-                BindShippingCountries(true);
+                ////BindCountries(true);
+                ////BindShippingCountries(true);
                 BindRegions();
                 BindShippingRegions();
                 BindCreditCard();
@@ -109,28 +112,29 @@ namespace CSWeb.Mobile.UserControls
         #endregion Page Events
 
         #region General Methods
+        public int rId = 1;
 
         /// <summary>
         /// List of Country from Cache Data
         /// </summary>
-        public void BindCountries(bool setValue)
-        {
+        //////public void BindCountries(bool setValue)
+        //////{
 
-            ddlCountry.DataSource = CountryManager.GetActiveCountry();
-            ddlCountry.DataBind();
-            if (setValue)
-                ddlCountry.Items.FindByValue(ConfigHelper.DefaultCountry).Selected = true;
+        //////    ddlCountry.DataSource = CountryManager.GetActiveCountry();
+        //////    ddlCountry.DataBind();
+        //////    if (setValue)
+        //////        ddlCountry.Items.FindByValue(ConfigHelper.DefaultCountry).Selected = true;
 
-        }
+        //////}
 
-        public void BindShippingCountries(bool setValue)
-        {
+        //////public void BindShippingCountries(bool setValue)
+        //////{
 
-            ddlShippingCountry.DataSource = CountryManager.GetActiveCountry();
-            ddlShippingCountry.DataBind();
-            if (setValue)
-                ddlShippingCountry.Items.FindByValue(ConfigHelper.DefaultCountry).Selected = true;
-        }
+        //////    ddlShippingCountry.DataSource = CountryManager.GetActiveCountry();
+        //////    ddlShippingCountry.DataBind();
+        //////    if (setValue)
+        //////        ddlShippingCountry.Items.FindByValue(ConfigHelper.DefaultCountry).Selected = true;
+        //////}
 
         /// <summary>
         /// List of States from Cache Data
@@ -139,7 +143,7 @@ namespace CSWeb.Mobile.UserControls
         {
 
             ddlState.Items.Clear();
-            int countryId = Convert.ToInt32(ddlCountry.SelectedItem.Value);
+            int countryId = 231;//USA   Convert.ToInt32(ddlCountry.SelectedItem.Value);
             List<StateProvince> list = StateManager.GetCacheStates(countryId);
             ddlState.DataSource = list;
             ddlState.DataValueField = "StateProvinceId";
@@ -160,7 +164,7 @@ namespace CSWeb.Mobile.UserControls
         {
 
             ddlShippingState.Items.Clear();
-            int countryId = Convert.ToInt32(ddlShippingCountry.SelectedItem.Value);
+            int countryId = 231;//USA  Convert.ToInt32(ddlShippingCountry.SelectedItem.Value);
             List<StateProvince> list = StateManager.GetCacheStates(countryId);
             ddlShippingState.DataSource = list;
             ddlShippingState.DataValueField = "StateProvinceId";
@@ -275,17 +279,6 @@ namespace CSWeb.Mobile.UserControls
                 }
                 else
                     lblEmailError.Visible = false;
-            }
-            if (pnlQuantity.Visible)
-            {
-                if (ddlQuantityList.SelectedValue.Equals("select"))
-                {
-                    lblQuantityList.Text = ResourceHelper.GetResoureValue("QuantityErrorMsg");
-                    lblQuantityList.Visible = true;
-                    _bError = true;
-                }
-                else
-                    lblQuantityList.Visible = false;
             }
 
             #region Name & Address
@@ -495,12 +488,10 @@ namespace CSWeb.Mobile.UserControls
             if (!validateInput())
             {
                 SaveData();
-                Session["PId"] = Convert.ToInt32(ddlSize.SelectedValue);
-                Response.Redirect(string.Format("AddProduct.aspx?CId={1}",
+                //Session["PId"] = Convert.ToInt32(ddlSize.SelectedValue);
+                Response.Redirect(string.Format("PostSale.aspx?CId={0}",
                      Convert.ToString((int)CSBusiness.ShoppingManagement.ShoppingCartType.SingleCheckout)));
             }
-
-
         }
         private void SaveAdditionaInfo()
         {
@@ -521,10 +512,10 @@ namespace CSWeb.Mobile.UserControls
                 billingAddress.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
                 billingAddress.LastName = CommonHelper.fixquotesAccents(txtLastName.Text);
                 billingAddress.Address1 = CommonHelper.fixquotesAccents(txtAddress1.Text);
-                billingAddress.Address2 = CommonHelper.fixquotesAccents(txtAddress2.Text);
+                billingAddress.Address2 = string.Empty;// CommonHelper.fixquotesAccents(txtAddress2.Text);
                 billingAddress.City = CommonHelper.fixquotesAccents(txtCity.Text);
                 billingAddress.StateProvinceId = Convert.ToInt32(ddlState.SelectedValue);
-                billingAddress.CountryId = Convert.ToInt32(ddlCountry.SelectedValue);
+                billingAddress.CountryId = 231;//USA   Convert.ToInt32(ddlCountry.SelectedValue);
                 billingAddress.ZipPostalCode = CommonHelper.fixquotesAccents(txtZipCode.Text);
 
                 Customer CustData = new Customer();
@@ -546,16 +537,13 @@ namespace CSWeb.Mobile.UserControls
                     shippingAddress.FirstName = CommonHelper.fixquotesAccents(txtShippingFirstName.Text);
                     shippingAddress.LastName = CommonHelper.fixquotesAccents(txtShippingLastName.Text);
                     shippingAddress.Address1 = CommonHelper.fixquotesAccents(txtShippingAddress1.Text);
-                    shippingAddress.Address2 = CommonHelper.fixquotesAccents(txtShippingAddress2.Text);
+                    shippingAddress.Address2 = string.Empty;// CommonHelper.fixquotesAccents(txtShippingAddress2.Text);
                     shippingAddress.City = CommonHelper.fixquotesAccents(txtShippingCity.Text);
                     shippingAddress.StateProvinceId = Convert.ToInt32(ddlShippingState.SelectedValue);
-                    shippingAddress.CountryId = Convert.ToInt32(ddlShippingCountry.SelectedValue);
+                    shippingAddress.CountryId = 231;//USA   Convert.ToInt32(ddlShippingCountry.SelectedValue);
                     shippingAddress.ZipPostalCode = CommonHelper.fixquotesAccents(txtShippingZipCode.Text);
 
                     CustData.ShippingAddress = shippingAddress;
-
-
-
                 }
 
 
@@ -567,13 +555,36 @@ namespace CSWeb.Mobile.UserControls
                 paymentDataInfo.CreditCardExpired = new DateTime(int.Parse(ddlExpYear.SelectedValue), int.Parse(ddlExpMonth.SelectedValue), 1);
                 paymentDataInfo.CreditCardCSC = txtCvv.Text;
 
+                clientData.CustomerInfo = CustData;
                 clientData.PaymentInfo = paymentDataInfo;
-
                 ClientOrderData = clientData;
 
+                                    //Save Order information before upsale process
+
+                int orderId = 0;
+                    if (rId == 1)
+                        orderId = CSResolve.Resolve<IOrderService>().SaveOrder(clientData);
+                    else
+                    {
+                        //update order with modified customer shipping and billing and credit card information
+                        orderId = clientData.OrderId;
+                        CSResolve.Resolve<IOrderService>().UpdateOrder(orderId, clientData);
+                    }
+
+                    //if (orderId > 1)
+                    //{
+                    //    clientData.OrderId = orderId;
+                    //    Session["ClientOrderData"] = clientData;
+
+                    //    if (rId == 1)
+                    //        Response.Redirect("PostSale.aspx");
+                    //    else
+                    //        Response.Redirect("CardDecline.aspx");
+                    //}
 
                 //Set the Client Order objects
                 ClientCartContext contextData = (ClientCartContext)Session["ClientOrderData"];
+                contextData.OrderId = orderId;
                 contextData.CustomerInfo = CustData;
                 contextData.CartAbandonmentId = CSResolve.Resolve<ICustomerService>().InsertCartAbandonment(CustData, contextData);
                 Session["ClientOrderData"] = contextData;

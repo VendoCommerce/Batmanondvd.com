@@ -10,7 +10,7 @@
 namespace CSWeb.Mobile.UserControls {
     
     
-    public partial class ShoppingCartControl {
+    public partial class ShoppingCartControl2 {
         
         /// <summary>
         /// refresh control.
@@ -83,5 +83,41 @@ namespace CSWeb.Mobile.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lblOrderTotal;
+        
+        /// <summary>
+        /// lblRushShipping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lblRushShipping;
+        
+        /// <summary>
+        /// holderRushShippingTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow holderRushShippingTotal;
+        
+        /// <summary>
+        /// holderRushShipping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow holderRushShipping;
+        
+        /// <summary>
+        /// chkIncludeRushShipping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkIncludeRushShipping;
     }
 }
