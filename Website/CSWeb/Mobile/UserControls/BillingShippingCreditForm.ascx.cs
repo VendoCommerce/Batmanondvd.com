@@ -96,9 +96,9 @@ namespace CSWeb.Mobile.UserControls
             //ScriptManager.RegisterClientScriptInclude(Page, Page.GetType(), "jquery", Page.ResolveUrl("~/Scripts/jquery-1.6.4.min.js"));
             ScriptManager.RegisterClientScriptInclude(Page, Page.GetType(), "jquery.autotab", Page.ResolveUrl("~/Scripts/jquery.autotab-1.1b.js"));
 
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "autotab" + this.ClientID,
-            String.Format(@"$(function() {{$('#{0}, #{1}, #{2}').autotab_magic().autotab_filter('numeric')}});",
-                    txtPhoneNumber1.ClientID, txtPhoneNumber2.ClientID, txtPhoneNumber3.ClientID), true);
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "autotab" + this.ClientID,
+            //String.Format(@"$(function() {{$('#{0}, #{1}, #{2}').autotab_magic().autotab_filter('numeric')}});",
+            //        txtPhoneNumber1.ClientID), true);
 
             //  ScriptManager.RegisterStartupScript(this, this.GetType(), "autotab" + this.ClientID,
             //String.Format(@"$(function() {{$('#{0}, #{1}, #{2},#{3}').autotab_magic().autotab_filter('numeric')}});",
@@ -232,7 +232,8 @@ namespace CSWeb.Mobile.UserControls
             else
                 lblStateError.Visible = false;
 
-            string strPhoneNum = txtPhoneNumber1.Text + txtPhoneNumber2.Text + txtPhoneNumber3.Text;
+            //string strPhoneNum = txtPhoneNumber1.Text + txtPhoneNumber2.Text + txtPhoneNumber3.Text;
+            string strPhoneNum = txtPhoneNumber1.Text;
 
             if (!CommonHelper.IsValidPhone(strPhoneNum))
             {
@@ -521,7 +522,8 @@ namespace CSWeb.Mobile.UserControls
                 Customer CustData = new Customer();
                 CustData.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
                 CustData.LastName = CommonHelper.fixquotesAccents(txtLastName.Text);
-                CustData.PhoneNumber = txtPhoneNumber1.Text + txtPhoneNumber2.Text + txtPhoneNumber3.Text;
+                //CustData.PhoneNumber = txtPhoneNumber1.Text + txtPhoneNumber2.Text + txtPhoneNumber3.Text;
+                CustData.PhoneNumber = txtPhoneNumber1.Text;
                 CustData.Email = CommonHelper.fixquotesAccents(txtEmail.Text);
                 CustData.Username = CommonHelper.fixquotesAccents(txtEmail.Text);
                 CustData.BillingAddress = billingAddress;

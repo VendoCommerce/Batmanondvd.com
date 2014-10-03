@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=640px, initial-scale=.5, maximum-scale=.5" />
-<title></title>
+<meta name="viewport" content="width=640, initial-scale=.5, maximum-scale=1" />
+<title>Batman Classics on DVD</title>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -17,7 +17,7 @@
 <link href="/styles/global_mobile.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/scripts/NoBack.js"></script>
 </head>
-    <body>
+<body id="receipt">
 
 <div class="container">
 <!--#include file="popups.html"-->

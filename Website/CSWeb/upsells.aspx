@@ -177,11 +177,7 @@
                 Adventures of Superman!
             </h2>
 
-            <p class="f16 lh22">Faster than a speeding bullet! More powerful than <br />
-                a locomotive! Able to leap tall buildings at a single <br />
-                bound! Don't miss out on this Classic Adventures of <br />
-                Superman Special! Your Superman DVD set will <br />
-                include 104 episodes on 20 DVDs for only #49.95!
+            <p class="f16 lh22">Faster than a speeding bullet! More powerful than <br />a locomotive! Able to leap tall buildings at a single <br />bound!  Don’t miss out on the legendary 1950’s  <br />Adventures of Superman series starring George Reeves!   <br />Your Superman DVD Collection will contain 104 episodes  <br />on 20 DVDs for only $49.95!
             </p>
 
             <p class="ask">Would you like to take advantage of this special offer?</p>

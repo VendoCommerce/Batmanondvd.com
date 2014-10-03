@@ -1,13 +1,15 @@
 <%@Control Language="C#" Inherits="CSWeb.Mobile.UserControls.CheckoutThankYouModule2" %>
 <%@ Register Src="../UserControls/TrackingPixels.ascx" TagName="TrackingPixels" TagPrefix="uc" %>
 
-<p class="red bold f32 caps" style="padding-top: 30px">
-          Thank you for ordering!</p>
+<p class="webfont1bold f38 text-center" style="background: #ebebeb; padding: 24px 0 20px 0;">
+          Your BAT-TASTIC order has been placed!</p>
        
          
-<p> Your order number is
-                <%=orderId.ToString()%>, and an email confirmation will be sent to 
-<%=LiteralEmail.Text%>.</p>
+<p class="webfont1 pad20" style="padding-top: 40px;"><strong>Thank You and Enjoy Your Purchase!</strong> Your order number is
+                <%=orderId.ToString()%>. You will receive a shipping confirmation once your order has shipped.
+<span style="display: none;"><%=LiteralEmail.Text%>.</span></p>
+
+<p class="webfont1 pad20 ital" style="letter-spacing: -1px;">All products should be expected to arrive on or before November 11th 2014.</p>
              <div class="receipt_header">Billing Information</div>
              <table class="table">
              <tr><td>Name:</td>
@@ -47,19 +49,22 @@
              <td><asp:Literal ID="LiteralZip" runat="server"></asp:Literal></td></tr>
              </table>
           
+
+<div class="receipt_header">Your Order</div>
+
               <table class="receipt_table">
-                    <tr>
-                    <th>Description <th>Description</th>
-                    <th class="text-center">Qty</th>
-                  <th class="text-center">1st Payment</th>
-                  <th class="text-center">S&amp;H</th>
-                    <th class="text-center">Total</th>
-     </tr>
-          
+                  <tr>
+                      <th class="pad0" style="text-align: left; padding-left: 14px;">Item</th>
+                      <th class="text-center pad0">Quantity</th>
+                      <th class="text-center pad0">Payment</th>
+                  </tr>
+          <tr>
+              <td colspan="3" style="padding: 0;"><div class="horizontal_dots"></div></td>
+          </tr>
                 <asp:DataList runat="server" ID="dlordersList" RepeatLayout="Flow" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <tr>
-                        <td>
+                        <td class="receipt_item">
                             <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                         </td>
                         <td class="text-center bold">
@@ -68,31 +73,28 @@
                            <td class="text-center bold">
                            $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%> 
                        </td>
-                     <td class="text-center bold">
-                            $<%# Math.Round(CalculateSkuBaseShipping(Convert.ToInt32(DataBinder.Eval(Container.DataItem, "skuid"))), 2).ToString()%>
-                       </td>
-                       <td class="text-center bold">
-                           $<%# Math.Round(CalculateSkuBaseShipping(Convert.ToInt32(DataBinder.Eval(Container.DataItem, "skuid"))) + Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%>
-                       </td>
                        </tr>
                            
                     </ItemTemplate>
                 </asp:DataList>
                 <asp:Literal ID="LiteralTableRows" runat="server"></asp:Literal>
-          <tr><td colspan="4" style="text-align:right; padding-right: 5px;">
-                    SUBTOTAL:<br />
+          <tr>
+              <td colspan="3" style="padding: 0;"><div class="horizontal_dots"></div></td>
+          </tr>
+                  <tr><td colspan="2" class="bold f24" style="line-height: 29px; text-align: right; padding-right: 15px; color: #979797;">
+                    Subtotal<br />
                     <asp:Panel ID="pnlPromotionLabel" runat="server" Visible="false">
-                        Discount:<br />
+                        Discount<br />
                     </asp:Panel>
-                    SHIPPING:<br />
+                    Shipping<br />
                     <asp:Panel ID="pnlRushLabel" runat="server" Visible="false">
-                        Rush S &amp; H:<br />
+                        Rush S &amp; H<br />
                     </asp:Panel>
-                    ESTIMATED TAX:<br />
-                    <strong>TOTAL:</strong></td>
+                     Tax<br />
+                    <strong class="black">Total</strong></td>
                     
-               <td>
-                    <strong>$<asp:Literal ID="LiteralSubTotal" runat="server"></asp:Literal></strong><br />
+               <td class="bold f24" style="line-height: 29px; text-align: right; color: #979797;">
+                    $<asp:Literal ID="LiteralSubTotal" runat="server"></asp:Literal><br />
                     <asp:Panel ID="pnlPromotionalAmount" runat="server" Visible="false">
                         <asp:Label runat="server" ID="lblPromotionPrice"></asp:Label><br />
                     </asp:Panel>
@@ -100,7 +102,7 @@
                     <asp:Panel ID="pnlRush" runat="server" Visible="false">
                     </asp:Panel>
                     $<asp:Literal ID="LiteralTax" runat="server"></asp:Literal><br />
-                   <strong> $<asp:Literal ID="LiteralTotal" runat="server"></asp:Literal></strong>
+                   <strong class="black"> $<asp:Literal ID="LiteralTotal" runat="server"></asp:Literal></strong>
        </td></tr></table>
          
          

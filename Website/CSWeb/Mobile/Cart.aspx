@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=640px, initial-scale=.5, maximum-scale=.5" />
-<title></title>
+<title>Batman Classics on DVD</title>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

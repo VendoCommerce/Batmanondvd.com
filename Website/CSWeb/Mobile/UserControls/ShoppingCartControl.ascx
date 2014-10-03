@@ -4,12 +4,12 @@
 <asp:Repeater runat="server" ID="rptShoppingCart" OnItemDataBound="rptShoppingCart_OnItemDataBound"
     OnItemCommand="rptShoppingCart_OnItemCommand">
     <HeaderTemplate>
+        <div class="greenbar">Shopping Cart</div>
         <div class="cart_table clearfix" style="margin-bottom: 0;">
-            <div class="cart_image">&nbsp;</div>
-            <div class="cart_text">
+            <div class="cart_text_hdr">
                 <h4 class="pad0">Item</h4>
             </div>
-            <div class="product_price" class="pad0" style="padding-left: 8px;">
+            <div class="product_price_hdr" class="pad0" style="padding-left: 8px;">
                 <h4>Price</h4>
             </div>
         </div>
@@ -27,7 +27,7 @@
                     <asp:Label runat="server" ID='lblSkuDescription'></asp:Label></div>
             </div>
             <div class="product_price">
-                <asp:Label runat="server" ID="lblSkuInitialPrice"></asp:Label>
+                <asp:Label runat="server" ID="lblSkuInitialPrice"></asp:Label>*
                 <td runat="server" width="1%" id='holderRemove' visible="false">
                     <asp:ImageButton ID="btnRemoveItem" runat="server" CommandName="delete" CausesValidation="false"
                         CssClass="ucRemoveButtonOverlay" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/delete.gif" />
@@ -41,7 +41,7 @@
         <div class="horizontal_dots">
         </div>
 
-        <div class="multipay_txt">*You will be charged today for your first of 5 monthly payments of $19.99. Applicable taxes will be included in your first payment (this should not display if the consumer selects a 1-pay option). Shipping is FREE. If you are not satisfied with your purchase for any reason, simply return it within 60 days to receive a full refund. Restrictions may apply. Please refer to our Return Policy (link to Return Policy page)</div>
+        
 
         <div class="cart_totals clearfix">
             <div class="cart_totals_left">
@@ -71,12 +71,14 @@
                     </tr>
                 </table>--%>
             </div>
-            <div class="clear"></div>
-            <div class="horizontal_dots" style="width: 240px; left: -8px;"></div>
-            <div class="cart_totals_left f16"><strong>Today's Payment:</strong></div>
-            <div class="cart_totals_right f16"><asp:Literal runat="server" ID="lblOrderTotal"></asp:Literal></div>
+            <div class="clear" style="height: 14px;"></div>
+            <div class="horizontal_dots" style="width: 240px; left: -8px; display: none;"></div>
+            <div class="cart_totals_left black"><strong>Today's Payment:</strong></div>
+            <div class="cart_totals_right black"><asp:Literal runat="server" ID="lblOrderTotal"></asp:Literal></div>
+            <div class="clear" style="height: 50px;"></div>
         </div>
     </asp:PlaceHolder>
 </asp:Panel>
    <div class="cart_offer" style="display: none;">
-            <strong>*Offer Details:</strong> offer details </div>
+            <strong>*Offer Details:</strong> offer details
+   </div>
