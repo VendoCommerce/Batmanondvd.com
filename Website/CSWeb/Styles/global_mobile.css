@@ -367,6 +367,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', end
 
 }
 
+.container .season_hdr h3 {
+    padding: 0;	
+}
+
 .container h4 {
     padding: 10px 18px 6px 24px;
     font-size: 30px;
