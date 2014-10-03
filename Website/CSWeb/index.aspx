@@ -127,7 +127,8 @@
 
             <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
-                <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confoundour Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+                <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
+our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
             
         </div>

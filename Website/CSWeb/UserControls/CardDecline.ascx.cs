@@ -315,7 +315,7 @@ namespace CSWeb.Root.UserControls
             }
             else
             {
-                if (ucTokenex.EncryptedCCNum.Length == 0)
+                if (ucTokenex.EncryptedCcNum.Length == 0)
                 {
                     //    if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
                     //    {

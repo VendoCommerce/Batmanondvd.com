@@ -15,7 +15,7 @@ namespace CSWeb.UserControls
 
         }
 
-        public string EncryptedCCNum
+        public string EncryptedCcNum
         {
             get
             {
@@ -23,9 +23,17 @@ namespace CSWeb.UserControls
             }
         }
 
+        public string ReceivedToken
+        {
+            get
+            {
+                return hlToken.Value;
+            }
+        }
+
         public string GetCCNumToken()
         {
-           return TokenexProcessor.GetInstance().Tokenize(EncryptedCCNum);
+           return TokenexProcessor.GetInstance().Tokenize(EncryptedCcNum);
         }
     }
 }
