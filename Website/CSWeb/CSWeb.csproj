@@ -297,7 +297,14 @@
     <Content Include="AuthorizeOrder.aspx" />
     <Content Include="CardDecline.aspx" />
     <Content Include="Cart.aspx" />
+    <Content Include="Mobile\bottomcta.html" />
+    <Content Include="Mobile\returns.aspx" />
+    <Content Include="Mobile\contact.aspx" />
+    <Content Include="Mobile\cast.aspx" />
+    <Content Include="Mobile\clips.aspx" />
+    <Content Include="Mobile\episodes.aspx" />
     <Content Include="Mobile\choose.aspx" />
+    <Content Include="Mobile\faq.aspx" />
     <Content Include="Mobile\UserControls\ShoppingCartControl.ascx" />
     <Content Include="returns.aspx" />
     <Content Include="clips.aspx" />
@@ -391,6 +398,7 @@
     <Content Include="GetTotals.aspx" />
     <Content Include="footer.html" />
     <Content Include="bottomcta.html" />
+    <Content Include="Scripts\global_mobile.js" />
     <Content Include="Scripts\jquery.cycle2.carousel.min.js" />
     <Content Include="Scripts\jquery.cycle2.min.js" />
     <Content Include="popups.html" />

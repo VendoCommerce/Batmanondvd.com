@@ -1,45 +1,51 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="episodes.aspx.cs" Inherits="CSWeb.episodes" EnableSessionState="True" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CSWeb.Mobile.Store.index" EnableSessionState="True" %>
+<%@ Register Src="UserControls/TrackingPixels.ascx" TagName="TrackingPixels" TagPrefix="uc" %>
 
 <!doctype html>
 <html>
-<head runat="server">
-<meta charset="utf-8">    
-<title>BATMAN</title>
-<meta name="description" content=""/>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/Scripts/fancybox/jquery.fancybox.css">
-<script src="/Scripts/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="/scripts/jwplayer/jwplayer.js"></script>
-<script src="/Scripts/jquery.cycle.js"></script>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=640px, initial-scale=.5, maximum-scale=1" />
+<title>Batman Classics on DVD</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="/Scripts/fancybox/jquery.fancybox.pack.js"></script>
+<link href="/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="/Scripts/jwplayer/jwplayer.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
-<script src="/Scripts/global.js"></script>
-<link href="../styles/global.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Scripts/global_mobile.js"></script>
+<link href="/styles/global_mobile.css" rel="stylesheet" type="text/css" />
+
 </head>
+ 
 <body>
-<form id="form1" runat="server">
+ <form runat="server" id="fm1">
+<div class="container">
+
 <!--#include file="popups.html"-->
 <!--#include file="header.html"-->
 
-<div class="container">
-    <div class="episode_top">
-        <h2 class="f49 pad20" style="margin-left: 14px;">Same Bat-Time...<br />
-            <span class="block" style="padding-left: 15px;">...Same Bat-Channel!</span>
-        </h2>
-        <h3 class="f34 green caps webfont1bold">Batman: The Classic Collection</h3>
-        <select id="selectField" class="select-1" style="margin-left: 112px;">
-            <option value="season1">Season 1 - Episodes 1-34</option>
-            <option value="season2">Season 2 - Episodes 1-60</option>
-            <option value="season3">Season 3 - Episodes 1-26</option>
-        </select>
-    </div>
-    
-    
-    <div class="clear" style="height: 20px;"></div>
+    <div class="content">
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/tv.jpg" width="176" height="145" alt="" style="position: absolute; top: 42px; left: 455px;" />
+        <h2>Same Bat-Time...<br />
+            ...Same Bat-Channel!
+         </h2>
 
-    <div id="season1" class="episodebox">
+        <div class="text-center" style="padding-top: 40px; padding-bottom: 70px;">
+            <h3 class="f42 green caps webfont1bold pad12">Batman: The Classic Collection</h3>
+            <select id="selectField" class="select-1">
+                <option value="season1">Season 1 - Episodes 1-34</option>
+                <option value="season2">Season 2 - Episodes 1-60</option>
+                <option value="season3">Season 3 - Episodes 1-26</option>
+            </select>
+        </div>
+
+
+        <div id="season1" class="episodebox">
         <div class="clearfix bg_thwack">
-            <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc1.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
+            
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc1.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details">
                         <li><strong class="episode_title">Hi Diddle Riddle</strong> <span class="episode_date">(Original Airdate: January 12, 1966)</span><br />
@@ -70,8 +76,11 @@
                     </ol>
                 </div>
             </div>
-            <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc2.jpg" alt="Disc 1; Episodes 9-16" class="block" /></h3></div>
+
+
+            <div class="clearfix bg_burst">
+
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc2.jpg" alt="Disc 1; Episodes 9-16" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 8;">
                         <li><strong class="episode_title">Zelda The Great</strong> <span class="episode_date">(Original Airdate: February 9, 1966)</span><br />
@@ -100,13 +109,13 @@
                         </li>
                     </ol>
                 </div>
-            </div>
+            
             
         </div>
 
-        <div class="clearfix bg_powie">
-            <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc3.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
+        <div class="clearfix bg_burst">
+            
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc3.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 16;">
                         <li><strong class="episode_title">True Or False Face</strong> <span class="episode_date">(Original Airdate: March 9, 1966)</span><br />
@@ -135,9 +144,11 @@
                         </li>
                     </ol>
                 </div>
+            
             </div>
-            <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc4.jpg" alt="Disc 4; Episodes 25-32" class="block" /></h3></div>
+
+            <div class="clearfix bg_burst">
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc4.jpg" alt="Disc 4; Episodes 25-32" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 24;">
                         <li><strong class="episode_title">The Joker Trumps An Ace</strong> <span class="episode_date">(Original Airdate: April 6, 1966)</span><br />
@@ -166,13 +177,12 @@
                         </li>
                     </ol>
                 </div>
-            </div>
+            
             
         </div>
 
-        <div class="clearfix">
-            <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc5.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
+        <div class="clearfix bg_burst">
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc4.jpg" alt="Disc 4; Episodes 25-32" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 32;">
                         <li><strong class="episode_title">Fine Finny Fiends</strong> <span class="episode_date">(Original Airdate: May 4, 1966)</span><br />
@@ -184,24 +194,10 @@
                         </li>
                     </ol>
                 </div>
-            </div>
-            <div class="season_b">
-                
-            </div>
             
         </div>
         
         
-        <%--<div class="episode_extra">
-            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/disc5set1.png" alt="" class="block" style="position: absolute; top: -76px; left: 21px; z-index: 20;" />
-            <div class="clearfix">
-                <div class="season_a">&nbsp;</div>
-                <div class="season_b">
-                    <div class="season_txt" style="padding-top: 24px; padding-bottom: 0;">
-                    </div>
-                </div>
-            </div>
-        </div>--%>
     </div><!-- END season1 -->
 
 
@@ -217,7 +213,7 @@
     <div id="season2" class="episodebox">
         <div class="clearfix bg_thwack">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc1.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc1.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details">
                         <li><strong class="episode_title">Shoot A Crooked Arrow</strong> <span class="episode_date">(Original Airdate: September 7, 1966)</span><br />
@@ -248,7 +244,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc2.jpg" alt="Disc 2; Episodes 9-16" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc2.jpg" alt="Disc 2; Episodes 9-16" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 8;">
                         <li><strong class="episode_title">The Greatest Mother Of Them All</strong> <span class="episode_date">(Original Airdate: October 5, 1966)</span><br />
@@ -281,9 +277,9 @@
             
         </div>
 
-        <div class="clearfix bg_powie">
+        <div class="clearfix bg_burst">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc3.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc3.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 16;">
                         <li><strong class="episode_title">Hizzonner The Penguin</strong> <span class="episode_date">(Original Airdate: November 2, 1966)</span><br />
@@ -314,7 +310,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc4.jpg" alt="Disc 4; Episodes 24-30" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc4.jpg" alt="Disc 4; Episodes 24-30" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 24;">
                         <li><strong class="episode_title">Come Back, Shame</strong> <span class="episode_date">(Original Airdate: November 30, 1966)</span><br />
@@ -341,7 +337,7 @@
         </div>
         <div class="clearfix bg_thwack">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc5.jpg" alt="Disc 5; Episodes 31-38" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc5.jpg" alt="Disc 5; Episodes 31-38" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 30;">
                         <li><strong class="episode_title">The Puzzles Are Coming</strong> <span class="episode_date">(Original Airdate: December 21, 1966)</span><br />
@@ -372,7 +368,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc6.jpg" alt="Disc 6; Episodes 39-46" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc6.jpg" alt="Disc 6; Episodes 39-46" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 38;">
                         <li><strong class="episode_title">The Penguin Declines</strong> <span class="episode_date">(Original Airdate: January 18, 1967)</span><br />
@@ -403,9 +399,9 @@
                 </div>
             </div>
         </div>
-        <div class="clearfix bg_powie">
+        <div class="clearfix bg_burst">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc7.jpg" alt="Disc 7; Episodes 47-54" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc7.jpg" alt="Disc 7; Episodes 47-54" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 46;">
                         <li><strong class="episode_title">The Joker's Last Laugh</strong> <span class="episode_date">(Original Airdate: February 15, 1967)</span><br />
@@ -436,7 +432,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc8.jpg" alt="Disc 8; Episodes 55-60" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc8.jpg" alt="Disc 8; Episodes 55-60" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 54;">
                         <li><strong class="episode_title">Black Widow Strikes Again</strong> <span class="episode_date">(Original Airdate: March 15, 1967)</span><br />
@@ -472,7 +468,7 @@
     <div id="season3" class="episodebox">
         <div class="clearfix bg_thwack">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc1.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc1.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details">
                         <li><strong class="episode_title">Enter Batgirl, Exit Penguin</strong> <span class="episode_date">(Original Airdate: September 14, 1967)</span><br />
@@ -503,7 +499,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc2.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc2.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 8;">
                         <li><strong class="episode_title">How To Hatch A Dinosaur</strong> <span class="episode_date">(Original Airdate: November 9, 1967)</span><br />
@@ -536,9 +532,9 @@
             
         </div>
 
-        <div class="clearfix bg_powie">
+        <div class="clearfix bg_burst">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc3.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc3.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 16;">
                         <li><strong class="episode_title">The Joke's On Catwoman</strong> <span class="episode_date">(Original Airdate: January 4, 1968)</span><br />
@@ -569,7 +565,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc4.jpg" alt="Disc 4; Episodes 25-26" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc4.jpg" alt="Disc 4; Episodes 25-26" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 24;">
                         <li><strong class="episode_title">The Entrancing Dr. Cassandra</strong> <span class="episode_date">(Original Airdate: March 7, 1968)</span><br />
@@ -606,27 +602,15 @@
             </div>
         </div>
     </div><!-- END season3 -->
-    
 
-
-
-
-
-    <!--#include file="bottomcta.html"-->
-
-
-
-
-
-
-
-
-
-
-</div><!-- END container -->
-
-
+    </div>
+<!--#include file="bottomcta.html"-->
 <!--#include file="footer.html"-->
-</form>
+</div>
+
+  <uc:TrackingPixels ID="TrackingPixels" runat="server" />
+
+
+ </form>
 </body>
 </html>

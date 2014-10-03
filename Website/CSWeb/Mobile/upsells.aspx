@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CSWeb.Root.Store.index" EnableSessionState="True" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="CSWeb.Mobile.Store.index" EnableSessionState="True" %>
 <%@ Register Src="UserControls/TrackingPixels.ascx" TagName="TrackingPixels" TagPrefix="uc" %>
 
 <!doctype html>
@@ -26,58 +26,143 @@
 
 <div class="content">
 
-<!-- additional 1p -->
+<!-- Full Collection 1p -->
 <div class="page_upsell">
 
-  <h2>Get an Additional Month's <br>
-    Food Supply <strong>and save BIG!</strong></h2>
-  <p><img src="../Content/Images/mobile/upsell_additional_1p.jpg" width="280" height="328" class="fright" />You're wise enough to prepare for emergencies with a 1 month's supply, keep in mind that is 1 month per person so if you have more members in your family you can add another month's food at a deep discount of 20%. Or simply get a second month's supply for yourself and save. Get your additional 1-month food supply for a special price of $79.99 plus <strong class="red">FREE SHIPPING &amp; HANDLING</strong> when you add it to your purchase today!</p>
-  <p class="text-right"><label for="qty">How Many? </label>
-  <select name="qty" required error=" * Please Select Quantity">
-  <option value="">- Select -</option>
-  <option value="1">1</option> 
-  <option value="2">2</option> 
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option> </select>
-<span class="block text-right f25" style="padding-top: 6px">Limit 5 per customer</span>
-  </p>
+  <h2 class="f37 pad20" style="line-height: 1.3em;">Upgrade to the Full 120 Episode Collection in a Beautiful Collector’s Box!</h2>
+    <h3 class="f32">Just half of the episodes of Batman will leave you needing more! Upgrade to the full collection today and receive all 120 Episodes from all Three Seasons! Get it on DVD or stunning high definition Blu-ray<span class="f18" style="position: relative; top: -8px;">™</span>.</h3>
+    <p><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_full_collection.jpg" width="553" height="328" class="block" style="margin: 0 auto;" /></p>
+  <ul>                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
+                <li>OVER 3 Hours Of ALL NEW Extras like:                    <ul style="padding-bottom: 0;">
+                        <li><strong>Hanging with Batman</strong> – A true slice of life in the words of Adam West</li>
+                        <li><strong>Holy Memorabilia Batman!</strong> – A journey into the most sought after collectibles through the eyes of 3 extraordinary collectors</li>
+                        <li><strong>Batmania Born!</strong> – Building the World of Batman - Explore the art and design behind the fiction.</li>
+                        <li><strong>Bats of the Round Table</strong>  – A candid conversation with Adam West and         his celebrity friends, chatting all things Bat ’66.</li>
+                        <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare         treat for the fans as Adam discusses his script notes on bringing Batman to life          in the first and second episodes </li>
+                        <li style="padding-bottom: 0;"><strong>Na Na Na Batman!</strong> Hollywood favorites stars and producers recount their 
+                            favorite Batman memories</li>
+                    </ul></li>
+                <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie     DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter   from Adam West <strong>PLUS</strong> your own Classic Batman Collector’s Box</li>
+            </ul>
 
-<span class="ask">Would you like to take <br>
-advantage of this special offer? <span class="btns"><a href="javascript:void(0)" bind="no"><img src="/content/images/mobile/nothanks_btn.jpg" /></a><a href="javascript:void(0)" bind="yes"><img src="/content/images/mobile/yes_btn.jpg" /></a><div class="ask_arrow"></div></span>
-</span>
+<p class="ask" style="padding-top: 0;">Would you like to take <br>
+advantage of this special offer? 
+</p>
+    <p>
+    <script type="text/javascript">function updateUpsellSku(fld) { document.getElementById('addsku').value = fld.value; $("#upsell_error").html(""); }</script>
+            <input type="hidden" name="addsku" id="addsku" required="true" error="Please select an item." value="one" />
+            <input type="radio" id="radio1" name="skuitem" value="one" onclick="updateUpsellSku(this)" class="radiosize" checked="" /> <label for="radio1"><strong style="display: inline-block; position: relative; top: -2px; left: 5px;">DVD Version for only $149.95</strong></label>
+            <br /><br />
+            <input type="radio" id="radio2" name="skuitem" value="two" onclick="updateUpsellSku(this)" class="radiosize" /> <label for="radio2"><strong style="display: inline-block; position: relative; top: -2px; left: 5px;">Blu-Ray™ HD version for only $174.95</strong></label>
+    </p>
+    <p class="btns">
+        <a href="javascript:void(0)" bind="yes"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_yes.png" alt="Yes, I Want It!" /></a>
+        <a href="javascript:void(0)" bind="no" class="btn_no"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_no.png" alt="No, thanks" /></a>
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/arrow_upsell.png" alt="" class="ask_arrow" />
+
+    </p>
 <div class="clear"></div>
 </div>
 
-  
-  
-  
-<!-- additional 3p -->
-<div class="page_upsell">
 
 
-  <h2>Get an Additional Month's <br>
-    Food Supply <strong>and save BIG!</strong></h2>
-  <p><img src="../Content/Images/mobile/upsell_additional_1p.jpg" width="280" height="328" class="fright" />You're wise enough to prepare for emergencies with a 1 month's supply, keep in mind that is <strong>1 MONTH PER PERSON</strong> so if you have more members in your family you can add another month's food at a deep discount of 20%. Or simply get a second month's supply for yourself and save. Get your additional 1-month food supply with 3 easy payments of only $26.66 plus $19.99 
-    Shipping and handling when you add it to your purchase today!</p>
-  <p class="text-right"><label for="qty">How Many? </label>
-  <select name="qty" required error=" * Please Select Quantity">
-  <option value="">- Select -</option>
-  <option value="1">1</option> 
-  <option value="2">2</option> 
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option> </select>
-<span class="block text-right f25" style="padding-top: 6px">Limit 5 per customer</span>
-  </p>
-<span class="ask">Would you like to take <br>
-advantage of this special offer?
-<span class="btns"><a href="javascript:void(0)" bind="no"><img src="/content/images/mobile/nothanks_btn.jpg" /></a><a href="javascript:void(0)" bind="yes"><img src="/content/images/mobile/yes_btn.jpg" /></a><div class="ask_arrow"></div></span>
-</span>
+
+    <br /><br /><br /><br />
+
+    <!-- Full Collection 5p -->
+    <div class="page_upsell">
+
+  <h2 class="f37 pad20" style="line-height: 1.3em;">Upgrade to the Full 120 Episode Collection in a Beautiful Collector’s Box!</h2>
+    <h3 class="f32">Just half of the episodes of Batman will leave you needing more! Upgrade to the full collection today and receive all 120 Episodes from all Three Seasons! Get it on DVD or stunning high definition Blu-ray<span class="f18" style="position: relative; top: -8px;">™</span>.</h3>
+    <p><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_full_collection.jpg" width="553" height="328" class="block" style="margin: 0 auto;" /></p>
+  <ul>                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
+                <li>OVER 3 Hours Of ALL NEW Extras like:                    <ul style="padding-bottom: 0;">
+                        <li><strong>Hanging with Batman</strong> – A true slice of life in the words of Adam West</li>
+                        <li><strong>Holy Memorabilia Batman!</strong> – A journey into the most sought after collectibles through the eyes of 3 extraordinary collectors</li>
+                        <li><strong>Batmania Born!</strong> – Building the World of Batman - Explore the art and design behind the fiction.</li>
+                        <li><strong>Bats of the Round Table</strong>  – A candid conversation with Adam West and         his celebrity friends, chatting all things Bat ’66.</li>
+                        <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare         treat for the fans as Adam discusses his script notes on bringing Batman to life          in the first and second episodes </li>
+                        <li style="padding-bottom: 0;"><strong>Na Na Na Batman!</strong> Hollywood favorites stars and producers recount their 
+                            favorite Batman memories</li>
+                    </ul></li>
+                <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie     DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter   from Adam West <strong>PLUS</strong> your own Classic Batman Collector’s Box</li>
+            </ul>
+
+<p class="ask" style="padding-top: 0;">Would you like to take <br>
+advantage of this special offer? 
+</p>
+    <p>
+    <script type="text/javascript">function updateUpsellSku(fld) { document.getElementById('addsku').value = fld.value; $("#upsell_error").html(""); }</script>
+            <input type="hidden" name="addsku" id="addsku" required="true" error="Please select an item." value="one" />
+            <input type="radio" id="radio1" name="skuitem" value="one" onclick="updateUpsellSku(this)" class="radiosize" checked="" /> <label for="radio1"><strong style="display: inline-block; position: relative; top: -2px; left: 5px;">DVD Version for only 5 payments of <br />$29.99</strong></label>
+            <br /><br />
+            <input type="radio" id="radio2" name="skuitem" value="two" onclick="updateUpsellSku(this)" class="radiosize" /> <label for="radio2"><strong style="display: inline-block; position: relative; top: -2px; left: 5px;">Blu-Ray™ HD version for only 5 payments of <br />$34.99</strong></label>
+    </p>
+    <p class="btns">
+        <a href="javascript:void(0)" bind="yes"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_yes.png" alt="Yes, I Want It!" /></a>
+        <a href="javascript:void(0)" bind="no" class="btn_no"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_no.png" alt="No, thanks" /></a>
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/arrow_upsell.png" alt="" class="ask_arrow" />
+
+    </p>
 <div class="clear"></div>
 </div>
 
+
+
+
+
+
+    <br /><br /><br /><br />
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UPSELL - additional -->
+        <div class="page_upsell">
+            
+            <div>
+                <h2 class="pad20">Don’t be a Joker, Share the<br />
+                    Bat-Love and Save!</h2>
+
+                <p style="line-height: 36px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/upsell_additional.jpg" width="262" height="320" alt="" class="fright" style="margin: 15px 0 50px 20px;" />Who wouldn’t want to enjoy the Classic Batman & Robin collection now digitally remastered and perfectly pixelated! So do yourself and a friend or a foe a favor, Get Two!</p>
+                <p style="line-height: 36px;">Save 30%, get FREE shipping and become a Holiday Hero when you buy a second set today!</p>
+                <p style="line-height: 36px;">Now you can share and reminisce together over the hilarious hijinks, formidable foes and campy costumes that make the 1960’s Batman series a venerable classic. Save 30% today!</p>
+
+                <p style="padding-bottom: 30px;">
+                    <span class="webfont1bold f40">Qty</span> &nbsp;
+                    <select id="secondset_qty" class="select_qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </p>
+
+                <p class="ask">Would you like to take advantage of this special offer?</p>
+
+
+                <p class="btns">
+        <a href="javascript:void(0)" bind="yes"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_yes.png" alt="Yes, I Want It!" /></a>
+        <a href="javascript:void(0)" bind="no" class="btn_no"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_no.png" alt="No, thanks" /></a>
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/arrow_upsell.png" alt="" class="ask_arrow" />
+
+    </p>
+            </div>
+
+            <div class="clear"></div>
+        </div>
   
+    
+    <br /><br /><br /><br />
+
+
 
 
 <!-- fruit 1p -->
