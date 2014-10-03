@@ -450,7 +450,7 @@ namespace CSWeb.Root.UserControls
 
             #region Credit Card
 
-           // string c = txtCCNumber1.Text;
+            string c = ucTokenex.ReceivedToken;
 
             //if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
             //{
