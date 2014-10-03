@@ -72,7 +72,7 @@ namespace CSWeb.Tokenization
             action.APIKey = APIKey;
             action.TokenExID = TokenExID;
             action.EcryptedData = encryptedValue;
-            action.TokenScheme = TokenTypeEnum.nTOKEN;
+            action.TokenScheme = TokenTypeEnum.fourTOKENfour;
 
             //call to Tokenize Method
             var result = client.TokenizeFromEncryptedValue(action);
