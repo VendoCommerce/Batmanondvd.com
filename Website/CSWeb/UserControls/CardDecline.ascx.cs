@@ -306,7 +306,7 @@ namespace CSWeb.Root.UserControls
             else
                 lblExpDate.Visible = false;
 
-            string c = txtCCNumber1.Text;// +txtCCNumber2.Text + txtCCNumber3.Text + txtCCNumber4.Text;
+            string c = ucTokenex.EncryptedCcNum;//txtCCNumber1.Text;// +txtCCNumber2.Text + txtCCNumber3.Text + txtCCNumber4.Text;
             if (c.Equals(""))
             {
                 lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");

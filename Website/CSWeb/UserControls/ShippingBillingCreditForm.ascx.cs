@@ -450,7 +450,7 @@ namespace CSWeb.Root.UserControls
 
             #region Credit Card
 
-            string c = ucTokenex.ReceivedToken;
+            string c = ucTokenex.EncryptedCcNum;
 
             //if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
             //{
@@ -503,7 +503,7 @@ namespace CSWeb.Root.UserControls
             }
             else
             {
-                if (ucTokenex.ReceivedToken.Length == 0)
+                if (ucTokenex.EncryptedCcNum.Length == 0)
                 {
                     //    if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
                     //    {
@@ -514,66 +514,6 @@ namespace CSWeb.Root.UserControls
                 else
                     lblCCNumberError.Visible = false;
             }
-
-            //if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
-            //{
-            //    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-            //    lblCvvError.Visible = true;
-            //    _bError = true;
-            //}
-            //else
-            //{
-
-            //    if (CommonHelper.onlynums(txtCvv.Text) == false)
-            //    {
-            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-            //        lblCvvError.Visible = true;
-            //        _bError = true;
-            //    }
-
-            //    if ((CommonHelper.CountNums(txtCvv.Text) != 3) && (CommonHelper.CountNums(txtCvv.Text) != 4))
-            //    {
-            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-            //        lblCvvError.Visible = true;
-            //        _bError = true;
-            //    }
-            //    else
-            //        lblCvvError.Visible = false;
-
-            //    if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
-            //    {
-            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-            //        lblCCType.Visible = true;
-            //        _bError = true;
-            //    }
-            //    else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
-            //    {
-            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-            //        lblCCType.Visible = true;
-            //        _bError = true;
-
-            //    }
-            //    else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
-            //    {
-            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-            //        lblCCType.Visible = true;
-            //        _bError = true;
-
-            //    }
-            //    else if ((c[0].ToString() == "3") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.AmericanExpress.ToString()))
-            //    {
-            //        lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-            //        lblCCType.Visible = true;
-            //        _bError = true;
-
-            //    }
-            //    else
-            //    {
-            //        lblCCType.Visible = false;
-            //    }
-
-            //}
-
             #endregion
 
             return _bError;
@@ -701,7 +641,7 @@ namespace CSWeb.Root.UserControls
                 
 
                 PaymentInformation paymentDataInfo = new PaymentInformation();
-                string CardNumber = ucTokenex.ReceivedToken; //ucTokenex.GetCCNumToken();
+                string CardNumber = ucTokenex.GetCCNumToken(); //ucTokenex.ReceivedToken; //ucTokenex.GetCCNumToken();
                 paymentDataInfo.CreditCardNumber = CommonHelper.Encrypt(CardNumber);
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;
