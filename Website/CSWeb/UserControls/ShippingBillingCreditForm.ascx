@@ -326,9 +326,7 @@
                                 <img src="//d1kg9stb0ddjcv.cloudfront.net/images/a3/formcerts.png" />
                             </div>
                             
-                            <input id="Button1" type="button" value="button"  onclick="return encryptCCnumber();"/>
-                            
-                        </div>
+                            &nbsp;</div>
                     </td>
                 </tr>
             </table>

@@ -30,12 +30,12 @@
                     if (xhr.readyState == 4 && xhr.status == 200) {
                         var responseObject = JSON.parse(xhr.responseText);
                         document.getElementById("hlToken").value = responseObject.Token;
-                        alert(responseObject.Token);
+                        //alert(responseObject.Token);
                     }
 
                     //__doPostBack('bscfShippingBillingCreditForm$imgBtn', '');
             } catch (e) {
-                    alert(e.message);
+                    //alert(e.message);
                 document.getElementById("lblCCNumberError").value = e;
                 return false;
             } 
