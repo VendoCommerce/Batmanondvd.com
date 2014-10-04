@@ -20,7 +20,7 @@
                 
                 // construct an HTTP request
                 var xhr = new XMLHttpRequest({ mozSystem: true });
-                xhr.open('POST', 'https://test-api.tokenex.com/TokenServices.svc/REST/TokenizeFromEncryptedValue', true);
+                xhr.open('POST', 'https://test-api.tokenex.com/TokenServices.svc/REST/TokenizeFromEncryptedValue',false);
                 xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
                 xhr.setRequestHeader('Accept', 'application/json; charset=UTF-8');
 
@@ -30,9 +30,12 @@
                     if (xhr.readyState == 4 && xhr.status == 200) {
                         var responseObject = JSON.parse(xhr.responseText);
                         document.getElementById("hlToken").value = responseObject.Token;
+                        alert(responseObject.Token);
                     }
 
+                    //__doPostBack('bscfShippingBillingCreditForm$imgBtn', '');
             } catch (e) {
+                    alert(e.message);
                 document.getElementById("lblCCNumberError").value = e;
                 return false;
             } 

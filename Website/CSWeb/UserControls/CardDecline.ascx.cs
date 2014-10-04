@@ -70,7 +70,7 @@ namespace CSWeb.Root.UserControls
                 rfvCCType.ErrorMessage = ResourceHelper.GetResoureValue("CCTypeErrorMsg");
                 rfvExpMonth.ErrorMessage = ResourceHelper.GetResoureValue("ExpDateMonthErrorMsg") + "<br/>";
                 rfvExpYear.ErrorMessage = ResourceHelper.GetResoureValue("ExpDateYearErrorMsg");
-                rfvCVV.ErrorMessage = ResourceHelper.GetResoureValue("CVVErrorMsg");
+                //rfvCVV.ErrorMessage = ResourceHelper.GetResoureValue("CVVErrorMsg");
                 lblCCNumberError.Text = ResourceHelper.GetResoureValue("SummaryCCDecline");
             }
 
@@ -327,29 +327,29 @@ namespace CSWeb.Root.UserControls
                     lblCCNumberError.Visible = false;
             }
 
-            if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
-            {
-                lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                lblCvvError.Visible = true;
-                _bError = true;
-            }
-            else
-            {
+            //if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
+            //{
+            //    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //    lblCvvError.Visible = true;
+            //    _bError = true;
+            //}
+            //else
+            //{
 
-                if (CommonHelper.onlynums(txtCvv.Text) == false)
-                {
-                    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                    lblCvvError.Visible = true;
-                    _bError = true;
-                }
-                if ((CommonHelper.CountNums(txtCvv.Text) != 3) && (CommonHelper.CountNums(txtCvv.Text) != 4))
-                {
-                    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                    lblCvvError.Visible = true;
-                    _bError = true;
-                }
-                else
-                    lblCvvError.Visible = false;
+            //    if (CommonHelper.onlynums(txtCvv.Text) == false)
+            //    {
+            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //        lblCvvError.Visible = true;
+            //        _bError = true;
+            //    }
+            //    if ((CommonHelper.CountNums(txtCvv.Text) != 3) && (CommonHelper.CountNums(txtCvv.Text) != 4))
+            //    {
+            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //        lblCvvError.Visible = true;
+            //        _bError = true;
+            //    }
+            //    else
+            //        lblCvvError.Visible = false;
 
                 if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
                 {
@@ -383,7 +383,7 @@ namespace CSWeb.Root.UserControls
                     lblCCType.Visible = false;
                 }
 
-            }
+            //}
             return _bError;
 
         }
@@ -440,7 +440,7 @@ namespace CSWeb.Root.UserControls
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;
                 paymentDataInfo.CreditCardExpired = new DateTime(int.Parse(ddlExpYear.SelectedValue), int.Parse(ddlExpMonth.SelectedValue), 1);
-                paymentDataInfo.CreditCardCSC = txtCvv.Text;
+                paymentDataInfo.CreditCardCSC = "";// txtCvv.Text;
 
                 clientData.PaymentInfo = paymentDataInfo;
 

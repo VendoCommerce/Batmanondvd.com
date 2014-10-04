@@ -222,17 +222,6 @@
                     <asp:ListItem Value="2020">2020</asp:ListItem>
                 </asp:DropDownList>
             </div>    
-                    <div class="form_line clearfix">
-             <div class="error-1">
-                    <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server" Display="Dynamic" />
-                    <asp:Label ID="lblCvvError" runat="server" Visible="false"></asp:Label></div>
-                <label class="label-1">
-                    Card Verification*
-                </label>
-               
-                <asp:TextBox ID="txtCvv" runat="server" CssClass="text-2" MaxLength="4" placeholder="CVV"></asp:TextBox>
-                        <a href="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/cvv.png" class="cvv" style="position: relative; left: 32px;">What is this?</a>
-            </div>
                         <div class="form_line clearfix">
                   <div class="error-1">
                     <asp:RequiredFieldValidator ID="rfvCCType" runat="server" Display="Dynamic"

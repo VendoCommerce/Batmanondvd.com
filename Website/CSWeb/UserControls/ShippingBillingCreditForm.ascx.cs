@@ -75,7 +75,7 @@ namespace CSWeb.Root.UserControls
                 rfvCreditCard.ErrorMessage = ResourceHelper.GetResoureValue("CCErrorMsg");
                 rfvExpMonth.ErrorMessage = ResourceHelper.GetResoureValue("ExpDateMonthErrorMsg") + "<br/>";
                 rfvExpYear.ErrorMessage = ResourceHelper.GetResoureValue("ExpDateYearErrorMsg");
-                rfvCVV.ErrorMessage = ResourceHelper.GetResoureValue("CVVErrorMsg");
+                //rfvCVV.ErrorMessage = ResourceHelper.GetResoureValue("CVVErrorMsg");
                 rfvCCType.ErrorMessage = ResourceHelper.GetResoureValue("CCTypeErrorMsg");
 
                 txtPhoneNumber1.Attributes.Add("onkeyup", "return autoTab(this, 3, event);");
@@ -706,7 +706,7 @@ namespace CSWeb.Root.UserControls
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;
                 paymentDataInfo.CreditCardExpired = new DateTime(int.Parse(ddlExpYear.SelectedValue), int.Parse(ddlExpMonth.SelectedValue), 1);
-                paymentDataInfo.CreditCardCSC = txtCvv.Text;
+                paymentDataInfo.CreditCardCSC = "";// txtCvv.Text;
 
                 clientData.PaymentInfo = paymentDataInfo;
 

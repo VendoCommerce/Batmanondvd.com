@@ -332,15 +332,6 @@
                     <asp:Label ID="lblCCNumberError" runat="server" Visible="false" ClientIDMode="Static"></asp:Label></div>
                <asp:TextBox ID="txtCCNumber1" runat="server" MaxLength="16" ClientIDMode="Static"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
             </div>
-            <div class="form_line clearfix">
-                <label class="label-3">
-                    Card Verification #* 
-                </label>
-                <div class="error-2">
-                    <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server" Display="Dynamic" />
-                    <asp:Label ID="lblCvvError" runat="server" Visible="false"></asp:Label></div>
-                <asp:TextBox ID="txtCvv" runat="server" CssClass="text-4" MaxLength="4"></asp:TextBox>
-            </div>
           
             <div class="form_line_btn">
                 <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/try_it_now_btn.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />

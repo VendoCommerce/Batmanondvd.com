@@ -74,7 +74,7 @@ namespace CSWeb.Mobile.UserControls
                 //rfvCreditCard.ErrorMessage = ResourceHelper.GetResoureValue("CCErrorMsg");
                 rfvExpMonth.ErrorMessage = ResourceHelper.GetResoureValue("ExpDateMonthErrorMsg") + "<br/>";
                 rfvExpYear.ErrorMessage = ResourceHelper.GetResoureValue("ExpDateYearErrorMsg");
-                rfvCVV.ErrorMessage = ResourceHelper.GetResoureValue("CVVErrorMsg");
+                //rfvCVV.ErrorMessage = ResourceHelper.GetResoureValue("CVVErrorMsg");
                 rfvCCType.ErrorMessage = ResourceHelper.GetResoureValue("CCTypeErrorMsg");
             }
 
@@ -390,7 +390,7 @@ namespace CSWeb.Mobile.UserControls
             }
             else
             {
-                if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
+                if ((c.ToString() != "4444333322221111"))// && (txtCvv.Text.IndexOf("147114711471") == -1))
                 {
                     if (!CommonHelper.ValidateCardNumber(c))
                     {
@@ -403,30 +403,30 @@ namespace CSWeb.Mobile.UserControls
                 }
             }
 
-            if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
-            {
-                lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                lblCvvError.Visible = true;
-                _bError = true;
-            }
-            else
-            {
+            //if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
+            //{
+            //    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //    lblCvvError.Visible = true;
+            //    _bError = true;
+            //}
+            //else
+            //{
 
-                if (CommonHelper.onlynums(txtCvv.Text) == false)
-                {
-                    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                    lblCvvError.Visible = true;
-                    _bError = true;
-                }
+            //    if (CommonHelper.onlynums(txtCvv.Text) == false)
+            //    {
+            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //        lblCvvError.Visible = true;
+            //        _bError = true;
+            //    }
 
-                if ((CommonHelper.CountNums(txtCvv.Text) != 3) && (CommonHelper.CountNums(txtCvv.Text) != 4))
-                {
-                    lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
-                    lblCvvError.Visible = true;
-                    _bError = true;
-                }
-                else
-                    lblCvvError.Visible = false;
+            //    if ((CommonHelper.CountNums(txtCvv.Text) != 3) && (CommonHelper.CountNums(txtCvv.Text) != 4))
+            //    {
+            //        lblCvvError.Text = ResourceHelper.GetResoureValue("CVVErrorMsg");
+            //        lblCvvError.Visible = true;
+            //        _bError = true;
+            //    }
+            //    else
+            //        lblCvvError.Visible = false;
 
                 if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
                 {
@@ -460,7 +460,7 @@ namespace CSWeb.Mobile.UserControls
                     lblCCType.Visible = false;
                 }
 
-            }
+            //}
 
             #endregion
 
@@ -555,7 +555,7 @@ namespace CSWeb.Mobile.UserControls
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;
                 paymentDataInfo.CreditCardExpired = new DateTime(int.Parse(ddlExpYear.SelectedValue), int.Parse(ddlExpMonth.SelectedValue), 1);
-                paymentDataInfo.CreditCardCSC = txtCvv.Text;
+                paymentDataInfo.CreditCardCSC = "";//txtCvv.Text;
 
                 clientData.CustomerInfo = CustData;
                 clientData.PaymentInfo = paymentDataInfo;

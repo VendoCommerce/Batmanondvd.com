@@ -294,18 +294,6 @@
 
                             </div>
 
-                            <div class="form_line clearfix" hidden="hidden">
-                                <div class="error-1">
-                                    <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server" Display="Dynamic" />
-                                    <asp:Label ID="lblCvvError" runat="server" Visible="false"></asp:Label>
-                                </div>
-                                <label class="label-1">
-                                    Card Verification* 
-                                </label>
-
-                                <asp:TextBox ID="txtCvv" runat="server" CssClass="text-2" MaxLength="4"></asp:TextBox>
-                                <a class="cvv f12" href="//d1kg9stb0ddjcv.cloudfront.net/images/cvv.png" style="color: #00a9d1; display: inline-block; margin: 6px 0 0 10px;">What's this?</a>
-                            </div>
                             <div class="form_line clearfix">
                                 <div class="error-1">
                                     <asp:RequiredFieldValidator ID="rfvExpMonth" runat="server" Display="Dynamic"
@@ -337,6 +325,9 @@
                             <div class="form_line_guarantee clearfix" style="display: none;">
                                 <img src="//d1kg9stb0ddjcv.cloudfront.net/images/a3/formcerts.png" />
                             </div>
+                            
+                            <input id="Button1" type="button" value="button"  onclick="return encryptCCnumber();"/>
+                            
                         </div>
                     </td>
                 </tr>
