@@ -73,7 +73,7 @@
         <div class="form_line clearfix">
     <div class="error-2">
         <asp:Label ID="Label2" ForeColor="Red" runat="server" Text="" Visible="false"></asp:Label></div>
-    <label class="label-2">
+    <label class="label-2" style="width: 600px; padding-bottom: 8px;">
         Do you want to review your shipping address?</label><div
             class="clear">
         </div>
@@ -184,16 +184,13 @@
                         <asp:Label ID="Label1" runat="server" Visible="false">
                         </asp:Label>
                     </div>
-                    <label class="label-1">
-                        First Name*</label>
-                    <asp:TextBox ID="TextBox1" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
                 </div>
                          
         </asp:Panel>
         <div class="form_line clearfix">
     <div class="error-2">
         <asp:Label ID="LabelError" ForeColor="Red" runat="server" Text="" Visible="false"></asp:Label></div>
-    <label class="label-2">
+    <label class="label-2" style="width: 600px; padding-top: 12px; padding-bottom: 8px;">
         Do you want to review your billing address?</label><div
             class="clear">
         </div>
@@ -334,7 +331,7 @@
             </div>
           
             <div class="form_line_btn">
-                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/try_it_now_btn.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
+                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/btn_tryitnow.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
   
         </div>
