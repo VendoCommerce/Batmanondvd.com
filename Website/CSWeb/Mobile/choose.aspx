@@ -108,9 +108,10 @@
         </div>
     </div>
     <br />
+    <span style="display: block; padding: 0 0 10px 20px; color: #f00;"><asp:Label ID="lblPrompt" runat="server"></asp:Label></span>
     <asp:LinkButton ID="imgContinue" runat="server" OnClick="imgContinue_Click"><img class="prod_continue" src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_continue.png" /></asp:LinkButton>
     <p class="f24" style="line-height: 32px; padding-bottom: 90px;"><strong>Offer Details: </strong> You will be charged today for your first of 5 monthly payments of $19.99. Applicable taxes will be included in your first payment (this should not display if the consumer selects a 1-pay option). Shipping is FREE. If you are not satisfied with your purchase for any reason, simply return it within 60 days to receive a full refund. Restrictions may apply. Please refer to our Return Policy (link to Return Policy page)</p>
-    <asp:Label ID="lblPrompt" runat="server"></asp:Label>
+    
 
 
 

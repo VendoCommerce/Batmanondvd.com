@@ -32,10 +32,12 @@ function Clickheretoprint()
             <i class="icon-print"></i> <span class="scored">Printer Friendly Version</span></a>
   </div>
 
-<p class="lh f48 black webfont1bold">Your order has been placed!</p>
-<p class="webfont1 f22 pad20">Your order number is <asp:Literal ID="ltOrderId" runat="server"></asp:Literal>.  You will receive a shipping confirmation once your order has shipped.</p>
+<p class="lh f38 black webfont1bold">Your BAT-TASTIC order has been placed!</p>
+<p class="webfont1 f22" style="padding-bottom: 30px;"><strong>Thank You and Enjoy Your Purchase!</strong> Your order number is <asp:Literal ID="ltOrderId" runat="server"></asp:Literal>.  <br />
+    You will receive a shipping confirmation once your order has shipped.</p>
 
-  
+  <p class="webfont1 f18 pad0 ital">All products should be expected to arrive on or before November 11th 2014.</p>
+
                 <div class="clear"></div>
 
  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="receipt_table1">
@@ -53,13 +55,15 @@ function Clickheretoprint()
               <asp:DataList runat="server" ID="dlordersList" RepeatLayout="Flow" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <tr>
-                             <td valign="top" style="font-size: 12px; line-height: 16px;">
-                            
-
+                            <td valign="top" style="font-size: 12px; line-height: 16px;">
                                 <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                             </td>
-                             <td valign="top" class="black" style="padding-right: 190px; text-align: right;">
-                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%></td>
+                            <td valign="top" class="pad0 black" style="width: 408px;">
+                               &nbsp;
+                            </td>
+                            <td valign="top" class="black" style="padding-right: 190px; text-align: right;">
+                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%>
+                            </td>
                            
                         </tr>
                     </ItemTemplate>

@@ -26,7 +26,7 @@
                              <td width="76%" valign="top" style="padding-bottom: 20px">
                                 <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                             </td>
-                             <td width="12%" valign="top">
+                             <td width="24%" valign="top">
                                 $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%></td>
                            
                         </tr>
@@ -36,9 +36,6 @@
            
             <asp:Literal ID="LiteralTableRows" runat="server"></asp:Literal>
           <tr class="horzline2">
-                <td valign="top">&nbsp;
-                    
-                </td>
                 <td valign="top">
                     Subtotal:<br />
                     S &amp; H:
@@ -79,7 +76,7 @@
         </div>
     <asp:RadioButtonList ID="rblUpdateShippingAddress" runat="server" OnSelectedIndexChanged="rblUpdateShippingAddress_CheckedChanged"
         CssClass="checkbox-right" AutoPostBack="true" RepeatDirection="Horizontal" TabIndex="124">
-        <asp:ListItem Value="true">Yes</asp:ListItem>
+        <asp:ListItem Value="true">Yes</asp:ListItem> 
         <asp:ListItem Value="false" Selected="True">No</asp:ListItem>
     </asp:RadioButtonList>
 </div>
@@ -191,12 +188,11 @@
     <div class="error-2">
         <asp:Label ID="LabelError" ForeColor="Red" runat="server" Text="" Visible="false"></asp:Label></div>
     <label class="label-2" style="width: 600px; padding-top: 12px; padding-bottom: 8px;">
-        Do you want to review your billing address?</label><div
-            class="clear">
-        </div>
+        Do you want to review your billing address?</label>
+            <div class="clear"></div>
     <asp:RadioButtonList ID="rblUpdateBillingAddress" runat="server" OnSelectedIndexChanged="rblUpdateBillingAddress_CheckedChanged"
         CssClass="checkbox-right" AutoPostBack="true" RepeatDirection="Horizontal" TabIndex="124">
-        <asp:ListItem Value="true">Yes</asp:ListItem>
+        <asp:ListItem Value="true">Yes</asp:ListItem> 
         <asp:ListItem Value="false" Selected="True">No</asp:ListItem>
     </asp:RadioButtonList>
 </div>
@@ -274,7 +270,7 @@
                     <asp:TextBox ID="txtZipCode" runat="server" MaxLength="7" CssClass="text-1"></asp:TextBox>
                 </div>
             </asp:Panel>
-            <div class="form_line clearfix">
+            <div class="form_line clearfix" style="padding-top: 12px;">
                 <label class="label-3">
                     Credit Card*</label>
                 <div class="error-2">

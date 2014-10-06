@@ -313,7 +313,7 @@
 
                             <div class="form_line clearfix" style="padding: 16px 0 30px 114px;">
                                 <input type="checkbox" id="send_offers" style="float: left; margin: 0 6px 10px 0;" />
-                                <label class="label-3">Yes, I would like to receive updates and <br />
+                                <label class="label-3" for="send_offers">Yes, I would like to receive updates and <br />
                                     special offers from Warner Brothers.
                                 </label>
                             </div>

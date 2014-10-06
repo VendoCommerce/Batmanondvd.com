@@ -294,6 +294,11 @@ p {padding-bottom: 20px;}
     margin-right: 9px;
 }
 
+.footerlogos_fox1 {display: inline-block; margin-right: 6px;}
+.footerlogos_fox2 {display: none;}
+#cart .footerlogos_fox1 {display: none;}
+#cart .footerlogos_fox2 {display: inline-block; margin-right: 6px;}
+
 .content_logo {
     float: left;
     width: 218px;
@@ -928,13 +933,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
 .printfriendly {
 	float: right;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	margin-right: 90px;
+	font-size: 12px;
+	margin-right: 60px;
 	position: relative;
 	text-align: right;
 	text-transform: uppercase;
-	top: 36px;
-	width: 250px;
+	top: 20px;
+	width: 200px;
 }
 .printfriendly a {
 	color: #737373;
@@ -2036,4 +2041,12 @@ div.rowheader .receipt_row1 {
   position: relative;
   top:  -4px;
   left: 8px;
+}
+
+#ucCardDecline_rblUpdateShippingAddress input, #ucCardDecline_rblUpdateBillingAddress input {
+    margin-right: 4px;
+}
+
+#ucCardDecline_rblUpdateShippingAddress label, #ucCardDecline_rblUpdateBillingAddress label {
+    margin-right: 10px;
 }

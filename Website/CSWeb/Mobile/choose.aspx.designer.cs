@@ -40,15 +40,6 @@ namespace CSWeb.Mobile {
         protected global::System.Web.UI.WebControls.RadioButton rbComplete;
         
         /// <summary>
-        /// imgContinue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton imgContinue;
-        
-        /// <summary>
         /// lblPrompt control.
         /// </summary>
         /// <remarks>
@@ -56,5 +47,14 @@ namespace CSWeb.Mobile {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPrompt;
+        
+        /// <summary>
+        /// imgContinue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton imgContinue;
     }
 }

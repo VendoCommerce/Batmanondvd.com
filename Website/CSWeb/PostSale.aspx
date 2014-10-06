@@ -22,6 +22,7 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
 
+        <!--#include file="header_upsell.html"-->
     <asp:Panel ID="pnlManual" runat="server">
     
         <!-- show the content with yes or no button to process logic -->
@@ -29,7 +30,7 @@
     </asp:Panel>
 
     <div runat="server" id="mainContainer">
-        <!--#include file="header_upsell.html"-->
+        
     </div>
     <asp:Button ID="btnYes" runat="server" Text="Button" OnClick="btnYes_OnClick" Visible="false" />
     <asp:Button ID="btnNo" runat="server" Text="Button" OnClick="btnNo_OnClick" Visible="false" />
