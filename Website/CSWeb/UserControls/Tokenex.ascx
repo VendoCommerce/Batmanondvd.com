@@ -2,7 +2,7 @@
 
 <header>
     <!--TokenEx JavaScript file-->
-    <script type="text/javascript" src="https://test-api.tokenex.com/inpage/js/TokenEx-Lite.js"></script>
+    <script type="text/javascript" src="<%=TokenXURL %>/inpage/js/TokenEx-Lite.js"></script>
     <script type="text/javascript">
         function encryptCCnumber() {
             try {
@@ -44,12 +44,7 @@
 </header>
 
 <!--This element contains Tekonex public key to be use to perform the encryption.-->
-<asp:HiddenField ID="TxEncryptionKey" runat="server" ClientIDMode="Static" Value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvWpIQFjQQCPpaIlJKpeg
-						irp5kLkzLB1AxHmnLk73D3TJbAGqr1QmlsWDBtMPMRpdzzUM7ZwX3kzhIuATV4Pe
-						7RKp3nZlVmcrT0YCQXBrTwqZNh775z58GP2kZs+gVfNqBampJPzSB/hB62KkByhE
-						Cn6grrRjiAVwJyZVEvs/2vrxaEpO+aE16emtX12RgI5JdzdOiNyZEQteU6zRBRJE
-						ocPWVxExaOpVVVJ5+UnW0LcalzA+lRGRTrQJ5JguAPiAOzRPTK/lYFFpCAl/F8wt
-						oAVG1c8zO2NcQ0Pko+fmeidRFxJ/did2btV+9Mkze3mBphwFmvnxa35LF+Cs/XJHDwIDAQAB" />
+<asp:HiddenField ID="TxEncryptionKey" runat="server" ClientIDMode="Static" Value="<%=TokenXEncryptionKey %>" />
 <!--This element contains Tekonex ApiKey to be use to perform the encryption.-->
 
 <asp:HiddenField ID="hlApiKey" runat="server" ClientIDMode="Static" Value="mUyKbhAEKF6jG6EAWXvx" />

@@ -37,9 +37,11 @@ namespace CSWeb.Tokenization
                 GatewayLogin = sitePreference.AttributeValues["gatewaylogin"].Value;
             if (sitePreference.AttributeValues["gatewaypassword"] != null)
                 GatewayPassword = sitePreference.AttributeValues["gatewaypassword"].Value;
-            //Load Tokenex credentials from web.config
-            APIKey = ConfigurationManager.AppSettings["APIKey"];
-            TokenExID = ConfigurationManager.AppSettings["TokenExID"];
+            //Load Tokenex credentials from web.config            
+            if (sitePreference.AttributeValues["tokenxapikey"] != null)
+                APIKey = sitePreference.AttributeValues["tokenxapikey"].Value;
+            if (sitePreference.AttributeValues["tokenexid"] != null)
+                TokenExID = ConfigurationManager.AppSettings["tokenexid"];
         }
 
         /// <summary>
