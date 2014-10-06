@@ -42,10 +42,10 @@ function Clickheretoprint()
 
  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="receipt_table1">
 <tr class="horzline1">
-<td valign="top" class="pad0 black" style="width: 242px;">
+<td valign="top" class="pad0 black" style="width: 600px;">
                     <strong>&nbsp;</strong>
                 </td>
-                <td valign="top" class="pad0 black" style="width: 408px;">
+                <td valign="top" class="pad0 black" style="width: 50px;">
                    &nbsp;
                 </td>
                 <td valign="top" class="pad0 black" style="width: 268px;">
@@ -58,7 +58,7 @@ function Clickheretoprint()
                             <td valign="top" style="font-size: 12px; line-height: 16px;">
                                 <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                             </td>
-                            <td valign="top" class="pad0 black" style="width: 408px;">
+                            <td valign="top" class="pad0 black">
                                &nbsp;
                             </td>
                             <td valign="top" class="black" style="padding-right: 190px; text-align: right;">
