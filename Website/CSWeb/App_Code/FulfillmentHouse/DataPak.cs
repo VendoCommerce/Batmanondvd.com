@@ -383,7 +383,7 @@ namespace CSWeb.FulfillmentHouse
             string req = new DataPak().GetRequest(orderId, false, false); // Posting order to OMX
             string res = CommonHelper.HttpPost(config.Attributes["transactionUrl"].Value, req);
             Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
-            orderAttributes.Add("Request", new CSBusiness.Attributes.AttributeValue(req));
+            //orderAttributes.Add("Request", new CSBusiness.Attributes.AttributeValue(req));
             orderAttributes.Add("Response", new CSBusiness.Attributes.AttributeValue(res));
 
             XmlDocument doc = new XmlDocument();
@@ -394,12 +394,12 @@ namespace CSWeb.FulfillmentHouse
 
             if (xnResult.InnerText.ToLower().Equals("001"))
             {
-                CSResolve.Resolve<IOrderService>().SaveOrderInfo(orderId, 2, req.ToLower().Replace("utf-8", "utf-16"), res.ToLower().Replace("utf-8", "utf-16"));
+                //CSResolve.Resolve<IOrderService>().SaveOrderInfo(orderId, 2, req.ToLower().Replace("utf-8", "utf-16"), res.ToLower().Replace("utf-8", "utf-16"));
                 CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderId, orderAttributes, 2);
             }
             else
             {
-                CSResolve.Resolve<IOrderService>().SaveOrderInfo(orderId, 5, req.ToLower().Replace("utf-8", "utf-16"), res.ToLower().Replace("utf-8", "utf-16"));
+                //CSResolve.Resolve<IOrderService>().SaveOrderInfo(orderId, 5, req.ToLower().Replace("utf-8", "utf-16"), res.ToLower().Replace("utf-8", "utf-16"));
                 CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderId, orderAttributes, 5);
                 //sending email to admins
                 OrderHelper.SendEmailToAdmins(orderId);
