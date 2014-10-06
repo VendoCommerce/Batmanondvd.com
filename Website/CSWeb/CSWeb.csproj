@@ -417,6 +417,7 @@
     <None Include="Admin\css\fonts\fontawesome\FontAwesome.otf" />
     <None Include="Admin\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.otf" />
     <None Include="Admin\css\fonts\glyphicons.pro\glyphicons-regular.otf" />
+    <Content Include="appsettings.config.token" />
     <None Include="Properties\PublishProfiles\batman.pubxml" />
     <None Include="Properties\PublishProfiles\jhnjn.pubxml" />
     <None Include="Service References\HitLinks\CSWeb.HitLinks.Data.datasource">
@@ -712,6 +713,7 @@
     <None Include="Styles\fontawesome\scss\_mixins.scss" />
     <None Include="Styles\fontawesome\scss\_path.scss" />
     <None Include="Styles\fontawesome\scss\_variables.scss" />
+    <Content Include="Web.config.token" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="400.aspx.cs">
