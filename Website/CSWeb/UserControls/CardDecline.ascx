@@ -330,7 +330,7 @@
                <asp:TextBox ID="txtCCNumber1" runat="server" MaxLength="16" ClientIDMode="Static"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
             </div>
           
-            <div class="form_line_btn">
+            <div style="padding-top: 15px;">
                 <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/btn_tryitnow.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
   
