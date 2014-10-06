@@ -59,7 +59,7 @@ namespace CSWeb
 
             //Save gateway transaction
             Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
-            orderAttributes.Add("AuthRequest", new CSBusiness.Attributes.AttributeValue(_response.GatewayRequestRaw));
+            //orderAttributes.Add("AuthRequest", new CSBusiness.Attributes.AttributeValue(_response.GatewayRequestRaw));
             orderAttributes.Add("AuthResponse", new CSBusiness.Attributes.AttributeValue(_response.GatewayResponseRaw));
             CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderData.OrderId, orderAttributes, null);
 
