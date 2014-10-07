@@ -32,7 +32,7 @@
             <uc2:Tokenex ID="ucTokenex" runat="server" />
 
 
-            <h3 class="webfont1bold arrow_down_hdr pad6">Where Would You LIke Us To Send Your Order?</h3>
+            <h3 class="webfont1bold arrow_down_hdr pad6">Where Would You Like Us To Send Your Order?</h3>
             <div class="horizontal_dots" style="margin-bottom: 20px;"></div>
 
             <table style="width: 100%;">

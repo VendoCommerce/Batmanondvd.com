@@ -44,7 +44,7 @@
                         jwplayer('ctavideo').setup({
                             file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/cta_tmp.mp4',
                             autostart: false,
-                            image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_1.jpg',
+                            image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_home.jpg',
                             controls: true,
                             width: 332, height: 250,
                             stretching: 'exactfit',
@@ -94,7 +94,7 @@
     </div>
     <div class="home2bottom">
         <div style="position: absolute; top: 274px; left: 68px; width: 334px;">
-            <h2 class="f36 white">Holy Special Delivery!</h2>
+            <h2 class="f36 white pad0">Holy Special Delivery!</h2>
             <h3 class="white">Don't Wait, Get the Collection Now!</h3>
         </div>
         
@@ -111,13 +111,49 @@
         </div>
         <div class="home3b">
             <div class="slideshow"
-                data-cycle-timeout="0"
+                data-cycle-timeout="5000"
                 data-cycle-slides="> div"
                 data-cycle-next="#clipnext"
                 data-cycle-prev="#clipprev">
 
-                <div><img src="//d1kg9stb0ddjcv.cloudfront.net/images/homeslide_1.jpg" /></div>
-                <div><img src="//d1kg9stb0ddjcv.cloudfront.net/images/homeslide_2tmp.jpg" /></div>
+                <div><img src="//d1kg9stb0ddjcv.cloudfront.net/images/homeslide_1.jpg" class="block" />
+                    <div style="width: 387px; padding-top: 18px;">
+                <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
+                <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
+our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+            </div>
+                </div>
+                <div><img src="//d1kg9stb0ddjcv.cloudfront.net/images/homeslide_2.jpg" class="block" />
+                    <div style="width: 387px; padding-top: 18px;">
+                <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
+                <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
+our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+            </div>
+                </div>
+                
+                <div><img src="//d1kg9stb0ddjcv.cloudfront.net/images/homeslide_3.jpg" class="block" />
+                    <div style="width: 387px; padding-top: 18px;">
+                <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
+                <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
+our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+            </div>
+                </div>
+                
+                <div><img src="//d1kg9stb0ddjcv.cloudfront.net/images/homeslide_4.jpg" class="block" />
+                    <div style="width: 387px; padding-top: 18px;">
+                <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
+                <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
+our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+            </div>
+                </div>
+                
+                <div><img src="//d1kg9stb0ddjcv.cloudfront.net/images/homeslide_5.jpg" class="block" />
+                    <div style="width: 387px; padding-top: 18px;">
+                <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
+                <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
+our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+            </div>
+                </div>
 
             </div>
             <a href="#" id="clipprev">
@@ -125,11 +161,7 @@
             <a href="#" id="clipnext">
                 <img src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_slider_next.png" alt="Next" class="block" /></a>
 
-            <div style="width: 387px; padding-top: 18px;">
-                <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
-                <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
-            </div>
+            
             
         </div>
     </div>

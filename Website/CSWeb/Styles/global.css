@@ -3,7 +3,22 @@
 /* REF FONT STUFF */
 
 /* add fontface fonts here */
-/* add fontface fonts here */
+@font-face{ 
+	font-family: 'OpenSansCondensed';
+	src: url('/fonts/OpenSans-CondLight-webfont.eot');
+	src: url('/fonts/OpenSans-CondLight-webfont.eot?iefix') format('eot'),
+	     url('/fonts/OpenSans-CondLight-webfont.woff') format('woff'),
+	     url('/fonts/OpenSans-CondLight-webfont.ttf') format('truetype'),
+	     url('/fonts/OpenSans-CondLight-webfont.svg#webfont') format('svg');
+}
+@font-face{ 
+	font-family: 'OpenSansCondensedBold';
+	src: url('/fonts/OpenSans-CondBold-webfont.eot');
+	src: url('/fonts/OpenSans-CondBold-webfont.eot?iefix') format('eot'),
+	     url('/fonts/OpenSans-CondBold-webfont.woff') format('woff'),
+	     url('/fonts/OpenSans-CondBold-webfont.ttf') format('truetype'),
+	     url('/fonts/OpenSans-CondBold-webfont.svg#webfont') format('svg');
+}
 
 a {
 	color: #0569db;
@@ -17,8 +32,8 @@ img {
 	border: none;	
 }
 
-.webfont1 {font-family: 'Open Sans Condensed', sans-serif !important;}
-.webfont1bold {font-family: 'Open Sans Condensed', sans-serif !important; font-weight: 700 !important;}
+.webfont1 {font-family: 'OpenSansCondensed', sans-serif !important;}
+.webfont1bold {font-family: 'OpenSansCondensedBold', sans-serif !important; font-weight: 700 !important;}
 /* floats */
 
 .fleft {float:left;}
@@ -165,7 +180,7 @@ p {padding-bottom: 20px;}
     top: 68px;
     left: 774px;
     text-transform: uppercase;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-size: 34px;
     color: #fff;
     text-decoration: none;
@@ -207,12 +222,33 @@ p {padding-bottom: 20px;}
     top: 5px;
     left: 763px;
 }
+.header_upsell .asotv {
+    position: absolute;
+    top: 8px;
+    left: 837px;
+}
 .header_cart .phone {
     position: absolute;
     top: 14px;
     left: 805px;
     color: #fff;
     font-size: 12px;
+}
+
+.header .nav-logo_wb {
+    position: absolute;
+    top: 10px;
+    left: 668px;
+}
+.header_cart .nav-logo_wb {
+    position: absolute;
+    top: 5px;
+    left: 717px;
+}
+.header_upsell .nav-logo_wb {
+    position: absolute;
+    top: 7px;
+    left: 792px;
 }
 
 .container {
@@ -229,26 +265,26 @@ p {padding-bottom: 20px;}
 }
 
 #cart h2 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-weight: 700;
     font-size: 44px;
 }
 
 #cart h3 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 300;
+    font-family: 'OpenSansCondensed', sans-serif;
+    /*font-weight: 300;*/
     font-size: 22px;
 }
 
 #cart h4 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-weight: 700;
     font-size: 18px;
     padding-bottom: 20px;
 }
 
 .cart_table h4 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-weight: 700;
     font-size: 18px;
 }
@@ -263,8 +299,8 @@ p {padding-bottom: 20px;}
 
 .footer p {
 	font-size: 12px;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 300;
+    font-family: 'OpenSansCondensed', sans-serif;
+    /*font-weight: 300;*/
 	padding-bottom: 10px;
 }
 
@@ -315,9 +351,9 @@ p {padding-bottom: 20px;}
 }
 
 .content_hdr h3 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensed', sans-serif;
     font-size: 22px;
-    font-weight: 300;
+    /*font-weight: 300;*/
     padding-bottom: 11px;
 }
 
@@ -340,7 +376,7 @@ p {padding-bottom: 20px;}
 .top_promo_list {
     padding-bottom: 6px;
     font-size: 24px;
-    font-family: 'Open Sans Condensed', arial, sans-serif;
+    font-family: 'OpenSansCondensed', arial, sans-serif;
     margin-left: 13px;
     line-height: 1.2em;
 }
@@ -405,7 +441,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 .home3b #clipprev {
     position: absolute;
     top: 144px;
-    left: -20px;;
+    left: -23px;
 }
 .home3b #clipnext {
     position: absolute;
@@ -431,7 +467,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 }
 
 .container .cast_member h3 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-size: 28px;
     color: #74af54;
     line-height: 1em;
@@ -442,7 +478,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 }
 
 .container .cast_member h4 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-size: 22px;
     line-height: 1.3em;
     font-weight: 700;
@@ -482,7 +518,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 
 .container h2 {
     font-size: 46px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-weight: 700;
     padding: 0 0 14px 0;
     line-height: 1em;
@@ -490,15 +526,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 }
 
 .container h3 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensed', sans-serif;
     font-size: 22px;
-    font-weight: 300;
+    /*font-weight: 300;*/
     padding-bottom: 11px;
 }
 
 #cart .chooseprod h2 {
     font-size: 26px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-weight: 700;
     padding: 16px 5px 5px 24px;
 }
@@ -543,7 +579,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
     border: #ddd solid 1px;
     border-radius: 7px;
     font-size: 18px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-weight: 700;
     background: #fafaf8; /* Old browsers */
 background: -moz-linear-gradient(top,  #fafaf8 0%, #e6e6e2 100%); /* FF3.6+ */
@@ -584,13 +620,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
     margin-left: -24px;
     content: counter(item) ' \2013'; /* this outputs the number plus the dash */
     font-size: 18px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-weight: 700;
 }
 
 .episode_title {
     font-size: 18px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'OpenSansCondensedBold', sans-serif;
     font-weight: 700;
 }
 .episode_date {
@@ -853,7 +889,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
 #included ul {
     margin: 18px 0 0 0;
     font-size: 21px;
-    font-family: 'Open Sans Condensed', arial, sans-serif;
+    font-family: 'OpenSansCondensed', arial, sans-serif;
     line-height: 23px;
 }
 #included ul li {
@@ -1307,7 +1343,7 @@ div.rowheader .receipt_row1 {
 #cart .basket_description h3, 
 #cart #receipt_table1 h3 {
 	font-size: 18px;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'OpenSansCondensedBold', sans-serif;
     font-weight: 700;
     line-height: 22px;
 }
@@ -1375,7 +1411,7 @@ div.rowheader .receipt_row1 {
 
 .arrow_down_hdr {
     padding-left: 26px;
-    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/arrow_down.png) no-repeat 7px 13px;
+    /*background: url(//d1kg9stb0ddjcv.cloudfront.net/images/arrow_down.png) no-repeat 7px 13px;*/
 }
 
 .cart_left {
@@ -1939,7 +1975,7 @@ div.rowheader .receipt_row1 {
 	color: #000;
 	padding-bottom: 6px;
 	font-size: 36px;
-	font-family: 'Open Sans Condensed', sans-serif;	
+	font-family: 'OpenSansCondensedBold', sans-serif;	
     font-weight: 700;
     line-height: 36px;
 }
@@ -1948,7 +1984,7 @@ div.rowheader .receipt_row1 {
 	color: #000;
 	padding-bottom: 14px;
 	font-size: 18px;
-	font-family: 'Open Sans Condensed', sans-serif;	
+	font-family: 'OpenSansCondensed', sans-serif;	
     line-height: 1.2em;
 }
 
@@ -2026,7 +2062,7 @@ div.rowheader .receipt_row1 {
 #upsells .select_qty {
   font-size: 18px;
   color: #000;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'OpenSansCondensedBold', sans-serif;
   font-weight: 700;
   border: #ddd solid 1px;
   border-radius: 6px;

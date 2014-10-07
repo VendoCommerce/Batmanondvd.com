@@ -270,6 +270,7 @@
                     <asp:TextBox ID="txtZipCode" runat="server" MaxLength="7" CssClass="text-1"></asp:TextBox>
                 </div>
             </asp:Panel>
+
             <div class="form_line clearfix" style="padding-top: 12px;">
                 <label class="label-3">
                     Credit Card*</label>
@@ -277,7 +278,7 @@
                     <asp:RequiredFieldValidator ID="rfvCCType" runat="server" Display="Dynamic"
                             ControlToValidate="ddlCCType"></asp:RequiredFieldValidator>
                     <asp:Label ID="lblCCType" runat="server" Visible="false"></asp:Label></div>
-                <asp:DropDownList ID="ddlCCType" runat="server" CssClass="text-2">
+                <asp:DropDownList ID="ddlCCType" runat="server" CssClass="text-1">
                 </asp:DropDownList>
             </div>
             <div class="form_line clearfix">
@@ -289,7 +290,7 @@
                 <asp:RequiredFieldValidator ID="rfvExpYear" runat="server" Display="Dynamic"
                     ControlToValidate="ddlExpYear"></asp:RequiredFieldValidator>
                     <asp:Label ID="lblExpDate" runat="server" Visible="false"></asp:Label></div>
-                <asp:DropDownList ID="ddlExpMonth" runat="server" CssClass="text-3">
+                <asp:DropDownList ID="ddlExpMonth" runat="server" CssClass="text-2" style="width: 130px;">
                                 <asp:ListItem Text="01" Value="1" />
                                 <asp:ListItem Text="02" Value="2"  />
                                 <asp:ListItem Text="03"  Value="3" />
@@ -303,7 +304,7 @@
                                 <asp:ListItem Text="11"  Value="11" />
                                 <asp:ListItem Text="12"  Value="12" />
                 </asp:DropDownList>
-                <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="text-3">
+                <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="text-2" style="width: 130px;">
                                 <asp:ListItem Text="2014"/>
                                 <asp:ListItem Text="2015"/>
                                 <asp:ListItem Text="2016"/>
@@ -323,7 +324,7 @@
                     Card Number*</label>
                 <div class="error-2">
                     <asp:Label ID="lblCCNumberError" runat="server" Visible="false" ClientIDMode="Static"></asp:Label></div>
-               <asp:TextBox ID="txtCCNumber1" runat="server" MaxLength="16" ClientIDMode="Static"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
+               <asp:TextBox ID="txtCCNumber1" runat="server" MaxLength="16" ClientIDMode="Static" CssClass="text-1"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
             </div>
           
             <div style="padding-top: 15px;">
