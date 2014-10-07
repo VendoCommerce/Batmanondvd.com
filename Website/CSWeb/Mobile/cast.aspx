@@ -43,7 +43,7 @@
                 <img src="//d1kg9stb0ddjcv.cloudfront.net/images/cast_batman.jpg" width="275" height="208" alt="Batman" class="block" />
                 <h3>Batman</h3>
                 <h4>Adam West</h4>
-                <p>The secret identity of Bruce Wayne, and American billionaire, philanthropist and ordinary human being who adopts the form of a 'bat' to conceal his identity while terrorizing evil-doers.</p>
+                <p>The secret identity of Bruce Wayne, an American billionaire, philanthropist and ordinary human being who adopts the form of a 'bat' to conceal his identity while terrorizing evil-doers.</p>
             </div>
             <div class="cast_member">
                 <img src="//d1kg9stb0ddjcv.cloudfront.net/images/cast_robin.jpg" width="275" height="208" alt="Robin" class="block" />

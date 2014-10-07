@@ -867,6 +867,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
     left: 832px;
 }
 
+#clips #clipprev.disabled {opacity: 0;}
+#clips #clipnext.disabled {opacity: 0;}
+
 
 
 /* popups */

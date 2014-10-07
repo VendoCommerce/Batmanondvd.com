@@ -43,13 +43,12 @@
             data-cycle-next="#clipnext"
             data-cycle-prev="#clipprev">
             
-            <div><a href="#" class="test1"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_1.jpg" /></a></div>
-            <div><a href="#" class="test2"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_2.jpg" /></a></div>
-            <div><a href="#" class="test3"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_3.jpg" /></a></div>
-            <div><a href="#" class="test4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_4.jpg" /></a></div>
-            <div><a href="#" class="test5"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_5.jpg" /></a></div>
-            <div><a href="#" class="test6"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_6.jpg" /></a></div>
-            <div><a href="#" class="test7"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/clipthumb_1.jpg" /></a></div>
+            <div><a href="#" class="test1"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/sm_thumb_1.png" /></a></div>
+            <div><a href="#" class="test2"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/sm_thumb_2.png" /></a></div>
+            <div><a href="#" class="test3"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/sm_thumb_3.png" /></a></div>
+            <div><a href="#" class="test4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/sm_thumb_4.png" /></a></div>
+            <div><a href="#" class="test5"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/sm_thumb_5.png" /></a></div>
+            <div><a href="#" class="test6"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/sm_thumb_6.png" /></a></div>
 
         </div>
 

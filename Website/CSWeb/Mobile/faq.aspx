@@ -67,7 +67,7 @@
             <dd>Please call our customer service department: <br />TOLL FREE #: 800-839-3005 <br />EMAIL ADDRESS: <a href="mailto:BATMANONDVD@DATAPAKSERVICES.COM" style="color: #000; text-decoration: none;">BATMANONDVD@DATAPAKSERVICES.COM</a> <br />HOURS: MONDAY THROUGH FRIDAY 8A-8P EST <br />               <span style="display: inline-block; margin-left: 110px;">SATURDAY 9AM-6PM EST</span> </dd>
 
             <dt id="q7">How long does it take my order to arrive?</dt>
-            <dd>Most orders are shipped within two business days. You will receive an email with a tracking number the morning after your package ships.  </dd>
+            <dd>Most orders are shipped within two-three business days. Orders placed before November 6, 2014 will be held to arrive on November 11, 2014, the street date for this release.  You will receive an email with a tracking number the morning after your package ships. </dd>
 
             <dt id="q8">What qualifies as a business day?</dt>
             <dd>Our business days are Monday through Friday, excluding U.S. holidays. Shipments are not delivered on Saturdays or Sundays.</dd>
