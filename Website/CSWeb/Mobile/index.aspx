@@ -39,7 +39,7 @@
     <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/home1.jpg" width="640" height="517" alt="Batman" class="block" usemap="#Map_home1" />
     <map name="Map_home1" id="Map_home1">
         <area shape="circle" coords="128,86,86" href="choose.aspx" alt="Learn More" />
-        <area shape="rect" coords="300,70,532,240" href="//d1kg9stb0ddjcv.cloudfront.net/video/cta_tmp.mp4" alt="Watch Video" />
+        <area shape="rect" coords="300,70,532,240" href="//d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low.mp4" alt="Watch Video" />
         <area shape="rect" coords="268,318,460,356" href="#included" alt="See What's Included" class="included" />
     </map>
     <div class="fleft" style="width: 330px; padding-left: 13px;">

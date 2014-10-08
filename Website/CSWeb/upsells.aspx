@@ -217,7 +217,7 @@
                     <img width="86" height="60" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_no.png" /></a><a href="javascript:void(0);" bind="yes"><img width="262" height="60" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_yes.png" /></a><img width="72" height="63" src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_upsell.png" class="ask_arrow" /></div>
             </div>
 
-            <div class="fleft" style="width: 303px; top: -10px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/upsell_giftwrap.jpg" width="303" height="405" alt="" /></div>
+            <div class="fleft" style="width: 303px; top: -10px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/upsell_giftwrap_bag.jpg" width="292" height="430" alt="" /></div>
             <div class="clear"></div>
         </div>
 

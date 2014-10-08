@@ -42,7 +42,7 @@
                     <div id="ctavideo"></div>
                     <script type='text/javascript'>
                         jwplayer('ctavideo').setup({
-                            file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/cta_tmp.mp4',
+                            file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low.mp4',
                             autostart: false,
                             image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_home.jpg',
                             controls: true,
