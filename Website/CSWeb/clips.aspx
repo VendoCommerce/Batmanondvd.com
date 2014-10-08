@@ -72,11 +72,11 @@
                 <div id="videotest1"></div>
                 <script type='text/javascript'>
                     jwplayer('videotest1').setup({
-                        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/cta_tmp.mp4',
+                        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Aunt_Harriet.mp4',
                         autostart: false,
                         image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_1.jpg',
                         controls: true,
-                        width: 332, height: 250,
+                        width: 416, height: 250,
                         stretching: 'exactfit',
                         skin: '/scripts/jwplayer/bekle.xml'
 
@@ -88,9 +88,6 @@
                 <div id="videotest2"></div>
             </div>
             <div id="test3" style="display: none">
-                <div id="videotest"></div>
-            </div>
-            <div id="test" style="display: none">
                 <div id="videotest3"></div>
             </div>
             <div id="test4" style="display: none">

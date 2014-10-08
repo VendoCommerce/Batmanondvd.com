@@ -38,17 +38,17 @@
             abominable archenemies wearing over-the-top <br />
             costumes that leave us laughing. It’s simply feel good fun!</h3>
 
-        <a href="https://d1kg9stb0ddjcv.cloudfront.net/video/cta_tmp.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/tv_clips.jpg" alt="Click to watch video" class="block" style="margin: 0 auto;" /></a>
+        <a href="https://d1kg9stb0ddjcv.cloudfront.net/video/Aunt_Harriet.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/tv_clips.jpg" alt="Click to watch video" class="block" style="margin: 0 auto;" /></a>
 
         <h3 class="f44 black pad20 text-center">Click to View Clips</h3>
         
         <ul class="clipslist clearfix">
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/clipthumb_01.jpg" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/clipthumb_02.jpg" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/clipthumb_03.jpg" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/clipthumb_04.jpg" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/clipthumb_05.jpg" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/clipthumb_06.jpg" alt="Click to watch video" /></a></li>
+            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/Aunt_Harriet.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_1.png" alt="Click to watch video" /></a></li>
+            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/RiddlerFight.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_2.png" alt="Click to watch video" /></a></li>
+            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/Flying_Blind.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_3.png" alt="Click to watch video" /></a></li>
+            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/Cloud_Mens_Minds.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_4.png" alt="Click to watch video" /></a></li>
+            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/CatFight.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_5.png" alt="Click to watch video" /></a></li>
+            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/MinstrelCliffHanger.mp4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_6.png" alt="Click to watch video" /></a></li>
         </ul>
 
 

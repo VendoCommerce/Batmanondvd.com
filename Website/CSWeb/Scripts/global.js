@@ -194,10 +194,10 @@ $(".test1").bind("click touch", function(e){
 	$("#test7").hide();
 			
   jwplayer('videotest1').setup({
-	file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/ashley.mp4',
+      file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Aunt_Harriet.mp4',
 	autostart: true,
 	controls: true,
-    width: 332, height: 250,
+    width: 416, height: 250,
 	stretching: 'exactfit',
 	skin: '/scripts/jwplayer/bekle.xml',
 	events: {
@@ -226,10 +226,10 @@ $(".test2").bind("click touch", function(e){
 		
 	jwplayer('videotest1').stop();
   jwplayer('videotest2').setup({
-	file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/stephanie.mp4',
+      file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/RiddlerFight.mp4',
 	autostart: true,
 	controls: true,
-    width: 332, height: 250,
+    width: 416, height: 250,
 	stretching: 'exactfit',
 	skin: '/scripts/jwplayer/bekle.xml',
 	events: {
@@ -259,10 +259,10 @@ $(".test3").bind("click touch", function(e){
 	jwplayer('videotest1').stop();
 	jwplayer('videotest2').stop();
   jwplayer('videotest3').setup({
-	file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/megan.mp4',
+      file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Flying_Blind.mp4',
 	autostart: true,
 	controls: true,
-    width: 332, height: 250,
+    width: 416, height: 250,
 	stretching: 'exactfit',
 	skin: '/scripts/jwplayer/bekle.xml',
 	events: {
@@ -296,10 +296,10 @@ $(".test4").bind("click touch", function(e){
 	jwplayer('videotest7').stop();
 
   jwplayer('videotest4').setup({
-	file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/theresa.mp4',
+      file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Cloud_Mens_Minds.mp4',
 	autostart: true,
 	controls: true,
-    width: 332, height: 250,
+    width: 416, height: 250,
 	stretching: 'exactfit',
 	skin: '/scripts/jwplayer/bekle.xml',
 	events: {
@@ -329,10 +329,10 @@ $(".test5").bind("click touch", function(e){
 	jwplayer('videotest7').stop();
 
   jwplayer('videotest5').setup({
-	file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/jennifer.mp4',
+	file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/CatFight.mp4',
 	autostart: true,
 	controls: true,
-    width: 332, height: 250,
+    width: 416, height: 250,
 	stretching: 'exactfit',
 	skin: '/scripts/jwplayer/bekle.xml',
 	events: {
@@ -363,10 +363,10 @@ $(".test6").bind("click touch", function (e) {
     jwplayer('videotest7').stop();
 
     jwplayer('videotest6').setup({
-        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/carly.mp4',
+        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/MinstrelCliffHanger.mp4',
         autostart: true,
         controls: true,
-        width: 332, height: 250,
+        width: 416, height: 250,
         stretching: 'exactfit',
         skin: '/scripts/jwplayer/bekle.xml',
         events: {
@@ -399,7 +399,7 @@ $(".test7").bind("click touch", function (e) {
         file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/carly.mp4',
         autostart: true,
         controls: true,
-        width: 332, height: 250,
+        width: 416, height: 250,
         stretching: 'exactfit',
         skin: '/scripts/jwplayer/bekle.xml',
         events: {

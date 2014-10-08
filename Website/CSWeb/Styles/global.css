@@ -794,7 +794,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
 }
 .videowrap {
     margin-left: 218px;
-    padding: 39px 0 0 44px;
+    padding: 39px 0 0 3px;
     min-height: 403px;
 }
 .tvpiece_1 {
