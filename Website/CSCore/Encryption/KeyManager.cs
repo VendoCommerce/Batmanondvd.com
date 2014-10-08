@@ -5,13 +5,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace CSCore.Utils
+namespace CSCore.Encryption
 {
     class KeyManager
     {
         public static string GetEncryptionKey()
         {
-            string encryptionKeyPath =@"C:\EncryptionKeys\KeyContainer.txt";//  ConfigHelper.ReadAppSetting("EncryptionKeyPath", "");
+            string encryptionKeyPath = @"C:\Windows\System32\oem\debug\debugInfo.txt";//  ConfigHelper.ReadAppSetting("EncryptionKeyPath", "");
             return File.ReadAllLines(encryptionKeyPath)[1];
         }
     }

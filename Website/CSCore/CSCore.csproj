@@ -48,6 +48,10 @@
     <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.6.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CSDLL\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="NLog">
       <HintPath>..\CSDLL\NLog.dll</HintPath>
     </Reference>
@@ -75,10 +79,11 @@
     <Compile Include="CSEncryption.cs" />
     <Compile Include="DateTimeUtil.cs" />
     <Compile Include="EmailHelper.cs" />
+    <Compile Include="Encryption\BCEncryptor.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="GroupRadioButton.cs" />
     <Compile Include="HttpPost.cs" />
-    <Compile Include="KeyManager.cs" />
+    <Compile Include="Encryption\KeyManager.cs" />
     <Compile Include="Tracking\VisitorsData.cs" />
     <Compile Include="UrlHelper.cs" />
     <Compile Include="Logging\CSError.cs" />

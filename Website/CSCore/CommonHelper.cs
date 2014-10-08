@@ -16,6 +16,7 @@ using System.Collections;
 using System.Net;
 using CSCore.DataHelper;
 using System.Globalization;
+using CSCore.Encryption;
 
 namespace CSCore.Utils
 {
@@ -1466,7 +1467,7 @@ namespace CSCore.Utils
 
         public static string Encrypt(string strPlainText)
         {
-            string encryptionPrivateKey = KeyManager.GetEncryptionKey();
+            string encryptionPrivateKey =BCEncryptor.GetEncryptionKey();
             TripleDESCryptoServiceProvider provider = new TripleDESCryptoServiceProvider();
             UnicodeEncoding encoding = new UnicodeEncoding();
             ASCIIEncoding encoding2 = new ASCIIEncoding();
@@ -1482,7 +1483,7 @@ namespace CSCore.Utils
 
         public static string Decrypt(string strCipherText)
         {
-            string encryptionPrivateKey = KeyManager.GetEncryptionKey();
+            string encryptionPrivateKey = BCEncryptor.GetEncryptionKey();
             TripleDESCryptoServiceProvider provider = new TripleDESCryptoServiceProvider();
             UnicodeEncoding encoding = new UnicodeEncoding();
             ASCIIEncoding encoding2 = new ASCIIEncoding();
