@@ -542,7 +542,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 .prodselect {
     border: #cdcdcd solid 1px;
     padding: 6px;
-    width: 310px;
+    width: 314px;
     border-radius: 5px;
     background: #fafaf8; /* Old browsers */
 background: -moz-linear-gradient(top,  #fafaf8 0%, #e6e6e2 100%); /* FF3.6+ */

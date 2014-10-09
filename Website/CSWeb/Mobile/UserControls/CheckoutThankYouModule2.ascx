@@ -9,7 +9,7 @@
                 <%=orderId.ToString()%>. You will receive a shipping confirmation once your order has shipped.
 <span style="display: none;"><%=LiteralEmail.Text%>.</span></p>
 
-<p class="webfont1 pad20 ital" style="letter-spacing: -1px;">All products should be expected to arrive on or before November 11th 2014.</p>
+<p class="webfont1 pad20 ital" style="letter-spacing: -1px;">Your order will arrive on Nov 11th or shortly thereafter.</p>
              <div class="receipt_header">Billing Information</div>
              <table class="table">
              <tr><td>Name:</td>

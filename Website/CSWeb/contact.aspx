@@ -39,7 +39,7 @@
         
     <div style="padding: 16px 40px 30px 66px;">
 
-        <p class="f20"><strong>To order, call:</strong> 1 (800) XXX-XXXX</p>
+        <p class="f20"><strong>To order, call:</strong> 1 (800) 872-3174</p>
 
         <p class="f16" style="line-height: 30px;"><strong style="text-decoration: underline;">Customer Service</strong><br /><strong>Phone:</strong> 1-800-839-3005<br /><strong>Hours:</strong> Monday Through Friday 8A-8P EST, Saturday 9A-6P EST<br /><strong>Email:</strong> <a href="mailto:batmanondvd@datapakservices.com" class="caps" style="color: #000;">batmanondvd@datapakservices.com</a></p>
 

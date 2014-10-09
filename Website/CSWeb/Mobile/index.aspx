@@ -43,7 +43,7 @@
         <area shape="rect" coords="268,318,460,356" href="#included" alt="See What's Included" class="included" />
     </map>
     <div class="fleft" style="width: 330px; padding-left: 13px;">
-        <a href="tel:"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_clicktocall.png" width="296" height="81" alt="Click to Call" class="block" /></a>
+        <a href="tel:18008723305"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_clicktocall.png" width="296" height="81" alt="Click to Call" class="block" /></a>
     </div>
     
     <div class="fleft" style="width: 296px;">

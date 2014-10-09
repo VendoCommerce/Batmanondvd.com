@@ -90,9 +90,9 @@
             <p class="text-center pad20"><a class="gray unscored closedetails" href="javascript:void(0);">view less</a></p>
 
             <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/burst_bluray.png" style="position: absolute; top: 184px; left: 320px;" />
-            <p style="padding-right: 50px;">Your Complete Collection Features Over 50 HOURS OF ENTERTAINMENT And comes in a Classic Collector’s Box for displaying your Collection!</p>
+            <p style="padding-right: 50px;">Your Complete Collection Features Over 50 HOURS OF ENTERTAINMENT and comes in a Classic Collector’s Box for displaying your Collection!</p>
             <p class="pad6">INCLUDES:</p>
-            <ul>
+            <ul style="margin-bottom: 0;">
                 <li>120 of your favorite <br />
                     original broadcast episodes <br />
                     fully remastered</li>
@@ -104,6 +104,7 @@
                 <li>Detailed Episode Guide</li>
                 <li>Your Own Show Script from the Episode  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
                 <li>Personal Letter from Adam West to you!</li>
+                <li>PLUS your own collectors box!</li>
             </ul>
         </div>
     </div>

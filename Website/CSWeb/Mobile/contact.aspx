@@ -32,7 +32,7 @@
             <h3 class="f30">Or send an email from your Bat-Computer.</h3>
 
         <p class="f40" style="line-height: 49px;"><strong>To order, call:</strong> <br />
-            1 (800) XXX-XXXX</p>
+            1 (800) 872-3305</p>
 
         <p class="f30 pad20" style="line-height: 42px;"><strong style="text-decoration: underline;">Customer Service</strong></p>        <p class="f30 pad12" style="line-height: 42px;"><strong>Phone:</strong> 1-800-839-3005</p>        <p class="f30 pad12" style="line-height: 42px;"><strong>Hours:</strong> Monday Through Friday 8A-8P EST, <br />            <span style="display: inline-block; margin-left: 106px;">Saturday 9A-6P EST</span></p>        <p class="f30" style="line-height: 42px;"><strong>Email:</strong> <a href="mailto:batmanondvd@datapakservices.com" class="caps f23" style="color: #000;">batmanondvd@datapakservices.com</a></p>        <div class="clear" style="height: 50px;"></div>
 

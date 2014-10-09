@@ -27,11 +27,11 @@
             <div class="chooseprod">
                 <div class="text-center">
                     <h2 class="pad20">Classic Batman Collection</h2>
-                    <p class="text-center f16 pad6">Payment Type</p>
+                    <p class="text-center f16 pad6">Order Options</p>
                     <p class="text-center pad12">
                         <asp:DropDownList ID="ddlComplete" runat="server" class="prodselect">
-                            <asp:ListItem Value="110">Classic Batman Collection on DVD (SP)</asp:ListItem>
-                            <asp:ListItem Value="112">Classic Batman Collection on DVD (MP)</asp:ListItem>
+                            <asp:ListItem Value="110">Classic Batman Collection on DVD - 1 payment of $99.95</asp:ListItem>
+                            <asp:ListItem Value="112">Classic Batman Collection on DVD - 5 easy payments of $19.99</asp:ListItem>
                         </asp:DropDownList>
                     </p>
                     <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold blue">FREE SHIPPING & HANDLING!</span></p>
@@ -66,17 +66,17 @@
                 <div class="text-center">
                     <h2 class="pad20"><span class="green">Complete</span> Classic Batman Collection</h2>
                     
-                    <p class="text-center f16 pad6">Payment Type</p>
+                    <p class="text-center f16 pad6">Order Options</p>
                     
                     <div>
                         <img src="//d1kg9stb0ddjcv.cloudfront.net/images/flag_bestvalue.png" alt="Best Value" style="position:absolute;
 top: 0; left: -25px;" />
                         <p class="text-center pad12">
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
-                            <asp:ListItem Value="111">Complete Classic Batman Collection on DVD</asp:ListItem>
-                            <asp:ListItem Value="113">Complete Classic Batman Collection on DVD (MP)</asp:ListItem>
-                            <asp:ListItem Value="114">Complete Classic Batman Collection on BD</asp:ListItem>
-                            <asp:ListItem Value="115">Complete Classic Batman Collection on BD (MP)</asp:ListItem>
+                            <asp:ListItem Value="111">Complete Classic Batman Collection on DVD - 1 payment of $149.95</asp:ListItem>
+                            <asp:ListItem Value="113">Complete Classic Batman Collection on DVD - 5 easy payments of $29.99</asp:ListItem>
+                            <asp:ListItem Value="114">Complete Classic Batman Collection on Blue-Ray - 1 payment of $174.95</asp:ListItem>
+                            <asp:ListItem Value="115">Complete Classic Batman Collection on Blue-Ray - 5 easy payments of $34.99</asp:ListItem>
                         </asp:DropDownList>
                     </p>
                     </div>
@@ -88,10 +88,10 @@ top: 0; left: -25px;" />
                 
                 <div class="bg_greengradient">
                     <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_2.png" alt="" class="block" style="margin-bottom: 10px;" />
-                    <div class="choose_content">
-                        <p class="f16 pad0" style="height: 78px;">Your Complete Collection Features Over 50 HOURS OF ENTERTAINMENT And comes in a Classic Collector’s Box for displaying your Collection!</p>
+                    <div class="choose_content" style="padding-bottom: 14px;">
+                        <p class="f16 pad0" style="height: 78px;">Your Complete Collection Features Over 50 HOURS OF ENTERTAINMENT and comes in a Classic Collector’s Box for displaying your Collection!</p>
                         <p>INCLUDES:</p>    
-                        <ul>
+                        <ul style="margin-bottom: 0;">
                             <li>120 of your favorite original broadcast episodes fully remastered</li>
                             <li>Over 3 Hours of ALL NEW bonus materials</li>
                             <li>Adam West Naked on DVD: Watch as Adam takes you   behind the scenes of your favorite epidodes!</li>
@@ -99,6 +99,7 @@ top: 0; left: -25px;" />
                             <li>Detailed Episode Guide</li>
                             <li>Your Own Show Script from the Episode  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
                             <li>Personal Letter from Adam West to you!</li>
+                            <li>PLUS your own collectors box!</li>
                         </ul>
                         <%--<p class="text-center"><strong><a href="#guarantee" class="guarantee">Guarantee!</a></strong></p>--%>
                         <p class="text-center" style="padding-top: 20px;">
