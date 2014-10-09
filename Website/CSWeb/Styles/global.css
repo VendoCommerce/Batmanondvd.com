@@ -552,6 +552,9 @@ background: -o-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* Opera 11.10+ *
 background: -ms-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* IE10+ */
 background: linear-gradient(to bottom,  #fafaf8 0%,#e6e6e2 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', endColorstr='#e6e6e2',GradientType=0 ); /* IE6-9 */
+-webkit-appearance: menulist-button;
+-moz-appearance: menulist-button;
+appearance: menulist-button;
 }
 .choose_content {
     padding: 0 14px 20px 28px;
