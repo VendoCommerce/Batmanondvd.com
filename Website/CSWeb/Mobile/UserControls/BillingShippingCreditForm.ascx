@@ -239,7 +239,7 @@
                       
                   
      <asp:CheckBox ID="xyz" runat="server" CssClass="checkbox-left2" Checked="true" /><label class="label-3" for="bsfcBillingShippingCreditForm_xyz">
-                Yes, I would like to receive updates and special offers from Warner Brothers. See Return Policy for Details
+                Yes, I would like to receive updates and special offers from Warner Brothers. See Return Policy for Details.
 </label>          
             </div>
 

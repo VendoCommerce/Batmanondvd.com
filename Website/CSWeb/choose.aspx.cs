@@ -50,6 +50,9 @@ namespace CSWeb
 
         private void AddSku(string skuId)
         {
+            ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
+            if (clientData.CartInfo != null)
+                clientData.CartInfo.CartItems.Clear();
             Session["PId"] = skuId;
             Response.Redirect("AddProduct.aspx?PId=" + skuId + "&CId=3");
 

@@ -353,7 +353,7 @@
                     <asp:CheckBox ID="ckbxSpecial" runat="server" CssClass="input-4" AutoPostBack="true"
                         Checked="true" />
                     <label class="label-2">
-                        Yes, I'd like to be the first to know about special discounts, promotions and new product alerts!
+                        Yes, I would like to receive updates and special offers from Warner Brothers. See Return Policy for Details.
                     </label>
                 </div>
                 <div class="form_line_2 clearfix">

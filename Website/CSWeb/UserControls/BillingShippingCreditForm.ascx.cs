@@ -89,6 +89,8 @@ namespace CSWeb.Root.UserControls
                 txtPhoneNumber1.Attributes.Add("onkeyup", "return autoTab(this, 3, event);");
                 txtPhoneNumber2.Attributes.Add("onkeyup", "return autoTab(this, 3, event);");
                 txtPhoneNumber3.Attributes.Add("onkeyup", "return autoTab(this, 4, event);");
+
+                ckbxSpecial.Checked = true;
             }
 
             if (!IsPostBack)

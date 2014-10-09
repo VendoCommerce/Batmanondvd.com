@@ -24,6 +24,10 @@ namespace CSWeb.Mobile
                 skuId = "113";
             if (skuId.Length > 0)
             {
+                ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
+                if (clientData.CartInfo != null)
+                    clientData.CartInfo.CartItems.Clear();
+
                 Session["PId"] = skuId;
                 Response.Redirect("AddProduct.aspx?PId=" + skuId + "&CId=3");
             }
