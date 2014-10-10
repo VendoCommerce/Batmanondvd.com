@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderDetail.aspx.cs" Inherits="CSWeb.Admin.OrderDetail" MasterPageFile="AdminSite.master" EnableViewState="True" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderDetail.aspx.cs" Inherits="CSWeb.Admin.OrderDetail" MasterPageFile="AdminSite.master" EnableViewState="True" EnableSessionState="True" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register TagPrefix="uc" TagName="attributes" Src="UserControls/Attributes.ascx" %>

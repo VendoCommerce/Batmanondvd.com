@@ -396,6 +396,7 @@ namespace CSWeb.FulfillmentHouse
             {
                 //CSResolve.Resolve<IOrderService>().SaveOrderInfo(orderId, 2, req.ToLower().Replace("utf-8", "utf-16"), res.ToLower().Replace("utf-8", "utf-16"));
                 CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderId, orderAttributes, 2);
+                OrderHelper.SendOrderCompletedEmail(orderId);
             }
             else
             {
