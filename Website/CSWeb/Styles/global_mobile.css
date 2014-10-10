@@ -258,7 +258,16 @@ body {
     height: 277px;
     z-index: 10;
 }
-.tvpiece_1 {
+
+.homevid1 {
+    position: absolute;
+    top: 27px;
+    left: 30px;
+    width: 264px;
+    height: 199px;
+}
+
+.home_tvpiece_1 {
     display: block;
     position: absolute;
     top: 0px;
@@ -269,7 +278,7 @@ body {
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_1.png) no-repeat 0 0;
     background-size: 357px 33px;
 }
-.tvpiece_2 {
+.home_tvpiece_2 {
     display: block;
     position: absolute;
     top: 33px;
@@ -280,7 +289,7 @@ body {
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_2.png) no-repeat 0 0;
     background-size: 37px 158px;
 }
-.tvpiece_3 {
+.home_tvpiece_3 {
     display: block;
     position: absolute;
     top: 33px;
@@ -291,7 +300,7 @@ body {
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_3.png) no-repeat 0 0;
     background-size: 107px 158px;
 }
-.tvpiece_4 {
+.home_tvpiece_4 {
     display: block;
     position: absolute;
     top: 191px;
@@ -303,7 +312,7 @@ body {
     background-size: 357px 86px;
 }
 
-.tvpiece_center {
+.home_tvpiece_center {
     display: block;
     position: absolute;
     top: 14px;
@@ -313,6 +322,70 @@ body {
     z-index: 0;
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_center.jpg) no-repeat 0 0;
     background-size: 264px 199px;
+}
+
+
+.videowrap {
+    margin: 12px 0 6px 30px;
+    width: 583px;
+    height: 457px;
+    padding: 42px 0 0 0;
+}
+.tvpiece_1 {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 583px;
+    height: 54px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_1.png) no-repeat 0 0;
+    background-size: 583px 54px;
+}
+.tvpiece_2 {
+    display: block;
+    position: absolute;
+    top: 54px;
+    left: 0px;
+    width: 60px;
+    height: 258px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_2.png) no-repeat 0 0;
+    background-size: 60px 258px;
+}
+.tvpiece_3 {
+    display: block;
+    position: absolute;
+    top: 54px;
+    left: 408px;
+    width: 175px;
+    height: 258px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_3.png) no-repeat 0 0;
+    background-size: 175px 258px;
+}
+.tvpiece_4 {
+    display: block;
+    position: absolute;
+    top: 311px;
+    left: 0px;
+    width: 583px;
+    height: 140px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_4.png) no-repeat 0 0;
+    background-size: 583px 140px;
+}
+
+.tvpiece_center {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    width: 431px;
+    height: 324px;
+    z-index: 0;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_center.jpg) no-repeat 0 0;
+    background-size: 431px 324px;
 }
 
 .batman_home {

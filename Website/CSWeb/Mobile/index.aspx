@@ -44,13 +44,13 @@
     </map>
 
         <div class="homevideowrap">
-                <div class="tvpiece_1"></div>
-                <div class="tvpiece_2"></div>
-                <div class="tvpiece_3"></div>
-                <div class="tvpiece_4"></div>
-                <div class="tvpiece_center"></div>
+                <div class="home_tvpiece_1"></div>
+                <div class="home_tvpiece_2"></div>
+                <div class="home_tvpiece_3"></div>
+                <div class="home_tvpiece_4"></div>
+                <div class="home_tvpiece_center"></div>
 
-                <div id="test1">
+                <div id="homevid1">
                     <div id="ctavideo"></div>
                     <script type='text/javascript'>
                         jwplayer('ctavideo').setup({

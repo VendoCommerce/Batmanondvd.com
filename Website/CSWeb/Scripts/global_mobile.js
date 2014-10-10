@@ -115,6 +115,211 @@ $('.closedetails').click(function () {
 });
 
 
+
+/* Video Clips */
+
+$(".test1").bind("click touch", function (e) {
+    $("#test1").show();
+    $("#test2").hide();
+    $("#test3").hide();
+    $("#test4").hide();
+    $("#test5").hide();
+    $("#test6").hide();
+    $("#test7").hide();
+
+    jwplayer('videotest1').setup({
+        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Aunt_Harriet.mp4',
+        autostart: true,
+        controls: true,
+        width: 468, height: 284,
+        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_1.png',
+        stretching: 'exactfit',
+        skin: '/scripts/jwplayer/bekle.xml',
+        events: {
+            onComplete: function () {
+                $('.test2').trigger('click');
+            }
+        }
+    });
+    jwplayer('videotest2').stop();
+    jwplayer('videotest3').stop();
+    jwplayer('videotest4').stop();
+    jwplayer('videotest5').stop();
+    jwplayer('videotest6').stop();
+    jwplayer('videotest7').stop();
+    e.preventDefault();
+});
+
+$(".test2").bind("click touch", function (e) {
+    $("#test1").hide();
+    $("#test2").show();
+    $("#test3").hide();
+    $("#test4").hide();
+    $("#test5").hide();
+    $("#test6").hide();
+    $("#test7").hide();
+
+    jwplayer('videotest1').stop();
+    jwplayer('videotest2').setup({
+        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/RiddlerFight.mp4',
+        autostart: true,
+        controls: true,
+        width: 468, height: 284,
+        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_2.png',
+        stretching: 'exactfit',
+        skin: '/scripts/jwplayer/bekle.xml',
+        events: {
+            onComplete: function () {
+                $('.test3').trigger('click');
+            }
+        }
+    });
+    jwplayer('videotest3').stop();
+    jwplayer('videotest4').stop();
+    jwplayer('videotest5').stop();
+    jwplayer('videotest6').stop();
+    jwplayer('videotest7').stop();
+
+    e.preventDefault();
+});
+
+$(".test3").bind("click touch", function (e) {
+    $("#test1").hide();
+    $("#test2").hide();
+    $("#test3").show();
+    $("#test4").hide();
+    $("#test5").hide();
+    $("#test6").hide();
+    $("#test7").hide();
+
+    jwplayer('videotest1').stop();
+    jwplayer('videotest2').stop();
+    jwplayer('videotest3').setup({
+        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Flying_Blind.mp4',
+        autostart: true,
+        controls: true,
+        width: 468, height: 284,
+        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_3.png',
+        stretching: 'exactfit',
+        skin: '/scripts/jwplayer/bekle.xml',
+        events: {
+            onComplete: function () {
+                $('.test4').trigger('click');
+            }
+        }
+    });
+    jwplayer('videotest4').stop();
+    jwplayer('videotest5').stop();
+    jwplayer('videotest6').stop();
+    jwplayer('videotest7').stop();
+
+    e.preventDefault();
+});
+
+$(".test4").bind("click touch", function (e) {
+    $("#test1").hide();
+    $("#test2").hide();
+    $("#test3").hide();
+    $("#test4").show();
+    $("#test5").hide();
+    $("#test6").hide();
+    $("#test7").hide();
+
+    jwplayer('videotest1').stop();
+    jwplayer('videotest2').stop();
+    jwplayer('videotest3').stop();
+    jwplayer('videotest5').stop();
+    jwplayer('videotest6').stop();
+    jwplayer('videotest7').stop();
+
+    jwplayer('videotest4').setup({
+        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Cloud_Mens_Minds.mp4',
+        autostart: true,
+        controls: true,
+        width: 468, height: 284,
+        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_4.png',
+        stretching: 'exactfit',
+        skin: '/scripts/jwplayer/bekle.xml',
+        events: {
+            onComplete: function () {
+                $('.test5').trigger('click');
+            }
+        }
+    });
+
+    e.preventDefault();
+});
+
+$(".test5").bind("click touch", function (e) {
+    $("#test1").hide();
+    $("#test2").hide();
+    $("#test3").hide();
+    $("#test4").hide();
+    $("#test5").show();
+    $("#test6").hide();
+    $("#test7").hide();
+
+    jwplayer('videotest1').stop();
+    jwplayer('videotest2').stop();
+    jwplayer('videotest3').stop();
+    jwplayer('videotest4').stop();
+    jwplayer('videotest6').stop();
+    jwplayer('videotest7').stop();
+
+    jwplayer('videotest5').setup({
+        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/CatFight.mp4',
+        autostart: true,
+        controls: true,
+        width: 468, height: 284,
+        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_5.png',
+        stretching: 'exactfit',
+        skin: '/scripts/jwplayer/bekle.xml',
+        events: {
+            onComplete: function () {
+                $('.test6').trigger('click');
+            }
+        }
+    });
+
+    e.preventDefault();
+});
+
+
+$(".test6").bind("click touch", function (e) {
+    $("#test1").hide();
+    $("#test2").hide();
+    $("#test3").hide();
+    $("#test4").hide();
+    $("#test5").hide();
+    $("#test6").show();
+    $("#test7").hide();
+
+    jwplayer('videotest1').stop();
+    jwplayer('videotest2').stop();
+    jwplayer('videotest3').stop();
+    jwplayer('videotest4').stop();
+    jwplayer('videotest5').stop();
+    jwplayer('videotest7').stop();
+
+    jwplayer('videotest6').setup({
+        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/MinstrelCliffHanger.mp4',
+        autostart: true,
+        controls: true,
+        width: 468, height: 284,
+        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_6.png',
+        stretching: 'exactfit',
+        skin: '/scripts/jwplayer/bekle.xml',
+        events: {
+            onComplete: function () {
+                $('.test1').trigger('click');
+            }
+        }
+    });
+
+    e.preventDefault();
+});
+
+
 });
 
 function pageLoad() //use to resolve postback issues

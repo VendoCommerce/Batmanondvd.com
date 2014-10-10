@@ -371,7 +371,7 @@ $(".test6").bind("click touch", function (e) {
         skin: '/scripts/jwplayer/bekle.xml',
         events: {
             onComplete: function () {
-                $('.test7').trigger('click');
+                $('.test1').trigger('click');
             }
         }
     });

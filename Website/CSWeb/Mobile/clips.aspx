@@ -38,17 +38,60 @@
             abominable archenemies wearing over-the-top <br />
             costumes that leave us laughing. It’s simply feel good fun!</h3>
 
-        <a href="https://d1kg9stb0ddjcv.cloudfront.net/video/Aunt_Harriet.mp4" target="_blank"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/tv_clips.jpg" alt="Click to watch video" class="block" style="margin: 0 auto;" /></a>
+        <div class="videowrap">
+            <div class="tvpiece_1"></div>
+            <div class="tvpiece_2"></div>
+            <div class="tvpiece_3"></div>
+            <div class="tvpiece_4"></div>
+            <div class="tvpiece_center"></div>
+            
+            <div id="test1">
+                <div id="videotest1"></div>
+                <script type='text/javascript'>
+                    jwplayer('videotest1').setup({
+                        file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Aunt_Harriet.mp4',
+                        autostart: false,
+                        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_1.jpg',
+                        controls: true,
+                        width: 468, height: 284,
+                        stretching: 'exactfit',
+                        skin: '/scripts/jwplayer/bekle.xml'
+
+                    });
+                </script>
+            </div>
+
+            <div id="test2" style="display: none">
+                <div id="videotest2"></div>
+            </div>
+            <div id="test3" style="display: none">
+                <div id="videotest3"></div>
+            </div>
+            <div id="test4" style="display: none">
+                <div id="videotest4"></div>
+            </div>
+            <div id="test5" style="display: none">
+                <div id="videotest5"></div>
+            </div>
+            <div id="test6" style="display: none">
+                <div id="videotest6"></div>
+            </div>
+            <div id="test7" style="display: none">
+                <div id="videotest7"></div>
+            </div>
+        </div>
+
+        
 
         <h3 class="f44 black pad20 text-center">Click to View Clips</h3>
         
         <ul class="clipslist clearfix">
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/Aunt_Harriet.mp4" target="_blank"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_1.png" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/RiddlerFight.mp4" target="_blank"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_2.png" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/Flying_Blind.mp4" target="_blank"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_3.png" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/Cloud_Mens_Minds.mp4" target="_blank"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_4.png" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/CatFight.mp4" target="_blank"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_5.png" alt="Click to watch video" /></a></li>
-            <li><a href="https://d1kg9stb0ddjcv.cloudfront.net/video/MinstrelCliffHanger.mp4" target="_blank"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_6.png" alt="Click to watch video" /></a></li>
+            <li><a href="javascript: void(0);" class="test1"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_1.png" alt="Click to watch video" /></a></li>
+            <li><a href="javascript: void(0);" class="test2"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_2.png" alt="Click to watch video" /></a></li>
+            <li><a href="javascript: void(0);" class="test3"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_3.png" alt="Click to watch video" /></a></li>
+            <li><a href="javascript: void(0);" class="test4"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_4.png" alt="Click to watch video" /></a></li>
+            <li><a href="javascript: void(0);" class="test5"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_5.png" alt="Click to watch video" /></a></li>
+            <li><a href="javascript: void(0);" class="test6"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/m_thumb_6.png" alt="Click to watch video" /></a></li>
         </ul>
 
 
