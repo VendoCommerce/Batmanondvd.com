@@ -250,6 +250,70 @@ body {
 	color: #146cd8;
 }
 
+.homevideowrap {
+    position: absolute;
+    top: 41px;
+    left: 271px;
+    width: 357px;
+    height: 277px;
+    z-index: 10;
+}
+.tvpiece_1 {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 357px;
+    height: 33px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_1.png) no-repeat 0 0;
+    background-size: 357px 33px;
+}
+.tvpiece_2 {
+    display: block;
+    position: absolute;
+    top: 33px;
+    left: 0px;
+    width: 37px;
+    height: 158px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_2.png) no-repeat 0 0;
+    background-size: 37px 158px;
+}
+.tvpiece_3 {
+    display: block;
+    position: absolute;
+    top: 33px;
+    left: 250px;
+    width: 107px;
+    height: 158px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_3.png) no-repeat 0 0;
+    background-size: 107px 158px;
+}
+.tvpiece_4 {
+    display: block;
+    position: absolute;
+    top: 191px;
+    left: 0px;
+    width: 357px;
+    height: 86px;
+    z-index: 25;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_4.png) no-repeat 0 0;
+    background-size: 357px 86px;
+}
+
+.tvpiece_center {
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    width: 264px;
+    height: 199px;
+    z-index: 0;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/tvpiece_center.jpg) no-repeat 0 0;
+    background-size: 264px 199px;
+}
 
 .batman_home {
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/mobile/batman.png) no-repeat 0 bottom;
@@ -499,15 +563,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', end
     font-size: 38px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
-    background: #fafaf8; /* Old browsers */
-background: -moz-linear-gradient(top,  #fafaf8 0%, #e6e6e2 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafaf8), color-stop(100%,#e6e6e2)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #fafaf8 0%,#e6e6e2 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', endColorstr='#e6e6e2',GradientType=0 ); /* IE6-9 */
--webkit-appearance: menulist-button;
 }
 
 .season_txt {

@@ -36,12 +36,37 @@
     <h3 style="line-height: 1.2em;">For the First Time Ever – Digitally <br />
         Remastered <strong>Plus 3 FREE Bonus DVDs!</strong></h3>
 
-    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/home1.jpg" width="640" height="517" alt="Batman" class="block" usemap="#Map_home1" />
+    <div>
+    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/home1_new.jpg" width="640" height="517" alt="Batman" class="block" usemap="#Map_home1" />
     <map name="Map_home1" id="Map_home1">
         <area shape="circle" coords="128,86,86" href="choose.aspx" alt="Learn More" />
-        <area shape="rect" coords="300,70,532,240" href="//d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low.mp4" target="_blank" alt="Watch Video" />
         <area shape="rect" coords="268,318,460,356" href="#included" alt="See What's Included" class="included" />
     </map>
+
+        <div class="homevideowrap">
+                <div class="tvpiece_1"></div>
+                <div class="tvpiece_2"></div>
+                <div class="tvpiece_3"></div>
+                <div class="tvpiece_4"></div>
+                <div class="tvpiece_center"></div>
+
+                <div id="test1">
+                    <div id="ctavideo"></div>
+                    <script type='text/javascript'>
+                        jwplayer('ctavideo').setup({
+                            file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low.mp4',
+                            autostart: false,
+                            image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_home.jpg',
+                            controls: true,
+                            width: 264, height: 199,
+                            stretching: 'exactfit',
+                            skin: '/scripts/jwplayer/bekle.xml'
+
+                        });
+                    </script>
+                </div>
+            </div>
+    </div>
     <div class="fleft" style="width: 330px; padding-left: 13px;">
         <a href="tel:18008723305"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_clicktocall.png" width="296" height="81" alt="Click to Call" class="block" /></a>
     </div>
