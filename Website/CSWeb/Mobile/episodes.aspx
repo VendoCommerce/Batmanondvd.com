@@ -81,7 +81,7 @@
 
             <div class="clearfix bg_burst">
 
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc2.jpg" alt="Disc 1; Episodes 9-16" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc2.jpg" width="640" alt="Disc 1; Episodes 9-16" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 8;">
                         <li><strong class="episode_title">Zelda The Great</strong> <span class="episode_date">(Original Airdate: February 9, 1966)</span><br />
@@ -183,7 +183,7 @@
         </div>
 
         <div class="clearfix bg_burst">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc4.jpg" alt="Disc 4; Episodes 25-32" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_disc5.jpg" width="640" alt="Disc 4; Episodes 25-32" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 32;">
                         <li><strong class="episode_title">Fine Finny Fiends</strong> <span class="episode_date">(Original Airdate: May 4, 1966)</span><br />
@@ -214,7 +214,7 @@
     <div id="season2" class="episodebox">
         <div class="clearfix bg_thwack">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc1.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s2_disc_01.jpg" width="640" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details">
                         <li><strong class="episode_title">Shoot A Crooked Arrow</strong> <span class="episode_date">(Original Airdate: September 7, 1966)</span><br />
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc2.jpg" alt="Disc 2; Episodes 9-16" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s2_disc_02.jpg" width="640" alt="Disc 2; Episodes 9-16" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 8;">
                         <li><strong class="episode_title">The Greatest Mother Of Them All</strong> <span class="episode_date">(Original Airdate: October 5, 1966)</span><br />
@@ -280,7 +280,7 @@
 
         <div class="clearfix bg_burst">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc3.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s2_disc_03.jpg" width="640" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 16;">
                         <li><strong class="episode_title">Hizzonner The Penguin</strong> <span class="episode_date">(Original Airdate: November 2, 1966)</span><br />
@@ -311,7 +311,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc4.jpg" alt="Disc 4; Episodes 24-30" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s2_disc_04.jpg" width="640" alt="Disc 4; Episodes 24-30" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 24;">
                         <li><strong class="episode_title">Come Back, Shame</strong> <span class="episode_date">(Original Airdate: November 30, 1966)</span><br />
@@ -338,7 +338,7 @@
         </div>
         <div class="clearfix bg_thwack">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc5.jpg" alt="Disc 5; Episodes 31-38" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s2_disc_05.jpg" width="640" alt="Disc 5; Episodes 31-38" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 30;">
                         <li><strong class="episode_title">The Puzzles Are Coming</strong> <span class="episode_date">(Original Airdate: December 21, 1966)</span><br />
@@ -369,7 +369,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc6.jpg" alt="Disc 6; Episodes 39-46" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s2_disc_06.jpg" width="640" alt="Disc 6; Episodes 39-46" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 38;">
                         <li><strong class="episode_title">The Penguin Declines</strong> <span class="episode_date">(Original Airdate: January 18, 1967)</span><br />
@@ -402,7 +402,7 @@
         </div>
         <div class="clearfix bg_burst">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc7.jpg" alt="Disc 7; Episodes 47-54" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s2_disc_07.jpg" width="640" alt="Disc 7; Episodes 47-54" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 46;">
                         <li><strong class="episode_title">The Joker's Last Laugh</strong> <span class="episode_date">(Original Airdate: February 15, 1967)</span><br />
@@ -433,7 +433,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc8.jpg" alt="Disc 8; Episodes 55-60" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s2_disc_08.jpg" width="640" alt="Disc 8; Episodes 55-60" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 54;">
                         <li><strong class="episode_title">Black Widow Strikes Again</strong> <span class="episode_date">(Original Airdate: March 15, 1967)</span><br />
@@ -469,7 +469,7 @@
     <div id="season3" class="episodebox">
         <div class="clearfix bg_thwack">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc1.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s3_disc_01.jpg" width="640" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details">
                         <li><strong class="episode_title">Enter Batgirl, Exit Penguin</strong> <span class="episode_date">(Original Airdate: September 14, 1967)</span><br />
@@ -500,7 +500,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc2.jpg" alt="Disc 1; Episodes 1-8" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s3_disc_02.jpg" width="640" alt="Disc 2; Episodes 9-16" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 8;">
                         <li><strong class="episode_title">How To Hatch A Dinosaur</strong> <span class="episode_date">(Original Airdate: November 9, 1967)</span><br />
@@ -535,7 +535,7 @@
 
         <div class="clearfix bg_burst">
             <div class="season_a">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc3.jpg" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s3_disc_03.jpg" width="640" alt="Disc 3; Episodes 17-24" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 16;">
                         <li><strong class="episode_title">The Joke's On Catwoman</strong> <span class="episode_date">(Original Airdate: January 4, 1968)</span><br />
@@ -566,7 +566,7 @@
                 </div>
             </div>
             <div class="season_b">
-                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/eg_disc4.jpg" alt="Disc 4; Episodes 25-26" class="block" /></h3></div>
+                <div class="season_hdr"><h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/eg_s3_disc_04.jpg" width="640" alt="Disc 4; Episodes 25-26" class="block" /></h3></div>
                 <div class="season_txt">
                     <ol class="episode_details" style="counter-reset: item 24;">
                         <li><strong class="episode_title">The Entrancing Dr. Cassandra</strong> <span class="episode_date">(Original Airdate: March 7, 1968)</span><br />
