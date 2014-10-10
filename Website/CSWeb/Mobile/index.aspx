@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=640px, initial-scale=.5, maximum-scale=1" />
+<meta name="viewport" content="width=640, initial-scale=.5, maximum-scale=1" />
 <title>Batman Classics on DVD</title>
 
 
@@ -78,10 +78,16 @@
     <div class="home_skyline">
         <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/burst_pow.png" width="382" height="346" alt="POW! 64 Episodes, 3 FREE Bonus Discs - 30+ Hours of Entertainment!" style="position: absolute; top: 10px; left: 258px;" />
         <ul>
-            <li>Take Yourself Back to  <br />  Simpler Times</li>
-            <li>Includes all your <br />  Favorite Villains and <br />  Celebrity Guest Stars</li>
-            <li>Detailed Episode Guide <br />  Gives Noteworthy  <br />  Insights</li>
-            <li>Perfect for the Holiday <br />  Gift Giving Season!</li>
+            <li>Take Yourself Back to  <br />
+  Simpler Times</li>
+            <li>Includes all your <br />
+  Favorite Villains and <br />
+  Celebrity Guest Stars</li>
+            <li>Detailed Episode Guide <br />
+  Gives Noteworthy  <br />
+  Insights</li>
+            <li>Perfect for the Holiday <br />
+  Gift Giving Season!</li>
         </ul>
     </div>
 

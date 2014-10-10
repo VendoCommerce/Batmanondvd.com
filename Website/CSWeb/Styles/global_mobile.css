@@ -3,7 +3,8 @@
 
 
 img {
-	border: none;	
+	border: none;
+    max-width: 100%;
 }
 
 .webfont1 {font-family: 'Open Sans Condensed', sans-serif !important;}

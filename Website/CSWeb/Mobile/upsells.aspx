@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=640px, initial-scale=.5, maximum-scale=.5" />
+<meta name="viewport" content="width=640, initial-scale=.5, maximum-scale=.5" />
 <title>Batman mobile upsells</title>
 
 
@@ -32,17 +32,24 @@
   <h2 class="f37 pad20" style="line-height: 1.3em;">Upgrade to the Full 120 Episode Collection in a Beautiful Collector’s Box!</h2>
     <h3 class="f32">Just half of the episodes of Batman will leave you needing more! Upgrade to the full collection today and receive all 120 Episodes from all Three Seasons! Get it on DVD or stunning high definition Blu-ray<span class="f18" style="position: relative; top: -8px;">™</span>.</h3>
     <p><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_full_collection.jpg" width="553" height="328" class="block" style="margin: 0 auto;" /></p>
-  <ul>                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
-                <li>OVER 3 Hours Of ALL NEW Extras like:                    <ul style="padding-bottom: 0;">
+  <ul>
+                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
+                <li>OVER 3 Hours Of ALL NEW Extras like:
+                    <ul style="padding-bottom: 0;">
                         <li><strong>Hanging with Batman</strong> – A true slice of life in the words of Adam West</li>
                         <li><strong>Holy Memorabilia Batman!</strong> – A journey into the most sought after collectibles through the eyes of 3 extraordinary collectors</li>
                         <li><strong>Batmania Born!</strong> – Building the World of Batman - Explore the art and design behind the fiction.</li>
-                        <li><strong>Bats of the Round Table</strong>  – A candid conversation with Adam West and         his celebrity friends, chatting all things Bat ’66.</li>
-                        <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare         treat for the fans as Adam discusses his script notes on bringing Batman to life          in the first and second episodes </li>
+                        <li><strong>Bats of the Round Table</strong>  – A candid conversation with Adam West and 
+        his celebrity friends, chatting all things Bat ’66.</li>
+                        <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare 
+        treat for the fans as Adam discusses his script notes on bringing Batman to life  
+        in the first and second episodes </li>
                         <li style="padding-bottom: 0;"><strong>Na Na Na Batman!</strong> Hollywood favorites stars and producers recount their 
                             favorite Batman memories</li>
                     </ul></li>
-                <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie     DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter   from Adam West <strong>PLUS</strong> your own Classic Batman Collector’s Box</li>
+                <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie   
+  DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter 
+  from Adam West <strong>PLUS</strong> your own Classic Batman Collector’s Box</li>
             </ul>
 
 <p class="ask" style="padding-top: 0;">Would you like to take <br>
@@ -75,17 +82,24 @@ advantage of this special offer?
   <h2 class="f37 pad20" style="line-height: 1.3em;">Upgrade to the Full 120 Episode Collection in a Beautiful Collector’s Box!</h2>
     <h3 class="f32">Just half of the episodes of Batman will leave you needing more! Upgrade to the full collection today and receive all 120 Episodes from all Three Seasons! Get it on DVD or stunning high definition Blu-ray<span class="f18" style="position: relative; top: -8px;">™</span>.</h3>
     <p><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_full_collection.jpg" width="553" height="328" class="block" style="margin: 0 auto;" /></p>
-  <ul>                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
-                <li>OVER 3 Hours Of ALL NEW Extras like:                    <ul style="padding-bottom: 0;">
+  <ul>
+                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
+                <li>OVER 3 Hours Of ALL NEW Extras like:
+                    <ul style="padding-bottom: 0;">
                         <li><strong>Hanging with Batman</strong> – A true slice of life in the words of Adam West</li>
                         <li><strong>Holy Memorabilia Batman!</strong> – A journey into the most sought after collectibles through the eyes of 3 extraordinary collectors</li>
                         <li><strong>Batmania Born!</strong> – Building the World of Batman - Explore the art and design behind the fiction.</li>
-                        <li><strong>Bats of the Round Table</strong>  – A candid conversation with Adam West and         his celebrity friends, chatting all things Bat ’66.</li>
-                        <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare         treat for the fans as Adam discusses his script notes on bringing Batman to life          in the first and second episodes </li>
+                        <li><strong>Bats of the Round Table</strong>  – A candid conversation with Adam West and 
+        his celebrity friends, chatting all things Bat ’66.</li>
+                        <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare 
+        treat for the fans as Adam discusses his script notes on bringing Batman to life  
+        in the first and second episodes </li>
                         <li style="padding-bottom: 0;"><strong>Na Na Na Batman!</strong> Hollywood favorites stars and producers recount their 
                             favorite Batman memories</li>
                     </ul></li>
-                <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie     DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter   from Adam West <strong>PLUS</strong> your own Classic Batman Collector’s Box</li>
+                <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie   
+  DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter 
+  from Adam West <strong>PLUS</strong> your own Classic Batman Collector’s Box</li>
             </ul>
 
 <p class="ask" style="padding-top: 0;">Would you like to take <br>
@@ -253,7 +267,9 @@ advantage of this special offer?
         <div class="page_upsell">
             
             <div>
-                <h2 class="f47">Can’t wait for the Campy                     Comic Fun!                     Get Rush Shipping now!</h2>
+                <h2 class="f47">Can’t wait for the Campy 
+                    Comic Fun! 
+                    Get Rush Shipping now!</h2>
 
                 <p class="f26" style="line-height: 36px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_rush_shipping.png" width="268" height="275" alt="" class="fright" style="margin-bottom: 25px; margin-left: 25px;" />Choose Rush Shipping today to start reliving your favorite moments now. The sooner it arrives, the sooner you can watch Julie Newmar in her Purrfect Cat Suit, or Adam West play out his iconic role. Simply choose rush shipping and be one step closer to digitally remastered Batman Perfection. </p>
 

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=640px, initial-scale=.5, maximum-scale=1" />
+<meta name="viewport" content="width=640, initial-scale=.5, maximum-scale=1" />
 <title>Batman Classics on DVD</title>
 
 
@@ -55,10 +55,13 @@
                     <ul>
                         <li>64 of your favorite original broadcast episodes fully remastered in HD </li>
                         <li>Over 3 Hours of ALL NEW bonus materials</li>
-                        <li>Adam West Naked on DVD: Watch as Adam takes you   behind the scenes of your favorite epidodes!</li>
-                        <li>The Original 1966 Batman Movie DVD starring <br />  Adam West and Burt Ward</li>
+                        <li>Adam West Naked on DVD: Watch as Adam takes you 
+  behind the scenes of your favorite epidodes!</li>
+                        <li>The Original 1966 Batman Movie DVD starring <br />
+  Adam West and Burt Ward</li>
                         <li>Detailed Episode Guide</li>
-                        <li>Your Own Show Script from the Episode  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
+                        <li>Your Own Show Script from the Episode
+  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
                         <li>Personal Letter from Adam West to you!</li>
                     </ul>
         </div>
@@ -97,12 +100,14 @@
                     original broadcast episodes <br />
                     fully remastered</li>
                 <li>Over 3 Hours of ALL NEW bonus materials</li>
-                <li>Adam West Naked on DVD: Watch as Adam takes you   behind the scenes of your favorite epidodes!</li>
+                <li>Adam West Naked on DVD: Watch as Adam takes you 
+  behind the scenes of your favorite epidodes!</li>
                 <li>The Original 1966 Batman Movie DVD starring
                     <br />
                     Adam West and Burt Ward</li>
                 <li>Detailed Episode Guide</li>
-                <li>Your Own Show Script from the Episode  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
+                <li>Your Own Show Script from the Episode
+  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
                 <li>Personal Letter from Adam West to you!</li>
                 <li>PLUS your own collectors box!</li>
             </ul>

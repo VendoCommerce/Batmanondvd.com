@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=640px, initial-scale=.5, maximum-scale=1" />
+<meta name="viewport" content="width=640, initial-scale=.5, maximum-scale=1" />
 <title>Batman Classics on DVD</title>
 
 
@@ -30,7 +30,9 @@
         <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/logo_batman2.png" width="244" height="196" alt="Batman" style="position: absolute; top: 63px; left: 392px;" />
         <h2 style="padding-top: 22px; padding-left: 14px;">Holy Bat Logic, Batman!
         </h2>
-        <h3 class="f35" style="line-height: 1.2em; padding-left: 14px;">Puzzled? Baffled by a riddle? <br />No question is too hard for the <br />world’s greatest detective!</h3>
+        <h3 class="f35" style="line-height: 1.2em; padding-left: 14px;">Puzzled? Baffled by a riddle? <br />
+No question is too hard for the <br />
+world’s greatest detective!</h3>
 
 
         <div class="faq">
@@ -61,10 +63,15 @@
             <dd>For a limited time only, and as a special holiday offer, we are pleased to offer a 30% discount on each collection you order after the first one. Additional collections must be ordered at the same time as your initial purchase. Maximum units per person is 10.  We can also giftwrap your order for a nominal price.</dd>
 
             <dt id="q5">What is installment billing?  </dt>
-            <dd>For orders that are under $500 we offer an extended payment plan of five equal payments. Any applicable shipping, handling, and taxes will be charged with your first installment at the time your order ships. Subsequent installments are billed monthly to the original form of payment. </dd>
+            <dd>For orders that are under $500 we offer an extended payment plan of five equal payments. Any applicable shipping, handling, and 
+taxes will be charged with your first installment at the time your order ships. Subsequent installments are billed monthly to the original form of payment. </dd>
 
             <dt id="q6">What if I still have questions about the product or my order? </dt>
-            <dd>Please call our customer service department: <br />TOLL FREE #: 800-839-3005 <br />EMAIL ADDRESS: <a href="mailto:BATMANONDVD@DATAPAKSERVICES.COM" style="color: #000; text-decoration: none;">BATMANONDVD@DATAPAKSERVICES.COM</a> <br />HOURS: MONDAY THROUGH FRIDAY 8A-8P EST <br />               <span style="display: inline-block; margin-left: 110px;">SATURDAY 9AM-6PM EST</span> </dd>
+            <dd>Please call our customer service department: <br />
+TOLL FREE #: 800-839-3005 <br />
+EMAIL ADDRESS: <a href="mailto:BATMANONDVD@DATAPAKSERVICES.COM" style="color: #000; text-decoration: none;">BATMANONDVD@DATAPAKSERVICES.COM</a> <br />
+HOURS: MONDAY THROUGH FRIDAY 8A-8P EST <br />
+               <span style="display: inline-block; margin-left: 110px;">SATURDAY 9AM-6PM EST</span> </dd>
 
             <dt id="q7">How long does it take my order to arrive?</dt>
             <dd>Most orders are shipped within two-three business days. Orders placed before November 6, 2014 will be held to arrive on November 11, 2014, the street date for this release.  You will receive an email with a tracking number the morning after your package ships. </dd>
