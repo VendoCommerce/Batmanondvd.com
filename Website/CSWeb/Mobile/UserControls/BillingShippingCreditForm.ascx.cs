@@ -479,9 +479,9 @@ namespace CSWeb.Mobile.UserControls
         protected void cbShippingSame_CheckedChanged(object sender, EventArgs e)
         {
             if (!cbShippingSame.Checked)
-                pnlShippingAddress.Visible = true;
-            else
                 pnlShippingAddress.Visible = false;
+            else
+                pnlShippingAddress.Visible = true;
         }
 
         protected void imgBtn_OnClick(object sender, ImageClickEventArgs e)

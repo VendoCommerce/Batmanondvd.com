@@ -20,7 +20,7 @@
 </head>
  
  
-<body>
+<body id="upsells">
     <form id="form1" runat="server">
     
     <asp:ScriptManager ID="ScriptManager1" runat="server">
@@ -45,7 +45,7 @@
 
 
  </div>
-<!--#include file="footer_upsell.html"-->
+<!--#include file="footer.html"-->
 </div>
 
     <uc:TrackingPixels ID="TrackingPixels" runat="server" />

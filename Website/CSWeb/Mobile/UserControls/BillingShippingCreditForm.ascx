@@ -111,7 +111,7 @@
         <asp:ListItem Value="false" Selected="True">No</asp:ListItem>
     </asp:RadioButtonList>--%>
      <asp:CheckBox ID="cbShippingSame" runat="server" CssClass="checkbox-left" OnCheckedChanged="cbShippingSame_CheckedChanged"
-            AutoPostBack="true" Checked="true" /><label class="label-3" for="bsfcBillingShippingCreditForm_cbShippingSame">
+            AutoPostBack="true" Checked="false" /><label class="label-3" for="bsfcBillingShippingCreditForm_cbShippingSame">
                   Check if Shipping Address is Different than Billing Address
 </label>          
             </div>
@@ -239,7 +239,7 @@
                       
                   
      <asp:CheckBox ID="xyz" runat="server" CssClass="checkbox-left2" Checked="true" /><label class="label-3" for="bsfcBillingShippingCreditForm_xyz">
-                Yes, I would like to receive updates and special offers from Warner Brothers. See Return Policy for Details.
+                Yes, I would like to receive updates and special offers from Warner Brothers. See <a href="returns.aspx" target="_blank">Return Policy</a> for Details.
 </label>          
             </div>
 

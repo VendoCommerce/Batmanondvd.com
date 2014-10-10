@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=640, initial-scale=.5, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, maximum-scale=1" />
 <title>Batman Classics on DVD</title>
 
 
@@ -56,7 +56,7 @@
                         <li>64 of your favorite original broadcast episodes fully remastered in HD </li>
                         <li>Over 3 Hours of ALL NEW bonus materials</li>
                         <li>Adam West Naked on DVD: Watch as Adam takes you 
-  behind the scenes of your favorite epidodes!</li>
+  behind the scenes of your favorite episodes!</li>
                         <li>The Original 1966 Batman Movie DVD starring <br />
   Adam West and Burt Ward</li>
                         <li>Detailed Episode Guide</li>
@@ -101,7 +101,7 @@
                     fully remastered</li>
                 <li>Over 3 Hours of ALL NEW bonus materials</li>
                 <li>Adam West Naked on DVD: Watch as Adam takes you 
-  behind the scenes of your favorite epidodes!</li>
+  behind the scenes of your favorite episodes!</li>
                 <li>The Original 1966 Batman Movie DVD starring
                     <br />
                     Adam West and Burt Ward</li>
