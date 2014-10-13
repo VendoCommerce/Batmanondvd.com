@@ -54,7 +54,7 @@
                     </script>
                 </div>
             </div>
-            <a href="choose.aspx" style="position: absolute; top: -16px; left: 402px; z-index: 30;">
+            <a href="#included_complete" class="included_complete" style="position: absolute; top: -16px; left: 402px; z-index: 30;">
                 <img src="//d1kg9stb0ddjcv.cloudfront.net/images/callout_completeseries.png" width="153" height="152" alt="Complete Series Available - Learn More" /></a>
         </div>
         <div class="home1b">
@@ -120,14 +120,14 @@
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
                 <div><img src="//d1kg9stb0ddjcv.cloudfront.net/images/homeslide_2.jpg" class="block" />
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
                 
@@ -135,7 +135,7 @@ our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="d
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
                 
@@ -143,7 +143,7 @@ our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="d
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
                 
@@ -151,7 +151,7 @@ our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="d
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="choose.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
 

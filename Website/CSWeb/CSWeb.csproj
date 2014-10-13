@@ -295,11 +295,13 @@
     <Content Include="Admin\VersionReport.aspx" />
     <Content Include="Admin\VersionReport1.aspx" />
     <Content Include="AuthorizeOrder.aspx" />
+    <Content Include="bottomcta_complete.html" />
     <Content Include="CardDecline.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="fonts\OpenSans-CondBold-webfont.svg" />
     <Content Include="fonts\OpenSans-CondLight-webfont.svg" />
     <Content Include="fonts\OpenSans-CondLightItalic-webfont.svg" />
+    <Content Include="Mobile\bottomcta_complete.html" />
     <Content Include="Mobile\bottomcta.html" />
     <Content Include="Mobile\returns.aspx" />
     <Content Include="Mobile\contact.aspx" />

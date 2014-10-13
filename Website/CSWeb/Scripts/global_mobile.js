@@ -19,7 +19,7 @@ $(this).scrollTop(0);
 	
 	
 $('.episodebox').hide();
-$('#season1').show();
+$('#classic_collection').show();
 $('#selectField').change(function () {
     $('.episodebox').hide();
     $('#' + $(this).val()).show();
@@ -66,6 +66,26 @@ $(".guarantee").fancybox({
 });
 
 $(".included").fancybox({
+    closeBtn: false,
+    fitToView: false,
+    wrapCSS: 'nowrapper',
+    padding: 0,
+    margin: 0,
+    width: 628,
+    height: 2262,
+    autoSize: false,
+    scrolling: 'no',
+    helpers: {
+        overlay: {
+            locked: false,
+            css: {
+                'background': 'rgba(0,0,0,.8)'
+            }
+        }
+    }
+});
+
+$(".included_complete").fancybox({
     closeBtn: false,
     fitToView: false,
     wrapCSS: 'nowrapper',

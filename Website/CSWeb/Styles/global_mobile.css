@@ -1179,7 +1179,7 @@ padding-bottom: 20px;
     top: 14px;
     right: 14px;
 }
-#included {
+#included, #included_complete {
     display: none;
     width: 628px;
     height: 2222px;
@@ -1191,19 +1191,19 @@ padding-bottom: 20px;
     margin: 20px 0;
 }
 
-#included ul {
+#included ul, #included_complete ul {
     margin: 18px 0 0 0;
     font-size: 29px;
     font-family: 'Open Sans Condensed', arial, sans-serif;
     line-height: 32x;
     list-style: none;
 }
-#included ul li {
+#included ul li, #included_complete ul li {
     margin-left: 13px;
     padding-bottom: 12px;
 }
 
-#included ul li:before {
+#included ul li:before, #included_complete ul li:before {
     content: '\2022';
     float: left; 
     margin-left: -13px;
@@ -1219,18 +1219,18 @@ padding-bottom: 20px;
     background: #fff7b8;
 }
 
-#included .included_yellowbox ul {
+#included .included_yellowbox ul, #included_complete .included_yellowbox ul {
     font-family: arial, sans-serif;
     font-size: 25px;
     line-height: 27px;
     margin-top: 0;
 }
-#included .included_yellowbox ul li {
+#included .included_yellowbox ul li, #included_complete .included_yellowbox ul li {
     margin-left: 25px; 
     padding-bottom: 36px;
     text-indent: 6px;
 }
-#included .included_yellowbox ul li:before {
+#included .included_yellowbox ul li:before, #included_complete .included_yellowbox ul li:before {
     content: '\002D';
     float: left; 
     margin-left: -6px;

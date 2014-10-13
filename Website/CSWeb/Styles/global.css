@@ -542,7 +542,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
 .prodselect {
     border: #cdcdcd solid 1px;
     padding: 6px;
-    width: 314px;
+    width: 312px;
     border-radius: 5px;
     background: #fafaf8; /* Old browsers */
 background: -moz-linear-gradient(top,  #fafaf8 0%, #e6e6e2 100%); /* FF3.6+ */
@@ -553,7 +553,6 @@ background: -ms-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* IE10+ */
 background: linear-gradient(to bottom,  #fafaf8 0%,#e6e6e2 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', endColorstr='#e6e6e2',GradientType=0 ); /* IE6-9 */
 -webkit-appearance: menulist-button;
--moz-appearance: menulist-button;
 appearance: menulist-button;
 }
 .choose_content {
@@ -881,7 +880,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
     top: 12px;
     right: 12px;
 }
-#included {
+#included, #included_complete {
     display: none;
     width: 820px;
     height: 738px;
@@ -898,12 +897,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
     font-family: 'OpenSansCondensed', arial, sans-serif;
     line-height: 23px;
 }
+#included_complete ul {
+    margin: 12px 0 0 0;
+    font-size: 21px;
+    font-family: 'OpenSansCondensed', arial, sans-serif;
+    line-height: 23px;
+}
 #included ul li {
     margin-left: 13px;
     padding-bottom: 12px;
 }
+#included_complete ul li {
+    margin-left: 13px;
+    padding-bottom: 10px;
+}
 
-#included ul li:before {
+#included ul li:before, #included_complete ul li:before {
     content: '\2022';
     float: left; 
     margin-left: -13px;
@@ -918,17 +927,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
     background: #fff7b8;
 }
 
-#included .included_yellowbox ul {
+#included .included_yellowbox ul, #included_complete .included_yellowbox ul {
     font-family: arial, sans-serif;
     font-size: 12px;
     line-height: 17px;
     margin-top: 0;
 }
-#included .included_yellowbox ul li {
+#included .included_yellowbox ul li, #included_complete .included_yellowbox ul li {
     margin-left: 25px; 
     padding-bottom: 6px;
 }
-#included .included_yellowbox ul li:before {
+#included .included_yellowbox ul li:before, #included_complete .included_yellowbox ul li:before {
     content: '\002D';
     float: left; 
     margin-left: -10px;

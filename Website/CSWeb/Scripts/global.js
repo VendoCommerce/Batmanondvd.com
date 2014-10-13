@@ -20,7 +20,7 @@ $(window).scrollTop(0);
 	
 	
 $('.episodebox').hide();
-$('#season1').show();
+$('#classic_collection').show();
 $('#selectField').change(function () {
     $('.episodebox').hide();
     $('#' + $(this).val()).show();
@@ -42,7 +42,7 @@ $(this).children().toggleClass('icon-plus icon-minus');
     $(".fancybox").fancybox();
 
 
-   $(".included").fancybox({
+    $(".included").fancybox({
         closeBtn: false,
         fitToView: false,
         wrapCSS: 'nowrapper',
@@ -54,10 +54,30 @@ $(this).children().toggleClass('icon-plus icon-minus');
         scrolling: 'no',
         helpers: {
             overlay: {
-				locked: false,
-				css : {
-					'background' : 'rgba(0,0,0,.8)'
-					}
+                locked: false,
+                css: {
+                    'background': 'rgba(0,0,0,.8)'
+                }
+            }
+        }
+    });
+
+    $(".included_complete").fancybox({
+        closeBtn: false,
+        fitToView: false,
+        wrapCSS: 'nowrapper',
+        padding: 0,
+        width: 820,
+        height: 738,
+        autoSize: false,
+        closeClick: false,
+        scrolling: 'no',
+        helpers: {
+            overlay: {
+                locked: false,
+                css: {
+                    'background': 'rgba(0,0,0,.8)'
+                }
             }
         }
     });

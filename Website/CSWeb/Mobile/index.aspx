@@ -39,7 +39,7 @@
     <div>
     <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/home1_new.jpg" width="640" height="517" alt="Batman" class="block" usemap="#Map_home1" />
     <map name="Map_home1" id="Map_home1">
-        <area shape="circle" coords="128,86,86" href="choose.aspx" alt="Learn More" />
+        <area shape="circle" coords="128,86,86" href="#included_complete" class="included_complete" alt="Learn More" />
         <area shape="rect" coords="268,318,460,356" href="#included" alt="See What's Included" class="included" />
     </map>
 
@@ -68,7 +68,7 @@
             </div>
     </div>
     <div class="fleft" style="width: 330px; padding-left: 13px;">
-        <a href="tel:18008723305"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_clicktocall.png" width="296" height="81" alt="Click to Call" class="block" /></a>
+        <a href="tel:18006732909"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_clicktocall.png" width="296" height="81" alt="Click to Call" class="block" /></a>
     </div>
     
     <div class="fleft" style="width: 296px;">

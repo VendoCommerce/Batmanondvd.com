@@ -239,7 +239,7 @@
                       
                   
      <asp:CheckBox ID="xyz" runat="server" CssClass="checkbox-left2" Checked="true" /><label class="label-3" for="bsfcBillingShippingCreditForm_xyz">
-                Yes, I would like to receive updates and special offers from Warner Brothers. See <a href="returns.aspx" target="_blank">Return Policy</a> for Details.
+                Yes, I would like to receive updates and special offers from Warner Brothers. See <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> for Details.
 </label>          
             </div>
 
@@ -252,7 +252,7 @@
         <div class="cart_mobile">
             <div class="form_line_guarantee" style="display: none;"><a href="returns.aspx" target="_blank">View 30-Day Guarantee</a></div>
                              
-            <div class="multipay_txt">*You will be charged today for your first of 5 monthly payments of $19.99. Applicable taxes will be included in your first payment (this should not display if the consumer selects a 1-pay option). Shipping is FREE. If you are not satisfied with your purchase for any reason, simply return it within 60 days to receive a full refund. Restrictions may apply. Please refer to our Return Policy (link to Return Policy page)</div>
+            <div class="multipay_txt"><strong>Offer Terms:</strong> You will be charged today for your first of 5 monthly payments of $19.99. Applicable taxes will be included in your first payment (this should not display if the consumer selects a 1-pay option). Shipping is FREE. If you are not satisfied with your purchase for any reason, simply return it within 60 days to receive a full refund. Restrictions may apply. Please refer to our Return Policy (link to Return Policy page)</div>
         </div>
     </ContentTemplate>
 </asp:UpdatePanel>
