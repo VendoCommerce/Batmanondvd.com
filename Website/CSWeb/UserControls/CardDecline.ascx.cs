@@ -435,7 +435,7 @@ namespace CSWeb.Root.UserControls
 
 
                 PaymentInformation paymentDataInfo = new PaymentInformation();
-                string CardNumber = ucTokenex.GetCCNumToken();
+                string CardNumber = ucTokenex.ReceivedToken; 
                 paymentDataInfo.CreditCardNumber = CommonHelper.Encrypt(CardNumber);
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;

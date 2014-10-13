@@ -1,5 +1,6 @@
 <%@Control Language="C#" AutoEventWireup="true" Inherits="CSWeb.Mobile.UserControls.BillingShippingCreditForm" CodeBehind="BillingShippingCreditForm.ascx.cs" %>
 <%@ Register src="ShoppingCartControl.ascx" tagname="ShoppingCartControl" tagprefix="uc1" %>
+<%@ Register src="../../UserControls/Tokenex.ascx" tagname="Tokenex" tagprefix="uc2" %>
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>
 <uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />
@@ -10,6 +11,7 @@
         <div class="cart_mobile" style="padding-top: 50px;"> 
             <div class="form_line clearfix">
                 <div class="error-1">
+                    <uc2:Tokenex ID="ucTokenex" runat="server" />
                     <asp:RequiredFieldValidator ID="rfvFirstName" runat="server" Display="Dynamic"
                         ControlToValidate="txtFirstName"></asp:RequiredFieldValidator>
                     <asp:Label ID="lblFirstNameError" runat="server" Visible="false">
@@ -183,7 +185,7 @@
                     </div>
                 <label class="label-1">
                     Card Number*</label>
-                     <asp:TextBox ID="txtCCNumber1" runat="server"  CssClass="text-1" MaxLength="16" placeholder="Credit Card Number"></asp:TextBox>
+                     <asp:TextBox ID="txtCCNumber1" runat="server"  CssClass="text-1" MaxLength="16" placeholder="Credit Card Number" ClientIDMode="Static"></asp:TextBox>
                
             </div>
 <div class="form_line clearfix">
@@ -247,7 +249,7 @@
         <div class="clear"></div>
 
             <div class="form_line_btn">
-                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_complete_order.png" OnClick="imgBtn_OnClick" />
+                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_complete_order.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
         <div class="cart_mobile">
             <div class="form_line_guarantee" style="display: none;"><a href="returns.aspx" target="_blank">View 30-Day Guarantee</a></div>

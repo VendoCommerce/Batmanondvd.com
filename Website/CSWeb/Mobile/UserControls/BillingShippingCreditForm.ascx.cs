@@ -381,27 +381,27 @@ namespace CSWeb.Mobile.UserControls
             else
                 lblExpDate.Visible = false;
 
-            string c = txtCCNumber1.Text;
+            string c = ucTokenex.ReceivedToken; 
             if (c.Equals(""))
             {
                 lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
                 lblCCNumberError.Visible = true;
                 _bError = true;
             }
-            else
-            {
-                if ((c.ToString() != "4444333322221111"))// && (txtCvv.Text.IndexOf("147114711471") == -1))
-                {
-                    if (!CommonHelper.ValidateCardNumber(c))
-                    {
-                        lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
-                        lblCCNumberError.Visible = true;
-                        _bError = true;
-                    }
-                    else
-                        lblCCNumberError.Visible = false;
-                }
-            }
+            //else
+            //{
+            //    if ((c.ToString() != "4444333322221111"))// && (txtCvv.Text.IndexOf("147114711471") == -1))
+            //    {
+            //        if (!CommonHelper.ValidateCardNumber(c))
+            //        {
+            //            lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
+            //            lblCCNumberError.Visible = true;
+            //            _bError = true;
+            //        }
+            //        else
+            //            lblCCNumberError.Visible = false;
+            //    }
+            //}
 
             //if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
             //{
@@ -428,37 +428,37 @@ namespace CSWeb.Mobile.UserControls
             //    else
             //        lblCvvError.Visible = false;
 
-                if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
-                }
-                else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
+                //if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
+                //{
+                //    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+                //    lblCCType.Visible = true;
+                //    _bError = true;
+                //}
+                //else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
+                //{
+                //    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+                //    lblCCType.Visible = true;
+                //    _bError = true;
 
-                }
-                else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
+                //}
+                //else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
+                //{
+                //    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+                //    lblCCType.Visible = true;
+                //    _bError = true;
 
-                }
-                else if ((c[0].ToString() == "3") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.AmericanExpress.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
+                //}
+                //else if ((c[0].ToString() == "3") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.AmericanExpress.ToString()))
+                //{
+                //    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+                //    lblCCType.Visible = true;
+                //    _bError = true;
 
-                }
-                else
-                {
-                    lblCCType.Visible = false;
-                }
+                //}
+                //else
+                //{
+                //    lblCCType.Visible = false;
+                //}
 
             //}
 
@@ -550,8 +550,8 @@ namespace CSWeb.Mobile.UserControls
 
 
                 PaymentInformation paymentDataInfo = new PaymentInformation();
-                string CardNumber = txtCCNumber1.Text;
-                paymentDataInfo.CreditCardNumber = CommonHelper.Encrypt(CardNumber);
+                string CardNumber = ucTokenex.ReceivedToken;
+                paymentDataInfo.CreditCardNumber = CommonHelper.Encrypt(CardNumber); 
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;
                 paymentDataInfo.CreditCardExpired = new DateTime(int.Parse(ddlExpYear.SelectedValue), int.Parse(ddlExpMonth.SelectedValue), 1);
@@ -561,7 +561,7 @@ namespace CSWeb.Mobile.UserControls
                 clientData.PaymentInfo = paymentDataInfo;
                 ClientOrderData = clientData;
 
-                                    //Save Order information before upsale process
+                //Save Order information before upsale process
 
                 int orderId = 0;
                     if (rId == 1)

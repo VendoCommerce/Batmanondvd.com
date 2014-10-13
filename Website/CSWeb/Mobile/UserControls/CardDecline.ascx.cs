@@ -304,31 +304,31 @@ namespace CSWeb.Mobile.UserControls
             else
                 lblExpDate.Visible = false;
 
-            string c = txtCCNumber1.Text + txtCCNumber2.Text + txtCCNumber3.Text + txtCCNumber4.Text;
+            string c = ucTokenex.ReceivedToken; ;
             if (c.Equals(""))
             {
                 lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
                 lblCCNumberError.Visible = true;
                 _bError = true;
             }
-            else
-            {
-                if ((c.ToString() != "4444333322221111") )//&& (txtCvv.Text.IndexOf("147114711471") == -1))
-                {
-                    if (!CommonHelper.ValidateCardNumber(c))
-                    {
-                        lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
-                        lblCCNumberError.Visible = true;
-                        _bError = true;
-                    }
-                    else
-                        lblCCNumberError.Visible = false;
-                }
-                else
-                    lblCCNumberError.Visible = false;
+            //else
+            //{
+            //    if ((c.ToString() != "4444333322221111") )//&& (txtCvv.Text.IndexOf("147114711471") == -1))
+            //    {
+            //        if (!CommonHelper.ValidateCardNumber(c))
+            //        {
+            //            lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
+            //            lblCCNumberError.Visible = true;
+            //            _bError = true;
+            //        }
+            //        else
+            //            lblCCNumberError.Visible = false;
+            //    }
+            //    else
+            //        lblCCNumberError.Visible = false;
 
 
-            }
+            //}
 
             //if (CommonHelper.EnsureNotNull(txtCvv.Text) == String.Empty)
             //{
@@ -354,37 +354,37 @@ namespace CSWeb.Mobile.UserControls
             //    else
             //        lblCvvError.Visible = false;
 
-                if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
-                }
-                else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
+                //if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
+                //{
+                //    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+                //    lblCCType.Visible = true;
+                //    _bError = true;
+                //}
+                //else if ((c[0].ToString() == "4") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.VISA.ToString()))
+                //{
+                //    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+                //    lblCCType.Visible = true;
+                //    _bError = true;
 
-                }
-                else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
+                //}
+                //else if ((c[0].ToString() == "6") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.Discover.ToString()))
+                //{
+                //    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+                //    lblCCType.Visible = true;
+                //    _bError = true;
 
-                }
-                else if ((c[0].ToString() == "3") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.AmericanExpress.ToString()))
-                {
-                    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
-                    lblCCType.Visible = true;
-                    _bError = true;
+                //}
+                //else if ((c[0].ToString() == "3") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.AmericanExpress.ToString()))
+                //{
+                //    lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeValidationErrorMsg");
+                //    lblCCType.Visible = true;
+                //    _bError = true;
 
-                }
-                else
-                {
-                    lblCCType.Visible = false;
-                }
+                //}
+                //else
+                //{
+                //    lblCCType.Visible = false;
+                //}
 
             //}
             return _bError;
@@ -439,7 +439,7 @@ namespace CSWeb.Mobile.UserControls
 
 
                 PaymentInformation paymentDataInfo = new PaymentInformation();
-                string CardNumber = txtCCNumber1.Text + txtCCNumber2.Text + txtCCNumber3.Text + txtCCNumber4.Text;
+                string CardNumber = ucTokenex.ReceivedToken; 
                 paymentDataInfo.CreditCardNumber = CommonHelper.Encrypt(CardNumber);
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;
@@ -495,13 +495,6 @@ namespace CSWeb.Mobile.UserControls
             txtShippingCity.Text = clientData.CustomerInfo.ShippingAddress.City;
             txtShippingZipCode.Text = clientData.CustomerInfo.ShippingAddress.ZipPostalCode;
 
-
-            //Payment information
-            string ccNumber = CommonHelper.Decrypt(clientData.PaymentInfo.CreditCardNumber);
-            txtCCNumber1.Text = ccNumber.Substring(0, 4);
-            txtCCNumber2.Text = ccNumber.Substring(4, 4);
-            txtCCNumber3.Text = ccNumber.Substring(8, 4);
-            txtCCNumber4.Text = ccNumber.Substring(12, ccNumber.Length -12);
 
             //txtCvv.Text = clientData.PaymentInfo.CreditCardCSC;
             DateTime expireDate = DateTime.MinValue;

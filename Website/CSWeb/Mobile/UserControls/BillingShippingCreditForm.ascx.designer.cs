@@ -40,6 +40,15 @@ namespace CSWeb.Mobile.UserControls {
         protected global::System.Web.UI.UpdatePanel upBillingForm;
         
         /// <summary>
+        /// ucTokenex control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CSWeb.UserControls.Tokenex ucTokenex;
+        
+        /// <summary>
         /// rfvFirstName control.
         /// </summary>
         /// <remarks>

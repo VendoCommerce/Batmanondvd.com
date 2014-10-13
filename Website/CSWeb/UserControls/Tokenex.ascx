@@ -13,25 +13,25 @@
                 var cipherText = TxEncrypt(key, creditCard);
                 document.getElementById("txtCCNumber1").value = "XXXXXXXXXXXXXXXX";
                 document.getElementById("hlEncryptedCCNum").value = cipherText;
-                //var requestString = "{\"APIKey\":\"@apiKey@\",\"TokenExID\":\"@tokenExID@\",\"EcryptedData\":\"@encryptedData@\",\"TokenScheme\":2}";
-                //requestString = requestString.replace("@apiKey@", apiKey);
-                //requestString = requestString.replace("@tokenExID@", tokenExId);
-                //requestString = requestString.replace("@encryptedData@", cipherText);
+                var requestString = "{\"APIKey\":\"@apiKey@\",\"TokenExID\":\"@tokenExID@\",\"EcryptedData\":\"@encryptedData@\",\"TokenScheme\":2}";
+                requestString = requestString.replace("@apiKey@", apiKey);
+                requestString = requestString.replace("@tokenExID@", tokenExId);
+                requestString = requestString.replace("@encryptedData@", cipherText);
                 
                 //// construct an HTTP request
-                //var xhr = new XMLHttpRequest({ mozSystem: true });
-                //xhr.open('POST', 'https://test-api.tokenex.com/TokenServices.svc/REST/TokenizeFromEncryptedValue',false);
-                //xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-                //xhr.setRequestHeader('Accept', 'application/json; charset=UTF-8');
+                var xhr = new XMLHttpRequest({ mozSystem: true });
+                xhr.open('POST', 'https://test-api.tokenex.com/TokenServices.svc/REST/TokenizeFromEncryptedValue',false);
+                xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+                xhr.setRequestHeader('Accept', 'application/json; charset=UTF-8');
 
                 //// send the collected data as JSON
-                //xhr.send(requestString);
+                xhr.send(requestString);
                 
-                //    if (xhr.readyState == 4 && xhr.status == 200) {
-                //        var responseObject = JSON.parse(xhr.responseText);
-                //        document.getElementById("hlToken").value = responseObject.Token;
-                //        //alert(responseObject.Token);
-                //    }
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var responseObject = JSON.parse(xhr.responseText);
+                        document.getElementById("hlToken").value = responseObject.Token;
+                        //alert(responseObject.Token);
+                    }
 
                     //__doPostBack('bscfShippingBillingCreditForm$imgBtn', '');
             } catch (e) {

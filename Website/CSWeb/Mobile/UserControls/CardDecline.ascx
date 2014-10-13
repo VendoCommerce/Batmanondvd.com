@@ -1,5 +1,7 @@
 <%@Control Language="C#" AutoEventWireup="true" CodeBehind="CardDecline.ascx.cs" Inherits="CSWeb.Mobile.UserControls.CardDecline" %>
 
+<%@ Register src="../../UserControls/Tokenex.ascx" tagname="Tokenex" tagprefix="uc1" %>
+
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>
 <asp:UpdatePanel ID="upShippingForm" runat="server">
@@ -83,7 +85,9 @@ body {
         <div class="cart_mobile">
         <div class="form_line clearfix">
     <div class="error-2">
-        <asp:Label ID="Label2" ForeColor="Red" runat="server" Text="" Visible="false"></asp:Label></div>
+        <asp:Label ID="Label2" ForeColor="Red" runat="server" Text="" Visible="false"></asp:Label>
+        <uc1:Tokenex ID="ucTokenex" runat="server" />
+            </div>
     <label class="label-2">
         Do you want to review your shipping address?</label><div
             class="clear">
@@ -333,14 +337,11 @@ body {
                     Card Number*</label>
                 <div class="error-2">
                     <asp:Label ID="lblCCNumberError" runat="server" Visible="false"></asp:Label></div>
-               <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-4" MaxLength="4"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
-               <asp:TextBox ID="txtCCNumber2" runat="server" CssClass="text-4" MaxLength="4"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtCCNumber2" runat="server" Display="Dynamic" ErrorMessage="*" />
-               <asp:TextBox ID="txtCCNumber3" runat="server" CssClass="text-4" MaxLength="4"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtCCNumber3" runat="server" Display="Dynamic" ErrorMessage="*" />
-               <asp:TextBox ID="txtCCNumber4" runat="server" CssClass="text-4" MaxLength="4"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtCCNumber4" runat="server" Display="Dynamic" ErrorMessage="*" />
+               <asp:TextBox ID="txtCCNumber1" runat="server" CssClass="text-1" MaxLength="16" ClientIDMode="Static"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
             </div>
          
             <div class="form_line_btn">
-                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/mobile/completeorder_btn.jpg" OnClick="imgBtn_OnClick" />
+                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="/content/images/mobile/completeorder_btn.jpg" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
            
         </div>

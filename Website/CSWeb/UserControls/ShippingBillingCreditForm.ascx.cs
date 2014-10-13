@@ -450,7 +450,7 @@ namespace CSWeb.Root.UserControls
 
             #region Credit Card
 
-            string c = ucTokenex.EncryptedCcNum;
+            string c = ucTokenex.ReceivedToken;
 
             //if ((c[0].ToString() == "5") && (ddlCCType.SelectedItem.Text.ToString() != CreditCardTypeEnum.MasterCard.ToString()))
             //{
@@ -641,7 +641,7 @@ namespace CSWeb.Root.UserControls
                 
 
                 PaymentInformation paymentDataInfo = new PaymentInformation();
-                string CardNumber = ucTokenex.GetCCNumToken(); //ucTokenex.ReceivedToken; //ucTokenex.GetCCNumToken();
+                string CardNumber = ucTokenex.ReceivedToken; //ucTokenex.GetCCNumToken();
                 paymentDataInfo.CreditCardNumber = CommonHelper.Encrypt(CardNumber);
                 paymentDataInfo.CreditCardType = Convert.ToInt32(ddlCCType.SelectedValue);
                 paymentDataInfo.CreditCardName = ddlCCType.SelectedItem.Text;
