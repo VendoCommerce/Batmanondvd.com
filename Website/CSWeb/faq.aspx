@@ -62,7 +62,11 @@
             <dd>For orders that are under $500 we offer an extended payment plan of five equal payments. Any applicable shipping, handling, and taxes will be charged with your first installment at the time your order ships. Subsequent installments are billed monthly to the original form of payment. </dd>
 
             <dt id="q6">What if I still have questions about the product or my order? </dt>
-            <dd style="line-height: 21px;">Please call our customer service department: <br />TOLL FREE #: 800-839-3005 <br />EMAIL ADDRESS: <a href="mailto:BATMANONDVD@DATAPAKSERVICES.COM" style="color: #000; text-decoration: none;">BATMANONDVD@DATAPAKSERVICES.COM</a> <br />HOURS: MONDAY THROUGH FRIDAY 8AM-8PM EST <br />               <span style="display: inline-block; margin-left: 58px;">SATURDAY 9AM-6PM EST</span> </dd>
+            <dd style="line-height: 21px;">To Reach Customer Service <br />
+                Call: 1-800-839-3005 <br />
+                Hours: Monday Through Friday 8A-8P EST, Saturday 9A-6P EST<br />
+                Email: <a href="mailto:batmanondvd@datapakservices.com" style="color: #000; text-decoration: none;">batmanondvd@datapakservices.com</a>
+            </dd>
 
             <dt id="q7">How long does it take my order to arrive?</dt>
             <dd>Most orders are shipped within two-three business days. Orders placed before November 6, 2014 will be held to arrive on November 11, 2014, the street date for this release.  You will receive an email with a tracking number the morning after your package ships. </dd>

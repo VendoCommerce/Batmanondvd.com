@@ -34,7 +34,7 @@
          </h2>
 
         <div class="text-center" style="padding-top: 40px; padding-bottom: 70px;">
-            <h3 class="f42 green caps webfont1bold pad12">Batman: The Classic Collection</h3>
+            <h3 class="f42 green caps webfont1bold pad12">Select your Batman Collection:</h3>
             <select id="selectField" class="select-1" style="margin: 0 auto;">
                 <option value="classic_collection">Classic Collection</option>
                 <option value="complete_collection">Complete Collection</option>

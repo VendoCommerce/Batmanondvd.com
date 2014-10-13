@@ -22,8 +22,8 @@ $(window).scrollTop(0);
 $('.episodebox').hide();
 $('#classic_collection').show();
 $('#selectField').change(function () {
-    $('.episodebox').hide();
-    $('#' + $(this).val()).show();
+    $('.episodebox').fadeOut();
+    $('#' + $(this).val()).fadeIn();
 });
 
 

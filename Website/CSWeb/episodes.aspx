@@ -25,7 +25,7 @@
         <h2 class="f49 pad20" style="margin-left: 14px;">Same Bat-Time...<br />
             <span class="block" style="padding-left: 15px;">...Same Bat-Channel!</span>
         </h2>
-        <h3 class="f34 green caps webfont1bold">Batman: The Classic Collection</h3>
+        <h3 class="f34 green caps webfont1bold">Select your Batman Collection:</h3>
         <select id="selectField" class="select-1" style="margin-left: 112px;">
             <option value="classic_collection">Classic Collection</option>
             <option value="complete_collection">Complete Collection</option>

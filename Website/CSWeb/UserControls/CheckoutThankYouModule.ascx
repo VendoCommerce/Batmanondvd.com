@@ -42,31 +42,29 @@ function Clickheretoprint()
 
  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="receipt_table1">
 <tr class="horzline1">
-<td valign="top" class="pad0 black" style="width: 600px;">
+<td valign="top" class="pad0 black" style="width: 270px;">
                     <strong>&nbsp;</strong>
                 </td>
-                <td valign="top" class="pad0 black" style="width: 50px;">
+                <td valign="top" class="pad0 black" style="width: 380px;">
                    &nbsp;
                 </td>
                 <td valign="top" class="pad0 text-center black">
-                    <strong>Quantity</strong>
+                    Quantity
                 </td>
                 <td valign="top" class="pad0 black" style="width: 268px;">
-                    <strong>&nbsp;</strong>
+                    <div style="padding-left: 15px;">Price</div>
                 </td>
             </tr>
               <asp:DataList runat="server" ID="dlordersList" RepeatLayout="Flow" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <tr>
-                             <td valign="top">
-                                <img src="<%# ImageURL(Convert.ToInt32(DataBinder.Eval(Container.DataItem, "SkuId"))) %>" />
-                            </td>                           <td valign="top" style="font-size: 12px; line-height: 16px;">
+                             <td valign="top" align="right">
+                                <div style="margin-right: 10px;"><img src="<%# ImageURL(Convert.ToInt32(DataBinder.Eval(Container.DataItem, "SkuId"))) %>" /></div>
+                            </td>
+                            <td valign="top" style="font-size: 12px; line-height: 16px;">
                                 <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                             </td>
-                            <td valign="top" class="pad0 black">
-                               &nbsp;
-                            </td>
-                             <td valign="top" class="black bold text-center">
+                             <td valign="top" class="black text-center">
                                 <%# DataBinder.Eval(Container.DataItem, "Quantity")%>
                             </td>
                            <td valign="top" class="black" style="padding-right: 190px; text-align: right;">
@@ -78,11 +76,11 @@ function Clickheretoprint()
 
             <asp:Literal ID="LiteralTableRows" runat="server"></asp:Literal>
           <tr class="horzline2">
-                <td valign="top" colspan="3" class="black">
+                <td valign="top" colspan="4" class="black">
              <div class="cart_totals clearfix" style="margin-left: 506px;">
                     
                 <div class="cart_totals_left">
-                  <strong>Subtotal:             <strong>Subtotal:</strong><br />
+                  <strong>Subtotal:</strong><br />
                   Shipping:<br />
                      <asp:Panel ID="pnlRushLabel" runat="server" Visible="false">
                         Rush S &amp; H:<br />
