@@ -141,6 +141,12 @@ p {padding-bottom: 20px;}
     margin: 0 auto;
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/header.png) repeat center 0;
 }
+.header500 {
+    width: 973px;
+    height: 130px;
+    margin: 0 auto;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/header500.png) repeat center 0;
+}
 .headernav {
     position:absolute;
     top: 98px;
@@ -204,12 +210,12 @@ p {padding-bottom: 20px;}
     left: 83px;
 }
 
-.header .asotv {
+.header .asotv, .header500 .asotv {
     position: absolute;
     top: 10px;
     left: 714px;
 }
-.header .phone {
+.header .phone, .header500 .phone {
     position: absolute;
     top: 18px;
     left: 757px;
@@ -235,7 +241,7 @@ p {padding-bottom: 20px;}
     font-size: 12px;
 }
 
-.header .nav-logo_wb {
+.header .nav-logo_wb, .header500 .nav-logo_wb {
     position: absolute;
     top: 10px;
     left: 668px;

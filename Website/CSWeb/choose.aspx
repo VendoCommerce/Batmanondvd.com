@@ -75,8 +75,8 @@ top: 0; left: -25px;" />
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
                             <asp:ListItem Value="111">Complete Classic Batman Collection on DVD - 1 payment of $149.95</asp:ListItem>
                             <asp:ListItem Value="113">Complete Classic Batman Collection on DVD - 5 easy payments of $29.99</asp:ListItem>
-                            <asp:ListItem Value="114">Complete Classic Batman Collection on Blu-Ray - 1 payment of $174.95</asp:ListItem>
-                            <asp:ListItem Value="115">Complete Classic Batman Collection on Blu-Ray - 5 easy payments of $34.99</asp:ListItem>
+                            <asp:ListItem Value="114">Complete Classic Batman Collection in HD on Blu-Ray - 1 payment of $174.95</asp:ListItem>
+                            <asp:ListItem Value="115">Complete Classic Batman Collection in HD on Blu-Ray - 5 easy payments of $34.99</asp:ListItem>
                         </asp:DropDownList>
                     </p>
                     </div>

@@ -301,6 +301,7 @@
     <Content Include="fonts\OpenSans-CondBold-webfont.svg" />
     <Content Include="fonts\OpenSans-CondLight-webfont.svg" />
     <Content Include="fonts\OpenSans-CondLightItalic-webfont.svg" />
+    <Content Include="header500.html" />
     <Content Include="Mobile\bottomcta_complete.html" />
     <Content Include="Mobile\bottomcta.html" />
     <Content Include="Mobile\returns.aspx" />
