@@ -59,11 +59,14 @@
                       <th class="text-center pad0">Payment</th>
                   </tr>
           <tr>
-              <td colspan="3" style="padding: 0;"><div class="horizontal_dots"></div></td>
+            <td colspan="3" style="padding: 0;"><div class="horizontal_dots"></div></td>
           </tr>
                 <asp:DataList runat="server" ID="dlordersList" RepeatLayout="Flow" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <tr>
+                               <td valign="top">
+                                <img src="<%# ImageURL(Convert.ToInt32(DataBinder.Eval(Container.DataItem, "SkuId"))) %>" />
+                            </td>                        
                         <td class="receipt_item">
                             <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                         </td>

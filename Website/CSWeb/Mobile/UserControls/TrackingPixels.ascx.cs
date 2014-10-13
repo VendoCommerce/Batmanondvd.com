@@ -60,7 +60,7 @@ namespace CSWeb.Mobile.UserControls
 
 
 
-            litGAReceiptPixel.Text = litGAReceiptPixel2.Text = sbGAPixel.ToString();
+            //litGAReceiptPixel.Text = litGAReceiptPixel2.Text = sbGAPixel.ToString();
         }
 
 

@@ -1,8 +1,8 @@
 <%@ Control Language="C#" Inherits="CSWeb.Root.UserControls.CheckoutThankYouModule" %>
 
 <style type="text/css">
-    .auto-style1 {
-        height: 28px;
+    .auto-style2 {
+        height: 19px;
     }
 </style>
 
@@ -48,6 +48,9 @@ function Clickheretoprint()
                 <td valign="top" class="pad0 black" style="width: 50px;">
                    &nbsp;
                 </td>
+                <td valign="top" class="pad0 text-center black">
+                    <strong>Quantity</strong>
+                </td>
                 <td valign="top" class="pad0 black" style="width: 268px;">
                     <strong>&nbsp;</strong>
                 </td>
@@ -55,15 +58,19 @@ function Clickheretoprint()
               <asp:DataList runat="server" ID="dlordersList" RepeatLayout="Flow" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <tr>
-                            <td valign="top" style="font-size: 12px; line-height: 16px;">
+                             <td valign="top">
+                                <img src="<%# ImageURL(Convert.ToInt32(DataBinder.Eval(Container.DataItem, "SkuId"))) %>" />
+                            </td>                           <td valign="top" style="font-size: 12px; line-height: 16px;">
                                 <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                             </td>
                             <td valign="top" class="pad0 black">
                                &nbsp;
                             </td>
-                            <td valign="top" class="black" style="padding-right: 190px; text-align: right;">
-                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%>
+                             <td valign="top" class="black bold text-center">
+                                <%# DataBinder.Eval(Container.DataItem, "Quantity")%>
                             </td>
+                           <td valign="top" class="black" style="padding-right: 190px; text-align: right;">
+                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%></td>
                            
                         </tr>
                     </ItemTemplate>
@@ -75,7 +82,7 @@ function Clickheretoprint()
              <div class="cart_totals clearfix" style="margin-left: 506px;">
                     
                 <div class="cart_totals_left">
-                  <strong>Subtotal:</strong><br />
+                  <strong>Subtotal:             <strong>Subtotal:</strong><br />
                   Shipping:<br />
                      <asp:Panel ID="pnlRushLabel" runat="server" Visible="false">
                         Rush S &amp; H:<br />

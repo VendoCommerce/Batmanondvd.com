@@ -2,6 +2,12 @@
 <%@ Register Src="Header.ascx" TagName="Header" TagPrefix="uc" %>
 <%@ Register Src="TrackingPixels.ascx" TagName="TrackingPixels" TagPrefix="uc" %>
 
+<style type="text/css">
+    .auto-style1 {
+        height: 38px;
+    }
+</style>
+
 <uc:Header ID="Header_Cart" runat="server" />
 
 <div id="stretch_container">
@@ -41,8 +47,7 @@
                             </td>
                         
                              <td width="12%" valign="top">
-                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%>
-                            </td>
+                                $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%></td>
                            
                         </tr>
                     </ItemTemplate>
