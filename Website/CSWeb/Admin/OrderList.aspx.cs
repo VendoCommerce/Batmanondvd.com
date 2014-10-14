@@ -90,9 +90,9 @@ namespace CSWeb.Admin
                 Order orderItem = e.Item.DataItem as Order;
                 Label lblTotal = e.Item.FindControl("lblTotal") as Label;
                 Label lblSubTotal = e.Item.FindControl("lblSubTotal") as Label;
-                HyperLink hlDetail = e.Item.FindControl("hlDetail") as HyperLink;
+                //HyperLink hlDetail = e.Item.FindControl("hlDetail") as HyperLink;
 
-                hlDetail.NavigateUrl = "OrderDetail.aspx?sId=1&oId=" + orderItem.OrderId;
+                //hlDetail.NavigateUrl = "OrderDetail.aspx?sId=1&oId=" + orderItem.OrderId;
                 if (CbInCludeFullAmount.Checked)
                 {
                     lblSubTotal.Text = String.Format(" ${0:0.##}", orderItem.FullPriceSubTotal);
@@ -117,6 +117,10 @@ namespace CSWeb.Admin
                 case "Delete":
 
                     CSResolve.Resolve<IOrderService>().RemoveOrder(Convert.ToInt32(e.CommandArgument));
+                    break;
+                case "LoadOrder":
+                    Session["oId"] =(string) e.CommandArgument;
+                    Response.Redirect("OrderDetail.aspx?sId=1");
                     break;
             }
             BindOrders(1, true, false);

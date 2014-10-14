@@ -141,14 +141,11 @@ namespace CSBusiness
                     item.SaltKey = row["salt"].ToString();
                     if (Convert.ToInt32(row["UserTypeId"]) != 1)
                     {
-                        item.Password = RijndaelSimple.Decrypt(item.PasswordHash,
-                                                   ConfigHelper.ReadAppSetting("PassPhrase", ""),
-                                                  item.SaltKey,
-                                                 "SHA1",
-                                                        2,
-                                                        "@1B2c3D4e5F6g7H8",
-                                                        256);
+                        item.Password = "Hidden";// RijndaelSimple.Decrypt(item.PasswordHash, ConfigHelper.ReadAppSetting("PassPhrase", ""), item.SaltKey, "SHA1",2,"@1B2c3D4e5F6g7H8",256);
                     }
+                    //Decrypt sensitive data 
+                    Encryption.DecryptValues(item); 
+
                     CustomerList.Add(item);
 
                 }

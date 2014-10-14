@@ -81,8 +81,8 @@ namespace CSWeb.Root.Store
                         authSuccess = orderData.OrderStatusId == 4
                             || orderData.OrderStatusId == 5 // fulfillment failure (fulfillment was attempted after payment success), so don't charge again.
                             || OrderHelper.AuthorizeOrder(orderId);
-                        if (!authSuccess)
-                            OrderHelper.SendOrderDeclinedEmail(orderId);
+                        ////if (!authSuccess)
+                        ////    OrderHelper.SendOrderDeclinedEmail(orderId);
                     }
                     catch (Exception ex)
                     {

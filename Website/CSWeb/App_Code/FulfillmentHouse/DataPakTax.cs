@@ -122,7 +122,7 @@ namespace CSWeb.FulfillmentHouse
             string req = new DataPakTax().GetRequest(orderItem);
             string res = CommonHelper.HttpPost(config.Attributes["taxTransactionUrl"].Value, req);
             Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
-            orderAttributes.Add("TaxRequest", new CSBusiness.Attributes.AttributeValue(req));
+            //orderAttributes.Add("TaxRequest", new CSBusiness.Attributes.AttributeValue(req));
             orderAttributes.Add("TaxResponse", new CSBusiness.Attributes.AttributeValue(res));
 
             XmlDocument doc = new XmlDocument();

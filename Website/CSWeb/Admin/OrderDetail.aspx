@@ -3,7 +3,7 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register TagPrefix="uc" TagName="attributes" Src="UserControls/Attributes.ascx" %>
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
-   <title>Order Details</title>
+    <title>Order Details</title>
        <style type="text/css">
         /*.modalBackground
         {
@@ -39,7 +39,7 @@
 </ul>
 <h3 class="page-header page-header-top">Order Details</h3>
    
-  <h4 style="margin-bottom: 20px">Version: <span class="text-info"><em><%= Version %></em></span><div class="pull-right" style="margin-bottom: 6px; font-weight: normal;"><asp:LinkButton ID="lbEditOrder" runat="server" CssClass="btn btn-primary"><i class="icon-pencil"></i> Edit Order Info</asp:LinkButton></div></h4>
+  <h4 style="margin-bottom: 20px">Version: <span class="text-info"><em><%= Version %></em></span><div class="pull-right" style="margin-bottom: 6px; font-weight: normal;"><asp:LinkButton ID="lbEditOrder" runat="server" CssClass="btn btn-primary" Visible="False"><i class="icon-pencil"></i> Edit Order Info</asp:LinkButton></div></h4>
        
    <div class="row-fluid">
    <div class="span4">
@@ -114,8 +114,7 @@
                         <%# DataBinder.Eval(Container.DataItem, "Quantity")%>
                     </td>
                     <td>
-                        $<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "FullPrice"))%>
-                    </td>
+                        $<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "FullPrice"))%></td>
                 </tr>
             </ItemTemplate>
         </asp:DataList>
@@ -151,169 +150,171 @@
         PopupControlID="pnlModalPopUpPanel" CancelControlID="btnCancelModalPopup" PopupDragHandleControlID="pnlModalPopUpPanel" Y="20" />
         
         
-    <asp:Panel ID="pnlModalPopUpPanel" runat="server" CssClass="modalPopup" Scrollbars="auto">
+    <asp:Panel ID="pnlModalPopUpPanel" runat="server" CssClass="modalPopup" Scrollbars="auto" Visible="False">
     <asp:LinkButton ID="btnCancelModalPopup2" CssClass="btn btn-mini btn-danger pull-right" runat="server" Text="X" CausesValidation="false" />
     
     <h4><asp:Literal ID="litHeader" Text="Edit Order Information" runat="server" />&nbsp;&nbsp;<button class="btn btn-mini btn-inverse" title="Drag this popup or scroll down using mousewheel or browser scrollbar"><i class="icon-info-sign"></i></button></h4>
     
     <p><asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="UpdateValidationGroup" runat="server" CssClass="text-error" DisplayMode="List" ShowSummary="true" HeaderText="Please correct the following fields and try again." />
+        <div class="row-fluid">
+            <div class="span6 well" style="min-height: 530px">
+                <h5>Shipping Info</h5>
+                <div class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label">
+                        First Name</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtShippingFirstName" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtShippingFirstName" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Last Name</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtShippingLastName" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtShippingLastName" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Address</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtShippingAddress" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtShippingAddress" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Address 2</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtShippingAddress2" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtShippingAddress2" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        City</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtShippingCity" runat="server" CssClass="input-medium" MaxLength="50" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtShippingCity" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        State</label>
+                        <div class="controls">
+                            <asp:DropDownList ID="ddlShippingState" runat="server" AutoPostBack="false" CssClass="input-medium" DataTextField="Name" DataValueField="StateProvinceId" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="ddlShippingState" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Zip Code</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtShippingZipCode" runat="server" CssClass="input-medium" MaxLength="10" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ControlToValidate="txtShippingZipCode" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                            <asp:CustomValidator ID="CustomValidator2" runat="server" ControlToValidate="txtShippingZipCode" CssClass="text-error" Display="Dynamic" OnServerValidate="ZipCode_ServerValidate" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:CustomValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Country</label>
+                        <div class="controls">
+                            <asp:DropDownList ID="ddlShippingCountry" runat="server" AutoPostBack="true" CssClass="input-medium" DataTextField="Name" DataValueField="CountryId" OnSelectedIndexChanged="ddlShippingCountry_SelectedIndexChanged" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ControlToValidate="ddlShippingCountry" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Email Address</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="input-medium" MaxLength="250" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="txtEmail" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                            <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtEmail" CssClass="text-error" Display="Dynamic" OnServerValidate="txtEmail_ServerValidate" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:CustomValidator>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span6 well" style="min-height: 530px">
+                <h5>Billing Info</h5>
+                <div class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label">
+                        First Name</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtBillingFirstName" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtBillingFirstName" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Last Name</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtBillingLastName" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtBillingLastName" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Address</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtBillingAddress" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtBillingAddress" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Address 2</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtBillingAddress2" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtBillingAddress2" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        City</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtBillingCity" runat="server" CssClass="input-medium" MaxLength="50" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtBillingCity" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        State</label>
+                        <div class="controls">
+                            <asp:DropDownList ID="ddlBillingState" runat="server" AutoPostBack="false" CssClass="input-medium" DataTextField="Name" DataValueField="StateProvinceId" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="ddlBillingState" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Zip Code</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtBillingZipCode" runat="server" CssClass="input-medium" MaxLength="10" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="txtBillingZipCode" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                            <asp:CustomValidator ID="CustomValidator3" runat="server" ControlToValidate="txtBillingZipCode" CssClass="text-error" Display="Dynamic" OnServerValidate="ZipCode_ServerValidate" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:CustomValidator>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                        Country</label>
+                        <div class="controls">
+                            <asp:DropDownList ID="ddlBillingCountry" runat="server" AutoPostBack="true" CssClass="input-medium" DataTextField="Name" DataValueField="CountryId" OnSelectedIndexChanged="ddlBillingCountry_SelectedIndexChanged" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ControlToValidate="ddlBillingCountry" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5>Attributes</h5>
+        <uc:attributes ID="ucAttributes" runat="server" />
+        <p>
+            <asp:LinkButton ID="btnCancelModalPopup" runat="server" CausesValidation="false" CssClass="btn btn-danger"><i class="icon-ban-circle"></i> Cancel</asp:LinkButton>
+            <asp:LinkButton ID="btnSaveOrder" runat="server" CssClass="btn btn-success" OnClick="btnSaveOrder_Click" ValidationGroup="UpdateValidationGroup"><i class="icon-save"></i> Save</asp:LinkButton>
+        </p>
     </p>
                     
-                    <div class="row-fluid">
-                    <div class="span6 well" style="min-height: 530px">
-                    <h5>Shipping Info</h5>
-              
-     <div class="form-horizontal">
-     <div class="control-group">
-        <label class="control-label">First Name</label>
-        <div class="controls">
-                    <asp:TextBox ID="txtShippingFirstName" MaxLength="100" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtShippingFirstName" runat="server" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup" CssClass="text-error">*</asp:RequiredFieldValidator>
-               </div></div>
-                   
-               
-                <div class="control-group">
-        <label class="control-label">Last Name</label>
-        <div class="controls">         
-                    <asp:TextBox ID="txtShippingLastName" MaxLength="100" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtShippingLastName" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-                
-           </div></div>
-           
-      
-      <div class="control-group">
-        <label class="control-label">Address</label>
-        <div class="controls">       
-                <asp:TextBox ID="txtShippingAddress" MaxLength="100" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtShippingAddress" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-            </div></div>
-              
-                   
-    <div class="control-group">
-        <label class="control-label">Address 2</label>
-        <div class="controls">    
-         <asp:TextBox ID="txtShippingAddress2" MaxLength="100" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="txtShippingAddress2" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-               
-              </div></div>           
-              
-       <div class="control-group">
-        <label class="control-label">City</label>
-        <div class="controls">   
-                    <asp:TextBox ID="txtShippingCity" MaxLength="50" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" ControlToValidate="txtShippingCity" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-                </div></div>     
-                  
-               
-        <div class="control-group">
-        <label class="control-label">State</label>
-        <div class="controls">  
-                    <asp:DropDownList ID="ddlShippingState" AutoPostBack="false" CssClass="input-medium" DataTextField="Name" DataValueField="StateProvinceId" runat="server" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ControlToValidate="ddlShippingState" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-                 </div></div>      
-                  
-               
-      <div class="control-group">
-        <label class="control-label">Zip Code</label>
-        <div class="controls">  
-                    <asp:TextBox ID="txtShippingZipCode" MaxLength="10" CssClass="input-medium" runat="server" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator17" ControlToValidate="txtShippingZipCode" CssClass="text-error" runat="server" ValidationGroup="UpdateValidationGroup" Display="Dynamic" SetFocusOnError="true">*</asp:RequiredFieldValidator>
-                    <asp:CustomValidator ID="CustomValidator2" ControlToValidate="txtShippingZipCode" runat="server" CssClass="text-error" OnServerValidate="ZipCode_ServerValidate" ValidationGroup="UpdateValidationGroup" Display="Dynamic" SetFocusOnError="true">*</asp:CustomValidator>
-                   </div></div>    
-                  
-               
-       <div class="control-group">
-        <label class="control-label">Country</label>
-        <div class="controls">  
-                    <asp:DropDownList ID="ddlShippingCountry" AutoPostBack="true" CssClass="input-medium" OnSelectedIndexChanged="ddlShippingCountry_SelectedIndexChanged" runat="server" DataTextField="Name" DataValueField="CountryId" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator15" ControlToValidate="ddlShippingCountry" CssClass="text-error" runat="server" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-            </div></div>         
-                   
-               
-                <div class="control-group">
-        <label class="control-label">Email Address</label>
-        <div class="controls">  
-                    <asp:TextBox ID="txtEmail" MaxLength="250" CssClass="input-medium" runat="server" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator14" ControlToValidate="txtEmail" runat="server" Display="Dynamic" CssClass="text-error" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-              <asp:CustomValidator ID="CustomValidator1" ControlToValidate="txtEmail" runat="server" OnServerValidate="txtEmail_ServerValidate" CssClass="text-error" ValidationGroup="UpdateValidationGroup" Display="Dynamic" SetFocusOnError="true">*</asp:CustomValidator>
-                </div></div>     
-              
-              </div>
-              </div>
-              
-              <div class="span6 well" style="min-height: 530px">
-                 <h5>Billing Info</h5>
-              <div class="form-horizontal">
-                     <div class="control-group">
-        <label class="control-label">First Name</label>
-        <div class="controls"><asp:TextBox ID="txtBillingFirstName" MaxLength="100" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtBillingFirstName" runat="server" Display="Dynamic" CssClass="text-error" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-              </div></div>     
-              
-                    <div class="control-group">
-        <label class="control-label">Last Name</label>
-        <div class="controls"> 
-                    <asp:TextBox ID="txtBillingLastName" MaxLength="100" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtBillingLastName" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-              </div></div>    
-              
-               <div class="control-group">
-        <label class="control-label">Address</label>
-        <div class="controls">  
-                    <asp:TextBox ID="txtBillingAddress" MaxLength="100" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtBillingAddress" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-                  </div></div>    
-                  
-                  
-                <div class="control-group">
-        <label class="control-label">Address 2</label>
-        <div class="controls">  
-                    <asp:TextBox ID="txtBillingAddress2" MaxLength="100" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" ControlToValidate="txtBillingAddress2" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-               </div></div>          
-                      
-                      
-     <div class="control-group">
-        <label class="control-label">City</label>
-        <div class="controls">  
-                    <asp:TextBox ID="txtBillingCity" MaxLength="50" runat="server" CssClass="input-medium" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="txtBillingCity" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-               </div></div>            
-                    
-           <div class="control-group">
-        <label class="control-label">State</label>
-        <div class="controls">  
-                    <asp:DropDownList ID="ddlBillingState" AutoPostBack="false" CssClass="input-medium" DataTextField="Name" DataValueField="StateProvinceId" runat="server" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator12" ControlToValidate="ddlBillingState" runat="server" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-                 </div></div>    
-                 
-                          
-            <div class="control-group">
-        <label class="control-label">Zip Code</label>
-        <div class="controls">  
-                    <asp:TextBox ID="txtBillingZipCode" MaxLength="10" CssClass="input-medium" runat="server" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator13" ControlToValidate="txtBillingZipCode" CssClass="text-error" runat="server" ValidationGroup="UpdateValidationGroup" Display="Dynamic" SetFocusOnError="true">*</asp:RequiredFieldValidator>
-                    <asp:CustomValidator ID="CustomValidator3" ControlToValidate="txtBillingZipCode" runat="server" CssClass="text-error" OnServerValidate="ZipCode_ServerValidate" ValidationGroup="UpdateValidationGroup" Display="Dynamic" SetFocusOnError="true">*</asp:CustomValidator>
-              </div></div>  
-              
-              
-              <div class="control-group">
-        <label class="control-label">Country</label>
-        <div class="controls">  
-                    <asp:DropDownList ID="ddlBillingCountry" AutoPostBack="true" CssClass="input-medium" OnSelectedIndexChanged="ddlBillingCountry_SelectedIndexChanged" runat="server" DataTextField="Name" DataValueField="CountryId" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator16" ControlToValidate="ddlBillingCountry" CssClass="text-error" runat="server" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
-               </div></div> 
-               </div>
-               </div>      
-                    </div>
-                    
-               
-                    <h5>Attributes</h5>
-                    <uc:attributes ID="ucAttributes" runat="server" />
-                   
-                   <p> 
-               <asp:LinkButton ID="btnCancelModalPopup" CssClass="btn btn-danger" runat="server" CausesValidation="false"><i class="icon-ban-circle"></i> Cancel</asp:LinkButton> <asp:LinkButton ID="btnSaveOrder" CssClass="btn btn-success" runat="server" OnClick="btnSaveOrder_Click" ValidationGroup="UpdateValidationGroup"><i class="icon-save"></i> Save</asp:LinkButton>
-                </p>
     </asp:Panel>
     </div>
 </asp:Content>

@@ -11,6 +11,15 @@ namespace CSWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Exception ex = Server.GetLastError();
+            //if (ex != null && ex.InnerException != null)
+            //{
+            //    CSCore.CSLogger.Instance.LogException(ex.InnerException.Message, ex.InnerException);
+            //}
+            //else
+            //{
+            //    CSCore.CSLogger.Instance.LogException(Request.Url.ToString(), null);
+            //}
 
         }
     }

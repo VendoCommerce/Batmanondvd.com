@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSBusiness.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace CSBusiness.Attributes
 
         public string Value { get; set; }
 
+        [SensitiveDataAttribute]
         public AttributeValue(string value)
         {
             this.Value = value;
@@ -57,5 +59,9 @@ namespace CSBusiness.Attributes
 
             return GetBooleanFromValue(value) ? "1" : "0";
         }
+
+        [IsEncryptedAttribute]
+        public bool IsEncrpyed { get; set; }
+
     }
 }

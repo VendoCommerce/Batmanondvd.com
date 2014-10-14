@@ -11,6 +11,7 @@ using System.Xml.Serialization;
 using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Dynamic;
+using CSBusiness.Security;
 
 namespace CSBusiness.Attributes
 {    
@@ -262,6 +263,9 @@ namespace CSBusiness.Attributes
 
         public void SaveAttributeValue(string attributeName, string value)
         {
+            //Encrypt sensitive data 
+            //Encryption.EncryptValues(value); 
+
             AttributesDAL.SaveAttributeValue(ObjectName, attributeName, ItemId, value);
         }
 
@@ -282,6 +286,9 @@ namespace CSBusiness.Attributes
             if (attributeValues != null)
                 foreach (string attributeName in attributeValues.Keys)
                 {
+                    //Encrypt sensitive data 
+                    //Encryption.EncryptValues(attributeValues[attributeName].Value); 
+
                     attributeValuesElem.Add(new XElement(Attributes.Attribute.CaseFixAttributeName(attributeName), attributeValues[attributeName].Value));
                 }
 

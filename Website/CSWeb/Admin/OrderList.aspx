@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderList.aspx.cs" Inherits="CSWeb.Admin.OrderList" MasterPageFile="AdminSite.master" EnableViewState="True" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderList.aspx.cs" Inherits="CSWeb.Admin.OrderList" MasterPageFile="AdminSite.master" EnableViewState="True" EnableSessionState="True" %>
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
    <title>Orders</title>
 </asp:Content>
@@ -72,7 +72,7 @@
                 <asp:DataList runat="server" ID="dlordersList" RepeatLayout="Flow" RepeatDirection="Horizontal" OnItemDataBound="dlOrderList_ItemDataBound" OnItemCommand="dlOrderList_ItemCommand">
                     <ItemTemplate>
                         <tr><td>
-                        <asp:HyperLink ID="hlDetail" runat="server"><%# DataBinder.Eval(Container.DataItem, "OrderId")%></asp:HyperLink>
+                        <asp:LinkButton ID="hlDetail" runat="server" CommandArgument=<%# DataBinder.Eval(Container.DataItem, "OrderId")%> CommandName="LoadOrder" Text=<%# DataBinder.Eval(Container.DataItem, "OrderId")%>></asp:LinkButton>
                         </td>
                             <td>
                                 <%# DataBinder.Eval(Container.DataItem, "Email")%>

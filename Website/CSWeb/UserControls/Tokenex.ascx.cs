@@ -29,7 +29,8 @@ namespace CSWeb.UserControls
         {
             get
             {
-                return hlToken.Value;
+                return TokenexProcessor.GetInstance().Tokenize(EncryptedCcNum);
+                //return hlToken.Value;
             }
         }
 

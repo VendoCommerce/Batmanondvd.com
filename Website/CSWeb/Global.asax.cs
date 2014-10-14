@@ -21,6 +21,22 @@ namespace CSWeb
             {
                 CSCore.CSLogger.Instance.LogException(ex.InnerException.Message, ex.InnerException);
             }
+            else if (ex != null)
+                {
+                    CSCore.CSLogger.Instance.LogException(Request.Url.ToString(), null);
+                }
+
+            //Handle404Error(ex);
+        }
+
+        private void Handle404Error(Exception ex)
+        {
+            Response.Redirect("/400.aspx");
+            HttpException httpEx = ex as HttpException;
+            if (httpEx != null && httpEx.GetHttpCode() == 404)
+            {
+
+            }
         }
     }
 }
