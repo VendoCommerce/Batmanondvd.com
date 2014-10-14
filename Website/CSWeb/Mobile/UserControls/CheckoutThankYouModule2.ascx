@@ -54,26 +54,26 @@
 
               <table class="receipt_table">
                   <tr>
-                      <th class="pad0" style="text-align: left; padding-left: 14px;">Item</th>
+                      <th colspan="2" class="pad0" style="text-align: left; padding-left: 14px;">Item</th>
                       <th class="text-center pad0">Quantity</th>
                       <th class="text-center pad0">Payment</th>
                   </tr>
           <tr>
-            <td colspan="3" style="padding: 0;"><div class="horizontal_dots"></div></td>
+            <td colspan="4" style="padding: 0;"><div class="horizontal_dots"></div></td>
           </tr>
                 <asp:DataList runat="server" ID="dlordersList" RepeatLayout="Flow" RepeatDirection="Horizontal">
                     <ItemTemplate>
                         <tr>
-                               <td valign="top">
+                            <td valign="top" class="receipt_img" width="15%">
                                 <img src="<%# ImageURL(Convert.ToInt32(DataBinder.Eval(Container.DataItem, "SkuId"))) %>" />
                             </td>                        
-                        <td class="receipt_item">
+                        <td class="receipt_item" width="51%">
                             <%# DataBinder.Eval(Container.DataItem, "LongDescription")%>
                         </td>
-                        <td class="text-center bold">
+                        <td class="text-center bold" width="17%">
                             <%# DataBinder.Eval(Container.DataItem, "Quantity")%>
                        </td>
-                           <td class="text-center bold">
+                           <td class="text-center bold" width="17%">
                            $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%> 
                        </td>
                        </tr>
@@ -82,9 +82,9 @@
                 </asp:DataList>
                 <asp:Literal ID="LiteralTableRows" runat="server"></asp:Literal>
           <tr>
-              <td colspan="3" style="padding: 0;"><div class="horizontal_dots"></div></td>
+              <td colspan="4" style="padding: 0;"><div class="horizontal_dots"></div></td>
           </tr>
-                  <tr><td colspan="2" class="bold f24" style="line-height: 29px; text-align: right; padding-right: 15px; color: #979797;">
+                  <tr><td colspan="3" class="bold f24" style="line-height: 29px; text-align: right; padding-right: 15px; color: #979797;">
                     Subtotal<br />
                     <asp:Panel ID="pnlPromotionLabel" runat="server" Visible="false">
                         Discount<br />

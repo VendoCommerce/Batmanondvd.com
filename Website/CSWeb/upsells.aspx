@@ -209,7 +209,7 @@
 
                 <p class="f16 lh20">Cliffhangers, bat-gadgets, alter egos and more! A perfect gift for the new or die-hard Bat-Fan!</p>
                 <p class="f16 lh20">Have your order specially gift wrapped for only $5.95 per item. Even the pickiest comic book fan will be thrilled to receive this exclusive gift!</p>
-
+                <p style="padding-bottom: 30px;">                    <span class="webfont1bold f18">Qty</span> &nbsp;                  <select name="qty" required="true" error="* Please Select Quantity" class="select_qty">         <option value="1">1</option>          <option value="2">2</option>          <option value="3">3</option>          <option value="4">4</option>        <option value="5">5</option>        <option value="6">6</option>        <option value="7">7</option>        <option value="8">8</option>       <option value="9">9</option>         </select>            </p>   
                 <p class="ask">Would you like to have your order gift wrapped with our custom Batman gift wrapping?</p>
 
                 
@@ -217,7 +217,7 @@
                     <img width="86" height="60" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_no.png" /></a><a href="javascript:void(0);" bind="yes"><img width="262" height="60" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_yes.png" /></a><img width="72" height="63" src="//d1kg9stb0ddjcv.cloudfront.net/images/arrow_upsell.png" class="ask_arrow" /></div>
             </div>
 
-            <div class="fleft" style="width: 303px; top: -10px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/upsell_giftwrap_bag.jpg" width="292" height="430" alt="" /></div>
+            <div class="fleft" style="width: 303px; top: -10px;"><img width="292" height="430" src="//d1kg9stb0ddjcv.cloudfront.net/images/upsell_giftwrap_bag.jpg" alt="" /></div>   
             <div class="clear"></div>
         </div>
 

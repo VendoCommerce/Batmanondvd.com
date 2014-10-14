@@ -759,7 +759,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', end
 	width: 620px;
 	display:block;
 	padding: 50px 0;
-	text-align:right;
     margin: 0 auto;
 }
 .multipay_txt {
@@ -1056,8 +1055,6 @@ padding-bottom: 20px;
 	vertical-align:top;
 }
 
-
-
 .cart_table {
 	display:block;
 	color: #000;
@@ -1159,10 +1156,31 @@ padding-bottom: 20px;
 	border-top: 1px solid #464646;	
 }
 
-.receipt_item {
+.receipt_table td.receipt_img {
+    padding-left: 8px;
+}
+
+.receipt_table td.receipt_img img {
+    width: 90px;
+    max-width: 90px;
+    border: #d0d0d0 solid 1px !important;
+}
+
+.receipt_table td.receipt_item {
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 300;
     font-family: 'Open Sans Condensed', sans-serif;
+    padding-right: 0;
+    padding-left: 0;
+}
+.receipt_table td.receipt_item h3 {
+    font-weight: 700;
+    padding-right: 0;
+    padding-left: 0;
+}
+#receipt .content .receipt_item p {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .content .basket_description {

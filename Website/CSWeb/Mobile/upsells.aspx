@@ -13,7 +13,7 @@
 <script type="text/javascript" src="/Scripts/fancybox/jquery.fancybox.pack.js"></script>
 <link href="/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="/Scripts/jwplayer/jwplayer.js"></script>
-<script type="text/javascript" src="/Scripts/global.js"></script>
+<script type="text/javascript" src="/Scripts/global_mobile.js"></script>
 <link href="/styles/global_mobile.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -143,7 +143,7 @@ advantage of this special offer?
         <div class="page_upsell">
             
             <div>
-                <h2 class="pad20">Don’t be a Joker, Share the<br />
+                <h2 class="pad20 f45">Don’t be a Joker, Share the<br />
                     Bat-Love and Save!</h2>
 
                 <p style="line-height: 36px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_additional.jpg" width="265" height="328" alt="" class="fright" style="margin: 15px 0 50px 20px;" />Who wouldn’t want to enjoy the Classic Batman & Robin collection now digitally remastered and perfectly pixelated! So do yourself and a friend or a foe a favor, Get Two!</p>
@@ -186,7 +186,7 @@ advantage of this special offer?
         <div class="page_upsell">
             
             <div>
-                <h2 class="pad20">Don’t be a Joker, Share the<br />
+                <h2 class="pad20 f45">Don’t be a Joker, Share the<br />
                     Bat-Love and Save!</h2>
 
                 <p style="line-height: 36px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_additional_complete.jpg" width="282" height="202" alt="" class="fright" style="margin: 15px 0 50px 20px;" />Who wouldn’t want to enjoy the Complete Classic Batman & Robin collection now digitally remastered and perfectly pixelated! So do yourself and a friend or a foe a favor, Get Two!</p>
@@ -222,11 +222,53 @@ advantage of this special offer?
 
 
 
+    <!-- UPSELL - gift wrap -->
+        <div class="page_upsell">
+            
+            <div>
+                <h2 class="pad20 f52">Give the Gift of Endless Entertainment!</h2>
+
+                <p style="line-height: 36px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_giftwrap.jpg" width="275" height="393" alt="" class="fright" style="margin: 15px 0 50px 10px;" />Cliffhangers, bat-gadgets, alter egos and more! A perfect gift for the new or die-hard Bat-Fan!</p>
+                <p style="line-height: 36px;">Have your order specially gift wrapped for only $5.95 per item. Even the pickiest comic book fan will be thrilled to receive this exclusive gift!</p>
+
+                <p style="padding-bottom: 30px;">
+                    <span class="webfont1bold f40">Qty</span> &nbsp;
+                    <select id="secondset_qty" class="select_qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </p>
+
+                <p class="ask f34" style="padding-right: 20px;">Would you like to have <br />your order gift wrapped with <br />our custom Batman gift wrapping?</p>
+
+
+                <p class="btns">
+        <a href="javascript:void(0)" bind="yes"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_yes.png" alt="Yes, I Want It!" /></a>
+        <a href="javascript:void(0)" bind="no" class="btn_no"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_no.png" alt="No, thanks" /></a>
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/arrow_upsell.png" alt="" class="ask_arrow" />
+
+    </p>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+  
+    
+    <br /><br /><br /><br />
+
+
+
+
+
+
+
+
 
     <!-- UPSELL - superman -->
-        <div class="page_upsell" style="background: #fff url() no-repeat 456px 115px; padding-bottom: 16px;">
+        <div class="page_upsell" style="padding-bottom: 16px;">
 
-            <h2 class="pad20 f42">It's a bird! It's a plane! No, it's the <br />
+            <h2 class="pad20 f35">It's a bird! It's a plane! No, it's the <br />
                 first six seasons of the legendary <br />
                 Adventures of Superman!
             </h2>
@@ -293,6 +335,12 @@ advantage of this special offer?
 
             <div class="clear"></div>
         </div>
+
+
+
+    <!-- from superman mobile upsell - why, I don't know -->
+    <p class="btns">        <a href="javascript:void(0)" bind="yes"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_yes.png" alt="Yes, I Want It!" /></a>        <a href="javascript:void(0)" bind="no" class="btn_no"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_no.png" alt="No, thanks" /></a>        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/arrow_upsell.png" alt="" class="ask_arrow" />     </p>   
+
 
 
  

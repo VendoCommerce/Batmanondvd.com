@@ -187,7 +187,6 @@
                         </ol>
                     </div>
                 </div>
-                <div class="episodes_ordernow"><a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/dontdelay.jpg" width="602" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></a></div>
 
             </div>
 
@@ -338,7 +337,6 @@
                         </ol>
                     </div>
                 </div>
-                <div class="episodes_ordernow"><a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/dontdelay.jpg" width="602" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></a></div>
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>

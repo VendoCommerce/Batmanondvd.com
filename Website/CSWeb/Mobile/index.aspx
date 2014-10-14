@@ -29,7 +29,7 @@
 <!--#include file="header.html"-->
 
 <div class="content">
-    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/logo_batman2.png" width="244" height="196" alt="Batman" style="position: absolute; top: 26px; left: 404px;" />
+    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/logo_batman2.png" width="244" height="196" alt="Batman" style="position: absolute; top: 22px; left: 392px;" />
     <h2 class="f44 pad20" style="padding-top: 30px;">Holy Classic <br />
         Collection Batman!
     </h2>
