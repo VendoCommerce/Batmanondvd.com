@@ -41,7 +41,7 @@
         <div class="horizontal_dots">
         </div>
 
-        <div class="multipay_txt"><strong>Offer Terms:</strong>  
+        <div class="multipay_txt">
             <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
         </div>
 

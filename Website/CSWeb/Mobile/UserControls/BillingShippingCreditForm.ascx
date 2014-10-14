@@ -256,7 +256,7 @@
         <div class="cart_mobile">
             <div class="form_line_guarantee" style="display: none;"><a href="returns.aspx" target="_blank">View 30-Day Guarantee</a></div>
                              
-            <div class="multipay_txt"><strong>Offer Terms:</strong> 
+            <div class="multipay_txt">
             <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
             </div>
         </div>
