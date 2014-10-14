@@ -123,6 +123,9 @@ body {
     top: 0;
     right: 0;
 }
+
+#page500 .nav-try {display: none;}
+
 .nav-ssl {
     position: absolute; 
     top: 11px;
@@ -673,6 +676,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', end
     
 }
 
+.episodes_ordernow img {
+    margin: 0 auto 54px auto;
+}
+
 
 
 .cast {
@@ -1179,10 +1186,21 @@ padding-bottom: 20px;
     top: 14px;
     right: 14px;
 }
-#included, #included_complete {
+#included {
     display: none;
     width: 628px;
     height: 2222px;
+    padding: 53px 10px 10px 22px;
+    background: #fff;
+    border: #fff solid 1px;
+    border-radius: 8px;
+    color: #000;
+    margin: 20px 0;
+}
+#included_complete {
+    display: none;
+    width: 628px;
+    height: 2422px;
     padding: 53px 10px 10px 22px;
     background: #fff;
     border: #fff solid 1px;

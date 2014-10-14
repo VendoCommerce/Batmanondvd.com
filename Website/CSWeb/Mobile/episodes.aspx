@@ -49,7 +49,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc1.jpg" width="100%" alt="Season 1, Disc 1: Episodes 1-8" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc1.jpg" width="100%" alt="Season 1, Disc 1: Episodes 1-8" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details">
@@ -84,7 +84,7 @@
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc2.jpg" width="100%" alt="Season 1, Disc 2: Episodes 9-16" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc2.jpg" width="100%" alt="Season 1, Disc 2: Episodes 9-16" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 8;">
@@ -122,7 +122,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc3.jpg" width="100%" alt="Season 1, Disc 3: Episodes 17-24" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc3.jpg" width="100%" alt="Season 1, Disc 3: Episodes 17-24" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 16;">
@@ -156,7 +156,7 @@
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc4.jpg" width="100%" alt="Season 1, Disc 4: Episodes 25-32" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc4.jpg" width="100%" alt="Season 1, Disc 4: Episodes 25-32" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 24;">
@@ -187,6 +187,7 @@
                         </ol>
                     </div>
                 </div>
+                <div class="episodes_ordernow"><a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/dontdelay.jpg" width="602" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></a></div>
 
             </div>
 
@@ -194,7 +195,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc5.jpg" width="100%" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc5.jpg" width="100%" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 32;">
@@ -234,7 +235,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc6.jpg" width="100%" alt="Season 2, Disc 6: Episodes 34-42" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc6.jpg" width="100%" alt="Season 2, Disc 6: Episodes 34-42" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 34;">
@@ -268,7 +269,7 @@
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc7.jpg" width="100%" alt="Season 2, Disc 7: Episodes 43-50" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc7.jpg" width="100%" alt="Season 2, Disc 7: Episodes 43-50" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 42;">
@@ -306,7 +307,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc8.jpg" width="100%" alt="Season 2, Disc 8: Episodes 51-58" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc8.jpg" width="100%" alt="Season 2, Disc 8: Episodes 51-58" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 50;">
@@ -337,10 +338,11 @@
                         </ol>
                     </div>
                 </div>
+                <div class="episodes_ordernow"><a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/dontdelay.jpg" width="602" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></a></div>
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc9.jpg" width="100%" alt="Season 2, Disc 9: Episodes 59-64" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc9.jpg" width="100%" alt="Season 2, Disc 9: Episodes 59-64" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 58;">
@@ -390,7 +392,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc1.jpg" width="100%" alt="Season 1, Disc 1: Episodes 1-8" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc1.jpg" width="100%" alt="Season 1, Disc 1: Episodes 1-8" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details">
@@ -425,7 +427,7 @@
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc2.jpg" width="100%" alt="Season 1, Disc 2: Episodes 9-16" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc2.jpg" width="100%" alt="Season 1, Disc 2: Episodes 9-16" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 8;">
@@ -463,7 +465,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc3.jpg" width="100%" alt="Season 1, Disc 3: Episodes 17-24" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc3.jpg" width="100%" alt="Season 1, Disc 3: Episodes 17-24" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 16;">
@@ -497,7 +499,7 @@
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc4.jpg" width="100%" alt="Season 1, Disc 4: Episodes 25-32" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc4.jpg" width="100%" alt="Season 1, Disc 4: Episodes 25-32" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 24;">
@@ -528,6 +530,7 @@
                         </ol>
                     </div>
                 </div>
+                <div class="episodes_ordernow"><a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/dontdelay.jpg" width="602" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></a></div>
 
             </div>
 
@@ -535,7 +538,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s1_disc5.jpg" width="100%" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s1_disc5.jpg" width="100%" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 32;">
@@ -576,7 +579,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc6.jpg" width="100%" alt="Season 2, Disc 6: Episodes 34-42" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc6.jpg" width="100%" alt="Season 2, Disc 6: Episodes 34-42" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 34;">
@@ -610,7 +613,7 @@
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc7.jpg" width="100%" alt="Season 2, Disc 7: Episodes 43-50" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc7.jpg" width="100%" alt="Season 2, Disc 7: Episodes 43-50" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 42;">
@@ -648,7 +651,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc8.jpg" width="100%" alt="Season 2, Disc 8: Episodes 51-58" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc8.jpg" width="100%" alt="Season 2, Disc 8: Episodes 51-58" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 50;">
@@ -679,10 +682,11 @@
                         </ol>
                     </div>
                 </div>
+                <div class="episodes_ordernow"><a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/dontdelay.jpg" width="602" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></a></div>
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc9.jpg" width="100%" alt="Season 2, Disc 9: Episodes 59-64" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc9.jpg" width="100%" alt="Season 2, Disc 9: Episodes 59-64" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 58;">
@@ -715,7 +719,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc10.jpg" width="100%" alt="Season 2, Disc 10: Episodes 65-72" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc10.jpg" width="100%" alt="Season 2, Disc 10: Episodes 65-72" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 64;">
@@ -749,7 +753,7 @@
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc11.jpg" width="100%" alt="Season 2, Disc 11: Episodes 73-80" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc11.jpg" width="100%" alt="Season 2, Disc 11: Episodes 73-80" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 72;">
@@ -785,7 +789,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc12.jpg" width="100%" alt="Season 2, Disc 12: Episodes 81-88" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc12.jpg" width="100%" alt="Season 2, Disc 12: Episodes 81-88" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 80;">
@@ -816,10 +820,12 @@
                         </ol>
                     </div>
                 </div>
+                <div class="episodes_ordernow"><a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/dontdelay.jpg" width="602" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></a></div>
+
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s2_disc13.jpg" width="100%" alt="Season 2, Disc 13: Episodes 89-94" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s2_disc13.jpg" width="100%" alt="Season 2, Disc 13: Episodes 89-94" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 88;">
@@ -857,7 +863,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s3_disc14.jpg" width="100%" alt="Season 3, Disc 14: Episodes 95-102" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s3_disc14.jpg" width="100%" alt="Season 3, Disc 14: Episodes 95-102" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 94;">
@@ -891,7 +897,7 @@
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s3_disc15.jpg" width="100%" alt="Season 3, Disc 15: Episodes 103-110" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s3_disc15.jpg" width="100%" alt="Season 3, Disc 15: Episodes 103-110" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 102;">
@@ -922,6 +928,7 @@
                         </ol>
                     </div>
                 </div>
+                <div class="episodes_ordernow"><a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/dontdelay.jpg" width="602" alt="Season 1, Disc 5: Episodes 33-34" class="block" /></a></div>
 
             </div>
 
@@ -929,7 +936,7 @@
                 <div class="season_a">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s3_disc16.jpg" width="100%" alt="Season 3, Disc 16: Episodes 111-118" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s3_disc16.jpg" width="100%" alt="Season 3, Disc 16: Episodes 111-118" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 110;">
@@ -963,7 +970,7 @@
                 <div class="season_b">
                     <div class="season_hdr">
                         <h3>
-                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/episodes/eg_s3_disc17.jpg" width="100%" alt="Season 3, Disc 17: Episodes 119-120" class="block" /></h3>
+                            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/episodes/eg_s3_disc17.jpg" width="100%" alt="Season 3, Disc 17: Episodes 119-120" class="block" /></h3>
                     </div>
                     <div class="season_txt">
                         <ol class="episode_details" style="counter-reset: item 118;">

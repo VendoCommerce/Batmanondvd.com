@@ -304,6 +304,8 @@
     <Content Include="header500.html" />
     <Content Include="Mobile\bottomcta_complete.html" />
     <Content Include="Mobile\bottomcta.html" />
+    <Content Include="Mobile\400.aspx" />
+    <Content Include="Mobile\500.aspx" />
     <Content Include="Mobile\returns.aspx" />
     <Content Include="Mobile\contact.aspx" />
     <Content Include="Mobile\cast.aspx" />

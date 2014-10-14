@@ -92,7 +92,7 @@ $(".included_complete").fancybox({
     padding: 0,
     margin: 0,
     width: 628,
-    height: 2262,
+    height: 2462,
     autoSize: false,
     scrolling: 'no',
     helpers: {
