@@ -254,7 +254,9 @@
         <div class="cart_mobile">
             <div class="form_line_guarantee" style="display: none;"><a href="returns.aspx" target="_blank">View 30-Day Guarantee</a></div>
                              
-            <div class="multipay_txt"><strong>Offer Terms:</strong> You will be charged today for your first of 5 monthly payments of $19.99. Applicable taxes will be included in your first payment (this should not display if the consumer selects a 1-pay option). Shipping is FREE. If you are not satisfied with your purchase for any reason, simply return it within 60 days to receive a full refund. Restrictions may apply. Please refer to our Return Policy (link to Return Policy page)</div>
+            <div class="multipay_txt"><strong>Offer Terms:</strong> 
+            <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
+            </div>
         </div>
     </ContentTemplate>
 </asp:UpdatePanel>

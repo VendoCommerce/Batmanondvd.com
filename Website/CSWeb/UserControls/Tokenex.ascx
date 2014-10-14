@@ -7,6 +7,7 @@
         function encryptCCnumber() {
             try {
                 var creditCard = document.getElementById("txtCCNumber1").value;
+                if (creditCard == "XXXXXXXXXXXXXXXX") return true;
                 var key = document.getElementById('TxEncryptionKey').value;
                 //var apiKey = document.getElementById('hlApiKey').value;
                 //var tokenExId = document.getElementById('hlTokenExID').value;

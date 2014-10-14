@@ -81,7 +81,7 @@ namespace CSWeb.Root.UserControls
                 lblShipping.Text = String.Format("${0:0.00}", CartContext.CartInfo.ShippingCost);
                 lblRushShipping.Text = String.Format("${0:0.00}", CartContext.CartInfo.RushShippingCost);
                 lblOrderTotal.Text = String.Format("${0:0.00}", CartContext.CartInfo.Total);
-
+                LoadOfferTerms(CartContext.CartInfo.CartItems[0]);
                 //Sri Comments on 11/15: Need to Plug-in to Custom Shipping option Model
                 SitePreference shippingGetShippingPref = CSFactory.GetCacheSitePref();
                 holderRushShipping.Visible = shippingGetShippingPref.IncludeRushShipping ?? false;
@@ -93,6 +93,14 @@ namespace CSWeb.Root.UserControls
                 rptShoppingCart.Visible = false;
             }
 
+        }
+
+        private void  LoadOfferTerms(Sku sku)
+        {
+            sku.LoadAttributeValues();
+            if (sku.ContainsAttribute("offerterms")
+                && sku.AttributeValues["offerterms"] != null)
+                ltOfferTerms.Text = sku.AttributeValues["offerterms"].Value;
         }
 
         protected void rptShoppingCart_OnItemDataBound(object sender, RepeaterItemEventArgs e)

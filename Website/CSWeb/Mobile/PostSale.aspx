@@ -1,4 +1,5 @@
-﻿<%@Page Language="C#" AutoEventWireup="true" CodeBehind="PostSale.aspx.cs" Inherits="CSWeb.Mobile.Store.PostSale" EnableEventValidation="false" EnableSessionState="true" %>
+﻿<%@Page Language="C#" AutoEventWireup="true" CodeBehind="PostSale.aspx.cs" Inherits="CSWeb.Mobile.Store.PostSale" EnableEventValidation="false" EnableSessionState="true" 
+     MaintainScrollPositionOnPostback="false"%>
 
 <%@ Register Src="UserControls/TrackingPixels.ascx" TagName="TrackingPixels" TagPrefix="uc" %>
 <!doctype html>

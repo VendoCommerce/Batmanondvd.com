@@ -163,7 +163,7 @@
                                 <div class="form_line clearfix" style="padding: 12px 0 12px 122px;">
                                     <asp:CheckBox ID="cbShippingSame" runat="server" CssClass="checkbox-left" OnCheckedChanged="cbShippingSame_CheckedChanged" AutoPostBack="true" Checked="true" />
                                     <label class="label-3" for="bscfShippingBillingCreditForm_cbShippingSame">
-                                        Billing information is the same Shipping
+                                        Billing information is the same as Shipping
                                     </label>
 
 

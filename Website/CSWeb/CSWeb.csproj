@@ -295,6 +295,7 @@
     <Content Include="Admin\VersionReport.aspx" />
     <Content Include="Admin\VersionReport1.aspx" />
     <Content Include="AuthorizeOrder.aspx" />
+    <Content Include="AuthorizeOrderBatch.aspx" />
     <Content Include="bottomcta_complete.html" />
     <Content Include="CardDecline.aspx" />
     <Content Include="Cart.aspx" />
@@ -482,7 +483,6 @@
     <Content Include="Mobile\UserControls\Header.ascx" />
     <Content Include="Mobile\UserControls\Header_Home.ascx" />
     <Content Include="Mobile\UserControls\Header_Upsell.ascx" />
-    <Content Include="Mobile\UserControls\ShoppingCartControl2.ascx" />
     <Content Include="Mobile\UserControls\TrackingPixels.ascx" />
     <Content Include="PostSale.aspx" />
     <Content Include="receipt.aspx" />
@@ -1156,6 +1156,7 @@
     <Compile Include="Admin\VersionReport1.aspx.designer.cs">
       <DependentUpon>VersionReport1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\OrderProcessor.cs" />
     <Compile Include="App_Code\FulfillmentHouse\DataPakTax.cs" />
     <Compile Include="App_Code\Tokenization\RequestGenerator.cs" />
     <Compile Include="App_Code\Tokenization\TokenexProcessor.cs" />
@@ -1165,6 +1166,13 @@
     </Compile>
     <Compile Include="AuthorizeOrder.aspx.designer.cs">
       <DependentUpon>AuthorizeOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorizeOrderBatch.aspx.cs">
+      <DependentUpon>AuthorizeOrderBatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthorizeOrderBatch.aspx.designer.cs">
+      <DependentUpon>AuthorizeOrderBatch.aspx</DependentUpon>
     </Compile>
     <Compile Include="CardDecline.aspx.cs">
       <DependentUpon>CardDecline.aspx</DependentUpon>
@@ -1424,13 +1432,6 @@
     </Compile>
     <Compile Include="Mobile\UserControls\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Mobile\UserControls\ShoppingCartControl2.ascx.cs">
-      <DependentUpon>ShoppingCartControl2.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\UserControls\ShoppingCartControl2.ascx.designer.cs">
-      <DependentUpon>ShoppingCartControl2.ascx</DependentUpon>
     </Compile>
     <Compile Include="Mobile\UserControls\TrackingPixels.ascx.cs">
       <DependentUpon>TrackingPixels.ascx</DependentUpon>

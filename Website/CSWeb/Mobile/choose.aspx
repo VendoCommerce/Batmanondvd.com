@@ -19,6 +19,7 @@
 </head>
 <body>
 <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 <div class="container">
 
 <!--#include file="popups.html"-->
@@ -28,10 +29,12 @@
     
     <h2 class="text-center pad6" style="padding-top: 28px;">Holy Gadget Choices Batman!</h2>
     <h3 class="text-center f35">Which Collection Is For You?</h3>
+    <asp:UpdatePanel ID="upChooseForm" runat="server">
+    <ContentTemplate>    
 
     <div class="choosebox1 clearfix">
         <div class="fleft" style="width: 40px;">
-            <asp:RadioButton ID="rbClassic" runat="server" GroupName="SKU" />
+            <asp:RadioButton ID="rbClassic" runat="server" GroupName="SKU" AutoPostBack="True" OnCheckedChanged="rbClassic_CheckedChanged" Checked="True" />
         </div>
 
         <label class="chooselabel_1" for="rbClassic">
@@ -72,7 +75,7 @@
 
     <div class="choosebox2 clearfix">
         <div class="fleft" style="width: 40px;">
-            <asp:RadioButton ID="rbComplete" runat="server" GroupName="SKU" />
+            <asp:RadioButton ID="rbComplete" runat="server" GroupName="SKU" AutoPostBack="True" OnCheckedChanged="rbClassic_CheckedChanged" />
         </div>
         <label class="chooselabel_1" for="rbComplete">
             <span class="block f34 webfont1bold pad12" style="line-height: 43px;"><span class="green">Complete </span>Classic
@@ -116,8 +119,13 @@
     <br />
     <span style="display: block; padding: 0 0 10px 20px; color: #f00;"><asp:Label ID="lblPrompt" runat="server"></asp:Label></span>
     <asp:LinkButton ID="imgContinue" runat="server" OnClick="imgContinue_Click"><img class="prod_continue" src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_continue.png" /></asp:LinkButton>
-    <p class="f24" style="line-height: 32px; padding-bottom: 90px;"><strong>Offer Details: </strong> You will be charged today for your first of 5 monthly payments of $19.99. Applicable taxes will be included in your first payment (this should not display if the consumer selects a 1-pay option). Shipping is FREE. If you are not satisfied with your purchase for any reason, simply return it within 60 days to receive a full refund. Restrictions may apply. Please refer to our Return Policy (link to Return Policy page)</p>
-    
+    <p class="f24" style="line-height: 32px; padding-bottom: 90px;">
+        <strong>Offer Details: </strong> 
+        <asp:Literal runat="server" ID="ltOfferTerms">Please select a product to see our offer terms.</asp:Literal>
+    </p>
+    </ContentTemplate>    
+    </asp:UpdatePanel>
+
 
 
 

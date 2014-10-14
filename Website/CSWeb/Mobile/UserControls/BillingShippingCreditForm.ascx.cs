@@ -85,7 +85,7 @@ namespace CSWeb.Mobile.UserControls
                 BindRegions();
                 BindShippingRegions();
                 BindCreditCard();
-
+                LoadOfferTerms(ClientOrderData.CartInfo.CartItems[0]);
             }
 
         }
@@ -135,6 +135,15 @@ namespace CSWeb.Mobile.UserControls
         //////    if (setValue)
         //////        ddlShippingCountry.Items.FindByValue(ConfigHelper.DefaultCountry).Selected = true;
         //////}
+
+        private void LoadOfferTerms(Sku sku)
+        {
+            sku.LoadAttributeValues();
+            if (sku.ContainsAttribute("offerterms")
+                && sku.AttributeValues["offerterms"] != null)
+                ltOfferTerms.Text = sku.AttributeValues["offerterms"].Value;
+        }
+
 
         /// <summary>
         /// List of States from Cache Data
@@ -388,6 +397,8 @@ namespace CSWeb.Mobile.UserControls
                 lblCCNumberError.Visible = true;
                 _bError = true;
             }
+            else
+                lblCCNumberError.Visible = false;
             //else
             //{
             //    if ((c.ToString() != "4444333322221111"))// && (txtCvv.Text.IndexOf("147114711471") == -1))
@@ -509,15 +520,15 @@ namespace CSWeb.Mobile.UserControls
             {
 
                 //Set Customer Information
-                Address billingAddress = new Address();
-                billingAddress.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
-                billingAddress.LastName = CommonHelper.fixquotesAccents(txtLastName.Text);
-                billingAddress.Address1 = CommonHelper.fixquotesAccents(txtAddress1.Text);
-                billingAddress.Address2 = string.Empty;// CommonHelper.fixquotesAccents(txtAddress2.Text);
-                billingAddress.City = CommonHelper.fixquotesAccents(txtCity.Text);
-                billingAddress.StateProvinceId = Convert.ToInt32(ddlState.SelectedValue);
-                billingAddress.CountryId = 231;//USA   Convert.ToInt32(ddlCountry.SelectedValue);
-                billingAddress.ZipPostalCode = CommonHelper.fixquotesAccents(txtZipCode.Text);
+                Address shippingAddress = new Address();
+                shippingAddress.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
+                shippingAddress.LastName = CommonHelper.fixquotesAccents(txtLastName.Text);
+                shippingAddress.Address1 = CommonHelper.fixquotesAccents(txtAddress1.Text);
+                shippingAddress.Address2 = string.Empty;// CommonHelper.fixquotesAccents(txtAddress2.Text);
+                shippingAddress.City = CommonHelper.fixquotesAccents(txtCity.Text);
+                shippingAddress.StateProvinceId = Convert.ToInt32(ddlState.SelectedValue);
+                shippingAddress.CountryId = 231;//USA   Convert.ToInt32(ddlCountry.SelectedValue);
+                shippingAddress.ZipPostalCode = CommonHelper.fixquotesAccents(txtZipCode.Text);
 
                 Customer CustData = new Customer();
                 CustData.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
@@ -526,26 +537,26 @@ namespace CSWeb.Mobile.UserControls
                 CustData.PhoneNumber = txtPhoneNumber1.Text;
                 CustData.Email = CommonHelper.fixquotesAccents(txtEmail.Text);
                 CustData.Username = CommonHelper.fixquotesAccents(txtEmail.Text);
-                CustData.BillingAddress = billingAddress;
+                CustData.ShippingAddress = shippingAddress;
                 //CustData.ShippingAddress = billingAddress;
 
                 if (!pnlShippingAddress.Visible)
                 {
-                    CustData.ShippingAddress = billingAddress;
+                    CustData.BillingAddress = shippingAddress;
                 }
                 else
                 {
-                    Address shippingAddress = new Address();
-                    shippingAddress.FirstName = CommonHelper.fixquotesAccents(txtShippingFirstName.Text);
-                    shippingAddress.LastName = CommonHelper.fixquotesAccents(txtShippingLastName.Text);
-                    shippingAddress.Address1 = CommonHelper.fixquotesAccents(txtShippingAddress1.Text);
-                    shippingAddress.Address2 = string.Empty;// CommonHelper.fixquotesAccents(txtShippingAddress2.Text);
-                    shippingAddress.City = CommonHelper.fixquotesAccents(txtShippingCity.Text);
-                    shippingAddress.StateProvinceId = Convert.ToInt32(ddlShippingState.SelectedValue);
-                    shippingAddress.CountryId = 231;//USA   Convert.ToInt32(ddlShippingCountry.SelectedValue);
-                    shippingAddress.ZipPostalCode = CommonHelper.fixquotesAccents(txtShippingZipCode.Text);
+                    Address billingAddress = new Address();
+                    billingAddress.FirstName = CommonHelper.fixquotesAccents(txtShippingFirstName.Text);
+                    billingAddress.LastName = CommonHelper.fixquotesAccents(txtShippingLastName.Text);
+                    billingAddress.Address1 = CommonHelper.fixquotesAccents(txtShippingAddress1.Text);
+                    billingAddress.Address2 = string.Empty;// CommonHelper.fixquotesAccents(txtShippingAddress2.Text);
+                    billingAddress.City = CommonHelper.fixquotesAccents(txtShippingCity.Text);
+                    billingAddress.StateProvinceId = Convert.ToInt32(ddlShippingState.SelectedValue);
+                    billingAddress.CountryId = 231;//USA   Convert.ToInt32(ddlShippingCountry.SelectedValue);
+                    billingAddress.ZipPostalCode = CommonHelper.fixquotesAccents(txtShippingZipCode.Text);
 
-                    CustData.ShippingAddress = shippingAddress;
+                    CustData.BillingAddress = billingAddress;
                 }
 
 
