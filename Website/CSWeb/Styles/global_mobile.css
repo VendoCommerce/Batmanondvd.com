@@ -1346,3 +1346,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
     display: block;
     margin: 0 auto 70px auto;
 }
+
+.upgrade_offer {
+    background: #dbdbdb;
+    padding: 8px 4px 6px 13px;
+    margin-bottom: 34px;
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 28px solid transparent;
+	border-right: 28px solid transparent;
+	border-bottom: 28px solid #dbdbdb;
+    position: absolute;
+    top: -14px;
+    left: 26px;
+}

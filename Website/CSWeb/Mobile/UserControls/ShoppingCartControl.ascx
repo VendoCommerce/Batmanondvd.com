@@ -37,8 +37,17 @@
     </ItemTemplate>
 </asp:Repeater>
     <asp:Panel runat="server" ID="pnlUpgrade" Visible="false">
-        <asp:Label runat="server" ID="lblUpgrade"></asp:Label>
-        <asp:ImageButton ID="imgUpgrade" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_complete_order.png1" CausesValidation="False" OnCommand="imgUpgrade_Command"/>
+        <div class="upgrade_offer clearfix">
+            <div class="arrow-up"></div>
+            <div class="fleft f28 webfont1bold" style="width: 440px; padding-right: 30px; line-height: 1.2em;">
+                <asp:Label runat="server" ID="lblUpgrade"></asp:Label>
+            </div>
+            <div class="fleft" style="width: 182px; padding-top: 9px;">
+                <asp:ImageButton ID="imgUpgrade" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_upgrade.png" CausesValidation="False" OnCommand="imgUpgrade_Command" />
+            </div>
+            
+            
+        </div>
     </asp:Panel>
 <asp:Panel ID="pnlTotal" runat="server">
     <asp:PlaceHolder runat="server" ID="holderTaxAndShipping">
