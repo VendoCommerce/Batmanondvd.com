@@ -5,10 +5,11 @@ using CSBusiness.Resolver;
 using CSCore.Utils;
 using CSCore.DataHelper;
 using CSData;
+using CSBusiness.Web;
 
 namespace CSWeb.Account
 {
-    public class Login : System.Web.UI.Page
+    public class Login : CSBasePage
     {
         public System.Web.UI.WebControls.TextBox UserName, Password;
         protected Literal liErrorMessage;
@@ -16,8 +17,29 @@ namespace CSWeb.Account
         public static string siteName = string.Empty;
         public static string siteUrl = string.Empty;
         public static string siteTitle = string.Empty;
-        protected void Page_Load(object sender, EventArgs e)
+        protected override void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                base.Page_Load(sender, e);
+
+                if (Request.Headers["X-HTTPS"] != null)
+                {
+                    if (Request.Headers["X-HTTPS"].ToLower().Equals("no"))
+                    {
+                        if (Request.Url.ToString().Contains("www"))
+                        {
+                            Response.Redirect((Request.Url.ToString().Replace("http:/", "https:/").Replace("index.aspx", "")));
+                        }
+                        else
+                        {
+                            Response.Redirect((Request.Url.ToString().Replace("http:/", "https:/").Replace("https://", "https://www.").Replace("index.aspx", "")));
+                        }
+                    }
+                }
+
+            }
+            
             if (!Page.IsPostBack)
             {
                 SitePref PrefObject = CSFactory.GetSitePreference();

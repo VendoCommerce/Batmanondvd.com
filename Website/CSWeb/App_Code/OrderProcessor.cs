@@ -14,129 +14,81 @@ namespace CSWeb.App_Code
         /// <summary>
         /// Loads all orders and processes them for gateway and fullfilment.
         /// </summary>
-        public static void ProcessAllOrders( HttpSessionStateBase session)
+        public static void ProcessAllOrders()
         {
             Hashtable AllItems = new OrderManager().GetBatchProcessOrders();
             List<Order> orders = (List<Order>)AllItems["allOrders"];
-            string baseUrl = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority + HttpContext.Current.Request.ApplicationPath.TrimEnd('/') + "/";
+            //string baseUrl = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority + HttpContext.Current.Request.ApplicationPath.TrimEnd('/') + "/";
             foreach (Order orderItem in orders)
             {
                 try
                 {
-                  HttpContext.Current.Session["oid"] = orderItem.OrderId;
-                    CSCore.Utils.CommonHelper.HttpPost(baseUrl + "/authorizeorder.aspx","");
+                    ProcessOrder(orderItem.OrderId);
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    Console.WriteLine("Error :: " + e.Message);
+                    CSCore.CSLogger.Instance.LogException("Batch error - auth error - orderid: " + Convert.ToString(orderItem.OrderId), ex);
                 }
             }
         }
 
-        public static void ProcessOrder(HttpSessionStateBase session,HttpRequest request,HttpResponse response,int orderId)
+        public static void ProcessOrder(int orderId)
         {
-            ClientCartContext CartContext = session["ClientOrderData"] as ClientCartContext;
-            string[] parts = request.Url.AbsolutePath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
-            if (session["oid"] != null)
+            Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderId, true);
+
+            if (orderData.OrderStatusId == 2) return;
+
+            //Calculate and save tax
+            new CSWeb.FulfillmentHouse.DataPakTax().PostOrderToDataPak(orderId);
+
+            string[] testCreditCards;
+
+            testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries); ;
+            foreach (string word in testCreditCards)
             {
-                orderId = Convert.ToInt32(session["oid"].ToString());
+                if (orderData.CreditInfo.CreditCardNumber.Equals(word))
+                {
+                    CSResolve.Resolve<IOrderService>().UpdateOrderStatus(orderData.OrderId, 7);
+                    return;
+                }
+            }
+            bool authSuccess = false;
+            // Check if payment gateway service is enabled or not.
+            if (CSFactory.GetCacheSitePref().PaymentGatewayService)
+            {
+                try
+                {
+                    authSuccess = orderData.OrderStatusId == 4
+                        || orderData.OrderStatusId == 5 // fulfillment failure (fulfillment was attempted after payment success), so don't charge again.
+                        || OrderHelper.AuthorizeOrder(orderId);
+                    if (!authSuccess)
+                        OrderHelper.SendOrderDeclinedEmail(orderId);
+                }
+                catch (Exception ex)
+                {
+                    CSCore.CSLogger.Instance.LogException("AuthorizeOrder - auth error - orderid: " + Convert.ToString(orderId), ex);
+                }
             }
             else
             {
-                orderId = CartContext.OrderId;
+                authSuccess = true;
             }
-            Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderId, true);
 
-
-            if (orderData.OrderStatusId == 2)
+            if (authSuccess)
             {
-                // this means that  customer clicked back, so should be directed to receipt page.
-                response.Redirect("receipt.aspx");
-            }
-
-            if (session["oid"] == null && OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
-            {
-                response.Redirect("receipt.aspx");
-            }
-
-            //if (!IsPostBack)
-            //{
-                //Calculate and save tax
-                new CSWeb.FulfillmentHouse.DataPakTax().PostOrderToDataPak(orderId);
-
-                string[] testCreditCards;
-
-                testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries); ;
-
-                foreach (string word in testCreditCards)
-                {
-                    if (orderData.CreditInfo.CreditCardNumber.Equals(word))
-                    {
-                        CSResolve.Resolve<IOrderService>().UpdateOrderStatus(orderData.OrderId, 7);
-                        // This will avoid order from getting posted to OMX for test orders
-                        response.Redirect("receipt.aspx");
-                    }
-                }
-
-
-                bool authSuccess = false;
-                // Check if payment gateway service is enabled or not.
-                if (CSFactory.GetCacheSitePref().PaymentGatewayService)
+                // Check if fulfillment gateway service is enabled or not.
+                if (CSFactory.GetCacheSitePref().FulfillmentHouseService)
                 {
                     try
                     {
-                        authSuccess = orderData.OrderStatusId == 4
-                            || orderData.OrderStatusId == 5 // fulfillment failure (fulfillment was attempted after payment success), so don't charge again.
-                            || OrderHelper.AuthorizeOrder(orderId);
-                        ////if (!authSuccess)
-                        ////    OrderHelper.SendOrderDeclinedEmail(orderId);
+                        new CSWeb.FulfillmentHouse.DataPak().PostOrderToDataPak(orderId);
                     }
                     catch (Exception ex)
                     {
-                        CSCore.CSLogger.Instance.LogException("AuthorizeOrder - auth error - orderid: " + Convert.ToString(orderId), ex);
-
-                        throw;
+                        CSCore.CSLogger.Instance.LogException("AuthorizeOrder - fulfillment post error - orderid: " + Convert.ToString(orderId), ex);
                     }
                 }
-                else
-                {
-                    authSuccess = true;
-                }
-
-                if (authSuccess)
-                {
-                    // Check if fulfillment gateway service is enabled or not.
-                    if (CSFactory.GetCacheSitePref().FulfillmentHouseService)
-                    {
-                        try
-                        {
-                            new CSWeb.FulfillmentHouse.DataPak().PostOrderToDataPak(orderId);
-                        }
-                        catch (Exception ex)
-                        {
-                            CSCore.CSLogger.Instance.LogException("AuthorizeOrder - fulfillment post error - orderid: " + Convert.ToString(orderId), ex);
-
-                            throw;
-                        }
-
-                        if (request.QueryString != null)
-                        {
-                            response.Redirect("receipt.aspx?" + request.QueryString);
-                        }
-                        else
-                        {
-                            response.Redirect("receipt.aspx");
-                        }
-                    }
-                }
-                else
-                {
-                    response.Redirect(string.Format("carddecline.aspx?returnUrl={0}", string.Concat("/", string.Join("/", parts, 0, parts.Length - 1), "/receipt.aspx")), true);
-                }
-            //}
-            response.Redirect("receipt.aspx");
-
-
+            }
         }
     }
 }

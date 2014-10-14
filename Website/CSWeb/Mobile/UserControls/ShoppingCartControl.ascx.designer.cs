@@ -31,6 +31,33 @@ namespace CSWeb.Mobile.UserControls {
         protected global::System.Web.UI.WebControls.Repeater rptShoppingCart;
         
         /// <summary>
+        /// pnlUpgrade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlUpgrade;
+        
+        /// <summary>
+        /// lblUpgrade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUpgrade;
+        
+        /// <summary>
+        /// imgUpgrade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton imgUpgrade;
+        
+        /// <summary>
         /// pnlTotal control.
         /// </summary>
         /// <remarks>

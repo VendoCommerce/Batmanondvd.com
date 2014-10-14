@@ -81,7 +81,7 @@ namespace CSWeb.Mobile.UserControls
                 lblShipping.Text = String.Format("${0:0.00}", CartContext.CartInfo.ShippingCost);
                 //lblRushShipping.Text = String.Format("${0:0.00}", CartContext.CartInfo.RushShippingCost);
                 lblOrderTotal.Text = String.Format("${0:0.00}", CartContext.CartInfo.Total);
-
+                LoadUpgradeSku();
                 //Sri Comments on 11/15: Need to Plug-in to Custom Shipping option Model
                 SitePreference shippingGetShippingPref = CSFactory.GetCacheSitePref();
                 //holderRushShipping.Visible = shippingGetShippingPref.IncludeRushShipping ?? false;
@@ -93,6 +93,32 @@ namespace CSWeb.Mobile.UserControls
                 rptShoppingCart.Visible = false;
             }
 
+        }
+
+        private void LoadUpgradeSku()
+        {
+            int upgradeSkuId = 0;
+            int skuId = 0;
+            foreach (Sku sku in CartContext.CartInfo.CartItems)
+            {
+                skuId = sku.SkuId;
+                if (sku.SkuId == 112)
+                    upgradeSkuId = 114;
+                if (sku.SkuId == 113)
+                    upgradeSkuId = 115;
+                break;
+            }
+            if (upgradeSkuId > 0)
+            {
+                SkuManager skuManager = new SkuManager();
+                Sku sku = skuManager.GetSkuByID(skuId);
+                sku.LoadAttributeValues();
+                if (sku.ContainsAttribute("upgradetext") && sku.AttributeValues["upgradetext"] != null)
+                    lblUpgrade.Text = sku.AttributeValues["upgradetext"].Value;
+
+                imgUpgrade.CommandArgument = upgradeSkuId.ToString();
+                pnlUpgrade.Visible = true;
+            }
         }
 
         protected void rptShoppingCart_OnItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -213,6 +239,23 @@ namespace CSWeb.Mobile.UserControls
 			if(UpdateCart != null)
 				UpdateCart(sender, e);
 		}
+
+        protected void imgUpgrade_Command(object sender, CommandEventArgs e)
+        {
+            int skuId=Convert.ToInt32(e.CommandArgument);
+            CartContext.CartInfo.AddOrUpdate(skuId,1,true,false,false);
+            try
+            {
+                CartContext.CartInfo.RemoveSku(112);
+                CartContext.CartInfo.RemoveSku(113);
+            }
+            catch (Exception)
+            {
+            }
+            CartContext.CartInfo.Compute();
+            pnlUpgrade.Visible = false;
+            BindControls();
+        }
     }
 
     public enum ShoppingCartDisplayTotalMode

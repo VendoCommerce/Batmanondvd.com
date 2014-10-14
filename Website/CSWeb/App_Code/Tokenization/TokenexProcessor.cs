@@ -53,11 +53,12 @@ namespace CSWeb.Tokenization
         /// <returns>New instance of the class</returns>
         public static TokenexProcessor GetInstance()
         {
-            if (HttpContext.Current.Session["Tokenex"] != null)
+            if (HttpContext.Current.Session != null && HttpContext.Current.Session["Tokenex"] != null)
                 return (TokenexProcessor)HttpContext.Current.Session["Tokenex"];
             else
             {
                 TokenexProcessor tp = new TokenexProcessor();
+                if (HttpContext.Current.Session != null)
                 HttpContext.Current.Session["Tokenex"] = tp;
                 return tp;
             }

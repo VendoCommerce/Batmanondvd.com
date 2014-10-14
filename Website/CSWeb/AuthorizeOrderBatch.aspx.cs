@@ -11,8 +11,8 @@ namespace CSWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Request.QueryString["code"] == "encryptionCode")
-            //    CSWeb.App_Code.OrderProcessor.ProcessAllOrders(Session);
+            if (Request.QueryString["code"] == "encryptionCode")
+                CSWeb.App_Code.OrderProcessor.ProcessAllOrders();
         }
     }
 }

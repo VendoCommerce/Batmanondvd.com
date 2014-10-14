@@ -36,6 +36,10 @@
         </div>
     </ItemTemplate>
 </asp:Repeater>
+    <asp:Panel runat="server" ID="pnlUpgrade" Visible="false">
+        <asp:Label runat="server" ID="lblUpgrade"></asp:Label>
+        <asp:ImageButton ID="imgUpgrade" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_complete_order.png1" CausesValidation="False" OnCommand="imgUpgrade_Command"/>
+    </asp:Panel>
 <asp:Panel ID="pnlTotal" runat="server">
     <asp:PlaceHolder runat="server" ID="holderTaxAndShipping">
         <div class="horizontal_dots">
