@@ -2112,3 +2112,6 @@ div.rowheader .receipt_row1 {
 #ucCardDecline_rblUpdateShippingAddress label, #ucCardDecline_rblUpdateBillingAddress label {
     margin-right: 10px;
 }
+
+
+.bottomcta {clear: both;}
