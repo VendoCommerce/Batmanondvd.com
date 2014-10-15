@@ -7,14 +7,24 @@ using System.Web.UI.WebControls;
 using CSBusiness;
 using CSBusiness.Preference;
 using CSWeb.Tokenization;
+using System.Configuration;
 
 namespace CSWeb.UserControls
 {
     public partial class Tokenex : System.Web.UI.UserControl
-    {        
+    {
+
+        public string TokenExJSFile
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["TokenExJavaUrl"];
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
-        {           
-            
+        {
+            TxEncryptionKey.Value = ConfigurationManager.AppSettings["TokenExPublicKey"];
         }
 
         public string EncryptedCcNum
@@ -36,7 +46,7 @@ namespace CSWeb.UserControls
 
         public string GetCCNumToken()
         {
-           return TokenexProcessor.GetInstance().Tokenize(EncryptedCcNum);
+            return TokenexProcessor.GetInstance().Tokenize(EncryptedCcNum);
         }
     }
 }
