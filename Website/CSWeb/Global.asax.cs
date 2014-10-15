@@ -29,14 +29,14 @@ namespace CSWeb
             //Handle404Error(ex);
         }
 
-        private void Handle404Error(Exception ex)
-        {
-            Response.Redirect("/400.aspx");
-            HttpException httpEx = ex as HttpException;
-            if (httpEx != null && httpEx.GetHttpCode() == 404)
-            {
+        //private void Handle404Error(Exception ex)
+        //{
+        //    Response.Redirect("/400.aspx");
+        //    HttpException httpEx = ex as HttpException;
+        //    if (httpEx != null && httpEx.GetHttpCode() == 404)
+        //    {
 
-            }
-        }
+        //    }
+        //}
     }
 }
