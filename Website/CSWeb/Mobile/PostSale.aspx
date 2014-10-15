@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=640, initial-scale=.5, maximum-scale=.5" />
+<meta name="viewport" content="width=device-width, maximum-scale=1" />
 <title></title>
 
 
