@@ -326,8 +326,7 @@
         <div class="clear"></div>
 
             <div class="form_line_btn">
-                <p class="f24" style="padding: 0 0 16px 14px; line-height: 1.3em;">By clicking here, I agree to the <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank">Terms of Service</a> <br />
-                    and <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a>.</p>
+                <p class="f24" style="padding: 0 0 16px 14px; line-height: 1.3em;">By clicking here, I agree to the <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank">Terms of Service</a> and <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a>.</p>
                 <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_complete_order.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
             </div>
         <div class="cart_mobile">

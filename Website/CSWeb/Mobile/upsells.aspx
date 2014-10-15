@@ -273,12 +273,12 @@ advantage of this special offer?
                 Adventures of Superman!
             </h2>
 
-            <p class="f26" style="line-height: 36px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_superman.jpg" alt="Superman" class="fright" style="margin: 10px 0 15px 0; position: relative; left: 8px;" />Faster than a <br />
-                speeding bullet! <br />
-                More powerful than a <br />
-                locomotive! Able to <br />
-                leap tall buildings at <br />
-                a single bound! Don't <br />
+            <p class="f26" style="line-height: 36px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_superman.jpg" alt="Superman" class="fright" style="margin: 10px 0 15px 10px; position: relative; left: 8px;" />Faster than a 
+                speeding bullet! 
+                More powerful than a 
+                locomotive! Able to 
+                leap tall buildings at 
+                a single bound! Don't 
                 miss out on the legendary 1950's Adventures of 
                 Superman series starring George Reeves! Your Superman DVD Collection will 
                 contain 104 episodes on 20 DVDs for only $49.95!
