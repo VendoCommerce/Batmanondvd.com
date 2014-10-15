@@ -30,8 +30,8 @@
                     <p class="text-center f16 pad6">Order Options</p>
                     <p class="text-center pad12">
                         <asp:DropDownList ID="ddlComplete" runat="server" class="prodselect">
-                            <asp:ListItem Value="110">Classic Batman Collection on DVD - 1 payment of $99.95</asp:ListItem>
-                            <asp:ListItem Value="112">Classic Batman Collection on DVD - 5 easy payments of $19.99</asp:ListItem>
+                            <asp:ListItem Value="110">Classic Collection on DVD - 1 payment of $99.95</asp:ListItem>
+                            <asp:ListItem Value="112">Classic Collection on DVD - 5 easy payments of $19.99</asp:ListItem>
                         </asp:DropDownList>
                     </p>
                     <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold blue">FREE SHIPPING & HANDLING!</span></p>
@@ -52,7 +52,7 @@
                         <li>Adam West Naked on DVD: Watch as Adam takes you   behind the scenes of your favorite episodes!</li>
                         <li>The Original 1966 Batman Movie DVD starring <br />  Adam West and Burt Ward</li>
                         <li>Detailed Episode Guide</li>
-                        <li>Your Own Show Script from the Episode  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
+                        <li>Your Own Show Script from the Episode   <span style="display: inline-block;">‘The Joker is Wild’</span></li>
                         <li>Personal Letter from Adam West to you!</li>
                     </ul>
                     <%--<p class="text-center"><strong><a href="#guarantee" class="guarantee">Guarantee!</a></strong></p>--%>
@@ -73,10 +73,10 @@
 top: 0; left: -25px;" />
                         <p class="text-center pad12">
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
-                            <asp:ListItem Value="111">Complete Classic Batman Collection on DVD - 1 payment of $149.95</asp:ListItem>
-                            <asp:ListItem Value="113">Complete Classic Batman Collection on DVD - 5 easy payments of $29.99</asp:ListItem>
-                            <asp:ListItem Value="114">Complete Classic Batman Collection in HD on Blu-Ray - 1 payment of $174.95</asp:ListItem>
-                            <asp:ListItem Value="115">Complete Classic Batman Collection in HD on Blu-Ray - 5 easy payments of $34.99</asp:ListItem>
+                            <asp:ListItem Value="111">Complete Classic Collection on DVD - 1 payment of $149.95</asp:ListItem>
+                            <asp:ListItem Value="113">Complete Classic Collection on DVD - 5 easy payments of $29.99</asp:ListItem>
+                            <asp:ListItem Value="114">Complete Classic Collection in HD on Blu-Ray - 1 payment of $174.95</asp:ListItem>
+                            <asp:ListItem Value="115">Complete Classic Collection in HD on Blu-Ray - 5 easy payments of $34.99</asp:ListItem>
                         </asp:DropDownList>
                     </p>
                     </div>
@@ -94,10 +94,10 @@ top: 0; left: -25px;" />
                         <ul style="margin-bottom: 0;">
                             <li>120 of your favorite original broadcast episodes fully remastered</li>
                             <li>Over 3 Hours of ALL NEW bonus materials</li>
-                            <li>Adam West Naked on DVD: Watch as Adam takes you   behind the scenes of your favorite epidodes!</li>
+                            <li>Adam West Naked on DVD: Watch as Adam takes you   behind the scenes of your favorite episodes!</li>
                             <li>The Original 1966 Batman Movie DVD starring <br />  Adam West and Burt Ward</li>
                             <li>Detailed Episode Guide</li>
-                            <li>Your Own Show Script from the Episode  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
+                            <li>Your Own Show Script from the Episode   <span style="display: inline-block;">‘The Joker is Wild’</span></li>
                             <li>Personal Letter from Adam West to you!</li>
                             <li>PLUS your own collectors box!</li>
                         </ul>

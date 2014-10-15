@@ -60,11 +60,11 @@
                         <li>Over 3 Hours of ALL NEW bonus materials</li>
                         <li>Adam West Naked on DVD: Watch as Adam takes you 
   behind the scenes of your favorite episodes!</li>
-                        <li>The Original 1966 Batman Movie DVD starring <br />
+                        <li>The Original 1966 Batman Movie DVD starring 
   Adam West and Burt Ward</li>
                         <li>Detailed Episode Guide</li>
-                        <li>Your Own Show Script from the Episode
-  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
+                        <li>Your Own Show Script from the Episode 
+  <span style="display: inline-block;">‘The Joker is Wild’</span></li>
                         <li>Personal Letter from Adam West to you!</li>
                     </ul>
         </div>
@@ -105,12 +105,11 @@
                 <li>Over 3 Hours of ALL NEW bonus materials</li>
                 <li>Adam West Naked on DVD: Watch as Adam takes you 
   behind the scenes of your favorite episodes!</li>
-                <li>The Original 1966 Batman Movie DVD starring
-                    <br />
+                <li>The Original 1966 Batman Movie DVD starring 
                     Adam West and Burt Ward</li>
                 <li>Detailed Episode Guide</li>
-                <li>Your Own Show Script from the Episode
-  <span style="white-space: nowrap">‘The Joker is Wild’</span></li>
+                <li>Your Own Show Script from the Episode 
+  <span style="display: inline-block;">‘The Joker is Wild’</span></li>
                 <li>Personal Letter from Adam West to you!</li>
                 <li>PLUS your own collectors box!</li>
             </ul>
