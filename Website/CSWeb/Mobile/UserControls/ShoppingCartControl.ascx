@@ -38,7 +38,7 @@
 </asp:Repeater>
     <asp:Panel runat="server" ID="pnlUpgrade" Visible="false">
         <div class="upgrade_offer clearfix">
-            <div class="arrow-up"></div>
+            <div class="arrow-up"></div><!-- arrow -->
             <div class="fleft f28 webfont1bold" style="width: 440px; padding-right: 30px; line-height: 1.2em;">
                 <asp:Label runat="server" ID="lblUpgrade"></asp:Label>
             </div>
