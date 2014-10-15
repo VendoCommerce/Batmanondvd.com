@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ShoppingCartControl.ascx.cs"
     Inherits="CSWeb.Mobile.UserControls.ShoppingCartControl" %>
 <asp:LinkButton ID="refresh" runat="server" CausesValidation="false"></asp:LinkButton>
-<asp:Repeater runat="server" ID="rptShoppingCart" OnItemDataBound="rptShoppingCart_OnItemDataBound"
+<%--<asp:Repeater runat="server" ID="rptShoppingCart" OnItemDataBound="rptShoppingCart_OnItemDataBound"
     OnItemCommand="rptShoppingCart_OnItemCommand">
     <HeaderTemplate>
         <div class="greenbar">Shopping Cart</div>
@@ -94,4 +94,4 @@
 </asp:Panel>
    <div class="cart_offer" style="display: none;">
             <strong>*Offer Details:</strong> offer details
-   </div>
+   </div>--%>

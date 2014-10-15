@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using CSBusiness;
 using CSBusiness.CustomerManagement;
+using CSBusiness.Preference;
 using CSCore.Utils;
 using CSCore.DataHelper;
 using CSWeb.Mobile.Store;
@@ -85,14 +88,18 @@ namespace CSWeb.Mobile.UserControls
                 BindRegions();
                 BindShippingRegions();
                 BindCreditCard();
+                BindControls();
                 LoadOfferTerms(ClientOrderData.CartInfo.CartItems[0]);
+                
             }
+            
 
         }
 
         protected override void OnPreRender(EventArgs e)
         {
             base.OnPreRender(e);
+            holderTaxAndShipping.Visible = TotalMode == ShoppingCartDisplayTotalMode.Full;
             //ScriptManager.RegisterClientScriptInclude(Page, Page.GetType(), "jquery", Page.ResolveUrl("~/Scripts/jquery-1.6.4.min.js"));
             ScriptManager.RegisterClientScriptInclude(Page, Page.GetType(), "jquery.autotab", Page.ResolveUrl("~/Scripts/jquery.autotab-1.1b.js"));
 
@@ -606,5 +613,246 @@ namespace CSWeb.Mobile.UserControls
 
         #endregion General Methods
 
+        #region ShoppingCart
+
+        public void BindControls()
+        {
+            if (CartContext.CartInfo.CartItems.Count > 0)
+            {
+                rptShoppingCart.DataSource = CartContext.CartInfo.CartItems.FindAll(x => x.Visible == true);
+                rptShoppingCart.DataBind();
+
+                pnlTotal.Visible = true;
+
+                lblSubtotal.Text = String.Format("${0:0.00}", CartContext.CartInfo.SubTotal);
+                lblTax.Text = String.Format("${0:0.00}", CartContext.CartInfo.TaxCost);
+                lblShipping.Text = String.Format("${0:0.00}", CartContext.CartInfo.ShippingCost);
+                //lblRushShipping.Text = String.Format("${0:0.00}", CartContext.CartInfo.RushShippingCost);
+                lblOrderTotal.Text = String.Format("${0:0.00}", CartContext.CartInfo.Total);
+                LoadUpgradeSku();
+                //Sri Comments on 11/15: Need to Plug-in to Custom Shipping option Model
+                SitePreference shippingGetShippingPref = CSFactory.GetCacheSitePref();
+                //holderRushShipping.Visible = shippingGetShippingPref.IncludeRushShipping ?? false;
+                //holderRushShippingTotal.Visible = chkIncludeRushShipping.Checked = (CartContext.CartInfo.ShippingMethod == UserShippingMethodType.Rush);
+            }
+            else
+            {
+                pnlTotal.Visible = false;
+                rptShoppingCart.Visible = false;
+            }
+
+        }
+
+        private void LoadUpgradeSku()
+        {
+            int upgradeSkuId = 0;
+            int skuId = 0;
+            foreach (Sku sku in CartContext.CartInfo.CartItems)
+            {
+                skuId = sku.SkuId;
+                if (sku.SkuId == 112)
+                    upgradeSkuId = 114;
+                if (sku.SkuId == 113)
+                    upgradeSkuId = 115;
+                break;
+            }
+            if (upgradeSkuId > 0)
+            {
+                SkuManager skuManager = new SkuManager();
+                Sku sku = skuManager.GetSkuByID(skuId);
+                sku.LoadAttributeValues();
+                if (sku.ContainsAttribute("upgradetext") && sku.AttributeValues["upgradetext"] != null)
+                    lblUpgrade.Text = sku.AttributeValues["upgradetext"].Value;
+
+                imgUpgrade.CommandArgument = upgradeSkuId.ToString();
+                pnlUpgrade.Visible = true;
+            }
+        }
+
+        protected void rptShoppingCart_OnItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                Label lblSkuCode = e.Item.FindControl("lblSkuCode") as Label;
+                Label lblSkuDescription = e.Item.FindControl("lblSkuDescription") as Label;
+                TextBox txtQuantity = e.Item.FindControl("txtQuantity") as TextBox;
+                //Label lblQuantity = e.Item.FindControl("lblQuantity") as Label;
+                Label lblSkuInitialPrice = e.Item.FindControl("lblSkuInitialPrice") as Label;
+                ImageButton btnRemoveItem = e.Item.FindControl("btnRemoveItem") as ImageButton;
+                HtmlContainerControl holderQuantity = e.Item.FindControl("holderQuantity") as HtmlContainerControl;
+                HtmlContainerControl holderRemove = e.Item.FindControl("holderRemove") as HtmlContainerControl;
+                Image imgProduct = e.Item.FindControl("imgProduct") as Image;
+
+                Sku cartItem = e.Item.DataItem as Sku;
+
+                lblSkuDescription.Text = cartItem.ShortDescription;
+                //lblQuantity.Text = txtQuantity.Text = cartItem.Quantity.ToString();
+                lblSkuInitialPrice.Text = String.Format("${0:0.##}", cartItem.InitialPrice);
+                if (cartItem.ImagePath != null && cartItem.ImagePath.Length > 0)
+                {
+                    imgProduct.ImageUrl = cartItem.ImagePath;
+                    lblSkuCode.Visible = false;
+                }
+                else
+                {
+                    imgProduct.Visible = false;
+                    lblSkuCode.Text = cartItem.SkuCode.ToString();
+                }
+
+
+                btnRemoveItem.CommandArgument = cartItem.SkuId.ToString();
+
+                //txtQuantity.Attributes["onchange"] = Page.ClientScript.GetPostBackEventReference(refresh, "");
+
+                switch (QuantityMode)
+                {
+                    case ShoppingCartQuanityMode.Hidden:
+                        holderQuantity.Visible = false;
+                        break;
+                    //case ShoppingCartQuanityMode.Editable:
+                    //    lblQuantity.Visible = false;
+                    //    break;
+                    //case ShoppingCartQuanityMode.Readonly:
+                    //    txtQuantity.Visible = false;
+                    //    break;
+                    default:
+                        break;
+                }
+
+                if (HideRemoveButton)
+                {
+                    holderRemove.Visible = false;
+                }
+            }
+            else if (e.Item.ItemType == ListItemType.Header)
+            {
+                HtmlContainerControl holderHeaderQuantity = e.Item.FindControl("holderHeaderQuantity") as HtmlContainerControl;
+                HtmlContainerControl holderHeaderRemove = e.Item.FindControl("holderHeaderRemove") as HtmlContainerControl;
+                if (QuantityMode == ShoppingCartQuanityMode.Hidden)
+                {
+                    holderHeaderQuantity.Visible = false;
+                }
+
+                if (HideRemoveButton)
+                {
+                    holderHeaderRemove.Visible = false;
+                }
+            }
+        }
+
+        protected void rptShoppingCart_OnItemCommand(object sender, RepeaterCommandEventArgs e)
+        {
+            switch (e.CommandName)
+            {
+                case "delete":
+                    {
+                        int skuToRemove = Convert.ToInt32(e.CommandArgument);
+                        CartContext.CartInfo.UpdateSku(skuToRemove);
+                        BindControls();
+                        if (UpdateCart != null)
+                            UpdateCart(sender, e);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        protected void OnTextChanged_Changed(object sender, EventArgs e)
+        {
+            TextBox txtQuantity = (TextBox)sender;
+            RepeaterItem item = (RepeaterItem)txtQuantity.NamingContainer;
+            ImageButton btnRemoveItem = item.FindControl("btnRemoveItem") as ImageButton;
+
+            int skuID = Convert.ToInt32(btnRemoveItem.CommandArgument);
+            Sku cartItem = CartContext.CartInfo.CartItems.FirstOrDefault(c => c.SkuId == skuID);
+            int newQuantity = 0;
+            if (int.TryParse(txtQuantity.Text, out newQuantity))
+                cartItem.Quantity = newQuantity;
+            CartContext.CartInfo.Compute();
+            BindControls();
+            if (UpdateCart != null)
+                UpdateCart(sender, e);
+        }
+
+        protected void imgUpgrade_Command(object sender, CommandEventArgs e)
+        {
+            int skuId = Convert.ToInt32(e.CommandArgument);
+            CartContext.CartInfo.AddOrUpdate(skuId, 1, true, false, false);
+            try
+            {
+                CartContext.CartInfo.RemoveSku(112);
+                CartContext.CartInfo.RemoveSku(113);
+            }
+            catch (Exception)
+            {
+            }
+            CartContext.CartInfo.Compute();
+            pnlUpgrade.Visible = false;
+            BindControls();
+            LoadOfferTerms(CartContext.CartInfo.CartItems[0]);
+        }
+
+        public event EventHandler UpdateCart;
+
+        private ClientCartContext CartContext
+        {
+            get
+            {
+                return Session["ClientOrderData"] as ClientCartContext;
+            }
+        }
+
+        public ShoppingCartDisplayTotalMode TotalMode
+        {
+            get
+            {
+                return ViewState["TotalMode"] == null ? ShoppingCartDisplayTotalMode.Full : (ShoppingCartDisplayTotalMode)ViewState["TotalMode"];
+            }
+            set
+            {
+                ViewState["TotalMode"] = value;
+            }
+        }
+
+        public ShoppingCartQuanityMode QuantityMode
+        {
+            get
+            {
+                return ViewState["QuantityMode"] == null ? ShoppingCartQuanityMode.Readonly : (ShoppingCartQuanityMode)ViewState["QuantityMode"];
+            }
+            set
+            {
+                ViewState["QuantityMode"] = value;
+            }
+        }
+
+        public bool HideRemoveButton
+        {
+            get
+            {
+                return (bool)(ViewState["HideRemoveButton"] ?? false);
+            }
+            set
+            {
+                ViewState["HideRemoveButton"] = value;
+            }
+        }
+
+        #endregion ShoppingCart
+
+    }
+
+    public enum ShoppingCartDisplayTotalMode
+    {
+        SubtotalOnly,
+        Full
+    }
+
+    public enum ShoppingCartQuanityMode
+    {
+        Editable,
+        Readonly,
+        Hidden
     }
 }

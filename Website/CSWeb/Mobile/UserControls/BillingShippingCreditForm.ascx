@@ -3,7 +3,107 @@
 <%@ Register src="../../UserControls/Tokenex.ascx" tagname="Tokenex" tagprefix="uc2" %>
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>
-<uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />
+<%--<uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />--%>
+<asp:LinkButton ID="refresh" runat="server" CausesValidation="false"></asp:LinkButton>
+<asp:Repeater runat="server" ID="rptShoppingCart" OnItemDataBound="rptShoppingCart_OnItemDataBound"
+    OnItemCommand="rptShoppingCart_OnItemCommand">
+    <HeaderTemplate>
+        <div class="greenbar">Shopping Cart</div>
+        <div class="cart_table clearfix" style="margin-bottom: 0;">
+            <div class="cart_text_hdr">
+                <h4 class="pad0">Item</h4>
+            </div>
+            <div class="product_price_hdr" class="pad0" style="padding-left: 8px;">
+                <h4>Price</h4>
+            </div>
+        </div>
+        <div class="horizontal_dots"></div>
+    </HeaderTemplate>
+    <ItemTemplate>
+        <div class="cart_table clearfix">
+            <div class="cart_image">
+                <asp:Image runat="server" ID="imgProduct" />
+            </div>
+            <div class="cart_text">
+                <div class="basket_title">
+                    <asp:Label runat="server" ID="lblSkuCode"></asp:Label>
+                </div>
+                <div class="basket_description">
+                    <asp:Label runat="server" ID='lblSkuDescription'></asp:Label>
+                </div>
+            </div>
+            <div class="product_price">
+                <asp:Label runat="server" ID="lblSkuInitialPrice"></asp:Label>*
+                <td runat="server" width="1%" id='holderRemove' visible="false">
+                    <asp:ImageButton ID="btnRemoveItem" runat="server" CommandName="delete" CausesValidation="false"
+                        CssClass="ucRemoveButtonOverlay" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/delete.gif" />
+                </td>
+            </div>
+        </div>
+    </ItemTemplate>
+</asp:Repeater>
+<asp:Panel runat="server" ID="pnlUpgrade" Visible="false">
+    <div class="upgrade_offer clearfix">
+        <div class="arrow-up"></div>
+        <!-- arrow -->
+        <div class="fleft f28 webfont1bold" style="width: 440px; padding-right: 30px; line-height: 1.2em;">
+            <asp:Label runat="server" ID="lblUpgrade"></asp:Label>
+        </div>
+        <div class="fleft" style="width: 182px; padding-top: 9px;">
+            <asp:ImageButton ID="imgUpgrade" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_upgrade.png" CausesValidation="False" OnCommand="imgUpgrade_Command" />
+        </div>
+
+
+    </div>
+</asp:Panel>
+<asp:Panel ID="pnlTotal" runat="server">
+    <asp:PlaceHolder runat="server" ID="holderTaxAndShipping">
+        <div class="horizontal_dots">
+        </div>
+
+
+
+        <div class="cart_totals clearfix">
+            <div class="cart_totals_left">
+                <strong>Subtotal:</strong><br />
+                Shipping:<br />
+                Tax:<br />
+            </div>
+            <div class="cart_totals_right">
+                <asp:Literal runat="server" ID='lblSubtotal'></asp:Literal><br />
+                <div>
+                    <asp:Literal runat="server" ID="lblShipping" Visible="false"></asp:Literal>$9.95<span class="crossout"></span></div>
+                <asp:Literal runat="server" ID="lblTax"></asp:Literal><br />
+
+                <%--                <asp:Literal runat="server" ID="lblRushShipping" Visible="false"></asp:Literal>
+                <table>
+                    <tr id='holderRushShippingTotal' runat="server">
+                        <td class='cartSubtotalTitle' align="right" colspan="3">
+                            Rush Shipping:
+                        </td>
+                        <td class='cartSubtotalValue' align="center">
+                        </td>
+                    </tr>
+                    <tr id='holderRushShipping' runat="server" visible="false">
+                        <td colspan="4" class="rushShipping">
+                            <asp:CheckBox runat="server" ID="chkIncludeRushShipping" OnCheckedChanged="chkIncludeRushShipping_OnCheckedChanged"
+                                AutoPostBack="true" Text="Rush Shipping" />
+                        </td>
+                    </tr>
+                </table>--%>
+            </div>
+            <div class="clear" style="height: 14px;"></div>
+            <div class="horizontal_dots" style="width: 240px; left: -8px; display: none;"></div>
+            <div class="cart_totals_left black"><strong>Today's Payment:</strong></div>
+            <div class="cart_totals_right black">
+                <asp:Literal runat="server" ID="lblOrderTotal"></asp:Literal></div>
+            <div class="clear" style="height: 50px;"></div>
+        </div>
+    </asp:PlaceHolder>
+</asp:Panel>
+<div class="cart_offer" style="display: none;">
+    <strong>*Offer Details:</strong> offer details
+</div>
 <asp:UpdatePanel ID="upBillingForm" runat="server">
     <ContentTemplate>    
     <a name="tryitnow" id="tryitnow"></a>
