@@ -1572,6 +1572,11 @@ div.rowheader .receipt_row1 {
 	font-size: 11px;
 	color: #ff0000;
 }
+.cart_right .error-1 {
+	position:relative;
+	font-size: 11px;
+	color: #ff0000;
+}
 .cartB .error-2 {
 	position:relative;
 	font-size: 11px;
