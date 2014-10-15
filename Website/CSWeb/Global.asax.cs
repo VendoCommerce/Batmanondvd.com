@@ -6,6 +6,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using CSBusiness.Resolver;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 
 
@@ -20,23 +21,32 @@ namespace CSWeb
             if (ex.InnerException != null)
             {
                 CSCore.CSLogger.Instance.LogException(ex.InnerException.Message, ex.InnerException);
+                //LogError(ex.InnerException.Message);
             }
             else if (ex != null)
-                {
-                    CSCore.CSLogger.Instance.LogException(Request.Url.ToString(), null);
-                }
+            {
+                CSCore.CSLogger.Instance.LogException(Request.Url.ToString(), null);
+                //LogError(ex.Message);
+            }
 
-            //Handle404Error(ex);
+            Handle404Error(ex);
         }
 
-        //private void Handle404Error(Exception ex)
-        //{
-        //    Response.Redirect("/400.aspx");
-        //    HttpException httpEx = ex as HttpException;
-        //    if (httpEx != null && httpEx.GetHttpCode() == 404)
-        //    {
-
-        //    }
-        //}
+        private void Handle404Error(Exception ex)
+        {
+            HttpException httpEx = ex as HttpException;
+            if (httpEx != null && httpEx.GetHttpCode() == 404)
+            {
+                //Ignore if a file is requsted.
+                Regex regex = new Regex(@".(txt|gif|pdf|doc|docx|jpg|pdf|js|png|mp4|html|htm|css|scss|less|eot|svg|ttf|woff|otf|xml)$");//aspx|asp|
+                if (!regex.IsMatch(Request.Url.AbsoluteUri))
+                    Response.Redirect("400.aspx");
+            }
+        }
+        private void LogError(string message)
+        {
+            CSCore.EmailHelper.SendEmail("info@conversionsystems.com", "ravi@conversionsystems.com", "BatmanOnDvd.Com Error", message, false);
+        }
     }
+
 }

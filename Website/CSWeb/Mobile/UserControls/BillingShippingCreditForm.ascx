@@ -1,9 +1,7 @@
 <%@Control Language="C#" AutoEventWireup="true" Inherits="CSWeb.Mobile.UserControls.BillingShippingCreditForm" CodeBehind="BillingShippingCreditForm.ascx.cs" %>
-<%@ Register src="ShoppingCartControl.ascx" tagname="ShoppingCartControl" tagprefix="uc1" %>
 <%@ Register src="../../UserControls/Tokenex.ascx" tagname="Tokenex" tagprefix="uc2" %>
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>
-<%--<uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />--%>
 <asp:LinkButton ID="refresh" runat="server" CausesValidation="false"></asp:LinkButton>
 <asp:Repeater runat="server" ID="rptShoppingCart" OnItemDataBound="rptShoppingCart_OnItemDataBound"
     OnItemCommand="rptShoppingCart_OnItemCommand">

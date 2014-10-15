@@ -79,7 +79,7 @@ protected Label lblPurchaseName, lblPromotionPrice;
                 dlordersList.DataSource = orderData.SkuItems.Where<Sku>(x => { return x.SkuCode != "Shipping"; });
                 dlordersList.DataBind();
                 LiteralSubTotal.Text = Math.Round(OrderValues.GetSubTotal(orderData),2).ToString();
-                LiteralShipping.Text = Math.Round(OrderValues.GetShippingCharge(orderData),2).ToString();
+                LiteralShipping.Text = Math.Round(OrderValues.GetShippingCharge(orderData), 2).ToString("f2");
                 LiteralTax.Text = Math.Round(orderData.Tax, 2).ToString();
                 LiteralTotal.Text = Math.Round(orderData.Total, 2).ToString();
                 if (orderData.RushShippingCost > 0)

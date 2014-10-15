@@ -31,6 +31,15 @@ namespace CSWeb.Root.UserControls {
         protected global::CSWeb.Root.UserControls.ShoppingCartControl ShoppingCartControl1;
         
         /// <summary>
+        /// upBillingForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upBillingForm;
+        
+        /// <summary>
         /// ucTokenex control.
         /// </summary>
         /// <remarks>

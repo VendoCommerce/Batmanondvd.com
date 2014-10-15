@@ -1,9 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="CSWeb.Admin.ClientReport"  EnableViewState="true" EnableSessionState="true" EnableEventValidation="false" %>
-<%@ Register TagPrefix="usercontrols" TagName="RangeDateControl" Src="~/usercontrols/RangeDateControl.ascx" %>
+<%@ Register TagPrefix="usercontrols" TagName="RangeDateControl" Src="usercontrols/RangeDateControl.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head2" runat="server">
-    <title><%=siteName %> - Standard Report</title>
+    <title>BatmanOnDvd.com - Standard Report</title>
     <style type="text/css">
         .day_range {
 width: 112px;

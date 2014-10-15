@@ -55,6 +55,7 @@ namespace CSWeb.Mobile.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ScriptManager.RegisterStartupScript(upBillingForm, typeof(string), "ShowPopup", "MM_showHideLayers('mask','','hide');", true); 
             if (!IsPostBack)
             {
                 txtFirstName.Focus();

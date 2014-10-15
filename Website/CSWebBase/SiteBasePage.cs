@@ -45,7 +45,7 @@ namespace CSWebBase
 
         public static void SendErrorEmail(string message)
         {
-            CSCore.EmailHelper.SendEmail("info@conversionsystems.com", AdminEmail, "[SiteName.Com Error]", message, false);
+            CSCore.EmailHelper.SendEmail("info@conversionsystems.com", AdminEmail, "BatmanOnDvd.Com Error", message, false);
         }
     }
 

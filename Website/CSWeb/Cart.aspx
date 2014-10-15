@@ -25,7 +25,7 @@
             <div style="margin: 250px auto; position:relative; width: 312px; height: 170px; background: white; text-align:center;">
 
                 <p style="margin: 0; padding: 20px 0 10px 0;">
-         <img src="//d1kg9stb0ddjcv.cloudfront.net/images//loader.gif">
+         <img src="//d1kg9stb0ddjcv.cloudfront.net/images/loader.gif">
                 </p>
                 <p style="color: black; text-align:center; font-size: 12px; margin: 0 23px; line-height: 19px;">Your order is currently being processed. <br />
                     Please do not exit or refresh this page to ensure that your order is processed accurately.</p>

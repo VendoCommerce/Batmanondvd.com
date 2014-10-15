@@ -25,7 +25,7 @@
 <uc1:ShoppingCartControl ID="ShoppingCartControl1" runat="server" />
 <%--<asp:UpdatePanel ID="upBillingForm" runat="server">
     <ContentTemplate>--%>
-<asp:UpdatePanel runat="server">
+<asp:UpdatePanel runat="server" ID="upBillingForm">
     <ContentTemplate>
 
         <div class="Rootontent_B clearfix" style="margin-top: 35px;">

@@ -6,6 +6,7 @@
     <script type="text/javascript">
         function encryptCCnumber() {
             try {
+                MM_showHideLayers('mask', '', 'show');
                 var creditCard = document.getElementById("txtCCNumber1").value;
                 if (creditCard == "XXXXXXXXXXXXXXXX") return true;
                 var key = document.getElementById('TxEncryptionKey').value;

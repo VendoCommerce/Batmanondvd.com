@@ -298,7 +298,7 @@
     <Content Include="Mobile\episodes.aspx" />
     <Content Include="Mobile\choose.aspx" />
     <Content Include="Mobile\faq.aspx" />
-    <Content Include="Mobile\UserControls\ShoppingCartControl.ascx" />
+    <Content Include="Mobile\UserControls\CheckoutThankYouModule2.ascx" />
     <Content Include="returns.aspx" />
     <Content Include="clips.aspx" />
     <Content Include="faq.aspx" />
@@ -456,17 +456,9 @@
     <Content Include="Mobile\upsells.aspx" />
     <Content Include="Mobile\UserControls\BillingShippingCreditForm.ascx" />
     <Content Include="Mobile\UserControls\CardDecline.ascx" />
-    <Content Include="Mobile\UserControls\CheckoutSummary.ascx" />
     <Content Include="Mobile\UserControls\CheckoutThankYouModule.ascx" />
-    <Content Include="Mobile\UserControls\CheckoutThankYouModule2.ascx" />
     <Content Include="Mobile\UserControls\CheckoutThankYouModulePrint2.ascx" />
-    <Content Include="Mobile\UserControls\ContactUs.ascx" />
-    <Content Include="Mobile\UserControls\Footer.ascx" />
-    <Content Include="Mobile\UserControls\Footer_Cart.ascx" />
-    <Content Include="Mobile\UserControls\Footer_Upsell.ascx" />
     <Content Include="Mobile\UserControls\Header.ascx" />
-    <Content Include="Mobile\UserControls\Header_Home.ascx" />
-    <Content Include="Mobile\UserControls\Header_Upsell.ascx" />
     <Content Include="Mobile\UserControls\TrackingPixels.ascx" />
     <Content Include="PostSale.aspx" />
     <Content Include="receipt.aspx" />
@@ -595,9 +587,7 @@
     <Content Include="UserControls\CardDecline.ascx" />
     <Content Include="UserControls\CheckoutThankYouModule.ascx" />
     <Content Include="UserControls\ContactUs.ascx" />
-    <Content Include="UserControls\Footer.ascx" />
     <Content Include="UserControls\Header.ascx" />
-    <Content Include="UserControls\PageControl.ascx" />
     <Content Include="Admin\PaymentProviderList.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Styles\validation\template.css" />
@@ -1204,12 +1194,9 @@
     <Compile Include="Mobile\choose.aspx.designer.cs">
       <DependentUpon>choose.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Mobile\UserControls\ShoppingCartControl.ascx.cs">
-      <DependentUpon>ShoppingCartControl.ascx</DependentUpon>
+    <Compile Include="Mobile\UserControls\CheckoutThankYouModule2.ascx.cs">
+      <DependentUpon>CheckoutThankYouModule2.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\UserControls\ShoppingCartControl.ascx.designer.cs">
-      <DependentUpon>ShoppingCartControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="upsells.aspx.cs">
       <DependentUpon>upsells.aspx</DependentUpon>
@@ -1374,19 +1361,8 @@
     <Compile Include="Mobile\UserControls\CardDecline.ascx.designer.cs">
       <DependentUpon>CardDecline.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Mobile\UserControls\CheckoutSummary.ascx.cs">
-      <DependentUpon>CheckoutSummary.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\UserControls\CheckoutSummary.ascx.designer.cs">
-      <DependentUpon>CheckoutSummary.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Mobile\UserControls\CheckoutThankYouModule.ascx.cs">
       <DependentUpon>CheckoutThankYouModule.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\UserControls\CheckoutThankYouModule2.ascx.cs">
-      <DependentUpon>CheckoutThankYouModule2.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Mobile\UserControls\CheckoutThankYouModulePrint2.ascx.cs">
@@ -1395,20 +1371,6 @@
     </Compile>
     <Compile Include="Mobile\UserControls\CheckoutThankYouModulePrint2.ascx.designer.cs">
       <DependentUpon>CheckoutThankYouModulePrint2.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Mobile\UserControls\ContactUs.ascx.cs">
-      <DependentUpon>ContactUs.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\UserControls\ContactUs.ascx.designer.cs">
-      <DependentUpon>ContactUs.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Mobile\UserControls\Footer.ascx.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\UserControls\Footer.ascx.designer.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
     </Compile>
     <Compile Include="Mobile\UserControls\Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>
@@ -1454,23 +1416,12 @@
     <Compile Include="UserControls\ContactUs.ascx.designer.cs">
       <DependentUpon>ContactUs.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Footer.ascx.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControls\Footer.ascx.designer.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\PageControl.ascx.cs">
-      <DependentUpon>PageControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\PaymentProviderList.aspx.cs">
       <DependentUpon>PaymentProviderList.aspx</DependentUpon>
@@ -1533,9 +1484,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Admin\UserControls\PageControl.ascx.resx">
-      <DependentUpon>PageControl.ascx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\PageControl.ascx.resx">
       <DependentUpon>PageControl.ascx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

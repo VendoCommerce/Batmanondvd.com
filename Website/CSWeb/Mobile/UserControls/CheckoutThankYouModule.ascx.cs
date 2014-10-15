@@ -63,7 +63,7 @@ protected Label lblPurchaseName, lblPromotionPrice;
                 dlordersList.DataSource = orderData.SkuItems;
                 dlordersList.DataBind();
                 LiteralSubTotal.Text = Math.Round(orderData.SubTotal, 2).ToString();
-                LiteralShipping.Text = Math.Round(orderData.ShippingCost, 2).ToString();
+                LiteralShipping.Text = Math.Round(orderData.ShippingCost, 2).ToString("{0:f2}");
                 LiteralTax.Text = Math.Round(orderData.Tax, 2).ToString();
                 LiteralTotal.Text = Math.Round(orderData.Total, 2).ToString();
                 if (orderData.RushShippingCost > 0)

@@ -15,12 +15,12 @@
 </asp:PlaceHolder>
   <div class="control-group pull-left" style="margin-right: 10px">
 <asp:Label ID="labelStart" runat="Server" />
-<usercontrols:datecontrol id="dateControlStart" runat="server" DisplayCalenderImage="true" />
+<usercontrols:DateControl id="dateControlStart" runat="server" DisplayCalenderImage="true" />
 </div>
 
  <div class="control-group pull-left">
 <asp:Label ID="labelEnd" runat="Server" />
-<usercontrols:datecontrol id="dateControlEnd" runat="server" DisplayCalenderImage="true" />
+<usercontrols:DateControl id="dateControlEnd" runat="server" DisplayCalenderImage="true" />
 
 <asp:CompareValidator ID="compareValidatorDateFields" runat="server" ControlToValidate="dateControlEnd" CssClass="text-error" ControlToCompare="dateControlStart" Operator="GreaterThanEqual" Type="Date" ErrorMessage="'To' date must be greater than 'From' date." Display="Dynamic">*</asp:CompareValidator>
 </div>

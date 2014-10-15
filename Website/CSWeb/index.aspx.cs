@@ -33,6 +33,8 @@ namespace CSWeb
                         }
                     }
                 }
+                if (OrderHelper.IsMobileBrowser() && (Request.QueryString["mobile"] == null ||(Request.QueryString["mobile"] != null && Request.QueryString["mobile"] != "false")))
+                    Response.Redirect("/mobile/?" + Request.QueryString.ToString());
 
             }
 

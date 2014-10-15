@@ -68,6 +68,8 @@
   <ItemGroup>
     <Compile Include="Analytics.cs" />
     <Compile Include="Attributes\Attribute.cs" />
+    <Compile Include="Attributes\AttributePageControlInfo.cs" />
+    <Compile Include="Attributes\AttributesPresentation.cs" />
     <Compile Include="Attributes\AttributeValue.cs" />
     <Compile Include="Attributes\Extensions.cs" />
     <Compile Include="Attributes\IAttributesPage.cs" />
