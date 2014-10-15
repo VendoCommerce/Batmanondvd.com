@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="choose.aspx.cs" Inherits="CSWeb.Mobile.choose" EnableSessionState="True" %>
 
+<%@ Register Src="~/Mobile/UserControls/TrackingPixels.ascx" TagPrefix="uc1" TagName="TrackingPixels" %>
+
+
 <!doctype html>
 <html>
 <head>
@@ -131,6 +134,8 @@
 </div>
 
 <!--#include file="footer.html"-->
+
+    <uc1:TrackingPixels runat="server" ID="TrackingPixels" />
 </div>
 </form>
 </body>

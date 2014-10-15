@@ -2,6 +2,8 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CSWeb.index" EnableSessionState="True" %>
 
 <%@ Register Src="UserControls/ContactUs.ascx" TagName="ContactUs" TagPrefix="uc" %>
+<%@ Register Src="~/UserControls/TrackingPixels.ascx" TagPrefix="uc" TagName="TrackingPixels" %>
+
 
 
 <!doctype html>
@@ -69,5 +71,6 @@
 
 
 <!--#include file="footer.html"-->
+    <uc:TrackingPixels runat="server" ID="TrackingPixels" />
 </body>
 </html>
