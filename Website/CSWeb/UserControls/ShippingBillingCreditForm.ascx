@@ -313,7 +313,7 @@
 
                             <div class="form_line clearfix" style="padding: 16px 0 30px 114px;">
                                 <input type="checkbox" id="send_offers" style="float: left; margin: 0 6px 10px 0;" checked="checked" />
-                                <label class="label-3" for="send_offers">Yes, I would like to receive updates and special offers from Warner Brothers. See <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> for Details.
+                                <label class="label-3" for="send_offers">Yes, I would like to receive updates and special offers from Warner Bros. See <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> for Details.
                                 </label>
                             </div>
 
