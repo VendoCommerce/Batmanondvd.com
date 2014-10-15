@@ -120,7 +120,7 @@
     <span style="display: block; padding: 0 0 10px 20px; color: #f00;"><asp:Label ID="lblPrompt" runat="server"></asp:Label></span>
     <asp:LinkButton ID="imgContinue" runat="server" OnClick="imgContinue_Click"><img class="prod_continue" src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_continue.png" /></asp:LinkButton>
     <p class="f24" style="line-height: 32px; padding-bottom: 90px;">
-        <strong>Offer Details: </strong> 
+        
         <asp:Literal runat="server" ID="ltOfferTerms">Please select a product to see our offer terms.</asp:Literal>
     </p>
     </ContentTemplate>    
