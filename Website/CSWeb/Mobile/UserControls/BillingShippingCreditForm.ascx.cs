@@ -125,6 +125,9 @@ namespace CSWeb.Mobile.UserControls
         public void PopulateExpiryYear()
         {
             //Populate the credit card expiration month drop down 
+            ddlExpMonth.Items.Add(new ListItem("Exp. Month", ""));
+            ddlExpYear.Items.Add(new ListItem("Exp. Year", ""));
+
             for (int i = 1; i <= 12; i++)
             {
                 DateTime month = new DateTime(2000, i, 1);
@@ -132,6 +135,7 @@ namespace CSWeb.Mobile.UserControls
                 ddlExpMonth.Items.Add(li);
             }
             //DropDownListExpMonth.SelectedValue = DateTime.Now.ToString("MM");
+           
             ddlExpMonth.Items[0].Selected = true;
 
 
@@ -408,7 +412,7 @@ namespace CSWeb.Mobile.UserControls
                 lblCCType.Visible = false;
 
             DateTime expire = new DateTime();
-            if (ddlExpYear.SelectedIndex > -1 && ddlExpMonth.SelectedIndex > -1)
+            if (ddlExpYear.SelectedIndex > 0 && ddlExpMonth.SelectedIndex > 0)
             {
                 expire = new DateTime(int.Parse(ddlExpYear.SelectedValue), int.Parse(ddlExpMonth.SelectedValue), 1);
             }
