@@ -297,32 +297,11 @@
                     <asp:Label ID="lblExpDate" runat="server" Visible="false"></asp:Label></div>
                 <label class="label-1">
                     Expiration Date*</label>
-              
-                <asp:DropDownList ID="ddlExpMonth" runat="server" CssClass="text-3">
-                    <asp:ListItem Value="" Text="">Exp. Month</asp:ListItem>
-                    <asp:ListItem Value="1">01</asp:ListItem>
-                    <asp:ListItem Value="2">02</asp:ListItem>
-                    <asp:ListItem Value="3">03</asp:ListItem>
-                    <asp:ListItem Value="4">04</asp:ListItem>
-                    <asp:ListItem Value="5">05</asp:ListItem>
-                    <asp:ListItem Value="6">06</asp:ListItem>
-                    <asp:ListItem Value="7">07</asp:ListItem>
-                    <asp:ListItem Value="8">08</asp:ListItem>
-                    <asp:ListItem Value="9">09</asp:ListItem>
-                    <asp:ListItem Value="10">10</asp:ListItem>
-                    <asp:ListItem Value="11">11</asp:ListItem>
-                    <asp:ListItem Value="12">12</asp:ListItem>
-                </asp:DropDownList>
-                <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="text-3">
-                    <asp:ListItem Value="" Text="">Exp. Year</asp:ListItem>
-                    <asp:ListItem Value="2014">2014</asp:ListItem>
-                    <asp:ListItem Value="2015">2015</asp:ListItem>
-                    <asp:ListItem Value="2016">2016</asp:ListItem>
-                    <asp:ListItem Value="2017">2017</asp:ListItem>
-                    <asp:ListItem Value="2018">2018</asp:ListItem>
-                    <asp:ListItem Value="2019">2019</asp:ListItem>
-                    <asp:ListItem Value="2020">2020</asp:ListItem>
-                </asp:DropDownList>
+
+    <asp:DropDownList ID="ddlExpMonth" runat="server" CssClass="text-3">
+    </asp:DropDownList>
+    <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="text-3">
+    </asp:DropDownList>
             </div>    
                         <div class="form_line clearfix">
                   <div class="error-1">

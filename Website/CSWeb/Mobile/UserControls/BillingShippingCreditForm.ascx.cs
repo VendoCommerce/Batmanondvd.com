@@ -89,6 +89,7 @@ namespace CSWeb.Mobile.UserControls
                 BindShippingRegions();
                 BindCreditCard();
                 BindControls();
+                PopulateExpiryYear();
                 LoadOfferTerms(ClientOrderData.CartInfo.CartItems[0]);
                 
             }
@@ -120,6 +121,30 @@ namespace CSWeb.Mobile.UserControls
 
         #region General Methods
         public int rId = 1;
+
+        public void PopulateExpiryYear()
+        {
+            //Populate the credit card expiration month drop down 
+            for (int i = 1; i <= 12; i++)
+            {
+                DateTime month = new DateTime(2000, i, 1);
+                ListItem li = new ListItem(month.ToString("MM"), month.ToString("MM"));
+                ddlExpMonth.Items.Add(li);
+            }
+            //DropDownListExpMonth.SelectedValue = DateTime.Now.ToString("MM");
+            ddlExpMonth.Items[0].Selected = true;
+
+
+
+            //Populate the credit card expiration year drop down (go out 12 years)  
+            for (int i = 0; i <= 11; i++)
+            {
+                String year = (DateTime.Today.Year + i).ToString();
+                ListItem li = new ListItem(year, year);
+                ddlExpYear.Items.Add(li);
+            }
+            ddlExpYear.Items[0].Selected = true;
+        }
 
         /// <summary>
         /// List of Country from Cache Data
@@ -383,7 +408,7 @@ namespace CSWeb.Mobile.UserControls
                 lblCCType.Visible = false;
 
             DateTime expire = new DateTime();
-            if (ddlExpYear.SelectedIndex > 0 && ddlExpMonth.SelectedIndex > 0)
+            if (ddlExpYear.SelectedIndex > -1 && ddlExpMonth.SelectedIndex > -1)
             {
                 expire = new DateTime(int.Parse(ddlExpYear.SelectedValue), int.Parse(ddlExpMonth.SelectedValue), 1);
             }
