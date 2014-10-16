@@ -2,7 +2,16 @@
 <!-- All Pixels Here -->
 <asp:Panel ID="pnlHomePage" runat="server" Visible="false">
     
-    
+    <!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Batman on DVD - Landing Page
+URL of the webpage where the tag is expected to be placed: http://www.batmanondvd.com/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 10/02/2014
+-->
+<iframe src="https://4523247.fls.doubleclick.net/activityi;src=4523247;type=Onlin0;cat=Batma0;qty=1;cost=[Revenue];ord=<%= GetRandomNumber() %>?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
 </asp:Panel>
 
 <asp:Panel ID="pnlAllPages" runat="server" Visible="false">
@@ -58,7 +67,17 @@ id="wa_u" defer></script><script type="text/javascript" async>    //<![CDATA[
 
 <asp:Panel ID="pnlReceiptPage" runat="server" Visible="false">
     
-      
+          <!-- Reciept Page Pixel
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: Batman on DVD - Purchase Confirmation
+    URL of the webpage where the tag is expected to be placed: http://www.batmanondvd.com/thankyou
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 10/02/2014
+    -->
+    <iframe src="https://4523247.fls.doubleclick.net/activityi;src=4523247;type=Onlin0;cat=Batma00;qty=1;cost=<%=cartTotal.ToString() %>;ord=<%= CartContext.OrderId %>?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    <!-- End of DoubleClick Floodlight Tag: Please do not remove -->    
+    
+
   
     <asp:Literal ID="litGAReceiptPixel" runat="server" />
     

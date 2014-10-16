@@ -51,7 +51,7 @@ namespace CSWeb.Root.UserControls
             SetHomeAndSubPagesPnl();
             SetCartPagePnl();
             SetAllPagesPnl();
-            //////SetReceiptPagePnl();
+            SetReceiptPagePnl();
         }
         private void WriteGAPixel()
         {
@@ -152,7 +152,7 @@ namespace CSWeb.Root.UserControls
             }
             CurrentOrder = new OrderManager().GetBatchProcessOrders(orderId);
             CurrentOrder.LoadAttributeValues();
-
+            SetTotalsForAdwardsAndBing(CurrentOrder);
 
         }
 
@@ -229,14 +229,11 @@ namespace CSWeb.Root.UserControls
             sbListrakPixel.AppendLine("</script>");
             //ltlCartListTrakPixel.Text = sbListrakPixel.ToString();
         }
-        private void SetTotalsForAdwardsAndBing()
+        private void SetTotalsForAdwardsAndBing(Order order)
         {
             try
             {
-                if (CartContext.CartInfo != null)
-                {
-                    cartTotal = CartContext.CartInfo.SubTotalFullPrice + CartContext.CartInfo.TaxFullPrice + CartContext.CartInfo.ShippingCost;
-                }
+                cartTotal = order.SubTotal + order.Tax + order.ShippingCost;
             }
             catch { }
         }

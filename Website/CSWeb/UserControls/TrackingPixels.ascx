@@ -65,14 +65,14 @@ id="wa_u" defer></script><script type="text/javascript" async>                  
 <asp:Panel ID="pnlReceiptPage" runat="server" Visible="false">
     
 
-    <!--
+    <!-- Reciept Page Pixel
     Start of DoubleClick Floodlight Tag: Please do not remove
     Activity name of this tag: Batman on DVD - Purchase Confirmation
     URL of the webpage where the tag is expected to be placed: http://www.batmanondvd.com/thankyou
     This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
     Creation Date: 10/02/2014
     -->
-    <iframe src="https://4523247.fls.doubleclick.net/activityi;src=4523247;type=Onlin0;cat=Batma00;qty=1;cost=<%cartTotal.ToString(); %>;ord=<%= CartContext.OrderId %>?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    <iframe src="https://4523247.fls.doubleclick.net/activityi;src=4523247;type=Onlin0;cat=Batma00;qty=1;cost=<%=cartTotal.ToString() %>;ord=<%= CartContext.OrderId %>?" width="1" height="1" frameborder="0" style="display:none"></iframe>
     <!-- End of DoubleClick Floodlight Tag: Please do not remove -->    
     
       

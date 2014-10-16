@@ -44,6 +44,11 @@ namespace CSWeb.Mobile.UserControls
             SetAllPagesPnl();
             SetReceiptPagePnl();
         }
+        public static string GetRandomNumber()
+        {
+            Random rnd = new Random();
+            return rnd.Next(1, 999999999).ToString();
+        }
         private void WriteGAPixel()
         {
             StringBuilder sbGAPixel = new StringBuilder();
@@ -144,6 +149,7 @@ namespace CSWeb.Mobile.UserControls
             CurrentOrder = new OrderManager().GetBatchProcessOrders(orderId);
             CurrentOrder.LoadAttributeValues();
 
+            SetTotalsForAdwardsAndBing(CurrentOrder);
 
         }
 
@@ -152,8 +158,8 @@ namespace CSWeb.Mobile.UserControls
             if (Request.RawUrl.ToLower().Contains("checkoutthankyou") || Request.RawUrl.ToLower().Contains("receipt"))
             {
                 SetCurrentOrder();
-                WriteGAPixel();
-                MDGConfirmPixel();
+                //WriteGAPixel();
+                //MDGConfirmPixel();
                 string[] testCreditCards;
 
                 testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries); ;
@@ -169,8 +175,7 @@ namespace CSWeb.Mobile.UserControls
                         pnlReceiptPage.Visible = true;
                     }
                 }
-                SetConversionListrakPixel();
-                SetTotalsForAdwardsAndBing();
+                //SetConversionListrakPixel();
                 //reset entire Context object
                 //this.CartContext.EmptyData();
                 //CartContext = null;
@@ -220,18 +225,13 @@ namespace CSWeb.Mobile.UserControls
             sbListrakPixel.AppendLine("</script>");
             //ltlCartListTrakPixel.Text = sbListrakPixel.ToString();
         }
-        private void SetTotalsForAdwardsAndBing()
+        private void SetTotalsForAdwardsAndBing(Order order)
         {
             try
             {
-                if (CartContext.CartInfo != null)
-                {
-                    cartTotal = CartContext.CartInfo.SubTotalFullPrice + CartContext.CartInfo.TaxFullPrice + CartContext.CartInfo.ShippingCost;
-
-                }
+                cartTotal = order.SubTotal + order.Tax + order.ShippingCost;
             }
             catch { }
         }
-
     }
 }
