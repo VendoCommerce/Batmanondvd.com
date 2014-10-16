@@ -680,8 +680,8 @@ namespace CSWeb.Mobile.UserControls
             foreach (Sku sku in CartContext.CartInfo.CartItems)
             {
                 skuId = sku.SkuId;
-                if (sku.SkuId == 112)
-                    upgradeSkuId = 114;
+                //if (sku.SkuId == 112)
+                //    upgradeSkuId = 114;
                 if (sku.SkuId == 113)
                     upgradeSkuId = 115;
                 break;

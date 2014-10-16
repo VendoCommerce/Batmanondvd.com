@@ -2,7 +2,16 @@
 <!-- All Pixels Here -->
 <asp:Panel ID="pnlHomePage" runat="server" Visible="false">
     
-    
+    <!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Batman on DVD - Landing Page
+URL of the webpage where the tag is expected to be placed: http://www.batmanondvd.com/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 10/02/2014
+-->
+<iframe src="https://4523247.fls.doubleclick.net/activityi;src=4523247;type=Onlin0;cat=Batma0;qty=1;cost=[Revenue];ord=<%= GetRandomNumber() %>?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
 </asp:Panel>
 
 <asp:Panel ID="pnlAllPages" runat="server" Visible="false">
@@ -11,7 +20,7 @@
 id="wa_u" defer></script><script type="text/javascript" async>                                         //<![CDATA[
                                 var wa_pageName=location.pathname;    // customize the page name here;
                                 wa_account="9D9E8B929E9190919B899B"; wa_location=31;
-                                wa_MultivariateKey = '<%= versionName %>';    //  Set this variable to perform multivariate testing
+                                wa_MultivariateKey = '';    //  Set this variable to perform multivariate testing
                                 var wa_c=new RegExp('__wa_v=([^;]+)').exec(document.cookie),wa_tz=new Date(),
                                 wa_rf=document.referrer,wa_sr=location.search,wa_hp='http'+(location.protocol=='https:'?'s':'');
                                 if(top!==self){wa_rf=top.document.referrer;wa_sr=top.location.search}
@@ -56,13 +65,20 @@ id="wa_u" defer></script><script type="text/javascript" async>                  
 <asp:Panel ID="pnlReceiptPage" runat="server" Visible="false">
     
 
-    
+    <!--
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: Batman on DVD - Purchase Confirmation
+    URL of the webpage where the tag is expected to be placed: http://www.batmanondvd.com/thankyou
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 10/02/2014
+    -->
+    <iframe src="https://4523247.fls.doubleclick.net/activityi;src=4523247;type=Onlin0;cat=Batma00;qty=1;cost=<%cartTotal.ToString(); %>;ord=<%= CartContext.OrderId %>?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    <!-- End of DoubleClick Floodlight Tag: Please do not remove -->    
     
       
-                  <asp:Literal ID="litMdgConfirm" runat="server" />
+    <asp:Literal ID="litMdgConfirm" runat="server" />
 
     <asp:Literal ID="litGAReceiptPixel2" runat="server" />
-
 
     <asp:Literal ID="litGAReceiptPixel" runat="server" />
 

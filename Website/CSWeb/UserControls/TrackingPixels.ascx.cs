@@ -12,13 +12,15 @@ using CSBusiness.Resolver;
 
 namespace CSWeb.Root.UserControls
 {
+
+    
     public partial class TrackingPixels : System.Web.UI.UserControl
     {
         public Order CurrentOrder = null;
         public string versionName = "";
         public string versionNameReferrer = "";
         public decimal cartTotal = 0;
-        private ClientCartContext CartContext
+        public ClientCartContext CartContext
         {
             get
             {
@@ -26,6 +28,13 @@ namespace CSWeb.Root.UserControls
             }
             set { Session["ClientOrderData"] = value; }
         }
+
+        public static string GetRandomNumber()
+        {
+            Random rnd = new Random();
+            return  rnd.Next(1, 999999999).ToString(); 
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             versionName = CSWeb.OrderHelper.GetVersionName();
@@ -147,37 +156,37 @@ namespace CSWeb.Root.UserControls
 
         }
 
-        ////////private void SetReceiptPagePnl()
-        ////////{
-        ////////    if (Request.RawUrl.ToLower().Contains("checkoutthankyou") || Request.RawUrl.ToLower().Contains("receipt"))
-        ////////    {
-        ////////        SetCurrentOrder();
-        ////////        WriteGAPixel();
-        ////////        MDGConfirmPixel();
-        ////////        string[] testCreditCards;
+        private void SetReceiptPagePnl()
+        {
+            if (Request.RawUrl.ToLower().Contains("checkoutthankyou") || Request.RawUrl.ToLower().Contains("receipt"))
+            {
+                SetCurrentOrder();
+                //WriteGAPixel();
+                //MDGConfirmPixel();
+                string[] testCreditCards;
 
-        ////////        testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries); ;
+                testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries); ;
 
-        ////////        foreach (string word in testCreditCards)
-        ////////        {
-        ////////            if (CurrentOrder.CreditInfo.CreditCardNumber.Equals(word))
-        ////////            {
-        ////////                pnlReceiptPage.Visible = false;
-        ////////            }
-        ////////            else
-        ////////            {
-        ////////                pnlReceiptPage.Visible = true;
-        ////////            }
-        ////////        }
-        ////////        SetConversionListrakPixel();
-        ////////        SetTotalsForAdwardsAndBing();
-        ////////        //reset entire Context object
-        ////////        //this.CartContext.EmptyData();
-        ////////        //CartContext = null;
+                foreach (string word in testCreditCards)
+                {
+                    if (CurrentOrder.CreditInfo.CreditCardNumber.Equals(word))
+                    {
+                        pnlReceiptPage.Visible = true;
+                    }
+                    else
+                    {
+                        pnlReceiptPage.Visible = true;
+                    }
+                }
+                //SetConversionListrakPixel();
+                //SetTotalsForAdwardsAndBing();
+                //reset entire Context object
+                //this.CartContext.EmptyData();
+                //CartContext = null;
 
-        ////////    }
+            }
 
-        ////////}
+        }
 
         private void SetConversionListrakPixel()
         {
@@ -227,7 +236,6 @@ namespace CSWeb.Root.UserControls
                 if (CartContext.CartInfo != null)
                 {
                     cartTotal = CartContext.CartInfo.SubTotalFullPrice + CartContext.CartInfo.TaxFullPrice + CartContext.CartInfo.ShippingCost;
-
                 }
             }
             catch { }

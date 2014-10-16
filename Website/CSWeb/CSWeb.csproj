@@ -80,6 +80,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\CSDLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CSDLL\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CSDLL\NLog.Extended.dll</HintPath>
+    </Reference>
     <Reference Include="PyxConnect">
       <HintPath>..\CSDLL\PyxConnect.dll</HintPath>
     </Reference>
