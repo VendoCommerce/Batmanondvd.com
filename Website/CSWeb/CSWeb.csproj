@@ -283,6 +283,7 @@
     <Content Include="bottomcta_complete.html" />
     <Content Include="CardDecline.aspx" />
     <Content Include="Cart.aspx" />
+    <Content Include="favicon.ico" />
     <Content Include="fonts\OpenSans-CondBold-webfont.svg" />
     <Content Include="fonts\OpenSans-CondLight-webfont.svg" />
     <Content Include="fonts\OpenSans-CondLightItalic-webfont.svg" />
