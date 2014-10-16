@@ -40,8 +40,8 @@ namespace CSWeb.Admin
         protected void BindData(DateTime? startDate, DateTime? endDate)
         {
 
-            DateTime? timezoneStartDate = DateTimeUtil.GetEastCoastStartDate(rangeDateControlCriteria.StartDateValueLocal);
-            DateTime? timezoneEndDate = DateTimeUtil.GetEastCoastDate(rangeDateControlCriteria.EndDateValueLocal);
+            DateTime? timezoneStartDate = rangeDateControlCriteria.StartDateValueLocal;
+            DateTime? timezoneEndDate = rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1);
 
             List<ReportFields> OrdersList = new OrderManager().GetOrderTransaction(timezoneStartDate, timezoneEndDate, 1, true);
             dlTransactionList.DataSource = OrdersList;

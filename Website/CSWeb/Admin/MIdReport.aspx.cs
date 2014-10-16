@@ -57,8 +57,8 @@ namespace CSWeb.Admin
         protected void BindData(DateTime? startDate, DateTime? endDate)
         {
 
-            DateTime? timezoneStartDate = DateTimeUtil.GetEastCoastStartDate(rangeDateControlCriteria.StartDateValueLocal);
-            DateTime? timezoneEndDate = DateTimeUtil.GetEastCoastDate(rangeDateControlCriteria.EndDateValueLocal);
+            DateTime? timezoneStartDate = rangeDateControlCriteria.StartDateValueLocal;
+            DateTime? timezoneEndDate = rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1);
             List<ReportFields> ItemList = new OrderManager().GetOrderCustomFieldReport(timezoneStartDate, timezoneEndDate, 2, false);
 
             Data rptData = new ReportWSSoapClient().GetDataFromTimeframe(hitsLinkUserName, hitsLinkPassword, ReportsEnum.eCommerceActivitySummary, TimeFrameEnum.Daily, Convert.ToDateTime(startDate), Convert.ToDateTime(endDate), 100000000, 0, 0);

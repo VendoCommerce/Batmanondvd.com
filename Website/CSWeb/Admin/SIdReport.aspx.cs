@@ -77,8 +77,8 @@ namespace CSWeb.Admin
         protected void BindData(DateTime? startDate, DateTime? endDate)
         {
 
-            DateTime? timezoneStartDate = DateTimeUtil.GetEastCoastStartDate(rangeDateControlCriteria.StartDateValueLocal);
-            DateTime? timezoneEndDate = DateTimeUtil.GetEastCoastDate(rangeDateControlCriteria.EndDateValueLocal);
+            DateTime? timezoneStartDate = rangeDateControlCriteria.StartDateValueLocal;
+            DateTime? timezoneEndDate = rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1);
             //Passsing custom field value as 1000 which is combination of mid and sid. Special case for dermwand.com only
             List<ReportFields> ItemList = new OrderManager().GetOrderCustomFieldReport(timezoneStartDate, timezoneEndDate, 10000,  false);
 

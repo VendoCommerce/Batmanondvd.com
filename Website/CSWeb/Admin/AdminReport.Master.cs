@@ -37,7 +37,7 @@ namespace CSWeb.Admin
             if (!Page.IsPostBack)
             {
                 liHeader.Text = DateTime.Now.ToString("MMMM") + " " + DateTime.Now.Day.ToString() + ", " + DateTime.Now.Year.ToString();
-                liSubHeader.Text = DateTime.Now.DayOfWeek + " " + DateTime.Now.AddHours(3).ToShortTimeString() + " (EST)";
+                liSubHeader.Text = DateTime.Now.DayOfWeek + " " + DateTime.Now.ToShortTimeString() + " (PST)";
                 SitePref PrefObject = CSFactory.GetSitePreference();
                 siteTitle = PrefObject.SiteHeader;
                 siteName = PrefObject.SiteName;

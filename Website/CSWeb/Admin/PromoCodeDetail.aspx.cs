@@ -44,8 +44,8 @@ namespace CSWeb.Admin
         protected void BindData(DateTime? startDate, DateTime? endDate)
         {
 
-            DateTime? timezoneStartDate = DateTimeUtil.GetEastCoastStartDate(rangeDateControlCriteria.StartDateValueLocal);
-            DateTime? timezoneEndDate = DateTimeUtil.GetEastCoastDate(rangeDateControlCriteria.EndDateValueLocal);
+            DateTime? timezoneStartDate = rangeDateControlCriteria.StartDateValueLocal;
+            DateTime? timezoneEndDate = rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1);
 
             //Sri: Always use using statement to make sure connection closed.
             using (SqlDataReader reader = new OrderManager().GetOrderCouponDetail(timezoneStartDate, timezoneEndDate, true))

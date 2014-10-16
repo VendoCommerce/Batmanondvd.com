@@ -59,7 +59,7 @@ namespace CSWeb.Admin
 
                 }
 
-                BindData(DateTimeUtil.GetEastCoastStartDate(rangeDateControlCriteria.StartDateValueLocal), DateTimeUtil.GetEastCoastDate(rangeDateControlCriteria.EndDateValueLocal), 0, 0);
+                BindData(rangeDateControlCriteria.StartDateValueLocal, rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1), 0, 0);
             }
         }
 
@@ -184,7 +184,7 @@ namespace CSWeb.Admin
             Session["FilterFromDate"] = rangeDateControlCriteria.StartDateValueLocal.Value.ToShortDateString();
             Session["FilterToDate"] = rangeDateControlCriteria.EndDateValueLocal.Value.ToShortDateString();
 
-            BindData(DateTimeUtil.GetEastCoastStartDate(rangeDateControlCriteria.StartDateValueLocal), DateTimeUtil.GetEastCoastDate(rangeDateControlCriteria.EndDateValueLocal), Convert.ToInt32(ddlVersion.SelectedValue), 0);
+            BindData(rangeDateControlCriteria.StartDateValueLocal, rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1), Convert.ToInt32(ddlVersion.SelectedValue), 0);
 
         }
         public void BindSettings()
