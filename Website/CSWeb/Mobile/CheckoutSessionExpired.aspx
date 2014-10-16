@@ -1,8 +1,6 @@
 <%@Page Language="C#" AutoEventWireup="true" CodeBehind="CheckoutSessionExpired.aspx.cs" Inherits=" CSWeb.Mobile.Store.CheckoutSessionExpired" MasterPageFile="/Site.Master" %>
 
- <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 
-</asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 

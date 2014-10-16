@@ -1,7 +1,7 @@
 // JavaScript Document
 
-/*WebFontConfig = {
-    google: { families: ['Open+Sans+Condensed:700,300:latin', 'PT+Sans+Narrow:400,700:latin'] }
+WebFontConfig = {
+    google: { families: ['Open+Sans+Condensed:700,300:latin'] }
 };
 (function () {
     var wf = document.createElement('script');
@@ -11,7 +11,7 @@
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
-})();*/
+})();
 
 
 $(document).ready(function () {

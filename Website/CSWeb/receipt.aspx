@@ -7,7 +7,7 @@
 <html>
 <head runat="server">
 <meta charset="utf-8">    
-<title></title>
+<title>Batman | Classic TC Series Available on DVD and Bluray | As Seen on TV - Checkout</title>
 <meta name="description" content=""/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/Scripts/fancybox/jquery.fancybox.css">

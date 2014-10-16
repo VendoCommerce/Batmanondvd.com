@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1" />
-<title></title>
+<title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Checkout</title>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

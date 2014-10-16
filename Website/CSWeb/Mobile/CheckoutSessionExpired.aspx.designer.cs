@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSWeb.Mobile.Store{
+namespace CSWeb.Mobile.Store {
     
     
     public partial class CheckoutSessionExpired {

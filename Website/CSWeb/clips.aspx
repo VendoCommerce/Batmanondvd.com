@@ -7,8 +7,9 @@
 <html>
 <head runat="server">
 <meta charset="utf-8">    
-<title>BATMAN</title>
-<meta name="description" content=""/>
+<title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Clips</title>
+<meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
+<meta name="keywords" content="Batman Classic TV Series, DVD, Bluray, Warner Home Video, Adam West, As Seen on TV, Limited Time Offer, Robin, Joker, Riddler, Penguin, Catwoman, Original TV Series" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/Scripts/fancybox/jquery.fancybox.css">
 <script src="/Scripts/fancybox/jquery.fancybox.pack.js"></script>
@@ -30,13 +31,13 @@
     <div class="clearfix">
         <div class="content_logo"><a href="index.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr">
-            <h2 class="f44">Check Out Your Favorite Caped Crusaders <br />- Back and Better than Ever!</h2>
+            <h2 class="f42">Check Out Your Favorite Caped Crusaders <br />- Back and Better than Ever!</h2>
             <h3 style="padding-right: 100px;">Watch Batman and his Boy Wonder engage in hilarious hijinks as they protect the streets of Gotham from abominable archenemies wearing over-the-top costumes that leave us laughing. It’s simply feel good fun!</h3>
         </div>
     </div>
 
 
-    <div style="width: 816px; margin: 8px 0 30px 71px;">
+    <div style="width: 887px; padding: 8px 0 30px 71px;">
         <div class="slideshow"
             data-cycle-fx="carousel"
             data-cycle-timeout="0"

@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <%--<meta name="viewport" content="width=device-width, maximum-scale=1" />--%>
 <meta name="viewport" content="width=device-width, maximum-scale=1" />
-<title>Batman Classics on DVD</title>
+<title>Batman | Classic TV Episodes Available on DVD and Bluray | As Seen on TV - Select Your Collection</title>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
