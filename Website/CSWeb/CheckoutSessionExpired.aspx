@@ -32,9 +32,7 @@
                 <h2>Unable to process request<br />
                     because your session is expired. <br />Please try again.
                 </h2>
-<%--                <h3 style="padding-top: 10px; padding-bottom: 25px;">An ace crimefighter needs his equipment to be in top working condition, which means occassional maintenance from time to time.</h3>
-                <h3 style="padding-bottom: 25px;">Be sure to check back soon!</h3>--%>
-              <br />                  <p class="f30 bold">SAME BAT-TIME!<br />                    SAME BAT-SITE!</p>
+                <h3 class="f30" style="line-height: 1.2em;"> Better <a href="index.aspx" class="black">race back to the Batcave</a>!</h3>
             </div>
         </div>
 

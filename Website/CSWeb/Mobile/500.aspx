@@ -37,7 +37,7 @@
                     But we'll be back!
                 </h2>
                 <h3 class="f35" style="padding-bottom: 25px;">An ace crimefighter needs his equipment to be in top working condition, which means occassional maintenance from time to time.</h3>
-                <h3 class="f35" style="padding-bottom: 25px;">Be sure to check back soon!</h3>
+                <h3 class="f35" style="padding-bottom: 25px;">Better <a href="index.aspx" class="black">race back to the Batcave</a>!</h3>
                 <p class="f49 bold" style="line-height: 62px;">SAME BAT-TIME!<br />                    SAME BAT-SITE!</p>
             </div>
             <div>

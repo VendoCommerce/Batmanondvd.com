@@ -30,7 +30,7 @@
         <div class="content_hdr">
             <h2 class="f37 pad12 scored">A Cast of Characters</h2>
             <h2 class="f36">Diabolical Foes Are No Match for This Duo! <br />Delight in the Great Capers and Fabulous Foibles.</h2>
-            <h3>From the raucous Riddler, to the persuasive Penguin, to the calculating Catwoman, watch as they attempt to confound our Caped Crusaders. Now completely remastered, all of the originality, crime fighting action, and arch-villainy but perfectly pixilated on DVD like never before. &nbsp;<a href="choose.aspx" class="webfont1bold">Get it now!<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></h3>
+            <h3 style="padding-right: 10px;">From the raucous Riddler, to the persuasive Penguin, to the calculating Catwoman, watch as they attempt to confound our Caped Crusaders. Now completely remastered, all of the originality, crime fighting action, and arch-villainy but perfectly pixilated on DVD like never before. &nbsp;<a href="choose.aspx" class="webfont1bold">Get it now!<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></h3>
         </div>
     </div>
     <img src="//d1kg9stb0ddjcv.cloudfront.net/images/skyline.png" alt="" class="block" />
