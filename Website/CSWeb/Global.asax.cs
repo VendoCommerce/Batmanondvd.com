@@ -45,7 +45,13 @@ namespace CSWeb
         }
         private void LogError(string message)
         {
-            CSCore.EmailHelper.SendEmail("info@conversionsystems.com", "ravi@conversionsystems.com", "BatmanOnDvd.Com Error", message, false);
+            try
+            {
+                CSCore.EmailHelper.SendEmail("info@conversionsystems.com", "ravi@conversionsystems.com", "BatmanOnDvd.Com Error", message, false);
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 
