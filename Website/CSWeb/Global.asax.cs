@@ -21,12 +21,12 @@ namespace CSWeb
             if (ex.InnerException != null)
             {
                 CSCore.CSLogger.Instance.LogException(ex.InnerException.Message, ex.InnerException);
-                LogError(ex.InnerException.Message);
+                //LogError(ex.InnerException.Message);
             }
             else if (ex != null)
             {
                 CSCore.CSLogger.Instance.LogException(Request.Url.ToString(), null);
-                LogError(ex.Message);
+                //LogError(ex.Message);
             }
 
             Handle404Error(ex);
