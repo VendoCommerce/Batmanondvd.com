@@ -77,7 +77,6 @@ function Clickheretoprint()
             <asp:Literal ID="LiteralTableRows" runat="server"></asp:Literal>
           <tr class="horzline2">
                 <td valign="top" colspan="4" class="black">
-                    <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
 
              <div class="cart_totals clearfix" style="margin-left: 506px;">
                     
@@ -169,5 +168,6 @@ function Clickheretoprint()
                 </td>
             </tr>
         </table>
+                    <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
       
 </div>
