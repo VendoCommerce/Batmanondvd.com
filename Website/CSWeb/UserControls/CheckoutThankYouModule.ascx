@@ -1,8 +1,8 @@
 <%@ Control Language="C#" Inherits="CSWeb.Root.UserControls.CheckoutThankYouModule" %>
 
 <style type="text/css">
-    .auto-style2 {
-        height: 19px;
+    .auto-style3 {
+        height: 28px;
     }
 </style>
 
@@ -77,6 +77,8 @@ function Clickheretoprint()
             <asp:Literal ID="LiteralTableRows" runat="server"></asp:Literal>
           <tr class="horzline2">
                 <td valign="top" colspan="4" class="black">
+                    <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
+
              <div class="cart_totals clearfix" style="margin-left: 506px;">
                     
                 <div class="cart_totals_left">
@@ -113,7 +115,6 @@ function Clickheretoprint()
                 </td>
             </tr>
         </table>
-
 
 
 

@@ -23,7 +23,7 @@ namespace CSWeb.Root.UserControls
         protected Literal LiteralSubTotal, LiteralShipping, LiteralTax, LiteralTotal,
             LiteralName, LiteralAddress, LiteralCity, LiteralEmail, LiteralZip, LiteralState, LiteralCountry,
             LiteralName_b, LiteralAddress_b, LiteralCity_b, LiteralZip_b, LiteralState_b, LiteralCountry_b, LiteralRushShipping, LiteralGoogleAnalytics, LiteralID, LiteralSid, LiteralOfferId,
-            LiteralAddress2_b, ltOrderId;
+            LiteralAddress2_b, ltOrderId, ltOfferTerms;
 
         protected DataList dlordersList;
 protected Label lblPurchaseName, lblPromotionPrice;
@@ -116,10 +116,21 @@ protected Label lblPurchaseName, lblPromotionPrice;
                 //Google Analutics E-Commerce Pixel
                 //LoadGoogleAnalytics(orderData);
 
-                             
+                LoadOfferTerms(CartContext.CartInfo.CartItems[0]);
+        
             }
 			
          }
+
+
+        private void LoadOfferTerms(Sku sku)
+        {
+            sku.LoadAttributeValues();
+            if (sku.ContainsAttribute("offerterms")
+                && sku.AttributeValues["offerterms"] != null)
+                ltOfferTerms.Text = sku.AttributeValues["offerterms"].Value;
+        }
+
         public void LoadGoogleAnalytics(Order Order)
         {
             try
