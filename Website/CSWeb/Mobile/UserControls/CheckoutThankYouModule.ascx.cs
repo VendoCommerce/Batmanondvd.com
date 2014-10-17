@@ -20,7 +20,7 @@ namespace CSWeb.Mobile.UserControls
         protected Literal LiteralSubTotal, LiteralShipping, LiteralTax, LiteralTotal,
             LiteralName, LiteralAddress, LiteralCity, LiteralEmail, LiteralZip, LiteralState, LiteralCountry,
             LiteralName_b, LiteralAddress_b, LiteralCity_b, LiteralZip_b, LiteralState_b, LiteralCountry_b, LiteralRushShipping, LiteralGoogleAnalytics, LiteralID, LiteralSid, LiteralOfferId,
-            LiteralAddress2, LiteralAddress2_b;
+            LiteralAddress2, LiteralAddress2_b, ltOfferTerms;
 
         protected DataList dlordersList;
 protected Label lblPurchaseName, lblPromotionPrice;
@@ -53,6 +53,16 @@ protected Label lblPurchaseName, lblPromotionPrice;
                 //this.CartContext.EmptyData();
             }
         }
+
+         private void LoadOfferTerms(Sku sku)
+         {
+             sku.LoadAttributeValues();
+             if (sku.ContainsAttribute("offerterms")
+                 && sku.AttributeValues["offerterms"] != null)
+                 ltOfferTerms.Text = sku.AttributeValues["offerterms"].Value;
+         }
+
+
 
         private void BindData()
         {
@@ -99,8 +109,10 @@ protected Label lblPurchaseName, lblPromotionPrice;
                 LiteralCity_b.Text = orderData.CustomerInfo.BillingAddress.City;
                 LiteralZip_b.Text = orderData.CustomerInfo.BillingAddress.ZipPostalCode;
                 LiteralState_b.Text = StateManager.GetStateName(orderData.CustomerInfo.BillingAddress.StateProvinceId);
-                LiteralCountry_b.Text =CountryManager.CountryName(orderData.CustomerInfo.BillingAddress.CountryId); 
-                   
+                LiteralCountry_b.Text =CountryManager.CountryName(orderData.CustomerInfo.BillingAddress.CountryId);
+
+
+                LoadOfferTerms(CartContext.CartInfo.CartItems[0]);
                 //Google Analutics E-Commerce Pixel
                 //LoadGoogleAnalytics(orderData);
 

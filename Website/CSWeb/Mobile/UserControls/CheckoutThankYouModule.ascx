@@ -55,6 +55,8 @@
 
            
             <asp:Literal ID="LiteralTableRows" runat="server"></asp:Literal>
+                            <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
+
             <tr><td class="horizontal_dots2" colspan="3"></td></tr>
             <tr>
                 <td valign="top">&nbsp;

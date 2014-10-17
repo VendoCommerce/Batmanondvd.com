@@ -56,7 +56,7 @@
                   <tr>
                       <th colspan="2" class="pad0" style="text-align: left; padding-left: 14px;">Item</th>
                       <th class="text-center pad0">Quantity</th>
-                      <th class="text-center pad0">Payment</th>
+                      <th class="tePayment</th>
                   </tr>
           <tr>
             <td colspan="4" style="padding: 0;"><div class="horizontal_dots"></div></td>
@@ -74,8 +74,7 @@
                             <%# DataBinder.Eval(Container.DataItem, "Quantity")%>
                        </td>
                            <td class="text-center bold" width="17%">
-                           $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%> 
-                       </td>
+                           $<%# Math.Round(Convert.ToDecimal(DataBinder.Eval(Container.DataItem, "TotalPrice")), 2).ToString()%></td>
                        </tr>
                            
                     </ItemTemplate>
@@ -113,3 +112,5 @@
 
 
   <uc:TrackingPixels ID="TrackingPixels" runat="server" />
+<asp:Literal ID="ltOfferTerms" runat="server"></asp:Literal>
+
