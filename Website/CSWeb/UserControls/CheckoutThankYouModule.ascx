@@ -170,7 +170,7 @@ function Clickheretoprint()
         </table>
                     
     <div class="receipt_offerterms">
-        <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
+        <asp:Literal runat="server" ID="ltOfferTerms" Visible="False"></asp:Literal>
     </div>
       
 </div>
