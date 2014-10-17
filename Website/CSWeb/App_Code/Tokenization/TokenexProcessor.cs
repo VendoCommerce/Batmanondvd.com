@@ -170,7 +170,18 @@ namespace CSWeb.Tokenization
 
         public string GetRawResponse(ResultOfProcessTransaction result)
         {
-            var paramAuth = string.Join(", ", result.Params.Select(m => m.Key + ":" + m.Value).ToArray());
+            string[] resultsparam  = result.Params.Where(x=> x.Key.Contains("authorization_num" ) ||
+                x.Key.Contains("exact_id") ||
+                x.Key.Contains("exact_message") ||
+                x.Key.Contains("retrieval_ref_no") ||
+                x.Key.Contains("reference_no") ||
+                x.Key.Contains("sequence_no")).Select(m => m.Key + ":" + m.Value).ToArray();
+
+            var paramAuth = string.Join(", ", resultsparam);
+                //result.Params.Where(x=> x.Key.Contains("authorization_num" ) ||
+                //x.Key.Contains("authorization_num" ) ||
+                //x.Key.Contains("authorization_num" ) ||
+                //x.Key.Contains("authorization_num" )).);
              return string.Format("Result:'{0}' Auth Code:'{1}' Message:'{2}' Error:'{3}' Ref #:'{4}' Test:{5} Params:{6})",
                result.Success.ToString(), result.Authorization, result.Message, result.Error, result.ReferenceNumber, result.Test.ToString(), paramAuth);
         }
