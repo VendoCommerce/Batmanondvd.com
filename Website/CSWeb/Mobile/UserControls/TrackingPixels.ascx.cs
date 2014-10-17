@@ -55,7 +55,7 @@ namespace CSWeb.Mobile.UserControls
             string end = "});\n";
             StringBuilder sbGAPixel = new StringBuilder();
             sbGAPixel.Append(start);
-            sbGAPixel.AppendFormat("('id':'{0}','affiliation':'{1}','revenue':'{2}','shipping':'{3}','tax':'{4}'",
+            sbGAPixel.AppendFormat("'id':'{0}','affiliation':'{1}','revenue':'{2}','shipping':'{3}','tax':'{4}'",
                CurrentOrder.OrderId.ToString(), "BatmanOnDvd.com", Math.Round(CurrentOrder.Total, 2).ToString(), Math.Round(CurrentOrder.ShippingCost, 2).ToString(), Math.Round(CurrentOrder.Tax, 2).ToString());
             sbGAPixel.Append(end);
             foreach (Sku sku in CurrentOrder.SkuItems)
