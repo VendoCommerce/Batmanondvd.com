@@ -230,7 +230,7 @@ namespace CSWeb
                         Sku sku = orderData.SkuItems[i];
                         string resultString = originalString;
                         resultString = resultString
-                            .Replace("{SKU}", sku.SkuCode)
+                            .Replace("{SKU}", sku.ImagePath)
                             .Replace("{SKU_QTY}", sku.Quantity.ToString())
                             .Replace("{SKU_DESCR}", sku.LongDescription)
                             .Replace("{SKU_PRICE}", sku.FullPrice.ToString("N2"));
