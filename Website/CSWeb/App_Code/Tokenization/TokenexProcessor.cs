@@ -121,9 +121,35 @@ namespace CSWeb.Tokenization
             //if our call was a success, save authorization code
             response.TransactionID = result.ReferenceNumber;
             response.AuthCode = result.Authorization;
+            Dictionary<string, string> resultsparam = result.Params;
+            
             if (result.Success)
-                response.ResponseType = TransactionResponseType.Approved;
-            else if (result.Error != null && result.Error.Length > 0)
+            {
+                bool authApproved = false;
+                try
+                {
+                    if (resultsparam.ContainsKey("transaction_approved"))
+                    {
+                        authApproved = Convert.ToBoolean(resultsparam["transaction_approved"]);
+                    }
+                    if (authApproved)
+                    {
+                        response.ResponseType = TransactionResponseType.Approved;
+                    }
+                    else
+                    {
+                        response.ResponseType = TransactionResponseType.Denied;
+                    }
+                }
+                catch (Exception e)
+                {
+                    response.ResponseType = TransactionResponseType.Error;
+                    response.ReasonText = e.InnerException.ToString();
+                }
+                
+                
+            }
+            else if (!string.IsNullOrEmpty(result.Error))
             {
                 response.ResponseType = TransactionResponseType.Error;
                 response.ReasonText = result.Error;
@@ -139,8 +165,9 @@ namespace CSWeb.Tokenization
 
         public string GetRawResponse(ResultOfProcessTransaction result)
         {
-             return string.Format("Result:'{0}' Auth Code:'{1}' Message:'{2}' Error:'{3}' Ref #:'{4}' Test:{5})",
-               result.Success.ToString(), result.Authorization, result.Message, result.Error, result.ReferenceNumber, result.Test.ToString());
+            var paramAuth = string.Join(", ", result.Params.Select(m => m.Key + ":" + m.Value).ToArray());
+             return string.Format("Result:'{0}' Auth Code:'{1}' Message:'{2}' Error:'{3}' Ref #:'{4}' Test:{5} Params:{6})",
+               result.Success.ToString(), result.Authorization, result.Message, result.Error, result.ReferenceNumber, result.Test.ToString(), paramAuth);
         }
     }
 }
