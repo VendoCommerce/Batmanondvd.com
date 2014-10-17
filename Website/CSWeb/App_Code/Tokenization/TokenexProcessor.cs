@@ -118,10 +118,15 @@ namespace CSWeb.Tokenization
             Response response = new Response();
             response.GatewayRequestRaw = requestXML;
             response.GatewayResponseRaw =GetRawResponse(result);
-            //if our call was a success, save authorization code
-            response.TransactionID = result.ReferenceNumber;
-            response.AuthCode = result.Authorization;
             Dictionary<string, string> resultsparam = result.Params;
+            //if our call was a success, save authorization code
+            if (resultsparam.ContainsKey("transaction_tag"))
+            {
+                response.TransactionID = resultsparam["transaction_tag"].PadLeft(10, '0'); ;
+            }
+           // response.TransactionID = result.ReferenceNumber;
+            response.AuthCode = result.Authorization;
+            
             
             if (result.Success)
             {
