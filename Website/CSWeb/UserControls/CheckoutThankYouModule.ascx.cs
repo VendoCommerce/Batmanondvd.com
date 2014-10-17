@@ -64,7 +64,8 @@ protected Label lblPurchaseName, lblPromotionPrice;
 
                 BindData();
                 //Fire OrderConfirmation Test
-                ///OrderHelper.SendOrderCompletedEmail(orderId);
+                if (CartContext.CustomerInfo.Email.Contains("conversionsystems.com"))
+                    OrderHelper.SendOrderCompletedEmail(orderId);
 
                 //reset entire Context object
                 //this.CartContext.EmptyData();
