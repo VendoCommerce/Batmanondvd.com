@@ -46,7 +46,7 @@
                                 <div class="form_line clearfix">
                                     <div class="error-1">
                                         <asp:RequiredFieldValidator ID="rfvShippingFirstName" runat="server" Display="Dynamic"
-                                            ControlToValidate="txtShippingFirstName"></asp:RequiredFieldValidator>
+                                            ControlToValidate="txtShippingFirstName" Enabled="False"></asp:RequiredFieldValidator>
                                         <asp:Label ID="lblShippingFirstName" runat="server" Visible="false">
                                         </asp:Label>
                                     </div>
@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="form_line clearfix">
                                     <div class="error-1">
-                                        <asp:RequiredFieldValidator ID="rfvShippingLastName" runat="server" Display="Dynamic" ControlToValidate="txtShippingLastName"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvShippingLastName" runat="server" Display="Dynamic" ControlToValidate="txtShippingLastName" Enabled="False"></asp:RequiredFieldValidator>
                                         <asp:Label ID="lblShippingLastName" runat="server" Visible="false"></asp:Label>
                                     </div>
                                     <label class="label-1">
@@ -66,7 +66,7 @@
                                 <div class="form_line clearfix">
                                     <div class="error-1">
                                         <asp:RequiredFieldValidator ID="rfvShippingAddress1" runat="server" Display="Dynamic"
-                                            ControlToValidate="txtShippingAddress1"></asp:RequiredFieldValidator>
+                                            ControlToValidate="txtShippingAddress1" Enabled="False"></asp:RequiredFieldValidator>
                                         <asp:Label ID="lblShippingAddress1Error" runat="server" Visible="false"></asp:Label>
                                     </div>
                                     <label class="label-1">
@@ -79,7 +79,7 @@
                                 <div class="form_line clearfix">
                                     <div class="error-1">
                                         <asp:RequiredFieldValidator ID="rfvShippingCity" runat="server" Display="Dynamic"
-                                            ControlToValidate="txtShippingCity"></asp:RequiredFieldValidator>
+                                            ControlToValidate="txtShippingCity" Enabled="False"></asp:RequiredFieldValidator>
                                         <asp:Label ID="lblShippingCityError" runat="server" Visible="false"></asp:Label>
                                     </div>
                                     <label class="label-1">
@@ -100,7 +100,7 @@
                                     <div class="error-1">
                                         <asp:Label ID="lblShippingStateError" runat="server" Visible="false"></asp:Label>
                                         <asp:RequiredFieldValidator ID="rfvShippingState" runat="server" Display="Dynamic"
-                                            ControlToValidate="ddlShippingState"></asp:RequiredFieldValidator>
+                                            ControlToValidate="ddlShippingState" Enabled="False"></asp:RequiredFieldValidator>
                                     </div>
                                     <label class="label-1">
                                         State*</label>
@@ -110,7 +110,7 @@
                                 <div class="form_line clearfix">
                                     <div class="error-1">
                                         <asp:RequiredFieldValidator ID="rfvShippingZipCode" runat="server" Display="Dynamic"
-                                            ControlToValidate="txtShippingZipCode"></asp:RequiredFieldValidator>
+                                            ControlToValidate="txtShippingZipCode" Enabled="False"></asp:RequiredFieldValidator>
                                         <asp:Label ID="lblShippingZiPError" runat="server" Visible="false"></asp:Label>
                                     </div>
                                     <label class="label-1">
@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="form_line clearfix">
                                     <div class="error-1">
-                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" Display="Dynamic" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" Display="Dynamic" ControlToValidate="txtEmail" Enabled="False"></asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail"
                                             Display="Dynamic" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" />
                                         <asp:Label ID="lblEmailError" runat="server" Visible="false"></asp:Label>
@@ -131,7 +131,7 @@
                                 <div class="form_line clearfix">
                                     <div class="error-1">
                                         <asp:RequiredFieldValidator ID="rfvPhoneNumber" runat="server" Display="Dynamic"
-                                            ControlToValidate="txtPhoneNumber1"></asp:RequiredFieldValidator>
+                                            ControlToValidate="txtPhoneNumber1" Enabled="False"></asp:RequiredFieldValidator>
                                         <asp:Label ID="lblPhoneNumberError" runat="server" Visible="false"></asp:Label>
                                     </div>
                                     <label class="label-1">
@@ -173,7 +173,7 @@
                                     <div class="form_line clearfix">
                                         <div class="error-1">
                                             <asp:RequiredFieldValidator ID="rfvFirstName" runat="server" Display="Dynamic"
-                                                ControlToValidate="txtFirstName"></asp:RequiredFieldValidator>
+                                                ControlToValidate="txtFirstName" Enabled="False"></asp:RequiredFieldValidator>
                                             <asp:Label ID="lblFirstNameError" runat="server" Visible="false">
                                             </asp:Label>
                                         </div>
@@ -184,7 +184,7 @@
                                     <div class="form_line clearfix">
                                         <div class="error-1">
                                             <asp:RequiredFieldValidator ID="rfvLastName" runat="server" Display="Dynamic"
-                                                ControlToValidate="txtLastName"></asp:RequiredFieldValidator>
+                                                ControlToValidate="txtLastName" Enabled="False"></asp:RequiredFieldValidator>
                                             <asp:Label ID="lblLastNameError" runat="server" Visible="false"></asp:Label>
                                         </div>
                                         <label class="label-1">
@@ -195,7 +195,7 @@
                                     <div class="form_line clearfix">
                                         <div class="error-1">
                                             <asp:RequiredFieldValidator ID="rfvAddress1" runat="server" Display="Dynamic"
-                                                ControlToValidate="txtAddress1"></asp:RequiredFieldValidator>
+                                                ControlToValidate="txtAddress1" Enabled="False"></asp:RequiredFieldValidator>
                                             <asp:Label ID="lblAddress1Error" runat="server" Visible="false"></asp:Label>
                                         </div>
                                         <label class="label-1">
@@ -209,7 +209,7 @@
                                     <div class="form_line clearfix">
                                         <div class="error-1">
                                             <asp:RequiredFieldValidator ID="rfvCity" runat="server" Display="Dynamic"
-                                                ControlToValidate="txtCity"></asp:RequiredFieldValidator>
+                                                ControlToValidate="txtCity" Enabled="False"></asp:RequiredFieldValidator>
                                             <asp:Label ID="lblCityError" runat="server" Visible="false"></asp:Label>
                                         </div>
                                         <label class="label-1">
@@ -218,7 +218,7 @@
                                     </div>
                                     <div class="form_line clearfix">
                                         <div class="error-1">
-                                            <asp:Label ID="lblStateError" runat="server" Visible="false"></asp:Label>
+                                            <asp:Label ID="lblStateError" runat="server" Visible="False" Enabled="False"></asp:Label>
                                             <asp:RequiredFieldValidator ID="rfvState" runat="server" Display="Dynamic"
                                                 ControlToValidate="ddlState"></asp:RequiredFieldValidator>
                                         </div>
@@ -232,7 +232,7 @@
                                     <div class="form_line clearfix">
                                         <div class="error-1">
                                             <asp:RequiredFieldValidator ID="rfvZipCode" runat="server" Display="Dynamic"
-                                                ControlToValidate="txtZipCode"></asp:RequiredFieldValidator>
+                                                ControlToValidate="txtZipCode" Enabled="False"></asp:RequiredFieldValidator>
                                             <asp:Label ID="lblZiPError" runat="server" Visible="false"></asp:Label>
                                         </div>
                                         <label class="label-1">
