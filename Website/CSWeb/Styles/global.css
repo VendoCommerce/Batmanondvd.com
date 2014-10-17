@@ -2115,3 +2115,8 @@ div.rowheader .receipt_row1 {
 
 
 .bottomcta {clear: both;}
+
+.receipt_offerterms {
+    padding: 22px 180px 20px 132px;
+    font-size: 13px;
+}

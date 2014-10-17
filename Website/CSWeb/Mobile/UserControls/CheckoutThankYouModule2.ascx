@@ -56,7 +56,7 @@
                   <tr>
                       <th colspan="2" class="pad0" style="text-align: left; padding-left: 14px;">Item</th>
                       <th class="text-center pad0">Quantity</th>
-                      <th class="tePayment</th>
+                      <th class="text-center pad0">Payment</th>
                   </tr>
           <tr>
             <td colspan="4" style="padding: 0;"><div class="horizontal_dots"></div></td>
@@ -108,9 +108,13 @@
        </td></tr></table>
          
          
-                   
+       <div class="receipt_offerterms">
+           <p>
+               <asp:Literal ID="ltOfferTerms" runat="server"></asp:Literal>
+           </p>
+       </div>
 
 
   <uc:TrackingPixels ID="TrackingPixels" runat="server" />
-<asp:Literal ID="ltOfferTerms" runat="server"></asp:Literal>
+
 

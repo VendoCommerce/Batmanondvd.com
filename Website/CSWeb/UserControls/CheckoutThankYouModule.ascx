@@ -168,6 +168,9 @@ function Clickheretoprint()
                 </td>
             </tr>
         </table>
-                    <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
+                    
+    <div class="receipt_offerterms">
+        <asp:Literal runat="server" ID="ltOfferTerms"></asp:Literal>
+    </div>
       
 </div>

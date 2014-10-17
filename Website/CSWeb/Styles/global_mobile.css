@@ -1367,3 +1367,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
     top: -14px;
     left: 26px;
 }
+
+#receipt .receipt_offerterms p {
+    font-size: 23px;
+}
