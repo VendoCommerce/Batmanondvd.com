@@ -96,7 +96,11 @@ id="wa_u" defer></script><script type="text/javascript" async>    //<![CDATA[
         </div>
         </noscript>
 
-  
+
+    <!-- Bing Code for Purchase Conversion Page --> 
+        <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.msn.com/mstag/site/818483c7-c4a9-4546-8395-99eb37baf5aa/mstag.js"></script> <script type="text/javascript">            mstag.loadTag("analytics", {dedup:"1",domainId:"1263508",type:"1",revenue:"<%=cartTotal.ToString() %>",actionid:"36417"})</script> <noscript> <iframe src="//flex.msn.com/mstag/tag/818483c7-c4a9-4546-8395-99eb37baf5aa/analytics.html?dedup=1&domainId=1263508&type=1&revenue=<%=cartTotal.ToString() %>&actionid=36417" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>  
+    <!-- End Of Bing Code for Purchase Conversion Page --> 
+
     <asp:Literal ID="litGAReceiptPixel" runat="server" />
     
     <asp:Literal ID="litMdgConfirm" runat="server" Visible="false"  />
