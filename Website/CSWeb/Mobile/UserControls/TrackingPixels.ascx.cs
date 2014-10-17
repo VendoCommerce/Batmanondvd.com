@@ -51,15 +51,22 @@ namespace CSWeb.Mobile.UserControls
         }
         private void WriteGAPixel()
         {
+            string start = "ga('ecommerce:addTransaction', {";
+            string end = "});\n";
             StringBuilder sbGAPixel = new StringBuilder();
-            sbGAPixel.AppendFormat("ga('ecommerce:addTransaction', {('id':'{0}','affiliation':'{1}','revenue':'{2}','shipping':'{3}','tax':'{4}'});\n",
+            sbGAPixel.Append(start);
+            sbGAPixel.AppendFormat("('id':'{0}','affiliation':'{1}','revenue':'{2}','shipping':'{3}','tax':'{4}'",
                CurrentOrder.OrderId.ToString(), "BatmanOnDvd.com", Math.Round(CurrentOrder.Total, 2).ToString(), Math.Round(CurrentOrder.ShippingCost, 2).ToString(), Math.Round(CurrentOrder.Tax, 2).ToString());
-
+            sbGAPixel.Append(end);
             foreach (Sku sku in CurrentOrder.SkuItems)
             {
-                sbGAPixel.AppendFormat("ga('ecommerce:addItem', {'id':'{0}','name':'{1}','sku':'{2}','category':'{3}','price':'{4}','quantity':'{5}'});\n",
+                start = "ga('ecommerce:addItem', {";
+                end = "});\n";
+                sbGAPixel.Append(start);
+                sbGAPixel.AppendFormat("'id':'{0}','name':'{1}','sku':'{2}','category':'{3}','price':'{4}','quantity':'{5}'",
                     CurrentOrder.OrderId.ToString(), sku.Title,sku.SkuCode, "",
                     Math.Round(Convert.ToDouble(sku.InitialPrice), 2).ToString(), sku.Quantity.ToString());
+                sbGAPixel.Append(end);
             }
 
 
