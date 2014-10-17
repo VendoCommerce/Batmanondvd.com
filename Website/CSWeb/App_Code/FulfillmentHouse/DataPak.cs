@@ -291,6 +291,21 @@ namespace CSWeb.FulfillmentHouse
                         xml.WriteWhitespace("\n");
                     }
 
+
+                    // Payment auth info
+
+                    if (!string.IsNullOrEmpty(orderItem.CreditInfo.TransactionCode))
+                    {
+                        xml.WriteElementString("TransactionID", orderItem.CreditInfo.TransactionCode);
+                        xml.WriteWhitespace("\n");
+                    }
+
+                    if (!string.IsNullOrEmpty(orderItem.CreditInfo.AuthorizationCode))
+                    {
+                        xml.WriteElementString("AuthCode", orderItem.CreditInfo.AuthorizationCode);
+                        xml.WriteWhitespace("\n");
+                    }
+
                     xml.WriteElementString("MerchandiseTotal", (orderTotal + additionalPayments -shippingCharge-orderItem.Tax).ToString("n2"));
                     xml.WriteWhitespace("\n");
                     xml.WriteElementString("ShippingCharge", shippingCharge.ToString("n2"));
