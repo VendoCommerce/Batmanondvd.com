@@ -77,6 +77,24 @@ id="wa_u" defer></script><script type="text/javascript" async>    //<![CDATA[
     <iframe src="https://4523247.fls.doubleclick.net/activityi;src=4523247;type=Onlin0;cat=Batma00;qty=1;cost=<%=cartTotal.ToString() %>;ord=<%= CartContext.OrderId %>?" width="1" height="1" frameborder="0" style="display:none"></iframe>
     <!-- End of DoubleClick Floodlight Tag: Please do not remove -->    
     
+      <!-- Google Code for Purchase Conversion Page --> <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 962540852;
+        var google_conversion_language = "en";
+        var google_conversion_format = "2";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "mCovCMfF-FYQtOr8ygM"; var google_conversion_value = <%=cartTotal.ToString() %>; var google_conversion_currency = "USD"; var google_remarketing_only = false;
+        /* ]]> */
+        </script>
+        <script type="text/javascript"  
+        src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""  
+        src="//www.googleadservices.com/pagead/conversion/962540852/?value=<%=cartTotal.ToString() %>&amp;currency_code=USD&amp;label=mCovCMfF-FYQtOr8ygM&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>
 
   
     <asp:Literal ID="litGAReceiptPixel" runat="server" />
