@@ -161,7 +161,7 @@ namespace CSWeb.Root.UserControls
             if (Request.RawUrl.ToLower().Contains("checkoutthankyou") || Request.RawUrl.ToLower().Contains("receipt"))
             {
                 SetCurrentOrder();
-                //WriteGAPixel();
+                WriteGAPixel();
                 //MDGConfirmPixel();
                 string[] testCreditCards;
 

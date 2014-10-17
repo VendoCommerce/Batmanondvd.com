@@ -65,7 +65,7 @@ namespace CSWeb.Mobile.UserControls
 
 
 
-            //litGAReceiptPixel.Text = litGAReceiptPixel2.Text = sbGAPixel.ToString();
+            litGAReceiptPixel.Text = sbGAPixel.ToString();
         }
 
 
@@ -158,7 +158,7 @@ namespace CSWeb.Mobile.UserControls
             if (Request.RawUrl.ToLower().Contains("checkoutthankyou") || Request.RawUrl.ToLower().Contains("receipt"))
             {
                 SetCurrentOrder();
-                //WriteGAPixel();
+                WriteGAPixel();
                 //MDGConfirmPixel();
                 string[] testCreditCards;
 
