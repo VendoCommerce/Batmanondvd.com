@@ -118,6 +118,7 @@ id="wa_u" defer></script><script type="text/javascript" async>    //<![CDATA[
 
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga')
     ;
+    ga('require', 'ecommerce');
     ga('create', 'UA-52993620-1', 'auto');
     <asp:Literal ID="litGAReceiptPixel" runat="server" />
         ga('ecommerce:send');

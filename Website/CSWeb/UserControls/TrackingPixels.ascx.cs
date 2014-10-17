@@ -55,22 +55,29 @@ namespace CSWeb.Root.UserControls
         }
         private void WriteGAPixel()
         {
+            string start = "ga('ecommerce:addTransaction', {";
+            string end = "});\n";
             StringBuilder sbGAPixel = new StringBuilder();
-            sbGAPixel.AppendFormat("pageTracker._addTrans('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}' );\n",
-               CurrentOrder.OrderId.ToString(), "", Math.Round(CurrentOrder.Total, 2), Math.Round(CurrentOrder.Tax, 2), Math.Round(CurrentOrder.ShippingCost, 2),
-               CurrentOrder.CustomerInfo.BillingAddress.City, CurrentOrder.CustomerInfo.BillingAddress.StateProvinceName, CurrentOrder.CustomerInfo.BillingAddress.CountryCode);
-
+            sbGAPixel.Append(start);
+            sbGAPixel.AppendFormat("('id':'{0}','affiliation':'{1}','revenue':'{2}','shipping':'{3}','tax':'{4}'",
+               CurrentOrder.OrderId.ToString(), "BatmanOnDvd.com", Math.Round(CurrentOrder.Total, 2).ToString(), Math.Round(CurrentOrder.ShippingCost, 2).ToString(), Math.Round(CurrentOrder.Tax, 2).ToString());
+            sbGAPixel.Append(end);
             foreach (Sku sku in CurrentOrder.SkuItems)
             {
-                sbGAPixel.AppendFormat("pageTracker._addItem('{0}','{1}','{2}','{3}','{4}','{5}');\n",
-                    CurrentOrder.OrderId.ToString(), sku.SkuCode, sku.LongDescription, "",
-                    Math.Round(Convert.ToDouble(sku.InitialPrice), 2), sku.Quantity.ToString());
+                start = "ga('ecommerce:addItem', {";
+                end = "});\n";
+                sbGAPixel.Append(start);
+                sbGAPixel.AppendFormat("'id':'{0}','name':'{1}','sku':'{2}','category':'{3}','price':'{4}','quantity':'{5}'",
+                    CurrentOrder.OrderId.ToString(), sku.Title, sku.SkuCode, "",
+                    Math.Round(Convert.ToDouble(sku.InitialPrice), 2).ToString(), sku.Quantity.ToString());
+                sbGAPixel.Append(end);
             }
 
 
 
-            litGAReceiptPixel.Text = litGAReceiptPixel2.Text = sbGAPixel.ToString();
+            litGAReceiptPixel.Text = sbGAPixel.ToString();
         }
+
 
 
         private void MDGConfirmPixel()
