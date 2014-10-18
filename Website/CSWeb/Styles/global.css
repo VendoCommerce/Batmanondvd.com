@@ -12,7 +12,7 @@
 	     url('/fonts/OpenSans-CondLight-webfont.svg#webfont') format('svg');
 }
 @font-face{ 
-	font-family: 'Open Sans Open Sans Condensed';
+	font-family: 'Open Sans Condensed';
 	src: url('/fonts/OpenSans-CondBold-webfont.eot');
 	src: url('/fonts/OpenSans-CondBold-webfont.eot?iefix') format('eot'),
 	     url('/fonts/OpenSans-CondBold-webfont.woff') format('woff'),
@@ -588,7 +588,7 @@ appearance: menulist-button;
     border: #ddd solid 1px;
     border-radius: 7px;
     font-size: 18px;
-    font-family: 'Open Sans Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     background: #fafaf8; /* Old browsers */
 background: -moz-linear-gradient(top,  #fafaf8 0%, #e6e6e2 100%); /* FF3.6+ */
@@ -629,13 +629,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', end
     margin-left: -24px;
     content: counter(item) ' \2013'; /* this outputs the number plus the dash */
     font-size: 18px;
-    font-family: 'Open Sans Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
 }
 
 .episode_title {
     font-size: 18px;
-    font-family: 'Open Sans Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
 }
 .episode_date {
@@ -1365,7 +1365,7 @@ div.rowheader .receipt_row1 {
 #cart .basket_description h3, 
 #cart #receipt_table1 h3 {
 	font-size: 18px;
-	font-family: 'Open Sans Open Sans Condensed', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
     line-height: 22px;
 }
@@ -2002,7 +2002,7 @@ div.rowheader .receipt_row1 {
 	color: #000;
 	padding-bottom: 6px;
 	font-size: 36px;
-	font-family: 'Open Sans Open Sans Condensed', sans-serif;	
+	font-family: 'Open Sans Condensed', sans-serif;	
     font-weight: 700;
     line-height: 36px;
 }
@@ -2089,7 +2089,7 @@ div.rowheader .receipt_row1 {
 #upsells .select_qty {
   font-size: 18px;
   color: #000;
-  font-family: 'Open Sans Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
   border: #ddd solid 1px;
   border-radius: 6px;
