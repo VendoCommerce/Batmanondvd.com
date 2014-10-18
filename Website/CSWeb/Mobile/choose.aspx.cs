@@ -13,6 +13,20 @@ namespace CSWeb.Mobile
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Headers["X-HTTPS"] != null)
+            {
+                if (Request.Headers["X-HTTPS"].ToLower().Equals("no"))
+                {
+                    if (Request.Url.ToString().Contains("www"))
+                    {
+                        Response.Redirect((Request.Url.ToString().Replace("http:/", "https:/").Replace("index.aspx", "")));
+                    }
+                    else
+                    {
+                        Response.Redirect((Request.Url.ToString().Replace("http:/", "https:/").Replace("https://", "https://www.").Replace("index.aspx", "")));
+                    }
+                }
+            }
             if (!IsPostBack)
             rbClassic_CheckedChanged(null,null);
         }
