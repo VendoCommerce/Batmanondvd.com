@@ -48,21 +48,19 @@ namespace CSWeb.Mobile.Store
                 Response.Redirect("receipt.aspx");
             }
 
-            if (Session["oid"] == null)
+            if (Session["oid"] == null && OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
             {
-                if (OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
-                {
-                    Response.Redirect("receipt.aspx");
-                }
+                Response.Redirect("receipt.aspx");
             }
 
             if (!IsPostBack)
             {
-                //new CSWeb.FulfillmentHouse.Chargify().GetTaxFromOMX(orderId);
-                
+                //Calculate and save tax
+                new CSWeb.FulfillmentHouse.DataPakTax().PostOrderToDataPak(orderId);
+
                 string[] testCreditCards;
 
-                testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                testCreditCards = ResourceHelper.GetResoureValue("TestCreditCard").Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries); ;
 
                 foreach (string word in testCreditCards)
                 {
@@ -73,8 +71,9 @@ namespace CSWeb.Mobile.Store
                         Response.Redirect("receipt.aspx");
                     }
                 }
-                bool authSuccess = false;
 
+
+                bool authSuccess = false;
                 // Check if payment gateway service is enabled or not.
                 if (CSFactory.GetCacheSitePref().PaymentGatewayService)
                 {
@@ -83,14 +82,14 @@ namespace CSWeb.Mobile.Store
                         authSuccess = orderData.OrderStatusId == 4
                             || orderData.OrderStatusId == 5 // fulfillment failure (fulfillment was attempted after payment success), so don't charge again.
                             || OrderHelper.AuthorizeOrder(orderId);
-                        if (!authSuccess)
-                            OrderHelper.SendOrderDeclinedEmail(orderId);
+                        ////if (!authSuccess)
+                        ////    OrderHelper.SendOrderDeclinedEmail(orderId);
                     }
                     catch (Exception ex)
                     {
                         CSCore.CSLogger.Instance.LogException("AuthorizeOrder - auth error - orderid: " + Convert.ToString(orderId), ex);
 
-
+                        throw;
                     }
                 }
                 else
@@ -110,26 +109,26 @@ namespace CSWeb.Mobile.Store
                         catch (Exception ex)
                         {
                             CSCore.CSLogger.Instance.LogException("AuthorizeOrder - fulfillment post error - orderid: " + Convert.ToString(orderId), ex);
+
                             
-                            //throw;
                         }
 
-                        if (Request.QueryString.Count > 0)
+                        if (Request.QueryString != null)
                         {
-                            Response.Redirect("receipt.aspx?" + Request.QueryString, false);
+                            Response.Redirect("receipt.aspx?" + Request.QueryString);
                         }
                         else
                         {
-                            Response.Redirect("receipt.aspx", false);
+                            Response.Redirect("receipt.aspx");
                         }
                     }
                 }
                 else
                 {
-                    Response.Redirect(string.Format("carddecline.aspx?returnUrl={0}", string.Concat("/", string.Join("/", parts, 0, parts.Length - 1), "/receipt.aspx")));
+                    Response.Redirect(string.Format("carddecline.aspx?returnUrl={0}", string.Concat("/", string.Join("/", parts, 0, parts.Length - 1), "/receipt.aspx")), true);
                 }
             }
-            Response.Redirect("receipt.aspx", false);
+            Response.Redirect("receipt.aspx");
 
         }
     }

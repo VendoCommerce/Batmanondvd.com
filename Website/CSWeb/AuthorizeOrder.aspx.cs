@@ -109,7 +109,7 @@ namespace CSWeb.Root.Store
                         {
                             CSCore.CSLogger.Instance.LogException("AuthorizeOrder - fulfillment post error - orderid: " + Convert.ToString(orderId), ex);
 
-                            throw;
+                           
                         }
 
                         if (Request.QueryString != null)
