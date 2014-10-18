@@ -400,6 +400,9 @@
     <Content Include="GetTotals.aspx" />
     <Content Include="footer.html" />
     <Content Include="bottomcta.html" />
+    <Content Include="robots.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\global_mobile.js" />
     <Content Include="Scripts\jquery.cycle2.carousel.min.js" />
     <Content Include="Scripts\jquery.cycle2.min.js" />
