@@ -58,7 +58,7 @@
                         Over 30 HOURS OF ENTERTAINMENT!</p>
                     <p class="pad6">INCLUDES:</p>
                     <ul>
-                        <li>64 of your favorite original broadcast episodes fully remastered in HD </li>
+                        <li>64 of your favorite original broadcast episodes fully remastered</li>
                         <li>Over 3 Hours of ALL NEW bonus materials</li>
                         <li>Adam West Naked on DVD: Watch as Adam takes you 
   behind the scenes of your favorite episodes!</li>
