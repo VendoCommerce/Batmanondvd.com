@@ -245,17 +245,17 @@ p {padding-bottom: 20px;}
 .header .nav-logo_wb, .header500 .nav-logo_wb {
     position: absolute;
     top: 10px;
-    left: 668px;
+    left: 710px;
 }
 .header_cart .nav-logo_wb {
     position: absolute;
-    top: 5px;
-    left: 717px;
+    top: 7px;
+    left: 760px;
 }
 .header_upsell .nav-logo_wb {
     position: absolute;
     top: 7px;
-    left: 792px;
+    left: 834px;
 }
 
 .container {

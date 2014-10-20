@@ -112,9 +112,10 @@ body {
 .nav-wblogo {
     position: absolute; 
     top: 4px;
-    left: 277px;
+    left: 350px;
 }
 
+.header_cart .nav-wblogo {left: 317px;}
 .header_upsell .nav-wblogo {left: 504px;}
 
 .nav-asotv {
