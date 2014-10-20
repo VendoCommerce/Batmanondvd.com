@@ -70,7 +70,7 @@
             <div class="cart_totals_right">
                 <asp:Literal runat="server" ID='lblSubtotal'></asp:Literal><br />
                 <div>
-                    <asp:Literal runat="server" ID="lblShipping" Visible="false"></asp:Literal>$9.95<span class="crossout"></span></div>
+                    <asp:Literal runat="server" ID="lblShipping" Visible="false"></asp:Literal>$0.00<span class="crossout"></span></div>
                 <asp:Literal runat="server" ID="lblTax"></asp:Literal><br />
 
                 <%--                <asp:Literal runat="server" ID="lblRushShipping" Visible="false"></asp:Literal>
@@ -186,7 +186,7 @@
                     <asp:Label ID="lblPhoneNumberError" runat="server" Visible="false"></asp:Label></div>
                 <label class="label-1">
                     Phone*</label>
-                <asp:TextBox ID="txtPhoneNumber1" runat="server" MaxLength="10" CssClass="text-1" placeholder="Phone"></asp:TextBox>
+                <asp:TextBox ID="txtPhoneNumber1" runat="server" MaxLength="14" CssClass="text-1" placeholder="Phone"></asp:TextBox>
                 <asp:TextBox ID="txtPhoneNumber2" runat="server" Visible="false" MaxLength="3" CssClass="text-4"></asp:TextBox>
                 <asp:TextBox ID="txtPhoneNumber3" runat="server" Visible="false" MaxLength="4" CssClass="text-4"></asp:TextBox>                
             </div>

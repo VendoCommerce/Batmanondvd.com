@@ -191,7 +191,7 @@ namespace CSBusiness
         public void UpdateUser(Customer custData)
         {
             //Encrypt sensitive data before save
-            Encryption.EncryptValues(custData); 
+            ////Encryption.EncryptValues(custData); 
 
             XElement rootNode = new XElement("customers");
             string guid = String.Empty, passVal = string.Empty;
@@ -223,7 +223,7 @@ namespace CSBusiness
 
 
             CustomerDAL.UpdateUser(custData.CustomerId, rootNode.ToString());
-            Encryption.DecryptValues(custData); 
+            ////Encryption.DecryptValues(custData); 
 
         }
 
