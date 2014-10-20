@@ -71,10 +71,14 @@ public class PageView
         {
             conn.Open();
             sql = "INSERT INTO [PageViews] ([CustomerSessionId],[IPAddress],[URL],[VersionId],[CreateDate])";
-            sql = sql + " VALUES ('" + sessionId + "','" + ipAddress + "','" + context.Request.Url + "','" + version + "','" + DateTime.Now + "') ";
-
+            sql = sql + " VALUES ('" + sessionId + "','" + ipAddress + "',@url,'" + version + "','" + DateTime.Now + "') ";
+            //Put url into a param to avoid sql injection
+            SqlParameter urlParam = new SqlParameter("@url", System.Data.SqlDbType.NVarChar);
+            urlParam.Value = context.Request.Url.ToString();
 
             SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.Add(urlParam);
+
             cmd.ExecuteNonQuery();
             conn.Close();
         }

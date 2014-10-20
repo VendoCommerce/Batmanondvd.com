@@ -114,178 +114,178 @@
     <Content Include="400.aspx" />
     <Content Include="500.aspx" />
     <Content Include="AddProduct.aspx" />
-    <Content Include="Admin\Attributes.aspx" />
-    <Content Include="Admin\docs_icons.aspx" />
-    <Content Include="Admin\docs_reportpage.aspx" />
-    <Content Include="Admin\docs_tablepage.aspx" />
-    <Content Include="Admin\docs_formpage.aspx" />
-    <Content Include="Admin\Country.aspx" />
-    <Content Include="Admin\CountryList.aspx" />
-    <Content Include="Admin\CouponItem.aspx" />
-    <Content Include="Admin\CouponList.aspx" />
-    <Content Include="Admin\css\Admin.css" />
-    <Content Include="Admin\css\bootstrap.css" />
-    <Content Include="Admin\css\fonts\fontawesome\fontawesome-webfont.eot" />
-    <Content Include="Admin\css\fonts\fontawesome\fontawesome-webfont.svg" />
-    <Content Include="Admin\css\fonts\fontawesome\fontawesome-webfont.ttf" />
-    <Content Include="Admin\css\fonts\fontawesome\fontawesome-webfont.woff" />
-    <Content Include="Admin\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.eot" />
-    <Content Include="Admin\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.svg" />
-    <Content Include="Admin\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.ttf" />
-    <Content Include="Admin\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.woff" />
-    <Content Include="Admin\css\fonts\glyphicons.pro\glyphicons-regular.eot" />
-    <Content Include="Admin\css\fonts\glyphicons.pro\glyphicons-regular.svg" />
-    <Content Include="Admin\css\fonts\glyphicons.pro\glyphicons-regular.ttf" />
-    <Content Include="Admin\css\fonts\glyphicons.pro\glyphicons-regular.woff" />
-    <Content Include="Admin\css\global.css" />
-    <Content Include="Admin\css\main.css" />
-    <Content Include="Admin\css\plugins.css" />
-    <Content Include="Admin\css\themes.css" />
-    <Content Include="Admin\CustomerOrderDetail.aspx" />
-    <Content Include="Admin\CustomerOrders.aspx" />
-    <Content Include="Admin\CustomerPrint.aspx" />
-    <Content Include="Admin\CustomerList.aspx" />
-    <Content Include="Admin\CustomFieldList.aspx" />
-    <Content Include="Admin\CustomShipping.aspx" />
-    <Content Include="Admin\CustomShippingList.aspx" />
-    <Content Include="Admin\EmailItem.aspx" />
-    <Content Include="Admin\EmailList.aspx" />
-    <Content Include="Admin\ErrorLog.aspx" />
-    <Content Include="Admin\FulfillmentHouseProviderList.aspx" />
-    <Content Include="Admin\img\apple-touch-icon-114x114-precomposed.png" />
-    <Content Include="Admin\img\apple-touch-icon-57x57-precomposed.png" />
-    <Content Include="Admin\img\apple-touch-icon-72x72-precomposed.png" />
-    <Content Include="Admin\img\apple-touch-icon-precomposed.png" />
-    <Content Include="Admin\img\apple-touch-icon.png" />
-    <Content Include="Admin\img\favicon.ico" />
-    <Content Include="Admin\img\gemicon.icons\grey_16x16.png" />
-    <Content Include="Admin\img\gemicon.icons\grey_32x32.png" />
-    <Content Include="Admin\img\gemicon.icons\grey_64x64.png" />
-    <Content Include="Admin\img\gemicon.icons\white_16x16.png" />
-    <Content Include="Admin\img\gemicon.icons\white_32x32.png" />
-    <Content Include="Admin\img\gemicon.icons\white_64x64.png" />
-    <Content Include="Admin\img\glyphicons.halflings.pro\glyphicons_halflings-white.png" />
-    <Content Include="Admin\img\glyphicons.halflings.pro\glyphicons_halflings-white.svg" />
-    <Content Include="Admin\img\glyphicons.halflings.pro\glyphicons_halflings.png" />
-    <Content Include="Admin\img\glyphicons.halflings.pro\glyphicons_halflings.svg" />
-    <Content Include="Admin\img\glyphicons.pro\glyphicons-white.png" />
-    <Content Include="Admin\img\glyphicons.pro\glyphicons-white.svg" />
-    <Content Include="Admin\img\glyphicons.pro\glyphicons.png" />
-    <Content Include="Admin\img\glyphicons.pro\glyphicons.svg" />
-    <Content Include="Admin\img\jquery.chosen\chosen-sprite%402x.png" />
-    <Content Include="Admin\img\jquery.chosen\chosen-sprite.png" />
-    <Content Include="Admin\img\jquery.colorpicker\alpha.png" />
-    <Content Include="Admin\img\jquery.colorpicker\hue.png" />
-    <Content Include="Admin\img\jquery.colorpicker\saturation.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_asc%402x.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_asc.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_asc_disabled%402x.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_asc_disabled.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_both%402x.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_both.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_desc%402x.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_desc.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_desc_disabled%402x.png" />
-    <Content Include="Admin\img\jquery.datatables\sort_desc_disabled.png" />
-    <Content Include="Admin\img\loading.gifs\loading01%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading01.gif" />
-    <Content Include="Admin\img\loading.gifs\loading02%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading02.gif" />
-    <Content Include="Admin\img\loading.gifs\loading03%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading03.gif" />
-    <Content Include="Admin\img\loading.gifs\loading04%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading04.gif" />
-    <Content Include="Admin\img\loading.gifs\loading05%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading05.gif" />
-    <Content Include="Admin\img\loading.gifs\loading06%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading06.gif" />
-    <Content Include="Admin\img\loading.gifs\loading07%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading07.gif" />
-    <Content Include="Admin\img\loading.gifs\loading08%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading08.gif" />
-    <Content Include="Admin\img\loading.gifs\loading09%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading09.gif" />
-    <Content Include="Admin\img\loading.gifs\loading10%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading10.gif" />
-    <Content Include="Admin\img\loading.gifs\loading11%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading11.gif" />
-    <Content Include="Admin\img\loading.gifs\loading12%402x.gif" />
-    <Content Include="Admin\img\loading.gifs\loading12.gif" />
-    <Content Include="Admin\img\login_bg.png" />
-    <Content Include="Admin\img\Logo.jpg" />
-    <Content Include="Admin\img\Logo.png" />
-    <Content Include="Admin\img\logo_top_airocide.png" />
-    <Content Include="Admin\img\nav_info_seperator.png" />
-    <Content Include="Admin\img\placeholders\image_dark_120x120.png" />
-    <Content Include="Admin\img\placeholders\image_dark_160x120.png" />
-    <Content Include="Admin\img\placeholders\image_dark_64x64.png" />
-    <Content Include="Admin\img\placeholders\image_dark_900x700.png" />
-    <Content Include="Admin\img\placeholders\image_light_120x120.png" />
-    <Content Include="Admin\img\placeholders\image_light_160x120.png" />
-    <Content Include="Admin\img\placeholders\image_light_160x270.png" />
-    <Content Include="Admin\img\placeholders\image_light_170x120.png" />
-    <Content Include="Admin\img\placeholders\image_light_360x200.png" />
-    <Content Include="Admin\img\placeholders\image_light_360x270.png" />
-    <Content Include="Admin\img\placeholders\image_light_64x64.png" />
-    <Content Include="Admin\img\placeholders\image_light_900x700.png" />
-    <Content Include="Admin\img\placeholders\landing_page_promo.png" />
-    <Content Include="Admin\img\template\avatar%402x.png" />
-    <Content Include="Admin\img\template\avatar.png" />
-    <Content Include="Admin\img\template\login_bg%402x.png" />
-    <Content Include="Admin\img\template\login_bg.png" />
-    <Content Include="Admin\img\template\logo%402x.png" />
-    <Content Include="Admin\img\template\logo.png" />
-    <Content Include="Admin\img\template\nav_info_seperator%402x.png" />
-    <Content Include="Admin\img\template\nav_info_seperator.png" />
-    <Content Include="Admin\img\template\uadmin_logo%402x.png" />
-    <Content Include="Admin\img\template\uadmin_logo.png" />
-    <Content Include="Admin\js\helpers\excanvas.min.js" />
-    <Content Include="Admin\js\helpers\jqvmap.maps.js" />
-    <Content Include="Admin\js\main.js" />
-    <Content Include="Admin\js\plugins.js" />
-    <Content Include="Admin\js\vendor\bootstrap.min.js" />
-    <Content Include="Admin\js\vendor\jquery-1.9.1.min.js" />
-    <Content Include="Admin\js\vendor\modernizr-2.6.2-respond-1.1.0.min.js" />
-    <Content Include="Admin\Login.aspx" />
-    <Content Include="Admin\LogOut.aspx" />
-    <Content Include="Admin\Main.aspx" />
-    <Content Include="Admin\CategoryList.aspx" />
-    <Content Include="Admin\MIdReport.aspx" />
-    <Content Include="Admin\OrderDetail.aspx" />
-    <Content Include="Admin\OrderList.aspx" />
-    <Content Include="Admin\PathItem.aspx" />
-    <Content Include="Admin\PathList.aspx" />
-    <Content Include="Admin\PromoCodeDetail.aspx" />
-    <Content Include="Admin\PromoCodeSummary.aspx" />
-    <Content Include="Admin\ReportMain.aspx" />
-    <Content Include="Admin\Reports.aspx" />
-    <Content Include="Admin\Reports1.aspx" />
-    <Content Include="Admin\ResourceList.aspx" />
-    <Content Include="Admin\Shipping.aspx" />
-    <Content Include="Admin\SIdReport.aspx" />
-    <Content Include="Admin\SitePrefItem.aspx" />
-    <Content Include="Admin\SKUItem.aspx" />
-    <Content Include="Admin\SKUList.aspx" />
-    <Content Include="Admin\State.aspx" />
-    <Content Include="Admin\StateTax.aspx" />
-    <Content Include="Admin\CacheUtility.aspx" />
-    <Content Include="Admin\TaxList.aspx" />
-    <Content Include="Admin\TemplateItem.aspx" />
-    <Content Include="Admin\TemplateList.aspx" />
-    <Content Include="Admin\TransactionReport.aspx" />
-    <Content Include="Admin\UserControls\Attributes.ascx" />
-    <Content Include="Admin\UserControls\DateControlReport.ascx" />
-    <Content Include="Admin\UserControls\RangeDateControlReport.ascx" />
-    <Content Include="Admin\UserControls\DateControl.ascx" />
-    <Content Include="Admin\UserControls\PageControl.ascx" />
-    <Content Include="Admin\UserControls\RangeDateControl.ascx" />
-    <Content Include="Admin\UserControls\RangeDateControlV1.ascx" />
-    <Content Include="Admin\UserEdit.aspx" />
-    <Content Include="Admin\Users.aspx" />
-    <Content Include="Admin\VersionCategoryList.aspx" />
-    <Content Include="Admin\VersionList.aspx" />
-    <Content Include="Admin\VersionReport.aspx" />
-    <Content Include="Admin\VersionReport1.aspx" />
+    <Content Include="CSSecureSite\Attributes.aspx" />
+    <Content Include="CSSecureSite\docs_icons.aspx" />
+    <Content Include="CSSecureSite\docs_reportpage.aspx" />
+    <Content Include="CSSecureSite\docs_tablepage.aspx" />
+    <Content Include="CSSecureSite\docs_formpage.aspx" />
+    <Content Include="CSSecureSite\Country.aspx" />
+    <Content Include="CSSecureSite\CountryList.aspx" />
+    <Content Include="CSSecureSite\CouponItem.aspx" />
+    <Content Include="CSSecureSite\CouponList.aspx" />
+    <Content Include="CSSecureSite\css\Admin.css" />
+    <Content Include="CSSecureSite\css\bootstrap.css" />
+    <Content Include="CSSecureSite\css\fonts\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="CSSecureSite\css\fonts\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="CSSecureSite\css\fonts\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="CSSecureSite\css\fonts\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="CSSecureSite\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.eot" />
+    <Content Include="CSSecureSite\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.svg" />
+    <Content Include="CSSecureSite\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.ttf" />
+    <Content Include="CSSecureSite\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.woff" />
+    <Content Include="CSSecureSite\css\fonts\glyphicons.pro\glyphicons-regular.eot" />
+    <Content Include="CSSecureSite\css\fonts\glyphicons.pro\glyphicons-regular.svg" />
+    <Content Include="CSSecureSite\css\fonts\glyphicons.pro\glyphicons-regular.ttf" />
+    <Content Include="CSSecureSite\css\fonts\glyphicons.pro\glyphicons-regular.woff" />
+    <Content Include="CSSecureSite\css\global.css" />
+    <Content Include="CSSecureSite\css\main.css" />
+    <Content Include="CSSecureSite\css\plugins.css" />
+    <Content Include="CSSecureSite\css\themes.css" />
+    <Content Include="CSSecureSite\CustomerOrderDetail.aspx" />
+    <Content Include="CSSecureSite\CustomerOrders.aspx" />
+    <Content Include="CSSecureSite\CustomerPrint.aspx" />
+    <Content Include="CSSecureSite\CustomerList.aspx" />
+    <Content Include="CSSecureSite\CustomFieldList.aspx" />
+    <Content Include="CSSecureSite\CustomShipping.aspx" />
+    <Content Include="CSSecureSite\CustomShippingList.aspx" />
+    <Content Include="CSSecureSite\EmailItem.aspx" />
+    <Content Include="CSSecureSite\EmailList.aspx" />
+    <Content Include="CSSecureSite\ErrorLog.aspx" />
+    <Content Include="CSSecureSite\FulfillmentHouseProviderList.aspx" />
+    <Content Include="CSSecureSite\img\apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="CSSecureSite\img\apple-touch-icon-57x57-precomposed.png" />
+    <Content Include="CSSecureSite\img\apple-touch-icon-72x72-precomposed.png" />
+    <Content Include="CSSecureSite\img\apple-touch-icon-precomposed.png" />
+    <Content Include="CSSecureSite\img\apple-touch-icon.png" />
+    <Content Include="CSSecureSite\img\favicon.ico" />
+    <Content Include="CSSecureSite\img\gemicon.icons\grey_16x16.png" />
+    <Content Include="CSSecureSite\img\gemicon.icons\grey_32x32.png" />
+    <Content Include="CSSecureSite\img\gemicon.icons\grey_64x64.png" />
+    <Content Include="CSSecureSite\img\gemicon.icons\white_16x16.png" />
+    <Content Include="CSSecureSite\img\gemicon.icons\white_32x32.png" />
+    <Content Include="CSSecureSite\img\gemicon.icons\white_64x64.png" />
+    <Content Include="CSSecureSite\img\glyphicons.halflings.pro\glyphicons_halflings-white.png" />
+    <Content Include="CSSecureSite\img\glyphicons.halflings.pro\glyphicons_halflings-white.svg" />
+    <Content Include="CSSecureSite\img\glyphicons.halflings.pro\glyphicons_halflings.png" />
+    <Content Include="CSSecureSite\img\glyphicons.halflings.pro\glyphicons_halflings.svg" />
+    <Content Include="CSSecureSite\img\glyphicons.pro\glyphicons-white.png" />
+    <Content Include="CSSecureSite\img\glyphicons.pro\glyphicons-white.svg" />
+    <Content Include="CSSecureSite\img\glyphicons.pro\glyphicons.png" />
+    <Content Include="CSSecureSite\img\glyphicons.pro\glyphicons.svg" />
+    <Content Include="CSSecureSite\img\jquery.chosen\chosen-sprite%402x.png" />
+    <Content Include="CSSecureSite\img\jquery.chosen\chosen-sprite.png" />
+    <Content Include="CSSecureSite\img\jquery.colorpicker\alpha.png" />
+    <Content Include="CSSecureSite\img\jquery.colorpicker\hue.png" />
+    <Content Include="CSSecureSite\img\jquery.colorpicker\saturation.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_asc%402x.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_asc.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_asc_disabled%402x.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_asc_disabled.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_both%402x.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_both.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_desc%402x.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_desc.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_desc_disabled%402x.png" />
+    <Content Include="CSSecureSite\img\jquery.datatables\sort_desc_disabled.png" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading01%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading01.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading02%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading02.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading03%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading03.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading04%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading04.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading05%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading05.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading06%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading06.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading07%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading07.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading08%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading08.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading09%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading09.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading10%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading10.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading11%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading11.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading12%402x.gif" />
+    <Content Include="CSSecureSite\img\loading.gifs\loading12.gif" />
+    <Content Include="CSSecureSite\img\login_bg.png" />
+    <Content Include="CSSecureSite\img\Logo.jpg" />
+    <Content Include="CSSecureSite\img\Logo.png" />
+    <Content Include="CSSecureSite\img\logo_top_airocide.png" />
+    <Content Include="CSSecureSite\img\nav_info_seperator.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_dark_120x120.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_dark_160x120.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_dark_64x64.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_dark_900x700.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_light_120x120.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_light_160x120.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_light_160x270.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_light_170x120.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_light_360x200.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_light_360x270.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_light_64x64.png" />
+    <Content Include="CSSecureSite\img\placeholders\image_light_900x700.png" />
+    <Content Include="CSSecureSite\img\placeholders\landing_page_promo.png" />
+    <Content Include="CSSecureSite\img\template\avatar%402x.png" />
+    <Content Include="CSSecureSite\img\template\avatar.png" />
+    <Content Include="CSSecureSite\img\template\login_bg%402x.png" />
+    <Content Include="CSSecureSite\img\template\login_bg.png" />
+    <Content Include="CSSecureSite\img\template\logo%402x.png" />
+    <Content Include="CSSecureSite\img\template\logo.png" />
+    <Content Include="CSSecureSite\img\template\nav_info_seperator%402x.png" />
+    <Content Include="CSSecureSite\img\template\nav_info_seperator.png" />
+    <Content Include="CSSecureSite\img\template\uadmin_logo%402x.png" />
+    <Content Include="CSSecureSite\img\template\uadmin_logo.png" />
+    <Content Include="CSSecureSite\js\helpers\excanvas.min.js" />
+    <Content Include="CSSecureSite\js\helpers\jqvmap.maps.js" />
+    <Content Include="CSSecureSite\js\main.js" />
+    <Content Include="CSSecureSite\js\plugins.js" />
+    <Content Include="CSSecureSite\js\vendor\bootstrap.min.js" />
+    <Content Include="CSSecureSite\js\vendor\jquery-1.9.1.min.js" />
+    <Content Include="CSSecureSite\js\vendor\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="CSSecureSite\Login.aspx" />
+    <Content Include="CSSecureSite\LogOut.aspx" />
+    <Content Include="CSSecureSite\Main.aspx" />
+    <Content Include="CSSecureSite\CategoryList.aspx" />
+    <Content Include="CSSecureSite\MIdReport.aspx" />
+    <Content Include="CSSecureSite\OrderDetail.aspx" />
+    <Content Include="CSSecureSite\OrderList.aspx" />
+    <Content Include="CSSecureSite\PathItem.aspx" />
+    <Content Include="CSSecureSite\PathList.aspx" />
+    <Content Include="CSSecureSite\PromoCodeDetail.aspx" />
+    <Content Include="CSSecureSite\PromoCodeSummary.aspx" />
+    <Content Include="CSSecureSite\ReportMain.aspx" />
+    <Content Include="CSSecureSite\Reports.aspx" />
+    <Content Include="CSSecureSite\Reports1.aspx" />
+    <Content Include="CSSecureSite\ResourceList.aspx" />
+    <Content Include="CSSecureSite\Shipping.aspx" />
+    <Content Include="CSSecureSite\SIdReport.aspx" />
+    <Content Include="CSSecureSite\SitePrefItem.aspx" />
+    <Content Include="CSSecureSite\SKUItem.aspx" />
+    <Content Include="CSSecureSite\SKUList.aspx" />
+    <Content Include="CSSecureSite\State.aspx" />
+    <Content Include="CSSecureSite\StateTax.aspx" />
+    <Content Include="CSSecureSite\CacheUtility.aspx" />
+    <Content Include="CSSecureSite\TaxList.aspx" />
+    <Content Include="CSSecureSite\TemplateItem.aspx" />
+    <Content Include="CSSecureSite\TemplateList.aspx" />
+    <Content Include="CSSecureSite\TransactionReport.aspx" />
+    <Content Include="CSSecureSite\UserControls\Attributes.ascx" />
+    <Content Include="CSSecureSite\UserControls\DateControlReport.ascx" />
+    <Content Include="CSSecureSite\UserControls\RangeDateControlReport.ascx" />
+    <Content Include="CSSecureSite\UserControls\DateControl.ascx" />
+    <Content Include="CSSecureSite\UserControls\PageControl.ascx" />
+    <Content Include="CSSecureSite\UserControls\RangeDateControl.ascx" />
+    <Content Include="CSSecureSite\UserControls\RangeDateControlV1.ascx" />
+    <Content Include="CSSecureSite\UserEdit.aspx" />
+    <Content Include="CSSecureSite\Users.aspx" />
+    <Content Include="CSSecureSite\VersionCategoryList.aspx" />
+    <Content Include="CSSecureSite\VersionList.aspx" />
+    <Content Include="CSSecureSite\VersionReport.aspx" />
+    <Content Include="CSSecureSite\VersionReport1.aspx" />
     <Content Include="AuthorizeOrder.aspx" />
     <Content Include="AuthorizeOrderBatch.aspx" />
     <Content Include="bottomcta_complete.html" />
@@ -452,10 +452,10 @@
     <Content Include="appsettings.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Admin\AdminReport.Master" />
-    <None Include="Admin\css\fonts\fontawesome\FontAwesome.otf" />
-    <None Include="Admin\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.otf" />
-    <None Include="Admin\css\fonts\glyphicons.pro\glyphicons-regular.otf" />
+    <Content Include="CSSecureSite\AdminReport.Master" />
+    <None Include="CSSecureSite\css\fonts\fontawesome\FontAwesome.otf" />
+    <None Include="CSSecureSite\css\fonts\glyphicons.halflings.pro\glyphiconshalflings-regular.otf" />
+    <None Include="CSSecureSite\css\fonts\glyphicons.pro\glyphicons-regular.otf" />
     <Content Include="appsettings.config.token" />
     <Content Include="fonts\OpenSans-CondBold-webfont.eot" />
     <Content Include="fonts\OpenSans-CondBold-webfont.ttf" />
@@ -635,7 +635,7 @@
     <Content Include="UserControls\CheckoutThankYouModule.ascx" />
     <Content Include="UserControls\ContactUs.ascx" />
     <Content Include="UserControls\Header.ascx" />
-    <Content Include="Admin\PaymentProviderList.aspx" />
+    <Content Include="CSSecureSite\PaymentProviderList.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Styles\validation\template.css" />
     <Content Include="Styles\validation\validationEngine.jquery.css" />
@@ -762,419 +762,419 @@
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Attributes.aspx.cs">
+    <Compile Include="CSSecureSite\Attributes.aspx.cs">
       <DependentUpon>Attributes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Attributes.aspx.designer.cs">
+    <Compile Include="CSSecureSite\Attributes.aspx.designer.cs">
       <DependentUpon>Attributes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminReport.Master.cs">
+    <Compile Include="CSSecureSite\AdminReport.Master.cs">
       <DependentUpon>AdminReport.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AdminReport.Master.designer.cs">
+    <Compile Include="CSSecureSite\AdminReport.Master.designer.cs">
       <DependentUpon>AdminReport.Master</DependentUpon>
     </Compile>
-    <Compile Include="Admin\docs_icons.aspx.cs">
+    <Compile Include="CSSecureSite\docs_icons.aspx.cs">
       <DependentUpon>docs_icons.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\docs_icons.aspx.designer.cs">
+    <Compile Include="CSSecureSite\docs_icons.aspx.designer.cs">
       <DependentUpon>docs_icons.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\docs_reportpage.aspx.cs">
+    <Compile Include="CSSecureSite\docs_reportpage.aspx.cs">
       <DependentUpon>docs_reportpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\docs_reportpage.aspx.designer.cs">
+    <Compile Include="CSSecureSite\docs_reportpage.aspx.designer.cs">
       <DependentUpon>docs_reportpage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\docs_tablepage.aspx.cs">
+    <Compile Include="CSSecureSite\docs_tablepage.aspx.cs">
       <DependentUpon>docs_tablepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\docs_tablepage.aspx.designer.cs">
+    <Compile Include="CSSecureSite\docs_tablepage.aspx.designer.cs">
       <DependentUpon>docs_tablepage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\docs_formpage.aspx.cs">
+    <Compile Include="CSSecureSite\docs_formpage.aspx.cs">
       <DependentUpon>docs_formpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\docs_formpage.aspx.designer.cs">
+    <Compile Include="CSSecureSite\docs_formpage.aspx.designer.cs">
       <DependentUpon>docs_formpage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Country.aspx.cs">
+    <Compile Include="CSSecureSite\Country.aspx.cs">
       <DependentUpon>Country.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Country.aspx.designer.cs">
+    <Compile Include="CSSecureSite\Country.aspx.designer.cs">
       <DependentUpon>Country.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CountryList.aspx.cs">
+    <Compile Include="CSSecureSite\CountryList.aspx.cs">
       <DependentUpon>CountryList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CountryList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CountryList.aspx.designer.cs">
       <DependentUpon>CountryList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CouponItem.aspx.cs">
+    <Compile Include="CSSecureSite\CouponItem.aspx.cs">
       <DependentUpon>CouponItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CouponItem.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CouponItem.aspx.designer.cs">
       <DependentUpon>CouponItem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CouponList.aspx.cs">
+    <Compile Include="CSSecureSite\CouponList.aspx.cs">
       <DependentUpon>CouponList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CouponList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CouponList.aspx.designer.cs">
       <DependentUpon>CouponList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CustomerOrderDetail.aspx.cs">
+    <Compile Include="CSSecureSite\CustomerOrderDetail.aspx.cs">
       <DependentUpon>CustomerOrderDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CustomerOrderDetail.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CustomerOrderDetail.aspx.designer.cs">
       <DependentUpon>CustomerOrderDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CustomerOrders.aspx.cs">
+    <Compile Include="CSSecureSite\CustomerOrders.aspx.cs">
       <DependentUpon>CustomerOrders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CustomerOrders.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CustomerOrders.aspx.designer.cs">
       <DependentUpon>CustomerOrders.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CustomerPrint.aspx.cs">
+    <Compile Include="CSSecureSite\CustomerPrint.aspx.cs">
       <DependentUpon>CustomerPrint.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CustomerPrint.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CustomerPrint.aspx.designer.cs">
       <DependentUpon>CustomerPrint.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CustomerList.aspx.cs">
+    <Compile Include="CSSecureSite\CustomerList.aspx.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CustomerList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CustomerList.aspx.designer.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CustomFieldList.aspx.cs">
+    <Compile Include="CSSecureSite\CustomFieldList.aspx.cs">
       <DependentUpon>CustomFieldList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CustomFieldList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CustomFieldList.aspx.designer.cs">
       <DependentUpon>CustomFieldList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CustomShipping.aspx.cs">
+    <Compile Include="CSSecureSite\CustomShipping.aspx.cs">
       <DependentUpon>CustomShipping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CustomShipping.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CustomShipping.aspx.designer.cs">
       <DependentUpon>CustomShipping.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CustomShippingList.aspx.cs">
+    <Compile Include="CSSecureSite\CustomShippingList.aspx.cs">
       <DependentUpon>CustomShippingList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CustomShippingList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CustomShippingList.aspx.designer.cs">
       <DependentUpon>CustomShippingList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\EmailItem.aspx.cs">
+    <Compile Include="CSSecureSite\EmailItem.aspx.cs">
       <DependentUpon>EmailItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\EmailItem.aspx.designer.cs">
+    <Compile Include="CSSecureSite\EmailItem.aspx.designer.cs">
       <DependentUpon>EmailItem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\EmailList.aspx.cs">
+    <Compile Include="CSSecureSite\EmailList.aspx.cs">
       <DependentUpon>EmailList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\EmailList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\EmailList.aspx.designer.cs">
       <DependentUpon>EmailList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ErrorLog.aspx.cs">
+    <Compile Include="CSSecureSite\ErrorLog.aspx.cs">
       <DependentUpon>ErrorLog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\ErrorLog.aspx.designer.cs">
+    <Compile Include="CSSecureSite\ErrorLog.aspx.designer.cs">
       <DependentUpon>ErrorLog.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\FulfillmentHouseProviderList.aspx.cs">
+    <Compile Include="CSSecureSite\FulfillmentHouseProviderList.aspx.cs">
       <DependentUpon>FulfillmentHouseProviderList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\FulfillmentHouseProviderList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\FulfillmentHouseProviderList.aspx.designer.cs">
       <DependentUpon>FulfillmentHouseProviderList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Login.aspx.cs">
+    <Compile Include="CSSecureSite\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\LogOut.aspx.cs">
+    <Compile Include="CSSecureSite\LogOut.aspx.cs">
       <DependentUpon>LogOut.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\LogOut.aspx.designer.cs">
+    <Compile Include="CSSecureSite\LogOut.aspx.designer.cs">
       <DependentUpon>LogOut.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Main.aspx.cs">
+    <Compile Include="CSSecureSite\Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CategoryList.aspx.cs">
+    <Compile Include="CSSecureSite\CategoryList.aspx.cs">
       <DependentUpon>CategoryList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AdminSite.Master.cs">
+    <Compile Include="CSSecureSite\AdminSite.Master.cs">
       <DependentUpon>AdminSite.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AdminSite.Master.designer.cs">
+    <Compile Include="CSSecureSite\AdminSite.Master.designer.cs">
       <DependentUpon>AdminSite.Master</DependentUpon>
     </Compile>
-    <Compile Include="Admin\MIdReport.aspx.cs">
+    <Compile Include="CSSecureSite\MIdReport.aspx.cs">
       <DependentUpon>MIdReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\MIdReport.aspx.designer.cs">
+    <Compile Include="CSSecureSite\MIdReport.aspx.designer.cs">
       <DependentUpon>MIdReport.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\OrderDetail.aspx.cs">
+    <Compile Include="CSSecureSite\OrderDetail.aspx.cs">
       <DependentUpon>OrderDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\OrderDetail.aspx.designer.cs">
+    <Compile Include="CSSecureSite\OrderDetail.aspx.designer.cs">
       <DependentUpon>OrderDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\OrderList.aspx.cs">
+    <Compile Include="CSSecureSite\OrderList.aspx.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\OrderList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\OrderList.aspx.designer.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\PathItem.aspx.cs">
+    <Compile Include="CSSecureSite\PathItem.aspx.cs">
       <DependentUpon>PathItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\PathItem.aspx.designer.cs">
+    <Compile Include="CSSecureSite\PathItem.aspx.designer.cs">
       <DependentUpon>PathItem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\PathList.aspx.cs">
+    <Compile Include="CSSecureSite\PathList.aspx.cs">
       <DependentUpon>PathList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\PathList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\PathList.aspx.designer.cs">
       <DependentUpon>PathList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\PromoCodeDetail.aspx.cs">
+    <Compile Include="CSSecureSite\PromoCodeDetail.aspx.cs">
       <DependentUpon>PromoCodeDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\PromoCodeDetail.aspx.designer.cs">
+    <Compile Include="CSSecureSite\PromoCodeDetail.aspx.designer.cs">
       <DependentUpon>PromoCodeDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\PromoCodeSummary.aspx.cs">
+    <Compile Include="CSSecureSite\PromoCodeSummary.aspx.cs">
       <DependentUpon>PromoCodeSummary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\PromoCodeSummary.aspx.designer.cs">
+    <Compile Include="CSSecureSite\PromoCodeSummary.aspx.designer.cs">
       <DependentUpon>PromoCodeSummary.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ReportMain.aspx.cs">
+    <Compile Include="CSSecureSite\ReportMain.aspx.cs">
       <DependentUpon>ReportMain.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\ReportMain.aspx.designer.cs">
+    <Compile Include="CSSecureSite\ReportMain.aspx.designer.cs">
       <DependentUpon>ReportMain.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Reports.aspx.cs">
+    <Compile Include="CSSecureSite\Reports.aspx.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Reports.aspx.designer.cs">
+    <Compile Include="CSSecureSite\Reports.aspx.designer.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Reports1.aspx.cs">
+    <Compile Include="CSSecureSite\Reports1.aspx.cs">
       <DependentUpon>Reports1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Reports1.aspx.designer.cs">
+    <Compile Include="CSSecureSite\Reports1.aspx.designer.cs">
       <DependentUpon>Reports1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ResourceList.aspx.cs">
+    <Compile Include="CSSecureSite\ResourceList.aspx.cs">
       <DependentUpon>ResourceList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\ResourceList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\ResourceList.aspx.designer.cs">
       <DependentUpon>ResourceList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Shipping.aspx.cs">
+    <Compile Include="CSSecureSite\Shipping.aspx.cs">
       <DependentUpon>Shipping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Shipping.aspx.designer.cs">
+    <Compile Include="CSSecureSite\Shipping.aspx.designer.cs">
       <DependentUpon>Shipping.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\SIdReport.aspx.cs">
+    <Compile Include="CSSecureSite\SIdReport.aspx.cs">
       <DependentUpon>SIdReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\SIdReport.aspx.designer.cs">
+    <Compile Include="CSSecureSite\SIdReport.aspx.designer.cs">
       <DependentUpon>SIdReport.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\SitePrefItem.aspx.cs">
+    <Compile Include="CSSecureSite\SitePrefItem.aspx.cs">
       <DependentUpon>SitePrefItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\SitePrefItem.aspx.designer.cs">
+    <Compile Include="CSSecureSite\SitePrefItem.aspx.designer.cs">
       <DependentUpon>SitePrefItem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\SKUItem.aspx.cs">
+    <Compile Include="CSSecureSite\SKUItem.aspx.cs">
       <DependentUpon>SKUItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\SKUItem.aspx.designer.cs">
+    <Compile Include="CSSecureSite\SKUItem.aspx.designer.cs">
       <DependentUpon>SKUItem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\SKUList.aspx.cs">
+    <Compile Include="CSSecureSite\SKUList.aspx.cs">
       <DependentUpon>SKUList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\SKUList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\SKUList.aspx.designer.cs">
       <DependentUpon>SKUList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\State.aspx.cs">
+    <Compile Include="CSSecureSite\State.aspx.cs">
       <DependentUpon>State.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\State.aspx.designer.cs">
+    <Compile Include="CSSecureSite\State.aspx.designer.cs">
       <DependentUpon>State.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\StateTax.aspx.cs">
+    <Compile Include="CSSecureSite\StateTax.aspx.cs">
       <DependentUpon>StateTax.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\StateTax.aspx.designer.cs">
+    <Compile Include="CSSecureSite\StateTax.aspx.designer.cs">
       <DependentUpon>StateTax.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\CacheUtility.aspx.cs">
+    <Compile Include="CSSecureSite\CacheUtility.aspx.cs">
       <DependentUpon>CacheUtility.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\CacheUtility.aspx.designer.cs">
+    <Compile Include="CSSecureSite\CacheUtility.aspx.designer.cs">
       <DependentUpon>CacheUtility.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\TaxList.aspx.cs">
+    <Compile Include="CSSecureSite\TaxList.aspx.cs">
       <DependentUpon>TaxList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\TaxList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\TaxList.aspx.designer.cs">
       <DependentUpon>TaxList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\TemplateItem.aspx.cs">
+    <Compile Include="CSSecureSite\TemplateItem.aspx.cs">
       <DependentUpon>TemplateItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\TemplateItem.aspx.designer.cs">
+    <Compile Include="CSSecureSite\TemplateItem.aspx.designer.cs">
       <DependentUpon>TemplateItem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\TemplateList.aspx.cs">
+    <Compile Include="CSSecureSite\TemplateList.aspx.cs">
       <DependentUpon>TemplateList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\TemplateList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\TemplateList.aspx.designer.cs">
       <DependentUpon>TemplateList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\TransactionReport.aspx.cs">
+    <Compile Include="CSSecureSite\TransactionReport.aspx.cs">
       <DependentUpon>TransactionReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\TransactionReport.aspx.designer.cs">
+    <Compile Include="CSSecureSite\TransactionReport.aspx.designer.cs">
       <DependentUpon>TransactionReport.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UserControls\Attributes.ascx.cs">
+    <Compile Include="CSSecureSite\UserControls\Attributes.ascx.cs">
       <DependentUpon>Attributes.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\UserControls\Attributes.ascx.designer.cs">
+    <Compile Include="CSSecureSite\UserControls\Attributes.ascx.designer.cs">
       <DependentUpon>Attributes.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UserControls\DateControlReport.ascx.cs">
+    <Compile Include="CSSecureSite\UserControls\DateControlReport.ascx.cs">
       <DependentUpon>DateControlReport.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\UserControls\DateControlReport.ascx.designer.cs">
+    <Compile Include="CSSecureSite\UserControls\DateControlReport.ascx.designer.cs">
       <DependentUpon>DateControlReport.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UserControls\RangeDateControlReport.ascx.cs">
+    <Compile Include="CSSecureSite\UserControls\RangeDateControlReport.ascx.cs">
       <DependentUpon>RangeDateControlReport.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\UserControls\RangeDateControlReport.ascx.designer.cs">
+    <Compile Include="CSSecureSite\UserControls\RangeDateControlReport.ascx.designer.cs">
       <DependentUpon>RangeDateControlReport.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UserControls\DateControl.ascx.cs">
+    <Compile Include="CSSecureSite\UserControls\DateControl.ascx.cs">
       <DependentUpon>DateControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\UserControls\DateControl.ascx.designer.cs">
+    <Compile Include="CSSecureSite\UserControls\DateControl.ascx.designer.cs">
       <DependentUpon>DateControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UserControls\PageControl.ascx.cs">
+    <Compile Include="CSSecureSite\UserControls\PageControl.ascx.cs">
       <DependentUpon>PageControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\UserControls\RangeDateControl.ascx.cs">
+    <Compile Include="CSSecureSite\UserControls\RangeDateControl.ascx.cs">
       <DependentUpon>RangeDateControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\UserControls\RangeDateControl.ascx.designer.cs">
+    <Compile Include="CSSecureSite\UserControls\RangeDateControl.ascx.designer.cs">
       <DependentUpon>RangeDateControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UserEdit.aspx.cs">
+    <Compile Include="CSSecureSite\UserEdit.aspx.cs">
       <DependentUpon>UserEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\UserEdit.aspx.designer.cs">
+    <Compile Include="CSSecureSite\UserEdit.aspx.designer.cs">
       <DependentUpon>UserEdit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Users.aspx.cs">
+    <Compile Include="CSSecureSite\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Users.aspx.designer.cs">
+    <Compile Include="CSSecureSite\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\VersionCategoryList.aspx.cs">
+    <Compile Include="CSSecureSite\VersionCategoryList.aspx.cs">
       <DependentUpon>VersionCategoryList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\VersionCategoryList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\VersionCategoryList.aspx.designer.cs">
       <DependentUpon>VersionCategoryList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\VersionList.aspx.cs">
+    <Compile Include="CSSecureSite\VersionList.aspx.cs">
       <DependentUpon>VersionList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\VersionList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\VersionList.aspx.designer.cs">
       <DependentUpon>VersionList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\VersionReport.aspx.cs">
+    <Compile Include="CSSecureSite\VersionReport.aspx.cs">
       <DependentUpon>VersionReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\VersionReport.aspx.designer.cs">
+    <Compile Include="CSSecureSite\VersionReport.aspx.designer.cs">
       <DependentUpon>VersionReport.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\VersionReport1.aspx.cs">
+    <Compile Include="CSSecureSite\VersionReport1.aspx.cs">
       <DependentUpon>VersionReport1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\VersionReport1.aspx.designer.cs">
+    <Compile Include="CSSecureSite\VersionReport1.aspx.designer.cs">
       <DependentUpon>VersionReport1.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\OrderProcessor.cs" />
@@ -1446,7 +1446,7 @@
       <DependentUpon>TrackingPixels.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\FulfillmentHouse\DataPak.cs" />
-    <Compile Include="Admin\BasePage.cs">
+    <Compile Include="CSSecureSite\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.cs">
@@ -1612,11 +1612,11 @@
     <Compile Include="UserControls\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\PaymentProviderList.aspx.cs">
+    <Compile Include="CSSecureSite\PaymentProviderList.aspx.cs">
       <DependentUpon>PaymentProviderList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\PaymentProviderList.aspx.designer.cs">
+    <Compile Include="CSSecureSite\PaymentProviderList.aspx.designer.cs">
       <DependentUpon>PaymentProviderList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1659,7 +1659,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AdminSite.Master" />
+    <Content Include="CSSecureSite\AdminSite.Master" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -1672,7 +1672,7 @@
     <None Include="Service References\HitLinks\reportws.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Admin\UserControls\PageControl.ascx.resx">
+    <EmbeddedResource Include="CSSecureSite\UserControls\PageControl.ascx.resx">
       <DependentUpon>PageControl.ascx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

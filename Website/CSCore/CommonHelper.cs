@@ -750,6 +750,9 @@ namespace CSCore.Utils
             {
                 HttpCookie cookie = new HttpCookie(cookieName);
                 cookie.Value = HttpContext.Current.Server.UrlEncode(cookieValue);
+                cookie.HttpOnly = true;
+                if (IsCurrentConnectionSecured())
+                    cookie.Secure = true;
                 HttpContext.Current.Response.Cookies.Add(cookie);
             }
             catch (Exception exc)
@@ -772,6 +775,9 @@ namespace CSCore.Utils
                 cookie.Value = HttpContext.Current.Server.UrlEncode(cookieValue);
                 DateTime dt = DateTime.Now;
                 cookie.Expires = dt.Add(ts);
+                cookie.HttpOnly = true;
+                if (IsCurrentConnectionSecured())
+                    cookie.Secure = true;
                 HttpContext.Current.Response.Cookies.Add(cookie);
             }
             catch (Exception exc)
