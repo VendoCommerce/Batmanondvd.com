@@ -90,6 +90,17 @@ namespace CSWeb.Mobile.UserControls
             }
         }
 
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            ClearCart();
+        }
+
+        private void ClearCart()
+        {
+            //reset entire Context object
+            Session["ClientOrderData"] = null;
+        }
+
         private void BindData()
         {
             if (orderId > 0)

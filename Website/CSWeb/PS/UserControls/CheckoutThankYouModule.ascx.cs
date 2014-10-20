@@ -7,13 +7,13 @@ using CSBusiness.Cache;
 using System.Collections.Generic;
 using CSBusiness;
 using System.Web.UI.WebControls;
-using CSWeb.Root.Store;
+using CSWeb.PS.Store;
 using System.Text;
 using CSBusiness.Attributes;
 using System.Linq;
 using CSWebBase;
 
-namespace CSWeb.Root.UserControls
+namespace CSWeb.PS.UserControls
 {
     /// <summary>
     /// 
@@ -26,11 +26,11 @@ namespace CSWeb.Root.UserControls
             LiteralAddress2_b, ltOrderId, ltOfferTerms;
 
         protected DataList dlordersList;
-        protected Label lblPurchaseName, lblPromotionPrice;
+protected Label lblPurchaseName, lblPromotionPrice;
         protected System.Web.UI.WebControls.Panel pnlRushLabel, pnlRush, pnlPromotionalAmount, pnlPromotionLabel;
         protected HyperLink hlPrintLink;
-        public int orderId = 0;
-
+       public   int orderId = 0;
+        
         private ClientCartContext CartContext
         {
             get
@@ -40,7 +40,7 @@ namespace CSWeb.Root.UserControls
         }
 
 
-        protected void Page_Load(object sender, EventArgs e)
+         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["oId"] != null)
                 orderId = Convert.ToInt32(Session["oId"]);
@@ -70,16 +70,16 @@ namespace CSWeb.Root.UserControls
             }
         }
 
-        protected void Page_Unload(object sender, EventArgs e)
-        {
-            ClearCart();
-        }
+         protected void Page_Unload(object sender, EventArgs e)
+         {
+             ClearCart();
+         }
 
-        private void ClearCart()
-        {
-            //reset entire Context object
-            Session["ClientOrderData"] = null;
-        }
+         private void ClearCart()
+         {
+             //reset entire Context object
+             Session["ClientOrderData"] = null;
+         }
 
         private void BindData()
         {
@@ -88,7 +88,7 @@ namespace CSWeb.Root.UserControls
                 Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderId);
                 dlordersList.DataSource = orderData.SkuItems.Where<Sku>(x => { return x.SkuCode != "Shipping"; });
                 dlordersList.DataBind();
-                LiteralSubTotal.Text = Math.Round(OrderValues.GetSubTotal(orderData), 2).ToString();
+                LiteralSubTotal.Text = Math.Round(OrderValues.GetSubTotal(orderData),2).ToString();
                 LiteralShipping.Text = Math.Round(OrderValues.GetShippingCharge(orderData), 2).ToString("f2");
                 LiteralTax.Text = Math.Round(orderData.Tax, 2).ToString();
                 LiteralTotal.Text = Math.Round(orderData.Total, 2).ToString();
@@ -99,18 +99,18 @@ namespace CSWeb.Root.UserControls
                     LiteralRushShipping.Text = Math.Round(orderData.RushShippingCost, 2).ToString();
                 }
 
-
+             
                 if (orderData.DiscountCode.Length > 0)
                 {
                     pnlPromotionLabel.Visible = true;
                     pnlPromotionalAmount.Visible = true;
-
+              
                     lblPromotionPrice.Text = String.Format("(${0:0.00})", orderData.DiscountAmount);
                 }
 
 
                 ltOrderId.Text = orderData.OrderId.ToString();
-                LiteralName.Text = String.Format("{0} {1}", orderData.CustomerInfo.ShippingAddress.FirstName, orderData.CustomerInfo.ShippingAddress.LastName);
+                 LiteralName.Text = String.Format("{0} {1}", orderData.CustomerInfo.ShippingAddress.FirstName, orderData.CustomerInfo.ShippingAddress.LastName);
                 LiteralEmail.Text = orderData.CustomerInfo.Email;
                 LiteralAddress.Text = orderData.CustomerInfo.ShippingAddress.Address1;
                 LiteralCity.Text = orderData.CustomerInfo.ShippingAddress.City;
@@ -122,15 +122,15 @@ namespace CSWeb.Root.UserControls
                 LiteralCity_b.Text = orderData.CustomerInfo.BillingAddress.City;
                 LiteralZip_b.Text = orderData.CustomerInfo.BillingAddress.ZipPostalCode;
                 LiteralState_b.Text = StateManager.GetStateName(orderData.CustomerInfo.BillingAddress.StateProvinceId);
-
+                   
                 //Google Analutics E-Commerce Pixel
                 //LoadGoogleAnalytics(orderData);
 
                 LoadOfferTerms(CartContext.CartInfo.CartItems[0]);
-
+        
             }
-
-        }
+			
+         }
 
 
         private void LoadOfferTerms(Sku sku)
@@ -150,12 +150,12 @@ namespace CSWeb.Root.UserControls
                 sb.AppendLine("var pageTracker = _gat._getTracker('UA-10581943-59');");
                 sb.AppendLine("pageTracker._trackPageview();");
                 sb.AppendFormat("pageTracker._addTrans('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}' );\n", Order.OrderId, "", Order.Total, Math.Round(Order.Tax, 2), Math.Round(Order.ShippingCost, 2), Order.CustomerInfo.BillingAddress.City, Order.CustomerInfo.BillingAddress.StateProvinceId, CountryManager.CountryName(Order.CustomerInfo.BillingAddress.CountryId));
+                
 
-
-                foreach (Sku sku in Order.SkuItems)
+                foreach (Sku sku in  Order.SkuItems)
                 {
-                    sb.AppendFormat("pageTracker._addItem('{0}','{1}','{2}','{3}','{4}','{5}');\n", Order.OrderId, sku.SkuCode, sku.Title, "", Math.Round(Convert.ToDouble(sku.InitialPrice), 2), sku.Quantity);
-                }
+                    sb.AppendFormat("pageTracker._addItem('{0}','{1}','{2}','{3}','{4}','{5}');\n", Order.OrderId, sku.SkuCode, sku.Title, "", Math.Round(Convert.ToDouble(sku.InitialPrice), 2), sku.Quantity);                    
+                }                
                 sb.AppendLine("pageTracker._trackTrans();");
                 sb.AppendLine("</script>");
                 LiteralGoogleAnalytics.Text = sb.ToString();

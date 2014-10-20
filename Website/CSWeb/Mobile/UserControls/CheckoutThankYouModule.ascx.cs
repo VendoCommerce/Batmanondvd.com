@@ -47,12 +47,17 @@ protected Label lblPurchaseName, lblPromotionPrice;
             {
                 BindData();
                 //Fire OrderConfirmation Test
-                OrderHelper.SendOrderCompletedEmail(orderId);
+                if (CartContext.CustomerInfo.Email.ToLower().Contains("conversionsystems.com"))
+                    OrderHelper.SendOrderCompletedEmail(orderId);
 
-                //reset entire Context object
-                //this.CartContext.EmptyData();
             }
         }
+
+         protected void Page_Unload(object sender, EventArgs e)
+         {
+             //reset entire Context object
+             //this.CartContext.EmptyData();
+         }
 
          private void LoadOfferTerms(Sku sku)
          {
