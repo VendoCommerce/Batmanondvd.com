@@ -14,6 +14,7 @@ using CSBusiness.Payment;
 using CSBusiness.CustomerManagement;
 using System.Collections;
 using CSBusiness.Attributes;
+using CSBusiness.Security;
 
 
 namespace CSBusiness.OrderManagement
@@ -278,6 +279,9 @@ namespace CSBusiness.OrderManagement
         {
 
             List<Order> OrderList = new List<Order>();
+
+            email = CSCore.Utils.CommonHelper.Encrypt(email);
+
             using (DataTable DtTable = OrderDAL.GetAllOrders(startDate, endDate, includeArchiveData, startRec, endRec, firstName, lastName, email, out totalCount))
             {
                 foreach (DataRow row in DtTable.Rows)
@@ -301,6 +305,10 @@ namespace CSBusiness.OrderManagement
                     customer.LastName = Convert.ToString(row["lastName"]);
 
                     item.CustomerInfo = customer;
+
+                    //Decrypy sensitive data before save
+                    item.IsEncrpyed = true;
+                    Encryption.DecryptValues(item); 
 
                     OrderList.Add(item);
                 }
@@ -335,6 +343,10 @@ namespace CSBusiness.OrderManagement
                 }
 
             }
+
+            //Decrypy sensitive data before save
+            item.IsEncrpyed = true;
+            Encryption.DecryptValues(item); 
 
             return item;
         }
@@ -448,7 +460,7 @@ namespace CSBusiness.OrderManagement
                     paymentDataInfo.TransactionCode = reader["TransactionCode"].ToString();
                     item.CreditInfo = paymentDataInfo;
 
-                    Security.Encryption.DecryptValues(item.CustomerInfo);
+                    Security.Encryption.DecryptValues(item);
                         
                     items.Add(item);
                 }
@@ -562,6 +574,10 @@ namespace CSBusiness.OrderManagement
 
             }
 
+            //Decrypy sensitive data before save
+            item.IsEncrpyed = true;
+            Encryption.DecryptValues(item); 
+
             return item;
         }
 
@@ -589,6 +605,9 @@ namespace CSBusiness.OrderManagement
                         attributeValuesElem.Add(new XElement(Attributes.Attribute.CaseFixAttributeName(attributeName), custData.OrderAttributeValues[attributeName].Value));
 
                 int CustomerId = CSResolve.Resolve<ICustomerService>().UpdateCustomer(0, custData.CustomerInfo);
+
+                //Encrypt sensitive data before save
+                Encryption.EncryptValues(custData.CustomerInfo); 
 
                 XElement xElem = new XElement("order",
                                                     new XAttribute("ObjectName", Order.objectName),
@@ -659,8 +678,11 @@ namespace CSBusiness.OrderManagement
                     rootNode.Add(cItemElem);
                 }
 
+                //Decrypt sensitive data before save
+                Encryption.DecryptValues(custData.CustomerInfo); 
 
                 return OrderDAL.SaveOrder(0, rootNode.ToString(), custData.RequestParam);
+
             }
             catch (Exception ex)
             {                
@@ -686,6 +708,10 @@ namespace CSBusiness.OrderManagement
 
                 foreach (string attributeName in custData.OrderAttributeValues.Keys)
                     attributeValuesElem.Add(new XElement(Attributes.Attribute.CaseFixAttributeName(attributeName), custData.OrderAttributeValues[attributeName].Value));
+
+                //Encrypt sensitive data before save
+                Encryption.EncryptValues(custData.CustomerInfo); 
+
 
                 XElement xElem = new XElement("order",
                                                     new XAttribute("ObjectName", Order.objectName),
@@ -714,6 +740,10 @@ namespace CSBusiness.OrderManagement
                 rootNode.Add(xElem);
 
                 OrderDAL.SaveOrder(orderId, rootNode.ToString(), "");
+
+                //Decrypt sensitive data before save
+                Encryption.DecryptValues(custData.CustomerInfo); 
+
             }
             catch (Exception ex)
             {
@@ -966,6 +996,9 @@ namespace CSBusiness.OrderManagement
 
                 }
             }
+
+            //Decrypt sensitive data before save
+            Encryption.DecryptValues(item); 
 
             return item;
 

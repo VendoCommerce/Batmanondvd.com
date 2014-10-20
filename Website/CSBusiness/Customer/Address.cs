@@ -117,6 +117,9 @@ namespace CSBusiness.CustomerManagement
         public string CountryCode { get; set; }
         #endregion 
 
+        /// <summary>
+        /// Specifies whether this object is already encrypted or not.
+        /// </summary>
         [IsEncryptedAttribute]
         public bool IsEncrpyed { get; set; }
 

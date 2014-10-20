@@ -3,6 +3,7 @@ using CSBusiness.Resolver;
 using CSBusiness.CustomerManagement;
 using System.Collections.Generic;
 using CSBusiness.Payment;
+using CSBusiness.Security;
 
 namespace CSBusiness.OrderManagement
 {
@@ -36,6 +37,7 @@ namespace CSBusiness.OrderManagement
         /// <summary>
         /// Gets or sets the email
         /// </summary>
+        [SensitiveData]
         public string Email { get; set; }
 
         /// <summary>
@@ -166,6 +168,12 @@ namespace CSBusiness.OrderManagement
         /// </summary>
         public string OrderStatus { get; set; }
         #endregion
+
+        /// <summary>
+        /// Specifies whether this object is already encrypted or not.
+        /// </summary>
+        [IsEncryptedAttribute]
+        public bool IsEncrpyed { get; set; }
 
 
     }
