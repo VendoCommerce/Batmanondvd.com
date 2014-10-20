@@ -98,7 +98,7 @@
                                 <table class="category_header_table" width="726" cellpadding="0" cellspacing="0">
                                 <tr><td>
                                     <b>
-                                        <asp:Label ID="lblCategory" runat="server"  Visible="false"/></b>
+                                        <asp:Label ID="lblCategory" runat="server" /></b>
                                        </td></tr></table>
                                 </td>
                             </tr>

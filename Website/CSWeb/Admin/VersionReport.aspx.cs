@@ -164,6 +164,7 @@ namespace CSWeb.Admin
                 HtmlContainerControl CategoryHeaderRow = e.Item.FindControl("CategoryHeaderRow") as HtmlContainerControl;
 
                 lblCategory.Text = versionItem.Title;
+                if (lblCategory.Text == "Default") lblCategory.Visible = false;
                 if (dtCollectionList[0].Count == 1)
                 {
                     CategoryHeaderRow.Visible = false;
