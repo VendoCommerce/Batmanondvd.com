@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="form_line clearfix">
                                     <div class="error-1">
-                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" Display="Dynamic" ControlToValidate="txtEmail" Enabled="False"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" Display="Dynamic" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail"
                                             Display="Dynamic" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" />
                                         <asp:Label ID="lblEmailError" runat="server" Visible="false"></asp:Label>

@@ -221,6 +221,7 @@ namespace CSWeb.Mobile.Store
                             }
                         }
                     }
+                    templateBody = UpdateTemplateForGiftWrapItems(templateBody);
                     StringBuilder sb = new StringBuilder();
                     sb.Append(templateBody);
 
@@ -249,6 +250,35 @@ namespace CSWeb.Mobile.Store
                 }
             }
         }
+
+
+        private string UpdateTemplateForGiftWrapItems(string template)
+        {
+            if (template.Contains("[GiftWrapItems]"))
+            {
+
+                string items = string.Empty;
+                int totalSkus = GetTotalItemsInCart();
+                for (int i = 1; i <= totalSkus; i++)
+                {
+                    items += string.Format(@"<option value=""{0}"">{0}</option>", i.ToString());
+                }
+
+                template = template.Replace("[GiftWrapItems]", items);
+            }
+            return template;
+        }
+
+        private int GetTotalItemsInCart()
+        {
+            int totalSkus = 0;
+            foreach (Sku sku in CartContext.CartInfo.CartItems)
+            {
+                totalSkus += sku.Quantity;
+            }
+            return totalSkus;
+        }
+
 
         private string BindValidators(string templateBody)
         {
