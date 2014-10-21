@@ -14,7 +14,6 @@ namespace CSWeb.Root.Store
         protected global::CSWeb.Root.UserControls.ShippingBillingCreditForm bscfShippingBillingCreditForm;
         protected override void Page_Load(object sender, EventArgs e)
         {
-            ClientScript.RegisterStartupScript(typeof(string), "ShowPopup", "MM_showHideLayers('mask','','hide');");
             base.Page_Load(sender, e);
         }
     }
