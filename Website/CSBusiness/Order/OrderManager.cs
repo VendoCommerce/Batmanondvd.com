@@ -280,7 +280,8 @@ namespace CSBusiness.OrderManagement
 
             List<Order> OrderList = new List<Order>();
 
-            email = CSCore.Utils.CommonHelper.Encrypt(email);
+            if (email.Length>0)
+                email = CSCore.Utils.CommonHelper.Encrypt(email);
 
             using (DataTable DtTable = OrderDAL.GetAllOrders(startDate, endDate, includeArchiveData, startRec, endRec, firstName, lastName, email, out totalCount))
             {
