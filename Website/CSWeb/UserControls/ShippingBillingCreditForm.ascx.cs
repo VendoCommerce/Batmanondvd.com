@@ -578,6 +578,10 @@ namespace CSWeb.Root.UserControls
                 Response.Redirect(string.Format("Postsale.aspx"));
 
             }
+            //else
+            //    txtAddress1.Focus();
+                //imgBtn.Focus();
+               // ScriptManager.RegisterStartupScript(pnlShippingAddress, this.GetType(), "scrolltobottom", "window.scrollTo(0,document.body.scrollHeight);", true);
 
 
         }

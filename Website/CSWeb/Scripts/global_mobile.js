@@ -347,7 +347,7 @@ function pageLoad() //use to resolve postback issues
 //put jquery code that doesn't work with document ready in here	
 }
 function MM_showHideLayers() { //v9.0    
-    window.scrollTo(0, 0);
+    //window.scrollTo(0, 0);
     var i, p, v, obj, args = MM_showHideLayers.arguments;
     for (i = 0; i < (args.length - 2); i += 3)
         with (document) if (getElementById && ((obj = getElementById(args[i])) != null)) {

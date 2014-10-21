@@ -8,9 +8,11 @@
     ValidatorUpdateIsValid = function () {
         pointerToMicrosoftValidator();
         if (Page_IsValid) {
+            //MM_showHideLayers('mask', '', 'show');
 
         } else {
-            MM_showHideLayers('mask', '', 'hide');
+            //window.scrollTo(0, document.body.scrollHeight);
+           MM_showHideLayers('mask', '', 'hide');
         }
         // do something after Microsoft finishes 
     }
@@ -341,5 +343,5 @@
 
 
 <!-- end Rootontent -->
-<%--</ContentTemplate>--%>
-<%--</asp:UpdatePanel>--%>
+<%--</ContentTemplate>
+</asp:UpdatePanel>--%>
