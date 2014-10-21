@@ -13,7 +13,7 @@
 <div id="stretch_container">
 <div id="receipt_content"  style="height: auto; width: 875px; position:relative;padding: 30px 60px 0 60px;color: #5c5c5c;">
 
-<p style="text-align:right"><a href="receipt_friendly.aspx" style="color: #000">Print order for your records <img src="/Content/Images/print_icon.jpg" width="32" height="24" style="vertical-align:top" /></a></p>
+<p style="text-align:right"><a href="receipt_friendly" style="color: #000">Print order for your records <img src="/Content/Images/print_icon.jpg" width="32" height="24" style="vertical-align:top" /></a></p>
 <p style="line-height: normal; padding-bottom: 10px; font-size: 30px; color: #000; margin: 0; color: #000;">Thank you <asp:Label ID="lblPurchaseName" runat="server" />!</p>
 
 <p style="text-align:right"><img src="/Content/Images/receipt_logo.jpg" /></p>

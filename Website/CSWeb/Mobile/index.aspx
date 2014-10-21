@@ -72,7 +72,7 @@
     </div>
     
     <div class="fleft" style="width: 296px;">
-        <a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_ordernow_home.png" width="296" height="81" alt="Order Now" class="block" /></a>
+        <a href="choose"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_ordernow_home.png" width="296" height="81" alt="Order Now" class="block" /></a>
     </div>
     <div class="clear"></div>
     <h2 class="text-center f38 pad6" style="padding: 35px 0 0 0;">Your 12 DVD Classic Collection Features<br />
@@ -120,7 +120,7 @@
         <h2 class="f63 white pad0" style="padding-top: 0; line-height: 68px;">Holy Special Delivery!</h2>
         <h3 class="f39 white">Don't Wait, Get the Collection Now!</h3>
         <p class="white">They protected the streets of Gotham and flew into our collective hearts with their hilarious hijinks, over-the-top costumes and simply feel good fun. What are you waiting for? It’s the Bat Signal!</p>
-        <p class="f40 bold"><a href="choose.aspx">Act Now<span style="display: inline-block; text-decoration: none; padding-left: 10px;"> ›</span></a></p>
+        <p class="f40 bold"><a href="choose">Act Now<span style="display: inline-block; text-decoration: none; padding-left: 10px;"> ›</span></a></p>
     </div>
 
 </div>

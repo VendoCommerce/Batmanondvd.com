@@ -32,7 +32,7 @@
                 <h2>Unable to process request<br />
                     because your session is expired. <br />Please try again.
                 </h2>
-                <h3 class="f30" style="line-height: 1.2em;"> Better <a href="index.aspx" class="black">race back to the Batcave</a>!</h3>
+                <h3 class="f30" style="line-height: 1.2em;"> Better <a href="index" class="black">race back to the Batcave</a>!</h3>
             </div>
         </div>
 

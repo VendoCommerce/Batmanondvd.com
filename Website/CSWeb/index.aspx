@@ -27,7 +27,7 @@
 <!--#include file="header.html"-->
 <div class="container">
     <div class="clearfix" style="height: 136px; overflow: visible;">
-        <div class="content_logo"><a href="index.aspx" style="position: absolute;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
+        <div class="content_logo"><a href="index" style="position: absolute;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr" style="padding-top: 28px;">
             <h2 class="f50">Holy Classic Collection Batman!</h2>
             <h3 class="f26">For the First Time Ever &mdash; Digitally Remastered <span class="webfont1bold">Plus 3 FREE Bonus DVDs!</span></h3>
@@ -79,7 +79,7 @@
                 <h3><img src="//d1kg9stb0ddjcv.cloudfront.net/images/hdr_greatscott.png" alt="'Great Scott!' Don't Wait, Act Now! Only 5 Easy Payments of $19.99 + FREE S&H!" /></h3>
             </div>
             <div class="fleft" style="width: 320px; padding-top: 3px;">
-                <a href="choose.aspx">
+                <a href="choose">
                     <img src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_ordernow.png" alt="Order Now" /></a>
             </div>
         </div>
@@ -103,7 +103,7 @@
         </div>
         
         <div style="position: absolute; top: 276px; left: 404px; width: 505px;">
-            <p class="f16 lh20 white">They protected the streets of Gotham and flew into our collective hearts with their hilarious hijinks, over –the-top costumes and simply feel good fun. What are you waiting for? It’s the Bat Signal! <a href="choose.aspx" class="bold">Act Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+            <p class="f16 lh20 white">They protected the streets of Gotham and flew into our collective hearts with their hilarious hijinks, over –the-top costumes and simply feel good fun. What are you waiting for? It’s the Bat Signal! <a href="choose" class="bold">Act Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
         </div>
     </div>
     <div class="home3">
@@ -124,14 +124,14 @@
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
                 <div><img src="//d1kg9stb0ddjcv.cloudfront.net/images/homeslide_2.jpg" class="block" />
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
                 
@@ -139,7 +139,7 @@ our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="dis
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
                 
@@ -147,7 +147,7 @@ our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="dis
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
                 
@@ -155,7 +155,7 @@ our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="dis
                     <div style="width: 387px; padding-top: 18px;">
                 <h2 class="text-center caps green f28 pad6">Your Favorite Diabolical Foes</h2>
                 <p class="f16 lh20 text-center" style="padding: 0 20px;">From the raucous Riddler to the calculating Catwoman, watch as they attempt to confound
-our Caped Crusaders. <a href="cast.aspx" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
+our Caped Crusaders. <a href="cast" class="bold">See It Now<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></p>
             </div>
                 </div>
 

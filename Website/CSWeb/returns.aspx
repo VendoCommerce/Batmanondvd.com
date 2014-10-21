@@ -26,7 +26,7 @@
 
 <div class="container">
     <div class="clearfix">
-        <div class="content_logo"><a href="index.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
+        <div class="content_logo"><a href="index"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr">
             <h2 class="f50">Return Policy</h2>
             <h3>A true crimefighter is prepared for everything!</h3>

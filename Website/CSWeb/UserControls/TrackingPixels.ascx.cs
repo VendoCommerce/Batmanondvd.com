@@ -96,7 +96,7 @@ namespace CSWeb.Root.UserControls
         {
             string url = Request.Url.AbsolutePath.ToLower();
 
-            if (url.EndsWith("/index.aspx"))
+            if (url.Contains("/index"))
             {
                 pnlHomePage.Visible = true;
             }
