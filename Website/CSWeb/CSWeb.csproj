@@ -114,6 +114,8 @@
     <Content Include="400.aspx" />
     <Content Include="500.aspx" />
     <Content Include="AddProduct.aspx" />
+    <Content Include="CSSecureSite\400.aspx" />
+    <Content Include="CSSecureSite\500.aspx" />
     <Content Include="CSSecureSite\Attributes.aspx" />
     <Content Include="CSSecureSite\docs_icons.aspx" />
     <Content Include="CSSecureSite\docs_reportpage.aspx" />
@@ -761,6 +763,20 @@
     </Compile>
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSSecureSite\400.aspx.cs">
+      <DependentUpon>400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSecureSite\400.aspx.designer.cs">
+      <DependentUpon>400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSSecureSite\500.aspx.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSecureSite\500.aspx.designer.cs">
+      <DependentUpon>500.aspx</DependentUpon>
     </Compile>
     <Compile Include="CSSecureSite\Attributes.aspx.cs">
       <DependentUpon>Attributes.aspx</DependentUpon>

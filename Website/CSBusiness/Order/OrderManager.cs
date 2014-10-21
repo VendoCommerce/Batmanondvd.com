@@ -306,11 +306,15 @@ namespace CSBusiness.OrderManagement
                     customer.LastName = Convert.ToString(row["lastName"]);
 
                     item.CustomerInfo = customer;
-
-                    //Decrypy sensitive data before save
-                    item.IsEncrpyed = true;
-                    Encryption.DecryptValues(item); 
-
+                    try
+                    {
+                        //Decrypy sensitive data before save
+                        item.IsEncrpyed = true;
+                        Encryption.DecryptValues(item);
+                    }
+                    catch (Exception)
+                    {
+                    }
                     OrderList.Add(item);
                 }
 
