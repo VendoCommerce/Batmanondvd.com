@@ -465,6 +465,7 @@ namespace CSBusiness.OrderManagement
                     paymentDataInfo.TransactionCode = reader["TransactionCode"].ToString();
                     item.CreditInfo = paymentDataInfo;
 
+                    item.IsEncrpyed = true;
                     Security.Encryption.DecryptValues(item);
                         
                     items.Add(item);
@@ -953,6 +954,7 @@ namespace CSBusiness.OrderManagement
                         item.CustomerInfo.ShippingAddress.CountryCode = string.Empty;
                     }
 
+                    item.IsEncrpyed = true;
                      Security.Encryption.DecryptValues(item.CustomerInfo);
 
                    PaymentInformation paymentDataInfo = new PaymentInformation();
@@ -1003,6 +1005,7 @@ namespace CSBusiness.OrderManagement
             }
 
             //Decrypt sensitive data before save
+            item.IsEncrpyed = true;
             Encryption.DecryptValues(item); 
 
             return item;

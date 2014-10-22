@@ -15,12 +15,12 @@ namespace CSWeb
     public class Global : CSBusiness.Web.CSBaseGlobal
     {
 
-        public void Application_BeginRequest(object sender, EventArgs e)
-        {
-            //string uri = Request.Url.AbsolutePath.Replace(".aspx", "");
-            //if (!Request.Url.AbsolutePath.Contains( "400.aspx") && Request.Url.AbsolutePath.Contains( ".aspx"))
-            //    Response.Redirect(uri, true);
-        }
+        //public void Application_BeginRequest(object sender, EventArgs e)
+        //{
+        //    string uri = Request.Url.AbsolutePath.Replace(".aspx", "");
+        //    if (!Request.Url.AbsolutePath.Contains("400.aspx") && Request.Url.AbsolutePath.Contains(".aspx"))
+        //        Response.Redirect(uri, true);
+        //}
 
         public override void Application_Error(object sender, EventArgs e)
         {
