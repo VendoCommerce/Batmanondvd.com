@@ -35,9 +35,13 @@ namespace CSWeb.Mobile.Store
             {
                 orderId = Convert.ToInt32(Session["oid"].ToString());
             }
-            else
+            else if (CartContext.OrderId > 0)
             {
                 orderId = CartContext.OrderId;
+            }
+            else
+            {
+                Response.Redirect("index.aspx");
             }
             Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderId, true);
 
