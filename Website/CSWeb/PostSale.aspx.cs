@@ -67,6 +67,11 @@ namespace CSWeb.Root.Store
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (CartContext.OrderId <= 0)
+            {
+                Response.Redirect("index.aspx");
+            }
+
             if (OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
             {
                 Response.Redirect("receipt.aspx");
