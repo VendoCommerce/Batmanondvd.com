@@ -22,19 +22,19 @@ namespace CSWeb.Mobile.Store
                 if (orderData.OrderStatusId == 2)
                 {
                     // this means that  customer clicked back, so should be directed to receipt page.
-                    Response.Redirect("~/receipt.aspx");
+                    Response.Redirect("receipt.aspx");
                 }
 
                 if (orderData.OrderStatusId == 1)
                 {
                     // this means that  customer clicked back, so should be directed to receipt page.
-                    Response.Redirect("~/PostSale.aspx");
+                    Response.Redirect("PostSale.aspx");
                 }
 
                 if (orderData.OrderStatusId == 4 || orderData.OrderStatusId == 5)
                 {
                     // this means that  customer clicked back, so should be directed to receipt page.
-                    Response.Redirect("~/AuthorizeOrder.aspx");
+                    Response.Redirect("AuthorizeOrder.aspx");
                 }
 
 
