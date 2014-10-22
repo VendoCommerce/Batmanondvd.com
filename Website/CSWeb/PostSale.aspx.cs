@@ -67,6 +67,7 @@ namespace CSWeb.Root.Store
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
             {
                 Response.Redirect("receipt.aspx");
@@ -74,6 +75,10 @@ namespace CSWeb.Root.Store
 
             if (!IsPostBack)
             {
+                Response.Buffer = true;
+                Response.ExpiresAbsolute = DateTime.Now.AddHours(-1);
+                Response.Expires = 0;
+                Response.CacheControl = "no-cache";
                 AllTemplates = GetTemplates();
                 CurrentTemplateIndex = -1;
                 GoToNextTemplate();
