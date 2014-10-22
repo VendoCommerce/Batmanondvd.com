@@ -14,15 +14,9 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key="JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<%--<script src="/Scripts/NoBack.js"></script>--%>
-    <link href="../styles/global.css" rel="stylesheet" type="text/css" />
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Pragma" content="no-cache">
-    <script type="text/javascript">
-        window.history.forward(1);
-    </script>
-</head>
+<script src="/Scripts/NoBack.js"></script>
+<link href="../styles/global.css" rel="stylesheet" type="text/css" />
+    </head>
 <body id="upsells">
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
