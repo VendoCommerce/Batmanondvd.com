@@ -13,12 +13,23 @@ namespace CSWeb.Root.Store
 {
     public partial class cart : SiteBasePage
     {
+        public ClientCartContext ClientOrderData2
+        {
+            get
+            {
+                return (ClientCartContext)Session["ClientOrderData"];
+            }
+            set
+            {
+                Session["ClientOrderData"] = value;
+            }
+        }
         protected global::CSWeb.Root.UserControls.ShippingBillingCreditForm bscfShippingBillingCreditForm;
         protected override void Page_Load(object sender, EventArgs e)
         {
-            if (ClientOrderData.OrderId > 0)
+            if (ClientOrderData2.OrderId > 0)
             {
-                Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(ClientOrderData.OrderId, true);
+                Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(ClientOrderData2.OrderId, true);
                 if (orderData.OrderStatusId == 2)
                 {
                     // this means that  customer clicked back, so should be directed to receipt page.
