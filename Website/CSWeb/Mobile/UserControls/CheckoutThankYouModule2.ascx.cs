@@ -98,7 +98,8 @@ namespace CSWeb.Mobile.UserControls
         private void ClearCart()
         {
             //reset entire Context object
-            Session["ClientOrderData"] = null;
+            //Session["ClientOrderData"] = null;
+            this.CartContext.EmptyData();
         }
 
         private void BindData()
