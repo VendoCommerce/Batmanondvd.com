@@ -7,6 +7,7 @@ using CSBusiness.Cache;
 using System.Collections.Generic;
 using CSBusiness;
 using System.Web.UI.WebControls;
+using CSBusiness.ShoppingManagement;
 using CSWeb.Root.Store;
 using System.Text;
 using CSBusiness.Attributes;
@@ -83,6 +84,8 @@ namespace CSWeb.Root.UserControls
             //reset entire Context object
             //Session["ClientOrderData"] = null;
             this.CartContext.EmptyData();
+            CartContext.CartInfo = new Cart();
+            CartContext.OrderId = orderId;
         }
 
         private void BindData()
