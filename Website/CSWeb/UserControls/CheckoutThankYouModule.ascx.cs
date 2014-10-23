@@ -60,6 +60,9 @@ namespace CSWeb.Root.UserControls
                         orderAttributes.Add("OrderFlowCompleted", new CSBusiness.Attributes.AttributeValue("1"));
                         CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderData.OrderId, orderAttributes, orderData.OrderStatusId);
                     }
+
+                    UserSessions.InsertSessionEntry(Context, true, CartContext.CartInfo.Total,CartContext.CustomerInfo.CustomerId);
+
                 }
 
                 BindData();

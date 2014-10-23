@@ -410,7 +410,7 @@ namespace CSWeb.Root.UserControls
 
                 if (CommonHelper.EnsureNotNull(txtZipCode.Text) == String.Empty)
                 {
-                    lblZiPError.Text = ResourceHelper.GetResoureValue("ShippingZipCodeErrorMsg");
+                    lblZiPError.Text = ResourceHelper.GetResoureValue("BillingZipCodeErrorMsg");
                     lblZiPError.Visible = true;
                     _bError = true;
                 }
@@ -418,7 +418,7 @@ namespace CSWeb.Root.UserControls
                 {
                     if (!CommonHelper.IsValidZipCode(txtZipCode.Text))
                     {
-                        lblZiPError.Text = ResourceHelper.GetResoureValue("ShippingZipCodeValidationErrorMsg");
+                        lblZiPError.Text = ResourceHelper.GetResoureValue("BillingZipCodeValidationErrorMsg");
                         lblZiPError.Visible = true;
                         _bError = true;
 

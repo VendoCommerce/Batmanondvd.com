@@ -220,9 +220,9 @@
                                     </div>
                                     <div class="form_line clearfix">
                                         <div class="error-1">
-                                            <asp:Label ID="lblStateError" runat="server" Visible="False" Enabled="False"></asp:Label>
+                                            <asp:Label ID="lblStateError" runat="server" Visible="False"></asp:Label>
                                             <asp:RequiredFieldValidator ID="rfvState" runat="server" Display="Dynamic"
-                                                ControlToValidate="ddlState"></asp:RequiredFieldValidator>
+                                                ControlToValidate="ddlState" Enabled="False"></asp:RequiredFieldValidator>
                                         </div>
                                         <label class="label-1">
                                             State*</label>
@@ -320,7 +320,7 @@
                             </div>
 
                             <div class="form_line_btn">
-                                <p class="f12 pad6" style="padding-left: 8px;">By clicking here, I agree to the <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank">Terms of Service</a>, <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> and <a href="returns" target="_blank">Return Policy</a>.</p>
+                                <p class="f12 pad6" style="padding-left: 8px;">By clicking here, I agree to the <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank">Terms of Service</a>, <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> and <a href="returns.aspx" target="_blank">Return Policy</a>.</p>
                                 <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/btn_completeorder.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
                             </div>
                             <div class="form_line_guarantee" style="display: none;"><a href="#guarantee" class="guarantee">90-Day Money-Back Guarantee!</a></div>

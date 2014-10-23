@@ -16,7 +16,7 @@
                 </tr>
                 <tr>
                     <td valign="top" align="right" width="1%">
-                        <img hspace="0" src="/Content/images/admin/rect.gif" vspace="2" border="0"><br>
+                        <img hspace="0" src="/Content/images/cssecuresite/rect.gif" vspace="2" border="0"><br>
                     </td>
                     <td valign="top" width="100%" width="49%">
                         <a class="link" href="reports/VersionReport.aspx">Version Report</a><br>
@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                     <td valign="top" align="right" width="1%">
-                        <img hspace="0" src="/Content/images/admin/rect.gif" vspace="2" border="0"><br>
+                        <img hspace="0" src="/Content/images/cssecuresite/rect.gif" vspace="2" border="0"><br>
                     </td>
                     <td valign="top" width="100%" width="49%">
                         <a class="link" href="reports/StandardReport.aspx">Order Summary Report</a><br>
@@ -36,7 +36,7 @@
                 </tr>
                   <tr>
                     <td valign="top" align="right" width="1%">
-                        <img hspace="0" src="/Content/images/admin/rect.gif" vspace="2" border="0"><br>
+                        <img hspace="0" src="/Content/images/cssecuresite/rect.gif" vspace="2" border="0"><br>
                     </td>
                     <td valign="top" width="100%" width="49%">
                         <a class="link" href="Reports.aspx">>Client Custom Reports</a><br>

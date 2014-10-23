@@ -1,8 +1,8 @@
 ﻿User-agent: *
 Disallow: /mobile/
 Disallow: /MOBILE/
-Disallow: /admin/
-Disallow: /ADMIN/
+Disallow: /ps/
+Disallow: /PS/
 Disallow: /CSSecureSite/
 Disallow: /cssecuresite/
 Disallow: /CSSECURESITE/

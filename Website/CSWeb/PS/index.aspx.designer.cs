@@ -7,8 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSWeb.PS
-{
+namespace CSWeb.PS {
     
     
     public partial class index {

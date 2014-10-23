@@ -79,6 +79,7 @@ namespace CSWeb.Root.Store
 
             if (!IsPostBack)
             {
+                UserSessions.InsertSessionEntry(Context, true, CartContext.CartInfo.Total,CartContext.CustomerInfo.CustomerId);
                 AllTemplates = GetTemplates();
                 CurrentTemplateIndex = -1;
                 GoToNextTemplate();

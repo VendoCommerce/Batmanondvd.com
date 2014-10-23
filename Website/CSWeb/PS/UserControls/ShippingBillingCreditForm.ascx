@@ -218,9 +218,9 @@
                                     </div>
                                     <div class="form_line clearfix">
                                         <div class="error-1">
-                                            <asp:Label ID="lblStateError" runat="server" Visible="False" Enabled="False"></asp:Label>
+                                            <asp:Label ID="lblStateError" runat="server" Visible="False"></asp:Label>
                                             <asp:RequiredFieldValidator ID="rfvState" runat="server" Display="Dynamic"
-                                                ControlToValidate="ddlState"></asp:RequiredFieldValidator>
+                                                ControlToValidate="ddlState" Enabled="False"></asp:RequiredFieldValidator>
                                         </div>
                                         <label class="label-1">
                                             State*</label>

@@ -72,7 +72,7 @@ namespace CSBusiness.Web.Admin
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
 
             if (Request.Cookies["CSVal"] == null)
-                Response.Redirect("/admin/login.aspx?targeturl=" + Request.RawUrl);
+                Response.Redirect("/cssecuresite/login.aspx?targeturl=" + Request.RawUrl);
             else
             {
                 HttpCookie cookie = Request.Cookies["CSVal"];

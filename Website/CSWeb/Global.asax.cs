@@ -22,6 +22,11 @@ namespace CSWeb
         //        Response.Redirect(uri, true);
         //}
 
+        public override void Session_Start(object sender, EventArgs e)
+        {
+            UserSessions.InsertSessionEntry(Context);
+        }
+
         public override void Application_Error(object sender, EventArgs e)
         {
             Exception ex = Server.GetLastError();

@@ -7,6 +7,7 @@ using CSBusiness.Preference;
 using CSBusiness;
 using System.Web;
 using CSBusiness.Web;
+using System.Web.UI;
 
 namespace CSWeb.Mobile.Store
 {
@@ -19,6 +20,12 @@ namespace CSWeb.Mobile.Store
             {
                 return true;
             }
+        }
+
+        protected void imgPhone_Click(object sender, ImageClickEventArgs e)
+        {
+            UserSessions.InsertSessionEntry(Context, true, false);
+            Response.Redirect("tel:18006732909");
         }
 
         protected void lb_Clicked(object sender, EventArgs e)
