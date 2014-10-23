@@ -17,8 +17,8 @@
 </head>
 <body>
 <form id="form1" runat="server">
-<!--#include file="popups.html"-->
-<!--#include file="header500.html"-->
+<!--#include file="/popups.html"-->
+<!--#include file="/header500.html"-->
 
 <div class="container">
     <div style="padding-top: 20px;">
@@ -46,7 +46,7 @@
 </div>
 
 
-<!--#include file="footer.html"-->
+<!--#include file="/footer.html"-->
 </form>
 </body>
 </html>

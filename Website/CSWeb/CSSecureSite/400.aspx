@@ -17,8 +17,8 @@
 </head>
 <body>
 <form id="form1" runat="server">
-<!--#include file="popups.html"-->
-<!--#include file="header.html"-->
+<!--#include file="/popups.html"-->
+<!--#include file="/header.html"-->
 
 <div class="container">
     <div class="clearfix">
@@ -33,11 +33,11 @@
     
 
 
-    <!--#include file="bottomcta.html"-->
+    <!--#include file="/bottomcta.html"-->
 </div>
 
 
-<!--#include file="footer.html"-->
+<!--#include file="/footer.html"-->
 </form>
 </body>
 </html>
