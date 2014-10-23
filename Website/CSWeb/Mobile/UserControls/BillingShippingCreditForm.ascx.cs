@@ -194,6 +194,8 @@ namespace CSWeb.Mobile.UserControls
             ddlState.DataSource = list;
             ddlState.DataValueField = "StateProvinceId";
             ddlState.DataBind();
+            ddlState.Items.Insert(0, new ListItem("- Select -", string.Empty));
+
         }
 
         private void BindCreditCard()
@@ -269,7 +271,7 @@ namespace CSWeb.Mobile.UserControls
                 lblCityError.Visible = false;
 
 
-            if (ddlState.SelectedValue.Equals("select"))
+            if (ddlState.SelectedValue.Equals(""))
             {
                 lblStateError.Text = ResourceHelper.GetResoureValue("StateErrorMsg");
                 lblStateError.Visible = true;
@@ -370,7 +372,7 @@ namespace CSWeb.Mobile.UserControls
                     lblShippingCityError.Visible = false;
 
 
-                if (ddlShippingState.SelectedValue.Equals("select"))
+                if (ddlShippingState.SelectedValue.Equals(""))
                 {
                     lblShippingStateError.Text = ResourceHelper.GetResoureValue("StateErrorMsg");
                     lblShippingStateError.Visible = true;
