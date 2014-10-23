@@ -26,6 +26,7 @@ namespace CSWeb.Mobile.Store
         }
          
         protected override void Page_Load(object sender, EventArgs e)
+        
         {
             if (ClientOrderData2.OrderId > 0)
             {
