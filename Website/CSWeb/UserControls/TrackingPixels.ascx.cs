@@ -19,6 +19,7 @@ namespace CSWeb.Root.UserControls
         public Order CurrentOrder = null;
         public string versionName = "";
         public string versionNameReferrer = "";
+        public string versionNameClientFunction = ""; 
         public decimal cartTotal = 0;
         public ClientCartContext CartContext
         {
@@ -46,6 +47,21 @@ namespace CSWeb.Root.UserControls
                 if (item != null)
                     versionName = item.Title.ToUpper();
             }
+             string url = Request.Url.AbsolutePath.ToLower();
+
+            try
+            {
+                if (url.EndsWith("/postsale.aspx"))
+                {
+                    versionNameClientFunction = "'" + Session["PostSaleLabelName"].ToString() + "'";
+                }
+            }
+            catch 
+            {
+                
+                
+            }
+             
             //versionNameReferrer = CSWeb.OrderHelper.GetVersionNameByReferrer(CartContext);
             SetHomePagePnl();
             SetHomeAndSubPagesPnl();
@@ -122,7 +138,7 @@ namespace CSWeb.Root.UserControls
         }
         private void SetAllPagesPnl()
         {
-            if (!(Request.RawUrl.ToLower().Contains("checkoutthankyou") || Request.RawUrl.ToLower().Contains("postsale") || Request.RawUrl.ToLower().Contains("receipt")))
+            if (!(Request.RawUrl.ToLower().Contains("checkoutthankyou") || Request.RawUrl.ToLower().Contains("receipt")))
             {
                 pnlAllPages.Visible = true;
 
