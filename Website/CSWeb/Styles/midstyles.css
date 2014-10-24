@@ -30,7 +30,7 @@ padding-bottom: 15px;
 
 #header {
 width: 800px;
-background:url(/Content/images/cssecuresite/header_bg.jpg) repeat-x;
+background:url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/header_bg.jpg) repeat-x;
 height: 88px;
 position:relative;
 margin: 0 auto;
@@ -93,13 +93,13 @@ p.time {
 	margin-left: 9px;
 	position:relative;
 	float:left;
-	background: url(/Content/images/cssecuresite/right_top.jpg) no-repeat #f7f7f7;
+	background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/right_top.jpg) no-repeat #f7f7f7;
 	background-position: 0% 0%;
 	xheight: 503px;
 }
 
 #right h2 {
-	background: url(/Content/images/cssecuresite/summary_head.jpg) no-repeat;
+	background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/summary_head.jpg) no-repeat;
 	width: 605px;
 	height: 22px;
 	margin: 10px 0 0 14px;
@@ -185,13 +185,13 @@ width: 152px;
 }
 
 #retrieve_activity h2 {
-background: url(/Content/images/cssecuresite/retrieve_head.jpg) no-repeat;
+background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/retrieve_head.jpg) no-repeat;
 width: 152px;
 height: 22px;
 }
 
 #client h2 {
-background: url(/Content/images/cssecuresite/client_head.jpg) no-repeat;
+background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/client_head.jpg) no-repeat;
 width: 152px;
 height: 22px;
 position:relative;
@@ -310,13 +310,13 @@ margin: 0 auto;
 	margin-left: 9px;
 	position:relative;
 	float:left;
-	background: url(/Content/images/cssecuresite/right_top.jpg) no-repeat #f7f7f7;
+	background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/right_top.jpg) no-repeat #f7f7f7;
 	background-position: 0% 0%;
 	xheight: 503px;
 }
 
 #right2 h2 {
-	background: url(/Content/images/cssecuresite/summary_head2.jpg) no-repeat;
+	background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/summary_head2.jpg) no-repeat;
 	width: 726px;
 	height: 22px;
 	margin: 10px 0 0 14px;
