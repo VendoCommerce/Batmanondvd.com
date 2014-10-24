@@ -1,17 +1,29 @@
 // JavaScript Document
 
-WebFontConfig = {
-    google: { families: ['Open+Sans+Condensed:700,300:latin'] }
-};
+//WebFontConfig = {
+//    google: { families: ['Open+Sans+Condensed:700,300:latin'] }
+//};
+//(function () {
+//    var wf = document.createElement('script');
+//    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+//      '://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';
+//    wf.type = 'text/javascript';
+//    wf.async = 'true';
+//    var s = document.getElementsByTagName('script')[0];
+//    s.parentNode.insertBefore(wf, s);
+//})();
+
+// the above was causing the headlines to start in one font, breaking the layout, then visibly switch to the correct font, so it is replaced by the function below which just writes a link tag
+
 (function () {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
+    var linktag = document.createElement('link');
+    linktag.href = "//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic";
+    linktag.rel = "stylesheet";
+    linktag.type = "text/css";
     var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
+    s.parentNode.insertBefore(linktag, s);
 })();
+
 
 $(document).ready(function () {
 	

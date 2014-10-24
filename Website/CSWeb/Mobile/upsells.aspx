@@ -44,8 +44,10 @@
                         <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare 
         treat for the fans as Adam discusses his script notes on bringing Batman to life  
         in the first and second episodes </li>
-                        <li style="padding-bottom: 0;"><strong>Na Na Na Batman!</strong> Hollywood favorites stars and producers recount their 
-                            favorite Batman memories</li>
+                        <li><strong>Na Na Na Batman!</strong> Hollywood favorites stars and producers recount their favorite Batman memories</li>
+                        <li style="padding-bottom: 0;"><strong>BATRARITIES! STRAIGHT FROM THE VAULT</strong> – 
+                            <strong>Batgirl Pilot</strong> – This is the pilot that sold the executives on the idea of a Dynamic Trio.  Batgirl had gravitas and sex appeal. She kept her cool, she fought the evil denizens of Gotham!   POW! ZAP! BAM!
+                        </li>
                     </ul></li>
                 <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie   
   DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter 
