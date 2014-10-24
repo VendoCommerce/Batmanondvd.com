@@ -12,6 +12,7 @@ using System.Text;
 using CSBusiness.Attributes;
 using System.Linq;
 using CSWebBase;
+using CSBusiness.ShoppingManagement;
 
 namespace CSWeb.PS.UserControls
 {
@@ -78,10 +79,13 @@ protected Label lblPurchaseName, lblPromotionPrice;
          private void ClearCart()
          {
              //reset entire Context object
-             Session["ClientOrderData"] = null;
+             //Session["ClientOrderData"] = null;
+             this.CartContext.EmptyData();
+             CartContext.CartInfo = new Cart();
+             CartContext.OrderId = orderId;
          }
 
-        private void BindData()
+         private void BindData()
         {
             if (orderId > 0)
             {
