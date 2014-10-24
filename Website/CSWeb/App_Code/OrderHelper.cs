@@ -37,6 +37,7 @@ namespace CSWeb
             Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderID, true);           
 
             _request.CardNumber = orderData.CreditInfo.CreditCardNumber;
+            _request.CardType = GetCCType(orderData.CreditInfo.CreditCardName);
             _request.CardCvv = orderData.CreditInfo.CreditCardCSC;
             _request.CurrencyCode = "$";
             _request.ExpireDate = orderData.CreditInfo.CreditCardExpired;
@@ -59,7 +60,7 @@ namespace CSWeb
 
             //Save gateway transaction
             Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
-            //orderAttributes.Add("AuthRequest", new CSBusiness.Attributes.AttributeValue(_response.GatewayRequestRaw));
+            orderAttributes.Add("AuthRequest", new CSBusiness.Attributes.AttributeValue(CSCore.Utils.CommonHelper.Encrypt(_response.GatewayRequestRaw)));
             orderAttributes.Add("AuthResponse", new CSBusiness.Attributes.AttributeValue(_response.GatewayResponseRaw));
             CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderData.OrderId, orderAttributes, null);
 
@@ -85,6 +86,22 @@ namespace CSWeb
         //    MasterCard = 4,
         //    VISA = 8
         //}
+
+        private static CreditCardType GetCCType(string ccName)
+        {
+            switch (ccName.ToLower())
+            {
+                case "visa":
+                    return CreditCardType.Visa;
+                case "mastercard":
+                    return CreditCardType.Mastercard;
+                case "americanexpress":
+                    return CreditCardType.AmericanExpress;
+                case "discover":
+                    return CreditCardType.Discover;
+            }
+            return CreditCardType.Visa;
+        }
 
         public static bool ValidationCheck(int orderID)
         {

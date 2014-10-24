@@ -398,7 +398,7 @@ namespace CSWeb.FulfillmentHouse
             string req = new DataPak().GetRequest(orderId, false, false); // Posting order to OMX
             string res = CommonHelper.HttpPost(config.Attributes["transactionUrl"].Value, req);
             Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
-            //orderAttributes.Add("Request", new CSBusiness.Attributes.AttributeValue(req));
+            orderAttributes.Add("Request", new CSBusiness.Attributes.AttributeValue(CSCore.Utils.CommonHelper.Encrypt( req)));
             orderAttributes.Add("Response", new CSBusiness.Attributes.AttributeValue(res));
 
             XmlDocument doc = new XmlDocument();
