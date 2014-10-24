@@ -13,6 +13,7 @@ using CSCore.Utils;
 using CSBusiness.OrderManagement;
 using CSBusiness.Resolver;
 using CSBusiness.ShoppingManagement;
+using CSWeb.App_Code;
 
 namespace CSWeb.Root.Store
 {
@@ -29,6 +30,7 @@ namespace CSWeb.Root.Store
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+
             string[] parts = Request.Url.AbsolutePath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
             if (Session["oid"] != null)
             {
@@ -71,6 +73,7 @@ namespace CSWeb.Root.Store
                     {
                         CSResolve.Resolve<IOrderService>().UpdateOrderStatus(orderData.OrderId, 7);
                         // This will avoid order from getting posted to OMX for test orders
+                        Session["OrderStatus"] = "Receipt";
                         Response.Redirect("receipt.aspx");
                     }
                 }
@@ -115,6 +118,7 @@ namespace CSWeb.Root.Store
 
                            
                         }
+                        Session["OrderStatus"] = "Receipt";
 
                         if (Request.QueryString != null)
                         {
@@ -131,6 +135,8 @@ namespace CSWeb.Root.Store
                     Response.Redirect(string.Format("carddecline.aspx?returnUrl={0}", string.Concat("/", string.Join("/", parts, 0, parts.Length - 1), "/receipt.aspx")), true);
                 }
             }
+            Session["OrderStatus"] = "Receipt";
+
             Response.Redirect("receipt.aspx");
 
         }

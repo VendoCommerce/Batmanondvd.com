@@ -110,84 +110,91 @@ namespace CSWeb
         }
         public static void InsertSessionEntry(HttpContext context)
         {
-            InsertSessionEntry(context, false, 0, false, false,0);
+            InsertSessionEntry(context, false, 0, false, false, 0);
         }
 
         public static void InsertSessionEntry(HttpContext context, bool mobileCallFlag, bool mobileEmailFlag)
         {
-            InsertSessionEntry(context, false, 0, mobileCallFlag, mobileEmailFlag,0);
+            InsertSessionEntry(context, false, 0, mobileCallFlag, mobileEmailFlag, 0);
         }
 
-        public static void InsertSessionEntry(HttpContext context, bool orderFlag, decimal orderValue,int userId)
+        public static void InsertSessionEntry(HttpContext context, bool orderFlag, decimal orderValue, int userId)
         {
-            InsertSessionEntry(context, orderFlag, orderValue, false, false,userId);
+            InsertSessionEntry(context, orderFlag, orderValue, false, false, userId);
         }
 
-        public static void InsertSessionEntry(HttpContext context, bool orderFlag, decimal orderValue, bool mobileCallFlag, bool mobileEmailFlag,int userId)
+        public static void InsertSessionEntry(HttpContext context, bool orderFlag, decimal orderValue, bool mobileCallFlag, bool mobileEmailFlag, int userId)
         {
-
-            string sessionId = GetSessionId(context);
-            string ipAddress = GetIpAddress(context);
-            string trafficSource = GetTrafficSource(context);
-            string deviceType = GetDeviceType(context);
-            string url = GetCleanUrl(context);
-
-            string version = context.Request.Url.AbsolutePath.ToString().Replace("/store", "");
-            version = version.Substring(0, version.LastIndexOf('/'));
-            version = version.Substring(version.LastIndexOf('/') + 1, (version.Length - (version.LastIndexOf('/') + 1)));
-
-            string sql = "";
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["client_db"].ToString()))
+            try
             {
-                sql = "pr_set_userSession";
 
-                //Setup values
-                SqlParameter CustomerSessionIdParam = new SqlParameter("@CustomerSessionId", System.Data.SqlDbType.NVarChar);
-                SqlParameter URLParam = new SqlParameter("@URL", System.Data.SqlDbType.NVarChar);
-                SqlParameter IPAddressParam = new SqlParameter("@IPAddress", System.Data.SqlDbType.NVarChar);
-                SqlParameter VersionIdParam = new SqlParameter("@VersionId", System.Data.SqlDbType.NVarChar);
-                SqlParameter CreateDateParam = new SqlParameter("@CreateDate", System.Data.SqlDbType.DateTime);
-                SqlParameter UserIdParam = new SqlParameter("@UserId", System.Data.SqlDbType.Int);
-                SqlParameter TrafficSourceParam = new SqlParameter("@TrafficSource", System.Data.SqlDbType.NVarChar);
-                SqlParameter DeviceTypeParam = new SqlParameter("@DeviceType", System.Data.SqlDbType.NVarChar);
-                SqlParameter MobileCallFlagParam = new SqlParameter("@MobileCallFlag", System.Data.SqlDbType.Bit);
-                SqlParameter MobileEmailFlagParam = new SqlParameter("@MobileEmailFlag", System.Data.SqlDbType.Bit);
-                SqlParameter OrderFlagParam = new SqlParameter("@OrderFlag", System.Data.SqlDbType.Bit);
-                SqlParameter OrderValueParam = new SqlParameter("@OrderValue", System.Data.SqlDbType.Money);
+                string sessionId = GetSessionId(context);
+                string ipAddress = GetIpAddress(context);
+                string trafficSource = GetTrafficSource(context);
+                string deviceType = GetDeviceType(context);
+                string url = GetCleanUrl(context);
 
-                URLParam.Value = url;
-                IPAddressParam.Value = ipAddress;
-                VersionIdParam.Value = version;
-                CreateDateParam.Value = DateTime.Now;
-                UserIdParam.Value = userId.ToString();
-                TrafficSourceParam.Value = trafficSource;
-                DeviceTypeParam.Value = deviceType;
-                MobileCallFlagParam.Value = mobileCallFlag;
-                MobileEmailFlagParam.Value = mobileEmailFlag;
-                OrderFlagParam.Value = orderFlag;
-                OrderValueParam.Value = orderValue;
-                CustomerSessionIdParam.Value = sessionId;
+                string version = context.Request.Url.AbsolutePath.ToString().Replace("/store", "");
+                version = version.Substring(0, version.LastIndexOf('/'));
+                version = version.Substring(version.LastIndexOf('/') + 1, (version.Length - (version.LastIndexOf('/') + 1)));
 
-                conn.Open();
+                string sql = "";
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["client_db"].ToString()))
+                {
+                    sql = "pr_set_userSession";
 
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.Add(URLParam);
-                cmd.Parameters.Add(IPAddressParam);
-                cmd.Parameters.Add(VersionIdParam);
-                cmd.Parameters.Add(CreateDateParam);
-                cmd.Parameters.Add(UserIdParam);
-                cmd.Parameters.Add(TrafficSourceParam);
-                cmd.Parameters.Add(DeviceTypeParam);
-                cmd.Parameters.Add(MobileCallFlagParam);
-                cmd.Parameters.Add(MobileEmailFlagParam);
-                cmd.Parameters.Add(OrderFlagParam);
-                cmd.Parameters.Add(OrderValueParam);
-                cmd.Parameters.Add(CustomerSessionIdParam);
+                    //Setup values
+                    SqlParameter CustomerSessionIdParam = new SqlParameter("@CustomerSessionId", System.Data.SqlDbType.NVarChar);
+                    SqlParameter URLParam = new SqlParameter("@URL", System.Data.SqlDbType.NVarChar);
+                    SqlParameter IPAddressParam = new SqlParameter("@IPAddress", System.Data.SqlDbType.NVarChar);
+                    SqlParameter VersionIdParam = new SqlParameter("@VersionId", System.Data.SqlDbType.NVarChar);
+                    SqlParameter CreateDateParam = new SqlParameter("@CreateDate", System.Data.SqlDbType.DateTime);
+                    SqlParameter UserIdParam = new SqlParameter("@UserId", System.Data.SqlDbType.Int);
+                    SqlParameter TrafficSourceParam = new SqlParameter("@TrafficSource", System.Data.SqlDbType.NVarChar);
+                    SqlParameter DeviceTypeParam = new SqlParameter("@DeviceType", System.Data.SqlDbType.NVarChar);
+                    SqlParameter MobileCallFlagParam = new SqlParameter("@MobileCallFlag", System.Data.SqlDbType.Bit);
+                    SqlParameter MobileEmailFlagParam = new SqlParameter("@MobileEmailFlag", System.Data.SqlDbType.Bit);
+                    SqlParameter OrderFlagParam = new SqlParameter("@OrderFlag", System.Data.SqlDbType.Bit);
+                    SqlParameter OrderValueParam = new SqlParameter("@OrderValue", System.Data.SqlDbType.Money);
 
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                    URLParam.Value = url;
+                    IPAddressParam.Value = ipAddress;
+                    VersionIdParam.Value = version;
+                    CreateDateParam.Value = DateTime.Now;
+                    UserIdParam.Value = userId.ToString();
+                    TrafficSourceParam.Value = trafficSource;
+                    DeviceTypeParam.Value = deviceType;
+                    MobileCallFlagParam.Value = mobileCallFlag;
+                    MobileEmailFlagParam.Value = mobileEmailFlag;
+                    OrderFlagParam.Value = orderFlag;
+                    OrderValueParam.Value = orderValue;
+                    CustomerSessionIdParam.Value = sessionId;
+
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(URLParam);
+                    cmd.Parameters.Add(IPAddressParam);
+                    cmd.Parameters.Add(VersionIdParam);
+                    cmd.Parameters.Add(CreateDateParam);
+                    cmd.Parameters.Add(UserIdParam);
+                    cmd.Parameters.Add(TrafficSourceParam);
+                    cmd.Parameters.Add(DeviceTypeParam);
+                    cmd.Parameters.Add(MobileCallFlagParam);
+                    cmd.Parameters.Add(MobileEmailFlagParam);
+                    cmd.Parameters.Add(OrderFlagParam);
+                    cmd.Parameters.Add(OrderValueParam);
+                    cmd.Parameters.Add(CustomerSessionIdParam);
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
             }
+            catch (Exception)
+            {
+            }
+
         }
     }
 }

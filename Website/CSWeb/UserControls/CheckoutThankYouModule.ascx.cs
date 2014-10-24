@@ -13,6 +13,7 @@ using System.Text;
 using CSBusiness.Attributes;
 using System.Linq;
 using CSWebBase;
+using CSWeb.App_Code;
 
 namespace CSWeb.Root.UserControls
 {
@@ -43,12 +44,17 @@ namespace CSWeb.Root.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["oId"] != null)
                 orderId = Convert.ToInt32(Session["oId"]);
             else
                 orderId = CartContext.OrderId;
             if (!this.IsPostBack)
             {
+                string redirectPage = string.Empty;
+                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                    Response.Redirect(redirectPage);
+
                 if (orderId > 0)
                 {
                     Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderId);
@@ -86,6 +92,8 @@ namespace CSWeb.Root.UserControls
             this.CartContext.EmptyData();
             CartContext.CartInfo = new Cart();
             CartContext.OrderId = orderId;
+            Session["OrderStatus"] = null;
+
         }
 
         private void BindData()

@@ -16,6 +16,7 @@ using CSBusiness.Payment;
 using CSBusiness.Shipping;
 using CSWebBase;
 using CSBusiness.OrderManagement;
+using CSWeb.App_Code;
 
 namespace CSWeb.Root.UserControls
 {
@@ -53,7 +54,9 @@ namespace CSWeb.Root.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
+
+
             ScriptManager.RegisterStartupScript(upBillingForm, typeof(string), "ShowPopup", "MM_showHideLayers('mask','','hide');", true);
 
             if (!IsPostBack)
@@ -116,7 +119,6 @@ namespace CSWeb.Root.UserControls
         #endregion Page Events
 
         #region General Methods
-
 
         public void PopulateExpiryYear()
         {
@@ -576,8 +578,8 @@ namespace CSWeb.Root.UserControls
                 //Session["PId"] = 30;
                 //Response.Redirect(string.Format("AddProduct.aspx?CId={1}",
                 //    Convert.ToString((int)CSBusiness.ShoppingManagement.ShoppingCartType.SingleCheckout)));
+                Session["OrderStatus"] = "PostSale";
                 Response.Redirect(string.Format("Postsale.aspx"));
-
             }
             //else
             //    txtAddress1.Focus();

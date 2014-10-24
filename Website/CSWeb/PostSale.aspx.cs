@@ -16,6 +16,7 @@ using CSBusiness.ShoppingManagement;
 using System.Xml.XPath;
 using System.Text;
 using CSBusiness.Attributes;
+using CSWeb.App_Code;
 
 namespace CSWeb.Root.Store
 {
@@ -67,10 +68,11 @@ namespace CSWeb.Root.Store
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (CartContext.OrderId <= 0)
-            {
-                Response.Redirect("index.aspx");
-            }
+
+            //if (CartContext.OrderId <= 0)
+            //{
+            //    Response.Redirect("index.aspx");
+            //}
 
             if (OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
             {
@@ -79,6 +81,10 @@ namespace CSWeb.Root.Store
 
             if (!IsPostBack)
             {
+            string redirectPage = string.Empty;
+            if (NavigationControl.CheckOrderFlow(Session["OrderStatus"],Request.RawUrl, out redirectPage))
+                Response.Redirect(redirectPage);
+            if (CartContext.CartInfo != null && CartContext.CustomerInfo != null)
                 UserSessions.InsertSessionEntry(Context, true, CartContext.CartInfo.Total,CartContext.CustomerInfo.CustomerId);
                 AllTemplates = GetTemplates();
                 CurrentTemplateIndex = -1;

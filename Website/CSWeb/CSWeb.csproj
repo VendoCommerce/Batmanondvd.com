@@ -764,6 +764,7 @@
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\NavigationControl.cs" />
     <Compile Include="App_Code\UserSessions.cs" />
     <Compile Include="CSSecureSite\400.aspx.cs">
       <DependentUpon>400.aspx</DependentUpon>
