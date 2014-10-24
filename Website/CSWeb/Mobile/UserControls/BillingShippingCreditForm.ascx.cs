@@ -540,6 +540,7 @@ namespace CSWeb.Mobile.UserControls
             {
                 SaveData();
                 //Session["PId"] = Convert.ToInt32(ddlSize.SelectedValue);
+                Session["OrderStatus"] = "PostSale";
                 Response.Redirect(string.Format("PostSale.aspx?CId={0}",
                      Convert.ToString((int)CSBusiness.ShoppingManagement.ShoppingCartType.SingleCheckout)));
             }

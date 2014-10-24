@@ -15,6 +15,7 @@ using CSBusiness.Resolver;
 using CSBusiness.ShoppingManagement;
 using System.Xml.XPath;
 using System.Text;
+using CSWeb.App_Code;
 
 namespace CSWeb.Mobile.Store
 {
@@ -66,10 +67,10 @@ namespace CSWeb.Mobile.Store
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (CartContext.OrderId <= 0)
-            {
-                Response.Redirect("index.aspx");
-            }
+            //if (CartContext.OrderId <= 0)
+            //{
+            //    Response.Redirect("index.aspx");
+            //}
             if (OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
             {
                 Response.Redirect("receipt.aspx");
@@ -77,6 +78,10 @@ namespace CSWeb.Mobile.Store
 
             if (!IsPostBack)
             {
+                string redirectPage = string.Empty;
+                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                    Response.Redirect(redirectPage);
+                
                 AllTemplates = GetTemplates();
                 CurrentTemplateIndex = -1;
                 GoToNextTemplate();

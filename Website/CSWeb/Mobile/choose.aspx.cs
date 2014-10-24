@@ -45,6 +45,7 @@ namespace CSWeb.Mobile
                     clientData.CartInfo.CartItems.Clear();
 
                 Session["PId"] = skuId;
+                Session["OrderStatus"] = "Cart";
                 Response.Redirect("AddProduct.aspx?PId=" + skuId + "&CId=3");
             }
             else

@@ -8,6 +8,7 @@ using CSBusiness.Preference;
 using CSBusiness;
 using System.Web;
 using CSBusiness.Web;
+using CSWeb.App_Code;
 
 namespace CSWeb.Mobile.Store
 {
@@ -28,34 +29,12 @@ namespace CSWeb.Mobile.Store
         protected override void Page_Load(object sender, EventArgs e)
         
         {
-            if (ClientOrderData2.OrderId > 0)
-            {
-                Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(ClientOrderData2.OrderId, true);
-                if (orderData.OrderStatusId == 2)
-                {
-                    // this means that  customer clicked back, so should be directed to receipt page.
-                    Response.Redirect("receipt.aspx");
-                }
-
-                if (orderData.OrderStatusId == 1)
-                {
-                    // this means that  customer clicked back, so should be directed to receipt page.
-                    Response.Redirect("PostSale.aspx");
-                }
-
-                if (orderData.OrderStatusId == 4 || orderData.OrderStatusId == 5)
-                {
-                    // this means that  customer clicked back, so should be directed to receipt page.
-                    Response.Redirect("AuthorizeOrder.aspx");
-                }
-
-
-
-            }
-            base.Page_Load(sender, e);
 
             if (!Page.IsPostBack)
             {
+                string redirectPage = string.Empty;
+                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                    Response.Redirect(redirectPage);
 
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();
                 if (!sitePrefCache.GeoLocationService)
@@ -66,8 +45,7 @@ namespace CSWeb.Mobile.Store
 
             }
 
-
-
+            base.Page_Load(sender, e);
         }
 
         public string GetCleanPhoneNumber(string data)

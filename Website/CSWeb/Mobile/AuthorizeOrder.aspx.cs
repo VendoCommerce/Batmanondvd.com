@@ -72,6 +72,7 @@ namespace CSWeb.Mobile.Store
                     {
                         CSResolve.Resolve<IOrderService>().UpdateOrderStatus(orderData.OrderId, 7);
                         // This will avoid order from getting posted to OMX for test orders
+                        Session["OrderStatus"] = "Receipt";
                         Response.Redirect("receipt.aspx");
                     }
                 }
@@ -117,6 +118,7 @@ namespace CSWeb.Mobile.Store
                             
                         }
 
+                        Session["OrderStatus"] = "Receipt";
                         if (Request.QueryString != null)
                         {
                             Response.Redirect("receipt.aspx?" + Request.QueryString);
@@ -132,6 +134,7 @@ namespace CSWeb.Mobile.Store
                     Response.Redirect(string.Format("carddecline.aspx?returnUrl={0}", string.Concat("/", string.Join("/", parts, 0, parts.Length - 1), "/receipt.aspx")), true);
                 }
             }
+            Session["OrderStatus"] = "Receipt";
             Response.Redirect("receipt.aspx");
 
         }

@@ -13,6 +13,7 @@ using CSWeb.Mobile.Store;
 using System.Text;
 using CSData;
 using CSBusiness.Attributes;
+using CSWeb.App_Code;
 
 namespace CSWeb.Mobile.UserControls
 {
@@ -69,6 +70,10 @@ namespace CSWeb.Mobile.UserControls
                 orderId = CartContext.OrderId;
             if (!this.IsPostBack)
             {
+                string redirectPage = string.Empty;
+                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                    Response.Redirect(redirectPage);
+                
                 if (orderId > 0)
                 {
                     Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderId);
@@ -103,6 +108,7 @@ namespace CSWeb.Mobile.UserControls
             this.CartContext.EmptyData();
             CartContext.CartInfo = new Cart();
             CartContext.OrderId = orderId;
+            Session["OrderStatus"] = null;
         }
 
         private void BindData()
