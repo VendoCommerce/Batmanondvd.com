@@ -53,7 +53,7 @@
                         <%# DataBinder.Eval(Container.DataItem, "Completed")%>
                     </td>
                     <td nowrap align="center" width="10%">
-                                <asp:HyperLink ID="hlDetail" runat="server" ImageUrl="/Content/images/cssecuresite/edit.gif" ToolTip="Details"  NavigateUrl='<%# "OrderDetail.aspx?oId=" + DataBinder.Eval(Container.DataItem, "OrderId")%>' />
+                                <asp:HyperLink ID="hlDetail" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/edit.gif" ToolTip="Details"  NavigateUrl='<%# "OrderDetail.aspx?oId=" + DataBinder.Eval(Container.DataItem, "OrderId")%>' />
                            
                          
                             </td>

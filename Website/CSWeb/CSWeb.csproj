@@ -752,7 +752,6 @@
     </Compile>
     <Compile Include="500.aspx.cs">
       <DependentUpon>500.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="500.aspx.designer.cs">
       <DependentUpon>500.aspx</DependentUpon>
@@ -1251,13 +1250,6 @@
     </Compile>
     <Compile Include="episodes.aspx.designer.cs">
       <DependentUpon>episodes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mobile\500.aspx.cs">
-      <DependentUpon>500.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\500.aspx.designer.cs">
-      <DependentUpon>500.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mobile\choose.aspx.cs">
       <DependentUpon>choose.aspx</DependentUpon>

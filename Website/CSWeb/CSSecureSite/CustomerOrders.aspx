@@ -104,7 +104,7 @@
                         <%# DataBinder.Eval(Container.DataItem, "UserTypeId")%>
                     </td>
                     <td nowrap align="center" width="10%">
-                        <asp:HyperLink ID="hlView" runat="Server"><img title='Add States' src='/Content/images/cssecuresite/edit.gif' alt="View Details" border="0"></asp:HyperLink>&#160;
+                        <asp:HyperLink ID="hlView" runat="Server"><img title='Add States' src='//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/edit.gif' alt="View Details" border="0"></asp:HyperLink>&#160;
                     </td>
                 </tr>
             </ItemTemplate>

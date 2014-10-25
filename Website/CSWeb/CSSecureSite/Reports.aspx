@@ -61,7 +61,7 @@ padding: 9px 0 3px 0;
         #container
         {
             float: left;
-            background: #e7e7e7 url(/Content/images/cssecuresite/rep_bg2.jpg) no-repeat 176px 158px;
+            background: #e7e7e7 url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/rep_bg2.jpg) no-repeat 176px 158px;
             border: 15px #ccc solid;
             border-top: none;
             position: relative;
@@ -74,7 +74,7 @@ padding: 9px 0 3px 0;
         }
         #header
         {
-            background: url(/Content/Images/cssecuresite/rep_mainhd2.jpg) no-repeat;
+            background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/rep_mainhd2.jpg) no-repeat;
             width: 921px;
             height: 125px;
         }
@@ -88,31 +88,31 @@ padding: 9px 0 3px 0;
         }
         #hd_client
         {
-            background: url(/Content/images/cssecuresite/rep_hdclient.jpg) no-repeat;
+            background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/rep_hdclient.jpg) no-repeat;
         }
         #hd_resource
         {
-            background: url(/Content/images/cssecuresite/rep_hdresource.jpg) no-repeat;
+            background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/rep_hdresource.jpg) no-repeat;
         }
         #hd_activity
         {
-            background: url(/Content/images/cssecuresite/rep_hdactivity.jpg) no-repeat;
+            background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/rep_hdactivity.jpg) no-repeat;
         }
         #hd_summary
         {
-            background: url(/Content/images/cssecuresite/rep_hdsummary.jpg) no-repeat;
+            background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/rep_hdsummary.jpg) no-repeat;
         }
         #hd_wksummary
         {
-            background: url(/Content/images/cssecuresite/rep_hdwksummary.jpg) no-repeat;
+            background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/rep_hdwksummary.jpg) no-repeat;
         }
         #hd_mosummary
         {
-            background: url(/Content/images/cssecuresite/rep_hdmosummary.jpg) no-repeat;
+            background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/rep_hdmosummary.jpg) no-repeat;
         }
         .hd_items_sold
         {
-            background: url(/Content/images/cssecuresite/rep_hdtopitems.jpg) no-repeat;
+            background: url(//d1kg9stb0ddjcv.cloudfront.net/images/cssecuresite/rep_hdtopitems.jpg) no-repeat;
             width: 306px;
             height: 20px;
         }
