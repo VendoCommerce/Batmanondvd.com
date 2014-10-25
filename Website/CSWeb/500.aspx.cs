@@ -16,7 +16,15 @@ namespace CSWeb
             //{
             //    CSCore.CSLogger.Instance.LogException(ex.InnerException.Message, ex.InnerException);
             //}
+            ClearCart();
+        }
 
+
+        private void ClearCart()
+        {
+            //reset entire Context object
+            //Session["ClientOrderData"] = null;
+            Session.Clear();
         }
     }
 }

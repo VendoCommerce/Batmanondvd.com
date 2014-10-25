@@ -298,10 +298,10 @@
     <Content Include="fonts\OpenSans-CondLight-webfont.svg" />
     <Content Include="fonts\OpenSans-CondLightItalic-webfont.svg" />
     <Content Include="header500.html" />
+    <Content Include="Mobile\500.aspx" />
     <Content Include="Mobile\bottomcta_complete.html" />
     <Content Include="Mobile\bottomcta.html" />
     <Content Include="Mobile\400.aspx" />
-    <Content Include="Mobile\500.aspx" />
     <Content Include="Mobile\returns.aspx" />
     <Content Include="Mobile\contact.aspx" />
     <Content Include="Mobile\cast.aspx" />
@@ -1251,6 +1251,13 @@
     </Compile>
     <Compile Include="episodes.aspx.designer.cs">
       <DependentUpon>episodes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\500.aspx.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\500.aspx.designer.cs">
+      <DependentUpon>500.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mobile\choose.aspx.cs">
       <DependentUpon>choose.aspx</DependentUpon>
