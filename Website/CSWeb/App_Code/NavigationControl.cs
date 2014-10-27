@@ -21,17 +21,19 @@ namespace CSWeb.App_Code
 
             url = url.ToLower();
             if (orderStatus == null)
-                redirectPage = "index.aspx";
+            {
+                redirectPage = "CheckoutSessionExpired.aspx";
+            }
 
             string orderStatusStr = (string)orderStatus;
             if (orderStatusStr == "PostSale")
-                redirectPage = "postsale.aspx";
+                redirectPage = "postsale";
 
             if (orderStatusStr == "Receipt")
-                redirectPage = "receipt.aspx";
+                redirectPage = "receipt";
 
             if (orderStatusStr == "Cart")
-                redirectPage = "cart.aspx";
+                redirectPage = "cart";
 
             if (redirectPage.Length > 0 && !url.Contains(redirectPage))
                 return true;

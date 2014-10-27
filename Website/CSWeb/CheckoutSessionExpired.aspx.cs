@@ -11,7 +11,7 @@ namespace CSWeb.Root.Store
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
+            Session.Clear();
 		}
 	}
 }

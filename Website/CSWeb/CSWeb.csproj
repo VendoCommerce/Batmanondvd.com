@@ -27,6 +27,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -76,7 +78,14 @@
     <Reference Include="FusionCharts">
       <HintPath>..\CSDLL\FusionCharts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net40\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\CSDLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -468,6 +477,7 @@
     <Content Include="fonts\OpenSans-CondLightItalic-webfont.eot" />
     <Content Include="fonts\OpenSans-CondLightItalic-webfont.ttf" />
     <Content Include="fonts\OpenSans-CondLightItalic-webfont.woff" />
+    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\batman.pubxml" />
     <None Include="Properties\PublishProfiles\jhnjn.pubxml" />
     <None Include="Service References\HitLinks\CSWeb.HitLinks.Data.datasource">
@@ -752,6 +762,7 @@
     </Compile>
     <Compile Include="500.aspx.cs">
       <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="500.aspx.designer.cs">
       <DependentUpon>500.aspx</DependentUpon>
@@ -765,6 +776,7 @@
     </Compile>
     <Compile Include="App_Code\NavigationControl.cs" />
     <Compile Include="App_Code\UserSessions.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CSSecureSite\400.aspx.cs">
       <DependentUpon>400.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1725,6 +1737,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

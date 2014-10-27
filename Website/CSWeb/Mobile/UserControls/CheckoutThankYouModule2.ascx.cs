@@ -66,7 +66,7 @@ namespace CSWeb.Mobile.UserControls
         {
             if (Session["oId"] != null)
                 orderId = Convert.ToInt32(Session["oId"]);
-            else
+            else if (CartContext != null)
                 orderId = CartContext.OrderId;
             if (!this.IsPostBack)
             {

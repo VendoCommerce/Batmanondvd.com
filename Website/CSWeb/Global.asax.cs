@@ -7,6 +7,7 @@ using System.Web.SessionState;
 using CSBusiness.Resolver;
 using System.Configuration;
 using System.Text.RegularExpressions;
+using System.Web.Routing;
 
 
 
@@ -14,6 +15,11 @@ namespace CSWeb
 {
     public class Global : CSBusiness.Web.CSBaseGlobal
     {
+        public override void Application_Start(object sender, EventArgs e)
+        {
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            base.Application_Start(sender,e);
+        }
 
         //public void Application_BeginRequest(object sender, EventArgs e)
         //{
