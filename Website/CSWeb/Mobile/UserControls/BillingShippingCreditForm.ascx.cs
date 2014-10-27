@@ -232,11 +232,14 @@ namespace CSWeb.Mobile.UserControls
         public bool validateInput()
         {
 
+            TextBox txtHasError = null;
 
             if (CommonHelper.EnsureNotNull(txtFirstName.Text) == String.Empty)
             {
                 lblFirstNameError.Text = ResourceHelper.GetResoureValue("FirstNameErrorMsg");
                 lblFirstNameError.Visible = true;
+                if (txtHasError == null)
+                    txtHasError = txtFirstName;
                 _bError = true;
             }
             else
@@ -246,16 +249,42 @@ namespace CSWeb.Mobile.UserControls
             {
                 lblLastNameError.Text = ResourceHelper.GetResoureValue("LastNameErrorMsg");
                 lblLastNameError.Visible = true;
+                if (txtHasError == null)
+                    txtHasError = txtLastName;
                 _bError = true;
 
             }
             else
                 lblLastNameError.Visible = false;
 
+            if (CommonHelper.EnsureNotNull(txtEmail.Text) == String.Empty)
+            {
+                lblEmailError.Text = ResourceHelper.GetResoureValue("EmailErrorMsg");
+                lblEmailError.Visible = true;
+                if (txtHasError == null)
+                    txtHasError = txtEmail;
+                _bError = true;
+            }
+            else
+            {
+                if (!CommonHelper.IsValidEmail(txtEmail.Text))
+                {
+                    lblEmailError.Text = ResourceHelper.GetResoureValue("EmailValidationErrorMsg");
+                    lblEmailError.Visible = true;
+                    if (txtHasError == null)
+                        txtHasError = txtEmail;
+                    _bError = true;
+                }
+                else
+                    lblEmailError.Visible = false;
+            }
+
             if (CommonHelper.EnsureNotNull(txtAddress1.Text) == String.Empty)
             {
                 lblAddress1Error.Text = ResourceHelper.GetResoureValue("Address1ErrorMsg");
                 lblAddress1Error.Visible = true;
+                if (txtHasError == null)
+                    txtHasError = txtAddress1;
                 _bError = true;
             }
             else
@@ -265,6 +294,8 @@ namespace CSWeb.Mobile.UserControls
             {
                 lblCityError.Text = ResourceHelper.GetResoureValue("CityErrorMsg");
                 lblCityError.Visible = true;
+                if (txtHasError == null)
+                    txtHasError = txtCity;
                 _bError = true;
             }
             else
@@ -287,6 +318,8 @@ namespace CSWeb.Mobile.UserControls
             {
                 lblPhoneNumberError.Text = ResourceHelper.GetResoureValue("PhoneNumberErrorMsg");
                 lblPhoneNumberError.Visible = true;
+                if (txtHasError == null)
+                    txtHasError = txtPhoneNumber1;
                 _bError = true;
             }
             else
@@ -296,6 +329,8 @@ namespace CSWeb.Mobile.UserControls
             {
                 lblZiPError.Text = ResourceHelper.GetResoureValue("ZipCodeErrorMsg");
                 lblZiPError.Visible = true;
+                if (txtHasError == null)
+                    txtHasError = txtZipCode;
                 _bError = true;
             }
             else
@@ -304,30 +339,14 @@ namespace CSWeb.Mobile.UserControls
                 {
                     lblZiPError.Text = ResourceHelper.GetResoureValue("ZipCodeValidationErrorMsg");
                     lblZiPError.Visible = true;
+                    if (txtHasError == null)
+                        txtHasError = txtZipCode;
                     _bError = true;
 
                 }
                 else
                     lblZiPError.Visible = false;
 
-            }
-
-            if (CommonHelper.EnsureNotNull(txtEmail.Text) == String.Empty)
-            {
-                lblEmailError.Text = ResourceHelper.GetResoureValue("EmailErrorMsg");
-                lblEmailError.Visible = true;
-                _bError = true;
-            }
-            else
-            {
-                if (!CommonHelper.IsValidEmail(txtEmail.Text))
-                {
-                    lblEmailError.Text = ResourceHelper.GetResoureValue("EmailValidationErrorMsg");
-                    lblEmailError.Visible = true;
-                    _bError = true;
-                }
-                else
-                    lblEmailError.Visible = false;
             }
 
             #region Name & Address
@@ -338,6 +357,8 @@ namespace CSWeb.Mobile.UserControls
                 {
                     lblShippingFirstName.Text = ResourceHelper.GetResoureValue("FirstNameErrorMsg");
                     lblShippingFirstName.Visible = true;
+                    if (txtHasError == null)
+                        txtHasError = txtShippingFirstName;
                     _bError = true;
                 }
                 else
@@ -347,6 +368,8 @@ namespace CSWeb.Mobile.UserControls
                 {
                     lblShippingLastName.Text = ResourceHelper.GetResoureValue("LastNameErrorMsg");
                     lblShippingLastName.Visible = true;
+                    if (txtHasError == null)
+                        txtHasError = txtShippingLastName;
                     _bError = true;
 
                 }
@@ -357,6 +380,8 @@ namespace CSWeb.Mobile.UserControls
                 {
                     lblShippingAddress1Error.Text = ResourceHelper.GetResoureValue("Address1ErrorMsg");
                     lblShippingAddress1Error.Visible = true;
+                    if (txtHasError == null)
+                        txtHasError = txtShippingAddress1;
                     _bError = true;
                 }
                 else
@@ -366,6 +391,8 @@ namespace CSWeb.Mobile.UserControls
                 {
                     lblShippingCityError.Text = ResourceHelper.GetResoureValue("CityErrorMsg");
                     lblShippingCityError.Visible = true;
+                    if (txtHasError == null)
+                        txtHasError = txtShippingCity;
                     _bError = true;
                 }
                 else
@@ -385,6 +412,8 @@ namespace CSWeb.Mobile.UserControls
                 {
                     lblShippingZiPError.Text = ResourceHelper.GetResoureValue("ZipCodeErrorMsg");
                     lblShippingZiPError.Visible = true;
+                    if (txtHasError == null)
+                        txtHasError = txtShippingZipCode;
                     _bError = true;
                 }
                 else
@@ -393,6 +422,8 @@ namespace CSWeb.Mobile.UserControls
                     {
                         lblShippingZiPError.Text = ResourceHelper.GetResoureValue("ZipCodeValidationErrorMsg");
                         lblShippingZiPError.Visible = true;
+                        if (txtHasError == null)
+                            txtHasError = txtShippingZipCode;
                         _bError = true;
 
                     }
@@ -434,6 +465,8 @@ namespace CSWeb.Mobile.UserControls
             {
                 lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");
                 lblCCNumberError.Visible = true;
+                if (txtHasError == null)
+                    txtHasError = txtCCNumber1;
                 _bError = true;
             }
             else
@@ -513,6 +546,9 @@ namespace CSWeb.Mobile.UserControls
             //}
 
             #endregion
+
+            if (_bError && txtHasError != null)
+                txtHasError.Focus();
 
             return _bError;
 
