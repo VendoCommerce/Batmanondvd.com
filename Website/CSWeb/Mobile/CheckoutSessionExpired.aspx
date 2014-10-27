@@ -32,7 +32,7 @@
                 <h2 class="f50">Unable to process request 
                     because your session is expired. Please try again.
                 </h2>
-                <h3 class="f30" style="line-height: 1.2em; width: 500px;">Better <a href="index.aspx" class="black">race back to the Batcave</a>!</h3>
+                <h3 class="f30" style="line-height: 1.2em; width: 500px; padding-bottom: 50px;">Better <a href="index.aspx" class="black">race back to the Batcave</a>!</h3>
             </div>
             <div>
                 <img src="//d1kg9stb0ddjcv.cloudfront.net/images/jokersdown.jpg" width="609" height="397" alt="Sad Joker" class="block" style="margin: 0 auto;" />
