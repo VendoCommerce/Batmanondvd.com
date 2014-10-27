@@ -8,6 +8,7 @@ using CSBusiness.Resolver;
 using System.Configuration;
 using System.Text.RegularExpressions;
 using System.Web.Routing;
+using CSWeb.App_Code;
 
 
 
@@ -21,12 +22,13 @@ namespace CSWeb
             base.Application_Start(sender,e);
         }
 
-        //public void Application_BeginRequest(object sender, EventArgs e)
-        //{
-        //    string uri = Request.Url.AbsolutePath.Replace(".aspx", "");
-        //    if (!Request.Url.AbsolutePath.Contains("400.aspx") && Request.Url.AbsolutePath.Contains(".aspx"))
-        //        Response.Redirect(uri, true);
-        //}
+        public void Application_BeginRequest(object sender, EventArgs e)
+        {
+            //string uri = Request.Url.AbsolutePath.Replace(".aspx", "");
+            //if (!Request.Url.AbsolutePath.Contains("400.aspx") && Request.Url.AbsolutePath.Contains(".aspx"))
+            //    Response.Redirect(uri, true);
+            NavigationControl.DisableClientPageCache();
+        }
 
         public override void Session_Start(object sender, EventArgs e)
         {
