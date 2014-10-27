@@ -80,7 +80,7 @@ namespace CSWeb.Admin
             DateTime? timezoneStartDate = rangeDateControlCriteria.StartDateValueLocal;
             DateTime? timezoneEndDate = rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1);
             //Passsing custom field value as 1000 which is combination of mid and sid. Special case for dermwand.com only
-            List<ReportFields> ItemList = new OrderManager().GetOrderCustomFieldReport(timezoneStartDate, timezoneEndDate, 10000,  false);
+            List<ReportFields> ItemList = new OrderManager().GetOrderCustomFieldReport(timezoneStartDate, timezoneEndDate, 1,  false);
 
             Data rptData = new ReportWSSoapClient().GetDataFromTimeframe(hitsLinkUserName, hitsLinkPassword, ReportsEnum.eCommerceActivitySummary, TimeFrameEnum.Daily, Convert.ToDateTime(startDate), Convert.ToDateTime(endDate), 100000000, 0, 0);
             for (int i = 0; i <= rptData.Rows.GetUpperBound(0); i++)
