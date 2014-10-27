@@ -123,11 +123,13 @@ Creation Date: 10/02/2014
 
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga')
     ;
-    ga('require', 'ecommerce');
-    ga('create', 'UA-52993620-1', 'auto');
-    <asp:Literal ID="litGAReceiptPixel" runat="server" />
-        ga('ecommerce:send');
+
     ga('send', 'pageview');
+    ga('create', 'UA-52993620-1', 'auto');
+    ga('require', 'ecommerce', 'ecommerce.js');
+    <asp:Literal ID="litGAReceiptPixel" runat="server" />
+    ga('ecommerce:send');
+
 </script>  
    
   
