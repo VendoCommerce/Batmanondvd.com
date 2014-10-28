@@ -73,6 +73,9 @@ namespace CSWeb.Root.Store
             //{
             //    Response.Redirect("index.aspx");
             //}
+            string redirectPage = string.Empty;
+            if (NavigationControl.CheckOrderFlow(Session["OrderStatus"],Request.RawUrl, out redirectPage))
+                Response.Redirect(redirectPage);
 
             if (OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
             {
@@ -81,9 +84,6 @@ namespace CSWeb.Root.Store
 
             if (!IsPostBack)
             {
-            string redirectPage = string.Empty;
-            if (NavigationControl.CheckOrderFlow(Session["OrderStatus"],Request.RawUrl, out redirectPage))
-                Response.Redirect(redirectPage);
             if (CartContext.CartInfo != null && CartContext.CustomerInfo != null)
                 UserSessions.InsertSessionEntry(Context, true, CartContext.CartInfo.Total,CartContext.CustomerInfo.CustomerId);
                 AllTemplates = GetTemplates();

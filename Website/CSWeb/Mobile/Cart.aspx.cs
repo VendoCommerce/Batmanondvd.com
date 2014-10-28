@@ -29,12 +29,12 @@ namespace CSWeb.Mobile.Store
         protected override void Page_Load(object sender, EventArgs e)
         
         {
-
-            if (!Page.IsPostBack)
-            {
                 string redirectPage = string.Empty;
                 if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
                     Response.Redirect(redirectPage);
+
+            if (!Page.IsPostBack)
+            {
 
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();
                 if (!sitePrefCache.GeoLocationService)

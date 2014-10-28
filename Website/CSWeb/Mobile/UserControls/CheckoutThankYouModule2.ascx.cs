@@ -70,9 +70,6 @@ namespace CSWeb.Mobile.UserControls
                 orderId = CartContext.OrderId;
             if (!this.IsPostBack)
             {
-                string redirectPage = string.Empty;
-                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
-                    Response.Redirect(redirectPage);
                 
                 if (orderId > 0)
                 {

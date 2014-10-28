@@ -44,6 +44,9 @@ namespace CSWeb.Root.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
+                string redirectPage = string.Empty;
+                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                    Response.Redirect(redirectPage);
 
             if (Session["oId"] != null)
                 orderId = Convert.ToInt32(Session["oId"]);
@@ -51,9 +54,6 @@ namespace CSWeb.Root.UserControls
                 orderId = CartContext.OrderId;
             if (!this.IsPostBack)
             {
-                string redirectPage = string.Empty;
-                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
-                    Response.Redirect(redirectPage);
 
                 if (orderId > 0)
                 {

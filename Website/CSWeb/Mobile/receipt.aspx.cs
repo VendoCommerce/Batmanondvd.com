@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
+using CSWeb.App_Code;
 
 
 namespace CSWeb.Mobile.Store
@@ -16,7 +17,10 @@ namespace CSWeb.Mobile.Store
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            string redirectPage = string.Empty;
+            if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                Response.Redirect(redirectPage);
+
         }
         public string GetCleanPhoneNumber(string data)
         {

@@ -17,11 +17,11 @@ namespace CSWeb.Root.Store
         protected global::CSWeb.Root.UserControls.ShippingBillingCreditForm bscfShippingBillingCreditForm;
         protected override void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
                 string redirectPage = string.Empty;
                 if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
                     Response.Redirect(redirectPage);
+            if (!IsPostBack)
+            {
             }
             base.Page_Load(sender, e);
         }

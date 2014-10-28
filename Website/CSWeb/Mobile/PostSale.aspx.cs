@@ -67,6 +67,9 @@ namespace CSWeb.Mobile.Store
 
         protected void Page_Load(object sender, EventArgs e)
         {
+                string redirectPage = string.Empty;
+                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                    Response.Redirect(redirectPage);
             //if (CartContext.OrderId <= 0)
             //{
             //    Response.Redirect("index.aspx");
@@ -78,9 +81,6 @@ namespace CSWeb.Mobile.Store
 
             if (!IsPostBack)
             {
-                string redirectPage = string.Empty;
-                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
-                    Response.Redirect(redirectPage);
                 
                 AllTemplates = GetTemplates();
                 CurrentTemplateIndex = -1;
