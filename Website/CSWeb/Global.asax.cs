@@ -38,6 +38,8 @@ namespace CSWeb
         public override void Application_Error(object sender, EventArgs e)
         {
             Exception ex = Server.GetLastError();
+            if (ex.InnerException.Message.Contains("Cannot use a leading .. to exit above the top directory.")) return;
+
             if (ex.InnerException != null)
             {
                 CSCore.CSLogger.Instance.LogException(ex.InnerException.Message, ex.InnerException);
