@@ -117,9 +117,9 @@ id="wa_u" defer></script><script type="text/javascript" async>                  
 
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga')
     ;
-    ga('send', 'pageview');
     ga('create', 'UA-52993620-1', 'auto');
-    ga('require', 'ecommerce', 'ecommerce.js');
+     ga('send', 'pageview');
+   ga('require', 'ecommerce', 'ecommerce.js');
     <asp:Literal ID="litGAReceiptPixel" runat="server" />
     ga('ecommerce:send');
 
