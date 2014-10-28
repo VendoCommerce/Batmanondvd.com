@@ -59,6 +59,7 @@ Creation Date: 10/02/2014
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga')
             ;
         ga('create', 'UA-52993620-1', 'auto');
+        ga('require', 'displayfeatures');
         ga('send', 'pageview');
     </script>  
     
