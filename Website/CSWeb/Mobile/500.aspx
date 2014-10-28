@@ -55,7 +55,6 @@
 <!--#include file="footer.html"-->
 </div>
 
-  <uc:TrackingPixels ID="TrackingPixels" runat="server" />
 
 
  </form>

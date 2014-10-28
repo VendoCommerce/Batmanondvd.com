@@ -20,14 +20,5 @@ namespace CSWeb.Mobile {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm fm1;
-        
-        /// <summary>
-        /// TrackingPixels control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::CSWeb.Mobile.UserControls.TrackingPixels TrackingPixels;
     }
 }
