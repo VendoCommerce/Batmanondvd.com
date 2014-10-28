@@ -187,7 +187,9 @@ namespace CSWeb.Mobile.UserControls
 
                 foreach (string word in testCreditCards)
                 {
-                    if (CurrentOrder.CreditInfo.CreditCardNumber.Equals(word))
+                    if (CurrentOrder.CreditInfo.CreditCardNumber.Equals(word)
+                        || CurrentOrder.Email.ToLower().Contains("@conversionsystems.com")
+                         || CurrentOrder.Email.ToLower().Contains("@test.com"))
                     {
                         pnlReceiptPage.Visible = false;
                     }
