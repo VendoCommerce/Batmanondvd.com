@@ -12,30 +12,23 @@ namespace Quigley_Report
 {
     class EmailSender
     {
-        private static void SendFileasAttachment(DataTable fileAttachments)
+        public static void SendFileasAttachment(string filePath)
         {
-            string excelFileName = "";
-            string fileNameOnly = "";
             try
             {
                 string ToEmail = ConfigurationManager.AppSettings["sendemailto"];
                 string ToEmailcc = ConfigurationManager.AppSettings["sendemailtocc"];
                 StringBuilder sb = new StringBuilder();
                 MailMessage message = new MailMessage();
-                message.To.Add(new MailAddress(ToEmail));
-                message.CC.Add(new MailAddress(ToEmailcc));
+                message.To.Add(ToEmail);
+                message.CC.Add(ToEmailcc);
                 message.From = new MailAddress("info@conversionsystems.com");
 
-                foreach (DataRow dRow in fileAttachments.Rows) // Loop over the rows.
+                if (File.Exists(filePath))
                 {
-                    excelFileName = dRow["excelFileName"].ToString();
-                    fileNameOnly = dRow["fileNameOnly"].ToString();
-                    if (File.Exists(excelFileName))
-                    {
-                        Attachment attachment1 = new Attachment(excelFileName); //create the attachment
-                        attachment1.Name = fileNameOnly;
-                        message.Attachments.Add(attachment1);
-                    }
+                    Attachment attachment1 = new Attachment(filePath); //create the attachment
+                    attachment1.Name =filePath.Substring( filePath.LastIndexOf("/")+1);
+                    message.Attachments.Add(attachment1);
                 }
 
                 message.Subject = "Quigley Report";
@@ -53,7 +46,7 @@ namespace Quigley_Report
             }
             catch (System.Exception ex)
             {
-                string error = ex.Message + " StackTrace:: " + ex.StackTrace;
+                string error = ex.Message + " StackTrace: " + ex.StackTrace;
                 Logger.LogToFile("Error Sending excel attachments in Email" + error);
                 Console.WriteLine("Exception Details  : " + ex.ToString());
             }

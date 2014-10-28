@@ -20,7 +20,7 @@ namespace Quigley_Report
     class Batch
     {
 
-        static void LoadReport(DateTime startDate, DateTime endDate)
+        static string CreateReport(DateTime startDate, DateTime endDate)
         {
             string targetPath = ConfigurationManager.AppSettings["filesPath"];
             string fileNameFormat = ConfigurationManager.AppSettings["fileNameFormat"];
@@ -29,21 +29,23 @@ namespace Quigley_Report
             if (Dt1.Rows.Count > 0)
             {
                 Console.WriteLine("Total Rows: " + Dt1.Rows.Count.ToString());
-                string excelFileName = string.Format(fileNameFormat, startDate.ToString("MM-dd-yy"), endDate.AddDays(-1).ToString("MM-dd-yy"));
+                string excelFileName = string.Format(fileNameFormat, startDate.AddDays(1).ToString("MM-dd-yy"), endDate.ToString("MM-dd-yy"));
                 string FUllPAthwithFileName = targetPath + excelFileName;
 
                 CsvFileCreator.CreateCsvFromDataTable(Dt1, FUllPAthwithFileName);
+                return FUllPAthwithFileName;
             }
             else
             {
                 Console.WriteLine("No found.");
             }
+            return string.Empty;
         }
 
         static void Main(string[] args)
         {
-            DateTime startDate =  DateTime.Today.AddDays(-1);
-            DateTime endDate = DateTime.Today.AddDays(0);
+            DateTime startDate =  DateTime.Today.AddDays(-7).AddHours(-3);
+            DateTime endDate = DateTime.Today.AddDays(0).AddHours(-3);
             
             Console.WriteLine("startDate " + startDate);
             Console.WriteLine("endDate " + endDate);
@@ -53,7 +55,9 @@ namespace Quigley_Report
             Logger.LogToFile("Start BatmanOnDvd Quigley Report");
             try
             {
-                LoadReport(startDate, endDate);
+                string reportFile = CreateReport(startDate, endDate);
+                if (reportFile.Length > 0)
+                    EmailSender.SendFileasAttachment(reportFile);
             }
             catch (Exception ex)
             {
@@ -61,6 +65,7 @@ namespace Quigley_Report
                 //SendExceptionEmail(ex);
             }
 
+            Logger.LogToFile("End BatmanOnDvd Quigley Report");
             Console.WriteLine("End BatmanOnDvd Quigley Report");
         }
     }
