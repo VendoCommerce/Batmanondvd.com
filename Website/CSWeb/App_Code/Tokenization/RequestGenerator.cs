@@ -39,8 +39,7 @@ namespace CSWeb.App_Code.Tokenization
                     xml.WriteElementString("brand", request.CardType.ToString().ToLower());
                     xml.WriteElementString("month", request.ExpireDate.Month.ToString());
                     xml.WriteElementString("year", request.ExpireDate.Year.ToString());
-                    //xml.WriteElementString("verification_value", request.CardCvv);
-                    xml.WriteElementString("verification_value", "");
+                    xml.WriteElementString("verification_value", request.CardCvv);
                     xml.WriteEndElement();
                     xml.WriteWhitespace("\n");
                     //Transaction info

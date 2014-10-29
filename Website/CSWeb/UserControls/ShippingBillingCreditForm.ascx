@@ -312,7 +312,16 @@
                                 <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="text-3">
                                 </asp:DropDownList>
                             </div>
-
+                            <div class="form_line_2 clearfix" style="padding-top: 5px;">
+                                <div class="error-1">
+                                    <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server"
+                                        Display="Dynamic" />
+                                    <asp:Label ID="lblCvvError" runat="server" Visible="false"></asp:Label></div>
+                                <label class="label-1">
+                                    Card Verification*
+                                </label>
+                                <asp:TextBox ID="txtCvv" runat="server" CssClass="input-2" MaxLength="4"></asp:TextBox>
+                            </div>
                             <div class="form_line clearfix" style="padding: 16px 0 30px 114px;">
                                 <input type="checkbox" id="send_offers" style="float: left; margin: 0 6px 10px 0;" checked="checked" />
                                 <label class="label-3" for="send_offers">Yes, I would like to receive updates and special offers from Warner Bros. See <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> for Details.

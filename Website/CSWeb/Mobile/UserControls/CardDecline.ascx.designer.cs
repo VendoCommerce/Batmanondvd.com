@@ -652,6 +652,33 @@ namespace CSWeb.Mobile.UserControls {
         protected global::System.Web.UI.WebControls.DropDownList ddlCCType;
         
         /// <summary>
+        /// lblCCNumberError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCCNumberError;
+        
+        /// <summary>
+        /// txtCCNumber1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCCNumber1;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// rfvExpMonth control.
         /// </summary>
         /// <remarks>
@@ -697,31 +724,31 @@ namespace CSWeb.Mobile.UserControls {
         protected global::System.Web.UI.WebControls.DropDownList ddlExpYear;
         
         /// <summary>
-        /// lblCCNumberError control.
+        /// rfvCVV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCCNumberError;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCVV;
         
         /// <summary>
-        /// txtCCNumber1 control.
+        /// lblCvvError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCCNumber1;
+        protected global::System.Web.UI.WebControls.Label lblCvvError;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// txtCvv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.TextBox txtCvv;
         
         /// <summary>
         /// imgBtn control.

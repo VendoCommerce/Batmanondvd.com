@@ -460,7 +460,7 @@ namespace CSBusiness.OrderManagement
                     paymentDataInfo.CreditCardType = Convert.ToInt32(reader["CreditCardType"]);
                     paymentDataInfo.CreditCardName = reader["CreditCardName"].ToString(); ;
                     paymentDataInfo.CreditCardExpired = Convert.ToDateTime(reader["CreditCardExpired"]);
-                    paymentDataInfo.CreditCardCSC = reader["CreditCardCSC"].ToString();
+                    paymentDataInfo.CreditCardCSC =CommonHelper.Decrypt( reader["CreditCardCSC"].ToString());
                     paymentDataInfo.AuthorizationCode = reader["AuthorizationCode"].ToString();
                     paymentDataInfo.TransactionCode = reader["TransactionCode"].ToString();
                     item.CreditInfo = paymentDataInfo;
@@ -534,7 +534,7 @@ namespace CSBusiness.OrderManagement
                         paymentDataInfo.CreditCardType = Convert.ToInt32(reader["CreditCardType"]);
                         paymentDataInfo.CreditCardName = reader["CreditCardName"].ToString(); ;
                         paymentDataInfo.CreditCardExpired = Convert.ToDateTime(reader["CreditCardExpired"]);
-                        paymentDataInfo.CreditCardCSC = reader["CreditCardCSC"].ToString();
+                        paymentDataInfo.CreditCardCSC =CommonHelper.Decrypt( reader["CreditCardCSC"].ToString());
                         paymentDataInfo.AuthorizationCode = Convert.ToString(reader["AuthorizationCode"] ?? string.Empty);
                         paymentDataInfo.TransactionCode = Convert.ToString(reader["TransactionCode"] ?? string.Empty);
 
@@ -962,7 +962,7 @@ namespace CSBusiness.OrderManagement
                     paymentDataInfo.CreditCardType = Convert.ToInt32(reader["CreditCardType"]);
                     paymentDataInfo.CreditCardName = reader["CreditCardName"].ToString(); ;
                     paymentDataInfo.CreditCardExpired = Convert.ToDateTime(reader["CreditCardExpired"]);
-                    paymentDataInfo.CreditCardCSC = reader["CreditCardCSC"].ToString();
+                    paymentDataInfo.CreditCardCSC =CommonHelper.Decrypt( reader["CreditCardCSC"].ToString());
                     paymentDataInfo.AuthorizationCode = reader["AuthorizationCode"].ToString();
                     paymentDataInfo.TransactionCode = reader["TransactionCode"].ToString();
                     item.CreditInfo = paymentDataInfo;
