@@ -645,7 +645,7 @@ namespace CSWeb.Root.UserControls
             if (!validateInput())
             {
                 SaveData();
-                SaveAdditionaInfo();
+                //SaveAdditionaInfo();
                 //int qId = 1;
                 //Session["PId"] = 30;
                 //Response.Redirect(string.Format("AddProduct.aspx?CId={1}",
@@ -665,10 +665,6 @@ namespace CSWeb.Root.UserControls
             //ClientCartContext contextData = ClientOrderData;
             //contextData.CartAbandonmentId = CSResolve.Resolve<ICustomerService>().InsertCartAbandonment(contextData.CustomerInfo, contextData);
             //ClientOrderData = contextData;
-
-            Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
-            orderAttributes.Add("SpecialOffersOptIn", new CSBusiness.Attributes.AttributeValue(chkOptIn.Checked));
-            CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(ClientOrderData.OrderId, orderAttributes, null);
         }
 
         public void SaveData()
@@ -738,6 +734,9 @@ namespace CSWeb.Root.UserControls
                 {                    
                     clientData.CartInfo.ShippingChargeKey = ddlAdditionShippingCharge.SelectedValue;
                 }
+
+                //Save opt-in value in order
+                clientData.OrderAttributeValues.AddOrUpdateAttributeValue("SpecialOffersOptIn", new CSBusiness.Attributes.AttributeValue(chkOptIn.Checked)); 
 
                 ClientOrderData = clientData;
 

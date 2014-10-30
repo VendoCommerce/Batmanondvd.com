@@ -588,10 +588,6 @@ namespace CSWeb.Mobile.UserControls
             //ClientCartContext contextData = ClientOrderData;
             //contextData.CartAbandonmentId = CSResolve.Resolve<ICustomerService>().InsertCartAbandonment(contextData.CustomerInfo, contextData);
             //ClientOrderData = contextData;
-            Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
-            orderAttributes.Add("SpecialOffersOptIn", new CSBusiness.Attributes.AttributeValue(chkOptIn.Checked));
-            CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(ClientOrderData.OrderId, orderAttributes, null);
-
         }
 
         public void SaveData()
@@ -652,7 +648,10 @@ namespace CSWeb.Mobile.UserControls
                 clientData.CustomerInfo = CustData;
                 clientData.PaymentInfo = paymentDataInfo;
                 ClientOrderData = clientData;
-                
+
+                //Save opt-in value in order
+                clientData.OrderAttributeValues.AddOrUpdateAttributeValue("SpecialOffersOptIn", new CSBusiness.Attributes.AttributeValue(chkOptIn.Checked)); 
+
                 //Save Order information before upsale process
 
                 int orderId = 0;
