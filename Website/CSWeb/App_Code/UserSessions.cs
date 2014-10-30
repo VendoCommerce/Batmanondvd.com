@@ -110,34 +110,42 @@ namespace CSWeb
         }
         public static void InsertSessionEntry(HttpContext context)
         {
-            InsertSessionEntry(context, false, 0, false, false, 0);
+            InsertSessionEntry(context, null, null, null, null, null,null);
         }
 
         public static void InsertSessionEntry(HttpContext context, bool mobileCallFlag, bool mobileEmailFlag)
         {
-            InsertSessionEntry(context, false, 0, mobileCallFlag, mobileEmailFlag, 0);
+            InsertSessionEntry(context, null, null, mobileCallFlag, mobileEmailFlag, null,null);
         }
 
-        public static void InsertSessionEntry(HttpContext context, bool orderFlag, decimal orderValue, int userId)
+        public static void InsertSessionEntry(HttpContext context, bool orderFlag, decimal orderValue, int userId, int? orderId)
         {
-            InsertSessionEntry(context, orderFlag, orderValue, false, false, userId);
+            InsertSessionEntry(context, orderFlag, orderValue, null, null, userId,orderId);
         }
 
-        public static void InsertSessionEntry(HttpContext context, bool orderFlag, decimal orderValue, bool mobileCallFlag, bool mobileEmailFlag, int userId)
+        public static void InsertSessionEntry(HttpContext context, bool? orderFlag, decimal? orderValue, bool? mobileCallFlag, bool? mobileEmailFlag, int? userId, int? orderId)
         {
             try
             {
 
-                string sessionId = GetSessionId(context);
-                string ipAddress = GetIpAddress(context);
-                string trafficSource = GetTrafficSource(context);
-                string deviceType = GetDeviceType(context);
-                string url = GetCleanUrl(context);
+                string sessionId = null;
+                string ipAddress = null;
+                string trafficSource = null;
+                string deviceType = null;
+                string url = null;
+                string version = null;
 
-                string version = context.Request.Url.AbsolutePath.ToString().Replace("/store", "");
-                version = version.Substring(0, version.LastIndexOf('/'));
-                version = version.Substring(version.LastIndexOf('/') + 1, (version.Length - (version.LastIndexOf('/') + 1)));
-
+                if (context != null)
+                {
+                    sessionId = GetSessionId(context);
+                    ipAddress = GetIpAddress(context);
+                    trafficSource = GetTrafficSource(context);
+                    deviceType = GetDeviceType(context);
+                    url = GetCleanUrl(context);
+                    version = context.Request.Url.AbsolutePath.ToString().Replace("/store", "");
+                    version = version.Substring(0, version.LastIndexOf('/'));
+                    version = version.Substring(version.LastIndexOf('/') + 1, (version.Length - (version.LastIndexOf('/') + 1)));
+                }
                 string sql = "";
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["client_db"].ToString()))
                 {
@@ -145,6 +153,7 @@ namespace CSWeb
 
                     //Setup values
                     SqlParameter CustomerSessionIdParam = new SqlParameter("@CustomerSessionId", System.Data.SqlDbType.NVarChar);
+                    SqlParameter OrderIdParam = new SqlParameter("@OrderId", System.Data.SqlDbType.Int);
                     SqlParameter URLParam = new SqlParameter("@URL", System.Data.SqlDbType.NVarChar);
                     SqlParameter IPAddressParam = new SqlParameter("@IPAddress", System.Data.SqlDbType.NVarChar);
                     SqlParameter VersionIdParam = new SqlParameter("@VersionId", System.Data.SqlDbType.NVarChar);
@@ -158,10 +167,11 @@ namespace CSWeb
                     SqlParameter OrderValueParam = new SqlParameter("@OrderValue", System.Data.SqlDbType.Money);
 
                     URLParam.Value = url;
+                    OrderIdParam.Value = orderId;
                     IPAddressParam.Value = ipAddress;
                     VersionIdParam.Value = version;
                     CreateDateParam.Value = DateTime.Now;
-                    UserIdParam.Value = userId.ToString();
+                    UserIdParam.Value = userId;
                     TrafficSourceParam.Value = trafficSource;
                     DeviceTypeParam.Value = deviceType;
                     MobileCallFlagParam.Value = mobileCallFlag;
@@ -174,6 +184,7 @@ namespace CSWeb
 
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(OrderIdParam);
                     cmd.Parameters.Add(URLParam);
                     cmd.Parameters.Add(IPAddressParam);
                     cmd.Parameters.Add(VersionIdParam);

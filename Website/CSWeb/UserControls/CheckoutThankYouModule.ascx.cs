@@ -44,9 +44,9 @@ namespace CSWeb.Root.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                string redirectPage = string.Empty;
-                if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
-                    Response.Redirect(redirectPage);
+            string redirectPage = string.Empty;
+            if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                Response.Redirect(redirectPage);
 
             if (Session["oId"] != null)
                 orderId = Convert.ToInt32(Session["oId"]);
@@ -68,7 +68,7 @@ namespace CSWeb.Root.UserControls
                         CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderData.OrderId, orderAttributes, orderData.OrderStatusId);
                     }
 
-                    UserSessions.InsertSessionEntry(Context, true, CartContext.CartInfo.Total,CartContext.CustomerInfo.CustomerId);
+                    //UserSessions.InsertSessionEntry(Context, true, CartContext.CartInfo.Total, CartContext.CustomerInfo.CustomerId, orderId);
 
                 }
 

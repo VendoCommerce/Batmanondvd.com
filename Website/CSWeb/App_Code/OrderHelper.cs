@@ -34,7 +34,7 @@ namespace CSWeb
         {
             Request _request = new Request();
 
-            Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderID, true);           
+            Order orderData = CSResolve.Resolve<IOrderService>().GetOrderDetails(orderID, true);
 
             _request.CardNumber = orderData.CreditInfo.CreditCardNumber;
             _request.CardType = GetCCType(orderData.CreditInfo.CreditCardName);
@@ -64,20 +64,22 @@ namespace CSWeb
             orderAttributes.Add("AuthResponse", new CSBusiness.Attributes.AttributeValue(_response.GatewayResponseRaw));
             CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(orderData.OrderId, orderAttributes, null);
 
+            bool _returnValue = false;
             //Save results
             if (_response != null && _response.ResponseType != TransactionResponseType.Approved)
             {
                 CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, _response.TransactionID, _response.AuthCode, 7);
 
-                return false;
+                _returnValue = false;
             }
             else if (_response != null && _response.ResponseType == TransactionResponseType.Approved)
             {
                 CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, _response.TransactionID, _response.AuthCode, 4);
-                return true;
+                _returnValue = true;
             }
+            UserSessions.InsertSessionEntry(null, _returnValue, (decimal)(_request.Amount), orderData.CustomerId, orderID);
 
-            return true;
+            return _returnValue;
         }
 
         //public enum CustomCreditCardTypeEnum
@@ -122,9 +124,9 @@ namespace CSWeb
             if (itemStateProvince != null)
             {
                 _request.State = itemStateProvince.Abbreviation.Trim();
-                
+
             }
-            
+
             _request.Country = CountryManager.CountryCode(orderData.CustomerInfo.BillingAddress.CountryId).Trim();
             _request.ZipCode = orderData.CustomerInfo.BillingAddress.ZipPostalCode;
             _request.TransactionDescription = orderData.CustomerInfo.BillingAddress.FirstName + " " + orderData.CustomerInfo.BillingAddress.LastName;
@@ -146,12 +148,12 @@ namespace CSWeb
             _request.IPAddress = orderData.IpAddress;
             _request.Phone = orderData.CustomerInfo.BillingAddress.PhoneNumber;
 
-           
+
             _request.ShipToCountry = CountryManager.CountryCode(orderData.CustomerInfo.ShippingAddress.CountryId).Trim();
-            
+
             _request.Email = orderData.Email;
 
-            
+
             Response _response = PaymentProviderRepository.Instance.Get().PerformValidationRequest(_request);
 
 
@@ -289,14 +291,14 @@ namespace CSWeb
             {
                 //Body Translation
                 String BodyTemplate = emailTemplate.Body.Replace("&", "&amp;");
-                BodyTemplate = BodyTemplate.Replace("{OrderId}", orderId.ToString());            
+                BodyTemplate = BodyTemplate.Replace("{OrderId}", orderId.ToString());
                 BodyTemplate = BodyTemplate.Replace("&amp;", "&");
                 try
                 {
                     //Prepare Mail Message
                     MailMessage _oMailMessage = new MailMessage(emailTemplate.FromAddress, emailTemplate.ToAddress, emailTemplate.Subject, BodyTemplate);
                     _oMailMessage.IsBodyHtml = true;
-                    SendMail(_oMailMessage);                    
+                    SendMail(_oMailMessage);
                     return true;
                 }
                 catch (Exception)
@@ -708,4 +710,4 @@ namespace CSWeb
 
     }
 }
- 
+

@@ -651,14 +651,17 @@ namespace CSWeb.Mobile.UserControls
                 //Save Order information before upsale process
 
                 int orderId = 0;
-                    if (rId == 1)
-                        orderId = CSResolve.Resolve<IOrderService>().SaveOrder(clientData);
-                    else
-                    {
-                        //update order with modified customer shipping and billing and credit card information
-                        orderId = clientData.OrderId;
-                        CSResolve.Resolve<IOrderService>().UpdateOrder(orderId, clientData);
-                    }
+                if (rId == 1)
+                {
+                    orderId = CSResolve.Resolve<IOrderService>().SaveOrder(clientData);
+                    UserSessions.InsertSessionEntry(Context, true, clientData.CartInfo.Total, clientData.CustomerInfo.CustomerId, orderId);
+                }
+                else
+                {
+                    //update order with modified customer shipping and billing and credit card information
+                    orderId = clientData.OrderId;
+                    CSResolve.Resolve<IOrderService>().UpdateOrder(orderId, clientData);
+                }
 
                     //if (orderId > 1)
                     //{

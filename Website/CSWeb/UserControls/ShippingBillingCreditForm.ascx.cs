@@ -749,6 +749,8 @@ namespace CSWeb.Root.UserControls
                 //if (rId == 1)
                 contextData.CartAbandonmentId = CSResolve.Resolve<ICustomerService>().InsertCartAbandonment(CustData, contextData);
                 orderId = CSResolve.Resolve<IOrderService>().SaveOrder(clientData);
+                UserSessions.InsertSessionEntry(Context, true, clientData.CartInfo.Total, clientData.CustomerInfo.CustomerId, orderId);
+
                 //else
                 //{
                 //    //update order with modified customer shipping and billing and credit card information

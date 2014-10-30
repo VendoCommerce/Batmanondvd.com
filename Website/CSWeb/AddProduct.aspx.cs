@@ -59,6 +59,7 @@ namespace CSWeb.Root.Store
                         if (CSFactory.OrderProcessCheck() == (int)OrderProcessTypeEnum.InstantOrderProcess)
                         {
                             int orderId = CSResolve.Resolve<IOrderService>().SaveOrder(clientData);
+                            UserSessions.InsertSessionEntry(Context, true, clientData.CartInfo.Total, clientData.CustomerInfo.CustomerId, orderId);
 
                             clientData.OrderId = orderId;
                             clientData.ResetData();
