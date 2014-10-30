@@ -647,10 +647,11 @@ namespace CSWeb.Mobile.UserControls
 
                 clientData.CustomerInfo = CustData;
                 clientData.PaymentInfo = paymentDataInfo;
-                ClientOrderData = clientData;
 
                 //Save opt-in value in order
                 clientData.OrderAttributeValues.AddOrUpdateAttributeValue("SpecialOffersOptIn", new CSBusiness.Attributes.AttributeValue(chkOptIn.Checked)); 
+
+                ClientOrderData = clientData;
 
                 //Save Order information before upsale process
 
