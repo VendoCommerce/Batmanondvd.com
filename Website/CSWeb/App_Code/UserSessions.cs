@@ -87,7 +87,7 @@ namespace CSWeb
                 {
                     if (ua.Contains("ipad") || ua.Contains("galaxy"))
                         return "Mobile Tablet";
-                    return "Mobile Phone";
+                    return "Mobile";
                 }
             }
             catch { }
