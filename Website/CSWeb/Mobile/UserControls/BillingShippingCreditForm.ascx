@@ -343,7 +343,7 @@
                 </div>
 
 
-                <asp:CheckBox ID="xyz" runat="server" CssClass="checkbox-left2" Checked="true" /><label class="label-3" for="bsfcBillingShippingCreditForm_xyz">
+                <asp:CheckBox ID="chkOptIn" runat="server" CssClass="checkbox-left2" Checked="true" /><label class="label-3" for="bsfcBillingShippingCreditForm_xyz">
                     Yes, I would like to receive updates and special offers from Warner Bros. See <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> for Details.
                 </label>
             </div>

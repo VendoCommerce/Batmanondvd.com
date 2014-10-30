@@ -17,6 +17,7 @@ using CSBusiness.Shipping;
 using CSWebBase;
 using CSBusiness.OrderManagement;
 using CSWeb.App_Code;
+using CSBusiness.Attributes;
 
 namespace CSWeb.Root.UserControls
 {
@@ -661,11 +662,13 @@ namespace CSWeb.Root.UserControls
         }
         private void SaveAdditionaInfo()
         {
-            ClientCartContext contextData = ClientOrderData;
-
+            //ClientCartContext contextData = ClientOrderData;
             //contextData.CartAbandonmentId = CSResolve.Resolve<ICustomerService>().InsertCartAbandonment(contextData.CustomerInfo, contextData);
+            //ClientOrderData = contextData;
 
-            ClientOrderData = contextData;
+            Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
+            orderAttributes.Add("SpecialOffersOptIn", new CSBusiness.Attributes.AttributeValue(chkOptIn.Checked));
+            CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(ClientOrderData.OrderId, orderAttributes, null);
         }
 
         public void SaveData()

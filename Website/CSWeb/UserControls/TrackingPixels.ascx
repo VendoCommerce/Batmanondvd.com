@@ -60,6 +60,31 @@ Creation Date: 10/02/2014
         ga('send', 'pageview', { 'page': newPageName });
     </script>  
 
+ <!-- Google Code for Remarketing Tag -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 962540852;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962540852/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+    <script type="text/javascript">
+        (function(a,e,c,f,g,b,d){var
+        h={ak:"962540852",cl:"8HiFCN75nFcQtOr8ygM"};a[c]=a[c]||
+        function(){(a[c].q=a[c].q||[]).push(arguments)};a[f]||
+        (a[f]=h.ak);b=e.createElement(g);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(g)[0];d.parentNode.insertBefore(b,d);a._googWcmGet=function(b,d,e){a[c](2,b,h,d,null,new
+        Date,e)}})(window,document,"_googWcmImpl","_googWcmAk","script");
+</script>
+
 </asp:Panel>
 <asp:Panel ID="pnlHomeAndSubPages" runat="server" Visible="false">
 
@@ -133,7 +158,5 @@ Creation Date: 10/02/2014
     ga('ecommerce:send');
 
 </script>  
-   
-  
  
 </asp:Panel>

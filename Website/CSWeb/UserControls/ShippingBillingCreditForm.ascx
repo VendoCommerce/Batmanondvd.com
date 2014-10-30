@@ -323,9 +323,8 @@
                                 <asp:TextBox ID="txtCvv" runat="server" CssClass="input-2" MaxLength="4"></asp:TextBox>
                             </div>
                             <div class="form_line clearfix" style="padding: 16px 0 30px 114px;">
-                                <input type="checkbox" id="send_offers" style="float: left; margin: 0 6px 10px 0;" checked="checked" />
-                                <label class="label-3" for="send_offers">Yes, I would like to receive updates and special offers from Warner Bros. See <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> for Details.
-                                </label>
+                                <asp:CheckBox ID="chkOptIn" runat="server" Checked="true" CssClass="checkbox-left2" />
+                                &nbsp;Yes, I would like to receive updates and special offers from Warner Bros. See <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> for Details.
                             </div>
 
                             <div class="form_line_btn">

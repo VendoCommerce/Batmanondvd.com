@@ -84,8 +84,6 @@ namespace CSWeb.Root.Store
 
             if (!IsPostBack)
             {
-            if (CartContext.CartInfo != null && CartContext.CustomerInfo != null)
-                UserSessions.InsertSessionEntry(Context, true, CartContext.CartInfo.Total,CartContext.CustomerInfo.CustomerId,CartContext.OrderId);
                 AllTemplates = GetTemplates();
                 CurrentTemplateIndex = -1;
                 GoToNextTemplate();

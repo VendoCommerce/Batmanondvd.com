@@ -16,6 +16,7 @@ using CSBusiness.CreditCard;
 using System.Web.UI.WebControls;
 using CSBusiness.Payment;
 using CSBusiness.OrderManagement;
+using CSBusiness.Attributes;
 
 namespace CSWeb.Mobile.UserControls
 {
@@ -575,6 +576,7 @@ namespace CSWeb.Mobile.UserControls
             if (!validateInput())
             {
                 SaveData();
+                SaveAdditionaInfo();
                 //Session["PId"] = Convert.ToInt32(ddlSize.SelectedValue);
                 Session["OrderStatus"] = "PostSale";
                 Response.Redirect(string.Format("PostSale.aspx?CId={0}",
@@ -583,12 +585,15 @@ namespace CSWeb.Mobile.UserControls
         }
         private void SaveAdditionaInfo()
         {
-            ClientCartContext contextData = ClientOrderData;
-
+            //ClientCartContext contextData = ClientOrderData;
             //contextData.CartAbandonmentId = CSResolve.Resolve<ICustomerService>().InsertCartAbandonment(contextData.CustomerInfo, contextData);
+            //ClientOrderData = contextData;
+            Dictionary<string, AttributeValue> orderAttributes = new Dictionary<string, AttributeValue>();
+            orderAttributes.Add("SpecialOffersOptIn", new CSBusiness.Attributes.AttributeValue(chkOptIn.Checked));
+            CSResolve.Resolve<IOrderService>().UpdateOrderAttributes(ClientOrderData.OrderId, orderAttributes, null);
 
-            ClientOrderData = contextData;
         }
+
         public void SaveData()
         {
             ClientCartContext clientData = ClientOrderData;
@@ -647,7 +652,7 @@ namespace CSWeb.Mobile.UserControls
                 clientData.CustomerInfo = CustData;
                 clientData.PaymentInfo = paymentDataInfo;
                 ClientOrderData = clientData;
-
+                
                 //Save Order information before upsale process
 
                 int orderId = 0;
