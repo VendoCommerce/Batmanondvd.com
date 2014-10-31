@@ -10,6 +10,7 @@
 <title>Batman | Classic TV Series Episodes Available on DVD and Bluray | As Seen on TV - Select Your Collection</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
 <meta name="keywords" content="Batman Classic TV Series, DVD, Bluray, Warner Home Video, Adam West, As Seen on TV, Limited Time Offer, Robin, Joker, Riddler, Penguin, Catwoman, Original TV Series" />
+<script src="//cdn.optimizely.com/js/77045885.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/Scripts/fancybox/jquery.fancybox.css">
 <script src="/Scripts/fancybox/jquery.fancybox.pack.js"></script>
