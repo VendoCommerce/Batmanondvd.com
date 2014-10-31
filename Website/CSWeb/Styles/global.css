@@ -258,6 +258,14 @@ p {padding-bottom: 20px;}
     left: 834px;
 }
 
+#logo_wb_officialsite {
+    position: absolute;
+    top: 71px;
+    left: 669px;
+    z-index: 25;
+    display: none;
+}
+
 .container {
 	width: 959px;
 	margin: 0 auto;	
