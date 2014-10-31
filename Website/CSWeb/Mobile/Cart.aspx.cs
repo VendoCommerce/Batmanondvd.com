@@ -34,7 +34,7 @@ namespace CSWeb.Mobile.Store
 
                 if (!IsPostBack)
                 {
-                    Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                    NavigationControl.DisableClientPageCache();
                 }
 
             if (!Page.IsPostBack)

@@ -77,11 +77,7 @@ namespace CSWeb.Root.Store
             if (NavigationControl.CheckOrderFlow(Session["OrderStatus"],Request.RawUrl, out redirectPage))
                 Response.Redirect(redirectPage);
 
-            if (!IsPostBack)
-            {
-                Response.Cache.SetCacheability(HttpCacheability.NoCache);
-            }
-
+            
             if (OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
             {
                 Response.Redirect("receipt.aspx");

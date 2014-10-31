@@ -75,10 +75,7 @@ namespace CSWeb.Mobile.Store
             //    Response.Redirect("index.aspx");
             //}
 
-                if (!IsPostBack)
-                {
-                    Response.Cache.SetCacheability(HttpCacheability.NoCache);
-                }
+               
             if (OrderHelper.IsCustomerOrderFlowCompleted(CartContext.OrderId))
             {
                 Response.Redirect("receipt.aspx");
