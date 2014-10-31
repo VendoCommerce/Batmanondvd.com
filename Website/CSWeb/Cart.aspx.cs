@@ -25,5 +25,12 @@ namespace CSWeb.Root.Store
             }
             base.Page_Load(sender, e);
         }
+
+        protected override void OnPreRender(EventArgs e)
+        {
+            string redirectPage = string.Empty;
+            if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                Response.Redirect(redirectPage);
+        }
     }
 }

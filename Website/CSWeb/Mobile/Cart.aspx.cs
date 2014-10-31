@@ -27,7 +27,6 @@ namespace CSWeb.Mobile.Store
         }
          
         protected override void Page_Load(object sender, EventArgs e)
-        
         {
                 string redirectPage = string.Empty;
                 if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
@@ -46,6 +45,13 @@ namespace CSWeb.Mobile.Store
             }
 
             base.Page_Load(sender, e);
+        }
+
+        protected override void OnPreRender(EventArgs e)
+        {
+            string redirectPage = string.Empty;
+            if (NavigationControl.CheckOrderFlow(Session["OrderStatus"], Request.RawUrl, out redirectPage))
+                Response.Redirect(redirectPage);
         }
 
         public string GetCleanPhoneNumber(string data)

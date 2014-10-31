@@ -22,8 +22,14 @@ namespace CSWeb.App_Code
             url = url.ToLower();
             if (orderStatus == null)
             {
-                redirectPage = "CheckoutSessionExpired.aspx";
+                if (!url.Contains("/cart"))
+                    redirectPage = "CheckoutSessionExpired.aspx";
+                else
+                {
+                    redirectPage = "choose";
+                }
             }
+
 
             string orderStatusStr = (string)orderStatus;
             if (orderStatusStr == "PostSale")
