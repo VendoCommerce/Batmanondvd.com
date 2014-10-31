@@ -22,6 +22,7 @@ namespace CSWeb.Root.Store
                     Response.Redirect(redirectPage);
             if (!IsPostBack)
             {
+                Response.Cache.SetCacheability(HttpCacheability.NoCache);
             }
             base.Page_Load(sender, e);
         }
