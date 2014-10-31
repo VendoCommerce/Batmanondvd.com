@@ -312,10 +312,10 @@
                                 <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="text-3">
                                 </asp:DropDownList>
                             </div>
-                            <div class="form_line_2 clearfix" style="padding-top: 5px;">
+                            <div class="form_line_2 clearfix" style="padding-top: 5px;visibility: hidden">
                                 <div class="error-1">
                                     <asp:RequiredFieldValidator ID="rfvCVV" ControlToValidate="txtCvv" runat="server"
-                                        Display="Dynamic" />
+                                        Display="Dynamic" Enabled="False" />
                                     <asp:Label ID="lblCvvError" runat="server" Visible="false"></asp:Label></div>
                                 <label class="label-1">
                                     Card Verification*
