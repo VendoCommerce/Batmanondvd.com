@@ -169,15 +169,15 @@ namespace CSWeb.FulfillmentHouse
                     //BillingInfo section
                     xml.WriteStartElement("BillingInfo");
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("FirstName", orderItem.CustomerInfo.BillingAddress.FirstName);
+                    xml.WriteElementString("FirstName", orderItem.CustomerInfo.BillingAddress.FirstName.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("LastName", orderItem.CustomerInfo.BillingAddress.LastName);
+                    xml.WriteElementString("LastName", orderItem.CustomerInfo.BillingAddress.LastName.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("Address1", orderItem.CustomerInfo.BillingAddress.Address1);
+                    xml.WriteElementString("Address1", orderItem.CustomerInfo.BillingAddress.Address1.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("Address2", orderItem.CustomerInfo.BillingAddress.Address2);
+                    xml.WriteElementString("Address2", orderItem.CustomerInfo.BillingAddress.Address2.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("City", orderItem.CustomerInfo.BillingAddress.City);
+                    xml.WriteElementString("City", orderItem.CustomerInfo.BillingAddress.City.Trim());
                     xml.WriteWhitespace("\n");
                     StateProvince itemBillingStateProvince = states.FirstOrDefault(x => x.StateProvinceId == Convert.ToInt32(orderItem.CustomerInfo.BillingAddress.StateProvinceId));
                     if (itemBillingStateProvince != null)
@@ -190,13 +190,13 @@ namespace CSWeb.FulfillmentHouse
                         xml.WriteElementString("State", string.Empty);
                         xml.WriteWhitespace("\n");
                     }
-                    xml.WriteElementString("ZipCode", orderItem.CustomerInfo.BillingAddress.ZipPostalCode);
+                    xml.WriteElementString("ZipCode", orderItem.CustomerInfo.BillingAddress.ZipPostalCode.Trim());
                     xml.WriteWhitespace("\n");
                     xml.WriteElementString("Country", orderItem.CustomerInfo.BillingAddress.CountryCode.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("Phone", orderItem.CustomerInfo.BillingAddress.PhoneNumber);
+                    xml.WriteElementString("Phone", orderItem.CustomerInfo.BillingAddress.PhoneNumber.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("Email", orderItem.Email);
+                    xml.WriteElementString("Email", orderItem.Email.Trim());
                     xml.WriteWhitespace("\n");
 
                     xml.WriteEndElement();
@@ -208,15 +208,15 @@ namespace CSWeb.FulfillmentHouse
                     //ShippingInfo section
                     xml.WriteStartElement("ShippingInfo");
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("FirstName", orderItem.CustomerInfo.ShippingAddress.FirstName);
+                    xml.WriteElementString("FirstName", orderItem.CustomerInfo.ShippingAddress.FirstName.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("LastName", orderItem.CustomerInfo.ShippingAddress.LastName);
+                    xml.WriteElementString("LastName", orderItem.CustomerInfo.ShippingAddress.LastName.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("Address1", orderItem.CustomerInfo.ShippingAddress.Address1);
+                    xml.WriteElementString("Address1", orderItem.CustomerInfo.ShippingAddress.Address1.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("Address2", orderItem.CustomerInfo.ShippingAddress.Address2);
+                    xml.WriteElementString("Address2", orderItem.CustomerInfo.ShippingAddress.Address2.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("City", orderItem.CustomerInfo.ShippingAddress.City);
+                    xml.WriteElementString("City", orderItem.CustomerInfo.ShippingAddress.City.Trim());
                     xml.WriteWhitespace("\n");
                     StateProvince itemShippingStateProvince = states.FirstOrDefault(x => x.StateProvinceId == Convert.ToInt32(orderItem.CustomerInfo.ShippingAddress.StateProvinceId));
                     if (itemShippingStateProvince != null)
@@ -229,13 +229,13 @@ namespace CSWeb.FulfillmentHouse
                         xml.WriteElementString("State", string.Empty);
                         xml.WriteWhitespace("\n");
                     }
-                    xml.WriteElementString("ZipCode", orderItem.CustomerInfo.ShippingAddress.ZipPostalCode);
+                    xml.WriteElementString("ZipCode", orderItem.CustomerInfo.ShippingAddress.ZipPostalCode.Trim());
                     xml.WriteWhitespace("\n");
                     xml.WriteElementString("Country", orderItem.CustomerInfo.ShippingAddress.CountryCode.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("Phone", orderItem.CustomerInfo.ShippingAddress.PhoneNumber);
+                    xml.WriteElementString("Phone", orderItem.CustomerInfo.ShippingAddress.PhoneNumber.Trim());
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("Email", orderItem.Email);
+                    xml.WriteElementString("Email", orderItem.Email.Trim());
                     xml.WriteWhitespace("\n");
 
                     xml.WriteEndElement();

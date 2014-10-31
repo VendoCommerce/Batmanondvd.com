@@ -72,7 +72,7 @@ namespace CSWeb.FulfillmentHouse
                     xml.WriteEndElement();
                     xml.WriteWhitespace("\n");
                     xml.WriteStartElement("ShipToZip");
-                    xml.WriteValue(orderItem.CustomerInfo.ShippingAddress.ZipPostalCode);
+                    xml.WriteValue(orderItem.CustomerInfo.ShippingAddress.ZipPostalCode.Trim());
                     xml.WriteEndElement();
                     xml.WriteWhitespace("\n");
                     xml.WriteStartElement("ShipToState");

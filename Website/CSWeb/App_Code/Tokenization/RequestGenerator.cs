@@ -33,8 +33,8 @@ namespace CSWeb.App_Code.Tokenization
                     xml.WriteWhitespace("\n");
                     //Credit Card info
                     xml.WriteStartElement("credit_card");
-                    xml.WriteElementString("first_name", request.FirstName);
-                    xml.WriteElementString("last_name", request.LastName);
+                    xml.WriteElementString("first_name", request.FirstName.Trim());
+                    xml.WriteElementString("last_name", request.LastName.Trim());
                     xml.WriteElementString("number", request.CardNumber);
                     xml.WriteElementString("brand", request.CardType.ToString().ToLower());
                     xml.WriteElementString("month", request.ExpireDate.Month.ToString());
@@ -46,17 +46,17 @@ namespace CSWeb.App_Code.Tokenization
                     xml.WriteStartElement("transaction");
                     xml.WriteElementString("amount", (request.Amount * 100).ToString("0"));
                     xml.WriteElementString("order_id", request.InvoiceNumber);
-                    xml.WriteElementString("description", request.TransactionDescription);
-                    xml.WriteElementString("email", request.Email);
+                    xml.WriteElementString("description", request.TransactionDescription.Trim());
+                    xml.WriteElementString("email", request.Email.Trim());
                     xml.WriteElementString("ip", request.IPAddress);
                     xml.WriteElementString("customer", request.CustomerID);
                     //Billing address info 
                     xml.WriteStartElement("billing_address");
-                    xml.WriteElementString("address1", request.Address1);
-                    xml.WriteElementString("city", request.City);
-                    xml.WriteElementString("state", request.State);
-                    xml.WriteElementString("zip", request.ZipCode);
-                    xml.WriteElementString("country", request.Country);
+                    xml.WriteElementString("address1", request.Address1.Trim());
+                    xml.WriteElementString("city", request.City.Trim());
+                    xml.WriteElementString("state", request.State.Trim());
+                    xml.WriteElementString("zip", request.ZipCode.Trim());
+                    xml.WriteElementString("country", request.Country.Trim());
                     xml.WriteEndElement();
 
                     xml.WriteEndElement();
