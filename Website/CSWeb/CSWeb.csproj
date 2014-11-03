@@ -319,6 +319,8 @@
     <Content Include="Mobile\choose.aspx" />
     <Content Include="Mobile\faq.aspx" />
     <Content Include="Mobile\UserControls\CheckoutThankYouModule2.ascx" />
+    <Content Include="privacy.aspx" />
+    <Content Include="terms.aspx" />
     <Content Include="returns.aspx" />
     <Content Include="clips.aspx" />
     <Content Include="faq.aspx" />

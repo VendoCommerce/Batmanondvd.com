@@ -2129,3 +2129,23 @@ div.rowheader .receipt_row1 {
     padding: 22px 180px 20px 132px;
     font-size: 13px;
 }
+
+.highlighttitle {
+    margin-bottom: 12px;
+}
+
+.highlightcontent ul {
+    margin: 0 0 20px 20px;
+}
+
+.highlightcontent ul li {
+    padding-bottom: 4px;
+}
+
+.highlightcontent ul li:before {
+    content: '\2022';
+    float: left; 
+    margin-left: -13px;
+    color: #000;
+    font-size: 16px;
+}
