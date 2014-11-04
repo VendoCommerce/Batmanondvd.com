@@ -118,6 +118,7 @@
         <div class="home3b">
             <div class="slideshow"
                 data-cycle-timeout="5000"
+                data-cycle-swipe="true"
                 data-cycle-slides="> div"
                 data-cycle-next="#clipnext"
                 data-cycle-prev="#clipprev">

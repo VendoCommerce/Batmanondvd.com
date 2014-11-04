@@ -2,8 +2,7 @@
 
  <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
      <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">    
-<title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV</title>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">   <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV</title>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
