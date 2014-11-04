@@ -65,7 +65,9 @@ namespace CSBusiness.Shipping
                 Dictionary<string, XmlNode> dicSKUShippingCostWithQtyRangeList = new Dictionary<string, XmlNode>();
 
                 SitePreference sitePreference = CSFactory.GetCacheSitePref();
-                sitePreference.LoadAttributeValues();
+                if(!sitePreference.AttributeValuesLoaded)
+                    sitePreference.LoadAttributeValues();
+
                 if (sitePreference.AttributeValues.ContainsKey("additionalshippingscenario"))
                 {
                     if (sitePreference.AttributeValues["additionalshippingscenario"].Value != null)

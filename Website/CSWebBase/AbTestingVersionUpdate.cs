@@ -75,7 +75,7 @@ namespace CSWebBase
                     sitePref.LoadAttributeValues();
                 if (sitePref.AttributeValues != null)
                 {
-                    if (sitePref.ContainsAttribute("scripts") != null)
+                    if (sitePref.ContainsAttribute("scripts"))
                     {
                         Literal li = new Literal();
                         li.Text = sitePref.AttributeValues["scripts"].Value;
