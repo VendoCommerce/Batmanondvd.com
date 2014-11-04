@@ -320,6 +320,7 @@
     <Content Include="Mobile\faq.aspx" />
     <Content Include="Mobile\UserControls\CheckoutThankYouModule2.ascx" />
     <Content Include="privacy.aspx" />
+    <Content Include="Styles\global_tablet.css" />
     <Content Include="Tablet\400.aspx" />
     <Content Include="Tablet\500.aspx" />
     <Content Include="Tablet\AddProduct.aspx" />

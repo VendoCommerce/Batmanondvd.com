@@ -3,7 +3,8 @@
 <!doctype html>
 <html>
 <head runat="server">
-<meta charset="utf-8">    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
 <title>BATMAN</title>
 <meta name="description" content=""/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -13,7 +14,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="../styles/global.css" rel="stylesheet" type="text/css" />
+<link href="../styles/global_tablet.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="upsells">
 <form id="form1" runat="server">
@@ -24,14 +25,21 @@
         <!-- UPSELL - complete collection - single pay -->
         <div class="page_upsell" style="background: #fff url(//d1kg9stb0ddjcv.cloudfront.net/images/upsell_full_collection.jpg) no-repeat 469px 148px;">
             <h2 class="f28">Upgrade to the Full 120 Episode Collection in a Beautiful Collector’s Box!</h2>
-            <h3 class="f20">Just half of the episodes of Batman will leave you needing more! Upgrade to the full collection today and receive all <br />120 Episodes from all Three Seasons!  Get it on DVD or stunning high definition Blu-ray.</h3>
-            <ul>                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
-                <li>OVER 3 Hours Of ALL NEW Extras like:                    <ul>
+            <h3 class="f20">Just half of the episodes of Batman will leave you needing more! Upgrade to the full collection today and receive all <br />
+120 Episodes from all Three Seasons!  Get it on DVD or stunning high definition Blu-ray.</h3>
+            <ul>
+                <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
+                <li>OVER 3 Hours Of ALL NEW Extras like:
+                    <ul>
                         <li><strong>Hanging with Batman</strong> – A true slice of life in the words of Adam West</li>
-                        <li><strong>Holy Memorabilia Batman!</strong> – A journey into the most sought <br />        after collectibles through the eyes of 3 extraordinary collectors</li>
+                        <li><strong>Holy Memorabilia Batman!</strong> – A journey into the most sought <br />
+        after collectibles through the eyes of 3 extraordinary collectors</li>
                         <li><strong>Batmania Born!</strong> – Building the World of Batman - Explore the art and <br />design behind the fiction.</li>
-                        <li><strong>Bats of the Round Table</strong>  – A candid conversation with Adam West and <br />        his celebrity friends, chatting all things Bat ’66.</li>
-                        <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare <br />        treat for the fans as Adam discusses his script notes on bringing Batman to life  <br />        in the first and second episodes </li>
+                        <li><strong>Bats of the Round Table</strong>  – A candid conversation with Adam West and <br />
+        his celebrity friends, chatting all things Bat ’66.</li>
+                        <li><strong>Inventing Batman in the words of Adam West</strong> (episode 1 &2) – A rare <br />
+        treat for the fans as Adam discusses his script notes on bringing Batman to life  <br />
+        in the first and second episodes </li>
                         <li><strong>Na Na Na Batman!</strong> Hollywood favorites stars and producers recount their <br />
                             favorite Batman memories</li>
                         <li><strong>BATRARITIES! STRAIGHT FROM THE VAULT</strong> – 
@@ -41,7 +49,9 @@
                             She kept her cool, she fought the evil denizens of Gotham!   POW! ZAP! BAM!
                         </li>
                     </ul></li>
-                <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie   <br />  DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter <br />  from Adam West <strong>PLUS</strong> your own Classic Batman Collector’s Box</li>
+                <li>Also Get Adam West Naked on DVD, The Original 1966 Batman, The Movie   <br />
+  DVD, an Extensive Episode Guide, an Episode Script, a Personalized Letter <br />
+  from Adam West <strong>PLUS</strong> your own Classic Batman Collector’s Box</li>
             </ul>
 
             <p class="ask f14">Would you like to take advantage of this special offer?</p>
@@ -65,9 +75,11 @@
             <h3>Just one season of Batman will leave you needing more! Upgrade to the HD full collection today and receive <br />120 Episodes from all three seasons!</h3>
             <ul>
                 <li>120 Original Broadcast Episodes Fully Remastered In HD</li>
-                <li>Bonus DVD containing 3 Hours Of ALL NEW Extras like:                    <ul>
+                <li>Bonus DVD containing 3 Hours Of ALL NEW Extras like:
+                    <ul>
                         <li>Hanging with Batman – A true slice of life in the words of Adam West</li>
-                        <li>Holy Memorabilia Batman! – A journey into the most sought <br />        after collectibles</li>
+                        <li>Holy Memorabilia Batman! – A journey into the most sought <br />
+        after collectibles</li>
                         <li>Batmania Born! – Explore the art and design behind the fiction.</li>
                     </ul></li>
                 <li>Na Na Na Batman! — Hollywood favorites stars recount their <br />favorite Batman memories</li>
@@ -183,7 +195,12 @@
                 Adventures of Superman!
             </h2>
 
-            <p class="f16 lh22">Faster than a speeding bullet! More powerful than <br />a locomotive! Able to leap tall buildings at a single <br />bound!  Don’t miss out on the legendary 1950’s  <br />Adventures of Superman series starring George Reeves!   <br />Your Superman DVD Collection will contain 104 episodes  <br />on 20 DVDs for only $49.95!
+            <p class="f16 lh22">Faster than a speeding bullet! More powerful than <br />
+a locomotive! Able to leap tall buildings at a single <br />
+bound!  Don’t miss out on the legendary 1950’s  <br />
+Adventures of Superman series starring George Reeves!   <br />
+Your Superman DVD Collection will contain 104 episodes  <br />
+on 20 DVDs for only $49.95!
             </p>
 
             <p class="ask">Would you like to take advantage of this special offer?</p>
@@ -237,7 +254,9 @@
         <div class="page_upsell">
             
             <div class="fleft" style="width: 465px; margin-right:20px;">
-                <h2 class="pad20">Can’t wait for the Campy <br />                    Comic Fun!<br />                    Get Rush Shipping now!</h2>
+                <h2 class="pad20">Can’t wait for the Campy <br />
+                    Comic Fun!<br />
+                    Get Rush Shipping now!</h2>
 
                 <p class="f16 lh20">Choose Rush Shipping today to start reliving your favorite moments now. The sooner it arrives, the sooner you can watch Julie Newmar in her Purrfect Cat Suit, or Adam West play out his iconic role. Simply choose rush shipping and be one step closer to digitally remastered Batman Perfection. </p>
 
@@ -263,7 +282,9 @@
         <div class="page_upsell">
             
             <div class="fleft" style="width: 465px; margin-right:20px;">
-                <h2 class="pad20">Can’t wait for the Campy <br />                    Comic Fun!<br />                    Get Rush Shipping now!</h2>
+                <h2 class="pad20">Can’t wait for the Campy <br />
+                    Comic Fun!<br />
+                    Get Rush Shipping now!</h2>
 
                 <p class="f16 lh20">Choose Rush Shipping today to start reliving your favorite moments now. The sooner it arrives, the sooner you can watch Julie Newmar in her Purrfect Cat Suit, or Adam West play out his iconic role. Simply choose rush shipping and be one step closer to digitally remastered Batman Perfection. </p>
 

@@ -16,7 +16,7 @@ function Clickheretoprint()
   var docprint=window.open("","",disp_setting); 
    docprint.document.open(); 
    docprint.document.write('<html><head><title>Receipt</title>');
-   docprint.document.write('<link href="styles/global.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/global_print.css" rel="stylesheet" type="text/css" media="all" />'); 
+   docprint.document.write('<link href="styles/global_tablet.css" rel="stylesheet" type="text/css" media="all" /><link href="/styles/global_print.css" rel="stylesheet" type="text/css" media="all" />'); 
    docprint.document.write('</head><body onLoad="self.print()">');     
    docprint.document.write('<h1>Receipt</h1>');       
    docprint.document.write(content_vlue);          

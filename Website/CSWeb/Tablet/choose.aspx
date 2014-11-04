@@ -5,7 +5,8 @@
 <!doctype html>
 <html>
 <head runat="server">
-<meta charset="utf-8">    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Checkout</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
 <meta name="keywords" content="Batman Classic TV Series, DVD, Bluray, Warner Home Video, Adam West, As Seen on TV, Limited Time Offer, Robin, Joker, Riddler, Penguin, Catwoman, Original TV Series" />
@@ -16,7 +17,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="../styles/global.css" rel="stylesheet" type="text/css" />
+<link href="../styles/global_tablet.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="cart">
     <form id="form1" runat="server">
@@ -76,7 +77,7 @@
                     
                     <div>
                         <img src="//d1kg9stb0ddjcv.cloudfront.net/images/flag_bestvalue.png" alt="Best Value" style="position:absolute;
-top: 0; left: -25px;" />
+top: 4px; left: -25px;" />
                         <p class="text-center pad12">
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
                             <asp:ListItem Value="111">Complete Classic Collection on DVD - 1 payment of $149.95</asp:ListItem>

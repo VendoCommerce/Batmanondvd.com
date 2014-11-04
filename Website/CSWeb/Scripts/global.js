@@ -215,14 +215,9 @@ $(".hometest3").bind("click touch", function(e){
 
 /* Video Clips */
 
-$(".test1").bind("click touch", function(e){
-	$("#test1").show();
-	$("#test2").hide();
-	$("#test3").hide();
-	$("#test4").hide();
-	$("#test5").hide();
-	$("#test6").hide();
-	$("#test7").hide();
+$(".test1").bind("click touch", function (e) {
+    $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
+    $("#test1").show();
 			
   jwplayer('videotest1').setup({
       file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Aunt_Harriet.mp4',
@@ -247,13 +242,8 @@ $('.test2').trigger('click');
 });
 
 $(".test2").bind("click touch", function(e){
-	$("#test1").hide();
+    $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
 	$("#test2").show();
-	$("#test3").hide();
-	$("#test4").hide();
-	$("#test5").hide();
-	$("#test6").hide();
-	$("#test7").hide();
 		
 	jwplayer('videotest1').stop();
   jwplayer('videotest2').setup({
@@ -278,14 +268,9 @@ $('.test3').trigger('click');
 		e.preventDefault();
 });
 
-$(".test3").bind("click touch", function(e){
-	$("#test1").hide();
-	$("#test2").hide();
+$(".test3").bind("click touch", function (e) {
+    $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
 	$("#test3").show();
-	$("#test4").hide();
-	$("#test5").hide();
-	$("#test6").hide();
-	$("#test7").hide();
 	
 	jwplayer('videotest1').stop();
 	jwplayer('videotest2').stop();
@@ -311,13 +296,8 @@ $('.test4').trigger('click');
 });
 
 $(".test4").bind("click touch", function(e){
-	$("#test1").hide();
-	$("#test2").hide();
-	$("#test3").hide();
+    $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
 	$("#test4").show();
-	$("#test5").hide();
-	$("#test6").hide();
-	$("#test7").hide();
 		
 	jwplayer('videotest1').stop();
 	jwplayer('videotest2').stop();
@@ -344,13 +324,8 @@ $('.test5').trigger('click');
 });
 
 $(".test5").bind("click touch", function(e){
-	$("#test1").hide();
-	$("#test2").hide();
-	$("#test3").hide();
-	$("#test4").hide();
+    $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
 	$("#test5").show();
-	$("#test6").hide();
-	$("#test7").hide();
 		
 	jwplayer('videotest1').stop();
 	jwplayer('videotest2').stop();
@@ -378,13 +353,8 @@ $('.test6').trigger('click');
 
 
 $(".test6").bind("click touch", function (e) {
-    $("#test1").hide();
-    $("#test2").hide();
-    $("#test3").hide();
-    $("#test4").hide();
-    $("#test5").hide();
+    $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
     $("#test6").show();
-    $("#test7").hide();
 
     jwplayer('videotest1').stop();
     jwplayer('videotest2').stop();
@@ -411,12 +381,7 @@ $(".test6").bind("click touch", function (e) {
 });
 
 $(".test7").bind("click touch", function (e) {
-    $("#test1").hide();
-    $("#test2").hide();
-    $("#test3").hide();
-    $("#test4").hide();
-    $("#test5").hide();
-    $("#test6").hide();
+    $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
     $("#test7").show();
 
     jwplayer('videotest1').stop();
