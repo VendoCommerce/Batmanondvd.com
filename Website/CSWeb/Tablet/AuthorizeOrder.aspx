@@ -4,7 +4,8 @@
 <html> 
 <head id="Head1" runat="server">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, maximum-scale=1.0">   <title></title>   
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<title></title>   
 <script src="/Scripts/NoBack.js"></script>
 </head>
 <body>

@@ -215,7 +215,7 @@ $(".hometest3").bind("click touch", function(e){
 
 /* Video Clips */
 
-$(".test1").bind("click touch", function (e) {
+$(".test1").bind("dblclick click touch", function (e) {
     $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
     $("#test1").show();
 			
@@ -241,7 +241,7 @@ $('.test2').trigger('click');
 	e.preventDefault();
 });
 
-$(".test2").bind("click touch", function(e){
+$(".test2").bind("dblclick click touch", function (e) {
     $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
 	$("#test2").show();
 		
@@ -268,7 +268,7 @@ $('.test3').trigger('click');
 		e.preventDefault();
 });
 
-$(".test3").bind("click touch", function (e) {
+$(".test3").bind("dblclick click touch", function (e) {
     $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
 	$("#test3").show();
 	
@@ -295,7 +295,7 @@ $('.test4').trigger('click');
 		e.preventDefault();
 });
 
-$(".test4").bind("click touch", function(e){
+$(".test4").bind("dblclick click touch", function (e) {
     $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
 	$("#test4").show();
 		
@@ -323,7 +323,7 @@ $('.test5').trigger('click');
 		e.preventDefault();
 });
 
-$(".test5").bind("click touch", function(e){
+$(".test5").bind("dblclick click touch", function (e) {
     $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
 	$("#test5").show();
 		
@@ -352,7 +352,7 @@ $('.test6').trigger('click');
 });
 
 
-$(".test6").bind("click touch", function (e) {
+$(".test6").bind("dblclick click touch", function (e) {
     $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
     $("#test6").show();
 
@@ -380,7 +380,7 @@ $(".test6").bind("click touch", function (e) {
     e.preventDefault();
 });
 
-$(".test7").bind("click touch", function (e) {
+$(".test7").bind("dblclick click touch", function (e) {
     $("#test1, #test2, #test3, #test4, #test5, #test6, #test7").hide();
     $("#test7").show();
 

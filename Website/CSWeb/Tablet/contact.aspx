@@ -9,7 +9,8 @@
 <html>
 <head runat="server">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, maximum-scale=1.0">   <title>Batman | Classic TV Series | Customer Support - Contact Us</title>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<title>Batman | Classic TV Series | Customer Support - Contact Us</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
 <meta name="keywords" content="Batman Classic TV Series, DVD, Bluray, Warner Home Video, Adam West, As Seen on TV, Limited Time Offer, Robin, Joker, Riddler, Penguin, Catwoman, Original TV Series" />
 <script src="//cdn.optimizely.com/js/77045885.js"></script>

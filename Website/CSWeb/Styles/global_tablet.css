@@ -20,7 +20,7 @@
 	     url('/fonts/OpenSans-CondBold-webfont.svg#webfont') format('svg');
 }*/
 /* using google's javascript to load fonts */
-
+@-ms-viewport{width: device-width;}
 a {
 	color: #0569db;
 	transition: all .3s ease-in-out;
@@ -137,16 +137,17 @@ p {padding-bottom: 20px;}
 
 
 .header {
-    width: 973px;
+    /*width: 973px;*/
+    width: 959px;
     height: 129px;
     margin: 0 auto;
-    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/header.png) repeat center 0;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/header.png) repeat -7px 0;
 }
 .header500 {
-    width: 973px;
+    width: 959px;
     height: 130px;
     margin: 0 auto;
-    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/header500.png) repeat center 0;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/header500.png) repeat -7px 0;
 }
 .headernav {
     position:absolute;
