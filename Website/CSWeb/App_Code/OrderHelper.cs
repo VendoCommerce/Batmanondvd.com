@@ -611,22 +611,27 @@ namespace CSWeb
             return true;
         }
 
+        //Please see if there are better ways of doing this
         public static string GetDynamicVersionName()
         {
             string strDynamicVersion = "";
-            ClientCartContext clientData = (ClientCartContext)HttpContext.Current.Session["ClientOrderData"];
-            if (clientData.OrderAttributeValues != null)
+            if (HttpContext.Current.Session != null && HttpContext.Current.Session["ClientOrderData"] != null)
             {
-                if (clientData.OrderAttributeValues.ContainsKey("DynamicVerionName"))
+                ClientCartContext clientData = (ClientCartContext)HttpContext.Current.Session["ClientOrderData"];
+                if (clientData.OrderAttributeValues != null)
                 {
-                    strDynamicVersion = clientData.OrderAttributeValues["DynamicVerionName"].Value;
+                    if (clientData.OrderAttributeValues.ContainsKey("DynamicVerionName"))
+                    {
+                        strDynamicVersion = clientData.OrderAttributeValues["DynamicVerionName"].Value;
+                    }
+                    else
+                    {
+                        strDynamicVersion = CSBusiness.Web.CSBasePage.GetVersionName();
+                    }
                 }
-                else
-                {
-                    strDynamicVersion = CSBusiness.Web.CSBasePage.GetVersionName();
-                }
+                return strDynamicVersion.ToUpper();
             }
-            return strDynamicVersion.ToUpper();
+            return GetVersionName();
         }
 
         public static bool IsMobileBrowser()

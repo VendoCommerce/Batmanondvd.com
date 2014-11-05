@@ -181,8 +181,6 @@
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic"
-                                ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
                             <asp:Label ID="Label1" runat="server" Visible="false">
                             </asp:Label>
                         </div>
