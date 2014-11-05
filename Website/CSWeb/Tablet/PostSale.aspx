@@ -19,6 +19,7 @@
 <link href="../styles/global_tablet.css" rel="stylesheet" type="text/css" />
     </head>
 <body id="upsells">
+<div id="upsell_wrap">
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
@@ -74,5 +75,6 @@
             return isValid            
         }
     </script>
+</div>
 </body>
 </html>

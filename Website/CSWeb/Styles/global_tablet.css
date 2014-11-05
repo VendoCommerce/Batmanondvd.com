@@ -1990,6 +1990,10 @@ input[type=checkbox] {width: 18px; height: 18px;}
 
 
 /* upsells */
+#upsell_wrap {
+    margin: 0 auto;
+    width: 880px;
+}
 .header_upsell {
     margin: 0 auto;
     width: 880px;
