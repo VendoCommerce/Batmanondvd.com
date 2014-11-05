@@ -1,6 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TrackingPixels.ascx.cs" Inherits="CSWeb.Tablet.UserControls.TrackingPixels" %>
 <!-- All Pixels Here -->
 <asp:Panel ID="pnlHomePage" runat="server" Visible="false">
+
+</asp:Panel>
+
+<asp:Panel ID="pnlAllPages" runat="server" Visible="false">
     
     <!--
 Start of DoubleClick Floodlight Tag: Please do not remove
@@ -11,10 +15,6 @@ Creation Date: 10/02/2014
 -->
 <iframe src="https://4523247.fls.doubleclick.net/activityi;src=4523247;type=Onlin0;cat=Batma0;qty=1;cost=[Revenue];ord=<%= GetRandomNumber() %>?" width="1" height="1" frameborder="0" style="display:none"></iframe>
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
-
-</asp:Panel>
-
-<asp:Panel ID="pnlAllPages" runat="server" Visible="false">
 
     <script type="text/javascript">
         var newPageName = '/' +
