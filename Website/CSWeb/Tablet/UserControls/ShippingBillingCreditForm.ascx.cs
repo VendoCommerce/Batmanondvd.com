@@ -53,10 +53,13 @@ namespace CSWeb.Tablet.UserControls
 
         #region Page Events
 
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            sm1.SupportsPartialRendering = true;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
 
             ScriptManager.RegisterStartupScript(upBillingForm, typeof(string), "ShowPopup", "MM_showHideLayers('mask','','hide');", true);
 
