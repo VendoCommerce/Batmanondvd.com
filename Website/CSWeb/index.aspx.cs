@@ -36,6 +36,9 @@ namespace CSWeb
                 if (OrderHelper.IsMobileBrowser() && (Request.QueryString["mobile"] == null ||(Request.QueryString["mobile"] != null && Request.QueryString["mobile"] != "false")))
                     Response.Redirect("/mobile/?" + Request.QueryString.ToString());
 
+                if (CSBasePage.GetClientDeviceType() == CSBusiness.Enum.DeviceType.Tablet) // device mobile but version not mobile
+                    Response.Redirect("/tablet/?" + Request.QueryString, true);
+
             }
 
         }
