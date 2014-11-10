@@ -443,7 +443,7 @@ namespace CSWeb.Mobile.UserControls
 
             #region Credit Card
 
-            if (ddlCCType.SelectedIndex < 0)
+            if (ddlCCType.SelectedIndex < 1)
             {
                 lblCCType.Text = ResourceHelper.GetResoureValue("CCTypeErrorMsg");
                 lblCCType.Visible = true;
