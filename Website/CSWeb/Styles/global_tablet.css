@@ -562,16 +562,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', end
     width: 312px;
     font-size: 14px;
     border-radius: 5px;
-    background: #fafaf8; /* Old browsers */
-background: -moz-linear-gradient(top,  #fafaf8 0%, #e6e6e2 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafaf8), color-stop(100%,#e6e6e2)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #fafaf8 0%,#e6e6e2 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #fafaf8 0%,#e6e6e2 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafaf8', endColorstr='#e6e6e2',GradientType=0 ); /* IE6-9 */
--webkit-appearance: menulist-button;
-appearance: menulist-button;
 }
 .choose_content {
     padding: 0 14px 20px 28px;
