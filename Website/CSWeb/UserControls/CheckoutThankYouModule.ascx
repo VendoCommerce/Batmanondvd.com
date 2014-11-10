@@ -36,8 +36,6 @@ function Clickheretoprint()
 <p class="webfont1 f22" style="padding-bottom: 30px;"><strong>Thank You and Enjoy Your Purchase!</strong> Your order number is <asp:Literal ID="ltOrderId" runat="server"></asp:Literal>.  <br />
     You will receive a shipping confirmation once your order has shipped.</p>
 
-  <p class="webfont1 f18 pad0 ital">Your order will arrive on Nov 11th or shortly thereafter.</p>
-
                 <div class="clear"></div>
 
  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="receipt_table1">
