@@ -1,9 +1,7 @@
 <%@ Control Language="C#" Inherits="CSWeb.Tablet.UserControls.CheckoutThankYouModule" %>
 
 <style type="text/css">
-    .auto-style3 {
-        height: 28px;
-    }
+    .fright {}
 </style>
 
 <script language="javascript">
@@ -131,6 +129,7 @@ function Clickheretoprint()
                     <br />
                     Address:
                     <br />
+                    Address 2:<br />
                     City:
                     <br />
                     State:
@@ -142,6 +141,8 @@ function Clickheretoprint()
                 <td width="210" valign="top" class="f12" style="padding-top: 10px; padding-left: 0;">
                     <strong><asp:Literal ID="LiteralName" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralAddress" runat="server"></asp:Literal><br />
+                    <asp:Literal ID="LiteralAddress2" runat="server"></asp:Literal>
+                    <br />
                     <asp:Literal ID="LiteralCity" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralState" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralZip" runat="server"></asp:Literal><br />
@@ -152,6 +153,7 @@ function Clickheretoprint()
                     <br />
                     Address:
                     <br />
+                    Address 2:<br />
                     City:
                     <br />
                     State:
@@ -160,7 +162,8 @@ function Clickheretoprint()
                 <td width="196" valign="top" class="f12" style="padding-top: 10px; padding-left: 0;">
                     <strong><asp:Literal ID="LiteralName_b" runat="server">
                     </asp:Literal><br />
-                    <asp:Literal ID="LiteralAddress_b" runat="server"></asp:Literal><br />
+                    <asp:Literal ID="LiteralAddress_b" runat="server"></asp:Literal>
+                    <asp:Literal ID="LiteralAddress2_b" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralCity_b" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralState_b" runat="server"></asp:Literal><br />
                     <asp:Literal ID="LiteralZip_b" runat="server"></asp:Literal></strong>

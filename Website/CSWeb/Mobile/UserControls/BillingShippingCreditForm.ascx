@@ -154,7 +154,11 @@
                 <asp:TextBox ID="txtAddress1" runat="server" MaxLength="30" CssClass="text-1 billingad1" placeholder="Address"></asp:TextBox>
 
             </div>
-
+            <div class="form_line clearfix">
+                    <label class="label-1">
+                </label>
+                <asp:TextBox ID="txtAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+            </div>
             <div class="form_line clearfix">
                 <div class="error-1">
                     <asp:RequiredFieldValidator ID="rfvCity" runat="server" Display="Dynamic"
@@ -255,6 +259,11 @@
                     <asp:TextBox ID="txtShippingAddress1" runat="server" MaxLength="30" CssClass="text-1" placeholder="Billing Address"></asp:TextBox>
                 </div>
                 <div class="form_line clearfix">
+                      <label class="label-1">
+                    </label>
+                    <asp:TextBox ID="txtShippingAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                </div>
+                <div class="form_line clearfix">
                     <div class="error-1">
                         <asp:RequiredFieldValidator ID="rfvShippingCity" runat="server" Display="Dynamic"
                             ControlToValidate="txtShippingCity" Enabled="False"></asp:RequiredFieldValidator>
@@ -309,7 +318,6 @@
                 </div>
                 <label class="label-1">
                     Expiration Date*</label>
-
                 <asp:DropDownList ID="ddlExpMonth" runat="server" CssClass="text-3">
                 </asp:DropDownList>
                 <asp:DropDownList ID="ddlExpYear" runat="server" CssClass="text-3">

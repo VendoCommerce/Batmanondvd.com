@@ -607,7 +607,7 @@ namespace CSWeb.Mobile.UserControls
                 shippingAddress.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
                 shippingAddress.LastName = CommonHelper.fixquotesAccents(txtLastName.Text);
                 shippingAddress.Address1 = CommonHelper.fixquotesAccents(txtAddress1.Text);
-                shippingAddress.Address2 = string.Empty;// CommonHelper.fixquotesAccents(txtAddress2.Text);
+                shippingAddress.Address2 = CommonHelper.fixquotesAccents(txtAddress2.Text);
                 shippingAddress.City = CommonHelper.fixquotesAccents(txtCity.Text);
                 shippingAddress.StateProvinceId = Convert.ToInt32(ddlState.SelectedValue);
                 shippingAddress.CountryId = 231;//USA   Convert.ToInt32(ddlCountry.SelectedValue);
@@ -633,7 +633,7 @@ namespace CSWeb.Mobile.UserControls
                     billingAddress.FirstName = CommonHelper.fixquotesAccents(txtShippingFirstName.Text);
                     billingAddress.LastName = CommonHelper.fixquotesAccents(txtShippingLastName.Text);
                     billingAddress.Address1 = CommonHelper.fixquotesAccents(txtShippingAddress1.Text);
-                    billingAddress.Address2 = string.Empty;// CommonHelper.fixquotesAccents(txtShippingAddress2.Text);
+                    billingAddress.Address2 = CommonHelper.fixquotesAccents(txtShippingAddress2.Text);
                     billingAddress.City = CommonHelper.fixquotesAccents(txtShippingCity.Text);
                     billingAddress.StateProvinceId = Convert.ToInt32(ddlShippingState.SelectedValue);
                     billingAddress.CountryId = 231;//USA   Convert.ToInt32(ddlShippingCountry.SelectedValue);

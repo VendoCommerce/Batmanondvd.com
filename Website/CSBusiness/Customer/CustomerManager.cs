@@ -303,7 +303,7 @@ namespace CSBusiness
                                                 new XAttribute("FirstName", custData.BillingAddress.FirstName),
                                                 new XAttribute("LastName", custData.BillingAddress.LastName),
                                                 new XAttribute("Address1", custData.BillingAddress.Address1),
-                                                new XAttribute("Address2",""),// custData.BillingAddress.Address2),
+                                                new XAttribute("Address2", custData.BillingAddress.Address2),
                                                 new XAttribute("City", custData.BillingAddress.City),
                                                 new XAttribute("State", custData.BillingAddress.StateProvinceId.ToString()),
                                                 new XAttribute("Country", custData.BillingAddress.CountryId.ToString()),

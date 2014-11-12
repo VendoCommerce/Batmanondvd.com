@@ -5,7 +5,8 @@
 <!doctype html>
 <html>
 <head runat="server">
-<meta charset="utf-8">    
+<meta charset="utf-8">
+<meta name="msvalidate.01" content="5480DFE3A3631B08B37C8A5326603EDE" />    
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Checkout</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
 <meta name="keywords" content="Batman Classic TV Series, DVD, Bluray, Warner Home Video, Adam West, As Seen on TV, Limited Time Offer, Robin, Joker, Riddler, Penguin, Catwoman, Original TV Series" />

@@ -77,6 +77,12 @@
                                     
 
                                 </div>
+                                <div class="form_line clearfix">
+                                    <div class="error-1"></div>
+                                    <label class="label-1">
+                                        Address 2</label>
+                                    <asp:TextBox ID="txtShippingAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                                </div>
 
                                 <div class="form_line clearfix">
                                     <div class="error-1">
@@ -204,10 +210,13 @@
                                             Billing Address*</label>
                                         <asp:TextBox ID="txtAddress1" runat="server" MaxLength="30" CssClass="text-1 billingad1"></asp:TextBox>
 
-                                        <asp:TextBox ID="txtAddress2" runat="server" MaxLength="30" CssClass="text-1" Visible="false"></asp:TextBox>
                                     </div>
-
-
+                                <div class="form_line clearfix">
+                                    <div class="error-1"></div>
+                                    <label class="label-1">
+                                        Address 2</label>
+                                    <asp:TextBox ID="txtAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                                </div>
                                     <div class="form_line clearfix">
                                         <div class="error-1">
                                             <asp:RequiredFieldValidator ID="rfvCity" runat="server" Display="Dynamic"

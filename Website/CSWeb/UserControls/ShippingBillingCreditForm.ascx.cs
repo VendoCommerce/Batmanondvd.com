@@ -621,6 +621,7 @@ namespace CSWeb.Root.UserControls
                         txtShippingFirstName.Text = contextData.CustomerInfo.ShippingAddress.FirstName;
                         txtShippingLastName.Text = contextData.CustomerInfo.ShippingAddress.LastName;
                         txtShippingAddress1.Text = contextData.CustomerInfo.ShippingAddress.Address1;
+                        txtShippingAddress2.Text = contextData.CustomerInfo.ShippingAddress.Address2;
                         txtShippingCity.Text = contextData.CustomerInfo.ShippingAddress.City;
                         txtShippingZipCode.Text = contextData.CustomerInfo.ShippingAddress.ZipPostalCode;
                         BindShippingRegions();
@@ -682,7 +683,7 @@ namespace CSWeb.Root.UserControls
                 shippingAddress.FirstName = CommonHelper.fixquotesAccents(txtShippingFirstName.Text);
                 shippingAddress.LastName = CommonHelper.fixquotesAccents(txtShippingLastName.Text);
                 shippingAddress.Address1 = CommonHelper.fixquotesAccents(txtShippingAddress1.Text);
-                shippingAddress.Address2 = string.Empty;
+                shippingAddress.Address2 = CommonHelper.fixquotesAccents(txtShippingAddress2.Text);
                 shippingAddress.City = CommonHelper.fixquotesAccents(txtShippingCity.Text);
                 shippingAddress.StateProvinceId = Convert.ToInt32(ddlShippingState.SelectedValue);
                 shippingAddress.CountryId = CountryManager.CountryId("United States");
@@ -712,7 +713,7 @@ namespace CSWeb.Root.UserControls
                     billingAddress.FirstName = CommonHelper.fixquotesAccents(txtFirstName.Text);
                     billingAddress.LastName = CommonHelper.fixquotesAccents(txtLastName.Text);
                     billingAddress.Address1 = CommonHelper.fixquotesAccents(txtAddress1.Text);
-                    billingAddress.Address2 = string.Empty;
+                    billingAddress.Address2 = CommonHelper.fixquotesAccents(txtAddress2.Text);
                     billingAddress.City = CommonHelper.fixquotesAccents(txtCity.Text);
                     billingAddress.StateProvinceId = Convert.ToInt32(ddlState.SelectedValue);
                     billingAddress.CountryId = CountryManager.CountryId("United States");

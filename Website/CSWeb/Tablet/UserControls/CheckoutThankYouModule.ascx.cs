@@ -23,7 +23,7 @@ namespace CSWeb.Tablet.UserControls
     public partial class CheckoutThankYouModule : System.Web.UI.UserControl
     {
         protected Literal LiteralSubTotal, LiteralShipping, LiteralTax, LiteralTotal,
-            LiteralName, LiteralAddress, LiteralCity, LiteralEmail, LiteralZip, LiteralState, LiteralCountry,
+            LiteralName, LiteralAddress, LiteralAddress2, LiteralCity, LiteralEmail, LiteralZip, LiteralState, LiteralCountry,
             LiteralName_b, LiteralAddress_b, LiteralCity_b, LiteralZip_b, LiteralState_b, LiteralCountry_b, LiteralRushShipping, LiteralGoogleAnalytics, LiteralID, LiteralSid, LiteralOfferId,
             LiteralAddress2_b, ltOrderId, ltOfferTerms;
 
@@ -128,12 +128,14 @@ namespace CSWeb.Tablet.UserControls
                 LiteralName.Text = String.Format("{0} {1}", orderData.CustomerInfo.ShippingAddress.FirstName, orderData.CustomerInfo.ShippingAddress.LastName);
                 LiteralEmail.Text = orderData.CustomerInfo.Email;
                 LiteralAddress.Text = orderData.CustomerInfo.ShippingAddress.Address1;
+                LiteralAddress2.Text = orderData.CustomerInfo.ShippingAddress.Address2;
                 LiteralCity.Text = orderData.CustomerInfo.ShippingAddress.City;
                 LiteralZip.Text = orderData.CustomerInfo.ShippingAddress.ZipPostalCode;
                 LiteralState.Text = StateManager.GetStateName(orderData.CustomerInfo.ShippingAddress.StateProvinceId);
 
                 LiteralName_b.Text = String.Format("{0} {1}", orderData.CustomerInfo.BillingAddress.FirstName, orderData.CustomerInfo.BillingAddress.LastName);
                 LiteralAddress_b.Text = orderData.CustomerInfo.BillingAddress.Address1;
+                LiteralAddress2_b.Text = orderData.CustomerInfo.BillingAddress.Address2;
                 LiteralCity_b.Text = orderData.CustomerInfo.BillingAddress.City;
                 LiteralZip_b.Text = orderData.CustomerInfo.BillingAddress.ZipPostalCode;
                 LiteralState_b.Text = StateManager.GetStateName(orderData.CustomerInfo.BillingAddress.StateProvinceId);

@@ -53,6 +53,7 @@ namespace CSWeb.App_Code.Tokenization
                     //Billing address info 
                     xml.WriteStartElement("billing_address");
                     xml.WriteElementString("address1", request.Address1.Trim());
+                    xml.WriteElementString("address2", request.Address2.Trim());
                     xml.WriteElementString("city", request.City.Trim());
                     xml.WriteElementString("state", request.State.Trim());
                     xml.WriteElementString("zip", request.ZipCode.Trim());

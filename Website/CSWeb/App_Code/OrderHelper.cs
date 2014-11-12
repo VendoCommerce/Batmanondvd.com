@@ -45,6 +45,7 @@ namespace CSWeb
             _request.FirstName = orderData.CustomerInfo.BillingAddress.FirstName;
             _request.LastName = orderData.CustomerInfo.BillingAddress.LastName;
             _request.Address1 = orderData.CustomerInfo.BillingAddress.Address1;
+            _request.Address2 = orderData.CustomerInfo.BillingAddress.Address2;
             _request.City = orderData.CustomerInfo.BillingAddress.City;
             _request.State = StateManager.GetStateName(orderData.CustomerInfo.BillingAddress.StateProvinceId);
             _request.Country = CountryManager.CountryCode(orderData.CustomerInfo.BillingAddress.CountryId);
