@@ -13,6 +13,14 @@ namespace CSWeb
             var settings = new FriendlyUrlSettings();
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
+            AddVirtualVersions(routes);
+        }
+
+        private static void AddVirtualVersions(RouteCollection routes)
+        {
+            //routes.MapPageRoute("home", "{version}/home", "~/{version}/index.aspx");
+            routes.MapPageRoute("dynamicRedirect", "{version}/{page}", "~/Redirector.aspx");
+            //routes.MapPageRoute("dynamicDefaultRedirect", "{version}", "~/Redirector.aspx");
         }
     }
 }

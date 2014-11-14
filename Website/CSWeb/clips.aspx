@@ -20,7 +20,7 @@
 <script src="/Scripts/jquery.cycle2.carousel.min.js"></script>
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
-<link href="../styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global.css" rel="stylesheet" type="text/css" />
 <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 </head>
 <body id="clips">

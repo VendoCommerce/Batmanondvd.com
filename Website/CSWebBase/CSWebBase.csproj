@@ -55,6 +55,7 @@
     <Compile Include="SiteBasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="UserSessions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSBusiness\CSBusiness.csproj">

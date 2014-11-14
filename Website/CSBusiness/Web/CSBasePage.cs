@@ -235,7 +235,8 @@ namespace CSBusiness.Web
         public static int GetVersion()
         {
             int versionId = 1;
-            string version = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
+            //string version = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
+            string version = VersionManager.OriginaUri.AbsolutePath.ToLower();
             version = version.Substring(0, version.LastIndexOf('/'));
             version = version.Substring(version.LastIndexOf('/') + 1, (version.Length - (version.LastIndexOf('/') + 1)));
             if (version == "")
@@ -270,7 +271,8 @@ namespace CSBusiness.Web
             foundTnTVars = false;
 
             string versionName = "";
-            string version = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
+            string version = VersionManager.OriginaUri.AbsolutePath.ToLower();
+            //string version = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
             version = version.Substring(0, version.LastIndexOf('/'));
             version = version.Substring(version.LastIndexOf('/') + 1, (version.Length - (version.LastIndexOf('/') + 1)));
 

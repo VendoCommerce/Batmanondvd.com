@@ -320,6 +320,7 @@
     <Content Include="Mobile\faq.aspx" />
     <Content Include="Mobile\UserControls\CheckoutThankYouModule2.ascx" />
     <Content Include="privacy.aspx" />
+    <Content Include="Redirector.aspx" />
     <Content Include="Styles\global_tablet.css" />
     <Content Include="Tablet\400.aspx" />
     <Content Include="Tablet\500.aspx" />
@@ -780,7 +781,6 @@
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\NavigationControl.cs" />
-    <Compile Include="App_Code\UserSessions.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CSSecureSite\400.aspx.cs">
       <DependentUpon>400.aspx</DependentUpon>
@@ -1285,6 +1285,13 @@
     <Compile Include="Mobile\UserControls\CheckoutThankYouModule2.ascx.cs">
       <DependentUpon>CheckoutThankYouModule2.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redirector.aspx.cs">
+      <DependentUpon>Redirector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redirector.aspx.designer.cs">
+      <DependentUpon>Redirector.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tablet\400.aspx.cs">
       <DependentUpon>400.aspx</DependentUpon>

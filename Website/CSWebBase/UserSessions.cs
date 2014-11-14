@@ -94,6 +94,13 @@ namespace CSWeb
             return "Desktop";
         }
 
+        private static string GetQueryValue(HttpContext context, string value)
+        {
+            if (context.Request.QueryString[value] != null)
+                return context.Request.QueryString[value];
+            else return null;
+        }
+
         private static string GetTrafficSource(HttpContext context)
         {
             //TODO: Also account for DISPLAY and ORGANIC
@@ -122,7 +129,7 @@ namespace CSWeb
         {
             InsertSessionEntry(context, orderFlag, orderValue, null, null, userId,orderId);
         }
-
+         
         public static void InsertSessionEntry(HttpContext context, bool? orderFlag, decimal? orderValue, bool? mobileCallFlag, bool? mobileEmailFlag, int? userId, int? orderId)
         {
             try
@@ -165,6 +172,10 @@ namespace CSWeb
                     SqlParameter MobileEmailFlagParam = new SqlParameter("@MobileEmailFlag", System.Data.SqlDbType.Bit);
                     SqlParameter OrderFlagParam = new SqlParameter("@OrderFlag", System.Data.SqlDbType.Bit);
                     SqlParameter OrderValueParam = new SqlParameter("@OrderValue", System.Data.SqlDbType.Money);
+                    SqlParameter UtmSourceParam = new SqlParameter("@UtmSource", System.Data.SqlDbType.NVarChar);
+                    SqlParameter UtmCampaignParam = new SqlParameter("@UtmCampaign", System.Data.SqlDbType.NVarChar);
+                    SqlParameter UtmMediumParam = new SqlParameter("@UtmMedium", System.Data.SqlDbType.NVarChar);
+                    SqlParameter UtmContentParam = new SqlParameter("@UtmContent", System.Data.SqlDbType.NVarChar);
 
                     URLParam.Value = url;
                     OrderIdParam.Value = orderId;
@@ -179,6 +190,11 @@ namespace CSWeb
                     OrderFlagParam.Value = orderFlag;
                     OrderValueParam.Value = orderValue;
                     CustomerSessionIdParam.Value = sessionId;
+                    UtmSourceParam.Value = GetQueryValue(context, "utm_source");
+                    UtmCampaignParam.Value = GetQueryValue(context, "utm_campaign");
+                    UtmMediumParam.Value = GetQueryValue(context, "utm_medium");
+                    UtmContentParam.Value = GetQueryValue(context, "utm_content");
+
 
                     conn.Open();
 
@@ -197,6 +213,10 @@ namespace CSWeb
                     cmd.Parameters.Add(OrderFlagParam);
                     cmd.Parameters.Add(OrderValueParam);
                     cmd.Parameters.Add(CustomerSessionIdParam);
+                    cmd.Parameters.Add(UtmSourceParam);
+                    cmd.Parameters.Add(UtmCampaignParam);
+                    cmd.Parameters.Add(UtmMediumParam);
+                    cmd.Parameters.Add(UtmContentParam);
 
                     cmd.ExecuteNonQuery();
                     conn.Close();
