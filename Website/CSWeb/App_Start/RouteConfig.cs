@@ -18,9 +18,9 @@ namespace CSWeb
 
         private static void AddVirtualVersions(RouteCollection routes)
         {
-            //routes.MapPageRoute("home", "{version}/home", "~/{version}/index.aspx");
-            routes.MapPageRoute("dynamicRedirect", "{version}/{page}", "~/Redirector.aspx");
-            //routes.MapPageRoute("dynamicDefaultRedirect", "{version}", "~/Redirector.aspx");
+            routes.Ignore("{resource}.axd/{*pathInfo}");
+            routes.MapPageRoute("dynamicDefaultRedirect", "{version}/", "~/Redirector.aspx", true);
+            routes.MapPageRoute("dynamicRedirect", "{version}/{page}", "~/Redirector.aspx", false);
         }
     }
 }

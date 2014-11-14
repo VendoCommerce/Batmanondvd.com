@@ -11,7 +11,7 @@ namespace CSWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["code"] == "encryptionCode")
+            if (Request.QueryString["code"].ToLower() == "encryptioncode")
                 CSWeb.App_Code.OrderProcessor.ProcessAllOrders();
         }
     }
