@@ -19,7 +19,7 @@ namespace CSWeb
         private static void AddVirtualVersions(RouteCollection routes)
         {
             routes.Ignore("{resource}.axd/{*pathInfo}");
-            routes.MapPageRoute("dynamicDefaultRedirect", "{version}/", "~/Redirector.aspx", true);
+            routes.MapPageRoute("dynamicDefaultRedirect", "{version}", "~/Redirector.aspx", true);
             routes.MapPageRoute("dynamicRedirect", "{version}/{page}", "~/Redirector.aspx", false);
         }
     }
