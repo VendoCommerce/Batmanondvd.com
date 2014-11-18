@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CardDecline.ascx.cs" Inherits="CSWeb.Mobile.UserControls.CardDecline" %>
 
-<%@ Register Src="../../UserControls/Tokenex.ascx" TagName="Tokenex" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControls/Tokenex.ascx" TagName="Tokenex" TagPrefix="uc1" %>
 
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>

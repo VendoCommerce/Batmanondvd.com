@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CardDecline.ascx.cs" Inherits="CSWeb.Root.UserControls.CardDecline" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CardDecline.ascx.cs" Inherits="CSWeb.Display.UserControls.CardDecline" %>
 
 <%@ Register Src="~/UserControls/Tokenex.ascx" TagName="Tokenex" TagPrefix="uc1" %>
 

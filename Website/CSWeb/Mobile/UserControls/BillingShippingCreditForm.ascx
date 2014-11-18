@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" Inherits="CSWeb.Mobile.UserControls.BillingShippingCreditForm" CodeBehind="BillingShippingCreditForm.ascx.cs" %>
-<%@ Register Src="../../UserControls/Tokenex.ascx" TagName="Tokenex" TagPrefix="uc2" %>
+<%@ Register Src="~/UserControls/Tokenex.ascx" TagName="Tokenex" TagPrefix="uc2" %>
 <asp:ScriptManager runat="server" ID="sm1">
 </asp:ScriptManager>
 <asp:LinkButton ID="refresh" runat="server" CausesValidation="false"></asp:LinkButton>
