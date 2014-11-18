@@ -12,6 +12,9 @@ namespace CSWebBase
     {
         public static bool IsDuplicateOrder(string email)
         {
+            if (email.Length > 0)
+                email = CSCore.Utils.CommonHelper.Encrypt(email);
+
             using (SqlDataReader reader = GetDuplicateOrder(email))
             {
                 if (reader.HasRows)
