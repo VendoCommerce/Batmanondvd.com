@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, maximum-scale=1" />
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Return Policy</title>
 
-
+<script src="//cdn.optimizely.com/js/77045885.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="/Scripts/fancybox/jquery.fancybox.pack.js"></script>
 <link href="/Scripts/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all" />
