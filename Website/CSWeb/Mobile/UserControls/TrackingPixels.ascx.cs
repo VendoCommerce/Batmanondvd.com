@@ -41,18 +41,20 @@ namespace CSWeb.Mobile.UserControls
             //versionNameReferrer = CSWeb.OrderHelper.GetVersionNameByReferrer(CartContext);
             string url = Request.Url.AbsolutePath.ToLower();
 
+
             try
             {
                 if (url.EndsWith("/postsale.aspx"))
                 {
                     versionNameClientFunction = "'" + Session["PostSaleLabelName"].ToString() + "'";
                 }
+                else
+                    versionNameClientFunction = "GetClientVersionName('" + versionName + "')";
             }
             catch
             {
-
-
-            }
+            } 
+            
             SetHomePagePnl();
             SetHomeAndSubPagesPnl();
             SetCartPagePnl();

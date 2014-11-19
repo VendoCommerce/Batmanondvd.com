@@ -49,21 +49,19 @@ namespace CSWeb.Tablet.UserControls
             }
              string url = Request.Url.AbsolutePath.ToLower();
 
-            //try
-            //{
-            //    if (url.EndsWith("/postsale.aspx"))
-            //    {
-            //        versionNameClientFunction = "'" + Session["PostSaleLabelName"].ToString() + "'";
-            //    }
-            //}
-            //catch 
-            //{
-                
-                
-            //}
-
-             versionNameClientFunction = "GetClientVersionName('" + versionName + "')";
-
+             try
+             {
+                 if (url.EndsWith("/postsale.aspx"))
+                 {
+                     versionNameClientFunction = "'" + Session["PostSaleLabelName"].ToString() + "'";
+                 }
+                 else
+                     versionNameClientFunction = "GetClientVersionName('" + versionName + "')";
+             }
+             catch
+             {
+             }
+            
             //versionNameReferrer = CSWeb.OrderHelper.GetVersionNameByReferrer(CartContext);
             SetHomePagePnl();
             SetHomeAndSubPagesPnl();
