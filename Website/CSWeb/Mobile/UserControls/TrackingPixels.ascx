@@ -27,7 +27,7 @@ Creation Date: 10/02/2014
             id="wa_u" defer></script><script type="text/javascript" async>    //<![CDATA[
                                          var wa_pageName = location.pathname;    // customize the page name here;
                                          wa_account = "9D9E8B929E9190919B899B"; wa_location = 31;
-                                         wa_MultivariateKey = '<%= versionName %>';    //  Set this variable to perform multivariate testing
+                                         wa_MultivariateKey = <%=versionNameClientFunction %>;    //  Set this variable to perform multivariate testing
                                          var wa_c = new RegExp('__wa_v=([^;]+)').exec(document.cookie), wa_tz = new Date(),
                                              wa_rf = document.referrer, wa_sr = location.search, wa_hp = 'http' + (location.protocol == 'https:' ? 's' : '');
                                          if (top !== self) { wa_rf = top.document.referrer; wa_sr = top.location.search }
