@@ -3,7 +3,7 @@
 
 <!doctype html>
 <html>
-<head>
+<head runat="server">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1" />
 <title>Batman | Cast Listing of Classic TV Series | As Seen on TV - Cast</title>

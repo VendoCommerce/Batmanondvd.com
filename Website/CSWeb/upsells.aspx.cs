@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace CSWeb
 {
-    public partial class upsells : CSBasePage
+    public partial class upsells : CSWebBase.SiteBasePage
     {
         protected override void Page_Load(object sender, EventArgs e)
         {

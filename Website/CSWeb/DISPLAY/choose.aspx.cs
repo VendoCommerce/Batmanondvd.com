@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace CSWeb.Display
 {
-    public partial class choose : CSBasePage
+    public partial class choose : CSWebBase.SiteBasePage
     {
         protected override void Page_Load(object sender, EventArgs e)
         {

@@ -12,7 +12,7 @@ using CSWeb.App_Code;
 
 namespace CSWeb.Mobile.Store
 {
-    public partial class cart : CSBasePage
+    public partial class cart : CSWebBase.SiteBasePage
     {
         public ClientCartContext ClientOrderData2
         {

@@ -5,7 +5,7 @@
 
 <!doctype html>
 <html>
-<head>
+<head runat="server">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1" />
 <meta name="msvalidate.01" content="5480DFE3A3631B08B37C8A5326603EDE" />    

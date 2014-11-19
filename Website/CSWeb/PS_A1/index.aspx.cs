@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace CSWeb.PS_A1
 {
-    public partial class index : CSBasePage
+    public partial class index : CSWebBase.SiteBasePage
     {
         protected override void Page_Load(object sender, EventArgs e)
         {
