@@ -341,9 +341,7 @@
                                 <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/btn_completeorder.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />
                             </div>
                             <div class="form_line_guarantee" style="display: none;"><a href="#guarantee" class="guarantee">90-Day Money-Back Guarantee!</a></div>
-                            <div class="form_line_guarantee clearfix" style="display: none;">
-                                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/a3/formcerts.png" />
-                            </div>
+                            
                             
                             &nbsp;</div>
                     </td>
