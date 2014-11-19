@@ -18,7 +18,6 @@ namespace CSWeb
 
             if (!Page.IsPostBack)
             {
-                base.Page_Load(sender, e);
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();
 
                 if (Request.Headers["X-HTTPS"] != null)

@@ -12,7 +12,7 @@ using CSWeb.App_Code;
 
 namespace CSWeb.Root.Store
 {
-    public partial class cart : SiteBasePage
+    public partial class cart : CSWebBase.SiteBasePage
     {
         protected global::CSWeb.Root.UserControls.ShippingBillingCreditForm bscfShippingBillingCreditForm;
         protected override void Page_Load(object sender, EventArgs e)
