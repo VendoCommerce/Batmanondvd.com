@@ -11,7 +11,7 @@ using System.Web.UI;
 
 namespace CSWeb.Mobile.Store
 {
-    public partial class index : CSBasePage
+    public partial class index : CSWebBase.SiteBasePage
     {
         public string Version = "mobile";
         protected override bool IsLandingPage
