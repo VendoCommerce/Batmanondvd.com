@@ -16,7 +16,6 @@ namespace CSWeb.Tablet
         {
             if (!Page.IsPostBack)
             {
-                base.Page_Load(sender, e);
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();
 
                 if (Request.Headers["X-HTTPS"] != null)
@@ -35,11 +34,10 @@ namespace CSWeb.Tablet
                 }
                 if (OrderHelper.IsMobileBrowser() && (Request.QueryString["mobile"] == null || (Request.QueryString["mobile"] != null && Request.QueryString["mobile"] != "false")))
                     Response.Redirect("/mobile/?" + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_MOB"));
+
+                base.Page_Load(sender, e);
             }
 
         }
-
-        
-
     }
 }

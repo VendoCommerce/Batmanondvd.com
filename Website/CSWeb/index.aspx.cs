@@ -17,7 +17,6 @@ namespace CSWeb
 
             if (!Page.IsPostBack)
             {
-                base.Page_Load(sender, e);
 
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();
 
@@ -40,11 +39,10 @@ namespace CSWeb
 
                 if (CSBasePage.GetClientDeviceType() == CSBusiness.Enum.DeviceType.Tablet) // device mobile but version not mobile
                     Response.Redirect("/tablet/?" + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_TAB"));
+
+                base.Page_Load(sender, e);
             }
 
         }
-
-        
-
     }
 }
