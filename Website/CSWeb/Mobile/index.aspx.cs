@@ -50,10 +50,12 @@ namespace CSWeb.Mobile.Store
                     }
                 }
             }
+
+            base.Page_Load(sender, e);
+
             ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
             if (!Page.IsPostBack)
             {
-                base.Page_Load(sender, e);
 
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();
                 if (!sitePrefCache.GeoLocationService)
