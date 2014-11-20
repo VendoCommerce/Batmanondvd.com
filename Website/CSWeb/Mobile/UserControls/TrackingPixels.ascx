@@ -60,7 +60,7 @@ Creation Date: 10/02/2014
             ;
         ga('create', 'UA-52993620-1', 'auto');
         ga('require', 'displayfeatures');
-        ga('send', 'pageview');
+        ga('send', 'pageview', { 'page': newPageName });
     </script>  
     
      <!-- Google Code for Remarketing Tag -->
