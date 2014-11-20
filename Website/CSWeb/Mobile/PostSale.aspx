@@ -17,8 +17,6 @@
 <script type="text/javascript" src="/Scripts/global_mobile.js"></script>
 <link href="/styles/global_mobile.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/scripts/NoBack.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery.cookie.min.js"></script>
-    <script type="text/javascript" src="/Scripts/cstracking.js"></script>
 
 </head>
  

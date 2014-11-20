@@ -14,10 +14,11 @@ namespace CSWeb
     {
         protected override void Page_Load(object sender, EventArgs e)
         {
-            base.Page_Load(sender, e);
 
             if (!Page.IsPostBack)
             {
+                base.Page_Load(sender, e);
+
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();
 
                 if (Request.Headers["X-HTTPS"] != null)
@@ -34,12 +35,11 @@ namespace CSWeb
                         }
                     }
                 }
-                if (OrderHelper.IsMobileBrowser() && (Request.QueryString["mobile"] == null ||(Request.QueryString["mobile"] != null && Request.QueryString["mobile"] != "false")))
-                    Response.Redirect("/mobile/?" + Request.QueryString.ToString());
+                if (OrderHelper.IsMobileBrowser() && (Request.QueryString["mobile"] == null || (Request.QueryString["mobile"] != null && Request.QueryString["mobile"] != "false")))
+                    Response.Redirect("/mobile/?" + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_MOB"));
 
                 if (CSBasePage.GetClientDeviceType() == CSBusiness.Enum.DeviceType.Tablet) // device mobile but version not mobile
-                    Response.Redirect("/tablet/?" + Request.QueryString, true);
-
+                    Response.Redirect("/tablet/?" + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_TAB"));
             }
 
         }
