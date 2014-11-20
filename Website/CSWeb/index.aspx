@@ -47,11 +47,11 @@
                     <div id="ctavideo"></div>
                     <script type='text/javascript'>
                         jwplayer('ctavideo').setup({
-                            file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low.mp4',
+                            file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low2.mp4',
                             autostart: false,
                             image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_home.jpg',
                             controls: true,
-                            width: 332, height: 250,
+                            width: 332, height: 254,
                             stretching: 'exactfit',
                             skin: '/scripts/jwplayer/bekle.xml'
 

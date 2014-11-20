@@ -53,15 +53,15 @@
                 <div class="home_tvpiece_4"></div>
                 <div class="home_tvpiece_center"></div>
 
-                <div id="homevid1">
+                <div id="homevid1" class="homevid1">
                     <div id="ctavideo"></div>
                     <script type='text/javascript'>
                         jwplayer('ctavideo').setup({
-                            file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low.mp4',
+                            file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low2.mp4',
                             autostart: false,
                             image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_home.jpg',
                             controls: true,
-                            width: 264, height: 199,
+                            width: 230, height: 177,
                             stretching: 'exactfit',
                             skin: '/scripts/jwplayer/bekle.xml'
 
