@@ -151,7 +151,7 @@ Creation Date: 10/02/2014
     ;
     ga('create', 'UA-52993620-1', 'auto');
     ga('require', 'displayfeatures');
-    ga('send', 'pageview');
+    ga('send', 'pageview', { 'page': newPageName });
     ga('require', 'ecommerce', 'ecommerce.js');
     <asp:Literal ID="litGAReceiptPixel" runat="server" />
     ga('ecommerce:send');
