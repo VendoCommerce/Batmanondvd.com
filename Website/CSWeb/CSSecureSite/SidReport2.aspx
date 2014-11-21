@@ -110,8 +110,8 @@
       <td class="cola"><asp:Label ID="lblTitle" runat="server" /></td>
       <td class="colb"><asp:Label ID="lbHitLinkVisitor" runat="server" /></td>
       <td class="colc"><asp:Label ID="lblTotalOrder" runat="server" /></td>
-      <td class="cold"><asp:Label ID="lblConversion" runat="server" /></td>
-      <td class="colf"><asp:Label ID="lblTotalRev" runat="server" /></td>
+      <td class="cold">%<asp:Label ID="lblConversion" runat="server" /></td>
+      <td class="colf">$<asp:Label ID="lblTotalRev" runat="server" /></td>
   </tr>
   </ItemTemplate>
   <FooterTemplate>
@@ -119,7 +119,7 @@
           <td class="cola"><strong>Total</strong></td>
           <td class="colb"><strong><asp:Label ID="lblSumHitLinkVisitor" runat="server" /></strong></td>
           <td class="colc"><strong><asp:Label ID="lblSumTotalOrder" runat="server" /></strong></td>
-          <td class="cold"><strong><asp:Label ID="lblSumTotalConversion" runat="server" /></strong></td>
+          <td class="cold"><strong>%<asp:Label ID="lblSumTotalConversion" runat="server" /></strong></td>
           <td class="colf"><strong><asp:Label ID="lblSumTotalRev" runat="server" /></strong></td>
       </tr>
       <tr>
