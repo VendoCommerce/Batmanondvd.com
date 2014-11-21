@@ -360,7 +360,7 @@ padding: 9px 0 3px 0;
             <div id="report_nav">
                  <a href="VersionReport.aspx">
                     Version Report</a> | <span class="current">Standard Report</span> 
-                |    <a href="SIdReport.aspx">
+                |    <a href="SIdReport2.aspx">
                     SId Report</a>
                 
             </div>
