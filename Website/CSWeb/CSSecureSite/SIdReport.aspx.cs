@@ -176,7 +176,7 @@ namespace CSWeb.Admin
 
                 ReportFields item = e.Item.DataItem as ReportFields;
 
-                lblTitle.Text = item.Title;
+                lblTitle.Text = item.Title.ToUpper();
                 if (lblTitle.Text == "display_mob") lblTitle.Text = "display_mobile";
                 if (lblTitle.Text == "display_tab") lblTitle.Text = "display_tablet";
                 if (lblTitle.Text == "display") lblTitle.Text = "display_desktop";
