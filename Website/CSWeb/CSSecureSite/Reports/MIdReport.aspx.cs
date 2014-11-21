@@ -56,7 +56,7 @@ namespace CSWeb.Admin.Reports
 
             DateTime? timezoneStartDate = DateTimeUtil.GetEastCoastStartDate(rangeDateControlCriteria.StartDateValueLocal);
             DateTime? timezoneEndDate = DateTimeUtil.GetEastCoastDate(rangeDateControlCriteria.EndDateValueLocal);
-            List<VersionFieldsReport> ItemList = new OrderManager().GetOrderCustomFieldReport(timezoneStartDate, timezoneEndDate, 1,  false);
+            List<ReportFields> ItemList = new OrderManager().GetOrderCustomFieldReport(timezoneStartDate, timezoneEndDate, 1,  false);
 
             Data rptData = new ReportWSSoapClient().GetDataFromTimeframe("tgelman", "china2006", ReportsEnum.eCommerceActivitySummary, TimeFrameEnum.Daily, Convert.ToDateTime(startDate), Convert.ToDateTime(endDate), 100000000, 0, 0);
             for (int i = 0; i <= rptData.Rows.GetUpperBound(0); i++)
@@ -65,7 +65,7 @@ namespace CSWeb.Admin.Reports
             }
 
             //Update Version List information
-            foreach (VersionFieldsReport item in ItemList)
+            foreach (ReportFields item in ItemList)
             {
                 if (HitLinkVisitor.ContainsKey(item.Title))
                 {
@@ -123,7 +123,7 @@ namespace CSWeb.Admin.Reports
                 Label lbHitLinkVisitor = e.Item.FindControl("lbHitLinkVisitor") as Label;
                 Label lblConversion = e.Item.FindControl("lblConversion") as Label;             
 
-                VersionFieldsReport item = e.Item.DataItem as VersionFieldsReport;
+                ReportFields item = e.Item.DataItem as ReportFields;
 
                 lblTitle.Text = item.Title;
                 lblTotalOrder.Text = item.TotalOrders.ToString();

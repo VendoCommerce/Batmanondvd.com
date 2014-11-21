@@ -269,6 +269,11 @@
     <Content Include="CSSecureSite\PromoCodeDetail.aspx" />
     <Content Include="CSSecureSite\PromoCodeSummary.aspx" />
     <Content Include="CSSecureSite\ReportMain.aspx" />
+    <Content Include="CSSecureSite\Reports\MainReport.aspx" />
+    <Content Include="CSSecureSite\Reports\MainVersionReport.aspx" />
+    <Content Include="CSSecureSite\Reports\MIdReport.aspx" />
+    <Content Include="CSSecureSite\Reports\StandardReport.aspx" />
+    <Content Include="CSSecureSite\Reports\VersionReport.aspx" />
     <Content Include="CSSecureSite\SReports.aspx" />
     <Content Include="CSSecureSite\Reports1.aspx" />
     <Content Include="CSSecureSite\ResourceList.aspx" />
@@ -295,6 +300,7 @@
     <Content Include="CSSecureSite\Users.aspx" />
     <Content Include="CSSecureSite\VersionCategoryList.aspx" />
     <Content Include="CSSecureSite\VersionList.aspx" />
+    <Content Include="CSSecureSite\SidReport2.aspx" />
     <Content Include="CSSecureSite\VersionReport.aspx" />
     <Content Include="CSSecureSite\VersionReport1.aspx" />
     <Content Include="AuthorizeOrder.aspx" />
@@ -1024,6 +1030,41 @@
     </Compile>
     <Compile Include="CSSecureSite\ReportMain.aspx.designer.cs">
       <DependentUpon>ReportMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\MainReport.aspx.cs">
+      <DependentUpon>MainReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\MainReport.aspx.designer.cs">
+      <DependentUpon>MainReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\MainVersionReport.aspx.cs">
+      <DependentUpon>MainVersionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\MainVersionReport.aspx.designer.cs">
+      <DependentUpon>MainVersionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\MIdReport.aspx.cs">
+      <DependentUpon>MIdReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\MIdReport.aspx.designer.cs">
+      <DependentUpon>MIdReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\StandardReport.aspx.cs">
+      <DependentUpon>StandardReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\StandardReport.aspx.designer.cs">
+      <DependentUpon>StandardReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\VersionReport.aspx.cs">
+      <DependentUpon>VersionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSecureSite\Reports\VersionReport.aspx.designer.cs">
+      <DependentUpon>VersionReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="CSSecureSite\SReports.aspx.cs">
       <DependentUpon>SReports.aspx</DependentUpon>

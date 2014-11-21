@@ -30,7 +30,7 @@ namespace CSWeb.Admin.Reports
                 ddlVersion.DataBind();
                 ddlVersion.Items.Insert(0, new ListItem("Select", "0"));
 
-                ddlPaths.DataSource = new PathManager().GetAllPaths(false);
+                ddlPaths.DataSource = new PathManager().GetAllPaths(13,false);
                 ddlPaths.DataTextField = "Title";
                 ddlPaths.DataValueField = "PathId";
                 ddlPaths.DataBind();

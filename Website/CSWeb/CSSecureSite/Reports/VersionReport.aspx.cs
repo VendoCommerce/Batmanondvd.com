@@ -19,7 +19,7 @@ namespace CSWeb.Admin.Reports
 {
     public partial class VersionReport : BasePage
     {
-        protected Dictionary<int, List<VersionFieldsReport>> dtCollectionList;
+        protected Dictionary<int, List<ReportFields>> dtCollectionList;
         public int CategoryId = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,14 +34,14 @@ namespace CSWeb.Admin.Reports
 
         }
 
-         public string CreateCharts(List<VersionFieldsReport> Items)
+         public string CreateCharts(List<ReportFields> Items)
         {
 
             //Create an XML data document in a string variable
             string strXML = string.Empty;
             strXML += "<graph  caption='Version Trafic Report' animation='1'  formatNumberScale='0'   pieSliceDepth='30'  decimalPrecision='0' shownames='1' >";
             Random rnd = new Random();
-            foreach(VersionFieldsReport Item in Items)
+            foreach(ReportFields Item in Items)
             {
                 Color RandomColor = Color.FromArgb(rnd.Next(0, 255), rnd.Next(0, 255), rnd.Next(0, 255));
                 strXML += "<set name='" + Item.ShortName + "' value='" + Item.TotalOrders + "' color='" + RandomColor.Name + "' />";
@@ -81,7 +81,7 @@ namespace CSWeb.Admin.Reports
              
                 lblCategory.Text = versionItem.Title;
                 DataList dlVersionItemList = (DataList)e.Item.FindControl("dlVersionItemList");
-                List<VersionFieldsReport> items = dtCollectionList[1].FindAll(y => y.CatgoryId == versionItem.CategoryId);
+                List<ReportFields> items = dtCollectionList[1].FindAll(y => y.CatgoryId == versionItem.CategoryId);
                 CategoryId = versionItem.CategoryId;
                 if (items.Count > 0)
                 {
@@ -107,7 +107,7 @@ namespace CSWeb.Admin.Reports
                 Label lblAvgOrder = e.Item.FindControl("lblAvgOrder") as Label;
                 Label lblTotalRev = e.Item.FindControl("lblTotalRev") as Label;
 
-                VersionFieldsReport item = e.Item.DataItem as VersionFieldsReport;
+                ReportFields item = e.Item.DataItem as ReportFields;
                 lblTitle.Text = item.ShortName;
                 lblTotalOrder.Text = item.TotalOrders.ToString();
                 lblAvgOrder.Text = String.Format("${0:0.##}", item.AverageOrder);
@@ -119,7 +119,7 @@ namespace CSWeb.Admin.Reports
                 Label lblSumTotalOrder = e.Item.FindControl("lblSumTotalOrder") as Label;
                   Label lblSumAvgOrder = e.Item.FindControl("lblSumAvgOrder") as Label;
                   Label lblSumTotalRev = e.Item.FindControl("lblSumTotalRev") as Label;
-                VersionFieldsReport foundItem = dtCollectionList[0].Find(y => y.CatgoryId == CategoryId);
+                ReportFields foundItem = dtCollectionList[0].Find(y => y.CatgoryId == CategoryId);
                 if (foundItem != null)
                 {
                     lblSumTotalOrder.Text = foundItem.TotalOrders.ToString();

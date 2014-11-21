@@ -20,7 +20,7 @@ namespace CSWeb.Admin.Reports
 {
     public partial class MainVersionReport : BasePage
     {
-        protected Dictionary<int, List<VersionFieldsReport>> dtCollectionList;
+        protected Dictionary<int, List<ReportFields>> dtCollectionList;
         public Hashtable HitLinkVisitor = new Hashtable();
         public int CategoryId = 0;
         public decimal CategoryUniqueVistiors = 0;
@@ -65,7 +65,7 @@ namespace CSWeb.Admin.Reports
            }
            
             //Update Version List information
-            foreach (VersionFieldsReport item in dtCollectionList[1])
+            foreach (ReportFields item in dtCollectionList[1])
             {
                 if (HitLinkVisitor.ContainsKey(item.Title))
                 {
@@ -135,7 +135,7 @@ namespace CSWeb.Admin.Reports
 
                 
                 DataList dlVersionItemList = (DataList)e.Item.FindControl("dlVersionItemList");
-                List<VersionFieldsReport> items = dtCollectionList[1].FindAll(y => y.CatgoryId == versionItem.CategoryId);
+                List<ReportFields> items = dtCollectionList[1].FindAll(y => y.CatgoryId == versionItem.CategoryId);
                 CategoryId = versionItem.CategoryId;
                 if (items.Count > 0)
                 {
@@ -209,7 +209,7 @@ namespace CSWeb.Admin.Reports
                 Label lblConversion = e.Item.FindControl("lblConversion") as Label;
                 Label lblRevenuePerVisit = e.Item.FindControl("lblRevenuePerVisit") as Label;
 
-                VersionFieldsReport item = e.Item.DataItem as VersionFieldsReport;
+                ReportFields item = e.Item.DataItem as ReportFields;
 
                 lblTitle.Text = item.ShortName;
                 if (item.TotalOrders > 0)
@@ -241,7 +241,7 @@ namespace CSWeb.Admin.Reports
                 Label lblSumRevenuePerClick = e.Item.FindControl("lblSumRevenuePerClick") as Label;
 
                 HtmlContainerControl versionFooter = e.Item.FindControl("versionFooter") as HtmlContainerControl;
-                VersionFieldsReport foundItem = dtCollectionList[0].Find(y => y.CatgoryId == CategoryId);
+                ReportFields foundItem = dtCollectionList[0].Find(y => y.CatgoryId == CategoryId);
                 if (dtCollectionList[0].Count == 1)
                 {
                     versionFooter.Visible = false;

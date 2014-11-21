@@ -37,7 +37,7 @@
             <div id="report_nav">
                <span class="current">Version Report</span> | <a href="sReports.aspx">
                     Standard Report</a>
-                 | <a href="SIdReport.aspx">
+                 | <a href="SIdReport2.aspx">
                     SId Report</a>             
             </div>
             <div id="log_link">
