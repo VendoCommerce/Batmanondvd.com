@@ -93,7 +93,7 @@
 <li>
 <a href="#"><i class="icon-table"></i>Reports<span><i class="icon-arrow-down"></i></span></a>
 <ul>
-<li><a href="reports.aspx"><i class="icon-star-empty"></i>Standard Report</a></li>
+<li><a href="sreports.aspx"><i class="icon-star-empty"></i>Standard Report</a></li>
 <li><a href="versionreport.aspx"><i class="icon-list"></i>Version Report</a></li>
 <li><a href="sidreport.aspx"><i class="icon-bullhorn"></i>SID Report</a></li>
 </ul>

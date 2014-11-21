@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="CSWeb.Admin.ClientReport"  EnableViewState="true" EnableSessionState="true" EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SReports.aspx.cs" Inherits="CSWeb.Admin.ClientReport"  EnableViewState="true" EnableSessionState="true" EnableEventValidation="false" %>
 <%@ Register TagPrefix="usercontrols" TagName="RangeDateControl" Src="usercontrols/RangeDateControl.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -359,8 +359,9 @@ padding: 9px 0 3px 0;
  <a id="lnk_logout" href="Logout.aspx">Logout</a>
             <div id="report_nav">
                  <a href="VersionReport.aspx">
-                    Version Report</a> | <span class="current">Standard Report</span> <%--|    <a href="SIdReport.aspx">
-                    SId Report</a>--%>
+                    Version Report</a> | <span class="current">Standard Report</span> 
+                |    <a href="SIdReport.aspx">
+                    SId Report</a>
                 
             </div>
             <div id="header" class="text_replace">

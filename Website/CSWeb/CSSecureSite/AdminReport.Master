@@ -41,7 +41,7 @@
 <span class="reportname"></span>&nbsp;&nbsp;&nbsp;<small><asp:Literal ID="liHeader" runat="server" /> | <asp:Literal ID="liSubHeader" runat="server" /></small>
 </h3>
 <ul class="report-nav pull-right">
-<li class="standardreport"><a href="reports.aspx" class="dash-icons"><span class="iconwrap"><i class="icon-star-empty"></i></span><span class="dash-text">Standard Report</span></a></li>
+<li class="standardreport"><a href="sreports.aspx" class="dash-icons"><span class="iconwrap"><i class="icon-star-empty"></i></span><span class="dash-text">Standard Report</span></a></li>
 <li class="versionreport"><a href="VersionReport.aspx" class="dash-icons"><span class="iconwrap"><i class="icon-list"></i></span><span class="dash-text">Version Report</span></a></li>
 <li class="sidreport"><a href="SIdReport.aspx" class="dash-icons"><span class="iconwrap"><i class="icon-bullhorn"></i></span><span class="dash-text">SID Report</span></a></li>
 </ul>

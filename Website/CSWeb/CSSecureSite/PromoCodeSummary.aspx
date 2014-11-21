@@ -19,7 +19,7 @@
             <!-- end logo -->
             <!-- end log_link -->
             <div id="report_nav">
-              <a href="VersionReport.aspx">Version Report </a>| <a href="Reports.aspx">Standard
+              <a href="VersionReport.aspx">Version Report </a>| <a href="sReports.aspx">Standard
                     Report</a> | <a href="MIdReport.aspx">MID Report</a>|<a href="TransactionReport.aspx"> Transaction History Report</a> |
                     <a href="PromoCodeDetail.aspx">PromoCode Detail Report</a> | <span class="current">PromoCode Summary Report</span> 
             </div>

@@ -168,7 +168,7 @@
 <ul class="thumbnails" data-toggle="gallery-options">
 <li>
 
-<a href="reports.aspx" class="dash-icons"><span class="iconwrap"><i class="icon-star-empty"></i></span><span class="dash-text">Standard Report</span>
+<a href="sreports.aspx" class="dash-icons"><span class="iconwrap"><i class="icon-star-empty"></i></span><span class="dash-text">Standard Report</span>
 </a>
 </li>
 <li>

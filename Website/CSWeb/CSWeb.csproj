@@ -269,7 +269,7 @@
     <Content Include="CSSecureSite\PromoCodeDetail.aspx" />
     <Content Include="CSSecureSite\PromoCodeSummary.aspx" />
     <Content Include="CSSecureSite\ReportMain.aspx" />
-    <Content Include="CSSecureSite\Reports.aspx" />
+    <Content Include="CSSecureSite\SReports.aspx" />
     <Content Include="CSSecureSite\Reports1.aspx" />
     <Content Include="CSSecureSite\ResourceList.aspx" />
     <Content Include="CSSecureSite\Shipping.aspx" />
@@ -1025,12 +1025,12 @@
     <Compile Include="CSSecureSite\ReportMain.aspx.designer.cs">
       <DependentUpon>ReportMain.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CSSecureSite\Reports.aspx.cs">
-      <DependentUpon>Reports.aspx</DependentUpon>
+    <Compile Include="CSSecureSite\SReports.aspx.cs">
+      <DependentUpon>SReports.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CSSecureSite\Reports.aspx.designer.cs">
-      <DependentUpon>Reports.aspx</DependentUpon>
+    <Compile Include="CSSecureSite\SReports.aspx.designer.cs">
+      <DependentUpon>SReports.aspx</DependentUpon>
     </Compile>
     <Compile Include="CSSecureSite\Reports1.aspx.cs">
       <DependentUpon>Reports1.aspx</DependentUpon>

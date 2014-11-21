@@ -35,9 +35,10 @@
            
             <!-- end log_link -->
             <div id="report_nav">
-               <span class="current">Version Report</span> | <a href="Reports.aspx">
-                    Standard Report</a> <%--| <a href="SIdReport.aspx">
-                    SId Report</a>     --%>        
+               <span class="current">Version Report</span> | <a href="sReports.aspx">
+                    Standard Report</a>
+                 | <a href="SIdReport.aspx">
+                    SId Report</a>             
             </div>
             <div id="log_link">
                 <a id="lnk_logout" href="Logout.aspx">Logout</a></div>

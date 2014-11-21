@@ -21,7 +21,7 @@
             <!-- end logo -->
             <!-- end log_link -->
             <div id="report_nav">
-                <a href="VersionReport.aspx">Version Report </a>| <a href="Reports.aspx">Standard
+                <a href="VersionReport.aspx">Version Report </a>| <a href="sReports.aspx">Standard
                     Report</a> | <span class="current">MID Report</span> 
             </div>
         </div>
