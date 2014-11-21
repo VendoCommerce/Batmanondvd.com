@@ -38,7 +38,7 @@
                <span class="current">Version Report</span> | <a href="sReports.aspx">
                     Standard Report</a>
                  | <a href="SIdReport2.aspx">
-                    SId Report</a>             
+                    SID Report</a>             
             </div>
             <div id="log_link">
                 <a id="lnk_logout" href="Logout.aspx">Logout</a></div>

@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>BatmanOnDvd.com - Sid Report</title>
+    <title>BatmanOnDvd.com - SID Report</title>
     <script type="text/javascript">
         function removejscssfile(filename, filetype) {
             var targetelement = (filetype == "js") ? "script" : (filetype == "css") ? "link" : "none" //determine element type to create nodelist from
@@ -39,7 +39,7 @@
                     Version Report</a> | <a href="sReports.aspx">
                     Standard Report</a>
                  | 
-                  <span class="current">  SId Report   </span>
+                  <span class="current">  SID Report   </span>
             </div>
             <div id="log_link">
                 <a id="lnk_logout" href="Logout.aspx">Logout</a></div>
