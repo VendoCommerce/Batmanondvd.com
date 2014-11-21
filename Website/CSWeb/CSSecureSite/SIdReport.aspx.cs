@@ -15,6 +15,7 @@ using CSBusiness.PostSale;
 using CSWeb.HitLinks;
 using CSCore.Utils;
 using CSData;
+using System.Linq;
 
 namespace CSWeb.Admin
 {
@@ -143,6 +144,7 @@ namespace CSWeb.Admin
                 }
             }
 
+            ItemList = ItemList.OrderBy(o => o.Title).ToList();
 
             dlVersionList.DataSource = ItemList;
             dlVersionList.DataBind();

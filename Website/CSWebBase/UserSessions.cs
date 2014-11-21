@@ -104,8 +104,15 @@ namespace CSWeb
         private static string GetTrafficSource(HttpContext context)
         {
             //TODO: Also account for DISPLAY and ORGANIC
-            if (context.Request.RawUrl.ToLower().Contains("sid="))
-                return "SEM";
+            if (context.Request.QueryString["SID"] != null && context.Request.QueryString["SID"].Length > 0)
+            {
+                if (context.Request.QueryString["SID"] == "DISPLAY")
+                    return "DISPLAY";
+                else
+                    return "SEM";
+            }
+            //if (context.Request.RawUrl.ToLower().Contains("sid="))
+                //return context.Request.QueryString["SID"];
             return "DIRECT";
         }
 
