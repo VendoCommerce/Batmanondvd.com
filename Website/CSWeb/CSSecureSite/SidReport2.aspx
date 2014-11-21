@@ -86,41 +86,44 @@
             <div id="right2">
                 <h2>
                 </h2>
-                <!-- end summary header -->
+                 <!-- end summary header -->
                 
              
-                   <div class="clear">
+                   <div class="clear table_pad2">
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 <asp:DataList runat="server" ID="dlVersionList" RepeatLayout="Flow" RepeatDirection="Horizontal" OnItemDataBound="dlVersionList_ItemDataBound">
 <HeaderTemplate>
-<table class="table table-bordered table-report table-striped">
-<tr class="alt"><th colspan="7">Summary</th></tr>
+<table class="table table-bordered table-report table-striped summary_table2 " style="width: 720px;">
+<%--<tr class="alt"><th colspan="7">Summary</th></tr>--%>
 <tr class="subheader-row">
-  <th>SID</th>
-  <th class="text-center">Unique Visitors</th>
-  <th class="text-center">Total Orders</th>
-  <th class="text-center">Conversion %</th>
-  <th class="text-center">Total Revenue</th>
+  <th class="cola">SID</th>
+  <th class="colb">Unique Visitors</th>
+  <th class="colc">Total Orders</th>
+  <th class="cold">Conversion %</th>
+  <th class="colf">Total Revenue</th>
 </tr>
 </HeaderTemplate>
 <ItemTemplate>
   <tr>
-      <td><asp:Label ID="lblTitle" runat="server" /></td>
-      <td class="text-center"><asp:Label ID="lbHitLinkVisitor" runat="server" /></td>
-      <td class="text-center"><asp:Label ID="lblTotalOrder" runat="server" /></td>
-      <td class="text-center"><asp:Label ID="lblConversion" runat="server" /></td>
-      <td class="text-center"><asp:Label ID="lblTotalRev" runat="server" /></td>
+      <td class="cola"><asp:Label ID="lblTitle" runat="server" /></td>
+      <td class="colb"><asp:Label ID="lbHitLinkVisitor" runat="server" /></td>
+      <td class="colc"><asp:Label ID="lblTotalOrder" runat="server" /></td>
+      <td class="cold"><asp:Label ID="lblConversion" runat="server" /></td>
+      <td class="colf"><asp:Label ID="lblTotalRev" runat="server" /></td>
   </tr>
   </ItemTemplate>
   <FooterTemplate>
-      <tr class="success report-totals">
-          <td>Total</td>
-          <td class="text-center"><asp:Label ID="lblSumHitLinkVisitor" runat="server" /></td>
-          <td class="text-center"><asp:Label ID="lblSumTotalOrder" runat="server" /></td>
-          <td class="text-center"><asp:Label ID="lblSumTotalConversion" runat="server" /></td>
-          <td class="text-center"><asp:Label ID="lblSumTotalRev" runat="server" /></td>
+      <tr class="success report-totals total_table2">
+          <td class="cola"><strong>Total</strong></td>
+          <td class="colb"><strong><asp:Label ID="lblSumHitLinkVisitor" runat="server" /></strong></td>
+          <td class="colc"><strong><asp:Label ID="lblSumTotalOrder" runat="server" /></strong></td>
+          <td class="cold"><strong><asp:Label ID="lblSumTotalConversion" runat="server" /></strong></td>
+          <td class="colf"><strong><asp:Label ID="lblSumTotalRev" runat="server" /></strong></td>
+      </tr>
+      <tr>
+          <td colspan="5">&nbsp;</td>
       </tr>
       </table>
   </FooterTemplate>
