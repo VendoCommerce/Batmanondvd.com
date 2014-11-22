@@ -22,7 +22,7 @@ namespace CSWeb.Admin
     public partial class SIdReport : BasePage
     {
         public Hashtable HitLinkVisitor = new Hashtable();
-        public decimal CategoryUniqueVistiors = 0, totalRevenue=0;
+        public decimal CategoryUniqueVistiors = 0, totalRevenue = 0;
         public int totalOrders = 0;
         public static string siteName = string.Empty;
         public static string siteUrl = string.Empty;
@@ -81,16 +81,17 @@ namespace CSWeb.Admin
             DateTime? timezoneStartDate = rangeDateControlCriteria.StartDateValueLocal;
             DateTime? timezoneEndDate = rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1);
             //Passsing custom field value as 1000 which is combination of mid and sid. Special case for dermwand.com only
-            List<ReportFields> ItemList = new OrderManager().GetOrderCustomFieldReport(timezoneStartDate, timezoneEndDate, 1,  false);
+            List<ReportFields> ItemList = new OrderManager().GetOrderCustomFieldReport(timezoneStartDate, timezoneEndDate, 1, false);
 
             Data rptData = new ReportWSSoapClient().GetDataFromTimeframe(hitsLinkUserName, hitsLinkPassword, ReportsEnum.eCommerceActivitySummary, TimeFrameEnum.Daily, Convert.ToDateTime(startDate), Convert.ToDateTime(endDate), 100000000, 0, 0);
             for (int i = 0; i <= rptData.Rows.GetUpperBound(0); i++)
             {
-                HitLinkVisitor.Add(rptData.Rows[i].Columns[0].Value.ToLower(), rptData.Rows[i].Columns[7].Value);
+                HitLinkVisitor.Add(rptData.Rows[i].Columns[0].Value.ToLower(), rptData.Rows[i].Columns[3].Value);
             }
 
             List<string> keysAdded = new List<string>();
             //Update Version List information            
+
             foreach (ReportFields item in ItemList)
             {
                 if (HitLinkVisitor.ContainsKey(item.Title))
@@ -98,6 +99,7 @@ namespace CSWeb.Admin
                     keysAdded.Add(item.Title);
 
                     decimal visitor = Convert.ToDecimal(HitLinkVisitor[item.Title].ToString());
+
                     visitor = Math.Abs(visitor);
                     item.UniqueVisitors = visitor;
                     if (visitor > 0)
@@ -111,6 +113,10 @@ namespace CSWeb.Admin
                         item.UniqueVisitors = 0;
                         item.Conversion = 0;
                         item.RevenuePerVisit = 0;
+                    }
+                    if (item.Title.ToUpper() == "NON-CAMPAIGN")
+                    {
+                        item.Title = "DIRECT TRAFFIC";
                     }
                 }
                 else
@@ -136,11 +142,26 @@ namespace CSWeb.Admin
                     item.Title = key;
                     decimal visitor = Convert.ToDecimal(HitLinkVisitor[item.Title].ToString());
                     visitor = Math.Abs(visitor);
-                    item.UniqueVisitors = visitor;
-                    item.Conversion = 0;
-                    item.RevenuePerVisit = 0;
+                    if (item.Title.ToUpper() == "NON-CAMPAIGN")
+                    {
+                        item.Title = "DIRECT TRAFFIC";
+                        ReportFields dtField = ItemList.First(x => x.Title.ToUpper() == "NON-CAMPAIGN");
 
-                    ItemList.Add(item);
+                        if (visitor > 0)
+                        {
+                            item.UniqueVisitors = visitor;
+
+                            item.Conversion = Math.Round((Convert.ToDecimal(dtField.TotalOrders) * 100) / visitor, 1);
+                            item.RevenuePerVisit = Convert.ToDecimal(dtField.TotalRevenue) / visitor;
+                        }
+                    }
+                    else
+                    {
+                        item.UniqueVisitors = visitor;
+                        item.Conversion = 0;
+                        item.RevenuePerVisit = 0;
+                        ItemList.Add(item);
+                    }
                 }
             }
 
@@ -172,18 +193,18 @@ namespace CSWeb.Admin
                 Label lblTotalOrder = e.Item.FindControl("lblTotalOrder") as Label;
                 Label lblTotalRev = e.Item.FindControl("lblTotalRev") as Label;
                 Label lbHitLinkVisitor = e.Item.FindControl("lbHitLinkVisitor") as Label;
-                Label lblConversion = e.Item.FindControl("lblConversion") as Label;             
+                Label lblConversion = e.Item.FindControl("lblConversion") as Label;
 
                 ReportFields item = e.Item.DataItem as ReportFields;
 
                 lblTitle.Text = item.Title.ToUpper();
-                if (lblTitle.Text == "display_mob") lblTitle.Text = "display_mobile";
-                if (lblTitle.Text == "display_tab") lblTitle.Text = "display_tablet";
-                if (lblTitle.Text == "display") lblTitle.Text = "display_desktop";
+                if (lblTitle.Text.ToLower() == "display_mob") lblTitle.Text = "DISPLAY_MOBILE";
+                if (lblTitle.Text.ToLower() == "display_tab") lblTitle.Text = "DISPLAY_TABLET";
+                if (lblTitle.Text.ToLower() == "display") lblTitle.Text = "DISPLAY_DESKTOP";
 
                 lblTotalOrder.Text = item.TotalOrders.ToString();
-                if( item.UniqueVisitors >0)
-                     lbHitLinkVisitor.Text = string.Format("{0:##,##}", item.UniqueVisitors);
+                if (item.UniqueVisitors > 0)
+                    lbHitLinkVisitor.Text = string.Format("{0:##,##}", item.UniqueVisitors);
                 else
                     lbHitLinkVisitor.Text = "0";
 
@@ -193,7 +214,7 @@ namespace CSWeb.Admin
 
                 CategoryUniqueVistiors += item.UniqueVisitors;
                 totalOrders += item.TotalOrders;
-                totalRevenue +=  item.TotalRevenue;
+                totalRevenue += item.TotalRevenue;
 
             }
 
@@ -204,21 +225,21 @@ namespace CSWeb.Admin
                 Label lblSumHitLinkVisitor = e.Item.FindControl("lblSumHitLinkVisitor") as Label;
                 Label lblSumTotalConversion = e.Item.FindControl("lblSumTotalConversion") as Label;
 
-                    
-                    if (CategoryUniqueVistiors > 0)
-                    {
-                        lblSumTotalConversion.Text = String.Format("{0}", Math.Round((totalOrders * 100) / CategoryUniqueVistiors, 2));
-                        lblSumHitLinkVisitor.Text = string.Format("{0:##,##}", CategoryUniqueVistiors);
-                    }
-                    else
-                    {
-                        lblSumTotalConversion.Text = "0";
-                        lblSumHitLinkVisitor.Text = "0";
-                    }
 
-                    lblSumTotalOrder.Text = totalOrders.ToString();
-                    lblSumTotalRev.Text = String.Format("{0:C}", totalRevenue);
-           
+                if (CategoryUniqueVistiors > 0)
+                {
+                    lblSumTotalConversion.Text = String.Format("{0}", Math.Round((totalOrders * 100) / CategoryUniqueVistiors, 2));
+                    lblSumHitLinkVisitor.Text = string.Format("{0:##,##}", CategoryUniqueVistiors);
+                }
+                else
+                {
+                    lblSumTotalConversion.Text = "0";
+                    lblSumHitLinkVisitor.Text = "0";
+                }
+
+                lblSumTotalOrder.Text = totalOrders.ToString();
+                lblSumTotalRev.Text = String.Format("{0:C}", totalRevenue);
+
             }
 
 
