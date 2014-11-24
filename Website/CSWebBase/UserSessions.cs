@@ -106,7 +106,7 @@ namespace CSWeb
             //TODO: Also account for DISPLAY and ORGANIC
             if (context.Request.QueryString["SID"] != null && context.Request.QueryString["SID"].Length > 0)
             {
-                if (context.Request.QueryString["SID"] == "DISPLAY")
+                if (context.Request.QueryString["SID"].Contains("DISPLAY"))
                     return "DISPLAY";
                 else
                     return "SEM";
