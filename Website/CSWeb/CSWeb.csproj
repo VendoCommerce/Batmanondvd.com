@@ -223,6 +223,7 @@
     <Content Include="CSSecureSite\img\loading.gifs\loading12%402x.gif" />
     <Content Include="CSSecureSite\img\loading.gifs\loading12.gif" />
     <Content Include="CSSecureSite\img\login_bg.png" />
+    <Content Include="CSSecureSite\img\Logo%402x.png" />
     <Content Include="CSSecureSite\img\Logo.jpg" />
     <Content Include="CSSecureSite\img\Logo.png" />
     <Content Include="CSSecureSite\img\logo_top_airocide.png" />
