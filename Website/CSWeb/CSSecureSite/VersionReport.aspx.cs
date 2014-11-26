@@ -61,7 +61,7 @@ namespace CSWeb.Admin
             {
                 this.BaseLoad();
                 liHeader.Text = DateTime.Now.ToString("MMMM") + " " + DateTime.Now.Day.ToString() + ", " + DateTime.Now.Year.ToString();
-                liSubHeader.Text = DateTime.Now.DayOfWeek + " " + DateTime.Now.ToShortTimeString() + " (PST)";
+                liSubHeader.Text = DateTime.Now.DayOfWeek + " " + DateTime.Now.AddHours(3).ToShortTimeString() + " (EST)";
 
                 if (Session["FilterFromDate"] != null && Session["FilterToDate"] != null)
                 {
@@ -83,8 +83,8 @@ namespace CSWeb.Admin
         protected void BindData(DateTime? startDate, DateTime? endDate)
         {
 
-            DateTime? timezoneStartDate = rangeDateControlCriteria.StartDateValueLocal;
-            DateTime? timezoneEndDate = rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1);
+            DateTime? timezoneStartDate =DateTimeUtil.GetEastCoastStartDate( rangeDateControlCriteria.StartDateValueLocal);
+            DateTime? timezoneEndDate =DateTimeUtil.GetEastCoastDate( rangeDateControlCriteria.EndDateValueLocal.Value);
             dtCollectionList = new OrderManager().GetVersionSummary(timezoneStartDate, timezoneEndDate, false);
 
             Data rptData = new ReportWSSoapClient().GetDataFromTimeframe(hitsLinkUserName, hitsLinkPassword, ReportsEnum.MultiVariate, TimeFrameEnum.Daily, Convert.ToDateTime(startDate), Convert.ToDateTime(endDate), 100000000, 0, 0);

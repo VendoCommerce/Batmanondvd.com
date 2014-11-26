@@ -32,7 +32,7 @@ namespace CSWeb.Admin
             {
                 this.BaseLoad();
                 liHeader.Text = DateTime.Now.ToString("MMMM") + " " + DateTime.Now.Day.ToString() + ", " + DateTime.Now.Year.ToString();
-                liSubHeader.Text = DateTime.Now.DayOfWeek + " " + DateTime.Now.ToShortTimeString() + " (PST)";
+                liSubHeader.Text = DateTime.Now.DayOfWeek + " " + DateTime.Now.AddHours(3).ToShortTimeString() + " (EST)";
 
                 ddlVersion.DataSource = CSFactory.GetAllVersion().FindAll(x => x.Visible == true);
                 ddlVersion.DataTextField = "Title";
@@ -98,10 +98,13 @@ namespace CSWeb.Admin
         private void BindData(DateTime? dte1, DateTime? dte2, int versionId, int pathId)
         {
 
+            DateTime? timezoneStartDate = DateTimeUtil.GetEastCoastStartDate(dte1);
+            DateTime? timezoneEndDate = DateTimeUtil.GetEastCoastDate(dte2);
+
             List<Triplet<string, string, string>> itemList = new List<Triplet<string, string, string>>();
 
 
-            using (SqlDataReader drResult = new OrderManager().GetOrderSummary(dte1, dte2, versionId, pathId))
+            using (SqlDataReader drResult = new OrderManager().GetOrderSummary(timezoneStartDate, timezoneEndDate, versionId, pathId))
             {
 
                 while (drResult.Read())
@@ -184,7 +187,7 @@ namespace CSWeb.Admin
             Session["FilterFromDate"] = rangeDateControlCriteria.StartDateValueLocal.Value.ToShortDateString();
             Session["FilterToDate"] = rangeDateControlCriteria.EndDateValueLocal.Value.ToShortDateString();
 
-            BindData(rangeDateControlCriteria.StartDateValueLocal, rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1), Convert.ToInt32(ddlVersion.SelectedValue), 0);
+            BindData(rangeDateControlCriteria.StartDateValueLocal, rangeDateControlCriteria.EndDateValueLocal.Value, Convert.ToInt32(ddlVersion.SelectedValue), 0);
 
         }
         public void BindSettings()
