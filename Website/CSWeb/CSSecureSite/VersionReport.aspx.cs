@@ -218,7 +218,7 @@ namespace CSWeb.Admin
 
                 if (TotalCategoryUniqueVistiors > 0)
                 {
-                    lblTotalSumTotalConversion.Text = String.Format("{0}%", Math.Round((TotalOrders * 100) / TotalCategoryUniqueVistiors, 1));
+                    lblTotalSumTotalConversion.Text = String.Format("{0}%", Math.Round((TotalOrders * 100) / TotalCategoryUniqueVistiors, 2));
                     lblTotalSumRevenuePerClick.Text = String.Format("{0:C}", Math.Round(TotalRevenue / TotalCategoryUniqueVistiors, 2));
                 }
                 else
@@ -263,7 +263,7 @@ namespace CSWeb.Admin
                     lbHitLinkVisitor.Text = "0";
 
 
-                lblConversion.Text = String.Format("{0}%", item.Conversion);
+                lblConversion.Text = String.Format("{0}%", Math.Round(item.Conversion,2));
                 lblRevenuePerVisit.Text = String.Format("{0:C}", item.RevenuePerVisit);
                 lblAvgOrder.Text = String.Format("{0:C}", item.AverageOrder);
                 lblTotalRev.Text = String.Format("{0:C}", item.TotalRevenue);
@@ -296,7 +296,7 @@ namespace CSWeb.Admin
                     {
                         lblSumHitLinkVisitor.Text = string.Format("{0:##,##}", CategoryUniqueVistiors);
 
-                        lblSumTotalConversion.Text = String.Format("{0}%", Math.Round((foundItem.TotalOrders * 100) / CategoryUniqueVistiors, 1));
+                        lblSumTotalConversion.Text = String.Format("{0}%", Math.Round((foundItem.TotalOrders * 100) / CategoryUniqueVistiors, 2));
                         lblSumRevenuePerClick.Text = String.Format("{0:C}", Math.Round(foundItem.TotalRevenue / CategoryUniqueVistiors, 2));
                     }
                     else
