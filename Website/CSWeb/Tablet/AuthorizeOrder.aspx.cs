@@ -72,6 +72,7 @@ namespace CSWeb.Tablet.Store
                     if (orderData.CreditInfo.CreditCardNumber.Equals(word))
                     {
                         CSResolve.Resolve<IOrderService>().UpdateOrderStatus(orderData.OrderId, 7);
+                        UserSessions.InsertSessionEntry(HttpContext.Current, false, 0, 0, orderId);
                         // This will avoid order from getting posted to OMX for test orders
                         Session["OrderStatus"] = "Receipt";
                         Response.Redirect("receipt.aspx");

@@ -25,30 +25,30 @@ namespace CSWeb
             return strIpAddress;
         }
 
-        public static string GetSessionId(HttpContext context)
-        {
-            string sessionId = String.Empty;
-            string DailyCookie = String.Empty;
-            if (context.Request.Cookies["DailyCookie"] != null)
-            {
-                DailyCookie = context.Request.Cookies["DailyCookie"].Value;
-            }
-            else
-            {
-                if (context.Request.Cookies["ASP.NET_SessionId"] != null)
-                {
-                    DailyCookie = context.Request.Cookies["ASP.NET_SessionId"].Value;
-                }
-                HttpCookie DailyCookieID = new HttpCookie("DailyCookie");
-                DateTime date = DateTime.Now;
-                DailyCookieID.Expires = EndOfDay(date);
-                DailyCookieID.Value = DailyCookie;
-                DailyCookieID.Domain = context.Request.Url.Host.ToString().Replace("www.", "");
-                context.Response.Cookies.Add(DailyCookieID);
-            }
-            sessionId = DailyCookie;
-            return sessionId;
-        }
+        //public static string GetSessionId(HttpContext context)
+        //{
+        //    string sessionId = String.Empty;
+        //    string DailyCookie = String.Empty;
+        //    if (context.Request.Cookies["DailyCookie"] != null)
+        //    {
+        //        DailyCookie = context.Request.Cookies["DailyCookie"].Value;
+        //    }
+        //    else
+        //    {
+        //        if (context.Request.Cookies["ASP.NET_SessionId"] != null)
+        //        {
+        //            DailyCookie = context.Request.Cookies["ASP.NET_SessionId"].Value;
+        //        }
+        //        HttpCookie DailyCookieID = new HttpCookie("DailyCookie");
+        //        DateTime date = DateTime.Now;
+        //        DailyCookieID.Expires = EndOfDay(date);
+        //        DailyCookieID.Value = DailyCookie;
+        //        DailyCookieID.Domain = context.Request.Url.Host.ToString().Replace("www.", "");
+        //        context.Response.Cookies.Add(DailyCookieID);
+        //    }
+        //    sessionId = DailyCookie;
+        //    return sessionId;
+        //}
 
         public static DateTime EndOfDay(DateTime date)
         {
@@ -151,7 +151,7 @@ namespace CSWeb
 
                 if (context != null)
                 {
-                    sessionId = GetSessionId(context);
+                    sessionId = context.Session.SessionID;// GetSessionId(context);
                     ipAddress = GetIpAddress(context);
                     trafficSource = GetTrafficSource(context);
                     deviceType = GetDeviceType(context);

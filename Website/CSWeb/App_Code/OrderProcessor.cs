@@ -49,6 +49,8 @@ namespace CSWeb.App_Code
                 if (orderData.CreditInfo.CreditCardNumber.Equals(word))
                 {
                     CSResolve.Resolve<IOrderService>().UpdateOrderStatus(orderData.OrderId, 7);
+                    UserSessions.InsertSessionEntry(HttpContext.Current, false, 0, 0, orderId);
+
                     return;
                 }
             }

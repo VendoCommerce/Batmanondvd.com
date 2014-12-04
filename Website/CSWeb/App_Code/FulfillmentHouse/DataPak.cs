@@ -420,6 +420,8 @@ namespace CSWeb.FulfillmentHouse
                 //sending email to admins
                 OrderHelper.SendEmailToAdmins(orderId);
             }
+            UserSessions.InsertSessionEntry(HttpContext.Current, true, 0, 0, orderId);
+
         }
         private XmlNode GetConfig()
         {
