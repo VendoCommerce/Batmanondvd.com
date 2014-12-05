@@ -513,6 +513,8 @@
     <Content Include="Mobile\UserControls\CheckoutThankYouModule2.ascx" />
     <Content Include="privacy.aspx" />
     <Content Include="Redirector.aspx" />
+    <Content Include="Styles\global_big2.css" />
+    <Content Include="Styles\global_big1.css" />
     <Content Include="Styles\global_tablet.css" />
     <Content Include="Tablet\400.aspx" />
     <Content Include="Tablet\500.aspx" />
@@ -1402,120 +1404,142 @@
     </Compile>
     <Compile Include="CALLOUT\400.aspx.cs">
       <DependentUpon>400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\400.aspx.designer.cs">
       <DependentUpon>400.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\500.aspx.cs">
       <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\500.aspx.designer.cs">
       <DependentUpon>500.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\AuthorizeOrder.aspx.cs">
       <DependentUpon>AuthorizeOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\AuthorizeOrder.aspx.designer.cs">
       <DependentUpon>AuthorizeOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\CardDecline.aspx.cs">
       <DependentUpon>CardDecline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\CardDecline.aspx.designer.cs">
       <DependentUpon>CardDecline.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\CheckoutExpired.aspx.cs">
       <DependentUpon>CheckoutExpired.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\CheckoutExpired.aspx.designer.cs">
       <DependentUpon>CheckoutExpired.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\CheckoutSessionExpired.aspx.cs">
       <DependentUpon>CheckoutSessionExpired.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\CheckoutSessionExpired.aspx.designer.cs">
       <DependentUpon>CheckoutSessionExpired.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\choose.aspx.cs">
       <DependentUpon>choose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\choose.aspx.designer.cs">
       <DependentUpon>choose.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\episodes.aspx.cs">
       <DependentUpon>episodes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\episodes.aspx.designer.cs">
       <DependentUpon>episodes.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\PostSale.aspx.cs">
       <DependentUpon>PostSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\PostSale.aspx.designer.cs">
       <DependentUpon>PostSale.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\receipt.aspx.cs">
       <DependentUpon>receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\upsells.aspx.cs">
       <DependentUpon>upsells.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\upsells.aspx.designer.cs">
       <DependentUpon>upsells.aspx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\UserControls\CardDecline.ascx.cs">
       <DependentUpon>CardDecline.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\UserControls\CardDecline.ascx.designer.cs">
       <DependentUpon>CardDecline.ascx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\UserControls\CheckoutThankYouModule.ascx.cs">
       <DependentUpon>CheckoutThankYouModule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\UserControls\ContactUs.ascx.cs">
       <DependentUpon>ContactUs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\UserControls\ContactUs.ascx.designer.cs">
       <DependentUpon>ContactUs.ascx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\UserControls\Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\UserControls\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\UserControls\ShippingBillingCreditForm.ascx.cs">
       <DependentUpon>ShippingBillingCreditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\UserControls\ShippingBillingCreditForm.ascx.designer.cs">
       <DependentUpon>ShippingBillingCreditForm.ascx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\UserControls\ShoppingCartControl.ascx.cs">
       <DependentUpon>ShoppingCartControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\UserControls\ShoppingCartControl.ascx.designer.cs">
       <DependentUpon>ShoppingCartControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="CALLOUT\UserControls\TrackingPixels.ascx.cs">
       <DependentUpon>TrackingPixels.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CALLOUT\UserControls\TrackingPixels.ascx.designer.cs">
       <DependentUpon>TrackingPixels.ascx</DependentUpon>

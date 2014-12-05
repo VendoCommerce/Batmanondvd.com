@@ -309,13 +309,13 @@ advantage of this special offer?
 
     <!-- UPSELL - rush shipping with radio buttons -->
         <div class="page_upsell">
-            
+            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/starburst_rush_holiday.png" width="226" height="193" alt="Get It in Time for the Holidays!" style="position: absolute; top: 170px; left: 400px; z-index: 100;" class="block" />  
             <div>
                 <h2 class="f47">Can’t wait for the Campy 
                     Comic Fun! 
                     Get Rush Shipping now!</h2>
 
-                <p class="f26" style="line-height: 36px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_rush_shipping.png" width="268" height="275" alt="" class="fright" style="margin-bottom: 25px; margin-left: 25px;" />Choose Rush Shipping today to start reliving your favorite moments now. The sooner it arrives, the sooner you can watch Julie Newmar in her Purrfect Cat Suit, or Adam West play out his iconic role. Simply choose rush shipping and be one step closer to digitally remastered Batman Perfection. </p>
+                <p class="f26" style="line-height: 36px;"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/upsell_rush_shipping.png" width="268" height="275" alt="" class="fright" style="margin-top: 140px; margin-bottom: 25px; margin-left: 25px;" />Choose Rush Shipping today to start reliving your favorite moments now. The sooner it arrives, the sooner you can watch Julie Newmar in her Purrfect Cat Suit, or Adam West play out his iconic role. Simply choose rush shipping and be one step closer to digitally remastered Batman Perfection. </p>
 
                 <p class="ask f43">Would you like to <br />receive your order faster?</p>
 
