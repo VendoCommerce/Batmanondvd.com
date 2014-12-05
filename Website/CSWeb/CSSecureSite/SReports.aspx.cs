@@ -59,7 +59,7 @@ namespace CSWeb.Admin
 
                 }
 
-                BindData(rangeDateControlCriteria.StartDateValueLocal, rangeDateControlCriteria.EndDateValueLocal.Value.AddDays(1), 0, 0);
+                BindData(rangeDateControlCriteria.StartDateValueLocal, rangeDateControlCriteria.EndDateValueLocal.Value, 0, 0);
             }
         }
 
