@@ -12,11 +12,12 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big3.css" rel="stylesheet" type="text/css" />
 
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+<div class="container_wrap">
 <!--#include file="popups.html"-->
 <!--#include file="header500.html"-->
 
@@ -45,5 +46,5 @@
 
 
 <!--#include file="footer.html"-->
-
+</div>
   </asp:Content>

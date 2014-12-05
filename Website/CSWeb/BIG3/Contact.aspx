@@ -23,9 +23,10 @@
 <script src="/Scripts/jquery.cycle2.carousel.min.js"></script>
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big3.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<div class="container_wrap">
 <!--#include file="popups.html"-->
 <!--#include file="header.html"-->
 
@@ -76,6 +77,7 @@
 
 
 <!--#include file="footer.html"-->
+</div>
     <uc:TrackingPixels runat="server" ID="TrackingPixels" />
 </body>
 </html>

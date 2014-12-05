@@ -20,11 +20,12 @@
 <script src="/Scripts/jquery.cycle2.carousel.min.js"></script>
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big3.css" rel="stylesheet" type="text/css" />
 <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 </head>
 <body id="clips">
 <form id="form1" runat="server">
+<div class="container_wrap">
 <!--#include file="popups.html"-->
 <!--#include file="header.html"-->
 
@@ -117,6 +118,7 @@
 
 
 <!--#include file="footer.html"-->
+</div>
     <uc1:TrackingPixels runat="server" ID="TrackingPixels" />
 </form>
 </body>

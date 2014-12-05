@@ -17,10 +17,10 @@
 <script type="text/javascript">jwplayer.key="JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
 <script src="/Scripts/NoBack.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big3.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="cart">
-
+<div class="container_wrap">
   <!--#include file="header_cart.html"-->
 
   <div class="container_cart">
@@ -28,7 +28,7 @@
   </div>
 
   <!--#include file="footer.html"-->
-
+</div>
   <uc:TrackingPixels ID="TrackingPixels" runat="server" />
 </body>
 </html>

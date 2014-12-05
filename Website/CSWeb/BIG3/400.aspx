@@ -13,10 +13,11 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big3.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <form id="form1" runat="server">
+<div class="container_wrap">
 <!--#include file="popups.html"-->
 <!--#include file="header.html"-->
 
@@ -38,6 +39,7 @@
 
 
 <!--#include file="footer.html"-->
+</div>
 </form>
 </body>
 </html>
