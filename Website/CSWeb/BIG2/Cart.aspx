@@ -15,7 +15,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key="JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big2.css" rel="stylesheet" type="text/css" />
 </head>
 
  
@@ -37,7 +37,7 @@
         <!-- end loader front end -->
 
 <!--#include file="header_cart.html"-->
-<div class="container_cart">
+<div class="container_cart" style="padding: 40px 0 40px 40px;">
     <uc:ShippingBillingCreditForm ID="bscfShippingBillingCreditForm" runat="server" RedirectUrl="Store/AddProduct.aspx" />
 </div>
 

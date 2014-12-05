@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CSWeb.Display.index" EnableSessionState="True" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CSWeb.BIG2.index" EnableSessionState="True" %>
 
 <%@ Register Src="UserControls/TrackingPixels.ascx" TagPrefix="uc1" TagName="TrackingPixels" %>
 
@@ -18,7 +18,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big2.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <form id="form1" runat="server">
@@ -27,14 +27,12 @@
 
 <div class="container">
     <div class="clearfix">
-        <div class="content_logo"><a href="index.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr">
             <h2 class="f37 pad12 scored">A Cast of Characters</h2>
             <h2 class="f35">Diabolical Foes Are No Match for This Duo! <br />Delight in the Great Capers and Fabulous Foibles.</h2>
-            <h3 style="padding-right: 10px;">From the raucous Riddler, to the persuasive Penguin, to the calculating Catwoman, watch as they attempt to confound our Caped Crusaders. Now completely remastered, all of the originality, crime fighting action, and arch-villainy but perfectly pixilated on DVD like never before. &nbsp;<a href="choose.aspx" class="webfont1bold">Get it now!<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></h3>
+            <h3 style="padding-right: 10px;">From the raucous Riddler, to the persuasive Penguin, to the calculating Catwoman, watch as they attempt to confound our Caped Crusaders. Now completely remastered, all of the originality, crime fighting action, and arch-villainy but perfectly pixilated on DVD like never before. &nbsp;<a href="choose.aspx" class="webfont1bold red">Get it now!<span style="display: inline-block; text-decoration: none;"> &nbsp;›</span></a></h3>
         </div>
     </div>
-    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/skyline.png" alt="" class="block" />
     <div class="cast clearfix">
         <div class="cast_member">
             <img src="//d1kg9stb0ddjcv.cloudfront.net/images/cast_batman.jpg" width="275" height="208" alt="Batman" class="block" />

@@ -18,7 +18,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <form id="form1" runat="server">
@@ -33,7 +33,7 @@
         </div>
     </div>
     
-    <div style="padding: 16px 66px 30px 66px;">
+    <div style="padding: 16px 66px 30px 44px;">
         <p>Welcome to a Warner Bros. Entertainment Group Web site (the "Site"). Thank you for visiting and have a great time!</p>
         
         <!-- from warnerbros.com/term-use -->
@@ -133,9 +133,9 @@ Warner seeks to preserve any and all exemptions from liability that may be avail
     </div>
 
 
-    <!--#include file="bottomcta.html"-->
+    
 </div>
-
+<!--#include file="bottomcta.html"-->
 
 <!--#include file="footer.html"-->
 

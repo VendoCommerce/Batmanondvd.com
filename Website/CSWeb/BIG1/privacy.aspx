@@ -18,7 +18,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <form id="form1" runat="server">
@@ -35,7 +35,7 @@
         </div>
     </div>
     
-    <div style="padding: 16px 66px 30px 66px;">
+    <div style="padding: 16px 66px 30px 44px;">
 
         <!-- from warnerbros.com/privacy-center-wb-privacy-policy -->
 
@@ -203,9 +203,9 @@ If you have any questions or concerns about this Privacy Policy or its implement
     </div>
 
 
-    <!--#include file="bottomcta.html"-->
+    
 </div>
-
+<!--#include file="bottomcta.html"-->
 
 <!--#include file="footer.html"-->
 

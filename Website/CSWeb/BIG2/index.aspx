@@ -22,7 +22,7 @@
 <link href="/styles/global_big2.css" rel="stylesheet" type="text/css" />
 <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 </head>
-<body>
+<body id="home">
 <form id="form1" runat="server">
 <!--#include file="popups.html"-->
 <!--#include file="header.html"-->

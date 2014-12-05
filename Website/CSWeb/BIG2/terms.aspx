@@ -18,7 +18,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big2.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <form id="form1" runat="server">
@@ -27,13 +27,12 @@
 
 <div class="container">
     <div class="clearfix">
-        <div class="content_logo"><a href="index.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr">
             <h2>Terms of Use</h2>
         </div>
     </div>
     
-    <div style="padding: 16px 66px 30px 66px;">
+    <div style="padding: 16px 66px 30px 42px;">
         <p>Welcome to a Warner Bros. Entertainment Group Web site (the "Site"). Thank you for visiting and have a great time!</p>
         
         <!-- from warnerbros.com/term-use -->

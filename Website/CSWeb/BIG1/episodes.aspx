@@ -18,7 +18,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <form id="form1" runat="server">
@@ -369,7 +369,7 @@
         </div>
         <!-- END season2 -->
 
-        <!--#include file="bottomcta.html"-->
+        <div style="left: -127px;"><!--#include file="bottomcta.html"--></div>
     </div>
     <!-- END CLASSIC COLLECTION -->
 
@@ -1006,8 +1006,8 @@
         </div>
         <!-- END season3 -->
 
-
-        <!--#include file="bottomcta_complete.html"-->
+        <%-- update this to bottomcta_complete if we get the design for that --%>
+        <div style="left: -127px;"><!--#include file="bottomcta.html"--></div>
     </div>
     <!-- END COMPLETE COLLECTION -->
     

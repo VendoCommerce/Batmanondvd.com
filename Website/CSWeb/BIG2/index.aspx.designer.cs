@@ -7,8 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSWeb.BIG2
-{
+namespace CSWeb.BIG2 {
     
     
     public partial class index {

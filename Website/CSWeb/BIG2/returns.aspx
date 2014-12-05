@@ -18,7 +18,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big2.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <form id="form1" runat="server">
@@ -27,14 +27,13 @@
 
 <div class="container">
     <div class="clearfix">
-        <div class="content_logo"><a href="index.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
         <div class="content_hdr">
             <h2 class="f50">Return Policy</h2>
             <h3>A true crimefighter is prepared for everything!</h3>
         </div>
     </div>
     
-    <div style="padding: 16px 66px 30px 66px;">
+    <div style="padding: 16px 66px 30px 42px;">
         <h4 class="f18 bold pad12">Returns</h4>
         
         <p>At Warner Bros. Home Entertainment (WBHE), our goal is your complete satisfaction. You may return any new item purchased directly from the WBHE Classic Batman Campaign for any reason within 30 days for a full refund. We will gladly refund or credit the product purchase price to your original form of payment. For items purchased from October 20, 2014 to December 16, 2014, returns will be accepted through January 31, 2015.  </p>

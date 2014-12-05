@@ -20,7 +20,7 @@
 <script src="/Scripts/jquery.cycle2.carousel.min.js"></script>
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1.css" rel="stylesheet" type="text/css" />
 <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 </head>
 <body id="clips">
@@ -31,9 +31,9 @@
 <div class="container">
     <div class="clearfix">
         <div class="content_logo"><a href="index.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/logo.png" width="194" height="156" alt="Batman Classic TV Series" class="block" /></a></div>
-        <div class="content_hdr">
+        <div class="content_hdr" style="width: 800px; margin-bottom: 30px;">
             <h2 class="f42">Check Out Your Favorite Caped Crusaders <br />- Back and Better than Ever!</h2>
-            <h3 style="padding-right: 100px;">Watch Batman and his Boy Wonder engage in hilarious hijinks as they protect the streets of Gotham from abominable archenemies wearing over-the-top costumes that leave us laughing. It’s simply feel good fun!</h3>
+            <h3>Watch Batman and his Boy Wonder engage in hilarious hijinks as they protect the streets of Gotham from abominable archenemies wearing over-the-top costumes that leave us laughing. It’s simply feel good fun!</h3>
         </div>
     </div>
 
@@ -109,12 +109,12 @@
             </div>
         </div>
     </div>
-
+    <div style="height: 50px;"></div>
     
 
-    <!--#include file="bottomcta.html"-->
+    
 </div>
-
+<!--#include file="bottomcta.html"-->
 
 <!--#include file="footer.html"-->
     <uc1:TrackingPixels runat="server" ID="TrackingPixels" />

@@ -15,8 +15,13 @@
 <script type="text/javascript">jwplayer.key="JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
 <script src="/Scripts/NoBack.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
-    </head>
+<link href="/styles/global_big2.css" rel="stylesheet" type="text/css" />
+<script>
+$(document).ready(function () {
+    $('.btns a:nth-child(2) img').attr('src', '//d1kg9stb0ddjcv.cloudfront.net/images/big2/btn_yes.png');
+});
+</script>
+</head>
 <body id="upsells">
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
