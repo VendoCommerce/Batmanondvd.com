@@ -23,7 +23,7 @@
 <script src="/Scripts/jquery.cycle2.carousel.min.js"></script>
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1callout.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--#include file="popups.html"-->
@@ -41,7 +41,7 @@
 
 
         
-    <div style="padding: 16px 40px 30px 66px;">
+    <div style="padding: 16px 40px 100px 66px;">
 
         <p class="f20"><strong>To order, call:</strong> 1 (800) 435-8372</p>
 
@@ -69,9 +69,9 @@
             <div class="clear"></div>
 
 
-   <!--#include file="bottomcta.html"-->
+   
 </div>
-
+<!--#include file="bottomcta.html"-->
 
 
 

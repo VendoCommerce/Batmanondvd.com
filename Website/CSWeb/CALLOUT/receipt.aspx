@@ -17,11 +17,11 @@
 <script type="text/javascript">jwplayer.key="JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
 <script src="/Scripts/NoBack.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1callout.css" rel="stylesheet" type="text/css" />
 </head>
-<body id="cart">
+<body id="receipt">
 
-  <!--#include file="header_cart.html"-->
+  <!--#include file="header.html"-->
 
   <div class="container_cart">
      <uc1:Form ID="Form1" runat="server" />

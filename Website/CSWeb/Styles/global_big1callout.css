@@ -427,7 +427,7 @@ p {padding-bottom: 20px;}
 }
 
 .home1 {
-    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/big1/home1.jpg) no-repeat 0 0;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/callout/home1.jpg) no-repeat 0 0;
     width: 1213px;
     height: 532px;
     padding: 44px 0 0 146px;
@@ -445,10 +445,10 @@ p {padding-bottom: 20px;}
 
 .home1includedlink {
     position: absolute;
-    top: 312px;
-    left: 500px;
-    width: 80px;
-    height: 23px;
+    top: 300px;
+    left: 604px;
+    width: 84px;
+    height: 27px;
     display: block;
 }
 
@@ -516,7 +516,7 @@ p {padding-bottom: 20px;}
 .home2_left {
     float: left;
     width: 638px;
-    padding: 38px 70px 0 174px;
+    padding: 8px 70px 0 174px;
 }
 .home2_right {
     float: left;
@@ -551,7 +551,7 @@ p {padding-bottom: 20px;}
 
 
 .home3 {
-    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/big1/home3.jpg) no-repeat 0 0;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/callout/home3.jpg) no-repeat 0 0;
     min-height: 539px;
     padding: 35px 155px 0 686px;
 }

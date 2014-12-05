@@ -7,8 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSWeb.CALLOUT
-{
+namespace CSWeb.CALLOUT {
     
     
     public partial class index {

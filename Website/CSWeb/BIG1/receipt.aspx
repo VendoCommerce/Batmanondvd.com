@@ -19,7 +19,7 @@
 <script src="/Scripts/NoBack.js"></script>
 <link href="/styles/global_big1.css" rel="stylesheet" type="text/css" />
 </head>
-<body id="cart">
+<body id="receipt">
 
   <!--#include file="header.html"-->
 
