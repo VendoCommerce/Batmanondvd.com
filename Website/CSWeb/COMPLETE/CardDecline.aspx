@@ -15,12 +15,12 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key="JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big2complete.css" rel="stylesheet" type="text/css" />
     </head>
 <body id="cart">
     <form id="form1" runat="server">
 <!--#include file="header_cart.html"-->
-<div class="container_cart">
+<div class="container_cart" style="padding: 40px 0 40px 40px;">
         <uc1:Form id="ucCardDecline" runat="server" />
 </div>
 

@@ -17,13 +17,13 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big2complete.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="cart">
     <form id="form1" runat="server">
     <!--#include file="popups.html"-->
     <!--#include file="header_cart.html"-->
-        <div class="container_cart">
+        <div class="container_cart" style="padding: 24px 0 24px 22px;">
             <h2>Holy Gadget Choices Batman!</h2>
             <h3 class="pad20">Which Collection Is For You?</h3>
 
@@ -40,11 +40,11 @@
                     </p>
                     <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold blue">FREE SHIPPING & HANDLING!</span></p>
                     <p class="text-center pad12">
-                        <asp:LinkButton ID="lbComplete" runat="server" OnClick="lbComplete_Click"><img class="prod_continue" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_continue.png" /></asp:LinkButton>
+                        <asp:LinkButton ID="lbComplete" runat="server" OnClick="lbComplete_Click"  CssClass="iblock btn_shadow_1"><img class="prod_continue block" src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/btn_continue.png" alt="Continue" /></asp:LinkButton>
                     </p>
                 </div>
                 
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_1.png" alt="" class="block" style="margin-bottom: 10px;" />
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_1.png" alt="" class="block" style="margin-top: 12px; margin-bottom: 10px;" />
                 <div class="choose_content">
                     
                     <p class="f16 lh22 pad0" style="height: 78px;">Your 12 DVD Classic Collection Features <br />
@@ -71,12 +71,12 @@
 
             <div class="chooseprod" style="margin: 0;">
                 <div class="text-center">
-                    <h2 class="pad20"><span class="green">Complete</span> Classic Batman Collection</h2>
+                    <h2 class="pad20"><span class="red">Complete</span> Classic Batman Collection</h2>
                     
                     <p class="text-center f16 pad6">Order Options</p>
                     
                     <div>
-                        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/flag_bestvalue.png" alt="Best Value" style="position:absolute;
+                        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/flag_bestvalue.png" alt="Best Value" style="position:absolute;
 top: 0; left: -25px;" />
                         <p class="text-center pad12">
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
@@ -89,12 +89,12 @@ top: 0; left: -25px;" />
                     </div>
                     <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold blue">FREE SHIPPING & HANDLING!</span></p>
                     <p class="text-center pad12">
-                        <asp:LinkButton ID="lbSimple" runat="server" OnClick="lbSimple_Click"><img class="prod_continue" src="//d1kg9stb0ddjcv.cloudfront.net/images/btn_continue.png" /></asp:LinkButton>
+                        <asp:LinkButton ID="lbSimple" runat="server" OnClick="lbSimple_Click"  CssClass="iblock btn_shadow_1"><img class="prod_continue block" src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/btn_continue.png" alt="Continue" /></asp:LinkButton>
                     </p>
                 </div>
                 
-                <div class="bg_greengradient">
-                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/prod_choose_2.png" alt="" class="block" style="margin-bottom: 10px;" />
+                <div class="bg_lavendergradient">
+                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/prod_choose_2.png" alt="" class="block" style="margin-bottom: 30px;" />
                     <div class="choose_content" style="padding-bottom: 14px;">
                         <p class="f16 pad0" style="height: 78px;">Your Complete Collection Features Over 50 HOURS OF ENTERTAINMENT and comes in a Classic Collector’s Box for displaying your Collection!</p>
                         <p>INCLUDES:</p>    

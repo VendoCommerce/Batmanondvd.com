@@ -39,7 +39,7 @@
             <ul class="top_promo_list">
                 <li>64 Original Broadcast Episodes   <span class="iblock">– Fully Remastered</span></li>
                 <li>Never-Released Behind The Scenes  Bonus Footage </li>
-                <li>Over 30 Hours of Entertainment  + Bonus Items</li>
+                <li>Over 30 Hours of Entertainment  <span class="iblock">+ Bonus Items</span></li>
                 <li>Includes all your Favorite Villains  and Celebrity Guest Stars!</li>
             </ul>
             <a href="#included_complete" class="included_complete" style="position: absolute; top: 215px; left: 33px; z-index: 30;">
@@ -101,6 +101,8 @@
             <h2 class="f30 pad6">Don’t Wait, Get the Collection Now!</h2>
             <p class="f16 lh20" style="width: 510px;">They protected the streets of Gotham and flew into our collective hearts with their hilarious hijinks, over-the-top costumes and simply feel good fun. What are you waiting for? It’s the Bat Signal! <a href="choose.aspx" class="red unscored bold" style="margin-left: 6px;"><span class="scored">Act Now</span> ›</a></p>
         </div>
+        <a href="#included_complete" class="included_complete" style="position: absolute; top: 337px; left: 290px; z-index: 30;">
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/splash_completeseries.png" width="205" height="112" alt="Complete Series Available on Blu-Ray&trade; &amp; DVD - Learn More" /></a>
     </div>
 
 

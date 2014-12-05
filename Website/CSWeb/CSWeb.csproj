@@ -513,6 +513,7 @@
     <Content Include="Mobile\UserControls\CheckoutThankYouModule2.ascx" />
     <Content Include="privacy.aspx" />
     <Content Include="Redirector.aspx" />
+    <Content Include="Styles\global_big2complete.css" />
     <Content Include="Styles\global_big2.css" />
     <Content Include="Styles\global_big1.css" />
     <Content Include="Styles\global_tablet.css" />
