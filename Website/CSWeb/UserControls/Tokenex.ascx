@@ -13,29 +13,31 @@
                 var apiKey = document.getElementById('hlApiKey').value;
                 var tokenExId = document.getElementById('hlTokenExID').value;
                 var cipherText = TxEncrypt(key, creditCard);
-                //document.getElementById("txtCCNumber1").value = "XXXXXXXXXXXXXXXX";
-                //document.getElementById("hlEncryptedCCNum").value = cipherText;
-                var requestString = "{\"APIKey\":\"@apiKey@\",\"TokenExID\":\"@tokenExID@\",\"EcryptedData\":\"@encryptedData@\",\"TokenScheme\":2}";
-                requestString = requestString.replace("@apiKey@", apiKey);
-                requestString = requestString.replace("@tokenExID@", tokenExId);
-                requestString = requestString.replace("@encryptedData@", cipherText);
+                //Comment for JSON
+                document.getElementById("txtCCNumber1").value = "XXXXXXXXXXXXXXXX";
+                document.getElementById("hlEncryptedCCNum").value = cipherText;
+                ////////////////////////////////var requestString = "{\"APIKey\":\"@apiKey@\",\"TokenExID\":\"@tokenExID@\",\"EcryptedData\":\"@encryptedData@\",\"TokenScheme\":2}";
+                ////////////////////////////////requestString = requestString.replace("@apiKey@", apiKey);
+                ////////////////////////////////requestString = requestString.replace("@tokenExID@", tokenExId);
+                ////////////////////////////////requestString = requestString.replace("@encryptedData@", cipherText);
                 
-                ////// construct an HTTP request
-                var xhr = new XMLHttpRequest({ mozSystem: true });
-                xhr.open('POST', 'https://test-api.tokenex.com/TokenServices.svc/REST/TokenizeFromEncryptedValue',false);
-                xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-                xhr.setRequestHeader('Accept', 'application/json; charset=UTF-8');
+                ////////////////////////////////////// construct an HTTP request
+                ////////////////////////////////var xhr = new XMLHttpRequest({ mozSystem: true });
+                ////////////////////////////////xhr.open('POST', 'https://api.tokenex.com/TokenServices.svc/REST/TokenizeFromEncryptedValue',false);
+                ////////////////////////////////xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+                ////////////////////////////////xhr.setRequestHeader('Accept', 'application/json; charset=UTF-8');
 
-                ////// send the collected data as JSON
-                xhr.send(requestString);
+                ////////////////////////////////////// send the collected data as JSON
+                ////////////////////////////////xhr.send(requestString);
                 
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        var responseObject = JSON.parse(xhr.responseText);
-                        document.getElementById("hlToken").value = responseObject.Token;
-                        alert(responseObject.Token);
-                    }
+                ////////////////////////////////    if (xhr.readyState == 4 && xhr.status == 200) {
+                ////////////////////////////////        var responseObject = JSON.parse(xhr.responseText);
+                ////////////////////////////////        document.getElementById("hlToken").value = responseObject.Token;
+                ////////////////////////////////        document.getElementById("txtCCNumber1").value = "XXXXXXXXXXXXXXXX";
+                ////////////////////////////////        alert(responseObject.Token);
+                ////////////////////////////////    }
 
-                    __doPostBack('bscfShippingBillingCreditForm$imgBtn', '');
+                ////////////////////////////////    __doPostBack('bscfShippingBillingCreditForm$imgBtn', '');
             } catch (e) {
                     alert(e.message);
                 document.getElementById("lblCCNumberError").textContent = e.message;
