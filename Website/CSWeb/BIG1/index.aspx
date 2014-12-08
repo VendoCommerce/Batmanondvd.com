@@ -72,7 +72,7 @@
                 <script type='text/javascript'>
                     jwplayer('homecta').setup({
                         file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low2.mp4',
-                        autostart: false,
+                        autostart: true,
                         image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/big1/vidposter_home.jpg',
                         controls: true,
                         width: 396, height: 272,

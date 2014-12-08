@@ -49,7 +49,7 @@
                 <script type='text/javascript'>
                     jwplayer('ctavideo').setup({
                         file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low2.mp4',
-                        autostart: false,
+                        autostart: true,
                         image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/vidposter_home.jpg',
                         controls: true,
                         width: 256, height: 189,
