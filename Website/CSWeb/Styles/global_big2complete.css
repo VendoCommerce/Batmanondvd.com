@@ -416,12 +416,13 @@ p {padding-bottom: 20px;}
 
 .home1b {
     position: absolute;
-    top: 110px;
-    left: 445px;
-    width: 504px;
-    height: 302px;
-    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/complete/home1_purplebox.png);
-    padding: 54px 0 0 250px;
+    top: 113px;
+    left: 395px;
+    width: 554px;
+    height: 301px;
+    background: url(//d1kg9stb0ddjcv.cloudfront.net/images/complete/home1_purplebox_new.png);
+    padding: 50px 0 0 293px;
+    z-index: 10;
 }
 
 
@@ -515,7 +516,7 @@ p {padding-bottom: 20px;}
 
 .home2 {
     height: 669px;
-    background: #2a2728 url(//d1kg9stb0ddjcv.cloudfront.net/images/complete/home2_skyline.png) no-repeat 0 bottom;
+    background: #2a2728 url(//d1kg9stb0ddjcv.cloudfront.net/images/complete/home2_skyline_new.png) no-repeat 0 bottom;
     padding: 18px 0 0 21px;
 }
 
@@ -553,7 +554,7 @@ p {padding-bottom: 20px;}
     top: 61px;
     left: 566px;
     z-index: 9;
-    padding: 29px 0 0 45px;
+    padding: 29px 0 0 48px;
 }
 
 .home_tvpiece_1 {
@@ -561,17 +562,17 @@ p {padding-bottom: 20px;}
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 343px;
-    height: 69px;
+    width: 348px;
+    height: 71px;
     z-index: 25;
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/big2/tvpiece_1.png) no-repeat 0 0;
 }
 .home_tvpiece_2 {
     display: block;
     position: absolute;
-    top: 69px;
+    top: 71px;
     left: 0px;
-    width: 45px;
+    width: 48px;
     height: 105px;
     z-index: 25;
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/big2/tvpiece_2.png) no-repeat 0 0;
@@ -579,9 +580,9 @@ p {padding-bottom: 20px;}
 .home_tvpiece_3 {
     display: block;
     position: absolute;
-    top: 69px;
-    left: 301px;
-    width: 42px;
+    top: 71px;
+    left: 303px;
+    width: 45px;
     height: 105px;
     z-index: 25;
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/big2/tvpiece_3.png) no-repeat 0 0;
@@ -589,10 +590,10 @@ p {padding-bottom: 20px;}
 .home_tvpiece_4 {
     display: block;
     position: absolute;
-    top: 174px;
+    top: 176px;
     left: 0px;
-    width: 343px;
-    height: 153px;
+    width: 348px;
+    height: 154px;
     z-index: 25;
     background: url(//d1kg9stb0ddjcv.cloudfront.net/images/big2/tvpiece_4.png) no-repeat 0 0;
 }
@@ -600,8 +601,8 @@ p {padding-bottom: 20px;}
 .home_tvpiece_center {
     display: block;
     position: absolute;
-    top: 69px;
-    left: 45px;
+    top: 71px;
+    left: 48px;
     width: 256px;
     height: 105px;
     z-index: 0;

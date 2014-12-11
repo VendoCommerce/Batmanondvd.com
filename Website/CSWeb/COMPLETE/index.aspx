@@ -94,7 +94,7 @@
             <li>See the original Dynamic Duo</li>
             <li>Perfect for the Holiday Gift Giving Season!</li>
         </ul>
-        <a href="#included_complete" class="included_complete white webfont2bold f10" style="position: absolute; top: 460px; left: 272px;">See What's Included</a>
+        <a href="#included_complete" class="included_complete white webfont2bold f10" style="position: absolute; top: 466px; left: 323px;">See What's Included</a>
         <div class="home2_yellowbox">
             <h2 class="f30 pad6">Don’t Wait, Get the Collection Now!</h2>
             <p class="f16 lh20" style="width: 510px;">They protected the streets of Gotham and flew into our collective hearts with their hilarious hijinks, over-the-top costumes and simply feel good fun. What are you waiting for? It’s the Bat Signal! <a href="choose.aspx" class="red unscored bold" style="margin-left: 6px;"><span class="scored">Act Now</span> ›</a></p>
