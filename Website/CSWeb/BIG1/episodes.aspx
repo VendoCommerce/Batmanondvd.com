@@ -1007,7 +1007,7 @@
         <!-- END season3 -->
 
         <%-- update this to bottomcta_complete if we get the design for that --%>
-        <div style="left: -127px;"><!--#include file="bottomcta.html"--></div>
+        <div style="left: -127px;"><!--#include file="bottomcta_complete.html"--></div>
     </div>
     <!-- END COMPLETE COLLECTION -->
     
