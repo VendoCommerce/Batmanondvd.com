@@ -45,6 +45,14 @@ $('#selectField').change(function () {
     $('#' + $(this).val()).fadeIn();
 });
 
+$('#complete_collection_bottomcta').hide();
+$('#selectField2').change(function () {
+    $('.episodebox').fadeOut();
+    $('#' + $(this).val()).fadeIn();
+    $('#classic_collection_bottomcta').toggle();
+    $('#complete_collection_bottomcta').toggle();
+});
+
 
 	
 //faq toggle stuff 
