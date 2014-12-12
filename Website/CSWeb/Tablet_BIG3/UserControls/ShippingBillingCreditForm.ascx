@@ -338,7 +338,7 @@
 
                             <div class="form_line_btn">
                                 <p class="f12 pad6" style="padding-left: 8px;">By clicking here, I agree to the <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank">Terms of Service</a>, <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank">Privacy Policy</a> and <a href="returns.aspx" target="_blank">Return Policy</a>.</p>
-                                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG3/btn_completeorder.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" CssClass="iblock btn_shadow_1 btn_fade" />
+                                <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/big3/btn_completeorder.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" CssClass="iblock btn_shadow_1 btn_fade" />
                             </div>
                             <div class="form_line_guarantee" style="display: none;"><a href="#guarantee" class="guarantee">90-Day Money-Back Guarantee!</a></div>
                             

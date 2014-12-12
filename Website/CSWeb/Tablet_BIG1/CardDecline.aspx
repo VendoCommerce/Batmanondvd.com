@@ -5,7 +5,8 @@
 <!doctype html>
 <html>
 <head id="Head1" runat="server">
-<meta charset="utf-8">    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV </title>
 <meta name="description" content=""/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -15,7 +16,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key="JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global_big1.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1_tablet.css" rel="stylesheet" type="text/css" />
     </head>
 <body id="cart">
     <form id="form1" runat="server">

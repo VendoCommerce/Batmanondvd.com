@@ -6,6 +6,7 @@
 <html>
 <head runat="server">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <meta name="msvalidate.01" content="5480DFE3A3631B08B37C8A5326603EDE" />    
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Checkout</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
@@ -18,7 +19,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global_big1.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1_tablet.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="cart">
     <form id="form1" runat="server">
@@ -41,7 +42,7 @@
                     </p>
                     <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold purple">FREE SHIPPING & HANDLING!</span></p>
                     <p class="text-center pad12">
-                        <asp:LinkButton ID="lbComplete" runat="server" OnClick="lbComplete_Click"><img class="prod_continue btn_fade" src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG1/btn_continue.png" alt="Continue" /></asp:LinkButton>
+                        <asp:LinkButton ID="lbComplete" runat="server" OnClick="lbComplete_Click"><img class="prod_continue btn_fade" src="//d1kg9stb0ddjcv.cloudfront.net/images/big1/btn_continue.png" alt="Continue" /></asp:LinkButton>
                     </p>
                 </div>
                 
@@ -77,7 +78,7 @@
                     <p class="text-center f16 pad6">Order Options</p>
                     
                     <div>
-                        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG1/flag_bestvalue.png" alt="Best Value" style="position:absolute;
+                        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big1/flag_bestvalue.png" alt="Best Value" style="position:absolute;
 top: 0; left: -25px;" />
                         <p class="text-center pad12">
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
@@ -90,7 +91,7 @@ top: 0; left: -25px;" />
                     </div>
                     <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold purple">FREE SHIPPING & HANDLING!</span></p>
                     <p class="text-center pad12">
-                        <asp:LinkButton ID="lbSimple" runat="server" OnClick="lbSimple_Click"><img class="prod_continue btn_fade" src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG1/btn_continue.png" /></asp:LinkButton>
+                        <asp:LinkButton ID="lbSimple" runat="server" OnClick="lbSimple_Click"><img class="prod_continue btn_fade" src="//d1kg9stb0ddjcv.cloudfront.net/images/big1/btn_continue.png" /></asp:LinkButton>
                     </p>
                 </div>
                 

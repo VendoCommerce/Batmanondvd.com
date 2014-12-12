@@ -6,7 +6,8 @@
 <!doctype html>
 <html>
 <head runat="server">
-<meta charset="utf-8">    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Home</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
 <meta name="keywords" content="Batman Classic TV Series, DVD, Bluray, Warner Home Video, Adam West, As Seen on TV, Limited Time Offer, Robin, Joker, Riddler, Penguin, Catwoman, Original TV Series" />
@@ -19,7 +20,7 @@
 <script src="/Scripts/jquery.cycle2.min.js"></script>
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global_big3.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big3_tablet.css" rel="stylesheet" type="text/css" />
 <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 </head>
 <body id="home">
@@ -87,7 +88,7 @@
             </div>
             <div class="home_cta_right">
                 <a href="choose.aspx" class="iblock btn_shadow_1">
-                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG3/btn_ordernow.png" width="249" height="47" alt="Order Now" class="block" /></a>
+                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big3/btn_ordernow.png" width="249" height="47" alt="Order Now" class="block" /></a>
                 <p><a href="#included" class="included">See What's Included</a></p>
             </div>
     </div>
@@ -108,10 +109,10 @@ this exclusive DVD set.</p>
         
     </div>
     
-    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG3/home3reel.jpg" width="960" height="166" alt="" class="block" />
+    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big3/home3reel.jpg" width="960" height="166" alt="" class="block" />
 
     <div class="home2">
-        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG3/burst_pow2.png" alt="POW! 64 Episodes, 3 Bonus Hours + More!" style="position: absolute; top: 30px; left: 544px; z-index: 10;" />
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big3/burst_pow2.png" alt="POW! 64 Episodes, 3 Bonus Hours + More!" style="position: absolute; top: 30px; left: 544px; z-index: 10;" />
         <h2 class="f36 webfont1bold white pad0">Join the Dynamic Duo on Action-Packed Adventures!</h2>
         <h3 class="f22 white">Watch Batman and Robin foil Gotham’s villains in digital clarity!</h3>
         <p class="f16 lh20 white" style="width: 565px;">TV's iconic partners, along with a legion of abominable archenemies can now be seen in a whole new POW-erful way. For the first time ever, the 1960’s mega-hit is available on DVD so you can relive all your favorite moments or share with a whole new generation!</p>
@@ -124,7 +125,7 @@ this exclusive DVD set.</p>
             <h2 class="f30 pad6">Don’t Wait, Get the Collection Now!</h2>
             <p class="f16 lh20" style="width: 530px;">They protected the streets of Gotham and flew into our collective hearts with their hilarious hijinks, over-the-top costumes and simply feel good fun. What are you waiting for? It’s the Bat Signal! <a href="choose.aspx" class="red unscored bold" style="margin-left: 6px;"><span class="scored">Act Now</span> ›</a></p>
         </div>
-        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG3/prod_classic_collection.png" alt="The Classic Batman Collection!" style="position: absolute; top: 316px; left: 69px; z-index: 10;" />
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big3/prod_classic_collection.png" alt="The Classic Batman Collection!" style="position: absolute; top: 316px; left: 69px; z-index: 10;" />
         <a href="#included" class="included white f10 webfont2bold scored" style="position: absolute; top: 641px; left: 242px; z-index: 30;">See What's Included</a>
     </div>
 
@@ -161,7 +162,7 @@ this exclusive DVD set.</p>
             </div>
             <div class="home_cta_right">
                 <a href="choose.aspx" class="iblock btn_shadow_1">
-                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG3/btn_ordernow.png" width="249" height="47" alt="Order Now" class="block" /></a>
+                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big3/btn_ordernow.png" width="249" height="47" alt="Order Now" class="block" /></a>
                 <p><a href="#included" class="included">What's Included</a></p>
             </div>
     </div>

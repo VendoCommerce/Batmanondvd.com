@@ -6,7 +6,8 @@
 <!doctype html>
 <html>
 <head runat="server">
-<meta charset="utf-8">    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Home</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
 <meta name="keywords" content="Batman Classic TV Series, DVD, Bluray, Warner Home Video, Adam West, As Seen on TV, Limited Time Offer, Robin, Joker, Riddler, Penguin, Catwoman, Original TV Series" />
@@ -19,7 +20,7 @@
 <script src="/Scripts/jquery.cycle2.min.js"></script>
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global_big2.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big2_tablet.css" rel="stylesheet" type="text/css" />
 <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 </head>
 <body id="home">
@@ -33,7 +34,7 @@
             <h3 class="f27">The original television series is finally available on DVD!</span></h3>
         </div>
 
-        <div class="home1_img"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG2/batman_robin.png" width="453" height="434" alt="" /></div>
+        <div class="home1_img"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/batman_robin.png" width="453" height="434" alt="" /></div>
         
         <div class="home1b">
             <ul class="top_promo_list">
@@ -47,7 +48,7 @@
   and Celebrity Guest Stars!</li>
             </ul>
             <a href="#included_complete" class="included_complete" style="position: absolute; top: 215px; left: 33px; z-index: 30;">
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG2/splash_completeseries.png" width="205" height="112" alt="Complete Series Available on Blu-Ray&trade; &amp; DVD - Learn More" /></a>
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/splash_completeseries.png" width="205" height="112" alt="Complete Series Available on Blu-Ray&trade; &amp; DVD - Learn More" /></a>
         </div>
 
         <div class="clear"></div>
@@ -58,11 +59,11 @@
             <div class="home_cta_left">
                 <h3>Great Scott! Don't Miss Out!</h3>
                 <h4>Act Now &amp; Get <span class="blue2">Free Shipping!</span></h4>
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG2/batman_onphone.png" width="139" height="101" alt="Batman" class="block" style="position: absolute; top: -30px; left: 489px;" />
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/batman_onphone.png" width="139" height="101" alt="Batman" class="block" style="position: absolute; top: -30px; left: 489px;" />
             </div>
             <div class="home_cta_right">
                 <a href="choose.aspx" class="iblock btn_shadow_1">
-                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG2/btn_ordernow.png" width="249" height="47" alt="Order Now" class="block" /></a>
+                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/btn_ordernow.png" width="249" height="47" alt="Order Now" class="block" /></a>
                 <p><a href="#included" class="included">See What's Included</a></p>
             </div>
     </div>
@@ -91,7 +92,7 @@
                 </script>
             </div>
         </div>
-        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG2/pow_64episodes.png" alt="POW! 64 Episodes, 3 Bonus Hours + More!" style="position: absolute; top: 364px; left: 535px; z-index: 10;" />
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/pow_64episodes.png" alt="POW! 64 Episodes, 3 Bonus Hours + More!" style="position: absolute; top: 364px; left: 535px; z-index: 10;" />
         <h2 class="f36 webfont1bold white pad0">The Caped Crusader and the Boy Wonder!</h2>
         <h3 class="white">Your Favorite Dynamic Duo is Back and Better Than Ever!</h3>
         <p class="f16 lh20 white pad12" style="width: 534px;">TV's iconic partners, along with a legion of abominable archenemies can now be seen in a whole new POW-erful way. For the first time ever, the 1960’s mega-hit is available on DVD so you can relive all your favorite moments or share with a whole new generation!</p>
@@ -106,7 +107,7 @@
             <p class="f16 lh20" style="width: 510px;">They protected the streets of Gotham and flew into our collective hearts with their hilarious hijinks, over-the-top costumes and simply feel good fun. What are you waiting for? It’s the Bat Signal! <a href="choose.aspx" class="red unscored bold" style="margin-left: 6px;"><span class="scored">Act Now</span> ›</a></p>
         </div>
         <a href="#included_complete" class="included_complete" style="position: absolute; top: 337px; left: 290px; z-index: 30;">
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG2/splash_completeseries.png" width="205" height="112" alt="Complete Series Available on Blu-Ray&trade; &amp; DVD - Learn More" /></a>
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/splash_completeseries.png" width="205" height="112" alt="Complete Series Available on Blu-Ray&trade; &amp; DVD - Learn More" /></a>
     </div>
 
 
@@ -120,7 +121,7 @@ this exclusive DVD set.</p>
             <p class="f15 lh22">Order today and get <strong>FREE SHIPPING!</strong> <a href="choose.aspx" class="red unscored bold" style="margin-left: 6px;"><span class="scored">Order Now</span> ›</a></p>
         </div>
         <div class="fleft">
-            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG2/orig_remaster.jpg" alt="" />
+            <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/orig_remaster.jpg" alt="" />
         </div>
         
     </div>
@@ -135,11 +136,11 @@ this exclusive DVD set.</p>
             <div class="home_cta_left">
                 <h3>Great Scott! Don't Miss Out!</h3>
                 <h4>Act Now &amp; Get <span class="blue2">Free Shipping!</span></h4>
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG2/logo_batman_text.png" width="144" height="83" alt="Batman" class="block" style="position: absolute; top: -3px; left: 498px; z-index: 50;" />
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/logo_batman_text.png" width="144" height="83" alt="Batman" class="block" style="position: absolute; top: -3px; left: 498px; z-index: 50;" />
             </div>
             <div class="home_cta_right">
                 <a href="choose.aspx" class="iblock btn_shadow_1">
-                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG2/btn_ordernow.png" width="249" height="47" alt="Order Now" class="block" /></a>
+                    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/btn_ordernow.png" width="249" height="47" alt="Order Now" class="block" /></a>
                 <p><a href="#included" class="included">What's Included</a></p>
             </div>
     </div>

@@ -6,6 +6,7 @@
 <html>
 <head runat="server">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <meta name="msvalidate.01" content="5480DFE3A3631B08B37C8A5326603EDE" />    
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Checkout</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
@@ -18,7 +19,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global_big3.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big3_tablet.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="cart">
     <form id="form1" runat="server">
@@ -42,7 +43,7 @@
                     </p>
                     <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold green">FREE SHIPPING & HANDLING!</span></p>
                     <p class="text-center pad12">
-                        <asp:LinkButton ID="lbComplete" runat="server" OnClick="lbComplete_Click" CssClass="iblock btn_shadow_1"><img class="prod_continue block" src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG3/btn_continue.png" /></asp:LinkButton>
+                        <asp:LinkButton ID="lbComplete" runat="server" OnClick="lbComplete_Click" CssClass="iblock btn_shadow_1"><img class="prod_continue block" src="//d1kg9stb0ddjcv.cloudfront.net/images/big3/btn_continue.png" /></asp:LinkButton>
                     </p>
                 </div>
                 
@@ -91,7 +92,7 @@ top: 0; left: -25px;" />
                     </div>
                     <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold green">FREE SHIPPING & HANDLING!</span></p>
                     <p class="text-center pad12">
-                        <asp:LinkButton ID="lbSimple" runat="server" OnClick="lbSimple_Click" CssClass="iblock btn_shadow_1"><img class="prod_continue block" src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG3/btn_continue.png" /></asp:LinkButton>
+                        <asp:LinkButton ID="lbSimple" runat="server" OnClick="lbSimple_Click" CssClass="iblock btn_shadow_1"><img class="prod_continue block" src="//d1kg9stb0ddjcv.cloudfront.net/images/big3/btn_continue.png" /></asp:LinkButton>
                     </p>
                 </div>
                 

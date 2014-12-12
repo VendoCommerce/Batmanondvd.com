@@ -6,7 +6,8 @@
 <!doctype html> 
 <html>
 <head runat="server">
-<meta charset="utf-8">    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Home</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
 <meta name="keywords" content="Batman Classic TV Series, DVD, Bluray, Warner Home Video, Adam West, As Seen on TV, Limited Time Offer, Robin, Joker, Riddler, Penguin, Catwoman, Original TV Series" />
@@ -19,7 +20,7 @@
 <script src="/Scripts/jquery.cycle2.min.js"></script>
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global_big1.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1_tablet.css" rel="stylesheet" type="text/css" />
 <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 </head>
 <body id="home">
@@ -55,7 +56,7 @@
         </div>
         <div class="home_cta_right">
             <a href="choose.aspx" class="iblock btn_shadow_1">
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG1/btn_ordernow.png" alt="Order Now" class="block" /></a>
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big1/btn_ordernow.png" alt="Order Now" class="block" /></a>
             <p><a href="#included" class="included white f12 textshadow scored">See What's Included</a></p>
         </div>
     </div>
@@ -75,7 +76,7 @@
                     jwplayer('homecta').setup({
                         file: 'https://d1kg9stb0ddjcv.cloudfront.net/video/Batman_lp-low2.mp4',
                         autostart: true,
-                        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG1/vidposter_home.jpg',
+                        image: 'https://d1kg9stb0ddjcv.cloudfront.net/images/big1/vidposter_home.jpg',
                         controls: true,
                         width: 396, height: 272,
                         stretching: 'exactfit',
@@ -117,17 +118,17 @@
         </div>
         <div class="home_cta_right">
             <a href="choose.aspx" class="iblock btn_shadow_1">
-                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG1/btn_ordernow.png" alt="Order Now" class="block" /></a>
+                <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big1/btn_ordernow.png" alt="Order Now" class="block" /></a>
             <p><a href="#included" class="included white f12 textshadow scored">See What's Included</a></p>
         </div>
     </div>
 
     <div class="home5">
-        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG1/home5.jpg" width="1213" height="172" class="block" />
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big1/home5.jpg" width="1213" height="172" class="block" />
     </div>
 
     <div class="home6">
-        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_BIG1/bam_over3hours.png" width="545" height="314" class="block home6_bam" />
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big1/bam_over3hours.png" width="545" height="314" class="block home6_bam" />
         <h2 class="f46 webfont1 yellow textshadow"><span class="webfont1bold">All New</span> Bonus Content!</h2>
         <p class="f18 white lh24" style="position: relative; z-index: 25;">Holy Hallucination! 3 Hours of Bonus Footage? Believe it Bat-Fans. Sneak behind the scenes to witness never before seen footage, hear stories from your favorite villains and guest stars, and get up close and personal with the legend himself-Adam West! Only available in this exclusive collection.</p>
     </div>
