@@ -44,7 +44,7 @@
             </ul>
         </div>
         <a href="#included_complete" class="included_complete home1includedlink"></a>
-        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_CALLOUT/giftbag.png" width="332" height="212" alt="Special Offers For Gift Giving: Exclusive Batman Gift Bag; Special Discount On 2nd Set - Available after checkout!" style="position: absolute; top: 317px; left: 466px;" />
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/callout/giftbag.png" width="332" height="212" alt="Special Offers For Gift Giving: Exclusive Batman Gift Bag; Special Discount On 2nd Set - Available after checkout!" style="position: absolute; top: 317px; left: 466px;" />
     </div>
 
 
@@ -86,7 +86,7 @@
                 <p class="f15 white pad0 text-center" style="padding-top: 3px;">The Sixties Classic is back and better than ever!</p>
             </div>
         </div>
-        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_CALLOUT/promo_addsets.png" alt="Get Additional Sets at a Reduced Price! Available at checkout." width="183" height="295" style="position: absolute; top: 26px; left: 485px;" />
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/callout/promo_addsets.png" alt="Get Additional Sets at a Reduced Price! Available at checkout." width="183" height="295" style="position: absolute; top: 26px; left: 485px;" />
         
     </div>
 

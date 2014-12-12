@@ -31,7 +31,7 @@
             <span class="block" style="padding-left: 15px;">...Same Bat-Channel!</span>
         </h2>
         <h3 class="f34 green caps webfont1bold">Select your Batman Collection:</h3>
-        <select id="selectField" class="select-1" style="margin-left: 112px;">
+        <select id="selectField2" class="select-1" style="margin-left: 112px;">
             <option value="classic_collection">Classic Collection</option>
             <option value="complete_collection">Complete Collection</option>
         </select>
@@ -369,7 +369,7 @@
         </div>
         <!-- END season2 -->
 
-        <div style="left: -127px;"><!--#include file="bottomcta.html"--></div>
+        
     </div>
     <!-- END CLASSIC COLLECTION -->
 
@@ -1006,14 +1006,16 @@
         </div>
         <!-- END season3 -->
 
-        <%-- update this to bottomcta_complete if we get the design for that --%>
-        <div style="left: -127px;"><!--#include file="bottomcta_complete.html"--></div>
+        
     </div>
     <!-- END COMPLETE COLLECTION -->
     
 
 
 </div><!-- END container -->
+
+<div id="classic_collection_bottomcta"><!--#include file="bottomcta.html"--></div>
+<div id="complete_collection_bottomcta"><!--#include file="bottomcta_complete.html"--></div>
 
 
 <!--#include file="footer.html"-->

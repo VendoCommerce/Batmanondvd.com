@@ -33,7 +33,7 @@
         <h3 class="f34 green caps webfont1bold">Select your Batman Collection:</h3>
         <select id="selectField" class="select-1" style="margin-left: 112px;">
             <option value="classic_collection">Classic Collection</option>
-            <option value="complete_collection">Tablet_COMPLETE Collection</option>
+            <option value="complete_collection">Complete Collection</option>
         </select>
     </div>
     

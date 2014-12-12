@@ -78,7 +78,7 @@
                     
                     <div>
                         <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big1/flag_bestvalue.png" alt="Best Value" style="position:absolute;
-top: 0; left: -25px;" />
+top: 4px; left: -25px;" />
                         <p class="text-center pad12">
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
                             <asp:ListItem Value="111">Complete Classic Collection on DVD - 1 payment of $149.95</asp:ListItem>

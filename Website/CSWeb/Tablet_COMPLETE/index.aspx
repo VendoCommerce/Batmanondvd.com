@@ -89,7 +89,7 @@
                 </script>
             </div>
         </div>
-        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/Tablet_COMPLETE/pow_120episodes.png" alt="POW! 120 Episodes, 3 Free Bonus Discs - 50+ Hours of Entertainment!" style="position: absolute; top: 362px; left: 535px; z-index: 10;" />
+        <img src="//d1kg9stb0ddjcv.cloudfront.net/images/complete/pow_120episodes.png" alt="POW! 120 Episodes, 3 Free Bonus Discs - 50+ Hours of Entertainment!" style="position: absolute; top: 362px; left: 535px; z-index: 10;" />
         <h2 class="f36 webfont1bold white pad0">The Caped Crusader and the Boy Wonder!</h2>
         <h3 class="white">Your Favorite Dynamic Duo is Back and Better Than Ever!</h3>
         <p class="f16 lh20 white pad12" style="width: 534px;">TV's iconic partners, along with a legion of abominable archenemies can now be seen in a whole new POW-erful way. For the first time ever, the 1960’s mega-hit is available on DVD so you can relive all your favorite moments or share with a whole new generation!</p>

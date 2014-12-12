@@ -72,19 +72,19 @@
 
             <div class="chooseprod" style="margin: 0;">
                 <div class="text-center">
-                    <h2 class="pad20"><span class="red">Tablet_COMPLETE</span> Classic Batman Collection</h2>
+                    <h2 class="pad20"><span class="red">Complete</span> Classic Batman Collection</h2>
                     
                     <p class="text-center f16 pad6">Order Options</p>
                     
                     <div>
                         <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/flag_bestvalue.png" alt="Best Value" style="position:absolute;
-top: 0; left: -25px;" />
+top: 4px; left: -25px;" />
                         <p class="text-center pad12">
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
-                            <asp:ListItem Value="111">Tablet_COMPLETE Classic Collection on DVD - 1 payment of $149.95</asp:ListItem>
-                            <asp:ListItem Value="113">Tablet_COMPLETE Classic Collection on DVD - 5 easy payments of $29.99</asp:ListItem>
-                            <asp:ListItem Value="114">Tablet_COMPLETE Classic Collection in HD on Blu-Ray - 1 payment of $174.95</asp:ListItem>
-                            <asp:ListItem Value="115">Tablet_COMPLETE Classic Collection in HD on Blu-Ray - 5 easy payments of $34.99</asp:ListItem>
+                            <asp:ListItem Value="111">Complete Classic Collection on DVD - 1 payment of $149.95</asp:ListItem>
+                            <asp:ListItem Value="113">Complete Classic Collection on DVD - 5 easy payments of $29.99</asp:ListItem>
+                            <asp:ListItem Value="114">Complete Classic Collection in HD on Blu-Ray - 1 payment of $174.95</asp:ListItem>
+                            <asp:ListItem Value="115">Complete Classic Collection in HD on Blu-Ray - 5 easy payments of $34.99</asp:ListItem>
                         </asp:DropDownList>
                     </p>
                     </div>
@@ -97,7 +97,7 @@ top: 0; left: -25px;" />
                 <div class="bg_lavendergradient">
                     <img src="//d1kg9stb0ddjcv.cloudfront.net/images/big2/prod_choose_2.png" alt="" class="block" style="margin-bottom: 30px;" />
                     <div class="choose_content" style="padding-bottom: 14px;">
-                        <p class="f16 pad0" style="height: 78px;">Your Tablet_COMPLETE Collection Features Over 50 HOURS OF ENTERTAINMENT and comes in a Classic Collector’s Box for displaying your Collection!</p>
+                        <p class="f16 pad0" style="height: 78px;">Your Complete Collection Features Over 50 HOURS OF ENTERTAINMENT and comes in a Classic Collector’s Box for displaying your Collection!</p>
                         <p>INCLUDES:</p>    
                         <ul style="margin-bottom: 0;">
                             <li>120 of your favorite original broadcast episodes fully remastered</li>
