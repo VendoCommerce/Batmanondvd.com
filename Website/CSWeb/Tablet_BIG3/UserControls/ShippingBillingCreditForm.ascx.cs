@@ -88,9 +88,9 @@ namespace CSWeb.Tablet_BIG3.UserControls
                 //rfvCVV.ErrorMessage = ResourceHelper.GetResoureValue("CVVErrorMsg");
                 rfvCCType.ErrorMessage = ResourceHelper.GetResoureValue("CCTypeErrorMsg");
 
-                txtPhoneNumber1.Attributes.Add("onkeyup", "return autoTab(this, 3, event);");
-                txtPhoneNumber2.Attributes.Add("onkeyup", "return autoTab(this, 3, event);");
-                txtPhoneNumber3.Attributes.Add("onkeyup", "return autoTab(this, 4, event);");
+                //txtPhoneNumber1.Attributes.Add("onkeyup", "return autoTab(this, 3, event);");
+                //txtPhoneNumber2.Attributes.Add("onkeyup", "return autoTab(this, 3, event);");
+                //txtPhoneNumber3.Attributes.Add("onkeyup", "return autoTab(this, 4, event);");
             }
 
             if (!IsPostBack)
@@ -303,7 +303,7 @@ namespace CSWeb.Tablet_BIG3.UserControls
 
             //}
 
-            string strPhoneNum = txtPhoneNumber1.Text + txtPhoneNumber2.Text + txtPhoneNumber3.Text;
+            string strPhoneNum = txtPhoneNumber1.Text;// +txtPhoneNumber2.Text + txtPhoneNumber3.Text;
 
             if (!CommonHelper.IsValidPhone(strPhoneNum))
             {
@@ -627,9 +627,9 @@ namespace CSWeb.Tablet_BIG3.UserControls
                         BindShippingRegions();
                         ddlShippingState.SelectedValue = contextData.CustomerInfo.ShippingAddress.StateProvinceId.ToString();
                         txtEmail.Text = contextData.CustomerInfo.Email;
-                        txtPhoneNumber1.Text = contextData.CustomerInfo.PhoneNumber.Replace(" ", "").Replace("-", "").Replace("(", "").Replace(")", "").Trim().Substring(0, 3);
-                        txtPhoneNumber2.Text = contextData.CustomerInfo.PhoneNumber.Replace(" ", "").Replace("-", "").Replace("(", "").Replace(")", "").Trim().Substring(3, 3);
-                        txtPhoneNumber3.Text = contextData.CustomerInfo.PhoneNumber.Replace(" ", "").Replace("-", "").Replace("(", "").Replace(")", "").Trim().Substring(6, 4);
+                        txtPhoneNumber1.Text = contextData.CustomerInfo.PhoneNumber.Replace(" ", "").Replace("-", "").Replace("(", "").Replace(")", "");
+                        //txtPhoneNumber2.Text = contextData.CustomerInfo.PhoneNumber.Replace(" ", "").Replace("-", "").Replace("(", "").Replace(")", "").Trim().Substring(3, 3);
+                        //txtPhoneNumber3.Text = contextData.CustomerInfo.PhoneNumber.Replace(" ", "").Replace("-", "").Replace("(", "").Replace(")", "").Trim().Substring(6, 4);
 
 
                     }
@@ -697,7 +697,7 @@ namespace CSWeb.Tablet_BIG3.UserControls
 
                 CustData.FirstName = CommonHelper.fixquotesAccents(txtShippingFirstName.Text);
                 CustData.LastName = CommonHelper.fixquotesAccents(txtShippingFirstName.Text);
-                CustData.PhoneNumber = txtPhoneNumber1.Text + txtPhoneNumber2.Text + txtPhoneNumber3.Text;
+                CustData.PhoneNumber = txtPhoneNumber1.Text;// +txtPhoneNumber2.Text + txtPhoneNumber3.Text;
                 CustData.Email = CommonHelper.fixquotesAccents(txtEmail.Text);
                 CustData.Username = CommonHelper.fixquotesAccents(txtEmail.Text);
                 

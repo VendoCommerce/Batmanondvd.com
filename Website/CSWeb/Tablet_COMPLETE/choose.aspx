@@ -5,7 +5,7 @@
 <!doctype html>
 <html>
 <head runat="server">
-<meta charset="utf-8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <meta name="msvalidate.01" content="5480DFE3A3631B08B37C8A5326603EDE" />    
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Checkout</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
@@ -18,7 +18,7 @@
 <script src="/Scripts/jquery.cycle.js"></script>
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global_big2complete.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big2complete_tablet.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="cart">
     <form id="form1" runat="server">

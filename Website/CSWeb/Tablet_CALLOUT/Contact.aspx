@@ -9,7 +9,7 @@
 <!doctype html>
 <html>
 <head runat="server">
-<meta charset="utf-8">    
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <title>Batman | Classic TV Series | Customer Support - Contact Us</title>
 <meta name="description" content="Batman Classic TV Series - Now available on DVD & Bluray - Limited Time Offer!" />
 <meta name="keywords" content="Batman Classic TV Series, DVD, Bluray, Warner Home Video, Adam West, As Seen on TV, Limited Time Offer, Robin, Joker, Riddler, Penguin, Catwoman, Original TV Series" />
@@ -23,7 +23,7 @@
 <script src="/Scripts/jquery.cycle2.carousel.min.js"></script>
 <script src="/Scripts/jquery.cycle2.swipe.min.js"></script>
 <script src="/Scripts/global.js"></script>
-<link href="/styles/global_big1callout.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big1callout_tablet.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--#include file="popups.html"-->

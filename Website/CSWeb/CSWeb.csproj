@@ -513,8 +513,10 @@
     <Content Include="Mobile\UserControls\CheckoutThankYouModule2.ascx" />
     <Content Include="privacy.aspx" />
     <Content Include="Redirector.aspx" />
+    <Content Include="Styles\global_big1callout_tablet.css" />
     <Content Include="Styles\global_big1_tablet.css" />
     <Content Include="Styles\global_big1callout.css" />
+    <Content Include="Styles\global_big2complete_tablet.css" />
     <Content Include="Styles\global_big2_tablet.css" />
     <Content Include="Styles\global_big3_tablet.css" />
     <Content Include="Styles\global_big3.css" />

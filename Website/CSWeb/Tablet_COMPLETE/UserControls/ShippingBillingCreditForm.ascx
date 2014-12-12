@@ -144,9 +144,9 @@
                                     </div>
                                     <label class="label-1">
                                         Phone*</label>
-                                    <asp:TextBox ID="txtPhoneNumber1" runat="server" MaxLength="3" CssClass="text-4"></asp:TextBox>
-                                    <asp:TextBox ID="txtPhoneNumber2" runat="server" MaxLength="3" CssClass="text-4"></asp:TextBox>
-                                    <asp:TextBox ID="txtPhoneNumber3" runat="server" MaxLength="4" CssClass="text-4"></asp:TextBox>
+                                    <asp:TextBox ID="txtPhoneNumber1" runat="server" MaxLength="10" CssClass="text-1"></asp:TextBox>
+                                    <%--<asp:TextBox ID="txtPhoneNumber2" runat="server" MaxLength="3" CssClass="text-4"></asp:TextBox>
+                                    <asp:TextBox ID="txtPhoneNumber3" runat="server" MaxLength="4" CssClass="text-4"></asp:TextBox>--%>
                                 </div>
 
                                 <asp:Panel ID="pnlQuantity" runat="server" Visible="false">

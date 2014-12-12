@@ -4,7 +4,7 @@
 <!doctype html>
 <html>
 <head runat="server">
-<meta charset="utf-8">    
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, maximum-scale=1.0">
 <title>Batman | Classic TV Series Available on DVD and Bluray | As Seen on TV - Checkout</title>
 <meta name="description" content=""/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -15,7 +15,7 @@
 <script type="text/javascript">jwplayer.key="JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script src="/Scripts/global.js"></script>
 <script src="/Scripts/NoBack.js"></script>
-<link href="/styles/global_big2complete.css" rel="stylesheet" type="text/css" />
+<link href="/styles/global_big2complete_tablet.css" rel="stylesheet" type="text/css" />
 <script>
     $(document).ready(function () {
         $('.btns a:nth-child(2) img').attr('src', '//d1kg9stb0ddjcv.cloudfront.net/images/big2/btn_yes.png');
