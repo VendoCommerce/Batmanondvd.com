@@ -69,13 +69,13 @@ namespace CSWeb
             //Save results
             if (_response != null && _response.ResponseType != TransactionResponseType.Approved)
             {
-                CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, _response.TransactionID, _response.AuthCode, 7);
+                CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, (_response.TransactionID == null) ? string.Empty : _response.TransactionID, _response.AuthCode, 7);
 
                 _returnValue = false;
             }
             else if (_response != null && _response.ResponseType == TransactionResponseType.Approved)
             {
-                CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, _response.TransactionID, _response.AuthCode, 4);
+                CSResolve.Resolve<IOrderService>().SaveOrder(orderData.OrderId, (_response.TransactionID == null) ? string.Empty : _response.TransactionID, _response.AuthCode, 4);
                 _returnValue = true;
             }
             UserSessions.InsertSessionEntry(null, _returnValue, (decimal)(_request.Amount), orderData.CustomerId, orderID);

@@ -371,104 +371,113 @@ namespace CSBusiness.OrderManagement
             {
                 while (reader.Read())
                 {
-                    Order item = new Order();
-                    item.OrderId = Convert.ToInt32(reader["OrderId"]);
-                    item.CustomerId = Convert.ToInt32(reader["CustomerId"]);
-                    item.Email = reader["Email"].ToString();
-                    item.SubTotal = Convert.ToDecimal(reader["SubTotal"]);
-                    item.FullPriceSubTotal = Convert.ToDecimal(reader["FullPriceSubTotal"]);
-                    item.ShippingCost = Convert.ToDecimal(reader["ShippingCost"]);
-                    item.RushShippingCost = Convert.ToDecimal(reader["RushShippingCost"]);
-                    item.AdditionalShippingCharge = Convert.ToDecimal(reader["AdditionalShippingCharge"]);
-                    item.Tax = Convert.ToDecimal(reader["Tax"]);
-                    item.CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
-                    item.Total = Convert.ToDecimal(reader["Total"]);
-                    item.IpAddress = reader["IpAddress"].ToString();
-                    item.VersionName = reader["Version"].ToString();
-                    item.FullPriceTax = Convert.ToDecimal(reader["FullPriceTax"]);
+                    try
+                    {
+                        Order item = new Order();
+                        item.OrderId = Convert.ToInt32(reader["OrderId"]);
+                        item.CustomerId = Convert.ToInt32(reader["CustomerId"]);
+                        item.Email = reader["Email"].ToString();
+                        item.SubTotal = Convert.ToDecimal(reader["SubTotal"]);
+                        item.FullPriceSubTotal = Convert.ToDecimal(reader["FullPriceSubTotal"]);
+                        item.ShippingCost = Convert.ToDecimal(reader["ShippingCost"]);
+                        item.RushShippingCost = Convert.ToDecimal(reader["RushShippingCost"]);
+                        item.AdditionalShippingCharge = Convert.ToDecimal(reader["AdditionalShippingCharge"]);
+                        item.Tax = Convert.ToDecimal(reader["Tax"]);
+                        item.CreatedDate = Convert.ToDateTime(reader["CreatedDate"]);
+                        item.Total = Convert.ToDecimal(reader["Total"]);
+                        item.IpAddress = reader["IpAddress"].ToString();
+                        item.VersionName = reader["Version"].ToString();
+                        item.FullPriceTax = Convert.ToDecimal(reader["FullPriceTax"]);
 
-                    item.CustomerInfo = new Customer();
-                    item.CustomerInfo.IsEncrpyed = true;
-                    item.CustomerInfo.BillingAddress = new CSBusiness.CustomerManagement.Address();
-                    item.CustomerInfo.BillingAddress.IsEncrpyed = true;
-                    item.CustomerInfo.ShippingAddress = new CSBusiness.CustomerManagement.Address();
-                    item.CustomerInfo.ShippingAddress.IsEncrpyed = true;
-                    item.CustomerInfo.BillingAddress.Company = reader["BillingCompany"].ToString();
-                    item.CustomerInfo.BillingAddress.FirstName = reader["BillingFirstName"].ToString();
-                    item.CustomerInfo.BillingAddress.LastName = reader["BillingLastName"].ToString();
-                    item.CustomerInfo.BillingAddress.Address1 = reader["BillingAddress1"].ToString();
-                    item.CustomerInfo.BillingAddress.Address2 = reader["BillingAddress2"].ToString();
-                    item.CustomerInfo.BillingAddress.City = reader["BillingCity"].ToString();
-                    item.CustomerInfo.BillingAddress.ZipPostalCode = reader["BillingZipPostalCode"].ToString();
-                    item.CustomerInfo.BillingAddress.StateProvinceId = Convert.ToInt32(reader["BillingStateProvince"].ToString());
-                    item.CustomerInfo.BillingAddress.CountryId = Convert.ToInt32(reader["BillingCountryId"].ToString());
-                    StateProvince itemStateProvince = states.FirstOrDefault(x => x.StateProvinceId == Convert.ToInt32(reader["BillingStateProvince"].ToString()));
-                    if (itemStateProvince != null)
-                    {
-                        item.CustomerInfo.BillingAddress.StateProvinceName = itemStateProvince.Name;
+                        item.CustomerInfo = new Customer();
+                        item.CustomerInfo.IsEncrpyed = true;
+                        item.CustomerInfo.BillingAddress = new CSBusiness.CustomerManagement.Address();
+                        item.CustomerInfo.BillingAddress.IsEncrpyed = true;
+                        item.CustomerInfo.ShippingAddress = new CSBusiness.CustomerManagement.Address();
+                        item.CustomerInfo.ShippingAddress.IsEncrpyed = true;
+                        item.CustomerInfo.BillingAddress.Company = reader["BillingCompany"].ToString();
+                        item.CustomerInfo.BillingAddress.FirstName = reader["BillingFirstName"].ToString();
+                        item.CustomerInfo.BillingAddress.LastName = reader["BillingLastName"].ToString();
+                        item.CustomerInfo.BillingAddress.Address1 = reader["BillingAddress1"].ToString();
+                        item.CustomerInfo.BillingAddress.Address2 = reader["BillingAddress2"].ToString();
+                        item.CustomerInfo.BillingAddress.City = reader["BillingCity"].ToString();
+                        item.CustomerInfo.BillingAddress.ZipPostalCode = reader["BillingZipPostalCode"].ToString();
+                        item.CustomerInfo.BillingAddress.StateProvinceId = Convert.ToInt32(reader["BillingStateProvince"].ToString());
+                        item.CustomerInfo.BillingAddress.CountryId = Convert.ToInt32(reader["BillingCountryId"].ToString());
+                        StateProvince itemStateProvince = states.FirstOrDefault(x => x.StateProvinceId == Convert.ToInt32(reader["BillingStateProvince"].ToString()));
+                        if (itemStateProvince != null)
+                        {
+                            item.CustomerInfo.BillingAddress.StateProvinceName = itemStateProvince.Name;
+                        }
+                        else
+                        {
+                            item.CustomerInfo.BillingAddress.StateProvinceName = string.Empty;
+                        }
+
+                        Country itemCountry = countries.FirstOrDefault(x => x.CountryId == Convert.ToInt32(reader["BillingCountryId"].ToString()));
+                        if (itemCountry != null)
+                        {
+                            item.CustomerInfo.BillingAddress.CountryCode = itemCountry.Code;
+                        }
+                        else
+                        {
+                            item.CustomerInfo.BillingAddress.StateProvinceName = string.Empty;
+                        }
+                        item.CustomerInfo.BillingAddress.PhoneNumber = reader["BillingPhoneNumber"].ToString();
+                        item.CustomerInfo.BillingAddress.FaxNumber = reader["BillingFaxNumber"].ToString();
+
+                        item.CustomerInfo.ShippingAddress.Company = reader["ShippingCompany"].ToString();
+                        item.CustomerInfo.ShippingAddress.FirstName = reader["ShippingFirstName"].ToString();
+                        item.CustomerInfo.ShippingAddress.LastName = reader["ShippingLastName"].ToString();
+                        item.CustomerInfo.ShippingAddress.Address1 = reader["ShippingAddress1"].ToString();
+                        item.CustomerInfo.ShippingAddress.Address2 = reader["ShippingAddress2"].ToString();
+                        item.CustomerInfo.ShippingAddress.City = reader["ShippingCity"].ToString();
+                        item.CustomerInfo.ShippingAddress.ZipPostalCode = reader["ShippingZipPostalCode"].ToString();
+                        item.CustomerInfo.ShippingAddress.StateProvinceId = Convert.ToInt32(reader["ShippingStateProvince"].ToString());
+                        item.CustomerInfo.ShippingAddress.CountryId = Convert.ToInt32(reader["ShippingCountryId"].ToString());
+                        item.CustomerInfo.ShippingAddress.PhoneNumber = reader["ShippingPhoneNumber"].ToString();
+                        item.CustomerInfo.ShippingAddress.FaxNumber = reader["ShippingFaxNumber"].ToString();
+                        StateProvince itemShippingStateProvince = states.FirstOrDefault(x => x.StateProvinceId == Convert.ToInt32(reader["ShippingStateProvince"].ToString()));
+                        if (itemShippingStateProvince != null)
+                        {
+                            item.CustomerInfo.ShippingAddress.StateProvinceName = itemShippingStateProvince.Name;
+                        }
+                        else
+                        {
+                            item.CustomerInfo.ShippingAddress.StateProvinceName = string.Empty;
+                        }
+
+                        Country itemShippingCountry = countries.FirstOrDefault(x => x.CountryId == Convert.ToInt32(reader["ShippingCountryId"].ToString()));
+                        if (itemShippingCountry != null)
+                        {
+                            item.CustomerInfo.ShippingAddress.CountryCode = itemShippingCountry.Code;
+                        }
+                        else
+                        {
+                            item.CustomerInfo.ShippingAddress.CountryCode = string.Empty;
+                        }
+
+                        PaymentInformation paymentDataInfo = new PaymentInformation();
+                        paymentDataInfo.CreditCardNumber = CommonHelper.Decrypt(reader["CreditCardNumber"].ToString());
+                        paymentDataInfo.CreditCardType = Convert.ToInt32(reader["CreditCardType"]);
+                        paymentDataInfo.CreditCardName = reader["CreditCardName"].ToString(); ;
+                        paymentDataInfo.CreditCardExpired = Convert.ToDateTime(reader["CreditCardExpired"]);
+                        paymentDataInfo.CreditCardCSC = CommonHelper.Decrypt(reader["CreditCardCSC"].ToString());
+                        paymentDataInfo.AuthorizationCode = reader["AuthorizationCode"].ToString();
+                        paymentDataInfo.TransactionCode = reader["TransactionCode"].ToString();
+                        item.CreditInfo = paymentDataInfo;
+
+                        item.IsEncrpyed = true;
+                        Security.Encryption.DecryptValues(item);
+
+                        items.Add(item);
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        item.CustomerInfo.BillingAddress.StateProvinceName = string.Empty;
+                        CSLogger.Instance.LogException(
+                            string.Format("An error occured while trying to retrieve an order for batch processing."), ex);
                     }
 
-                    Country itemCountry = countries.FirstOrDefault(x => x.CountryId == Convert.ToInt32(reader["BillingCountryId"].ToString()));
-                    if (itemCountry != null)
-                    {
-                        item.CustomerInfo.BillingAddress.CountryCode = itemCountry.Code;
-                    }
-                    else
-                    {
-                        item.CustomerInfo.BillingAddress.StateProvinceName = string.Empty;
-                    }
-                    item.CustomerInfo.BillingAddress.PhoneNumber = reader["BillingPhoneNumber"].ToString();
-                    item.CustomerInfo.BillingAddress.FaxNumber = reader["BillingFaxNumber"].ToString();
-
-                    item.CustomerInfo.ShippingAddress.Company = reader["ShippingCompany"].ToString();
-                    item.CustomerInfo.ShippingAddress.FirstName = reader["ShippingFirstName"].ToString();
-                    item.CustomerInfo.ShippingAddress.LastName = reader["ShippingLastName"].ToString();
-                    item.CustomerInfo.ShippingAddress.Address1 = reader["ShippingAddress1"].ToString();
-                    item.CustomerInfo.ShippingAddress.Address2 = reader["ShippingAddress2"].ToString();
-                    item.CustomerInfo.ShippingAddress.City = reader["ShippingCity"].ToString();
-                    item.CustomerInfo.ShippingAddress.ZipPostalCode = reader["ShippingZipPostalCode"].ToString();
-                    item.CustomerInfo.ShippingAddress.StateProvinceId = Convert.ToInt32(reader["ShippingStateProvince"].ToString());
-                    item.CustomerInfo.ShippingAddress.CountryId = Convert.ToInt32(reader["ShippingCountryId"].ToString());
-                    item.CustomerInfo.ShippingAddress.PhoneNumber = reader["ShippingPhoneNumber"].ToString();
-                    item.CustomerInfo.ShippingAddress.FaxNumber = reader["ShippingFaxNumber"].ToString();
-                    StateProvince itemShippingStateProvince = states.FirstOrDefault(x => x.StateProvinceId == Convert.ToInt32(reader["ShippingStateProvince"].ToString()));
-                    if (itemShippingStateProvince != null)
-                    {
-                        item.CustomerInfo.ShippingAddress.StateProvinceName = itemShippingStateProvince.Name;
-                    }
-                    else
-                    {
-                        item.CustomerInfo.ShippingAddress.StateProvinceName = string.Empty;
-                    }
-
-                    Country itemShippingCountry = countries.FirstOrDefault(x => x.CountryId == Convert.ToInt32(reader["ShippingCountryId"].ToString()));
-                    if (itemShippingCountry != null)
-                    {
-                        item.CustomerInfo.ShippingAddress.CountryCode = itemShippingCountry.Code;
-                    }
-                    else
-                    {
-                        item.CustomerInfo.ShippingAddress.CountryCode = string.Empty;
-                    }
-
-                    PaymentInformation paymentDataInfo = new PaymentInformation();
-                    paymentDataInfo.CreditCardNumber = CommonHelper.Decrypt(reader["CreditCardNumber"].ToString());
-                    paymentDataInfo.CreditCardType = Convert.ToInt32(reader["CreditCardType"]);
-                    paymentDataInfo.CreditCardName = reader["CreditCardName"].ToString(); ;
-                    paymentDataInfo.CreditCardExpired = Convert.ToDateTime(reader["CreditCardExpired"]);
-                    paymentDataInfo.CreditCardCSC =CommonHelper.Decrypt( reader["CreditCardCSC"].ToString());
-                    paymentDataInfo.AuthorizationCode = reader["AuthorizationCode"].ToString();
-                    paymentDataInfo.TransactionCode = reader["TransactionCode"].ToString();
-                    item.CreditInfo = paymentDataInfo;
-
-                    item.IsEncrpyed = true;
-                    Security.Encryption.DecryptValues(item);
-                        
-                    items.Add(item);
                 }
 
                 htItems.Add("allOrders", items);
@@ -494,9 +503,7 @@ namespace CSBusiness.OrderManagement
                 htItems.Add("allOrderSkus", orderSku);
             }
 
-            
             return htItems;
-
         }
 
         public Order GetOrderDetails(int orderId, bool paymentInfo)
