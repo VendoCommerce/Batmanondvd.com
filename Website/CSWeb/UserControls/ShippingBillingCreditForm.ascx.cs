@@ -524,7 +524,8 @@ namespace CSWeb.Root.UserControls
             else
             {
                 if (ucTokenex.EncryptedCcNum.Length == 0)
-                {
+                if (ucTokenex.ReceivedToken.Length == 0)
+               {
                     //    if ((c.ToString() != "4444333322221111") && (txtCvv.Text.IndexOf("147114711471") == -1))
                     //    {
                     lblCCNumberError.Text = ResourceHelper.GetResoureValue("CCErrorMsg");

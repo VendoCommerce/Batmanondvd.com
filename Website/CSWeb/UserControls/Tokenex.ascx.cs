@@ -25,6 +25,7 @@ namespace CSWeb.UserControls
         protected void Page_Load(object sender, EventArgs e)
         {
             TxEncryptionKey.Value = ConfigurationManager.AppSettings["TokenExPublicKey"];
+            hlTokenExAPIUrl.Value = ConfigurationManager.AppSettings["TokenExAPIUrl"];
         }
 
         public string EncryptedCcNum
@@ -39,8 +40,8 @@ namespace CSWeb.UserControls
         {
             get
             {
-                return TokenexProcessor.GetInstance().Tokenize(EncryptedCcNum);
-                //return hlToken.Value;
+                //return TokenexProcessor.GetInstance().Tokenize(EncryptedCcNum);
+                return hlToken.Value;
             }
         }
 

@@ -1168,6 +1168,8 @@
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\NavigationControl.cs" />
+    <Compile Include="App_Code\Tokenization\RequestGenerator.cs" />
+    <Compile Include="App_Code\Tokenization\TokenexProcessor.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BIG1\400.aspx.cs">
       <DependentUpon>400.aspx</DependentUpon>
@@ -2345,8 +2347,6 @@
     </Compile>
     <Compile Include="App_Code\OrderProcessor.cs" />
     <Compile Include="App_Code\FulfillmentHouse\DataPakTax.cs" />
-    <Compile Include="App_Code\Tokenization\RequestGenerator.cs" />
-    <Compile Include="App_Code\Tokenization\TokenexProcessor.cs" />
     <Compile Include="AuthorizeOrder.aspx.cs">
       <DependentUpon>AuthorizeOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
