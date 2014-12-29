@@ -57,13 +57,13 @@
 <div class="control-group">
 <label class="control-label">Title</label>
 <div class="controls">
-<asp:TextBox ID="txtTitle" runat="Server" MaxLength="500" CssClass="input-large"  /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtTitle" ID="valReqTitle" ValidationGroup="valError" CssClass="text-error" ErrorMessage="Title is required field.">*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtTitle" runat="Server" MaxLength="500" CssClass="input-large"  /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtTitle" ID="valReqTitle" ValidationGroup="valError" CssClass="text-error" ErrorMessage="Title is required field.">*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
 </div></div>
            
 <div class="control-group">
 <label class="control-label">SKU Code</label>
 <div class="controls"> 
-<asp:TextBox ID="txtSkuCode" runat="Server" CssClass="input-small" /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtSkuCode" ID="valReqCode" ValidationGroup="valError" CssClass="text-error" ErrorMessage="Sku Code is required field.">*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtSkuCode" runat="Server" CssClass="input-small" /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtSkuCode" ID="valReqCode" ValidationGroup="valError" CssClass="text-error" ErrorMessage="Sku Code is required field.">*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
 </div></div>
            
 <div class="control-group">
@@ -75,33 +75,33 @@
 <div class="control-group">
 <label class="control-label">Offer Code</label>
 <div class="controls">             
-<asp:TextBox ID="txtOfferCode" runat="Server" CssClass="input-small" />
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtOfferCode" runat="Server" CssClass="input-small" />
 </div></div>
 
 
 <div class="control-group">
 <label class="control-label">Full Price</label>
 <div class="controls">
-<asp:TextBox ID="txtfullprice" runat="Server" MaxLength="7" CssClass="input-small" /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtfullprice" ID="Requiredfieldvalidator2" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Full Price is a required field.">*</asp:RequiredFieldValidator><asp:CompareValidator ID="cmpValorderNo" runat="server" ControlToValidate="txtfullprice" Type="Double" CssClass="text-error" ErrorMessage="Full Price must be a double." Operator="DataTypeCheck" ValidationGroup="valError" ValueToCompare="0">*</asp:CompareValidator><span class="help-inline"><code>required</code></span>
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtfullprice" runat="Server" MaxLength="7" CssClass="input-small" /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtfullprice" ID="Requiredfieldvalidator2" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Full Price is a required field.">*</asp:RequiredFieldValidator><asp:CompareValidator ID="cmpValorderNo" runat="server" ControlToValidate="txtfullprice" Type="Double" CssClass="text-error" ErrorMessage="Full Price must be a double." Operator="DataTypeCheck" ValidationGroup="valError" ValueToCompare="0">*</asp:CompareValidator><span class="help-inline"><code>required</code></span>
 </div></div>
            
  <div class="control-group">
 <label class="control-label">Initial Price</label>
 <div class="controls"> 
-<asp:TextBox ID="txtinitialprice" runat="Server" MaxLength="7" CssClass="input-small" /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtinitialprice" ID="Requiredfieldvalidator1" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Initial Price is a required field.">*</asp:RequiredFieldValidator><asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtinitialprice" Type="Double" CssClass="text-error" ErrorMessage="Initial Price must be a double." Operator="DataTypeCheck" ValidationGroup="valError" ValueToCompare="0">*</asp:CompareValidator><span class="help-inline"><code>required</code></span>
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtinitialprice" runat="Server" MaxLength="7" CssClass="input-small" /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtinitialprice" ID="Requiredfieldvalidator1" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Initial Price is a required field.">*</asp:RequiredFieldValidator><asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtinitialprice" Type="Double" CssClass="text-error" ErrorMessage="Initial Price must be a double." Operator="DataTypeCheck" ValidationGroup="valError" ValueToCompare="0">*</asp:CompareValidator><span class="help-inline"><code>required</code></span>
 </div></div>
           
  <div class="control-group">
 <label class="control-label">Weight</label>
 <div class="controls">
-<asp:TextBox ID="txtWeight" runat="Server" MaxLength="5" CssClass="input-small" />
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtWeight" runat="Server" MaxLength="5" CssClass="input-small" />
 </div></div>
 
          
  <div class="control-group">
 <label class="control-label">Stock Quantity</label>
 <div class="controls">
-<asp:TextBox ID="txtStock" runat="Server" MaxLength="7" CssClass="input-small" />
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtStock" runat="Server" MaxLength="7" CssClass="input-small" />
  </div></div> 
 
 
@@ -128,7 +128,7 @@
  <div class="control-group">
 <label class="control-label">Taxable Amount</label>
 <div class="controls">
-<asp:TextBox ID="txtTaxAmount" runat="Server" MaxLength="7" CssClass="input-small" /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtTaxAmount" ID="valReqAmount" ValidationGroup="valError" CssClass="text-error" ErrorMessage="Taxable Amount is a required field.">*</asp:RequiredFieldValidator><asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="txtTaxAmount" Type="Double" ErrorMessage="Taxable Amount must be a double." Operator="DataTypeCheck" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator><span class="help-inline"><code>required</code></span>
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtTaxAmount" runat="Server" MaxLength="7" CssClass="input-small" /><asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtTaxAmount" ID="valReqAmount" ValidationGroup="valError" CssClass="text-error" ErrorMessage="Taxable Amount is a required field.">*</asp:RequiredFieldValidator><asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="txtTaxAmount" Type="Double" ErrorMessage="Taxable Amount must be a double." Operator="DataTypeCheck" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator><span class="help-inline"><code>required</code></span>
 </div></div>
 </asp:Panel>
 
@@ -136,7 +136,7 @@
  <div class="control-group">
 <label class="control-label">Product Image</label>
 <div class="controls">
-<asp:TextBox ID="txtImagePath" runat="Server" MaxLength="200" CssClass="input-large" /><span class="help-inline"><code>(Example: /content/images/cart_product_pic.jpg)</code></span>
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtImagePath" runat="Server" MaxLength="200" CssClass="input-large" /><span class="help-inline"><code>(Example: /content/images/cart_product_pic.jpg)</code></span>
 </div></div>
 
  <div class="control-group">

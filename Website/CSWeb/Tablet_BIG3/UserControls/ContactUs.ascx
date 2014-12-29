@@ -20,13 +20,13 @@
                                 ErrorMessage="* First Name is required" EnableClientScript="true" Display="Dynamic"
                                 Text="* First Name is required" ValidationGroup="Group1"  /></span>
  <label for="textfield" class="address_label">* First Name</label>
-     <asp:TextBox ID="txtFirstName" runat="server" CssClass="address_input" MaxLength="100"  /></td>
+     <asp:TextBox  AutoCompleteType="Disabled" ID="txtFirstName" runat="server" CssClass="address_input" MaxLength="100"  /></td>
     <td>
      <span class="error"><asp:RequiredFieldValidator runat="server" ControlToValidate="txtLastName" ID="rfvLastName"
                                 ErrorMessage="* Last Name is required" EnableClientScript="true" Display="Dynamic"
                                 Text="* Last Name is required" ValidationGroup="Group1" /></span>
   <label for="textfield" class="address_label">* Last  Name</label>
-      <asp:TextBox ID="txtLastName" runat="server" CssClass="address_input" MaxLength="100"   />
+      <asp:TextBox  AutoCompleteType="Disabled" ID="txtLastName" runat="server" CssClass="address_input" MaxLength="100"   />
      
       </td>
   </tr>
@@ -42,7 +42,7 @@
     </span>
  <label for="textfield" class="address_label">* Email Address</label>
      
-       <asp:TextBox ID="txtEmail" runat="server" CssClass="address_input" MaxLength="100"  />
+       <asp:TextBox  AutoCompleteType="Disabled" ID="txtEmail" runat="server" CssClass="address_input" MaxLength="100"  />
       </td>
     <td>
      <span class="error">
@@ -54,12 +54,12 @@
                                 ErrorMessage="*Email Address does not match" EnableClientScript="true" Display="Dynamic" Text="Email does not match"></asp:CompareValidator>
      </span>
     <label for="textfield" class="address_label">* Re-type Email Address</label>
-    <asp:TextBox ID="txtEmailReType"  CssClass="address_input" runat="server"></asp:TextBox>
+    <asp:TextBox  AutoCompleteType="Disabled" ID="txtEmailReType"  CssClass="address_input" runat="server"></asp:TextBox>
     </td>
   </tr>
   <tr>
     <td>  <label for="textfield" class="address_label">Phone Number</label>
-      <asp:TextBox ID="txtPhone" CssClass="address_input" runat="server"></asp:TextBox></td>
+      <asp:TextBox  AutoCompleteType="Disabled" ID="txtPhone" CssClass="address_input" runat="server"></asp:TextBox></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -70,7 +70,7 @@
                                 Text="* Please type your message" ValidationGroup="Group1"  /></span>
 
 <label for="textfield" class="address_label">* Message</label>
-     <asp:TextBox ID="txtMessage" CssClass="address_input2" runat="server" TextMode="MultiLine" Columns="20" Rows="2"></asp:TextBox>
+     <asp:TextBox  AutoCompleteType="Disabled" ID="txtMessage" CssClass="address_input2" runat="server" TextMode="MultiLine" Columns="20" Rows="2"></asp:TextBox>
       </td>
     </tr>
   <tr>

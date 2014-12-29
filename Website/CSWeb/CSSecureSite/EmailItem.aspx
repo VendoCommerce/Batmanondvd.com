@@ -34,27 +34,27 @@
        
 <div class="control-group">
 <label class="control-label">Name</label>
-<div class="controls"><asp:TextBox ID="txtName" runat="Server" MaxLength="100" CssClass="input-large" />
+<div class="controls"><asp:TextBox  AutoCompleteType="Disabled" ID="txtName" runat="Server" MaxLength="100" CssClass="input-large" />
                 <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtName" ID="valReqTitle" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Name is a required field.">*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
  </div></div>
  
      
   <div class="control-group">
 <label class="control-label">From Address</label>
-<div class="controls"> <asp:TextBox ID="txtfromAddress" runat="Server" MaxLength="100" CssClass="input-large" />
+<div class="controls"> <asp:TextBox  AutoCompleteType="Disabled" ID="txtfromAddress" runat="Server" MaxLength="100" CssClass="input-large" />
 <asp:RequiredFieldValidator runat="server" Display="None" CssClass="text-error" ControlToValidate="txtfromAddress" ID="RequiredFieldValidator1" ValidationGroup="valError" ErrorMessage="From Address is a required field.">*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
 </div></div>
           
        <div class="control-group">
 <label class="control-label">To Address</label>
-<div class="controls"><asp:TextBox ID="txtToAddress" runat="Server" MaxLength="100" CssClass="input-large" />
+<div class="controls"><asp:TextBox  AutoCompleteType="Disabled" ID="txtToAddress" runat="Server" MaxLength="100" CssClass="input-large" />
 
   </div></div>    
                 
                 
     <div class="control-group">
 <label class="control-label">Subject</label>
-<div class="controls"> <asp:TextBox ID="txtSubject" runat="Server" MaxLength="200" CssClass="input-large" />
+<div class="controls"> <asp:TextBox  AutoCompleteType="Disabled" ID="txtSubject" runat="Server" MaxLength="200" CssClass="input-large" />
                 <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtSubject" ID="valReqCode" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Subject is a required field.">*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
      </div></div>     
      

@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace CSWeb.Root.Store
 {
-	public partial class CheckoutExpired : System.Web.UI.Page
+	public partial class CheckoutExpired : CSWebBase.SiteBasePage
 	{
-		protected void Page_Load(object sender, EventArgs e)
+        protected override void Page_Load(object sender, EventArgs e)
 		{
             Response.Redirect("CheckoutSessionExpired.aspx");
 		}

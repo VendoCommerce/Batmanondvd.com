@@ -51,7 +51,7 @@
                         <asp:CheckBox ID="cbVisible" runat="server" Checked='<%# DataBinder.Eval(Container.DataItem, "Visible") %>' />
                     </td>
                      <td class="span1 text-center">
-                        <asp:TextBox runat="server" ID='txtOrderNo' MaxLength="2" CssClass="input-mini" Text='<%# DataBinder.Eval(Container.DataItem, "DisplayOrder") %>'></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" runat="server" ID='txtOrderNo' MaxLength="2" CssClass="input-mini" Text='<%# DataBinder.Eval(Container.DataItem, "DisplayOrder") %>'></asp:TextBox>
                     </td>
                     <td>
                         <asp:Label ID="lblTitle" runat="Server" Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>' />

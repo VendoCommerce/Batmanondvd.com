@@ -96,11 +96,11 @@
                         <tr>
                             <td>
                                 <asp:RequiredFieldValidator ID="valName" runat="server" Display="Dynamic" ErrorMessage="Attribute Name required" ControlToValidate="txtAttributeName">*</asp:RequiredFieldValidator>
-                                <asp:TextBox ID="txtAttributeName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>' MaxLength="50" />
+                                <asp:TextBox  AutoCompleteType="Disabled" ID="txtAttributeName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>' MaxLength="50" />
                             </td>
                             <td>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Attribute Description required" ControlToValidate="txtDescription">*</asp:RequiredFieldValidator>
-                                <asp:TextBox ID="txtDescription" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Description") %>' MaxLength="100" />
+                                <asp:TextBox  AutoCompleteType="Disabled" ID="txtDescription" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Description") %>' MaxLength="100" />
                             </td>
                             <td class="span2">
                                 <asp:DropDownList ID="ddlAttributeValueType" runat="server" />
@@ -120,11 +120,11 @@
                         <tr id="addNewContainer" runat="server" visible="false">
                             <td>
                                 <asp:RequiredFieldValidator ID="valName" runat="server" Display="Dynamic" ErrorMessage="Attribute Name required" ControlToValidate="txtAttributeName">*</asp:RequiredFieldValidator>
-                                <asp:TextBox ID="txtAttributeName" runat="server" MaxLength="50" />
+                                <asp:TextBox  AutoCompleteType="Disabled" ID="txtAttributeName" runat="server" MaxLength="50" />
                             </td>
                             <td>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Attribute Description required" ControlToValidate="txtDescription">*</asp:RequiredFieldValidator>
-                                <asp:TextBox ID="txtDescription" runat="server" MaxLength="500" />
+                                <asp:TextBox  AutoCompleteType="Disabled" ID="txtDescription" runat="server" MaxLength="500" />
                             </td>
                             <td class="span2">
                                 <asp:DropDownList ID="ddlAttributeValueType" runat="server" />                        
@@ -150,11 +150,11 @@
                 <tr>
                             <td>
                                 <asp:RequiredFieldValidator ID="valName1" runat="server" Display="Dynamic" ErrorMessage="Attribute Name required" ControlToValidate="txtAttributeName1">*</asp:RequiredFieldValidator>
-                                <asp:TextBox ID="txtAttributeName1" runat="server" MaxLength="50" />
+                                <asp:TextBox  AutoCompleteType="Disabled" ID="txtAttributeName1" runat="server" MaxLength="50" />
                             </td>
                             <td>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Attribute Description required" ControlToValidate="txtDescription1">*</asp:RequiredFieldValidator>
-                                <asp:TextBox ID="txtDescription1" runat="server" MaxLength="500" />
+                                <asp:TextBox  AutoCompleteType="Disabled" ID="txtDescription1" runat="server" MaxLength="500" />
                             </td>
                             <td class="span2">
                                 <asp:DropDownList ID="ddlAttributeValueType1" runat="server" />                        
@@ -216,10 +216,10 @@
                             <asp:DropDownList ID="ddlObjectAttributeType" runat="server" />
                         </td>
                         <td>
-                            <asp:TextBox ID="txtDescription" runat="server" MaxLength="500" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtDescription" runat="server" MaxLength="500" />
                         </td>
                         <td>
-                            <asp:TextBox ID="txtDisplayLabel" runat="server" MaxLength="100" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtDisplayLabel" runat="server" MaxLength="100" />
                         </td>
                     </tr>
                 </ItemTemplate>

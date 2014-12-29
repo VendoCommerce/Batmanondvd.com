@@ -32,7 +32,7 @@
 <div class="control-group">
 <label class="control-label"><asp:Label ID="lblTitle" runat="Server" AssociatedControlID="txtName" Text="Name" /></label>
 <div class="controls">
- <asp:TextBox ID="txtName" runat="server" MaxLength="200" TabIndex="2" CssClass="input-xlarge"/>
+ <asp:TextBox  AutoCompleteType="Disabled" ID="txtName" runat="server" MaxLength="200" TabIndex="2" CssClass="input-xlarge"/>
                 <asp:RequiredFieldValidator ID="rfvName" runat="server" Text="*" ErrorMessage="Name is a required field." ControlToValidate="txtName" ValidationGroup="valError"/><span class="help-inline"><code>required</code></span>
                 </div></div>
            
@@ -58,7 +58,7 @@
       <div class="control-group">
 <label class="control-label">Script</label>
 <div class="controls">     
-<asp:TextBox TextMode="MultiLine" ID="txtScript" runat="server" CssClass="input-xlarge" />
+<asp:TextBox  AutoCompleteType="Disabled" TextMode="MultiLine" ID="txtScript" runat="server" CssClass="input-xlarge" />
 			</div></div>
             
             
@@ -67,7 +67,7 @@
 <label class="control-label">Tags</label>
 <div class="controls">               
           
-                <asp:TextBox ID="txtTag" runat="server" TextMode="MultiLine" TabIndex="4" CssClass="input-xlarge" />
+                <asp:TextBox  AutoCompleteType="Disabled" ID="txtTag" runat="server" TextMode="MultiLine" TabIndex="4" CssClass="input-xlarge" />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Text="*" ErrorMessage="Tags is a required field." ControlToValidate="txtName" ValidationGroup="valError" /><span class="help-inline"><code>required</code></span>
         </div></div>
         
@@ -112,7 +112,7 @@
         <div class="control-group">
 <label class="control-label">URI Label</label>
 <div class="controls">  
-<asp:TextBox ID="txtURILabel" runat="server" TabIndex="10" MaxLength="200" CssClass="input-xlarge" />
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtURILabel" runat="server" TabIndex="10" MaxLength="200" CssClass="input-xlarge" />
 </div></div>
           <div class="form-actions">
                 <asp:LinkButton runat="server" CssClass="btn btn-danger" ID="btnCancel" CommandName="Cancel" CausesValidation="false" OnCommand="btnAction_Command" TabIndex="10"><i class="icon-ban-circle"></i> Cancel</asp:LinkButton> <asp:LinkButton runat="server" ID="btnSave" CssClass="btn btn-success" CommandName="Save" OnCommand="btnAction_Command" CausesValidation="true" ValidationGroup="valError" TabIndex="11"><i class="icon-save"></i> Save</asp:LinkButton>

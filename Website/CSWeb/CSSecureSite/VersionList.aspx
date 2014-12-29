@@ -60,11 +60,11 @@
                     <td class="span4">
                         <asp:RequiredFieldValidator ID="valName" runat="server" Display="Dynamic" ErrorMessage="Version Name is a required field."
                             ControlToValidate="txtEditTitle">*</asp:RequiredFieldValidator>
-                        <asp:TextBox ID="txtEditTitle" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"title")%>' MaxLength="50" CssClass="input-medium"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEditTitle" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"title")%>' MaxLength="50" CssClass="input-medium"></asp:TextBox>
                     </td>
                     <td class="span3">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ErrorMessage="Report-Friendly Name is a required field." ControlToValidate="txtEditShortName">*</asp:RequiredFieldValidator>
-                        <asp:TextBox ID="txtEditShortName" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"shortName")%>' MaxLength="50" CssClass="input-medium"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEditShortName" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"shortName")%>' MaxLength="50" CssClass="input-medium"></asp:TextBox>
                     </td>
                     <td class="span2">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Category is a required field." ControlToValidate="ddlEditCategory">*</asp:RequiredFieldValidator>
@@ -85,11 +85,11 @@
                 <td class="span4">
                     <asp:RequiredFieldValidator ID="valAddName" runat="server" Display="Dynamic" ErrorMessage="Version Name is a required field."
                         ControlToValidate="txtTitle">*</asp:RequiredFieldValidator>
-                    <asp:TextBox ID="txtTitle" runat="server" MaxLength="50" CssClass="input-medium" />
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtTitle" runat="server" MaxLength="50" CssClass="input-medium" />
                 </td>
                 <td class="span3">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ErrorMessage="Report-Friendly Name is a required field." ControlToValidate="txtShortName">*</asp:RequiredFieldValidator>
-                    <asp:TextBox ID="txtShortName" runat="server" CssClass="input-medium" MaxLength="50"></asp:TextBox>
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtShortName" runat="server" CssClass="input-medium" MaxLength="50"></asp:TextBox>
                 </td>
                 <td class="span2">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Category is a required field." ControlToValidate="ddlCategory">*</asp:RequiredFieldValidator>

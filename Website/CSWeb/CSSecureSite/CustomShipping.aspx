@@ -71,10 +71,10 @@
                             <tr>
                                 <td>
                                     <asp:Label ID="lblShippingId" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "ShippingId") %>' Visible="False" />
-                                    <asp:TextBox ID="txtOrderItem" runat="server" CssClass="input-mini" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "OrderTotal")) %>' />
+                                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtOrderItem" runat="server" CssClass="input-mini" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "OrderTotal")) %>' />
                                 </td>
                                 <td>
-                                    $ <asp:TextBox ID="txtCostItem" runat="server" CssClass="input-mini" MaxLength="6" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
+                                    $ <asp:TextBox  AutoCompleteType="Disabled" ID="txtCostItem" runat="server" CssClass="input-mini" MaxLength="6" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
                           <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtCostItem" ID="valReqCartDesc" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Shipping charge is a required field.">*</asp:RequiredFieldValidator>
                                     <asp:CompareValidator ID="cmpValPercentage" runat="server" ControlToValidate="txtCostItem" Type="Double" ErrorMessage="Shipping charge must be in a double format." Operator="GreaterThanEqual" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                                 </td>
@@ -123,10 +123,10 @@
                                
                                 <td>
                                     <asp:Label ID="lblShippingId" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "ShippingId") %>' Visible="False" />
-                                    <asp:TextBox ID="txtOrderItem" runat="server" CssClass="input-mini" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "OrderTotal")) %>' />
+                                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtOrderItem" runat="server" CssClass="input-mini" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "OrderTotal")) %>' />
                                 </td>
                                 <td>
-                                    $ <asp:TextBox ID="txtCostItem" CssClass="input-mini" runat="server" MaxLength="6" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
+                                    $ <asp:TextBox  AutoCompleteType="Disabled" ID="txtCostItem" CssClass="input-mini" runat="server" MaxLength="6" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
                                     <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtCostItem" CssClass="text-error" ID="RequiredFieldValidator2" ValidationGroup="valError" ErrorMessage="Shipping charge is a required field.">*</asp:RequiredFieldValidator>
                                     <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="txtCostItem" Type="Double" ErrorMessage="Shipping charge must be in a double format." Operator="GreaterThanEqual" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                                 </td>
@@ -171,7 +171,7 @@
                                     <asp:Label ID="lblSkuTitle" runat="server" />
                                 </td>
                                 <td>
-                                    $ <asp:TextBox ID="txtPercentage" runat="server" CssClass="input-mini" MaxLength="6" />
+                                    $ <asp:TextBox  AutoCompleteType="Disabled" ID="txtPercentage" runat="server" CssClass="input-mini" MaxLength="6" />
                                     <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtPercentage" ID="valReqCartDesc" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Shipping charge is a required field.">*</asp:RequiredFieldValidator>
                                     <asp:CompareValidator ID="cmpValPercentage" runat="server" ControlToValidate="txtPercentage" Type="Double" ErrorMessage="Shipping charge must be in a double format." Operator="GreaterThanEqual" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                                 </td>
@@ -194,7 +194,7 @@
                      <div class="control-group">
                      <label class="control-label">Flat Rate</label> 
 <div class="controls">  
-   $ <asp:TextBox ID="txtFlat" runat="server" MaxLength="6" />
+   $ <asp:TextBox  AutoCompleteType="Disabled" ID="txtFlat" runat="server" MaxLength="6" />
                     <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtFlat" ID="valReqCartDesc" ValidationGroup="valError" ErrorMessage="Flat rate is a required field.">*</asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="cmpValPercentage" runat="server" ControlToValidate="txtFlat" Type="Double" ErrorMessage="Flat rate must be in a double format." Operator="GreaterThanEqual" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
    </div></div>
@@ -248,10 +248,10 @@
                                     <tr>
                                         <td>
                                             <asp:Label ID="lblShippingId" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "ShippingId") %>' Visible="False" />
-                                            <asp:TextBox ID="txtOrderItem" CssClass="input-mini" runat="server" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "OrderTotal")) %>' />
+                                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtOrderItem" CssClass="input-mini" runat="server" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "OrderTotal")) %>' />
                                         </td>
                                         <td>
-                                            $ <asp:TextBox ID="txtCostItem" runat="server" MaxLength="6" CssClass="input-mini" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
+                                            $ <asp:TextBox  AutoCompleteType="Disabled" ID="txtCostItem" runat="server" MaxLength="6" CssClass="input-mini" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
                                             <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtCostItem" ID="valReqCartDesc" ValidationGroup="valError" CssClass="text-error" ErrorMessage="* Shipping charge is required field.">*</asp:RequiredFieldValidator>
                                             <asp:CompareValidator ID="cmpValPercentage" runat="server" ControlToValidate="txtCostItem" Type="Double" ErrorMessage="* Shipping charge must be Double format." Operator="GreaterThanEqual" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                                         </td>
@@ -298,10 +298,10 @@
                                     <tr>
                                         <td>
                                             <asp:Label ID="lblShippingId" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "ShippingId") %>' Visible="False" />
-                                            <asp:TextBox ID="txtOrderItem" runat="server" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "OrderTotal")) %>' />
+                                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtOrderItem" runat="server" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "OrderTotal")) %>' />
                                         </td>
                                         <td>
-                                            $ <asp:TextBox ID="txtCostItem" runat="server" MaxLength="6" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
+                                            $ <asp:TextBox  AutoCompleteType="Disabled" ID="txtCostItem" runat="server" MaxLength="6" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
                                             <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtCostItem" CssClass="text-error" ID="RequiredFieldValidator2" ValidationGroup="valError" ErrorMessage="Shipping charge is a required field.">*</asp:RequiredFieldValidator>
                                             <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="txtCostItem" Type="Double" ErrorMessage="Shipping charge must be in double format." Operator="GreaterThanEqual" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                                         </td>
@@ -343,7 +343,7 @@
                                             <asp:Label ID="lblSkuTitle" runat="server" />
                                         </td>
                                         <td>
-                                            $ <asp:TextBox ID="txtPercentage" runat="server" CssClass="input-mini" MaxLength="6" />
+                                            $ <asp:TextBox  AutoCompleteType="Disabled" ID="txtPercentage" runat="server" CssClass="input-mini" MaxLength="6" />
                                             <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtPercentage" CssClass="text-error" ID="valReqCartDesc" ValidationGroup="valError" ErrorMessage="Shipping charge is a required field.">*</asp:RequiredFieldValidator>
                                             <asp:CompareValidator ID="cmpValPercentage" runat="server" ControlToValidate="txtPercentage" Type="Double" ErrorMessage="Shipping charge must be in double format." Operator="GreaterThanEqual" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                                         </td>
@@ -365,7 +365,7 @@
                         <div class="control-group">
                      <label class="control-label">Flat Rate</label> 
 <div class="controls">  
-   $ <asp:TextBox ID="txtRushFlat" runat="server" MaxLength="6" />
+   $ <asp:TextBox  AutoCompleteType="Disabled" ID="txtRushFlat" runat="server" MaxLength="6" />
                         
                         
                             <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtRushFlat" ID="RequiredFieldValidator1" ValidationGroup="valError" ErrorMessage="Flat rate is a required field." CssClass="text-error">*</asp:RequiredFieldValidator>
@@ -421,15 +421,15 @@
                             <ItemTemplate>
                                 <tr>                       
                                     <td>      
-                                        <asp:HiddenField ID="hidShippingChargeId" runat="server" Value='<%# DataBinder.Eval(Container.DataItem, "ShippingChargeId") %>' /> <asp:TextBox ID="txtKey" runat="server" CssClass="input-medium" MaxLength="32" Text='<%# DataBinder.Eval(Container.DataItem, "Key") %>' />
+                                        <asp:HiddenField ID="hidShippingChargeId" runat="server" Value='<%# DataBinder.Eval(Container.DataItem, "ShippingChargeId") %>' /> <asp:TextBox  AutoCompleteType="Disabled" ID="txtKey" runat="server" CssClass="input-medium" MaxLength="32" Text='<%# DataBinder.Eval(Container.DataItem, "Key") %>' />
                                     </td>
                                     <td>
-                                        $ <asp:TextBox ID="txtCost" runat="server" CssClass="input-mini" MaxLength="6"  Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
+                                        $ <asp:TextBox  AutoCompleteType="Disabled" ID="txtCost" runat="server" CssClass="input-mini" MaxLength="6"  Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Cost")) %>' />
                                         <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtCost" ID="valReqCartDesc" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Shipping charge is a required field.">*</asp:RequiredFieldValidator>
                                         <asp:CompareValidator ID="cmpValPercentage" runat="server" ControlToValidate="txtCost" Type="Double" ErrorMessage="Shipping charge must be in double format." Operator="GreaterThanEqual" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtLabel" CssClass="input-medium" runat="server" MaxLength="50" Value='<%# DataBinder.Eval(Container.DataItem, "FriendlyLabel") %>' />
+                                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtLabel" CssClass="input-medium" runat="server" MaxLength="50" Value='<%# DataBinder.Eval(Container.DataItem, "FriendlyLabel") %>' />
                                     </td>
                                     <td class="span1 text-center">
                                         <asp:CheckBox ID="chkDelete" runat="server" />

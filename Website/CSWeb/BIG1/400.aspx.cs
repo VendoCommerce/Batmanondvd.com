@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace CSWeb.BIG1
 {
-    public partial class _400 : System.Web.UI.Page
+    public partial class _400 : CSWebBase.SiteBasePage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected override void Page_Load(object sender, EventArgs e)
         {
             ////string url =ResolveUrl( Request.QueryString[0].Substring(4) + ".aspx");// ResolveUrl("~/MyProject/JavaScripts/dir/test.js");
             ////System.Uri uri = new Uri(url);

@@ -54,7 +54,7 @@
                 <tr>
                     <td>
                         <asp:RequiredFieldValidator ID="valName" runat="server" Display="Dynamic" ErrorMessage="Category Name is a required field." ControlToValidate="txtEditCategory">*</asp:RequiredFieldValidator>
-                        <asp:TextBox ID="txtEditCategory" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"title")%>' MaxLength="100"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEditCategory" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"title")%>' MaxLength="100"></asp:TextBox>
                     </td>
 
                     <td class="span1 text-center"><div class="btn-group">
@@ -71,7 +71,7 @@
             <tr>
                 <td>
                     <asp:RequiredFieldValidator ID="valAddName" runat="server" Display="Dynamic" ErrorMessage="Category Name is a required field." ControlToValidate="txtCategory">*</asp:RequiredFieldValidator>
-                    <asp:TextBox ID="txtCategory" runat="server" MaxLength="100" />
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtCategory" runat="server" MaxLength="100" />
                 </td>
         
                 <td class="span1 text-center"><div class="btn-group">

@@ -64,11 +64,11 @@
                 <tr>
                     <td>
                         <asp:RequiredFieldValidator ID="valName" runat="server" Display="Dynamic" ErrorMessage="Key is a required field." ControlToValidate="txtEditKeyName">*</asp:RequiredFieldValidator>
-                        <asp:TextBox ID="txtEditKeyName" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Key")%>' MaxLength="100"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEditKeyName" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Key")%>' MaxLength="100"></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Value is a required field." ControlToValidate="txtEditValueName">*</asp:RequiredFieldValidator>
-                        <asp:TextBox ID="txtEditValueName" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Value")%>' MaxLength="1000"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEditValueName" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Value")%>' MaxLength="1000"></asp:TextBox>
                     </td>
                     <td><div class="btn-group">
                         <asp:LinkButton ID="lbSave" runat="server" CausesValidation="True" CommandName="Update" CssClass="btn btn-mini btn-success" ToolTip="Save"><i class="icon-save"></i></asp:LinkButton>
@@ -82,11 +82,11 @@
             <tr>
                 <td>
                     <asp:RequiredFieldValidator ID="valAddName" runat="server" Display="Dynamic" ErrorMessage="Key is a required field." ControlToValidate="txtKeyName">*</asp:RequiredFieldValidator>
-                    <asp:TextBox ID="txtKeyName" runat="server" MaxLength="100" />
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtKeyName" runat="server" MaxLength="100" />
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ErrorMessage="Value is a required field." ControlToValidate="txtValueName">*</asp:RequiredFieldValidator>
-                    <asp:TextBox ID="txtValueName" runat="server" MaxLength="1000" />
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtValueName" runat="server" MaxLength="1000" />
                 </td>
                 <td><div class="btn-group">
                     <asp:LinkButton ID="lbSave" runat="server" CssClass="btn btn-mini btn-success" CommandName="Add" OnCommand="btnAction_Command" CausesValidation="True" ToolTip="Save"><i class="icon-save"></i></asp:LinkButton>

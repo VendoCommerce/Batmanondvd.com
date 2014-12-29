@@ -34,7 +34,7 @@
 <label class="control-label">Discount Code</label>
 <div class="controls">
    <asp:RequiredFieldValidator ID="rfvTitle" runat="server" Display="Dynamic" ErrorMessage="Discount Code is a required field." ControlToValidate="txtDiscountTitle">*</asp:RequiredFieldValidator>
-   <asp:TextBox ID="txtDiscountTitle" runat="server" MaxLength="50" CssClass="input-large" /><span class="help-inline"><code>required</code></span>
+   <asp:TextBox  AutoCompleteType="Disabled" ID="txtDiscountTitle" runat="server" MaxLength="50" CssClass="input-large" /><span class="help-inline"><code>required</code></span>
    </div></div>
            
      
@@ -49,7 +49,7 @@
          <div class="control-group">
 <label class="control-label">Discount (% or amount)</label>
 <div class="controls">      
-     <asp:TextBox ID="txtPercentage" runat="Server" MaxLength="7" />
+     <asp:TextBox  AutoCompleteType="Disabled" ID="txtPercentage" runat="Server" MaxLength="7" />
                 <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtPercentage" ID="rfvPercentage" ValidationGroup="valError" ErrorMessage="Discount is a required field.">*</asp:RequiredFieldValidator>
                 <asp:CompareValidator ID="cmpPercentage" runat="server" ControlToValidate="txtPercentage" Type="Double" ErrorMessage="Discount must be a double." Operator="DataTypeCheck" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator><span class="help-inline"><code>required</code></span>
          </div></div>
@@ -57,7 +57,7 @@
             <div class="control-group">
 <label class="control-label">Total Amount</label>
 <div class="controls">      
-  <asp:TextBox ID="txttotalAmount" runat="Server" MaxLength="7" />
+  <asp:TextBox  AutoCompleteType="Disabled" ID="txttotalAmount" runat="Server" MaxLength="7" />
      </div></div>
           
           
@@ -82,7 +82,7 @@
                     
                         <asp:DropDownList runat="server" ID='ddlItemDiscountType' />
                   
-                        <asp:TextBox ID="txtItemDiscount" runat="Server" MaxLength="7" />
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtItemDiscount" runat="Server" MaxLength="7" />
                     
            <asp:LinkButton ID="lbRemove" CssClass="btn btn-danger btn-mini" runat="server" CausesValidation="False" CommandName="Delete"><i class="icon-remove"></i></asp:LinkButton>
                   
@@ -122,7 +122,7 @@
                                 <asp:DropDownList runat="server" ID='ddlItemDiscountType' CssClass="input-medium" />
                             </td>
                             <td>
-                                <asp:TextBox ID="txtItemDiscount" runat="Server" MaxLength="7" CssClass="input-medium" /><asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtItemDiscount" ID="Requiredfieldvalidator1" ValidationGroup="valError" ErrorMessage="Item Discount Amount is a required field.">*</asp:RequiredFieldValidator>
+                                <asp:TextBox  AutoCompleteType="Disabled" ID="txtItemDiscount" runat="Server" MaxLength="7" CssClass="input-medium" /><asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtItemDiscount" ID="Requiredfieldvalidator1" ValidationGroup="valError" ErrorMessage="Item Discount Amount is a required field.">*</asp:RequiredFieldValidator>
                            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtItemDiscount" Type="Double" ErrorMessage="Item Discount Amount must be a double." Operator="DataTypeCheck" ValidationGroup="valError" CssClass="failureNotification" ValueToCompare="0">*</asp:CompareValidator>
                             </td>
                         </tr>

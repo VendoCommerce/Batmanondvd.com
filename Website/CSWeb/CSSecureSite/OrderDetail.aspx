@@ -164,7 +164,7 @@
                         <label class="control-label">
                         First Name</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtShippingFirstName" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingFirstName" runat="server" CssClass="input-medium" MaxLength="100" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtShippingFirstName" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                         <label class="control-label">
                         Last Name</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtShippingLastName" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingLastName" runat="server" CssClass="input-medium" MaxLength="100" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtShippingLastName" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                         <label class="control-label">
                         Address</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtShippingAddress" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingAddress" runat="server" CssClass="input-medium" MaxLength="100" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtShippingAddress" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -188,7 +188,7 @@
                         <label class="control-label">
                         Address 2</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtShippingAddress2" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingAddress2" runat="server" CssClass="input-medium" MaxLength="100" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtShippingAddress2" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -196,7 +196,7 @@
                         <label class="control-label">
                         City</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtShippingCity" runat="server" CssClass="input-medium" MaxLength="50" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingCity" runat="server" CssClass="input-medium" MaxLength="50" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtShippingCity" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                         <label class="control-label">
                         Zip Code</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtShippingZipCode" runat="server" CssClass="input-medium" MaxLength="10" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingZipCode" runat="server" CssClass="input-medium" MaxLength="10" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ControlToValidate="txtShippingZipCode" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                             <asp:CustomValidator ID="CustomValidator2" runat="server" ControlToValidate="txtShippingZipCode" CssClass="text-error" Display="Dynamic" OnServerValidate="ZipCode_ServerValidate" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:CustomValidator>
                         </div>
@@ -229,7 +229,7 @@
                         <label class="control-label">
                         Email Address</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="input-medium" MaxLength="250" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtEmail" runat="server" CssClass="input-medium" MaxLength="250" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="txtEmail" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                             <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtEmail" CssClass="text-error" Display="Dynamic" OnServerValidate="txtEmail_ServerValidate" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:CustomValidator>
                         </div>
@@ -243,7 +243,7 @@
                         <label class="control-label">
                         First Name</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtBillingFirstName" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtBillingFirstName" runat="server" CssClass="input-medium" MaxLength="100" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtBillingFirstName" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -251,7 +251,7 @@
                         <label class="control-label">
                         Last Name</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtBillingLastName" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtBillingLastName" runat="server" CssClass="input-medium" MaxLength="100" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtBillingLastName" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -259,7 +259,7 @@
                         <label class="control-label">
                         Address</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtBillingAddress" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtBillingAddress" runat="server" CssClass="input-medium" MaxLength="100" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtBillingAddress" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -267,7 +267,7 @@
                         <label class="control-label">
                         Address 2</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtBillingAddress2" runat="server" CssClass="input-medium" MaxLength="100" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtBillingAddress2" runat="server" CssClass="input-medium" MaxLength="100" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtBillingAddress2" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -275,7 +275,7 @@
                         <label class="control-label">
                         City</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtBillingCity" runat="server" CssClass="input-medium" MaxLength="50" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtBillingCity" runat="server" CssClass="input-medium" MaxLength="50" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtBillingCity" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -291,7 +291,7 @@
                         <label class="control-label">
                         Zip Code</label>
                         <div class="controls">
-                            <asp:TextBox ID="txtBillingZipCode" runat="server" CssClass="input-medium" MaxLength="10" />
+                            <asp:TextBox  AutoCompleteType="Disabled" ID="txtBillingZipCode" runat="server" CssClass="input-medium" MaxLength="10" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="txtBillingZipCode" CssClass="text-error" Display="Dynamic" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:RequiredFieldValidator>
                             <asp:CustomValidator ID="CustomValidator3" runat="server" ControlToValidate="txtBillingZipCode" CssClass="text-error" Display="Dynamic" OnServerValidate="ZipCode_ServerValidate" SetFocusOnError="true" ValidationGroup="UpdateValidationGroup">*</asp:CustomValidator>
                         </div>

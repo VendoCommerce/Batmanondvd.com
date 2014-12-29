@@ -24,19 +24,19 @@
         </tr>
         <tr class="FieldValue">
             <td>
-                <asp:TextBox ID="txtFirstName" runat="server" Columns="20" MaxLength="50" EnableViewState="True"
+                <asp:TextBox  AutoCompleteType="Disabled" ID="txtFirstName" runat="server" Columns="20" MaxLength="50" EnableViewState="True"
                     CssClass="FieldValue" />
                 <asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtFirstName"
                     ID="RequiredFieldValidator4" ValidationGroup="valError" ErrorMessage="* FirstName is required field.">*</asp:RequiredFieldValidator>
             </td>
             <td>
-                <asp:TextBox ID="txtLastName" runat="server" Columns="20" MaxLength="50" EnableViewState="True"
+                <asp:TextBox  AutoCompleteType="Disabled" ID="txtLastName" runat="server" Columns="20" MaxLength="50" EnableViewState="True"
                     CssClass="FieldValue" />
                 <asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtLastName"
                     ID="RequiredFieldValidator1" ValidationGroup="valError" ErrorMessage="* LastName is required field.">*</asp:RequiredFieldValidator>
             </td>
             <td>
-                <asp:TextBox ID="txtEmail" runat="server" Columns="20" MaxLength="50" EnableViewState="True"
+                <asp:TextBox  AutoCompleteType="Disabled" ID="txtEmail" runat="server" Columns="20" MaxLength="50" EnableViewState="True"
                     CssClass="FieldValue" />
                 <asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtEmail"
                     ID="RequiredFieldValidator2" ValidationGroup="valError" ErrorMessage="* Email is required field.">*</asp:RequiredFieldValidator>

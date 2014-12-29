@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace CSWeb.BIG1
 {
-    public partial class _500 : System.Web.UI.Page
+    public partial class _500 : CSWebBase.SiteBasePage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected override void Page_Load(object sender, EventArgs e)
         {
             //Exception ex = Server.GetLastError();
             //if (ex != null && ex.InnerException != null)

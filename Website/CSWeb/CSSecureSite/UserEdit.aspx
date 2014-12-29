@@ -33,7 +33,7 @@
  <div class="control-group">
 <label class="control-label">First Name</label>
 <div class="controls">
-      <asp:TextBox ID="txtFirstName" runat="Server" MaxLength="200" CssClass="input-large" />
+      <asp:TextBox  AutoCompleteType="Disabled" ID="txtFirstName" runat="Server" MaxLength="200" CssClass="input-large" />
                         <asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtFirstName" ID="valReqFirstName" CssClass="text-error" ValidationGroup="valError" ErrorMessage="First Name is a required field." >*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
                         </div></div>
             
@@ -41,21 +41,21 @@
              <div class="control-group">
 <label class="control-label">Last Name</label>
 <div class="controls">
-        <asp:TextBox ID="txtLastName" runat="Server" MaxLength="200" CssClass="input-large" />
+        <asp:TextBox  AutoCompleteType="Disabled" ID="txtLastName" runat="Server" MaxLength="200" CssClass="input-large" />
                         <asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtLastName" ID="valReqLastName" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Last Name is a required field." >*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
                   </div></div>
                   
                <div class="control-group">
 <label class="control-label">Username</label>
 <div class="controls">         
-      <asp:TextBox ID="txtUserName" runat="Server" MaxLength="50" CssClass="input-large" />
+      <asp:TextBox  AutoCompleteType="Disabled" ID="txtUserName" runat="Server" MaxLength="50" CssClass="input-large" />
                         <asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtUserName" CssClass="text-error" ID="valReqTitle" ValidationGroup="valError" ErrorMessage="Username is a required field." >*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
              </div></div>
              
           <div class="control-group">
 <label class="control-label">Email</label>
 <div class="controls">            
-      <asp:TextBox ID="txtEmail" runat="Server" MaxLength="100" CssClass="input-large" />
+      <asp:TextBox  AutoCompleteType="Disabled" ID="txtEmail" runat="Server" MaxLength="100" CssClass="input-large" />
                         <asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtEmail" ID="RequiredFieldValidator1" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Email is a required field." >*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
       </div></div>           
                         
@@ -64,7 +64,7 @@
       <div class="control-group">
 <label class="control-label">Password</label>
 <div class="controls">  
-      <asp:TextBox ID="txtPassword" runat="Server" MaxLength="20" TextMode="Password" CssClass="input-large" />
+      <asp:TextBox  AutoCompleteType="Disabled" ID="txtPassword" runat="Server" MaxLength="20" TextMode="Password" CssClass="input-large" />
                         <asp:RequiredFieldValidator runat="server" Display="Dynamic" ControlToValidate="txtPassword" CssClass="text-error" ID="RequiredFieldValidator2" ValidationGroup="valError" ErrorMessage="Password is required field." >*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
           </div></div>
           

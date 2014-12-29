@@ -6,6 +6,7 @@ using CSCore.Utils;
 using CSCore.DataHelper;
 using CSData;
 using CSBusiness.Web;
+using System.Text.RegularExpressions;
 
 namespace CSWeb.Account
 {
@@ -53,10 +54,13 @@ namespace CSWeb.Account
         protected void btnAction_Command(object sender, System.Web.UI.WebControls.CommandEventArgs e)
         {
             //After username and password validation
+            if (Regex.IsMatch(UserName.Text, @"^[a-zA-Z0-9_]+$"))
+            {
+                liErrorMessage.Text = "Suspicious user name detected, try again!";
+                return;
+            }
 
-
-
-            int Valcode = CSResolve.Resolve<ICustomerService>().Validate(CommonHelper.EnsureNotNull(UserName.Text), CommonHelper.EnsureNotNull(Password.Text));
+            int Valcode = CSResolve.Resolve<ICustomerService>().Validate(CommonHelper.CheckSQLInjection(CommonHelper.EnsureNotNull(UserName.Text)), CommonHelper.EnsureNotNull(Password.Text));
             if (Valcode > 0)
             {
                 int mins = Int32.Parse(ConfigHelper.ReadAppSetting("AdminCookieSetting"));

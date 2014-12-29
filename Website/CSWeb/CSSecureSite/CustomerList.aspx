@@ -28,15 +28,15 @@
 <div class="well push">
     <div class="form-inline">
    
-        <asp:TextBox ID="txtFirstName" runat="server" MaxLength="50" EnableViewState="True" CssClass="input-medium" placeholder="First Name" />
+        <asp:TextBox  AutoCompleteType="Disabled" ID="txtFirstName" runat="server" MaxLength="50" EnableViewState="True" CssClass="input-medium" placeholder="First Name" />
         &nbsp;&nbsp;
 
         
-                <asp:TextBox ID="txtLastName" runat="server" MaxLength="50" EnableViewState="True" CssClass="input-medium" placeholder="Last Name" />
+                <asp:TextBox  AutoCompleteType="Disabled" ID="txtLastName" runat="server" MaxLength="50" EnableViewState="True" CssClass="input-medium" placeholder="Last Name" />
                 
              &nbsp;&nbsp;
          
-                <asp:TextBox ID="txtEmail" runat="server" MaxLength="50" EnableViewState="True" CssClass="input-large" placeholder="Email Address" />
+                <asp:TextBox  AutoCompleteType="Disabled" ID="txtEmail" runat="server" MaxLength="50" EnableViewState="True" CssClass="input-large" placeholder="Email Address" />
            &nbsp;&nbsp;
  <asp:LinkButton ID="btnSearch" runat="server" CommandName="Search" OnClick="btnSearch_Command" CssClass="btn btn-primary"><i class="icon-search"></i> Search</asp:LinkButton>
     </div>

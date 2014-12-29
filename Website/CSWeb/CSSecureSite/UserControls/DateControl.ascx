@@ -3,7 +3,7 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <div class="input-append">
-<asp:TextBox ID="textboxDate" runat="server" CssClass="input-small" MaxLength="10"
+<asp:TextBox  AutoCompleteType="Disabled" ID="textboxDate" runat="server" CssClass="input-small" MaxLength="10"
     Columns="12" autocomplete="off" /><span class="add-on"><i class="icon-calendar"></i></span><asp:Image Visible="false" runat="server" ID="calendericon" ToolTip="Calendar" ImageUrl="" />
     </div>
     

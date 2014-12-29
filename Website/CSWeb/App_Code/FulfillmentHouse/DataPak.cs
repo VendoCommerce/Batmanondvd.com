@@ -278,7 +278,7 @@ namespace CSWeb.FulfillmentHouse
                     xml.WriteWhitespace("\n");
                     xml.WriteStartElement("Payment");
                     xml.WriteAttributeString("number", "1");
-                    xml.WriteValue(orderTotal.ToString("n2"));
+                    xml.WriteValue(orderTotal.ToString("0.00"));
                     xml.WriteEndElement();
                     xml.WriteWhitespace("\n");
 
@@ -286,7 +286,7 @@ namespace CSWeb.FulfillmentHouse
                     {
                         xml.WriteStartElement("Payment");
                         xml.WriteAttributeString("number", i.ToString());
-                        xml.WriteValue(((additionalPayments / (nop - 1))).ToString("n2"));
+                        xml.WriteValue(((additionalPayments / (nop - 1))).ToString("0.00"));
                         xml.WriteEndElement();
                         xml.WriteWhitespace("\n");
                     }
@@ -306,17 +306,17 @@ namespace CSWeb.FulfillmentHouse
                         xml.WriteWhitespace("\n");
                     }
 
-                    xml.WriteElementString("MerchandiseTotal", (orderTotal + additionalPayments -shippingCharge-orderItem.Tax).ToString("n2"));
+                    xml.WriteElementString("MerchandiseTotal", (orderTotal + additionalPayments -shippingCharge-orderItem.Tax).ToString("0.00"));
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("ShippingCharge", shippingCharge.ToString("n2"));
+                    xml.WriteElementString("ShippingCharge", shippingCharge.ToString("0.00"));
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("RushCharge", orderItem.RushShippingCost.ToString("n2"));
+                    xml.WriteElementString("RushCharge", orderItem.RushShippingCost.ToString("0.00"));
                     xml.WriteWhitespace("\n");
                     xml.WriteElementString("PriorityHandling", "0.00");
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("SalesTax", orderItem.Tax.ToString("n2"));
+                    xml.WriteElementString("SalesTax", orderItem.Tax.ToString("0.00"));
                     xml.WriteWhitespace("\n");
-                    xml.WriteElementString("OrderTotal", (orderItem.Total + additionalPayments ).ToString("n2"));
+                    xml.WriteElementString("OrderTotal", (orderItem.Total + additionalPayments ).ToString("0.00"));
                     xml.WriteWhitespace("\n");
 
 
@@ -339,7 +339,7 @@ namespace CSWeb.FulfillmentHouse
                         xml.WriteWhitespace("\n");
                         xml.WriteElementString("Quantity", Item.Quantity.ToString());
                         xml.WriteWhitespace("\n");
-                        xml.WriteElementString("Price", Item.FullPrice.ToString("n2"));
+                        xml.WriteElementString("Price", Item.FullPrice.ToString("0.00"));
                         xml.WriteWhitespace("\n");
                         if (Item.AttributeValues.ContainsKey("isupsell"))
                         {

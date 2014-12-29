@@ -35,7 +35,7 @@
     <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName"  ErrorMessage="* Username is required." ToolTip="Username is required." ValidationGroup="LoginUserValidationGroup" Display="Dynamic" CssClass="text-error" ></asp:RequiredFieldValidator>
 <div class="input-append">
 
- <asp:TextBox ID="UserName" runat="server" ReadOnly="false" TabIndex="1" placeholder="Username..." AutoCompleteType="Disabled"></asp:TextBox>
+ <asp:TextBox  AutoCompleteType="Disabled" ID="UserName" runat="server" ReadOnly="false" TabIndex="1" placeholder="Username..." AutoCompleteType="Disabled"></asp:TextBox>
 <span class="add-on"><i class="icon-user"></i></span>
 </div>
 
@@ -44,7 +44,7 @@
 <div class="control-group">
 <div class="controls"><asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="* Password is required." ToolTip="Password is required." ValidationGroup="LoginUserValidationGroup" CssClass="text-error" Display="Dynamic"></asp:RequiredFieldValidator>
 <div class="input-append"> 
-<asp:TextBox ID="Password" runat="server" TextMode="Password" ReadOnly="false" TabIndex="2" placeholder="Password..."  AutoCompleteType="Disabled"></asp:TextBox>
+<asp:TextBox  AutoCompleteType="Disabled" ID="Password" runat="server" TextMode="Password" ReadOnly="false" TabIndex="2" placeholder="Password..."  AutoCompleteType="Disabled"></asp:TextBox>
 <span class="add-on"><i class="icon-asterisk"></i></span>
 </div>
 

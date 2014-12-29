@@ -52,7 +52,7 @@
                         <asp:CheckBox ID="cbVisible" runat="server" AutoPostBack="false" />
                     </td>
                     <td class="span2 text-center">
-                        <asp:TextBox runat="server" ID='txtOrderNo' MaxLength="2" CssClass="input-mini"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" runat="server" ID='txtOrderNo' MaxLength="2" CssClass="input-mini"></asp:TextBox>
                         <asp:CompareValidator ID="cmpValorderNo" runat="server" ControlToValidate="txtOrderNo" Type="Integer" ErrorMessage="Order must be an integer." Display="Dynamic" Operator="DataTypeCheck" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                     </td>
                     <td class="span2 text-center">

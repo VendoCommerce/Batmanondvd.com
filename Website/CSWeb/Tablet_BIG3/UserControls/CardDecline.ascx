@@ -88,7 +88,7 @@
                         </div>
                         <label class="label-1">
                             First Name*</label>
-                        <asp:TextBox ID="txtShippingFirstName" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingFirstName" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -98,7 +98,7 @@
                         </div>
                         <label class="label-1">
                             Last Name*</label>
-                        <asp:TextBox ID="txtShippingLastName" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingLastName" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -119,14 +119,14 @@
                         </div>
                         <label class="label-1">
                             Shipping Address*</label>
-                        <asp:TextBox ID="txtShippingAddress1" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingAddress1" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
                         </div>
                         <label class="label-1">
                         </label>
-                        <asp:TextBox ID="txtShippingAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -136,7 +136,7 @@
                         </div>
                         <label class="label-1">
                             City*</label>
-                        <asp:TextBox ID="txtShippingCity" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingCity" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -156,7 +156,7 @@
                         </div>
                         <label class="label-1">
                             Zip Code*</label>
-                        <asp:TextBox ID="txtShippingZipCode" runat="server" MaxLength="7" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtShippingZipCode" runat="server" MaxLength="7" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -166,7 +166,7 @@
                         </div>
                         <label class="label-1">
                             Phone*</label>
-                        <asp:TextBox ID="txtPhoneNumber" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtPhoneNumber" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -177,7 +177,7 @@
                         </div>
                         <label class="label-1">
                             Email*</label>
-                        <asp:TextBox ID="txtEmail" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEmail" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -210,7 +210,7 @@
                         </div>
                         <label class="label-1">
                             First Name*</label>
-                        <asp:TextBox ID="txtFirstName" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtFirstName" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -219,7 +219,7 @@
                         </div>
                         <label class="label-1">
                             Last Name*</label>
-                        <asp:TextBox ID="txtLastName" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtLastName" runat="server" MaxLength="14" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -240,14 +240,14 @@
                         </div>
                         <label class="label-1">
                             Billing Address*</label>
-                        <asp:TextBox ID="txtAddress1" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtAddress1" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
                         </div>
                         <label class="label-1">
                         </label>
-                        <asp:TextBox ID="txtAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -257,7 +257,7 @@
                         </div>
                         <label class="label-1">
                             City*</label>
-                        <asp:TextBox ID="txtCity" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtCity" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
                     </div>
                     <div class="form_line clearfix">
                         <div class="error-1">
@@ -276,7 +276,7 @@
                         </div>
                         <label class="label-1">
                             Zip Code*</label>
-                        <asp:TextBox ID="txtZipCode" runat="server" MaxLength="7" CssClass="text-1"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtZipCode" runat="server" MaxLength="7" CssClass="text-1"></asp:TextBox>
                     </div>
                 </asp:Panel>
 
@@ -336,7 +336,7 @@
                     <div class="error-2">
                         <asp:Label ID="lblCCNumberError" runat="server" Visible="false" ClientIDMode="Static"></asp:Label>
                     </div>
-                    <asp:TextBox ID="txtCCNumber1" runat="server" MaxLength="16" ClientIDMode="Static" CssClass="text-1"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtCCNumber1" runat="server" MaxLength="16" ClientIDMode="Static" CssClass="text-1"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtCCNumber1" runat="server" Display="Dynamic" ErrorMessage="*" />
                 </div>
                 <div class="form_line_2 clearfix" style="padding-top: 5px;visibility: hidden">
                     <div class="error-1">
@@ -347,7 +347,7 @@
                     <label class="label-1">
                         Card Verification*
                     </label>
-                    <asp:TextBox ID="txtCvv" runat="server" CssClass="input-2" MaxLength="4"></asp:TextBox>
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtCvv" runat="server" CssClass="input-2" MaxLength="4"></asp:TextBox>
                 </div>
                 <div style="padding-top: 15px;">
                     <asp:ImageButton ID="imgBtn" runat="server" ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/btn_tryitnow.png" OnClick="imgBtn_OnClick" OnClientClick="return encryptCCnumber();" />

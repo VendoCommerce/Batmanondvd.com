@@ -10,6 +10,7 @@ using CSBusiness.Web.Scripts;
 using CSBusiness.Preference;
 using CSBusiness.Enum;
 using System.Text.RegularExpressions;
+using System.Web.Security;
 
 namespace CSBusiness.Web
 {
@@ -144,7 +145,63 @@ namespace CSBusiness.Web
         {
             base.OnInit(e);
 
-            SetPageHeaders();            
+            FixXsrfAttacks();
+            //Page.PreInit += BasePage_Init;
+            SetPageHeaders();
+        }
+
+        private const string AntiXsrfTokenKey = "__AntiXsrfToken";
+        private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
+        private string _antiXsrfTokenValue;
+
+        protected void FixXsrfAttacks()
+        {
+            // The code below helps to protect against XSRF attacks
+            var requestCookie = Request.Cookies[AntiXsrfTokenKey];
+            Guid requestCookieGuidValue;
+            if (requestCookie != null && Guid.TryParse(requestCookie.Value, out requestCookieGuidValue))
+            {
+                // Use the Anti-XSRF token from the cookie
+                _antiXsrfTokenValue = requestCookie.Value;
+                Page.ViewStateUserKey = _antiXsrfTokenValue;
+            }
+            else
+            {
+                // Generate a new Anti-XSRF token and save to the cookie
+                _antiXsrfTokenValue = Guid.NewGuid().ToString("N");
+                Page.ViewStateUserKey = _antiXsrfTokenValue;
+
+                var responseCookie = new HttpCookie(AntiXsrfTokenKey)
+                {
+                    HttpOnly = true,
+                    Value = _antiXsrfTokenValue
+                };
+                if (FormsAuthentication.RequireSSL && Request.IsSecureConnection)
+                {
+                    responseCookie.Secure = true;
+                }
+                Response.Cookies.Set(responseCookie);
+            }
+        }
+
+        protected override void OnPreLoad(EventArgs e)
+        {
+            base.OnPreLoad(e);
+            if (!IsPostBack)
+            {
+                // Set Anti-XSRF token
+                ViewState[AntiXsrfTokenKey] = Page.ViewStateUserKey;
+                ViewState[AntiXsrfUserNameKey] = Context.User.Identity.Name ?? String.Empty;
+            }
+            else
+            {
+                // Validate the Anti-XSRF token
+                if ((string)ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue
+                    || (string)ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty))
+                {
+                    throw new InvalidOperationException("Validation of Anti-XSRF token failed.");
+                }
+            }
         }
 
         protected ClientCartContext GetInitializedCart()

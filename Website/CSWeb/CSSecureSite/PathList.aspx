@@ -64,7 +64,7 @@
                         <%# DataBinder.Eval(Container.DataItem, "Title") %>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtWeight" runat="server" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Weight")) %>' />
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtWeight" runat="server" MaxLength="4" Text='<%# String.Format("{0:0.##}", DataBinder.Eval(Container.DataItem, "Weight")) %>' />
                     <asp:CompareValidator ID="cmpValorderNo" runat="server" ControlToValidate="txtWeight" Type="Double" ErrorMessage="Weight number must be a double." Operator="DataTypeCheck" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                     </td>
                     <td>

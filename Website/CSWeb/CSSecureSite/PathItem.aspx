@@ -30,7 +30,7 @@
 <div class="control-group">
 <label class="control-label">Title</label>
 <div class="controls">
-       <asp:TextBox ID="txtTitle" runat="Server" MaxLength="100" CssClass="input-xlarge" />
+       <asp:TextBox  AutoCompleteType="Disabled" ID="txtTitle" runat="Server" MaxLength="100" CssClass="input-xlarge" />
                 <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtTitle" ID="valReqTitle" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Title is a required field.">*</asp:RequiredFieldValidator><span class="help-inline"><code>required</code></span>
            </div></div>
               
@@ -38,7 +38,7 @@
    <div class="control-group">
 <label class="control-label">Weight</label>
 <div class="controls">  
-     <asp:TextBox ID="txtWeight" runat="Server" MaxLength="4" />
+     <asp:TextBox  AutoCompleteType="Disabled" ID="txtWeight" runat="Server" MaxLength="4" />
                 <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtWeight"  ID="valReqCode" ValidationGroup="valError" CssClass="text-error" ErrorMessage="Weight is a required field.">*</asp:RequiredFieldValidator>
        <asp:CompareValidator ID="cmpValorderNo" runat="server" ControlToValidate="txtWeight" Type="Double" ErrorMessage="Weight amount must be a double." Operator="DataTypeCheck" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator><span class="help-inline"><code>required</code></span>
       </div></div>
@@ -78,7 +78,7 @@
                                     <%# DataBinder.Eval(Container.DataItem, "Title") %>
                                 </td>
                                 <td class="span1 text-center">
-                                    <asp:TextBox runat="server" ID="txtOrderNo" MaxLength="2" Text='<%# DataBinder.Eval(Container.DataItem, "OrderNo") %>' CssClass="input-mini text-center"></asp:TextBox>
+                                    <asp:TextBox  AutoCompleteType="Disabled" runat="server" ID="txtOrderNo" MaxLength="2" Text='<%# DataBinder.Eval(Container.DataItem, "OrderNo") %>' CssClass="input-mini text-center"></asp:TextBox>
                                     <asp:CompareValidator ID="cmpValorderNo" runat="server" ControlToValidate="txtOrderNo" Type="Integer" ErrorMessage="Order number must be an integer." Operator="DataTypeCheck" ValidationGroup="valError" Display="Dynamic" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                                 </td>
                             </tr>

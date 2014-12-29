@@ -38,7 +38,7 @@
                 <asp:HiddenField ID="hidSqlDbType" runat="server" />
             </td>
             <td>
-                <asp:TextBox ID="txtAttributeValue" runat="server" Visible="false" />
+                <asp:TextBox  AutoCompleteType="Disabled" ID="txtAttributeValue" runat="server" Visible="false" />
 
                 <asp:DropDownList ID="ddlYesNo" runat="server" Visible="false">
                     <asp:ListItem Value="" Selected="True">Select One</asp:ListItem>

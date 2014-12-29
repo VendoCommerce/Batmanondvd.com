@@ -74,7 +74,7 @@
                                 <asp:Literal runat="server" ID='lblTitle'></asp:Literal>
                             </td>
                             <td>
-                                <asp:TextBox runat="server" ID='txtOrderNo' MaxLength="5" CssClass="input-mini"></asp:TextBox> %
+                                <asp:TextBox  AutoCompleteType="Disabled" runat="server" ID='txtOrderNo' MaxLength="5" CssClass="input-mini"></asp:TextBox> %
                                 <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtOrderNo" ID="valReqCartDesc" CssClass="text-error" ValidationGroup="valError" ErrorMessage="Tax % is a required field.">*</asp:RequiredFieldValidator>
                                 <asp:CompareValidator ID="cmpValPercentage" runat="server" ControlToValidate="txtOrderNo" Type="Double" ErrorMessage="Tax % must be in a double format." Operator="GreaterThanEqual" ValidationGroup="valError" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                             </td>
@@ -113,7 +113,7 @@
               
               <label class="control-label">Tax</label>
 			<div class="controls"> 
-                 <asp:TextBox ID="txtPercentage" runat="server" CausesValidation="true" MaxLength="5" CssClass="input-mini" /> %
+                 <asp:TextBox  AutoCompleteType="Disabled" ID="txtPercentage" runat="server" CausesValidation="true" MaxLength="5" CssClass="input-mini" /> %
 					<asp:RequiredFieldValidator ID="reqValPercentage" runat="server" ControlToValidate="txtPercentage" ErrorMessage="Percentage is required." ValidationGroup="valErrorPopup" CssClass="text-error">*</asp:RequiredFieldValidator>
                             <asp:CompareValidator ID="cmpValPercentage" runat="server" ControlToValidate="txtPercentage" Type="Double" ErrorMessage="Percentage must be in a double format." Operator="GreaterThanEqual" ValidationGroup="valErrorPopup" CssClass="text-error" ValueToCompare="0">*</asp:CompareValidator>
                    </div>

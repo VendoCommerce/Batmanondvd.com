@@ -35,22 +35,22 @@
 <div class="control-group">
 <label class="control-label">Site Name</label>
 <div class="controls">
-<asp:TextBox ID="txtSiteName" runat="server" CssClass="input-large" Text="Default."  MaxLength="200"/>
+<asp:TextBox  AutoCompleteType="Disabled" ID="txtSiteName" runat="server" CssClass="input-large" Text="Default."  MaxLength="200"/>
 </div>
 </div>
 
 <div class="control-group">
 <label class="control-label">Site URL</label>
 <div class="controls">
- <asp:TextBox ID="txtSiteUrl" runat="server" CssClass="input-large" Text="Default."  MaxLength="200"/>
+ <asp:TextBox  AutoCompleteType="Disabled" ID="txtSiteUrl" runat="server" CssClass="input-large" Text="Default."  MaxLength="200"/>
  </div>
 </div>
 
- <asp:TextBox Visible="false" ID="txtTitle" runat="server" Text="Default."  MaxLength="200" />
+ <asp:TextBox  AutoCompleteType="Disabled" Visible="false" ID="txtTitle" runat="server" Text="Default."  MaxLength="200" />
          
 <div class="control-group">
 <label class="control-label">Site Logo</label>
-<div class="controls"><asp:TextBox ID="txtImagePath" runat="Server" CssClass="input-large" MaxLength="200" /><span class="help-inline"><code>(Example: /content/images/admin_logo.jpg)</code></span>
+<div class="controls"><asp:TextBox  AutoCompleteType="Disabled" ID="txtImagePath" runat="Server" CssClass="input-large" MaxLength="200" /><span class="help-inline"><code>(Example: /content/images/admin_logo.jpg)</code></span>
 </div>
 </div>
                 
@@ -94,7 +94,7 @@
 
 <div class="control-group">
 <label class="control-label">Archive Data</label>
-<div class="controls"><asp:TextBox ID="txtDays" runat="Server" Width="10%" MaxLength="3" />
+<div class="controls"><asp:TextBox  AutoCompleteType="Disabled" ID="txtDays" runat="Server" Width="10%" MaxLength="3" />
 <asp:RequiredFieldValidator runat="server" Display="None" ControlToValidate="txtDays" ID="Requiredfieldvalidator1" ValidationGroup="valError" ErrorMessage="*Archive Data is a required field.">*</asp:RequiredFieldValidator>
 <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtDays" Type="integer" ErrorMessage="*Archive Data must be an interger." Operator="DataTypeCheck" ValidationGroup="valError" CssClass="error" ValueToCompare="0">*</asp:CompareValidator>
 </div></div>
@@ -109,7 +109,7 @@
            
 <tr runat="server" visible="false">
 <td>Currency:
-<asp:TextBox ID="tblCurrency" runat="server" Width="30%" MaxLength="2" /></td>
+<asp:TextBox  AutoCompleteType="Disabled" ID="tblCurrency" runat="server" Width="30%" MaxLength="2" /></td>
 </tr>
  
 <div class="form-actions">

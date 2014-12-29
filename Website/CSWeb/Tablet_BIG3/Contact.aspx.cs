@@ -4,9 +4,9 @@ using CSCore;
 namespace CSWeb.Tablet_BIG3
 {
 
-    public partial class contact : System.Web.UI.Page
+    public partial class contact : CSWebBase.SiteBasePage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected override void Page_Load(object sender, EventArgs e)
         {
 
 

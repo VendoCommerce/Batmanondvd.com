@@ -60,28 +60,28 @@ public class PageView
     public static void InsertPageEntry(HttpContext context)
     {
        
-        string sessionId = GetSessionId(context); 
-        string ipAddress = GetIpAddress(context);
-        string version = context.Request.Url.AbsolutePath.ToString().Replace("/store", "");
-        version = version.Substring(0, version.LastIndexOf('/'));
-        version = version.Substring(version.LastIndexOf('/')+1 , (version.Length - (version.LastIndexOf('/')+1)));
+        //string sessionId = GetSessionId(context); 
+        //string ipAddress = GetIpAddress(context);
+        //string version = context.Request.Url.AbsolutePath.ToString().Replace("/store", "");
+        //version = version.Substring(0, version.LastIndexOf('/'));
+        //version = version.Substring(version.LastIndexOf('/')+1 , (version.Length - (version.LastIndexOf('/')+1)));
         
-        string sql = "";
-        using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["client_db"].ToString()))
-        {
-            conn.Open();
-            sql = "INSERT INTO [PageViews] ([CustomerSessionId],[IPAddress],[URL],[VersionId],[CreateDate])";
-            sql = sql + " VALUES ('" + sessionId + "','" + ipAddress + "',@url,'" + version + "','" + DateTime.Now + "') ";
-            //Put url into a param to avoid sql injection
-            SqlParameter urlParam = new SqlParameter("@url", System.Data.SqlDbType.NVarChar);
-            urlParam.Value = context.Request.Url.ToString();
+        //string sql = "";
+        //using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["client_db"].ToString()))
+        //{
+        //    conn.Open();
+        //    sql = "INSERT INTO [PageViews] ([CustomerSessionId],[IPAddress],[URL],[VersionId],[CreateDate])";
+        //    sql = sql + " VALUES ('" + sessionId + "','" + ipAddress + "',@url,'" + version + "','" + DateTime.Now + "') ";
+        //    //Put url into a param to avoid sql injection
+        //    SqlParameter urlParam = new SqlParameter("@url", System.Data.SqlDbType.NVarChar);
+        //    urlParam.Value = context.Request.Url.ToString();
 
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.Add(urlParam);
+        //    SqlCommand cmd = new SqlCommand(sql, conn);
+        //    cmd.Parameters.Add(urlParam);
 
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
+        //    cmd.ExecuteNonQuery();
+        //    conn.Close();
+        //}
     }
 }
 

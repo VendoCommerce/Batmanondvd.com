@@ -53,12 +53,12 @@
                 <tr>
                     <td>
                         <asp:RequiredFieldValidator ID="valName" runat="server" Display="Dynamic" ErrorMessage="Product Category Name is a required field." ControlToValidate="txtEditCategory">*</asp:RequiredFieldValidator>
-                        <asp:TextBox ID="txtEditCategory" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"title")%>' MaxLength="100"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEditCategory" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"title")%>' MaxLength="100"></asp:TextBox>
                     </td>
                     <td class="span2 text-center"><div class="form-inline"><label class="checkbox"> <asp:CheckBox ID="cbVisible" runat="server" Checked='<%# DataBinder.Eval(Container.DataItem, "Visible") %>'></asp:CheckBox>&nbsp;Active?</label></div>
                     </td>
                     <td class="span2 text-center">
-                        <asp:TextBox ID="txEdittorder" runat="server" CssClass="input-mini text-center" MaxLength="2" Text='<%#DataBinder.Eval(Container.DataItem,"orderNo")%>' />
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txEdittorder" runat="server" CssClass="input-mini text-center" MaxLength="2" Text='<%#DataBinder.Eval(Container.DataItem,"orderNo")%>' />
                     </td>
                     <td class="span1 text-center">
                         <div class="btn-group">
@@ -73,13 +73,13 @@
             <tr>
                 <td>
                     <asp:RequiredFieldValidator ID="valAddName" runat="server" Display="Dynamic" ErrorMessage="Category Name is a required field." ControlToValidate="txtCategory">*</asp:RequiredFieldValidator>
-                    <asp:TextBox ID="txtCategory" runat="server" MaxLength="100" />
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtCategory" runat="server" MaxLength="100" />
                 </td>
                 <td class="span2 text-center">&nbsp;
                 </td>
                 <td class="span2 text-center">
                   <asp:CompareValidator ID="cmpValorderNo" runat="server" ControlToValidate="txtorder" Type="Integer" ErrorMessage="* Order number must be an integer." Operator="DataTypeCheck" ValidationGroup="valError" ValueToCompare="0">*</asp:CompareValidator>
-                    <asp:TextBox ID="txtorder" runat="server" MaxLength="2" CssClass="input-mini text-center" />
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtorder" runat="server" MaxLength="2" CssClass="input-mini text-center" />
                 </td>
                 <td class="span1 text-center"><div class="btn-group">
                         <asp:LinkButton ID="lbSave" runat="server" CommandName="Add" OnCommand="btnAction_Command" CausesValidation="True" CssClass="btn btn-mini btn-success" ToolTip="Save Changes"><i class="icon-save"></i></asp:LinkButton>

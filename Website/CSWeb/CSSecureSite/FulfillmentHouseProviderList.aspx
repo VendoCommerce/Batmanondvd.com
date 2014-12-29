@@ -63,7 +63,7 @@
                         <%# DataBinder.Eval(Container.DataItem, "Title") %>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtConfig" runat="server" TextMode="MultiLine" CssClass="textarea-large" Rows="5" ReadOnly="true" Text='<%#  DataBinder.Eval(Container.DataItem, "ProviderXML")%>' />
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtConfig" runat="server" TextMode="MultiLine" CssClass="textarea-large" Rows="5" ReadOnly="true" Text='<%#  DataBinder.Eval(Container.DataItem, "ProviderXML")%>' />
                     </td>
                     <td class="span1 text-center">
                         <Cs:GroupRadioButton ID="rbAlign" runat="server" GroupName="Alignment" onclick='selectRow(this);' />
@@ -79,12 +79,12 @@
                 <tr>
                     <td class="span1 text-center"></td>
                     <td class="span3">
-                        <asp:TextBox ID="txtEditTitle" runat="server" MaxLength="100" Text='<%#DataBinder.Eval(Container.DataItem,"Title")%>' />
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEditTitle" runat="server" MaxLength="100" Text='<%#DataBinder.Eval(Container.DataItem,"Title")%>' />
                         <asp:RequiredFieldValidator ID="valEditName" runat="server" Display="Dynamic" ErrorMessage="Title is required field" CssClass="text-error" ControlToValidate="txtEditTitle">*</asp:RequiredFieldValidator>
                
                     </td>
                     <td>
-                        <asp:TextBox ID="txtEditConfig" runat="server" TextMode="MultiLine" CssClass="textarea-large" Rows="5" Text='<%#  DataBinder.Eval(Container.DataItem, "ProviderXML")%>' />
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEditConfig" runat="server" TextMode="MultiLine" CssClass="textarea-large" Rows="5" Text='<%#  DataBinder.Eval(Container.DataItem, "ProviderXML")%>' />
                 <asp:RequiredFieldValidator ID="rfvEditConfig" runat="server" Display="Dynamic"  ErrorMessage="Configutation is required field" CssClass="text-error" ControlToValidate="txtEditConfig">*</asp:RequiredFieldValidator>
                     </td>
                     <td class="span1 text-center"></td>
@@ -101,11 +101,11 @@
                 <td class="span1 text-center"></td>
                 <td class="span3">
                     <asp:RequiredFieldValidator ID="valAddName" runat="server" Display="Dynamic" ErrorMessage="Title is a required field." CssClass="text-error" ControlToValidate="txtTitle">*</asp:RequiredFieldValidator>
-                    <asp:TextBox ID="txtTitle" runat="server" MaxLength="100" />
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtTitle" runat="server" MaxLength="100" />
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" CssClass="text-error" ErrorMessage="Configuration is a required field." ControlToValidate="txtConfig">*</asp:RequiredFieldValidator>
-                    <asp:TextBox CssClass="textarea-large" ID="txtConfig" runat="server" TextMode="MultiLine" Columns="50" Rows="5" />
+                    <asp:TextBox  AutoCompleteType="Disabled" CssClass="textarea-large" ID="txtConfig" runat="server" TextMode="MultiLine" Columns="50" Rows="5" />
                 </td>
                 <td class="span1 text-center"></td>
                 <td class="span1 text-center"><div class="btn-group">

@@ -1267,7 +1267,23 @@ namespace CSCore.Utils
        //     byte[] encryptedData = ms.ToArray();
        //     return encryptedData;
        //     }
-         
+
+
+        public static string CheckSQLInjection(string input)
+        {
+            input = input.Replace("'", "''"); //' espace the single quote
+            input = input.Replace("\"\"", ""); // "
+            input = input.Replace(")", ""); // ) 
+            input = input.Replace("(", ""); // (
+            input = input.Replace(";", ""); // ;
+            input = input.Replace("-", ""); // -
+            input = input.Replace("|", ""); // |
+            input = input.Replace("script", "$cript"); // |
+            input = input.Replace("alert", "@lert"); // |
+            //input = input.Replace("/", "[/]"); // |
+            return input;
+        }
+        
         public static int CountNums(string s)
         {
             string s1 = s;

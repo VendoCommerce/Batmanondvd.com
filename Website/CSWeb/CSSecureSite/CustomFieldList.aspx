@@ -58,7 +58,7 @@
                 <tr>
                     <td>
                         <asp:RequiredFieldValidator ID="valName" runat="server" Display="Dynamic" ErrorMessage="Title is a required field." CssClass="text-error" ControlToValidate="txtEditCustomField">*</asp:RequiredFieldValidator>
-                        <asp:TextBox ID="txtEditCustomField" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"FieldName")%>' MaxLength="100"></asp:TextBox>
+                        <asp:TextBox  AutoCompleteType="Disabled" ID="txtEditCustomField" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"FieldName")%>' MaxLength="100"></asp:TextBox>
                     </td>
                     <td class="span3 text-center"> 
                         
@@ -76,7 +76,7 @@
             <tr>
                 <td>
                     <asp:RequiredFieldValidator ID="valAddName" runat="server" Display="Dynamic" ErrorMessage="Field Name is a required field." ControlToValidate="txtCustomField">*</asp:RequiredFieldValidator>
-                    <asp:TextBox ID="txtCustomField" runat="server" MaxLength="100" />
+                    <asp:TextBox  AutoCompleteType="Disabled" ID="txtCustomField" runat="server" MaxLength="100" />
                 </td>
                 <td>
                 </td>
