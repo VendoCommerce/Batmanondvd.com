@@ -54,7 +54,7 @@ namespace CSWeb.Account
         protected void btnAction_Command(object sender, System.Web.UI.WebControls.CommandEventArgs e)
         {
             //After username and password validation
-            if (Regex.IsMatch(UserName.Text, @"^[a-zA-Z0-9_]+$"))
+            if (!Regex.IsMatch(UserName.Text, @"^[a-zA-Z0-9_]+$"))
             {
                 liErrorMessage.Text = "Suspicious user name detected, try again!";
                 return;
