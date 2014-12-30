@@ -1,6 +1,7 @@
 ﻿using CSBusiness;
 using CSBusiness.Preference;
 using CSBusiness.Web;
+using CSWeb.App_Code;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace CSWeb
         {
             if (!Page.IsPostBack)
             {
+                NavigationControl.RouteTo("big1");
                 base.Page_Load(sender, e);
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();
 
@@ -50,9 +52,12 @@ namespace CSWeb
 
         private void AddSku(string skuId)
         {
-            ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
-            if (clientData.CartInfo != null)
-                clientData.CartInfo.CartItems.Clear();
+            if (Session["ClientOrderData"] != null)
+            {
+                ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
+                if (clientData.CartInfo != null)
+                    clientData.CartInfo.CartItems.Clear();
+            }
             Session["PId"] = skuId;
             Session["OrderStatus"] = "Cart";
 

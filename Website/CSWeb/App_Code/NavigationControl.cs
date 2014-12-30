@@ -2,6 +2,7 @@
 using CSBusiness.Resolver;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -55,6 +56,13 @@ namespace CSWeb.App_Code
             ////HttpContext.Current.Response.Cache.SetRevalidation(HttpCacheRevalidation.AllCaches);
             ////HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
             ////HttpContext.Current.Response.Cache.SetNoStore();
+        }
+
+        public static void RouteTo(string version)
+        {
+                string fullPath = HttpContext.Current.Request.Url.AbsolutePath;
+            string pageName = Path.GetFileName(fullPath);
+            HttpContext.Current.Response.Redirect(string.Format("/{0}/{1}?{2}", version, pageName, HttpContext.Current.Request.QueryString.ToString()));
         }
 
     }

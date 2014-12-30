@@ -50,9 +50,12 @@ namespace CSWeb.BIG1
 
         private void AddSku(string skuId)
         {
-            ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
-            if (clientData.CartInfo != null)
-                clientData.CartInfo.CartItems.Clear();
+            if (Session["ClientOrderData"] != null)
+            {
+                ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
+                if (clientData.CartInfo != null)
+                    clientData.CartInfo.CartItems.Clear();
+            }
             Session["PId"] = skuId;
             Session["OrderStatus"] = "Cart";
 

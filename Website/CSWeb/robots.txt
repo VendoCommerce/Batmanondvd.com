@@ -8,8 +8,6 @@ Disallow: /cssecuresite/
 Disallow: /CSSECURESITE/
 Disallow: /B2/
 Disallow: /b2/
-Disallow: /BIG1/
-Disallow: /big1/
 Disallow: /BIG2/
 Disallow: /big2/
 Disallow: /BIG3/

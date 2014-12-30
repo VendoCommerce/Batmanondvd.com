@@ -1,6 +1,7 @@
 ﻿using CSBusiness;
 using CSBusiness.Preference;
 using CSBusiness.Web;
+using CSWeb.App_Code;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,9 @@ namespace CSWeb
     {
         protected override void Page_Load(object sender, EventArgs e)
         {
-                base.Page_Load(sender, e);
+            NavigationControl.RouteTo("big1");
+            base.Page_Load(sender, e);
+
             if (!Page.IsPostBack)
             {
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();

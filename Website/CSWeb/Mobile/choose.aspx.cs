@@ -41,9 +41,12 @@ namespace CSWeb.Mobile
                 skuId = "113";
             if (skuId.Length > 0)
             {
-                ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
-                if (clientData.CartInfo != null)
-                    clientData.CartInfo.CartItems.Clear();
+                if (Session["ClientOrderData"] != null)
+                {
+                    ClientCartContext clientData = (ClientCartContext)Session["ClientOrderData"];
+                    if (clientData.CartInfo != null)
+                        clientData.CartInfo.CartItems.Clear();
+                }
 
                 Session["PId"] = skuId;
                 Session["OrderStatus"] = "Cart";
