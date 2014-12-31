@@ -38,7 +38,7 @@
     <div style="padding: 16px 66px 30px 44px;">
         <h4 class="f18 bold pad12">Returns</h4>
         
-        <p>At Warner Bros. Home Entertainment (WBHE), our goal is your complete satisfaction. The item must be in the original, unopened factory shrink wrap package to be accepted back for a refund. You may return any new item purchased directly from the WBHE Classic Batman Campaign for any reason within 30 days for a full refund. We will gladly refund or credit the product purchase price to your original form of payment. For items purchased from October 20, 2014 to December 16, 2014, returns will be accepted through January 31, 2015.  </p>
+        <p>At Warner Bros. Home Entertainment (WBHE), our goal is your complete satisfaction. You may return any new item purchased directly from the WBHE Classic Batman Campaign for any reason within 30 days for a full refund. The item must be in the original, unopened factory shrink wrap package to be accepted back for a refund. We will gladly refund or credit the product purchase price to your original form of payment. For items purchased from October 20, 2014 to December 16, 2014, returns will be accepted through January 31, 2015.  </p>
 
         <p>Please note we cannot accept any Warner Bros. merchandise (including Blu-ray discs and DVDs) purchased at any other retailers including the WBShop.</p>
         

@@ -52,7 +52,7 @@
 
         <dl>
             <dt id="q1">What is contained in the Classic Batman Collection?</dt>
-            <dd>12 DVDs containing 64 episodes (all of Season One and Season Two, Part I on nine DVDs), plus a bonus disc featuring over 3 hours of all new bonus features, the Adam West Naked DVD, and the original 1966 Batman Movie on DVD. You will also receive an extensive episode guide, a show script and a personalized letter from Adam West. This collection is NOT sold at any stores and is only available at batmanondvd.com.</dd>
+            <dd>12 DVDs containing 64 episodes (all of Season One and Season Two, Part I on nine DVDs), plus a bonus disc featuring over 3 hours of all new bonus features, the Adam West Naked DVD, and the original 1966 Batman Movie on DVD. You will also receive an extensive episode guide, a show script and a personal letter from Adam West. This collection is NOT sold at any stores and is only available at batmanondvd.com.</dd>
 
             <dt id="q2">Is Classic Batman Collection available in Blu-Ray™?</dt>
             <dd>No, unfortunately it is not but the Complete Classic Batman Collection is available on either DVD or Blu-Ray. This collection includes all 120 episodes of the series.</dd>
