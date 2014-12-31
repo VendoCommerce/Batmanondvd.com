@@ -60,9 +60,13 @@ namespace CSWeb.App_Code
 
         public static void RouteTo(string version)
         {
-                string fullPath = HttpContext.Current.Request.Url.AbsolutePath;
+            string fullPath = HttpContext.Current.Request.Url.AbsolutePath;
             string pageName = Path.GetFileName(fullPath);
-            HttpContext.Current.Response.Redirect(string.Format("/{0}/{1}?{2}", version, pageName, HttpContext.Current.Request.QueryString.ToString()));
+            string queryString = HttpContext.Current.Request.QueryString.ToString();
+            string redirectUrl = string.Format("/{0}/{1}", version, pageName);
+            if (queryString.Length>0)
+                redirectUrl = string.Format("{0}?{1}",redirectUrl, HttpContext.Current.Request.QueryString.ToString());
+            HttpContext.Current.Response.Redirect(redirectUrl);
         }
 
     }

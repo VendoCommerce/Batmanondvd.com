@@ -59,7 +59,7 @@ namespace CSWeb.Account
                 liErrorMessage.Text = "Suspicious user name detected, try again!";
                 return;
             }
-
+            
             int Valcode = CSResolve.Resolve<ICustomerService>().Validate(CommonHelper.CheckSQLInjection(CommonHelper.EnsureNotNull(UserName.Text)), CommonHelper.EnsureNotNull(Password.Text));
             if (Valcode > 0)
             {
