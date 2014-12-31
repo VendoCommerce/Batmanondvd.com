@@ -28,6 +28,7 @@ namespace CSWeb.App_Code
                 catch (Exception ex)
                 {
                     CSCore.CSLogger.Instance.LogException("Batch error - auth error - orderid: " + Convert.ToString(orderItem.OrderId), ex);
+                    OrderHelper.SendOrderFailedEmail(orderItem.OrderId);
                 }
             }
         }
@@ -87,7 +88,8 @@ namespace CSWeb.App_Code
                     }
                     catch (Exception ex)
                     {
-                        CSCore.CSLogger.Instance.LogException("AuthorizeOrder - fulfillment post error - orderid: " + Convert.ToString(orderId), ex);
+                        CSCore.CSLogger.Instance.LogException("Fullfilment Error - orderid: " + Convert.ToString(orderId), ex);
+                        OrderHelper.SendEmailToAdmins(orderId);
                     }
                 }
             }
