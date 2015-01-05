@@ -40,6 +40,8 @@
                     Standard Report</a>
                  | 
                   <span class="current">  SID Report   </span>
+                 | <a href="urlreport.aspx">
+                    URL Report</a>             
             </div>
             <div id="log_link">
                 <a id="lnk_logout" href="Logout.aspx">Logout</a></div>

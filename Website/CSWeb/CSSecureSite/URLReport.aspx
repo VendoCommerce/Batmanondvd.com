@@ -1,12 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VersionReport.aspx.cs" EnableEventValidation="false"
-    Inherits="CSWeb.Admin.VersionReport" EnableViewState="true" EnableSessionState="true" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="URLReport.aspx.cs" EnableEventValidation="false"
+    Inherits="CSWeb.Admin.URLReport" EnableViewState="true" EnableSessionState="true" %>
 
 <%@ Register TagPrefix="usercontrols" TagName="RangeDateControl" Src="usercontrols/RangeDateControl.ascx" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>BatmanOnDvd.com - Version Report</title>
+    <title>BatmanOnDvd.com - URL Report</title>
     <script type="text/javascript">
         function removejscssfile(filename, filetype) {
             var targetelement = (filetype == "js") ? "script" : (filetype == "css") ? "link" : "none" //determine element type to create nodelist from
@@ -20,6 +20,28 @@
 
     </script>
     <link href="/Styles/midstyles.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            jQuery('.expander').click(function () {
+
+                var text = jQuery('.expandinfo');
+
+                if (text.is(':hidden')) {
+                    text.slideDown('500');
+                    jQuery(this).html('&ndash;');
+                } else {
+                    text.slideUp('500');
+                    jQuery(this).html('+');
+                }
+
+            });
+
+        });
+</script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -28,19 +50,19 @@
     <div id="outerwrap2">
         <div id="header2">
             <div id="logo">
-                <img src="/Content/images/conversion_logo.jpg" width="238" height="62" />
+                <img src="//d2bicvj6eiuir2.cloudfront.net/images/conversion_logo.jpg" width="238" height="62" />
 
             </div>
             <!-- end logo -->
            
             <!-- end log_link -->
             <div id="report_nav">
-               <span class="current">Version Report</span> | <a href="sReports.aspx">
+               <a href="versionreport.aspx">Version Report</a> | <a href="sReports.aspx">
                     Standard Report</a>
                  | <a href="SIdReport2.aspx">
                     SID Report</a>             
-                 | <a href="urlreport.aspx">
-                    URL Report</a>             
+                 | 
+                    <span class="current">URL Report</span>
             </div>
             <div id="log_link">
                 <a id="lnk_logout" href="Logout.aspx">Logout</a></div>
@@ -58,7 +80,7 @@
                     <h2>
                     </h2>
                     <div id="client_logo">
-                        <asp:Image ID="imgLogo" style="max-width: 120px" runat="server"  /></div>
+                        <asp:Image ID="imgLogo" runat="server"  /></div>
                 </div>
                 <div id="retrieve_activity">
                     <h2>
@@ -113,7 +135,7 @@
                                     <div class="table_pad2">
                                         <table width="100%" border="0" cellspacing="1" cellpadding="2" class="summary_table2">
                                             <tr>
-                                                <th width="71" class="cola">
+                                                <th width="161">
                                                     Sites
                                                 </th>
                                                 <th width="100" class="colb">
@@ -128,18 +150,18 @@
                                                 <th width="135" class="cole">
                                                     Avg. Order Value
                                                 </th>
-                                                <th width="228" class="colf">
-                                                    Total Revenue
+                                                <th width="158" class="colf">
+                                                    Total Rev.
                                                 </th>
-                                                <th width="228" class="colg">
-                                                    Revenue Per Visitor
+                                                <th width="180" class="colg">
+                                                    Rev. Per Visitor
                                                 </th>
                                             </tr>
                                     </HeaderTemplate>
                                     <ItemTemplate>
                                         <tr>
                                             <td class="cola border_right">
-                                                <asp:Label ID="lblTitle" runat="server" />
+                                                <span class="expander">+</span>&nbsp;<asp:Label ID="lblTitle" runat="server" />
                                             </td>
                                             <td class="colb border_right">
                                                 <asp:Label ID="lbHitLinkVisitor" runat="server" />
@@ -160,12 +182,41 @@
                                                 <asp:Label ID="lblRevenuePerVisit" runat="server" />
                                             </td>
                                         </tr>
+                                        <asp:DataList runat="server" ID="dlUrlList" RepeatLayout="Flow" RepeatDirection="Horizontal"
+                                        OnItemDataBound="dlUrlList_ItemDataBound">                                        
+                                        <ItemTemplate>                                        
+                                            <tr class="expandinfo">
+                                                <td class="cola border_right">
+                                                  <asp:Label ID="lblTitle" runat="server" />
+                                                </td>
+                                                <td class="colb border_right">
+                                                    <asp:Label ID="lbHitLinkVisitor" runat="server" />
+                                                </td>
+                                                <td class="colc border_right">
+                                                    <asp:Label ID="lblTotalOrder" runat="server" />
+                                                </td>
+                                                <td class="cold border_right">
+                                                    <asp:Label ID="lblConversion" runat="server" />
+                                                </td>
+                                                <td class="cole border_right">
+                                                    <asp:Label ID="lblAvgOrder" runat="server" />
+                                                </td>
+                                                <td class="colf border_right">
+                                                    <asp:Label ID="lblTotalRev" runat="server" />
+                                                </td>
+                                                <td class="colg border_right">
+                                                    <asp:Label ID="lblRevenuePerVisit" runat="server" />
+                                                </td>
+                                            </tr>
+                                        </ItemTemplate>   
+                                                                
+                                    </asp:DataList>
                                     </ItemTemplate>
                                     <FooterTemplate>
                                     </table>
                                      <table width="720" cellspacing="0" cellpadding="0" class="total_table2 subtotal_version">
                                         <tr id="versionFooter" runat="server">
-                                            <td class="cola">
+                                            <td width="161">
                                                     <b>Total:</b>
                                             </td>
                                             <td class="colb">
@@ -209,7 +260,7 @@
                             <div class="table_pad2">
                             <table width="720" cellspacing="0" cellpadding="0" class="total_table2 final_total">
                             <tr>
-                                <td class="cola">
+                                <td width="161">
                                     <b>Total:</b>
                                 </td>
                                 <td class="colb">

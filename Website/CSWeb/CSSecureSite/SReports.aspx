@@ -362,6 +362,8 @@ padding: 9px 0 3px 0;
                     Version Report</a> | <span class="current">Standard Report</span> 
                 |    <a href="SIdReport2.aspx">
                     SID Report</a>
+                 | <a href="urlreport.aspx">
+                    URL Report</a>             
                 
             </div>
             <div id="header" class="text_replace">

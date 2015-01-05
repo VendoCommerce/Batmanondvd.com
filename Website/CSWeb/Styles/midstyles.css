@@ -443,3 +443,22 @@ height: 8px;
     border-bottom: 1px solid #E5E5E5;
     margin-bottom: 2px;
 }
+
+
+.expandinfo {
+	display:none;	
+}
+
+.expander {
+	color: #9a9a9a;
+	font-weight: bold;
+	text-decoration:none;
+	cursor:pointer;	
+	display:inline-block;
+	border: 1px solid #9a9a9a;
+	height: 8px;
+	width: 8px;
+	text-align:center;
+	line-height: 8px;
+	vertical-align:middle;
+}
