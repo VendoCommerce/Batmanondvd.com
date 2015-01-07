@@ -39,7 +39,7 @@ namespace CSWeb
                     Response.Redirect("/mobile/?" + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_MOB"));
 
                 if (CSBasePage.GetClientDeviceType() == CSBusiness.Enum.DeviceType.Tablet) // device mobile but version not mobile
-                    Response.Redirect("/tablet_big3/?" + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_TAB"));
+                    Response.Redirect("/tablet_big3/" + ((Request.QueryString.ToString().Length > 0) ? "?" : "") + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_TAB"));
 
                 NavigationControl.RouteTo("big1");
 
