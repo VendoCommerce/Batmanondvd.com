@@ -37,7 +37,7 @@ namespace CSWeb.BIG1
                     Response.Redirect("/mobile/?" + Request.QueryString.ToString());
 
                 if (CSBasePage.GetClientDeviceType() == CSBusiness.Enum.DeviceType.Tablet) // device mobile but version not mobile
-                    Response.Redirect("/tablet/?" + Request.QueryString, true);
+                    Response.Redirect("/tablet_big3/?" + Request.QueryString, true);
 
             }
 

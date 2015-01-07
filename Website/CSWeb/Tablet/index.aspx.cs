@@ -1,6 +1,7 @@
 ﻿using CSBusiness;
 using CSBusiness.Preference;
 using CSBusiness.Web;
+using CSWeb.App_Code;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace CSWeb.Tablet
     {
         protected override void Page_Load(object sender, EventArgs e)
         {
+            NavigationControl.RouteTo("tablet_big3");
+
             if (!Page.IsPostBack)
             {
                 SitePreference sitePrefCache = CSFactory.GetCacheSitePref();

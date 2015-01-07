@@ -15,7 +15,6 @@ namespace CSWeb
     {
         protected override void Page_Load(object sender, EventArgs e)
         {
-            NavigationControl.RouteTo("big1");
 
             if (!Page.IsPostBack)
             {
@@ -40,7 +39,9 @@ namespace CSWeb
                     Response.Redirect("/mobile/?" + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_MOB"));
 
                 if (CSBasePage.GetClientDeviceType() == CSBusiness.Enum.DeviceType.Tablet) // device mobile but version not mobile
-                    Response.Redirect("/tablet/?" + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_TAB"));
+                    Response.Redirect("/tablet_big3/?" + Request.QueryString.ToString().Replace("SID=DISPLAY", "SID=DISPLAY_TAB"));
+
+                NavigationControl.RouteTo("big1");
 
                 base.Page_Load(sender, e);
             }

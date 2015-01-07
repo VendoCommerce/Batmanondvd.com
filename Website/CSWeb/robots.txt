@@ -30,8 +30,6 @@ Disallow: /TABLET_BIG1/
 Disallow: /tablet_big1/
 Disallow: /TABLET_BIG2/
 Disallow: /tablet_big2/
-Disallow: /TABLET_BIG3/
-Disallow: /tablet_big3/
 Disallow: /TABLET_CALLOUT/
 Disallow: /tablet_callout/
 Disallow: /TABLET_COMPLETE/
