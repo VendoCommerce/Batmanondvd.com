@@ -17,7 +17,7 @@
 <script type="text/javascript">jwplayer.key = "JEtVDryJGkO9Q215yroU+Wz4oLeTJGMccGU/Wb3Kv9s=";</script>
 <script type="text/javascript" src="/Scripts/global_mobile.js"></script>
 <link href="/styles/global_mobile.css" rel="stylesheet" type="text/css" />
- 
+</head>
 <body>
  <form runat="server" id="fm1">
 <div class="container">

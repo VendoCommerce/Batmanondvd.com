@@ -157,7 +157,7 @@
             <div class="form_line clearfix">
                     <label class="label-1">
                 </label>
-                <asp:TextBox  AutoCompleteType="Disabled" ID="txtAddress2" runat="server" MaxLength="30" CssClass="text-1"></asp:TextBox>
+                <asp:TextBox  AutoCompleteType="Disabled" ID="txtAddress2" runat="server" MaxLength="30" CssClass="text-1" placeholder="Address 2"></asp:TextBox>
             </div>
             <div class="form_line clearfix">
                 <div class="error-1">
