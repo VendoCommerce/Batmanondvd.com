@@ -735,8 +735,8 @@ namespace CSWeb.Mobile.UserControls
                 skuId = sku.SkuId;
                 //if (sku.SkuId == 112)
                 //    upgradeSkuId = 114;
-                if (sku.SkuId == 113)
-                    upgradeSkuId = 115;
+                if (sku.SkuId == 111)
+                    upgradeSkuId = 114;
                 break;
             }
             if (upgradeSkuId > 0)
@@ -864,8 +864,8 @@ namespace CSWeb.Mobile.UserControls
             CartContext.CartInfo.AddOrUpdate(skuId, 1, true, false, false);
             try
             {
-                CartContext.CartInfo.RemoveSku(112);
-                CartContext.CartInfo.RemoveSku(113);
+                CartContext.CartInfo.RemoveSku(110);
+                CartContext.CartInfo.RemoveSku(111);
             }
             catch (Exception)
             {
