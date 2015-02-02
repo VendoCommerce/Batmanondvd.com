@@ -36,9 +36,9 @@ namespace CSWeb.Mobile
         {
             string skuId="";
             if (rbClassic.Checked)
-                skuId = "112"; 
+                skuId = "110"; 
             if (rbComplete.Checked)
-                skuId = "113";
+                skuId = "111";
             if (skuId.Length > 0)
             {
                 if (Session["ClientOrderData"] != null)
@@ -68,9 +68,9 @@ namespace CSWeb.Mobile
         {
             int skuId = 0;
             if (rbClassic.Checked)
-                skuId = 112;
+                skuId = 110;
             if (rbComplete.Checked)
-                skuId = 113;
+                skuId = 111;
 
             SkuManager skuManager = new SkuManager();
             LoadOfferTerms(skuManager.GetSkuByID(skuId));
