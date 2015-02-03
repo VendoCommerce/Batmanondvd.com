@@ -38,7 +38,7 @@
         Remastered <strong>Plus 3 FREE Bonus DVDs!</strong></h3>
 
     <div>
-    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/home1_new.jpg" width="640" height="517" alt="Batman" class="block" usemap="#Map_home1" />
+    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/home1_new_201502.jpg" width="640" height="517" alt="Batman" class="block" usemap="#Map_home1" />
     <map name="Map_home1" id="Map_home1">
         <area shape="circle" coords="128,86,86" href="#included_complete" class="included_complete" alt="Learn More" />
         <area shape="rect" coords="268,318,460,356" href="#included" alt="See What's Included" class="included" />
