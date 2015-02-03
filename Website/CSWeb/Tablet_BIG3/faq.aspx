@@ -45,7 +45,7 @@
             <li><a href="#q2">Is Classic Batman Collection available in Blu-Ray™?</a></li>
             <li><a href="#q3">What is contained in the Complete Classic Batman Collection?</a></li>
             <li><a href="#q4">Can I order more than one collection?</a></li>
-            <li><a href="#q5">What is installment billing?</a></li>
+            <%--<li><a href="#q5">What is installment billing?</a></li>--%>
             <li><a href="#q6">What if I still have questions about the product or my order?</a></li>
             <li><a href="#q7">How long does it take my order to arrive?</a></li>
             <li><a href="#q8">What qualifies as a business day?</a></li>
@@ -65,9 +65,9 @@
             <dt id="q4">Can I order more than one collection? </dt>
             <dd>For a limited time only, and as a special holiday offer, we are pleased to offer a 30% discount on each collection you order after the first one. Additional collections must be ordered at the same time as your initial purchase. Maximum units per person is 10.  We can also giftwrap your order for a nominal price.</dd>
 
-            <dt id="q5">What is installment billing?  </dt>
+            <%--<dt id="q5">What is installment billing?  </dt>
             <dd>For orders that are under $500 we offer an extended payment plan of five equal payments. Any applicable shipping, handling, and 
-taxes will be charged with your first installment at the time your order ships. Subsequent installments are billed monthly to the original form of payment. </dd>
+taxes will be charged with your first installment at the time your order ships. Subsequent installments are billed monthly to the original form of payment. </dd>--%>
 
             <dt id="q6">What if I still have questions about the product or my order? </dt>
             <dd style="line-height: 21px;">To Reach Customer Service <br />
