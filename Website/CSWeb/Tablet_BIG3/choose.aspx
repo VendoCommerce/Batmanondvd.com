@@ -38,7 +38,7 @@
                     <p class="text-center pad12">
                         <asp:DropDownList ID="ddlComplete" runat="server" class="prodselect">
                             <asp:ListItem Value="110">Classic Collection on DVD - 1 payment of $99.95</asp:ListItem>
-                            <asp:ListItem Value="112">Classic Collection on DVD - 5 easy payments of $19.99</asp:ListItem>
+                            <%--<asp:ListItem Value="112">Classic Collection on DVD - 5 easy payments of $19.99</asp:ListItem>--%>
                         </asp:DropDownList>
                     </p>
                     <p class="text-center pad20 f21"><strong>+</strong> <span class="f21 caps webfont1bold green">FREE SHIPPING & HANDLING!</span></p>
@@ -84,9 +84,9 @@ top: 4px; left: -25px;" />
                         <p class="text-center pad12">
                         <asp:DropDownList ID="ddlSimple" runat="server" class="prodselect">
                             <asp:ListItem Value="111">Complete Classic Collection on DVD - 1 payment of $149.95</asp:ListItem>
-                            <asp:ListItem Value="113">Complete Classic Collection on DVD - 5 easy payments of $29.99</asp:ListItem>
+                            <%--<asp:ListItem Value="113">Complete Classic Collection on DVD - 5 easy payments of $29.99</asp:ListItem>--%>
                             <asp:ListItem Value="114">Complete Classic Collection in HD on Blu-Ray - 1 payment of $174.95</asp:ListItem>
-                            <asp:ListItem Value="115">Complete Classic Collection in HD on Blu-Ray - 5 easy payments of $34.99</asp:ListItem>
+                            <%--<asp:ListItem Value="115">Complete Classic Collection in HD on Blu-Ray - 5 easy payments of $34.99</asp:ListItem>--%>
                         </asp:DropDownList>
                     </p>
                     </div>
