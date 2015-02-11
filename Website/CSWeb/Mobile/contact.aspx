@@ -29,8 +29,8 @@
         <h2 class="f50 pad0" style="padding-top: 20px;">To the Bat-Phone!</h2>
             <h3 class="f30">Or send an email from your Bat-Computer.</h3>
 
-        <p class="f40" style="line-height: 49px;"><strong>To order, call:</strong> <br />
-            1 (800) 673-2909</p>
+        <%--<p class="f40" style="line-height: 49px;"><strong>To order, call:</strong> <br />
+            1 (800) 673-2909</p>--%>
 
         <p class="f30 pad20" style="line-height: 42px;"><strong style="text-decoration: underline;">Customer Service</strong></p>
         <p class="f30 pad12" style="line-height: 42px;"><strong>Phone:</strong> 1-800-839-3005</p>

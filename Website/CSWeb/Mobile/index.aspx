@@ -38,7 +38,7 @@
         Remastered <strong>Plus 3 FREE Bonus DVDs!</strong></h3>
 
     <div>
-    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/home1_new_201502.jpg" width="640" height="517" alt="Batman" class="block" usemap="#Map_home1" />
+    <img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/home1_new_201502b.jpg" width="640" height="517" alt="Batman" class="block" usemap="#Map_home1" />
     <map name="Map_home1" id="Map_home1">
         <area shape="circle" coords="128,86,86" href="#included_complete" class="included_complete" alt="Learn More" />
         <area shape="rect" coords="268,318,460,356" href="#included" alt="See What's Included" class="included" />
@@ -68,14 +68,14 @@
                 </div>
             </div>
     </div>
-    <div class="fleft" style="width: 330px; padding-left: 13px;">
+    <%--<div class="fleft" style="width: 330px; padding-left: 13px;">
         <asp:ImageButton ID="imgPhone" runat="server" OnClick="imgPhone_Click"  
             ImageUrl="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_clicktocall.png" Width="296" Height="81" AlternateText="Click to Call" CssClass="block" />
-        <%--<a href="tel:18006732909"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_clicktocall.png" width="296" height="81" alt="Click to Call" class="block" /></a>--%>
-    </div>
+        <!--<a href="tel:18006732909"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_clicktocall.png" width="296" height="81" alt="Click to Call" class="block" /></a>-->
+    </div>--%>
     
-    <div class="fleft" style="width: 296px;">
-        <a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_ordernow_home.png" width="296" height="81" alt="Order Now" class="block" /></a>
+    <div class="text-center" style="margin-top: 6px;">
+        <a href="choose.aspx"><img src="//d1kg9stb0ddjcv.cloudfront.net/images/mobile/btn_ordernow_home.png" width="296" height="81" alt="Order Now" /></a>
     </div>
     <div class="clear"></div>
     <h2 class="text-center f38 pad6" style="padding: 35px 0 0 0;">Your 12 DVD Classic Collection Features<br />

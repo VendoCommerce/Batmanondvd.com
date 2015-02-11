@@ -43,7 +43,7 @@
         
     <div style="padding: 16px 40px 100px 66px;">
 
-        <p class="f20"><strong>To order, call:</strong> 1 (800) 435-8372</p>
+        <%--<p class="f20"><strong>To order, call:</strong> 1 (800) 435-8372</p>--%>
 
         <p class="f16" style="line-height: 30px;"><strong style="text-decoration: underline;">Customer Service</strong><br />
 <strong>Phone:</strong> 1-800-839-3005<br />
