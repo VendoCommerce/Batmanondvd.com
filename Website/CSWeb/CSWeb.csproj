@@ -29,6 +29,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -365,6 +366,43 @@
     <Content Include="Mobile\faq.aspx" />
     <Content Include="Mobile\UserControls\CheckoutThankYouModule2.ascx" />
     <Content Include="privacy.aspx" />
+    <Content Include="PS_A1\400.aspx" />
+    <Content Include="PS_A1\500.aspx" />
+    <Content Include="PS_A1\AddProduct.aspx" />
+    <Content Include="PS_A1\AuthorizeOrder.aspx" />
+    <Content Include="PS_A1\bottomcta.html" />
+    <Content Include="PS_A1\bottomcta_complete.html" />
+    <Content Include="PS_A1\CardDecline.aspx" />
+    <Content Include="PS_A1\Cart.aspx" />
+    <Content Include="PS_A1\cast.aspx" />
+    <Content Include="PS_A1\CheckoutExpired.aspx" />
+    <Content Include="PS_A1\CheckoutSessionExpired.aspx" />
+    <Content Include="PS_A1\choose.aspx" />
+    <Content Include="PS_A1\clips.aspx" />
+    <Content Include="PS_A1\Contact.aspx" />
+    <Content Include="PS_A1\episodes.aspx" />
+    <Content Include="PS_A1\faq.aspx" />
+    <Content Include="PS_A1\footer.html" />
+    <Content Include="PS_A1\footer_upsell.html" />
+    <Content Include="PS_A1\header.html" />
+    <Content Include="PS_A1\header500.html" />
+    <Content Include="PS_A1\header_cart.html" />
+    <Content Include="PS_A1\header_upsell.html" />
+    <Content Include="PS_A1\index.aspx" />
+    <Content Include="PS_A1\popups.html" />
+    <Content Include="PS_A1\PostSale.aspx" />
+    <Content Include="PS_A1\privacy.aspx" />
+    <Content Include="PS_A1\receipt.aspx" />
+    <Content Include="PS_A1\returns.aspx" />
+    <Content Include="PS_A1\terms.aspx" />
+    <Content Include="PS_A1\upsells.aspx" />
+    <Content Include="PS_A1\UserControls\CardDecline.ascx" />
+    <Content Include="PS_A1\UserControls\CheckoutThankYouModule.ascx" />
+    <Content Include="PS_A1\UserControls\ContactUs.ascx" />
+    <Content Include="PS_A1\UserControls\Header.ascx" />
+    <Content Include="PS_A1\UserControls\ShippingBillingCreditForm.ascx" />
+    <Content Include="PS_A1\UserControls\ShoppingCartControl.ascx" />
+    <Content Include="PS_A1\UserControls\TrackingPixels.ascx" />
     <Content Include="Styles\global_big1callout_tablet.css" />
     <Content Include="Styles\global_big1_tablet.css" />
     <Content Include="Styles\global_big1callout.css" />
@@ -1393,7 +1431,6 @@
     </Compile>
     <Compile Include="CSSecureSite\UserControls\PageControl.ascx.cs">
       <DependentUpon>PageControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CSSecureSite\UserControls\RangeDateControl.ascx.cs">
       <DependentUpon>RangeDateControl.ascx</DependentUpon>
@@ -1523,6 +1560,148 @@
     <Compile Include="Mobile\UserControls\CheckoutThankYouModule2.ascx.cs">
       <DependentUpon>CheckoutThankYouModule2.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\400.aspx.cs">
+      <DependentUpon>400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\400.aspx.designer.cs">
+      <DependentUpon>400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\500.aspx.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\500.aspx.designer.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\AuthorizeOrder.aspx.cs">
+      <DependentUpon>AuthorizeOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\AuthorizeOrder.aspx.designer.cs">
+      <DependentUpon>AuthorizeOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\CardDecline.aspx.cs">
+      <DependentUpon>CardDecline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\CardDecline.aspx.designer.cs">
+      <DependentUpon>CardDecline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\CheckoutExpired.aspx.cs">
+      <DependentUpon>CheckoutExpired.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\CheckoutExpired.aspx.designer.cs">
+      <DependentUpon>CheckoutExpired.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\CheckoutSessionExpired.aspx.cs">
+      <DependentUpon>CheckoutSessionExpired.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\CheckoutSessionExpired.aspx.designer.cs">
+      <DependentUpon>CheckoutSessionExpired.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\choose.aspx.cs">
+      <DependentUpon>choose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\choose.aspx.designer.cs">
+      <DependentUpon>choose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\episodes.aspx.cs">
+      <DependentUpon>episodes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\episodes.aspx.designer.cs">
+      <DependentUpon>episodes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\PostSale.aspx.cs">
+      <DependentUpon>PostSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\PostSale.aspx.designer.cs">
+      <DependentUpon>PostSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\receipt.aspx.cs">
+      <DependentUpon>receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\upsells.aspx.cs">
+      <DependentUpon>upsells.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\upsells.aspx.designer.cs">
+      <DependentUpon>upsells.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\CardDecline.ascx.cs">
+      <DependentUpon>CardDecline.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\CardDecline.ascx.designer.cs">
+      <DependentUpon>CardDecline.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\CheckoutThankYouModule.ascx.cs">
+      <DependentUpon>CheckoutThankYouModule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\ContactUs.ascx.cs">
+      <DependentUpon>ContactUs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\ContactUs.ascx.designer.cs">
+      <DependentUpon>ContactUs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\ShippingBillingCreditForm.ascx.cs">
+      <DependentUpon>ShippingBillingCreditForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\ShippingBillingCreditForm.ascx.designer.cs">
+      <DependentUpon>ShippingBillingCreditForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\ShoppingCartControl.ascx.cs">
+      <DependentUpon>ShoppingCartControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\ShoppingCartControl.ascx.designer.cs">
+      <DependentUpon>ShoppingCartControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\TrackingPixels.ascx.cs">
+      <DependentUpon>TrackingPixels.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PS_A1\UserControls\TrackingPixels.ascx.designer.cs">
+      <DependentUpon>TrackingPixels.ascx</DependentUpon>
     </Compile>
     <Compile Include="Tablet_BIG3\400.aspx.cs">
       <DependentUpon>400.aspx</DependentUpon>
